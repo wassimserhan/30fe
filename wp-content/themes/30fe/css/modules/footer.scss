@@ -1,0 +1,106 @@
+.footer {
+  font-family: 'Inter', sans-serif;
+  padding: 128px;
+  background-color: $monochromeBlack;
+  flex-shrink: 0;
+
+  a:hover {
+    color: $secondary;
+  }
+
+  & figure {
+    margin: 0;
+  }
+
+  &__logo {
+    width: 100%;
+    max-width: 137px;
+    height: 183px;
+  }
+
+  &__nav {
+    width: 1024px;
+    max-width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: $monochromeTaupe;
+
+    &__title {
+      font-size: 1.25rem;
+      padding: 0 0 8px;
+    }
+
+    &__links {
+      padding: 0 0 8px;
+    }
+  }
+
+  &__item {
+    display: block;
+    text-decoration: none;
+    color: $black;
+    font-size: 1em;
+    padding: 0.3rem 0;
+    transition: all 0.3s ease 0s;
+    text-transform: capitalize;
+  }
+
+  &__link {
+    padding: 0 0.8em;
+    color: $black;
+    font-size: 1em;
+  }
+
+  // &__link:hover {
+  //   color: $secondary;
+  // }
+
+  &__legal {
+    text-align: center;
+    color: $monochromeTaupe;
+    font-family: Inter;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__notices {
+    padding: 10px 0 0;
+  }
+
+  &__link {
+    // border-right: 1px solid $black;
+    padding: 0 0.8em;
+    color: $black;
+    @include bp(phone) {
+      display: inline;
+    }
+  }
+
+  &__link:not(:first-child) {
+    border-left: 1px solid $black;
+  }
+}
+
+.btn--footer {
+  background-color: $black;
+  border-radius: 5px;
+  padding: 10px 26px;
+  text-align: center;
+  margin: 16px auto;
+  display: block;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.btn--link {
+  color: $white;
+  display: block;
+  line-height: 15px;
+}

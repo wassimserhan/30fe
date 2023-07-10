@@ -1,0 +1,52 @@
+.work {
+  font-family: 'Inter', sans-serif;
+  padding: 128px;
+  background-color: $whiteSmoke;
+  flex-shrink: 0;
+
+  &__headline {
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: -3.6px;
+    margin: 0;
+  }
+
+  &__copy {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    letter-spacing: -0.6px;
+    padding: 24px 0;
+  }
+
+  & form {
+    padding: 16px 0;
+  }
+
+  & input {
+    width: 500px;
+    border: 1px solid $monochromeBlack;
+    border-radius: 0;
+  }
+
+  & label,
+  input {
+    font-size: inherit;
+    padding: 0.2rem;
+    margin: 0.1rem 0.2rem;
+    /* the following ensures they're all using the same box-model for rendering */
+    -moz-box-sizing: content-box; /* or `border-box` */
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+  }
+
+  &__disclaimer {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+}
