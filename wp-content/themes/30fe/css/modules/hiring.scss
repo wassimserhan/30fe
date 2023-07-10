@@ -2,7 +2,23 @@
   font-family: 'Inter', sans-serif;
   padding: 128px;
   background-color: $monochromeTaupe;
-  flex-shrink: 0;
+
+  &__oval {
+    width: 100px;
+    padding: 4px 16px;
+    border-radius: 100px;
+    background: $monochromeTaupe;
+    box-shadow: 0px 0px 1px 0px $monochromeBlack;
+
+    &__label {
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      text-transform: uppercase;
+      text-align: center;
+    }
+  }
 
   &__headline {
     font-size: 72px;
@@ -11,6 +27,7 @@
     line-height: 100%;
     letter-spacing: -3.6px;
     margin: 0;
+    padding-top: 24px;
   }
 
   &__copy {

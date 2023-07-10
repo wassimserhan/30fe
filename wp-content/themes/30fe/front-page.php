@@ -3,8 +3,10 @@
 <main class="main-container">
 
   <?php
+  include get_template_directory() . '/modules/quote.php';
 include get_template_directory() . '/modules/hiring.php';
 include get_template_directory() . '/modules/work.php';
+
 
 ?>
 

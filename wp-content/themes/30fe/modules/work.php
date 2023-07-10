@@ -3,9 +3,10 @@
   <p class="work__copy">Enter your work email and one of our team members will get in touch with you.</p>
   <form action="">
     <input type="email" name="email" id="email" placeholder="Enter your email">
-    <button>Submit</button>
+    <button class="work__submit">Submit</button>
 
   </form>
-  <p class="work__disclaimer">By clicking Sign Up you're confirming that you agree with our Terms and Conditions.</p>
+  <p class="work__disclaimer">By clicking Sign Up you're confirming that you agree with our <a href="#">Terms and
+      Conditions</a>.</p>
 
 </section>

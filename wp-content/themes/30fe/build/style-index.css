@@ -4231,7 +4231,21 @@ select:focus {
   font-family: "Inter", sans-serif;
   padding: 128px;
   background-color: #cbbea5;
-  flex-shrink: 0;
+}
+.hiring__oval {
+  width: 100px;
+  padding: 4px 16px;
+  border-radius: 100px;
+  background: #cbbea5;
+  box-shadow: 0px 0px 1px 0px #1d1c1d;
+}
+.hiring__oval__label {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  text-transform: uppercase;
+  text-align: center;
 }
 .hiring__headline {
   font-size: 72px;
@@ -4240,6 +4254,7 @@ select:focus {
   line-height: 100%;
   letter-spacing: -3.6px;
   margin: 0;
+  padding-top: 24px;
 }
 .hiring__copy {
   font-size: 20px;
@@ -4289,14 +4304,43 @@ select:focus {
   width: 500px;
   border: 1px solid #1d1c1d;
   border-radius: 0;
+  background-color: transparent;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 10px;
+  margin: -5px;
 }
-.work label,
-.work input {
-  font-size: inherit;
-  padding: 0.2rem;
-  margin: 0.1rem 0.2rem;
-  /* the following ensures they're all using the same box-model for rendering */ /* or `border-box` */
-  box-sizing: content-box;
+.work input::-moz-placeholder {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: #1d1c1d;
+}
+.work input::placeholder {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: #1d1c1d;
+}
+.work a {
+  color: #1d1c1d;
+  text-decoration: underline;
+}
+.work__submit {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  background-color: #1d1c1d;
+  border-radius: 0;
+  padding: 0 32px;
+  color: #f2f1ed;
+  height: 50px;
+  line-height: 50px;
+  border: 1px solid #1d1c1d;
+  display: inline;
 }
 .work__disclaimer {
   font-size: 14px;
@@ -4305,7 +4349,28 @@ select:focus {
   line-height: 150%;
 }
 
+.quote {
+  font-family: "Inter", sans-serif;
+  padding: 128px;
+  background-color: #cbbea5;
+}
+.quote__headline {
+  color: #1d1c1d;
+  text-align: center;
+  font-family: Inter;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: -2.4px;
+}
+.quote__button {
+  text-align: center;
+  margin: 64px auto 0;
+}
+
 button {
+  display: block;
   font-family: "Inter", sans-serif;
   text-decoration: none;
   font-size: 0.8em;
@@ -4642,7 +4707,7 @@ body {
 }
 
 body {
-  font-family: "Retina Light";
+  font-family: "Inter", sans-serif;
   font-size: 1em;
   display: flex;
   flex-direction: column;
