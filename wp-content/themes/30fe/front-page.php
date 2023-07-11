@@ -3,12 +3,12 @@
 <main class="main-container">
 
   <?php
+    include get_template_directory() . '/modules/forms.php';
+  include get_template_directory() . '/modules/expertise.php';
   include get_template_directory() . '/modules/quote.php';
-include get_template_directory() . '/modules/hiring.php';
-include get_template_directory() . '/modules/work.php';
-
-
-?>
+  include get_template_directory() . '/modules/hiring.php';
+  include get_template_directory() . '/modules/work.php';
+  ?>
 
 </main>
 <?php get_footer(); ?>

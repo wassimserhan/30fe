@@ -14,14 +14,13 @@
 //----------------------------------*/
 @import 'variables/breakpoints';
 @import 'variables/colors';
-@import 'variables/fonts';
+// @import 'variables/fonts';
 
 //----------------------------------*\
 // MODULES
 //----------------------------------*/
 @import 'modules/navbar';
 @import 'modules/bar';
-@import 'modules/agenda';
 @import 'modules/footer';
 @import 'modules/form';
 @import 'modules/hero';
@@ -52,6 +51,8 @@
 @import 'modules/hiring';
 @import 'modules/work';
 @import 'modules/quote';
+@import 'modules/expertise';
+@import 'modules/forms';
 
 //----------------------------------*\
 // COMPONENTS

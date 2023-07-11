@@ -1,0 +1,134 @@
+.information {
+  font-family: 'Inter', sans-serif;
+  padding: 128px;
+  background-color: $whiteSmoke;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__form {
+    max-width: 540px;
+
+    &__headline {
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 100%;
+      letter-spacing: -2.4px;
+      padding-bottom: 24px;
+    }
+
+    &__copy {
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 140%;
+      letter-spacing: -0.6px;
+    }
+
+    &__required {
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 150%;
+      text-transform: uppercase;
+      color: $orange;
+      padding: 32px 0 16px;
+    }
+
+    & form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    & input {
+      padding: 12px;
+      background-color: transparent;
+      border: 1px solid $monochromeTaupe;
+      border-radius: 0;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      text-transform: uppercase;
+      &::placeholder {
+        color: $monochromeBlack;
+        &::after {
+          content: ' *';
+          color: red;
+        }
+      }
+
+      &[type='submit'] {
+        font-size: 0.8em;
+        background-color: $monochromeBlack;
+        border: 1px solid $monochromeBlack;
+        color: $white;
+        padding: 16px 32px;
+        text-transform: uppercase;
+        margin: 16px 0;
+      }
+    }
+
+    & label {
+      visibility: hidden;
+    }
+  }
+
+  &__card {
+    border: 1px solid $monochromeTaupe;
+    padding: 64px;
+    max-width: 356px;
+
+    &__image {
+      margin: 0;
+      // position: relative;
+      // margin: auto;
+      width: 228px;
+      height: 226px;
+    }
+
+    &__oval {
+      width: 150px;
+      padding: 4px 16px;
+      border-radius: 100px;
+      background: transparent;
+      box-shadow: 0px 0px 1px 0px $monochromeBlack;
+      margin: 24px 0;
+
+      &__label {
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        text-transform: uppercase;
+        text-align: center;
+      }
+    }
+
+    &__name {
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 120%;
+      letter-spacing: -1.6px;
+    }
+
+    &__title {
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      text-transform: uppercase;
+      padding: 8px 0 16px;
+    }
+
+    &__email {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+    }
+  }
+}

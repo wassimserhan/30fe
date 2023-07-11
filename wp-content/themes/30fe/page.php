@@ -12,9 +12,7 @@
   <?php if ( get_row_layout() == 'speakers_layout'): ?>
   <?php get_template_part( 'modules/speakers' ) ;?>
   <?php endif; ?>
-  <?php if ( get_row_layout() == 'agenda_layout'): ?>
-  <?php get_template_part( 'modules/agenda' ) ;?>
-  <?php endif; ?>
+
   <?php if ( get_row_layout() == 'pricing'): ?>
   <?php get_template_part( 'modules/pricing' ) ;?>
   <?php endif; ?>
