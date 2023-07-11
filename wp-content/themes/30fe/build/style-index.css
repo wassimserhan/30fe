@@ -3780,16 +3780,15 @@ select:focus {
   text-transform: uppercase;
   margin: 16px 0;
 }
-.information__form label {
-  visibility: hidden;
-}
 .information__card {
   border: 1px solid #cbbea5;
   padding: 64px;
   max-width: 356px;
+  height: -moz-max-content;
+  height: max-content;
 }
 .information__card__image {
-  margin: 0;
+  margin: auto;
   width: 228px;
   height: 226px;
 }
@@ -3829,6 +3828,60 @@ select:focus {
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
+}
+
+.frm_style_formidable-style.with_frm_style .form-field {
+  margin: 0;
+}
+
+.with_frm_style input[type=text],
+.with_frm_style input[type=email],
+.with_frm_style input[type=tel],
+.with_frm_style textarea {
+  padding: 12px;
+  background-color: transparent;
+  border: 1px solid #cbbea5;
+  border-radius: 0;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  height: initial;
+}
+.with_frm_style input[type=text] ::-moz-placeholder, .with_frm_style input[type=email] ::-moz-placeholder, .with_frm_style input[type=tel] ::-moz-placeholder, .with_frm_style textarea ::-moz-placeholder {
+  color: #1d1c1d;
+}
+.with_frm_style input[type=text] ::placeholder,
+.with_frm_style input[type=email] ::placeholder,
+.with_frm_style input[type=tel] ::placeholder,
+.with_frm_style textarea ::placeholder {
+  color: #1d1c1d;
+}
+
+.frm_style_formidable-style.with_frm_style .frm_submit button {
+  font-size: 0.8em;
+  background-color: #1d1c1d;
+  border: 1px solid #1d1c1d;
+  color: #ffffff;
+  padding: 16px 32px;
+  text-transform: uppercase;
+  margin: 16px 0;
+  width: 100%;
+  border-radius: 0;
+}
+
+.with_frm_style .frm_required {
+  color: #ff6f48;
+}
+
+.with_frm_style .frm_primary_label {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  text-transform: uppercase;
 }
 
 button {

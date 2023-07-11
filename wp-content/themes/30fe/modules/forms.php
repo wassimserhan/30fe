@@ -5,7 +5,10 @@
       <p class="information__form__copy">Fill up this form and someone from our team will be in touch with you
         shortly.</p>
       <p class="information__form__required">*REQUIRED</p>
-      <form action="POST">
+
+      <?php echo FrmFormsController::get_form_shortcode( array( 'id' => 2 ) ); ?>
+
+      <!-- <form action="POST">
         <label for="firstName">First Name</label>
         <input id="firstName" type="text" name="firstName" value="" placeholder="First Name" />
         <label for="lastName">Last Name</label>
@@ -19,9 +22,13 @@
         <label for="position">Position</label>
         <input id="position" type="text" name="position" value="" placeholder="Position" />
 
+        <label for="comments">What are you interested in?</label>
+        <textarea id="comments" name="comments" value="" rows="4" cols="50"
+          placeholder="What are you interested in?*"> </textarea>
+
         <input id="submit" type="submit" name="cagnote-don-envoi" id="submit" class="information__form__submit"
           value="Submit" />
-      </form>
+      </form> -->
     </section>
 
     <section class="information__card">
