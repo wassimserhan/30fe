@@ -20,9 +20,6 @@ global $post;
   <!--<![endif]-->
 
   <head>
-
-
-
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
@@ -34,64 +31,16 @@ global $post;
     <meta name="breakpoint" content="retina" media="only screen and (-webkit-min-device-pixel-ratio : 2)">
     <meta name="format-detection" content="telephone=no">
     <link rel="profile" href="#">
-
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/reset.css" type="text/css">
     <?php wp_head(); ?>
     <link rel='shortcut icon' type='image/x-icon'
       href='<?php echo get_template_directory_uri(); ?>/images/favicon.png' />
-    <link rel="preload" as="font"
-      href='<?php echo get_template_directory_uri(); ?>/dist/fonts/DJ5EscrowLightDisplay.woff' type="font/woff"
-      crossorigin="anonymous">
-
-    <link rel="preload" as="font" href='<?php echo get_template_directory_uri(); ?>/dist/fonts/EscrowBannerLight.woff'
-      type="font/woff" crossorigin="anonymous">
-
-
-    <link rel="preload" as="font" href='<?php echo get_template_directory_uri(); ?>/dist/fonts/EscrowRoman.woff'
-      type="font/woff" crossorigin="anonymous">
-
-    <link rel="preload" as="font"
-      href='<?php echo get_template_directory_uri(); ?>/dist/fonts/EscrowBannerLightItalic.woff' type="font/woff"
-      crossorigin="anonymous">
-
-    <link rel="preload" as="font" href='<?php echo get_template_directory_uri(); ?>/dist/fonts/RetinaExtraLight.woff'
-      type="font/woff" crossorigin="anonymous">
-
-    <link rel="preload" as="font"
-      href='<?php echo get_template_directory_uri(); ?>/dist/fonts/RetinaExtraLightItalic.woff' type="font/woff"
-      crossorigin="anonymous">
-
-    <link rel="preload" as="font" href='<?php echo get_template_directory_uri(); ?>/dist/fonts/RetinaLight.woff'
-      type="font/woff" crossorigin="anonymous">
-
-    <link rel="preload" as="font" href='<?php echo get_template_directory_uri(); ?>/dist/fonts/RetinaBook.woff'
-      type="font/woff" crossorigin="anonymous">
-
-    <link rel="preload" as="font" href='<?php echo get_template_directory_uri(); ?>/dist/fonts/RetinaMedium.woff'
-      type="font/woff" crossorigin="anonymous">
-
-
-
-
-
   </head>
 
   <body <?php body_class(); ?>>
-
-
-
-
-
-
-
-
-
     <header class="header">
-
       <?php 
              get_template_part( 'modules/navbar' );
-             get_template_part( 'modules/top-banner');
-
       ?>
     </header>
