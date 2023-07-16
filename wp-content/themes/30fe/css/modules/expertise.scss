@@ -37,8 +37,13 @@
     text-transform: capitalize;
     text-align: left;
     justify-content: space-between;
+
     &:hover {
       background-color: $monochromeTaupe;
+    }
+
+    &__arrow {
+      max-width: 20px;
     }
 
     &:hover &__arrow {

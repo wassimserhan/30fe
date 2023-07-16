@@ -1,0 +1,17 @@
+.pill {
+  width: max-content;
+  padding: 4px 16px;
+  border-radius: 100px;
+  background: transparent;
+  box-shadow: 0px 0px 1px 0px $monochromeBlack;
+  margin: 10px 0;
+
+  &__label {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}

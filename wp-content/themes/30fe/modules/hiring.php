@@ -1,6 +1,6 @@
 <section class="hiring">
-  <section class="hiring__oval">
-    <p class="hiring__oval__label">careers</p>
+  <section class="pill">
+    <p class="pill__label">careers</p>
   </section>
   <h2 class="hiring__headline">We're hiring!</h2>
   <p class="hiring__copy">Interested in joining us in our mission? Check out our open positions!
