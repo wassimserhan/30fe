@@ -5,8 +5,10 @@ function theme_files() {
 
     wp_enqueue_script( 'theme-js', get_template_directory_uri() . '/build/index.js', array(), $css_version_number, 1);
     wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-    wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');    
+    wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+   
     wp_enqueue_style( 'theme-styles', get_template_directory_uri() . '/build/style-index.css', array(), $css_version_number );
+      wp_enqueue_style('theme_extra_styles', get_theme_file_uri('/build/index.css'));
     
 }
 add_action( 'wp_enqueue_scripts', 'theme_files' );
@@ -15,24 +17,14 @@ add_action( 'wp_enqueue_scripts', 'theme_files' );
 function theme_features() {
   add_theme_support('title-tag');
   show_admin_bar( true );
+  add_theme_support( 'post-thumbnails' );
+  add_filter('acf/settings/remove_wp_meta_box', '__return_false');
 
 
 
 }
 
 add_action('after_setup_theme', 'theme_features');
-
-
-
-
-
-
-/**
-@ Featured Image and Title Tag Support
-*/
-
-add_theme_support( 'post-thumbnails' );
-add_filter('acf/settings/remove_wp_meta_box', '__return_false');
 
 
 
@@ -51,38 +43,38 @@ function wsj_link_id( $location, $link_text ) {
 
 
 
-function my_customize_rest_cors() {
-	remove_filter( 'rest_pre_serve_request', 'rest_send_cors_headers' );
-	add_filter( 'rest_pre_serve_request', function( $value ) {
-		header( 'Access-Control-Allow-Origin: *' );
-		header( 'Access-Control-Allow-Methods: GET' );
-		header( 'Access-Control-Allow-Credentials: true' );
-		header( 'Access-Control-Expose-Headers: Link', false );
+// function my_customize_rest_cors() {
+// 	remove_filter( 'rest_pre_serve_request', 'rest_send_cors_headers' );
+// 	add_filter( 'rest_pre_serve_request', function( $value ) {
+// 		header( 'Access-Control-Allow-Origin: *' );
+// 		header( 'Access-Control-Allow-Methods: GET' );
+// 		header( 'Access-Control-Allow-Credentials: true' );
+// 		header( 'Access-Control-Expose-Headers: Link', false );
 
-		return $value;
-	} );
-}
+// 		return $value;
+// 	} );
+// }
 
-add_action( 'rest_api_init', 'my_customize_rest_cors', 15 );
+// add_action( 'rest_api_init', 'my_customize_rest_cors', 15 );
 
 /**
 @ Template scripts
 */
 
-function get_page_by_title_search($string){
-    global $wpdb;
-    $title = esc_sql($string);
-    if(!$title) return;
-    $page = $wpdb->get_results("
-        SELECT * 
-        FROM $wpdb->posts
-        WHERE post_title LIKE '%$title%'
-        AND post_type = 'page' 
-        AND post_status = 'publish'
-        LIMIT 1
-    ");
-    return $page;
-}
+// function get_page_by_title_search($string){
+//     global $wpdb;
+//     $title = esc_sql($string);
+//     if(!$title) return;
+//     $page = $wpdb->get_results("
+//         SELECT * 
+//         FROM $wpdb->posts
+//         WHERE post_title LIKE '%$title%'
+//         AND post_type = 'page' 
+//         AND post_status = 'publish'
+//         LIMIT 1
+//     ");
+//     return $page;
+// }
 
 
 
@@ -104,7 +96,7 @@ function remove_bloat() {
     add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
   }
 
-  add_action( 'after_setup_theme', 'remove_bloat' );
+//   add_action( 'after_setup_theme', 'remove_bloat' );
 
     /**
     @ Remove WP Junk from <head>
@@ -134,12 +126,12 @@ function remove_bloat() {
     @ Remove Default Post Type & Comments from side menu
     */
 
-    function remove_default_post_type() {
-        remove_menu_page( 'edit.php' );
-        remove_menu_page( 'edit-comments.php' );
-    }
+    // function remove_default_post_type() {
+    //     remove_menu_page( 'edit.php' );
+    //     remove_menu_page( 'edit-comments.php' );
+    // }
 
-        add_action( 'admin_menu', 'remove_default_post_type' );
+    //     add_action( 'admin_menu', 'remove_default_post_type' );
 
     /**
     @ Custom Post Types
@@ -199,9 +191,9 @@ function remove_bloat() {
         "public" => true,
         "publicly_queryable" => true,
         "show_ui" => true,
-        "show_in_rest" => false,
+        "show_in_rest" => true,
         "rest_base" => "",
-        "has_archive" => false,
+        "has_archive" => true,
         "menu_icon" => 'dashicons-analytics',
         "show_in_menu" => true,
         "show_in_nav_menus" => true,
@@ -215,7 +207,11 @@ function remove_bloat() {
     );
 
     register_post_type( "insights", $args );
+
     register_taxonomy("categories", array("insights"), array("hierarchical" => true, "label" => "Categories", "singular_label" => "Category", "rewrite" => array( 'slug' => 'insights', 'with_front'=> false )));
+
+        register_taxonomy_for_object_type( 'categories', 'insights' ); 
+
 }
 
     add_action( 'init', 'theme_post_type_insights' );
@@ -235,3 +231,31 @@ function display_read_time() {
 
     return $read_time_output;
 }
+
+// Function to change "posts" to "news" in the admin side menu
+function change_post_menu_label() {
+    global $menu;
+    global $submenu;
+    $menu[5][0] = 'Insights';
+    $submenu['edit.php'][5][0] = 'Insights';
+    $submenu['edit.php'][10][0] = 'Add Insight';
+    $submenu['edit.php'][16][0] = 'Tags';
+    echo '';
+}
+add_action( 'admin_menu', 'change_post_menu_label' );
+// Function to change post object labels to "news"
+function change_post_object_label() {
+    global $wp_post_types;
+    $labels = &$wp_post_types['post']->labels;
+    $labels->name = 'Insights';
+    $labels->singular_name = 'Insight';
+    $labels->add_new = 'Add Insight';
+    $labels->add_new_item = 'Add Insight';
+    $labels->edit_item = 'Edit Insight';
+    $labels->new_item = 'Insight';
+    $labels->view_item = 'View Insight';
+    $labels->search_items = 'Search Insights';
+    $labels->not_found = 'No Insights found';
+    $labels->not_found_in_trash = 'No Insights found in Trash';
+}
+add_action( 'init', 'change_post_object_label' );

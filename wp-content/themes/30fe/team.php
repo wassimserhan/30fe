@@ -10,11 +10,11 @@ get_header();
       <p class="pill__label">Our Team</p>
     </section>
     <h1 class="team__headline">Meet the people behind 30</h1>
-    <h6>Worlds of experience, working together. Our engineers, scientists, technical experts and
+    <p class="team__copy">Worlds of experience, working together. Our engineers, scientists, technical experts and
       support personnel work as teams across their many disciplines to provide a depth of expertise and services to our
       clients. Individually, they possess highly specialized knowledge and skills, and together, we work collaboratively
       to help ensure our clients benefit from a complete investigative approach, while following efficient management
-      procedures for each file.</h6>
+      procedures for each file.</p>
     <br>
     <p>Search and Filter goes here</p>
 

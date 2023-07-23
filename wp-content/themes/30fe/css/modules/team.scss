@@ -4,7 +4,7 @@
   background-color: $whiteSmoke;
 
   &__headline {
-    font-size: 72px;
+    font-size: 4.5rem;
     font-style: normal;
     font-weight: 700;
     line-height: 100%;
@@ -14,12 +14,11 @@
   }
 
   &__copy {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-style: normal;
     font-weight: 500;
     line-height: 140%;
     letter-spacing: -0.6px;
-    padding: 24px 0;
 
     & a {
       color: inherit;

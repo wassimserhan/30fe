@@ -16,6 +16,7 @@
   "authors": "Wassim Serhan",
   "license": "ISC",
   "dependencies": {
+    "@splidejs/splide": "^4.1.4",
     "@wordpress/dependency-extraction-webpack-plugin": "^4.6.0",
     "@wordpress/scripts": "*",
     "browser-sync": "^2.27.10",

@@ -30,14 +30,16 @@
 @import 'modules/forms';
 @import 'modules/team';
 @import 'modules/insights';
+@import 'modules/insight-post';
 @import 'modules/single-team';
+@import 'modules/hero';
 
 //----------------------------------*\
 // COMPONENTS
 //----------------------------------*/
 @import 'components/button';
 @import 'components/line';
-@import 'components/carousel';
+@import 'components/splide';
 @import 'components/common';
 @import 'components/hamburger';
 @import 'components/animation';

@@ -7,20 +7,21 @@
     display: flex;
     justify-content: space-between;
   }
+
+  &__headline {
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: -2.4px;
+    padding-bottom: 24px;
+  }
+
   &__form {
     max-width: 540px;
 
-    &__headline {
-      font-size: 48px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 100%;
-      letter-spacing: -2.4px;
-      padding-bottom: 24px;
-    }
-
     &__copy {
-      font-size: 20px;
+      font-size: 1.25rem;
       font-style: normal;
       font-weight: 500;
       line-height: 140%;

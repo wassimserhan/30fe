@@ -1,7 +1,7 @@
 <section class="information">
   <section class="information__wrapper">
     <section class="information__form">
-      <h3 class="information__form__headline">For more information</h3>
+      <h3 class="information__headline">For more information</h3>
       <p class="information__form__copy">Fill up this form and someone from our team will be in touch with you
         shortly.</p>
       <p class="information__form__required">*REQUIRED</p>
