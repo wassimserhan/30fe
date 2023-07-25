@@ -11,16 +11,34 @@
     ?>
   <section class="member">
     <section class="member__card">
-      <figure>
-        <img src="<?php echo $image ?>" alt="" <?php echo get_bloginfo( 'name' ); ?> logo"
-          title="<?php echo get_bloginfo( 'name' ); ?>" width="100%">
-      </figure>
+      <section class="fadein">
+        <?php
+          if( have_rows('headshots') ): 
+          while( have_rows('headshots') ) : the_row();
+            $headshotImg = get_sub_field('headshot');
+            $headshot = $headshotImg['url'];
+            ?>
+
+        <img id="f<?php echo get_row_index() ?>" src="<?php echo $headshot ?>" alt="" <?php echo $name; ?> logo"
+          title="<?php echo $name; ?>" width="100%">
+
+
+        <?php
+            endwhile; ?>
+        <?php endif;
+            ?>
+
+
+
+      </section>
+
+
       <article class="member__person">
         <h2 class=" member__headline"><?php echo $name ?></h2>
         <article class="member__details">
           <p><?php echo $title ?></p>
           <p>Direct: <?php echo $phone ?></p>
-          <p><?php echo $email ?></p>
+          <a href="mailto:<?php echo $email ;?>"><?php echo $email ?></a>
         </article>
         <article class="member__details member__details__bio">
           <p><?php echo $bio ?></p>

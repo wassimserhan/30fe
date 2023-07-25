@@ -19,6 +19,10 @@ new Splide('.splide', {
   type: 'loop',
   perPage: 3,
 }).mount();
+
+
+
+
 // Our modules / classes
 // import agenda from './agenda';
 // import main from './main';

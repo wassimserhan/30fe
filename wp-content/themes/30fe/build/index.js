@@ -3796,6 +3796,7 @@ new _splidejs_splide__WEBPACK_IMPORTED_MODULE_5__["default"]('.splide', {
   type: 'loop',
   perPage: 3
 }).mount();
+
 // Our modules / classes
 // import agenda from './agenda';
 // import main from './main';

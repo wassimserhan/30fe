@@ -136,6 +136,79 @@ function remove_bloat() {
     /**
     @ Custom Post Types
     */
+function theme_post_type_industry() {
+    $labels = array(
+        "name" => __( "Industries", "" ),
+        "singular_name" => __( "Industry", "" ),
+        'add_new' => _x('Add New', 'industry item'), 
+        'add_new_item' => __('Add New Industry'), 
+        'edit_item' => __('Edit Industry'), 
+        'new_item' => __('New Industry'),
+    );
+
+    $args = array(
+        "labels" => $labels,
+        "description" => "",
+        "public" => true,
+        "publicly_queryable" => true,
+        "show_ui" => true,
+        "show_in_rest" => false,
+        "rest_base" => "",
+        "has_archive" => false,
+        "menu_icon" => 'dashicons-building',
+        "show_in_menu" => true,
+        "show_in_nav_menus" => true,
+        "exclude_from_search" => false,
+        "capability_type" => "post",
+        "map_meta_cap" => true,
+        "hierarchical" => true,
+        "rewrite" => array( "slug" => "industries", "with_front" => true ),
+        "query_var" => true,
+        "supports" => array( "title", "thumbnail", "editor",'page-attributes' ),
+    );
+
+    register_post_type( "industry", $args );
+}
+
+    add_action( 'init', 'theme_post_type_industry' );
+
+
+function theme_post_type_service() {
+    $labels = array(
+        "name" => __( "Services", "" ),
+        "singular_name" => __( "Service", "" ),
+        'add_new' => _x('Add New', 'service item'), 
+        'add_new_item' => __('Add New Service'), 
+        'edit_item' => __('Edit Service'), 
+        'new_item' => __('New Service Member'),
+    );
+
+    $args = array(
+        "labels" => $labels,
+        "description" => "",
+        "public" => true,
+        "publicly_queryable" => true,
+        "show_ui" => true,
+        "show_in_rest" => false,
+        "rest_base" => "",
+        "has_archive" => false,
+        "menu_icon" => 'dashicons-lightbulb',
+        "show_in_menu" => true,
+        "show_in_nav_menus" => true,
+        "exclude_from_search" => false,
+        "capability_type" => "post",
+        "map_meta_cap" => true,
+        "hierarchical" => false,
+        "rewrite" => array( "slug" => "expertise", "with_front" => true ),
+        "query_var" => true,
+        "supports" => array( "title", "thumbnail", "editor",'page-attributes' ),
+    );
+
+    register_post_type( "service", $args );
+}
+
+    add_action( 'init', 'theme_post_type_service' );
+
 
     function theme_post_type_team() {
     $labels = array(
@@ -174,47 +247,7 @@ function remove_bloat() {
     add_action( 'init', 'theme_post_type_team' );
 
 
-    function theme_post_type_insights() {
-    $labels = array(
-        "name" => __( "Insights", "" ),
-        "singular_name" => __( "Insight", "" ),
-        'add_new' => __('Add New', 'insight'), 
-        'add_new_item' => __('Add New Insight Item'), 
-        'edit_item' => __('Edit Insight'), 
-        'new_item' => __('New Insight'), 
-    );
-
-    $args = array(
-        "label" => __( "Insight", "" ),
-        "labels" => $labels,
-        "description" => "",
-        "public" => true,
-        "publicly_queryable" => true,
-        "show_ui" => true,
-        "show_in_rest" => true,
-        "rest_base" => "",
-        "has_archive" => true,
-        "menu_icon" => 'dashicons-analytics',
-        "show_in_menu" => true,
-        "show_in_nav_menus" => true,
-        "exclude_from_search" => false,
-        "capability_type" => "post",
-        "map_meta_cap" => true,
-        "hierarchical" => false,
-        "rewrite" => array( "slug" => "insight", "with_front" => true ),
-        "query_var" => true,
-        "supports" => array( "title", "thumbnail", "editor" ),
-    );
-
-    register_post_type( "insights", $args );
-
-    register_taxonomy("categories", array("insights"), array("hierarchical" => true, "label" => "Categories", "singular_label" => "Category", "rewrite" => array( 'slug' => 'insights', 'with_front'=> false )));
-
-        register_taxonomy_for_object_type( 'categories', 'insights' ); 
-
-}
-
-    add_action( 'init', 'theme_post_type_insights' );
+    
 
     /*  Reading time  */
 
@@ -259,3 +292,54 @@ function change_post_object_label() {
     $labels->not_found_in_trash = 'No Insights found in Trash';
 }
 add_action( 'init', 'change_post_object_label' );
+
+function bks_replace_admin_menu_icons_css() {
+    ?>
+<style>
+.dashicons-admin-post:before {
+  font-family: "dashicons";
+  content: "\f497" !important;
+}
+</style>
+<?php
+}
+
+add_action( 'admin_head', 'bks_replace_admin_menu_icons_css' );
+
+
+
+
+// Remove P tag
+function remove_the_wpautop_function() {
+    remove_filter( 'the_content', 'wpautop' );
+    remove_filter( 'the_excerpt', 'wpautop' );
+}
+
+add_action( 'after_setup_theme', 'remove_the_wpautop_function' );
+
+
+/**
+* add order column to admin listing screen for header text
+*/
+function add_new_industry_column($industry_columns) {
+  $industry_columns['menu_order'] = "Order";
+  return $industry_columns;
+}
+add_action('manage_industry_posts_columns', 'add_new_industry_column');
+
+/**
+* show custom order column values
+*/
+function show_order_column($name){
+  global $post;
+
+  switch ($name) {
+    case 'menu_order':
+      $order = $post->menu_order;
+      echo $order;
+      break;
+   default:
+      break;
+   }
+}
+add_action('manage_industry_posts_custom_column','show_order_column');

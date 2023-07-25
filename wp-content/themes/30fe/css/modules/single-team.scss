@@ -8,12 +8,8 @@
     gap: 64px;
   }
 
-  & figure {
-    margin: 0;
-
-    & img {
-      max-width: 732px;
-    }
+  & img {
+    width: 500px;
   }
 
   &__person {
@@ -42,6 +38,11 @@
     &__bio {
       padding-bottom: 64px;
     }
+
+    & a {
+      text-decoration: underline;
+      color: $black;
+    }
   }
 
   &__competencies {
@@ -66,4 +67,68 @@
   &__pill {
     margin: 5px 10px 5px 0;
   }
+}
+
+// Crossfading
+
+.fadein {
+  position: relative;
+  width: 500px;
+}
+.fadein img {
+  position: absolute;
+  top: 0;
+  -webkit-animation-name: fade;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 6s;
+  animation-name: fade;
+  animation-iteration-count: infinite;
+  animation-duration: 6s;
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+  }
+  53% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+  }
+  53% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#f1 {
+  background-color: lightblue;
+}
+#f2 {
+  -webkit-animation-delay: -4s;
+  background-color: yellow;
+}
+#f3 {
+  -webkit-animation-delay: -2s;
+  background-color: lightgreen;
 }

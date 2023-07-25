@@ -6,7 +6,7 @@
         shortly.</p>
       <p class="information__form__required">*REQUIRED</p>
       <!-- form inserted here -->
-      <?php echo FrmFormsController::get_form_shortcode( array( 'id' => 2 ) ); ?>
+      <?php echo FrmFormsController::get_form_shortcode( array( 'id' => 1 ) ); ?>
       <!-- form inserted here -->
     </section>
     <section class="information__card">

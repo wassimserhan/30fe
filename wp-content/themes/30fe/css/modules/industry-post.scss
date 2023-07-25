@@ -1,0 +1,108 @@
+.industry {
+  font-family: 'Inter', sans-serif;
+  background-color: $whiteSmoke;
+
+  &__title {
+    font-size: 128px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 128px */
+    letter-spacing: -6.4px;
+    color: $monochromeBlack;
+    margin: 0;
+  }
+
+  &__copy {
+    padding-top: 48px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 28px */
+    letter-spacing: -0.6px;
+    color: $black;
+  }
+
+  &__figure {
+    width: 100%;
+  }
+
+  &__categories {
+    display: flex;
+    justify-content: space-between;
+    color: $white;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 38.4px */
+    letter-spacing: -1.6px;
+  }
+
+  &__category {
+    width: 100%;
+
+    &-items {
+      display: flex;
+      justify-content: flex-start;
+      place-items: center;
+      padding: 0 64px;
+      min-height: 250px;
+      background-color: $black;
+
+      & p {
+        padding-right: 64px;
+        color: $blue;
+      }
+    }
+
+    &-item {
+      padding: 64px 0;
+    }
+
+    &-bullets {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      padding: 64px;
+      background-color: $whiteSmoke;
+
+      &-border {
+        border-left: 1px solid $black;
+        border-right: 1px solid $black;
+      }
+
+      &__items {
+        display: flex;
+        justify-content: flex-start;
+        gap: 20px;
+      }
+
+      &__item {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 140%; /* 33.6px */
+        letter-spacing: -0.72px;
+        padding-bottom: 48px;
+        color: $black;
+      }
+
+      &__subitem {
+        list-style: disc;
+
+        & li {
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 140%;
+          letter-spacing: -0.72px;
+          padding-bottom: 48px;
+          color: #000000;
+        }
+      }
+
+      &__arrow img {
+        width: 20px;
+      }
+    }
+  }
+}

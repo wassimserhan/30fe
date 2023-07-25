@@ -33,9 +33,22 @@ get_header();
 
       <article class="team__card">
         <a href="<?php the_permalink($team_member) ?>">
+
+          <?php
+          if( have_rows('headshots', $team_member) ): 
+          while( have_rows('headshots', $team_member) ) : the_row();
+            $headshotImg = get_sub_field('headshot', $team_member);
+            $headshot = $headshotImg['url'];
+            ?>
           <figure class="team__card__image">
-            <img class="lazyload" src="<?php echo $image ?>" alt="<?php echo $name; ?>" title="<?php echo $name; ?>">
+            <img class="lazyload" src="<?php echo $headshot ?>" alt="<?php echo $name; ?>" title="<?php echo $name; ?>">
           </figure>
+
+          <?php
+          break;
+            endwhile; ?>
+          <?php endif;
+            ?>
         </a>
         <h6 class="team__card__name">
           <?php echo $name ?>
