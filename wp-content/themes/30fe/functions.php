@@ -6,7 +6,10 @@ function theme_files() {
     wp_enqueue_script( 'theme-js', get_template_directory_uri() . '/build/index.js', array(), $css_version_number, 1);
     wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
     wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+    wp_enqueue_script( 'gsap', '//cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js');
    
+    
     wp_enqueue_style( 'theme-styles', get_template_directory_uri() . '/build/style-index.css', array(), $css_version_number );
       wp_enqueue_style('theme_extra_styles', get_theme_file_uri('/build/index.css'));
     
@@ -138,12 +141,12 @@ function remove_bloat() {
     */
 function theme_post_type_industry() {
     $labels = array(
-        "name" => __( "Industries", "" ),
-        "singular_name" => __( "Industry", "" ),
-        'add_new' => _x('Add New', 'industry item'), 
-        'add_new_item' => __('Add New Industry'), 
-        'edit_item' => __('Edit Industry'), 
-        'new_item' => __('New Industry'),
+        "name" => __( "Sectors", "" ),
+        "singular_name" => __( "Sector", "" ),
+        'add_new' => _x('Add New', 'sector item'), 
+        'add_new_item' => __('Add New Sector'), 
+        'edit_item' => __('Edit Sector'), 
+        'new_item' => __('New Sector'),
     );
 
     $args = array(
@@ -161,8 +164,8 @@ function theme_post_type_industry() {
         "exclude_from_search" => false,
         "capability_type" => "post",
         "map_meta_cap" => true,
-        "hierarchical" => true,
-        "rewrite" => array( "slug" => "industries", "with_front" => true ),
+        "hierarchical" => false,
+        "rewrite" => array( "slug" => "sectors", "with_front" => true ),
         "query_var" => true,
         "supports" => array( "title", "thumbnail", "editor",'page-attributes' ),
     );
@@ -173,14 +176,14 @@ function theme_post_type_industry() {
     add_action( 'init', 'theme_post_type_industry' );
 
 
-function theme_post_type_service() {
+function theme_post_type_expertise() {
     $labels = array(
-        "name" => __( "Services", "" ),
-        "singular_name" => __( "Service", "" ),
-        'add_new' => _x('Add New', 'service item'), 
-        'add_new_item' => __('Add New Service'), 
-        'edit_item' => __('Edit Service'), 
-        'new_item' => __('New Service Member'),
+        "name" => __( "Expertise", "" ),
+        "singular_name" => __( "Expertise", "" ),
+        'add_new' => _x('Add New', 'Expertise item'), 
+        'add_new_item' => __('Add New Expertise'), 
+        'edit_item' => __('Edit Expertise'), 
+        'new_item' => __('New Expertise'),
     );
 
     $args = array(
@@ -204,10 +207,10 @@ function theme_post_type_service() {
         "supports" => array( "title", "thumbnail", "editor",'page-attributes' ),
     );
 
-    register_post_type( "service", $args );
+    register_post_type( "expertise", $args );
 }
 
-    add_action( 'init', 'theme_post_type_service' );
+    add_action( 'init', 'theme_post_type_expertise' );
 
 
     function theme_post_type_team() {

@@ -15,35 +15,40 @@
 @import 'variables/colors';
 
 //----------------------------------*\
+// COMPONENTS
+//----------------------------------*/
+@import 'components/button';
+@import 'components/line';
+@import 'components/common';
+@import 'components/hamburger';
+@import 'components/animation';
+@import 'components/dropdown-icon';
+@import 'components/pill';
+@import 'components/splide';
+
+//----------------------------------*\
 // MODULES
 //----------------------------------*/
 @import 'modules/navbar';
 @import 'modules/footer';
-@import 'modules/single-page';
 @import 'modules/contact';
 @import 'modules/404';
 @import 'modules/top';
 @import 'modules/hiring';
 @import 'modules/work';
 @import 'modules/quote';
-@import 'modules/expertise';
 @import 'modules/forms';
-@import 'modules/team';
-@import 'modules/insights';
-@import 'modules/insight-post';
-@import 'modules/single-team';
 @import 'modules/hero';
-@import 'modules/industries-page';
-@import 'modules/industry-post';
+@import 'modules/timeline';
+@import 'modules/expertise-form';
 
 //----------------------------------*\
-// COMPONENTS
+// PAGES
 //----------------------------------*/
-@import 'components/button';
-@import 'components/line';
-@import 'components/splide';
-@import 'components/common';
-@import 'components/hamburger';
-@import 'components/animation';
-@import 'components/dropdown-icon';
-@import 'components/pill';
+@import 'pages/sectors';
+@import 'pages/single-sector';
+@import 'pages/expertise';
+@import 'pages/insights';
+@import 'pages/single-insight';
+@import 'pages/team';
+@import 'pages/single-team';

@@ -19,8 +19,8 @@
             $headshot = $headshotImg['url'];
             ?>
 
-        <img id="f<?php echo get_row_index() ?>" src="<?php echo $headshot ?>" alt="" <?php echo $name; ?> logo"
-          title="<?php echo $name; ?>" width="100%">
+        <img class="member__image" id="f<?php echo get_row_index() ?>" src="<?php echo $headshot ?>" alt=""
+          <?php echo $name; ?> logo" title="<?php echo $name; ?>" width="100%">
 
 
         <?php

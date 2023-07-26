@@ -1,5 +1,4 @@
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./node_modules/@splidejs/splide/dist/js/splide.esm.js":
@@ -8,6 +7,7 @@
   \*************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   CLASSES: () => (/* binding */ CLASSES),
@@ -3767,12 +3767,56 @@ var SplideRenderer = /*#__PURE__*/function () {
 
 /***/ }),
 
+/***/ "./src/gsap.js":
+/*!*********************!*\
+  !*** ./src/gsap.js ***!
+  \*********************/
+/***/ (() => {
+
+let images = gsap.utils.toArray(".member__image"),
+  tl = gsap.timeline({
+    repeat: -1
+  }),
+  fadeDuration = 1.5,
+  stayDuration = 5;
+
+// show the first one
+gsap.set(images[0], {
+  autoAlpha: 1
+});
+
+// fade each one in successively (in a staggered fashion) EXCEPT the first one (because it's already visible)
+tl.to(images.slice(1), {
+  delay: stayDuration,
+  autoAlpha: 1,
+  duration: fadeDuration,
+  stagger: stayDuration + fadeDuration
+})
+// hide each one after the next one finishes fading in on top of it. Exclude the final image because we'll handle the crossfade with the first image with a tween at the end.
+.to(images.slice(0, images.length - 1), {
+  autoAlpha: 0,
+  duration: 0.01,
+  stagger: stayDuration + fadeDuration
+}, stayDuration + fadeDuration)
+// show the first image (but it won't be visible yet because the last image is on top of it)
+.set(images[0], {
+  autoAlpha: 1
+})
+// now fade out the last image so that the first one is showing again
+.to(images[images.length - 1], {
+  autoAlpha: 0,
+  duration: fadeDuration
+}, "+=" + stayDuration);
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/style.scss */ "./css/style.scss");
 /* harmony import */ var _splidejs_splide_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @splidejs/splide/css */ "./node_modules/@splidejs/splide/dist/css/splide.min.css");
@@ -3780,6 +3824,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _splidejs_splide_css_sea_green__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @splidejs/splide/css/sea-green */ "./node_modules/@splidejs/splide/dist/css/themes/splide-sea-green.min.css");
 /* harmony import */ var _splidejs_splide_css_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @splidejs/splide/css/core */ "./node_modules/@splidejs/splide/dist/css/splide-core.min.css");
 /* harmony import */ var _splidejs_splide__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @splidejs/splide */ "./node_modules/@splidejs/splide/dist/js/splide.esm.js");
+/* harmony import */ var _gsap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./gsap */ "./src/gsap.js");
+/* harmony import */ var _gsap__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_gsap__WEBPACK_IMPORTED_MODULE_6__);
 
 
 // Default theme
@@ -3792,13 +3838,23 @@ __webpack_require__.r(__webpack_exports__);
 // or only core styles
 
 
-new _splidejs_splide__WEBPACK_IMPORTED_MODULE_5__["default"]('.splide', {
+new _splidejs_splide__WEBPACK_IMPORTED_MODULE_5__["default"]('#splide', {
   type: 'loop',
-  perPage: 3
+  perPage: 1,
+  pagination: false
 }).mount();
 
+// new Splide('#splide-timeline', {
+//   type: 'slide',
+//   perPage: 3,
+//   pagination: false,
+//   arrows: true,
+//   perMove: 1,
+//   keyboard: true,
+// }).mount();
+
 // Our modules / classes
-// import agenda from './agenda';
+
 // import main from './main';
 // import navbar from './navbar';
 
@@ -3810,6 +3866,7 @@ new _splidejs_splide__WEBPACK_IMPORTED_MODULE_5__["default"]('.splide', {
   \********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
@@ -3822,6 +3879,7 @@ __webpack_require__.r(__webpack_exports__);
   \***************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
@@ -3834,6 +3892,7 @@ __webpack_require__.r(__webpack_exports__);
   \********************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
@@ -3846,6 +3905,7 @@ __webpack_require__.r(__webpack_exports__);
   \******************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
@@ -3858,6 +3918,7 @@ __webpack_require__.r(__webpack_exports__);
   \************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
@@ -3923,6 +3984,18 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 				}
 /******/ 			}
 /******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
 /******/ 		};
 /******/ 	})();
 /******/ 	

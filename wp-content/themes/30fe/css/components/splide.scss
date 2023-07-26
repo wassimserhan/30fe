@@ -1,11 +1,22 @@
+//Splide Customization
 .splide {
+  width: 480px;
+  overflow: hidden;
+  background-color: $monochromeTaupe;
+  padding-right: 0;
   &__arrow--next {
-    top: 97% !important;
+    top: 94% !important;
     left: 7em !important;
   }
 
   &__arrow--prev {
-    top: 97% !important;
+    top: 94% !important;
     left: 3em !important;
   }
+}
+
+.splide__arrow svg {
+  fill: $black !important;
+  height: 1.5em !important;
+  width: 1.5em !important;
 }

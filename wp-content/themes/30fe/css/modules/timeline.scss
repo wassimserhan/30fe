@@ -1,8 +1,14 @@
-.industries {
+.timeline {
   font-family: 'Inter', sans-serif;
 
   a {
     color: $black;
+  }
+
+  &__line {
+    position: absolute;
+    top: 70px;
+    width: 1200px;
   }
 
   &__title {
@@ -39,6 +45,7 @@
       display: flex;
       justify-content: space-between;
       place-items: center;
+      width: 900px;
     }
   }
 
@@ -134,10 +141,16 @@
   }
 
   &__card {
-    border: 1px solid $monochromeTaupe;
+    border: 10px solid $monochromeTaupe;
     padding: 64px;
-    max-width: 356px;
-    height: max-content;
+    width: 200px;
+    height: 100px;
+    background-color: $black;
+    color: $white;
+
+    &__card:nth-child(0) {
+      display: none;
+    }
 
     &__image {
       margin: auto;
@@ -151,6 +164,7 @@
       font-weight: 700;
       line-height: 120%;
       letter-spacing: -1.6px;
+      text-align: center;
     }
 
     &__title {
@@ -218,4 +232,22 @@
   font-weight: 400;
   line-height: 150%;
   text-transform: uppercase;
+}
+
+.splide-timeline {
+  & .splide__arrow--prev {
+    top: 100px;
+  }
+}
+
+// .splide__list .is-next .sectors__card {
+//   background-color: $monochromeTaupe;
+// }
+.timeline__card-box {
+  position: absolute;
+  background-color: #cbbea5;
+  top: 28px;
+  left: 443px;
+  width: 282px;
+  height: 170px;
 }

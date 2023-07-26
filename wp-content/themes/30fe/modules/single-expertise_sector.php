@@ -1,11 +1,3 @@
-<?php /* Template Name: Industry 
-Template Post Type: Industry 
-*/ ?>
-
-<?php 
-get_header();
-?>
-
 <?php while (have_posts()) {
       the_post();
     }
@@ -16,7 +8,7 @@ get_header();
 
     <section class="max-width max-padding">
       <section class="pill">
-        <p class="pill__label">Industry</p>
+        <p class="pill__label"><?php echo $pillText ?></p>
       </section>
       <section class="industry__intro">
         <h1 class="industry__title industry__title"><?php the_title() ?></h1>
@@ -90,8 +82,3 @@ get_header();
 
   </section>
 </main>
-
-
-<?php 
-get_footer();
-?>

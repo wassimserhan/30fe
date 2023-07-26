@@ -15,16 +15,26 @@ import '@splidejs/splide/css/core';
 import Splide from '@splidejs/splide';
 
 
-new Splide('.splide', {
+new Splide('#splide', {
   type: 'loop',
-  perPage: 3,
+  perPage: 1,
+  pagination: false,
+
 }).mount();
 
+// new Splide('#splide-timeline', {
+//   type: 'slide',
+//   perPage: 3,
+//   pagination: false,
+//   arrows: true,
+//   perMove: 1,
+//   keyboard: true,
+// }).mount();
 
 
 
 // Our modules / classes
-// import agenda from './agenda';
+import gsap from './gsap';
 // import main from './main';
 // import navbar from './navbar';
 
