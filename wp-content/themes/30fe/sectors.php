@@ -53,7 +53,7 @@ get_header();
           </article>
         </a>
         <?php endwhile ?>
-
+        <?php wp_reset_postdata() ?>
       </section>
     </section>
 

@@ -4,16 +4,20 @@
 
 
 
+
+
   <?php
-    // include get_template_directory() . '/modules/timeline.php';
-    include get_template_directory() . '/modules/expertise-form.php';
-    include get_template_directory() . '/modules/industries-form.php';
-    include get_template_directory() . '/modules/expertise.php';
-    include get_template_directory() . '/modules/quote.php';
-    include get_template_directory() . '/modules/hiring.php';
-    include get_template_directory() . '/modules/work.php';
-
-  ?>
-
+      // include get_template_directory() . '/modules/timeline.php';
+            include get_template_directory() . '/modules/stats.php';
+      include get_template_directory() . '/modules/expertise.php';
+      include get_template_directory() . '/modules/quote.php';
+      include get_template_directory() . '/modules/accordion.php';
+      include get_template_directory() . '/modules/testimonials.php';
+      include get_template_directory() . '/modules/expertise-form.php';
+      include get_template_directory() . '/modules/industries-form.php';
+      include get_template_directory() . '/modules/hiring.php';
+      include get_template_directory() . '/modules/work.php';
+         include get_template_directory() . '/modules/blog.php';
+    ?>
 </main>
 <?php get_footer(); ?>

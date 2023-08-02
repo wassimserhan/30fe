@@ -25,7 +25,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    color: $monochromeTaupe;
+    color: $taupe;
 
     &__title {
       font-size: 1.25rem;
@@ -59,7 +59,7 @@
 
   &__legal {
     text-align: center;
-    color: $monochromeTaupe;
+    color: $taupe;
     font-family: Inter;
     font-size: 0.75rem;
     font-style: normal;

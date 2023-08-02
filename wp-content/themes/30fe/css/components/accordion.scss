@@ -1,0 +1,92 @@
+.accordion {
+  display: flex;
+  // height: max-content;
+  height: 100vh; /* <--- This is what you need */
+
+  &--horizontal {
+    .accordion {
+      &__item {
+        width: 50px;
+        display: flex;
+        position: relative;
+
+        ul {
+          list-style-type: none;
+
+          li {
+            margin: 0 0 15px 0;
+            line-height: 1.2;
+          }
+        }
+
+        &:last-of-type {
+          border-right: 2px $black solid;
+        }
+
+        &:not(active) {
+          border-left: 2px $white solid;
+        }
+
+        &:first-child {
+          border-left: none;
+        }
+      }
+
+      &__heading {
+        color: $white;
+        max-width: 60px;
+        // height: 100%;
+        writing-mode: vertical-lr;
+        transform: rotate(-180deg);
+        margin: 0px;
+        cursor: pointer;
+      }
+
+      &__body {
+        min-width: calc(590px - 272px);
+        overflow: hidden;
+        color: $black;
+        padding: 128px 64px;
+      }
+
+      &__headline {
+        font-size: 72px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 100%; /* 72px */
+        letter-spacing: -3.6px;
+      }
+
+      &__copy {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%; /* 24px */
+        letter-spacing: -0.6px;
+        padding: 24px 0 64px;
+      }
+
+      &__image {
+        & img {
+          // width: 500px;
+        }
+      }
+    }
+  }
+
+  &__item {
+    flex-grow: 0;
+    transition: flex-grow 0.25s ease-in;
+    overflow: hidden;
+
+    &.active {
+      flex-grow: 1;
+    }
+  }
+
+  &__heading {
+    font-size: 1.8rem;
+    line-height: 0.75;
+    padding: 1rem;
+  }
+}

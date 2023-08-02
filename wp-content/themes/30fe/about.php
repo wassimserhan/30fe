@@ -4,10 +4,14 @@
 get_header();
 ?>
 
-<main class="main-container">
-  <h1 style="text-align: center">This is About Page</h1>
-</main>
 
+<main class="main-container">
+  <?php
+
+    include get_template_directory() . '/modules/about-intro.php';
+ include get_template_directory() . '/modules/about-mission.php';
+  ?>
+</main>
 
 <?php 
 get_footer();

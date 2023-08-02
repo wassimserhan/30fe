@@ -103,7 +103,7 @@
     & input {
       padding: 12px;
       background-color: transparent;
-      border: 1px solid $monochromeTaupe;
+      border: 1px solid $taupe;
       border-radius: 0;
       font-size: 12px;
       font-style: normal;
@@ -135,7 +135,7 @@
   }
 
   &__card {
-    border: 1px solid $monochromeTaupe;
+    border: 1px solid $taupe;
     padding: 64px;
     max-width: 356px;
     height: max-content;
@@ -182,7 +182,7 @@
 .with_frm_style textarea {
   padding: 12px;
   background-color: transparent;
-  border: 1px solid $monochromeTaupe;
+  border: 1px solid $taupe;
   border-radius: 0;
   font-size: 12px;
   font-style: normal;

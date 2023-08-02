@@ -64,20 +64,16 @@
   }
 
   &__headline {
-    font-size: 3rem;
+    font-size: 32px;
     font-style: normal;
     font-weight: 700;
-    line-height: 100%; /* 3rem */
-    letter-spacing: -0.15rem;
+    line-height: 120%; /* 38.4px */
+    letter-spacing: -1.6px;
     padding-bottom: 24px;
 
-    &-splide {
-      white-space: nowrap;
-    }
-  }
-
-  &__splide {
-    // max-width: 500px;
+    // &-splide {
+    //   white-space: nowrap;
+    // }
   }
 
   &__form {
@@ -109,7 +105,7 @@
     & input {
       padding: 12px;
       background-color: transparent;
-      border: 1px solid $monochromeTaupe;
+      border: 1px solid $taupe;
       border-radius: 0;
       font-size: 12px;
       font-style: normal;
@@ -188,7 +184,7 @@
 .with_frm_style textarea {
   padding: 12px;
   background-color: transparent;
-  border: 1px solid $monochromeTaupe;
+  border: 1px solid $taupe;
   border-radius: 0;
   font-size: 12px;
   font-style: normal;

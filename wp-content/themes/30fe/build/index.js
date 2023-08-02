@@ -3767,49 +3767,6 @@ var SplideRenderer = /*#__PURE__*/function () {
 
 /***/ }),
 
-/***/ "./src/gsap.js":
-/*!*********************!*\
-  !*** ./src/gsap.js ***!
-  \*********************/
-/***/ (() => {
-
-let images = gsap.utils.toArray(".member__image"),
-  tl = gsap.timeline({
-    repeat: -1
-  }),
-  fadeDuration = 1.5,
-  stayDuration = 5;
-
-// show the first one
-gsap.set(images[0], {
-  autoAlpha: 1
-});
-
-// fade each one in successively (in a staggered fashion) EXCEPT the first one (because it's already visible)
-tl.to(images.slice(1), {
-  delay: stayDuration,
-  autoAlpha: 1,
-  duration: fadeDuration,
-  stagger: stayDuration + fadeDuration
-})
-// hide each one after the next one finishes fading in on top of it. Exclude the final image because we'll handle the crossfade with the first image with a tween at the end.
-.to(images.slice(0, images.length - 1), {
-  autoAlpha: 0,
-  duration: 0.01,
-  stagger: stayDuration + fadeDuration
-}, stayDuration + fadeDuration)
-// show the first image (but it won't be visible yet because the last image is on top of it)
-.set(images[0], {
-  autoAlpha: 1
-})
-// now fade out the last image so that the first one is showing again
-.to(images[images.length - 1], {
-  autoAlpha: 0,
-  duration: fadeDuration
-}, "+=" + stayDuration);
-
-/***/ }),
-
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -3824,9 +3781,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _splidejs_splide_css_sea_green__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @splidejs/splide/css/sea-green */ "./node_modules/@splidejs/splide/dist/css/themes/splide-sea-green.min.css");
 /* harmony import */ var _splidejs_splide_css_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @splidejs/splide/css/core */ "./node_modules/@splidejs/splide/dist/css/splide-core.min.css");
 /* harmony import */ var _splidejs_splide__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @splidejs/splide */ "./node_modules/@splidejs/splide/dist/js/splide.esm.js");
-/* harmony import */ var _gsap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./gsap */ "./src/gsap.js");
-/* harmony import */ var _gsap__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_gsap__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _modules_gsapTeam__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/gsapTeam */ "./src/modules/gsapTeam.js");
+/* harmony import */ var _modules_gsapTeam__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_modules_gsapTeam__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _modules_gsapStats__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/gsapStats */ "./src/modules/gsapStats.js");
+/* harmony import */ var _modules_gsapStats__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_modules_gsapStats__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/accordion */ "./src/modules/accordion.js");
+/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_modules_accordion__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _modules_search__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/search */ "./src/modules/search.js");
 
+
+//splide modules
 
 // Default theme
 
@@ -3838,25 +3802,265 @@ __webpack_require__.r(__webpack_exports__);
 // or only core styles
 
 
+
+// modules
+
+
+
+
+// import main from './main';
+// import navbar from './navbar';
+
+// classes
 new _splidejs_splide__WEBPACK_IMPORTED_MODULE_5__["default"]('#splide', {
+  classes: {
+    arrows: 'splide__arrows splide-form__arrows',
+    arrow: 'splide__arrow splide-form__arrow',
+    prev: 'splide__arrow--prev splide-form__arrow--prev',
+    next: 'splide__arrow--next splide-form__arrow--next'
+  },
   type: 'loop',
   perPage: 1,
   pagination: false
 }).mount();
+new _splidejs_splide__WEBPACK_IMPORTED_MODULE_5__["default"]('#splide-testimonials', {
+  classes: {
+    arrows: 'splide__arrows splide-testimonials__arrows',
+    arrow: 'splide__arrow splide-testimonials__arrow',
+    prev: 'splide__arrow--prev splide-testimonials__arrow--prev',
+    next: 'splide__arrow--next splide-testimonials__arrow--next'
+  },
+  type: 'loop',
+  perPage: 1,
+  pagination: false,
+  autoplay: true
+}).mount();
+const magicalSearch = new _modules_search__WEBPACK_IMPORTED_MODULE_9__["default"]();
 
-// new Splide('#splide-timeline', {
-//   type: 'slide',
-//   perPage: 3,
-//   pagination: false,
-//   arrows: true,
-//   perMove: 1,
-//   keyboard: true,
-// }).mount();
+/***/ }),
 
-// Our modules / classes
+/***/ "./src/modules/accordion.js":
+/*!**********************************!*\
+  !*** ./src/modules/accordion.js ***!
+  \**********************************/
+/***/ (() => {
 
-// import main from './main';
-// import navbar from './navbar';
+const accordion = document.querySelectorAll(".accordion__item");
+var accordionArray = [...accordion];
+accordionArray.forEach(item => {
+  item.addEventListener("click", function () {
+    item.classList.add("active");
+    for (let sibling of item.parentNode.children) {
+      if (sibling !== item) {
+        sibling.classList.remove('active');
+      }
+      ;
+    }
+  });
+});
+
+/***/ }),
+
+/***/ "./src/modules/gsapStats.js":
+/*!**********************************!*\
+  !*** ./src/modules/gsapStats.js ***!
+  \**********************************/
+/***/ (() => {
+
+document.addEventListener("DOMContentLoaded", function () {
+  gsap.timeline().to('#bar .oxy-progress-bar-progress-wrap', {
+    duration: 1,
+    width: "100%",
+    ease: "easeIn"
+  }).to('#stats-1', {
+    x: 500,
+    duration: .5,
+    ease: "ease"
+  }, "-=.6").to('#stats-2', {
+    x: 300,
+    duration: .5,
+    ease: "ease"
+  }, "-=.7").to('#stats-3', {
+    x: 200,
+    duration: .5,
+    ease: "ease"
+  }, "-=.8").to('#stats-4', {
+    x: 100,
+    duration: .5,
+    ease: "ease"
+  }, "-=.9").to('#label-1', {
+    opacity: 1,
+    duration: .5,
+    ease: "ease"
+  }).to('#label-2', {
+    opacity: 1,
+    duration: .5,
+    ease: "ease"
+  }, "+=.2").to('#label-3', {
+    opacity: 1,
+    duration: .5,
+    ease: "ease"
+  }, "+=.3").to('#label-4', {
+    opacity: 1,
+    duration: .5,
+    ease: "ease"
+  }, "+=.4");
+
+  // const pbar = document.querySelectorAll('.oxy-progress-bar');
+  // pbar.forEach((element) => {
+
+  //   let w = element.querySelector('.oxy-progress-bar-progress-wrap');
+  //   let p = element.querySelector('.oxy-progress-bar-overlay-percent');
+
+  //   let target = p.textContent;
+
+  //   const pbtl = gsap.timeline({
+  //     defaults: {
+  //       duration: 4,
+  //       ease: "easeIn"
+  //     },
+
+  //   });
+
+  //   pbtl.fromTo(w, { width: 0 }, {
+  //     width: target,
+  //   });
+  // })
+});
+
+/***/ }),
+
+/***/ "./src/modules/gsapTeam.js":
+/*!*********************************!*\
+  !*** ./src/modules/gsapTeam.js ***!
+  \*********************************/
+/***/ (() => {
+
+init = function () {
+  let images = gsap.utils.toArray(".member__image"),
+    tl = gsap.timeline({
+      repeat: -1
+    }),
+    fadeDuration = 1.5,
+    stayDuration = 5;
+
+  // show the first one
+  gsap.set(images[0], {
+    autoAlpha: 1
+  });
+
+  // fade each one in successively (in a staggered fashion) EXCEPT the first one (because it's already visible)
+  tl.to(images.slice(1), {
+    delay: stayDuration,
+    autoAlpha: 1,
+    duration: fadeDuration,
+    stagger: stayDuration + fadeDuration
+  })
+  // hide each one after the next one finishes fading in on top of it. Exclude the final image because we'll handle the crossfade with the first image with a tween at the end.
+  .to(images.slice(0, images.length - 1), {
+    autoAlpha: 0,
+    duration: 0.01,
+    stagger: stayDuration + fadeDuration
+  }, stayDuration + fadeDuration)
+  // show the first image (but it won't be visible yet because the last image is on top of it)
+  .set(images[0], {
+    autoAlpha: 1
+  })
+  // now fade out the last image so that the first one is showing again
+  .to(images[images.length - 1], {
+    autoAlpha: 0,
+    duration: fadeDuration
+  }, "+=" + stayDuration);
+};
+window.onload = init();
+
+/***/ }),
+
+/***/ "./src/modules/search.js":
+/*!*******************************!*\
+  !*** ./src/modules/search.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "jquery");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+class Search {
+  //1. Describe and create/initiate our object
+  constructor() {
+    this.resultsDiv = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#search-overlay__results");
+    this.openButton = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".search-trigger");
+    this.closeButton = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".search-overlay__close");
+    this.searchOverlay = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".search-overlay");
+    this.searchField = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#search-term");
+    this.events();
+    this.isOverlayOpen = false;
+    this.isSpinnerVisible = false;
+    this.previousValue;
+    this.typingTimer;
+  }
+
+  //2. events
+  events() {
+    this.openButton.on('click', this.openOverlay.bind(this));
+    this.closeButton.on('click', this.closeOverlay.bind(this));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("keydown", this.keyPressDispatcher.bind(this));
+    this.searchField.on("keyup", this.typingLogic.bind(this));
+  }
+
+  //3. methods (functions)
+  typingLogic() {
+    if (this.searchField.val() != this.previousValue) {
+      clearTimeout(this.typingTimer);
+      if (this.searchField.val()) {
+        if (!this.isSpinnerVisible) {
+          this.resultsDiv.html('<div class="spinner-loader"></div>');
+          this.isSpinnerVisible = true;
+        }
+        this.typingTimer = setTimeout(this.getResults.bind(this), 2000);
+      } else {
+        this.resultsDiv.html("");
+        this.isSpinnerVisible = false;
+      }
+    }
+    this.previousValue = this.searchField.val();
+  }
+  getResults() {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default().getJSON('http://localhost:3000/30fe/wp-json/wp/v2/posts?search=' + this.searchField.val(), posts => {
+      this.resultsDiv.html(`
+      <h2 class="search-overlay__section-title">General Information</h2>
+      <ul class="link-list min-list">
+      <li><a href="${posts[0].link}">${posts[0].title.rendered}</a></li>
+      </ul>
+      
+      `);
+    });
+  }
+  keyPressDispatcher(e) {
+    if (e.keyCode == 83 && !this.isOverlayOpen && !jquery__WEBPACK_IMPORTED_MODULE_0___default()("input, textarea").is(":focus")) {
+      this.openOverlay();
+    }
+    if (e.keyCode == 27 && this.isOverlayOpen) {
+      this.closeOverlay();
+    }
+  }
+  openOverlay() {
+    this.searchOverlay.addClass("search-overlay--active");
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("body").addClass("body-no-scroll");
+    this.isOverlayOpen = true;
+  }
+  closeOverlay() {
+    this.searchOverlay.removeClass("search-overlay--active");
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("body").removeClass("body-no-scroll");
+    this.isOverlayOpen = false;
+  }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Search);
 
 /***/ }),
 
@@ -3922,6 +4126,17 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
+
+/***/ }),
+
+/***/ "jquery":
+/*!*************************!*\
+  !*** external "jQuery" ***!
+  \*************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = window["jQuery"];
 
 /***/ })
 

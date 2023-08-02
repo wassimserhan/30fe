@@ -25,6 +25,7 @@
 @import 'components/dropdown-icon';
 @import 'components/pill';
 @import 'components/splide';
+@import 'components/accordion';
 
 //----------------------------------*\
 // MODULES
@@ -41,14 +42,19 @@
 @import 'modules/hero';
 @import 'modules/timeline';
 @import 'modules/expertise-form';
+@import 'modules/testimonials';
+@import 'modules/blog';
+@import 'modules/stats';
+@import 'modules/search';
 
 //----------------------------------*\
 // PAGES
 //----------------------------------*/
+@import 'pages/about';
+@import 'pages/team';
+@import 'pages/expertise';
+@import 'pages/single-team';
 @import 'pages/sectors';
 @import 'pages/single-sector';
-@import 'pages/expertise';
 @import 'pages/insights';
 @import 'pages/single-insight';
-@import 'pages/team';
-@import 'pages/single-team';

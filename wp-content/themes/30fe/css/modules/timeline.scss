@@ -109,7 +109,7 @@
     & input {
       padding: 12px;
       background-color: transparent;
-      border: 1px solid $monochromeTaupe;
+      border: 1px solid $taupe;
       border-radius: 0;
       font-size: 12px;
       font-style: normal;
@@ -141,7 +141,7 @@
   }
 
   &__card {
-    border: 10px solid $monochromeTaupe;
+    border: 10px solid $taupe;
     padding: 64px;
     width: 200px;
     height: 100px;
@@ -195,7 +195,7 @@
 .with_frm_style textarea {
   padding: 12px;
   background-color: transparent;
-  border: 1px solid $monochromeTaupe;
+  border: 1px solid $taupe;
   border-radius: 0;
   font-size: 12px;
   font-style: normal;
@@ -241,7 +241,7 @@
 }
 
 // .splide__list .is-next .sectors__card {
-//   background-color: $monochromeTaupe;
+//   background-color: $taupe;
 // }
 .timeline__card-box {
   position: absolute;

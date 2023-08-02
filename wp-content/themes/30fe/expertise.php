@@ -74,6 +74,8 @@ if ($isItSectors!==false)
         </a>
         <?php endwhile ?>
 
+        <?php wp_reset_postdata() ?>
+
       </section>
     </section>
 
