@@ -106,21 +106,7 @@
 
 </footer>
 
-<section class="search-overlay">
 
-  <section class="search-overlay__top">
-    <section class="container">
-      <i class="fa fa-search search-overlay__icon" aria-hidden="true"></i>
-      <input id="search-term" type="text" class="search-term" placeholder="What are you looking for?"
-        autocomplete="off">
-      <i class="fa fa-window-close search-overlay__close" aria-hidden="true"></i>
-    </section>
-
-  </section>
-  <section class="container">
-    <section id="search-overlay__results"></section>
-  </section>
-</section>
 
 <?php wp_footer(); ?>
 
