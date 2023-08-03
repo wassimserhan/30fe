@@ -4032,16 +4032,37 @@ class Search {
     this.previousValue = this.searchField.val();
   }
   getResults() {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default().getJSON(siteData.root_url + '/wp-json/wp/v2/posts?search=' + this.searchField.val(), posts => {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default().getJSON(siteData.root_url + '/wp-json/30fe/v1/search?term=' + this.searchField.val(), results => {
       this.resultsDiv.html(`
-      <h2 class="search-overlay__section-title">General Information</h2>
-      ${posts.length ? '<ul class="link-list min-list">' : '<p>No general information matches that search.</p>'}
-     
-      ${posts.map(item => `<li><a href="${item.link}">${item.title.rendered}</a></li>`).join('')}
-
-      ${posts.length ? '</ul>' : ''}
-     
-    
+        <section class="row">
+          <section class="one-third">
+              <h2 class="search-overlay__section-title">General Information</h2>
+              ${results.generalInfo.length ? '<ul class="link-list min-list">' : '<p>No general information matches that search.</p>'}
+              ${results.generalInfo.map(item => `<li><a href="${item.permalink}">${item.title}</a></li>`).join('')}
+              ${results.generalInfo.length ? '</ul>' : ''}
+          </section>
+          <section class="one-third">
+             <h2 class="search-overlay__section-title">Team</h2>
+               ${results.team.length ? '<ul class="professor-cards">' : '<p>No team member match that search.</p>'}
+              ${results.team.map(item => `
+                
+        <img class="member__image" src="${item.image}" alt="x" title="" width="100%">
+              `).join('')}
+              ${results.team.length ? '</ul>' : ''}
+          </section>
+          <section class="one-third">
+             <h2 class="search-overlay__section-title">Expertise</h2>
+               ${results.expertise.length ? '<ul class="link-list min-list">' : '<p>No expertise match that search.</p>'}
+              ${results.generalInfo.map(item => `<li><a href="${item.permalink}">${item.title}</a></li>`).join('')}
+              ${results.generalInfo.length ? '</ul>' : ''}
+          </section>
+            <section class="one-third">
+             <h2 class="search-overlay__section-title">Sector</h2>
+               ${results.sector.length ? '<ul class="link-list min-list">' : '<p>No general information matches that search.</p>'}
+              ${results.sector.map(item => `<li><a href="${item.permalink}">${item.title}</a></li>`).join('')}
+              ${results.sector.length ? '</ul>' : ''}
+          </section>
+        </section>
       `);
       this.isSpinnerVisible = false;
     });

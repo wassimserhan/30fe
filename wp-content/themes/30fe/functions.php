@@ -1,5 +1,7 @@
 <?php
 
+require get_theme_file_path('/includes/search-route.php');
+
 function theme_files() {
     $css_version_number = get_field( 'css_version_number', get_option( 'page_on_front' ) );
 
@@ -237,7 +239,7 @@ function theme_post_type_expertise() {
         "public" => true,
         "publicly_queryable" => true,
         "show_ui" => true,
-        "show_in_rest" => false,
+        "show_in_rest" => true,
         "rest_base" => "",
         "has_archive" => false,
         "menu_icon" => 'dashicons-groups',
