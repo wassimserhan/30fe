@@ -2,9 +2,12 @@
 <main class="main-container">
   <?php 
       $name = get_the_title();
+      $qualifications = get_field('qualifications');
       $title = get_field('title');
+      $location = get_field('location');
       $phone = get_field('phone');
       $email = get_field('email');
+      $cv = get_field('cv');
       $img = get_field('headshot', $team_member);
       $image = $img['url'];
       $bio = get_field('bio');
@@ -34,11 +37,17 @@
 
 
       <article class="member__person">
-        <h2 class=" member__headline"><?php echo $name ?></h2>
+        <h2 class="member__headline"><?php echo $name ?></h2>
         <article class="member__details">
+          <p><?php echo $qualifications ?></p>
           <p><?php echo $title ?></p>
-          <p>Direct: <?php echo $phone ?></p>
+          <p><?php echo $location ?></p>
+          <p><?php echo $phone ?></p>
           <a href="mailto:<?php echo $email ;?>"><?php echo $email ?></a>
+          <?php if($cv) : ?>
+          <a href="<?php echo $cv ?>"><button class="member__details__button">Download CV</button></a>
+          <?php endif ?>
+
         </article>
         <article class="member__details member__details__bio">
           <p><?php echo $bio ?></p>

@@ -4,6 +4,7 @@
 get_header();
 ?>
 
+
 <main class="main-container">
   <section class="team">
     <section class="pill">
@@ -16,12 +17,36 @@ get_header();
       to help ensure our clients benefit from a complete investigative approach, while following efficient management
       procedures for each file.</p>
     <br>
-    <p>Search and Filter goes here</p>
+    <section class="team__search">
+      <section class="team__dropdown">
+        <select id="team__role" class=" team__expertise">
+          <option value="all">All Roles</option>
+          <option value="Associates">Associates</option>
+          <option value="Leadership Team">Leadership Team</option>
+          <option value="Support Team">Support Team</option>
+        </select>
+      </section>
+      <section class="team__dropdown">
+        <select id="team__expertise" class="team__expertise">
+          <option value="all">All Expertise</option>
+          <?php 
+          $expertise = new WP_Query(array(
+          'posts_per_page' => 20,
+          'post_type'=> 'expertise'
+          ));
+          while ($expertise->have_posts()): $expertise->the_post();
+         ?>
+          <option value="<?php the_title() ?>"><?php the_title() ?></option>
+          <?php endwhile ?>
+          <?php wp_reset_postdata() ?>
+        </select>
+      </section>
+      <input type="text" id="myFilter" class="form-control" placeholder="Search">
+    </section>
 
 
 
-    <section class="team__grid">
-
+    <section id="team" class="team__grid">
       <?php 
         $team_members = get_field ( 'team_member' ); 
         foreach ($team_members as $team_member):     
@@ -30,10 +55,8 @@ get_header();
         $img = get_field('headshot', $team_member);
         $image = $img['url'];
       ?>
-
       <article class="team__card">
         <a href="<?php the_permalink($team_member) ?>">
-
           <?php
           if( have_rows('headshots', $team_member) ): 
           while( have_rows('headshots', $team_member) ) : the_row();
@@ -56,6 +79,19 @@ get_header();
         <p class="team__card__title">
           <?php echo $title ?>
         </p>
+
+
+        <p class="team__card__expertise" style="display: none">
+          <?php $expertise = get_field('expertise', $team_member);
+        foreach ($expertise as $item):?>
+          <?php echo get_the_title($item);  ?>
+          <?php endforeach; ?></p>
+
+        <?php 
+        $role = get_field("role", $team_member)
+        ?>
+        <p class="team__card__role" style="display: none"><?php echo $role;  ?></p>
+
       </article>
       <?php endforeach; ?>
     </section>
@@ -64,6 +100,8 @@ get_header();
   </section>
 
 </main>
+
+
 
 
 <?php 

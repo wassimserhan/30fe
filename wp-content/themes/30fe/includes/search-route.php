@@ -30,7 +30,7 @@
   array_push($results['team'], array(
       'title' => get_the_title(),
       'permalink' => get_the_permalink(),
-      'image' => get_the_post_thumbnail_url(0, 'large')
+      'image' => get_the_post_thumbnail_url()
     ));
   }
 

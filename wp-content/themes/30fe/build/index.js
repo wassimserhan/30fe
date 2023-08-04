@@ -3781,13 +3781,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _splidejs_splide_css_sea_green__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @splidejs/splide/css/sea-green */ "./node_modules/@splidejs/splide/dist/css/themes/splide-sea-green.min.css");
 /* harmony import */ var _splidejs_splide_css_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @splidejs/splide/css/core */ "./node_modules/@splidejs/splide/dist/css/splide-core.min.css");
 /* harmony import */ var _splidejs_splide__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @splidejs/splide */ "./node_modules/@splidejs/splide/dist/js/splide.esm.js");
-/* harmony import */ var _modules_gsapTeam__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/gsapTeam */ "./src/modules/gsapTeam.js");
-/* harmony import */ var _modules_gsapTeam__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_modules_gsapTeam__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _modules_gsapStats__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/gsapStats */ "./src/modules/gsapStats.js");
-/* harmony import */ var _modules_gsapStats__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_modules_gsapStats__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/accordion */ "./src/modules/accordion.js");
-/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_modules_accordion__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _modules_search__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/search */ "./src/modules/search.js");
+/* harmony import */ var _modules_main__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/main */ "./src/modules/main.js");
+/* harmony import */ var _modules_main__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_modules_main__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _modules_gsapTeam__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/gsapTeam */ "./src/modules/gsapTeam.js");
+/* harmony import */ var _modules_gsapTeam__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_modules_gsapTeam__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _modules_gsapStats__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/gsapStats */ "./src/modules/gsapStats.js");
+/* harmony import */ var _modules_gsapStats__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_modules_gsapStats__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/accordion */ "./src/modules/accordion.js");
+/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_modules_accordion__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _modules_splide__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/splide */ "./src/modules/splide.js");
+/* harmony import */ var _modules_splide__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_modules_splide__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _modules_search__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/search */ "./src/modules/search.js");
 
 
 //splide modules
@@ -3808,10 +3812,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
 // import main from './main';
 // import navbar from './navbar';
 
 // classes
+
+const magicalSearch = new _modules_search__WEBPACK_IMPORTED_MODULE_11__["default"]();
 new _splidejs_splide__WEBPACK_IMPORTED_MODULE_5__["default"]('#splide', {
   classes: {
     arrows: 'splide__arrows splide-form__arrows',
@@ -3835,7 +3844,6 @@ new _splidejs_splide__WEBPACK_IMPORTED_MODULE_5__["default"]('#splide-testimonia
   pagination: false,
   autoplay: true
 }).mount();
-const magicalSearch = new _modules_search__WEBPACK_IMPORTED_MODULE_9__["default"]();
 
 /***/ }),
 
@@ -3867,66 +3875,71 @@ accordionArray.forEach(item => {
   \**********************************/
 /***/ (() => {
 
-document.addEventListener("DOMContentLoaded", function () {
-  gsap.timeline().to('#bar .oxy-progress-bar-progress-wrap', {
-    duration: 1,
-    width: "100%",
-    ease: "easeIn"
-  }).to('#stats-1', {
-    x: 500,
-    duration: .5,
-    ease: "ease"
-  }, "-=.6").to('#stats-2', {
-    x: 300,
-    duration: .5,
-    ease: "ease"
-  }, "-=.7").to('#stats-3', {
-    x: 200,
-    duration: .5,
-    ease: "ease"
-  }, "-=.8").to('#stats-4', {
-    x: 100,
-    duration: .5,
-    ease: "ease"
-  }, "-=.9").to('#label-1', {
-    opacity: 1,
-    duration: .5,
-    ease: "ease"
-  }).to('#label-2', {
-    opacity: 1,
-    duration: .5,
-    ease: "ease"
-  }, "+=.2").to('#label-3', {
-    opacity: 1,
-    duration: .5,
-    ease: "ease"
-  }, "+=.3").to('#label-4', {
-    opacity: 1,
-    duration: .5,
-    ease: "ease"
-  }, "+=.4");
+init = function () {
+  const bar = document.getElementById('bar');
+  if (bar) {
+    gsap.timeline().to('#bar .oxy-progress-bar-progress-wrap', {
+      duration: 1,
+      width: "100%",
+      ease: "easeIn"
+    }).to('#stats-1', {
+      x: 500,
+      duration: .5,
+      ease: "ease"
+    }, "-=.6").to('#stats-2', {
+      x: 300,
+      duration: .5,
+      ease: "ease"
+    }, "-=.7").to('#stats-3', {
+      x: 200,
+      duration: .5,
+      ease: "ease"
+    }, "-=.8").to('#stats-4', {
+      x: 100,
+      duration: .5,
+      ease: "ease"
+    }, "-=.9").to('#label-1', {
+      opacity: 1,
+      duration: .5,
+      ease: "ease"
+    }).to('#label-2', {
+      opacity: 1,
+      duration: .5,
+      ease: "ease"
+    }, "+=.2").to('#label-3', {
+      opacity: 1,
+      duration: .5,
+      ease: "ease"
+    }, "+=.3").to('#label-4', {
+      opacity: 1,
+      duration: .5,
+      ease: "ease"
+    }, "+=.4");
 
-  // const pbar = document.querySelectorAll('.oxy-progress-bar');
-  // pbar.forEach((element) => {
+    // const pbar = document.querySelectorAll('.oxy-progress-bar');
+    // pbar.forEach((element) => {
 
-  //   let w = element.querySelector('.oxy-progress-bar-progress-wrap');
-  //   let p = element.querySelector('.oxy-progress-bar-overlay-percent');
+    //   let w = element.querySelector('.oxy-progress-bar-progress-wrap');
+    //   let p = element.querySelector('.oxy-progress-bar-overlay-percent');
 
-  //   let target = p.textContent;
+    //   let target = p.textContent;
 
-  //   const pbtl = gsap.timeline({
-  //     defaults: {
-  //       duration: 4,
-  //       ease: "easeIn"
-  //     },
+    //   const pbtl = gsap.timeline({
+    //     defaults: {
+    //       duration: 4,
+    //       ease: "easeIn"
+    //     },
 
-  //   });
+    //   });
 
-  //   pbtl.fromTo(w, { width: 0 }, {
-  //     width: target,
-  //   });
-  // })
-});
+    //   pbtl.fromTo(w, { width: 0 }, {
+    //     width: target,
+    //   });
+    // })
+  }
+};
+
+window.onload = init();
 
 /***/ }),
 
@@ -3936,43 +3949,127 @@ document.addEventListener("DOMContentLoaded", function () {
   \*********************************/
 /***/ (() => {
 
-init = function () {
-  let images = gsap.utils.toArray(".member__image"),
-    tl = gsap.timeline({
-      repeat: -1
-    }),
-    fadeDuration = 1.5,
-    stayDuration = 5;
+if (document.querySelector(".member__image") !== null) {
+  init = function () {
+    let images = gsap.utils.toArray(".member__image"),
+      tl = gsap.timeline({
+        repeat: -1
+      }),
+      fadeDuration = 1.5,
+      stayDuration = 5;
 
-  // show the first one
-  gsap.set(images[0], {
-    autoAlpha: 1
-  });
+    // show the first one
+    gsap.set(images[0], {
+      autoAlpha: 1
+    });
 
-  // fade each one in successively (in a staggered fashion) EXCEPT the first one (because it's already visible)
-  tl.to(images.slice(1), {
-    delay: stayDuration,
-    autoAlpha: 1,
-    duration: fadeDuration,
-    stagger: stayDuration + fadeDuration
-  })
-  // hide each one after the next one finishes fading in on top of it. Exclude the final image because we'll handle the crossfade with the first image with a tween at the end.
-  .to(images.slice(0, images.length - 1), {
-    autoAlpha: 0,
-    duration: 0.01,
-    stagger: stayDuration + fadeDuration
-  }, stayDuration + fadeDuration)
-  // show the first image (but it won't be visible yet because the last image is on top of it)
-  .set(images[0], {
-    autoAlpha: 1
-  })
-  // now fade out the last image so that the first one is showing again
-  .to(images[images.length - 1], {
-    autoAlpha: 0,
-    duration: fadeDuration
-  }, "+=" + stayDuration);
-};
-window.onload = init();
+    //stops gsap if only one image
+    if (images.length == 1) return;
+
+    // fade each one in successively (in a staggered fashion) EXCEPT the first one (because it's already visible)
+    tl.to(images.slice(1), {
+      delay: stayDuration,
+      autoAlpha: 1,
+      duration: fadeDuration,
+      stagger: stayDuration + fadeDuration
+    })
+    // hide each one after the next one finishes fading in on top of it. Exclude the final image because we'll handle the crossfade with the first image with a tween at the end.
+    .to(images.slice(0, images.length - 1), {
+      autoAlpha: 0,
+      duration: 0.01,
+      stagger: stayDuration + fadeDuration
+    }, stayDuration + fadeDuration)
+    // show the first image (but it won't be visible yet because the last image is on top of it)
+    .set(images[0], {
+      autoAlpha: 1
+    })
+    // now fade out the last image so that the first one is showing again
+    .to(images[images.length - 1], {
+      autoAlpha: 0,
+      duration: fadeDuration
+    }, "+=" + stayDuration);
+  };
+  window.onload = init();
+}
+
+/***/ }),
+
+/***/ "./src/modules/main.js":
+/*!*****************************!*\
+  !*** ./src/modules/main.js ***!
+  \*****************************/
+/***/ (() => {
+
+//Search Filter
+const input = document.getElementById("myFilter");
+if (input) {
+  input.addEventListener('keyup', teamFilter);
+  function teamFilter() {
+    var filter, cards, cardContainer, title, i;
+    filter = input.value.toUpperCase();
+    cardContainer = document.getElementById("team");
+    cards = cardContainer.getElementsByClassName("team__card");
+    for (i = 0; i < cards.length; i++) {
+      title = cards[i].querySelector(".team__card__name");
+      if (title.innerText.toUpperCase().indexOf(filter) > -1) {
+        cards[i].style.display = "";
+      } else {
+        cards[i].style.display = "none";
+      }
+    }
+  }
+}
+
+//Expertise Filter
+const e = document.getElementById("team__expertise");
+if (e) {
+  e.addEventListener('change', expertiseFilter);
+  function expertiseFilter() {
+    resetSearch();
+    const role = document.getElementById("team__role").value = 'all';
+    var filter, cards, cardContainer, title, i;
+    filter = e.value.toUpperCase();
+    cardContainer = document.getElementById("team");
+    cards = cardContainer.getElementsByClassName("team__card");
+    for (i = 0; i < cards.length; i++) {
+      title = cards[i].querySelector(".team__card__expertise");
+      if (title.innerText.toUpperCase().indexOf(filter) > -1) {
+        cards[i].style.display = "";
+      } else {
+        cards[i].style.display = "none";
+      }
+    }
+  }
+}
+
+//Role Filter
+const role = document.getElementById("team__role");
+if (role) {
+  role.addEventListener('change', roleFilter);
+  function roleFilter() {
+    resetSearch();
+    const e = document.getElementById("team__expertise").value = 'all';
+    var filter, cards, cardContainer, title, i;
+    filter = role.value.toUpperCase();
+    cardContainer = document.getElementById("team");
+    cards = cardContainer.getElementsByClassName("team__card");
+    for (i = 0; i < cards.length; i++) {
+      title = cards[i].querySelector(".team__card__role");
+      if (title.innerText.toUpperCase().indexOf(filter) > -1) {
+        cards[i].style.display = "";
+      } else {
+        cards[i].style.display = "none";
+      }
+    }
+  }
+}
+function resetSearch() {
+  cardContainer = document.getElementById("team");
+  cards = cardContainer.getElementsByClassName("team__card");
+  for (i = 0; i < cards.length; i++) {
+    cards[i].style.display = "block";
+  }
+}
 
 /***/ }),
 
@@ -4046,7 +4143,13 @@ class Search {
                ${results.team.length ? '<ul class="professor-cards">' : '<p>No team member match that search.</p>'}
               ${results.team.map(item => `
                 
-        <img class="member__image" src="${item.image}" alt="x" title="" width="100%">
+                <li class="professor-card__list-item">
+                  <a class="professor-card" href="${item.permalink}">
+                    <img class="professor-card__image" src="${item.image}">
+                    <span class="professor-card__name">${item.title}</span>
+                  </a>
+                </li>
+
               `).join('')}
               ${results.team.length ? '</ul>' : ''}
           </section>
@@ -4106,6 +4209,16 @@ class Search {
   }
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Search);
+
+/***/ }),
+
+/***/ "./src/modules/splide.js":
+/*!*******************************!*\
+  !*** ./src/modules/splide.js ***!
+  \*******************************/
+/***/ (() => {
+
+
 
 /***/ }),
 

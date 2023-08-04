@@ -1,6 +1,5 @@
 import '../css/style.scss';
 
-
 //splide modules
 
 // Default theme
@@ -16,15 +15,24 @@ import '@splidejs/splide/css/core';
 import Splide from '@splidejs/splide';
 
 
+
 // modules
-import gsapTeam from './modules/gsapTeam';
-import gsapStats from './modules/gsapStats';
-import accordion from './modules/accordion';
-import Search from './modules/search'
+import './modules/main';
+import './modules/gsapTeam';
+import './modules/gsapStats';
+import './modules/accordion';
+import splide from './modules/splide';
+
+import Search from './modules/search';
+
 // import main from './main';
 // import navbar from './navbar';
 
 // classes
+
+const magicalSearch = new Search()
+
+
 new Splide('#splide', {
   classes: {
     arrows: 'splide__arrows splide-form__arrows',
@@ -39,7 +47,6 @@ new Splide('#splide', {
 }).mount();
 
 new Splide('#splide-testimonials', {
-
   classes: {
     arrows: 'splide__arrows splide-testimonials__arrows',
     arrow: 'splide__arrow splide-testimonials__arrow',
@@ -52,8 +59,6 @@ new Splide('#splide-testimonials', {
   pagination: false,
   autoplay: true,
 }).mount();
-
-const magicalSearch = new Search()
 
 
 

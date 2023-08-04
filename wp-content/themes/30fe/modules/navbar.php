@@ -40,8 +40,7 @@
     </li>
     <li class="nav__links__list" role="menuitem">
       <a id="" class="nav__items nav__items--main nav-links" data-name="#"
-        href="<?php echo site_url('/insights')?>">Insight &
-        Events</a>
+        href="<?php echo site_url('/insights')?>">Insights</a>
     </li>
     <li class="nav__links__list" role="menuitem">
       <a id="" class="nav__items nav__items--main nav-links" data-name="#"

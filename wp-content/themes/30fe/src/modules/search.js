@@ -65,7 +65,13 @@ class Search {
                ${results.team.length ? '<ul class="professor-cards">' : '<p>No team member match that search.</p>'}
               ${results.team.map(item => `
                 
-        <img class="member__image" src="${item.image}" alt="x" title="" width="100%">
+                <li class="professor-card__list-item">
+                  <a class="professor-card" href="${item.permalink}">
+                    <img class="professor-card__image" src="${item.image}">
+                    <span class="professor-card__name">${item.title}</span>
+                  </a>
+                </li>
+
               `).join('')}
               ${results.team.length ? '</ul>' : ''}
           </section>
