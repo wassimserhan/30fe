@@ -1,53 +1,222 @@
 .expertise {
   font-family: 'Inter', sans-serif;
-  padding: 128px;
-  background-color: $whiteSmoke;
 
-  &__headline {
-    font-size: 48px;
+  a {
+    color: $black;
+  }
+
+  &__title {
+    font-size: 128px;
     font-style: normal;
     font-weight: 700;
-    line-height: 100%;
-    letter-spacing: -2.4px;
-    padding-bottom: 32px;
+    line-height: 100%; /* 128px */
+    letter-spacing: -6.4px;
+    color: $black;
+    margin: 0;
+  }
+
+  &__copy + p {
+    padding-top: 48px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 28px */
+    letter-spacing: -0.6px;
+    color: $black;
+  }
+
+  &__figure {
+    width: 100%;
   }
 
   &__list {
+    background-color: $whiteSmoke;
     display: flex;
-    max-width: 980px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    gap: 32px;
-    flex: 1 0 0;
-    align-self: stretch;
+    flex-direction: column;
+    align-items: center;
+
+    &-section {
+      display: flex;
+      justify-content: space-between;
+      place-items: center;
+      width: 900px;
+    }
   }
 
-  &__item {
-    display: flex;
-    place-items: center;
-    width: 304px;
-    background-color: transparent;
-    border: none;
-    color: $monochromeBlack;
-    min-height: 100px;
-    font-size: 1rem;
+  &__list-item {
+    font-size: 48px;
+    font-style: normal;
     font-weight: 700;
-    letter-spacing: -0.48px;
-    text-transform: capitalize;
-    text-align: left;
-    justify-content: space-between;
-
-    &:hover {
-      background-color: $taupe;
-    }
+    line-height: 100%; /* 48px */
+    letter-spacing: -2.4px;
+    padding: 64px 0;
 
     &__arrow {
       max-width: 20px;
     }
+  }
 
-    &:hover &__arrow {
-      transform: rotate(-40deg);
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__headline {
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 3rem */
+    letter-spacing: -0.15rem;
+    padding-bottom: 24px;
+  }
+
+  &__splide {
+    max-width: 790px;
+  }
+
+  &__form {
+    max-width: 350px;
+
+    &__copy {
+      font-size: 1.25rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 140%;
+      letter-spacing: -0.6px;
+    }
+
+    &__required {
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 150%;
+      text-transform: uppercase;
+      color: $orange;
+      padding: 32px 0 16px;
+    }
+
+    & form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    & input {
+      padding: 12px;
+      background-color: transparent;
+      border: 1px solid $taupe;
+      border-radius: 0;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      text-transform: uppercase;
+      &::placeholder {
+        color: $monochromeBlack;
+        &::after {
+          content: ' *';
+          color: red;
+        }
+      }
+
+      &[type='submit'] {
+        font-size: 0.8em;
+        background-color: $monochromeBlack;
+        border: 1px solid $monochromeBlack;
+        color: $white;
+        padding: 16px 32px;
+        text-transform: uppercase;
+        margin: 16px 0;
+      }
+    }
+
+    // & label {
+    //   visibility: hidden;
+    // }
+  }
+
+  &__card {
+    border: 1px solid $taupe;
+    padding: 64px;
+    max-width: 356px;
+    height: max-content;
+
+    &__image {
+      margin: auto;
+      width: 228px;
+      height: 226px;
+    }
+
+    &__name {
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 120%;
+      letter-spacing: -1.6px;
+    }
+
+    &__title {
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      text-transform: uppercase;
+      padding: 8px 0 16px;
+    }
+
+    &__email {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
     }
   }
+}
+
+.frm_style_formidable-style.with_frm_style .form-field {
+  margin: 0;
+}
+
+.with_frm_style input[type='text'],
+.with_frm_style input[type='email'],
+.with_frm_style input[type='tel'],
+.with_frm_style textarea {
+  padding: 12px;
+  background-color: transparent;
+  border: 1px solid $taupe;
+  border-radius: 0;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  height: initial;
+
+  ::placeholder {
+    color: $monochromeBlack;
+  }
+}
+
+.frm_style_formidable-style.with_frm_style .frm_submit button {
+  font-size: 0.8em;
+  background-color: $monochromeBlack;
+  border: 1px solid $monochromeBlack;
+  color: $white;
+  padding: 16px 32px;
+  text-transform: uppercase;
+  margin: 16px 0;
+  width: 100%;
+  border-radius: 0;
+}
+
+.with_frm_style .frm_required {
+  color: $orange;
+}
+
+.with_frm_style .frm_primary_label {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  text-transform: uppercase;
 }

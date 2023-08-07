@@ -1,7 +1,11 @@
 .accordion {
   display: flex;
   // height: max-content;
-  height: 100vh; /* <--- This is what you need */
+  height: 80vh; /* <--- This is what you need */
+
+  @include bp(phone) {
+    display: none;
+  }
 
   &--horizontal {
     .accordion {
@@ -33,7 +37,7 @@
       }
 
       &__heading {
-        color: $white;
+        color: $black;
         max-width: 60px;
         // height: 100%;
         writing-mode: vertical-lr;
@@ -46,11 +50,11 @@
         min-width: calc(590px - 272px);
         overflow: hidden;
         color: $black;
-        padding: 128px 64px;
+        padding: 20px 64px;
       }
 
       &__headline {
-        font-size: 72px;
+        font-size: 68px;
         font-style: normal;
         font-weight: 700;
         line-height: 100%; /* 72px */
@@ -63,10 +67,11 @@
         font-weight: 700;
         line-height: 120%; /* 24px */
         letter-spacing: -0.6px;
-        padding: 24px 0 64px;
+        padding: 24px 0;
       }
 
       &__image {
+        padding-bottom: 24px;
         & img {
           // width: 500px;
         }
@@ -87,6 +92,6 @@
   &__heading {
     font-size: 1.8rem;
     line-height: 0.75;
-    padding: 1rem;
+    padding: 16px;
   }
 }

@@ -1,7 +1,5 @@
 .testimonials {
   font-family: 'Inter', sans-serif;
-  padding: 128px;
-  background-color: $whiteSmoke;
 
   &__headline {
     font-size: 4.5rem;
@@ -10,22 +8,24 @@
     line-height: 100%;
     letter-spacing: -3.6px;
     margin: 0;
-    padding-top: 24px;
     text-align: center;
+    @include bp(phone) {
+      font-size: 3rem;
+    }
   }
 
   &__card {
     padding: 64px 0;
-    max-width: 700px;
+    // max-width: 700px;
     margin: auto;
     text-align: center;
   }
 
   &__quote {
-    font-size: 48px;
+    font-size: 1.5rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 100%; /* 48px */
-    letter-spacing: -2.4px;
+    line-height: 140%; /* 33.6px */
+    letter-spacing: -0.72px;
   }
 }

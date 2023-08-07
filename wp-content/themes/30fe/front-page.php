@@ -8,16 +8,18 @@
 
   <?php
       // include get_template_directory() . '/modules/timeline.php';
-            include get_template_directory() . '/modules/stats.php';
-      include get_template_directory() . '/modules/expertise.php';
-      include get_template_directory() . '/modules/quote.php';
-      include get_template_directory() . '/modules/accordion.php';
-      include get_template_directory() . '/modules/testimonials.php';
-      include get_template_directory() . '/modules/expertise-form.php';
-      include get_template_directory() . '/modules/industries-form.php';
-      include get_template_directory() . '/modules/hiring.php';
-      include get_template_directory() . '/modules/work.php';
-         include get_template_directory() . '/modules/blog.php';
+      include get_template_directory() . '/modules/home-hero.php';
+      include get_template_directory() . '/modules/home-expertise.php';
+      include get_template_directory() . '/modules/home-quote.php';
+      include get_template_directory() . '/modules/home-stats.php';
+      include get_template_directory() . '/modules/home-accordion.php';
+      include get_template_directory() . '/modules/home-testimonials.php';
+      include get_template_directory() . '/modules/home-blog.php';
+      include get_template_directory() . '/modules/home-contact.php';
+
+      // include get_template_directory() . '/modules/industries-form.php';
+      // include get_template_directory() . '/modules/hiring.php';
+
     ?>
 </main>
 <?php get_footer(); ?>

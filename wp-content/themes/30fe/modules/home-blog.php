@@ -1,7 +1,5 @@
- <section class="insights">
-   <section class="max-width">
-
-
+ <section class="insights fullscreen whitesmoke-bg">
+   <section class="max-width max-padding">
      <section class="pill">
        <p class="pill__label">Blog</p>
      </section>

@@ -3,58 +3,55 @@
 
  ?>
 
-<nav class="nav">
-  <div class="hamburger hamburger--squeeze type=" button">
-    <span class="hamburger-box">
-      <span class="hamburger-inner"></span>
-    </span>
-  </div>
+<nav data-page="<?php the_title()?>" class="nav">
+  <section class="nav__bar">
 
-  <!-- Logo -->
-  <figure class="">
-    <a id="<?php echo wsj_link_id( 'header logo', 'home' ); ?>" class="brand__container__fig--a"
-      href="<?php echo get_home_url(); ?>">
-      <img class="brand__logo brand__logo--no-scroll"
-        src="<?php echo get_template_directory_uri(); ?>/images/30fe-logo-black.svg"
-        alt="<?php echo get_bloginfo( 'name' ); ?> logo" title="<?php echo get_bloginfo( 'name' ); ?>" width="100%">
-    </a>
-  </figure>
 
-  <!-- Nav Items -->
-  <ul class="nav__links">
-    <li class="nav__links__list" role="menuitem">
-      <a id="" class="nav__items nav__items--main nav-links" data-name="#"
-        href="<?php echo site_url('/about')?>">About</a>
-    </li>
-    <li class="nav__links__list" role="menuitem">
-      <a id="" class="nav__items nav__items--main nav-links" data-name="#"
-        href="<?php echo site_url('/team')?>">Team</a>
-    </li>
-    <li class="nav__links__list" role="menuitem">
-      <a id="" class="nav__items nav__items--main nav-links" data-name="#"
-        href="<?php echo site_url('/expertise')?>">Expertise</a>
-    </li>
-    <li class="nav__links__list" role="menuitem">
-      <a id="" class="nav__items nav__items--main nav-links" data-name="#"
-        href="<?php echo site_url('/sectors')?>">Sectors</a>
-    </li>
-    <li class="nav__links__list" role="menuitem">
-      <a id="" class="nav__items nav__items--main nav-links" data-name="#"
-        href="<?php echo site_url('/insights')?>">Insights</a>
-    </li>
-    <li class="nav__links__list" role="menuitem">
-      <a id="" class="nav__items nav__items--main nav-links" data-name="#"
-        href="<?php echo site_url('/contact')?>">Contact</a>
-    </li>
-  </ul>
-  </div>
+    <!-- Logo -->
+    <figure class="">
+      <a id="<?php echo wsj_link_id( 'header logo', 'home' ); ?>" class="brand__container__fig--a"
+        href="<?php echo get_home_url(); ?>">
+        <img class="brand__logo brand__logo--no-scroll"
+          src="<?php echo get_template_directory_uri(); ?>/images/30fe-logo-black.svg"
+          alt="<?php echo get_bloginfo( 'name' ); ?> logo" title="<?php echo get_bloginfo( 'name' ); ?>" width="100%">
+      </a>
+    </figure>
 
-  <!-- Search Input -->
-  <button>
-    <span class="search-trigger js-search-trigger">Search</span>
-    <i class="fa fa-search" aria-hidden="true"></i>
-  </button>
+    <!-- Nav Items -->
+    <ul class="nav__links">
+      <li class="nav__links__list" role="menuitem">
+        <a id="" class="nav__items nav__items--main nav-links" data-name="#"
+          href="<?php echo site_url('/about')?>">About</a>
+      </li>
+      <li class="nav__links__list" role="menuitem">
+        <a id="" class="nav__items nav__items--main nav-links" data-name="#"
+          href="<?php echo site_url('/team')?>">Team</a>
+      </li>
+      <li class="nav__links__list" role="menuitem">
+        <a id="" class="nav__items nav__items--main nav-links" data-name="#"
+          href="<?php echo site_url('/expertise')?>">Expertise</a>
+      </li>
+      <li class="nav__links__list" role="menuitem">
+        <a id="" class="nav__items nav__items--main nav-links" data-name="#"
+          href="<?php echo site_url('/sectors')?>">Sectors</a>
+      </li>
+      <li class="nav__links__list" role="menuitem">
+        <a id="" class="nav__items nav__items--main nav-links" data-name="#"
+          href="<?php echo site_url('/insights')?>">Insights</a>
+      </li>
+      <li class="nav__links__list" role="menuitem">
+        <a id="" class="nav__items nav__items--main nav-links" data-name="#"
+          href="<?php echo site_url('/contact')?>">Contact</a>
+      </li>
+    </ul>
+    </div>
 
+    <!-- Search Input -->
+    <button class="search-trigger js-search-trigger">
+      Search
+      <i class="fa fa-search" aria-hidden="true"></i>
+    </button>
+  </section>
 </nav>
 
 

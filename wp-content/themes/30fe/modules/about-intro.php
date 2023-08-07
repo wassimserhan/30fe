@@ -1,5 +1,5 @@
-<section class="about__intro">
-  <section class="max-width white-bg">
+<section class="about__intro whitesmoke-bg">
+  <section class="max-width max-padding">
     <h4 class="about__intro__copy">Our strengths are our diversity and our experience. With access to an in-house
       multidisciplinary team, each of
       our practices can explore every possible cause of an incident from a technical and scientific perspective while

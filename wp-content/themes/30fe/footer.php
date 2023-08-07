@@ -13,96 +13,97 @@
 
 
 
-<footer class="footer">
-  <section class="footer__nav">
-    <figure>
-      <img loading="lazy" class="footer__logo"
-        src="<?php echo get_template_directory_uri(); ?>/images/30fe-logo-white.svg"
-        alt="<?php echo get_bloginfo( 'name' ); ?> logo" title="<?php echo get_bloginfo( 'name' ); ?>" width="100%">
-    </figure>
+<footer class="footer dark-bg">
+  <section class="max-width max-padding">
+    <section class="footer__nav">
+      <figure>
+        <img loading="lazy" class="footer__logo"
+          src="<?php echo get_template_directory_uri(); ?>/images/30fe-logo-white.svg"
+          alt="<?php echo get_bloginfo( 'name' ); ?> logo" title="<?php echo get_bloginfo( 'name' ); ?>" width="100%">
+      </figure>
 
-    <section>
-      <h6 class="footer__nav__title">
-        Column One
-      </h6>
-      <ul>
-        <li class="footer__nav__links">Link One</li>
-        <li class="footer__nav__links">Link Two</li>
-        <li class="footer__nav__links">Link Three</li>
-        <li class="footer__nav__links">Link Four</li>
-        <li class="footer__nav__links">Link Five</li>
-      </ul>
+      <section>
+        <h6 class="footer__nav__title">
+          Column One
+        </h6>
+        <ul>
+          <li class="footer__nav__links">Link One</li>
+          <li class="footer__nav__links">Link Two</li>
+          <li class="footer__nav__links">Link Three</li>
+          <li class="footer__nav__links">Link Four</li>
+          <li class="footer__nav__links">Link Five</li>
+        </ul>
+      </section>
+      <section class="footer__nav-columns">
+        <h6 class="footer__nav__title">
+          Column Two
+        </h6>
+        <ul>
+          <li class="footer__nav__links">Link One</li>
+          <li class="footer__nav__links">Link Two</li>
+          <li class="footer__nav__links">Link Three</li>
+          <li class="footer__nav__links">Link Four</li>
+          <li class="footer__nav__links">Link Five</li>
+        </ul>
+      </section>
+      <section class="footer__nav-columns">
+        <h6 class="footer__nav__title">
+          Column Three
+        </h6>
+        <ul>
+          <li class="footer__nav__links">Link One</li>
+          <li class="footer__nav__links">Link Two</li>
+          <li class="footer__nav__links">Link Three</li>
+          <li class="footer__nav__links">Link Four</li>
+          <li class="footer__nav__links">Link Five</li>
+        </ul>
+      </section>
+      <section class="footer__nav-columns">
+        <h6 class="footer__nav__title">
+          Column Four
+        </h6>
+        <ul>
+          <li class="footer__nav__links">Link One</li>
+          <li class="footer__nav__links">Link Two</li>
+          <li class="footer__nav__links">Link Three</li>
+          <li class="footer__nav__links">Link Four</li>
+          <li class="footer__nav__links">Link Five</li>
+        </ul>
+      </section>
+      <section class="footer__nav-columns">
+        <h6 class="footer__nav__title">
+          Column Five
+        </h6>
+        <ul>
+          <li class="footer__nav__links">Link One</li>
+          <li class="footer__nav__links">Link Two</li>
+          <li class="footer__nav__links">Link Three</li>
+          <li class="footer__nav__links">Link Four</li>
+          <li class="footer__nav__links">Link Five</li>
+        </ul>
+      </section>
     </section>
-    <section class="footer__nav-columns">
-      <h6 class="footer__nav__title">
-        Column Two
-      </h6>
-      <ul>
-        <li class="footer__nav__links">Link One</li>
-        <li class="footer__nav__links">Link Two</li>
-        <li class="footer__nav__links">Link Three</li>
-        <li class="footer__nav__links">Link Four</li>
-        <li class="footer__nav__links">Link Five</li>
-      </ul>
-    </section>
-    <section class="footer__nav-columns">
-      <h6 class="footer__nav__title">
-        Column Three
-      </h6>
-      <ul>
-        <li class="footer__nav__links">Link One</li>
-        <li class="footer__nav__links">Link Two</li>
-        <li class="footer__nav__links">Link Three</li>
-        <li class="footer__nav__links">Link Four</li>
-        <li class="footer__nav__links">Link Five</li>
-      </ul>
-    </section>
-    <section class="footer__nav-columns">
-      <h6 class="footer__nav__title">
-        Column Four
-      </h6>
-      <ul>
-        <li class="footer__nav__links">Link One</li>
-        <li class="footer__nav__links">Link Two</li>
-        <li class="footer__nav__links">Link Three</li>
-        <li class="footer__nav__links">Link Four</li>
-        <li class="footer__nav__links">Link Five</li>
-      </ul>
-    </section>
-    <section class="footer__nav-columns">
-      <h6 class="footer__nav__title">
-        Column Five
-      </h6>
-      <ul>
-        <li class="footer__nav__links">Link One</li>
-        <li class="footer__nav__links">Link Two</li>
-        <li class="footer__nav__links">Link Three</li>
-        <li class="footer__nav__links">Link Four</li>
-        <li class="footer__nav__links">Link Five</li>
-      </ul>
-    </section>
+
+
+
+
+
+
+    <hr>
+
+    <div class="footer__legal">
+      <p class="footer__copyright">&copy;
+        <script type="text/javascript">
+        document.write(new Date().getFullYear());
+        </script>&nbsp; 30 Forensic engineering
+      </p>
+      <p class="footer__notices">
+        Office: 1-800-564-5313
+      </p>
+    </div>
 
 
   </section>
-
-
-
-
-  <hr>
-
-  <div class="footer__legal">
-    <p class="footer__copyright">&copy;
-      <script type="text/javascript">
-      document.write(new Date().getFullYear());
-      </script>&nbsp; 30 Forensic engineering
-    </p>
-    <p class="footer__notices">
-      Office: 1-800-564-5313
-    </p>
-  </div>
-
-
-
 
 </footer>
 

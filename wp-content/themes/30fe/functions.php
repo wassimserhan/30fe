@@ -13,6 +13,9 @@ function theme_files() {
      wp_script_add_data( 'jquery', array( 'integrity', 'crossorigin' ) , array( 'sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=', 'anonymous' ) );
 
     wp_enqueue_script( 'gsap', '//cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js');
+
+    wp_enqueue_script( 'gsap-scroll', '//cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js');
+    
    
     
     wp_enqueue_style( 'theme-styles', get_template_directory_uri() . '/build/style-index.css', array(), $css_version_number );
@@ -29,7 +32,7 @@ add_action( 'wp_enqueue_scripts', 'theme_files' );
 
 function theme_features() {
   add_theme_support('title-tag');
-  show_admin_bar( true );
+  show_admin_bar( false );
   add_theme_support( 'post-thumbnails' );
   add_filter('acf/settings/remove_wp_meta_box', '__return_false');
 

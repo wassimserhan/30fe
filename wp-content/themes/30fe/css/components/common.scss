@@ -15,6 +15,22 @@ body {
   box-sizing: border-box;
 }
 
+button {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  text-decoration: none;
+  font-size: 0.75rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  background-color: $monochromeBlack;
+  border: 1px solid $monochromeBlack;
+  color: $white;
+  padding: 8px 16px;
+  text-transform: uppercase;
+  line-height: 150%;
+}
+
 .header {
   position: fixed;
   width: 100%;
@@ -55,7 +71,7 @@ body {
   background-color: $green;
 }
 
-.whitesmoke {
+.whitesmoke-bg {
   background-color: $whiteSmoke;
 }
 
@@ -74,6 +90,13 @@ img {
 
 .max-padding {
   padding: 128px;
+  @include bp(phone) {
+    padding: 128px 32px;
+  }
+}
+
+.max-padding-block {
+  padding: 128px 0;
 }
 
 .center-text {

@@ -1,12 +1,17 @@
 .nav {
-  width: 100%;
-  min-height: 78px;
   background-color: $whiteSmoke;
-  display: flex;
-  // max-width: 1440px;
-  justify-content: space-around;
-  align-items: center;
-  flex: 1 0 0;
+
+  &__bar {
+    display: flex;
+    max-width: 1440px;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 0 0;
+    margin: auto;
+    width: 100%;
+    min-height: 78px;
+    padding: 0 128px;
+  }
 
   &__links {
     display: flex;
@@ -14,6 +19,10 @@
     gap: 48px;
     align-self: stretch;
     place-items: center;
+
+    @include bp(phone) {
+      display: none;
+    }
 
     &__list {
       &:hover {
@@ -128,9 +137,9 @@
     font-family: 'DJ5 Escrow Light Display', sans-serif;
   }
 
-  &__items:hover {
-    color: $secondary;
-  }
+  // &__items:hover {
+  //   color: $secondary;
+  // }
 }
 
 .btn--header {

@@ -1,7 +1,5 @@
 .work {
   font-family: 'Inter', sans-serif;
-  padding: 128px;
-  background-color: $whiteSmoke;
 
   &__headline {
     font-size: 4.5rem;
@@ -26,7 +24,6 @@
   }
 
   & input {
-    width: 500px;
     border: 1px solid $monochromeBlack;
     border-radius: 0;
     background-color: transparent;

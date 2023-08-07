@@ -2,8 +2,6 @@
   font-family: 'Inter', sans-serif;
 
   &__intro {
-    padding: 128px;
-    background-color: $whiteSmoke;
     &__copy {
       font-size: 32px;
       font-style: normal;
@@ -15,7 +13,7 @@
     &__buttons {
       display: flex;
       justify-content: space-between;
-      width: 330px;
+      width: 280px;
       gap: 16px;
     }
 
@@ -31,8 +29,6 @@
   }
 
   &__mission {
-    padding: 128px;
-    background-color: $taupe;
     text-align: center;
 
     &__pill {

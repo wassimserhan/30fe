@@ -1,5 +1,5 @@
-<section class="about__mission">
-  <section class="max-width white-bg">
+<section class="about__mission taupe-bg">
+  <section class="max-width max-padding">
     <section class="pill about__mission__pill">
       <p class="pill__label">mission</p>
     </section>

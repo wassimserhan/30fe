@@ -17,44 +17,41 @@
 //----------------------------------*\
 // COMPONENTS
 //----------------------------------*/
-@import 'components/button';
 @import 'components/line';
 @import 'components/common';
-@import 'components/hamburger';
 @import 'components/animation';
 @import 'components/dropdown-icon';
 @import 'components/pill';
 @import 'components/splide';
-@import 'components/accordion';
 
 //----------------------------------*\
 // MODULES
 //----------------------------------*/
 @import 'modules/navbar';
-@import 'modules/footer';
-@import 'modules/contact';
-@import 'modules/404';
+@import 'modules/search';
 @import 'modules/top';
 @import 'modules/hiring';
-@import 'modules/work';
-@import 'modules/quote';
 @import 'modules/forms';
-@import 'modules/hero';
 @import 'modules/timeline';
 @import 'modules/expertise-form';
-@import 'modules/testimonials';
-@import 'modules/blog';
 @import 'modules/stats';
-@import 'modules/search';
+@import 'modules/home-work';
+@import 'modules/home-quote';
+@import 'modules/home-testimonials';
+@import 'modules/home-expertise';
+@import 'modules/home-accordion';
 
 //----------------------------------*\
 // PAGES
 //----------------------------------*/
 @import 'pages/about';
 @import 'pages/team';
-@import 'pages/expertise';
 @import 'pages/single-team';
+@import 'pages/expertise';
 @import 'pages/sectors';
 @import 'pages/single-sector';
-@import 'pages/insights';
-@import 'pages/single-insight';
+@import 'pages/blog';
+@import 'pages/single-blog';
+@import 'pages/contact';
+@import 'pages/footer';
+@import 'pages/404';

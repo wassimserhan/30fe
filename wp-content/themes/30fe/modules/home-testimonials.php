@@ -1,12 +1,7 @@
-  <section class="testimonials">
-    <section class="max-width">
-
+  <section class="testimonials whitesmoke-bg">
+    <section class="max-width max-padding">
       <h2 class="testimonials__headline">Testimonials</h2>
-
-
-
-
-      <section id="splide-testimonials" class="splide" aria-labelledby="carousel-heading">
+      <section id="slider1" class="splide splide-testimonials" aria-labelledby="carousel-heading">
         <div class="splide__track">
           <ul class="splide__list">
 

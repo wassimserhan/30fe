@@ -5,16 +5,15 @@ get_header();
 ?>
 
 
+
 <?php while (have_posts()) {
   the_post();
 
 } ?>
 
 <main class="main-container">
-
-  <section class="sectors">
-
-    <section class="max-width max-padding dark-bg">
+  <section class="sectors dark-bg">
+    <section class="max-width max-padding fullscreen">
       <section class="pill pill-white">
         <p class="pill__label pill__label-white">Sectors</p>
       </section>
@@ -31,17 +30,17 @@ get_header();
 
 
 
-    <section class="sectors__list">
+    <section class="sectors__list fullscreen">
       <section class="max-width max-padding">
 
         <?php 
-          $sectors = new WP_Query(array(
+          $customQuery = new WP_Query(array(
           'posts_per_page' => 20,
-          'post_type'=> 'industry'
-          ));
+          'post_type'=> "industry"
+        ));
 
-          while ($sectors->have_posts()): $sectors->the_post();
-         ?>
+        while ($customQuery->have_posts()): $customQuery->the_post();
+        ?>
         <a href="<?php echo the_permalink() ?>">
           <article class="sectors__list-section">
 
@@ -53,9 +52,12 @@ get_header();
           </article>
         </a>
         <?php endwhile ?>
+
         <?php wp_reset_postdata() ?>
+
       </section>
     </section>
+
 
   </section>
 </main>

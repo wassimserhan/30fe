@@ -9,7 +9,7 @@
       <?php echo FrmFormsController::get_form_shortcode( array( 'id' => 2 ) ); ?>
       <!-- form inserted here -->
     </section>
-    <section id="splide" class="splide splide-form" aria-labelledby="carousel-heading">
+    <section id="slider2" class="splide splide-form" aria-labelledby="carousel-heading">
       <h3 class="expertise-form__headline expertise-form__headline-splide">Meet the Materials and Product Failure Team
       </h3>
       <div class="splide__track">

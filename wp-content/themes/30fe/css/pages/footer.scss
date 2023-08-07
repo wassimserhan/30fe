@@ -1,7 +1,5 @@
 .footer {
   font-family: 'Inter', sans-serif;
-  padding: 128px;
-  background-color: $monochromeBlack;
   flex-shrink: 0;
 
   a:hover {
@@ -19,8 +17,6 @@
   }
 
   &__nav {
-    width: 1024px;
-    max-width: 100%;
     margin: auto;
     display: flex;
     justify-content: space-between;
