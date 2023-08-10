@@ -28,6 +28,89 @@
     }
   }
 
+  &__investigations {
+    &__wrapper {
+      display: flex;
+      gap: 70px;
+    }
+
+    & article {
+    }
+
+    &__headline {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 100%; /* 48px */
+      letter-spacing: -2.4px;
+      padding: 24px 0;
+    }
+
+    &__copy {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 140%; /* 28px */
+      letter-spacing: -0.6px;
+    }
+
+    &__bullets &__bullet--taupe::before {
+      content: '\2022'; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+      color: $taupe;
+      font-weight: bold; /* If you want it to be bold */
+      display: inline-block; /* Needed to add space between the bullet and the text */
+      width: 35px; /* Also needed for space (tweak if needed) */
+      margin-left: -39px; /* Also needed for space (tweak if needed) */
+      font-size: 40px;
+    }
+
+    &__bullets &__bullet--blue::before {
+      content: '\2022'; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+      color: $blue;
+      font-weight: bold; /* If you want it to be bold */
+      display: inline-block; /* Needed to add space between the bullet and the text */
+      width: 35px; /* Also needed for space (tweak if needed) */
+      margin-left: -39px; /* Also needed for space (tweak if needed) */
+      font-size: 40px;
+    }
+
+    &__bullets &__bullet--green::before {
+      content: '\2022'; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+      color: $green;
+      font-weight: bold; /* If you want it to be bold */
+      display: inline-block; /* Needed to add space between the bullet and the text */
+      width: 35px; /* Also needed for space (tweak if needed) */
+      margin-left: -39px; /* Also needed for space (tweak if needed) */
+      font-size: 40px;
+    }
+
+    &__bullets &__bullet--orange::before {
+      content: '\2022'; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+      color: $orange;
+      font-weight: bold; /* If you want it to be bold */
+      display: inline-block; /* Needed to add space between the bullet and the text */
+      width: 35px; /* Also needed for space (tweak if needed) */
+      margin-left: -39px; /* Also needed for space (tweak if needed) */
+      font-size: 40px;
+    }
+
+    &__bullet {
+      padding: 0 0 20px;
+
+      & h3 {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 120%; /* 38.4px */
+        letter-spacing: -1.6px;
+        display: inline;
+      }
+
+      & p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 150%; /* 24px */
+      }
+    }
+  }
+
   &__mission {
     text-align: center;
 

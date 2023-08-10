@@ -1,6 +1,7 @@
 /*!*******************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/@wordpress/scripts/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/@wordpress/scripts/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./css/style.scss ***!
   \*******************************************************************************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -519,6 +520,10 @@ img:not([src]) {
   visibility: hidden;
 }
 
+.hidden {
+  display: none;
+}
+
 .fadeIn {
   animation: slideIn 0.5s ease-out forwards;
 }
@@ -583,7 +588,6 @@ img:not([src]) {
   border-radius: 100px;
   background: transparent;
   box-shadow: 0px 0px 1px 0px #1d1c1d;
-  margin: 10px 0;
 }
 .pill-white {
   box-shadow: 0px 0px 1px 0px #ffffff;
@@ -663,6 +667,29 @@ img:not([src]) {
 .nav {
   background-color: #f2f1ed;
 }
+.nav__menu-search {
+  display: flex;
+}
+.nav__search {
+  background-color: #000000;
+  color: #ffffff;
+  display: block;
+}
+@media (max-width: 479px) {
+  .nav__search {
+    display: none;
+  }
+}
+.nav__menu {
+  background-color: #ffffff;
+  color: #000000;
+  display: none;
+}
+@media (max-width: 479px) {
+  .nav__menu {
+    display: block;
+  }
+}
 .nav__bar {
   display: flex;
   max-width: 1440px;
@@ -673,6 +700,11 @@ img:not([src]) {
   width: 100%;
   min-height: 78px;
   padding: 0 128px;
+}
+@media (max-width: 479px) {
+  .nav__bar {
+    padding: 0 35px;
+  }
 }
 .nav__links {
   display: flex;
@@ -2097,6 +2129,74 @@ body.admin-bar .search-overlay {
 .about__intro__button-transparent {
   background-color: transparent;
   color: #000000;
+}
+.about__investigations__wrapper {
+  display: flex;
+  gap: 70px;
+}
+.about__investigations__headline {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 100%; /* 48px */
+  letter-spacing: -2.4px;
+  padding: 24px 0;
+}
+.about__investigations__copy {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 140%; /* 28px */
+  letter-spacing: -0.6px;
+}
+.about__investigations__bullets .about__investigations__bullet--taupe::before {
+  content: "•"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #cbbea5;
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 35px; /* Also needed for space (tweak if needed) */
+  margin-left: -39px; /* Also needed for space (tweak if needed) */
+  font-size: 40px;
+}
+.about__investigations__bullets .about__investigations__bullet--blue::before {
+  content: "•"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #0175df;
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 35px; /* Also needed for space (tweak if needed) */
+  margin-left: -39px; /* Also needed for space (tweak if needed) */
+  font-size: 40px;
+}
+.about__investigations__bullets .about__investigations__bullet--green::before {
+  content: "•"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #08cb80;
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 35px; /* Also needed for space (tweak if needed) */
+  margin-left: -39px; /* Also needed for space (tweak if needed) */
+  font-size: 40px;
+}
+.about__investigations__bullets .about__investigations__bullet--orange::before {
+  content: "•"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #ff6f48;
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 35px; /* Also needed for space (tweak if needed) */
+  margin-left: -39px; /* Also needed for space (tweak if needed) */
+  font-size: 40px;
+}
+.about__investigations__bullet {
+  padding: 0 0 20px;
+}
+.about__investigations__bullet h3 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 120%; /* 38.4px */
+  letter-spacing: -1.6px;
+  display: inline;
+}
+.about__investigations__bullet p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
 }
 .about__mission {
   text-align: center;

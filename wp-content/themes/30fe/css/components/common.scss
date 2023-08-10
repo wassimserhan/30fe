@@ -116,3 +116,7 @@ img[src=''],
 img:not([src]) {
   visibility: hidden;
 }
+
+.hidden {
+  display: none;
+}

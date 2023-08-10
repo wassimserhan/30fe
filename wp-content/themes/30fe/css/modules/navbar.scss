@@ -1,6 +1,28 @@
 .nav {
   background-color: $whiteSmoke;
 
+  &__menu-search {
+    display: flex;
+  }
+
+  &__search {
+    background-color: $black;
+    color: $white;
+    display: block;
+    @include bp(phone) {
+      display: none;
+    }
+  }
+
+  &__menu {
+    background-color: $white;
+    color: $black;
+    display: none;
+    @include bp(phone) {
+      display: block;
+    }
+  }
+
   &__bar {
     display: flex;
     max-width: 1440px;
@@ -11,6 +33,9 @@
     width: 100%;
     min-height: 78px;
     padding: 0 128px;
+    @include bp(phone) {
+      padding: 0 35px;
+    }
   }
 
   &__links {

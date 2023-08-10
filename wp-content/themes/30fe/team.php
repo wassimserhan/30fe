@@ -51,31 +51,19 @@ get_header();
 
       <section id="team" class="team__grid">
         <?php 
-        $team_members = get_field ( 'team_member' ); 
-        foreach ($team_members as $team_member):     
-        $name = get_the_title($team_member);
-        $title = get_field('title', $team_member);
-        $img = get_field('headshot', $team_member);
-        $image = $img['url'];
-      ?>
+          $team_members = get_field ( 'team_member' ); 
+          foreach ($team_members as $team_member):     
+          $name = get_the_title($team_member);
+          $title = get_field('title', $team_member);
+          $img = get_field('headshot', $team_member);
+          $image = $img['url'];
+        ?>
         <article class="team__card">
           <a href="<?php the_permalink($team_member) ?>">
-            <?php
-          if( have_rows('headshots', $team_member) ): 
-          while( have_rows('headshots', $team_member) ) : the_row();
-            $headshotImg = get_sub_field('headshot', $team_member);
-            $headshot = $headshotImg['url'];
-            ?>
             <figure class="team__card__image">
-              <img class="lazyload" src="<?php echo $headshot ?>" alt="<?php echo $name; ?>"
-                title="<?php echo $name; ?>">
+              <img class="lazyload" src="<?php echo get_the_post_thumbnail_url($team_member) ?>"
+                alt="<?php echo $name; ?>" title="<?php echo $name; ?>">
             </figure>
-
-            <?php
-          break;
-            endwhile; ?>
-            <?php endif;
-            ?>
           </a>
           <h6 class="team__card__name">
             <?php echo $name ?>
@@ -83,31 +71,22 @@ get_header();
           <p class="team__card__title">
             <?php echo $title ?>
           </p>
-
-
           <p class="team__card__expertise" style="display: none">
             <?php $expertise = get_field('expertise', $team_member);
-        foreach ($expertise as $item):?>
+            foreach ($expertise as $item):?>
             <?php echo get_the_title($item);  ?>
             <?php endforeach; ?></p>
 
           <?php 
-        $role = get_field("role", $team_member)
-        ?>
+          $role = get_field("role", $team_member)
+          ?>
           <p class="team__card__role" style="display: none"><?php echo $role;  ?></p>
-
         </article>
         <?php endforeach; ?>
       </section>
-
     </section>
   </section>
-
 </main>
-
-
-
-
 <?php 
 get_footer();
 ?>

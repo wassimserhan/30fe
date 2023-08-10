@@ -15,24 +15,14 @@
   <section class="member">
     <section class="member__card">
       <section class="fadein">
-        <?php
-          if( have_rows('headshots') ): 
-          while( have_rows('headshots') ) : the_row();
-            $headshotImg = get_sub_field('headshot');
-            $headshot = $headshotImg['url'];
-            ?>
+        <?php 
+        
+        $images = get_field('images');
+        foreach($images as $item):?>
 
-        <img class="member__image" id="f<?php echo get_row_index() ?>" src="<?php echo $headshot ?>" alt=""
-          <?php echo $name; ?> logo" title="<?php echo $name; ?>" width="100%">
-
-
-        <?php
-            endwhile; ?>
-        <?php endif;
-            ?>
-
-
-
+        <img class="member__image" src="<?php echo $item['url']; ?>" alt="<?php echo $name; ?>"
+          title="<?php echo $name; ?>" width="100%">
+        <?php endforeach; ?>
       </section>
 
 

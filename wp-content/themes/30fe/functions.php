@@ -258,7 +258,12 @@ function theme_post_type_expertise() {
     );
 
     register_post_type( "team", $args );
+
+    
+
+
 }
+
 
     add_action( 'init', 'theme_post_type_team' );
 
