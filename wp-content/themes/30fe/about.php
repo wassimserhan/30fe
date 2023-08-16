@@ -10,6 +10,18 @@ get_header();
 
   <!-- Hero -->
 
+  <section class="about__hero dark-bg">
+    <section class="max-width max-padding">
+      <h1 class="about__hero__headline">We are 30</h1>
+      <h2 class="about__hero__copy">We are over <span class="orange">60 experts</span> in <span class="green">14
+          practice
+          areas</span>, we offer
+        evidence-based solutions to
+        <span class="blue">clients worldwide</span>.
+      </h2>
+    </section>
+  </section>
+
   <!-- Intro -->
   <section class="about__intro whitesmoke-bg">
     <section class="max-width max-padding">
@@ -76,10 +88,37 @@ get_header();
           minim
           magna proident consequat. Duis labore labore nostrud laboris duis do commodo sunt. Aliquip velit do aliqua
           cupidatat aliquip irure id est. Est dolor sint excepteur irure Lorem est fugiat consequat.</p>
-
-
       </section>
     </section>
+
+    <!-- image-text -->
+
+    <section class="about__thirty whitesmoke-bg">
+      <section class="max-width">
+        <section class="hero__card">
+          <figure class="hero__figure">
+            <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/hero-image.jpg" alt=""
+              title="lock">
+          </figure>
+          <article class="hero__detail hero__detail--left" style="">
+            <h1 class="hero__headline">What is 30?</h1>
+            <p class="hero__copy">From its inception, our firm has built a reputation for reporting facts intelligently,
+              accurately, thoroughly, and without bias. Yes, we’re forensic investigators, but in a way, we’re really
+              reporters. And that got us thinking. Years ago, when newspaper reporters submitted final copy to be
+              published, they would type “-30-” at the bottom centre of the page. This would signify to the typesetter
+              that it was the end of the piece, that the facts were all there—the whole story. We couldn’t think of a
+              better way to describe who we are, and what we do.
+            </p>
+
+
+          </article>
+        </section>
+      </section>
+    </section>
+
+    <!-- Hiring -->
+    <?php include get_template_directory() . '/modules/hiring.php'; ?>
+
 
 
 </main>

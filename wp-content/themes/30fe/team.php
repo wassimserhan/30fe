@@ -21,17 +21,27 @@ get_header();
         procedures for each file.</p>
       <br>
       <section class="team__search">
-        <section class="team__dropdown">
-          <select id="team__role" class=" team__expertise">
-            <option value="all">All Roles</option>
-            <option value="Associates">Associates</option>
-            <option value="Leadership Team">Leadership Team</option>
-            <option value="Support Team">Support Team</option>
-          </select>
-        </section>
-        <section class="team__dropdown">
-          <select id="team__expertise" class="team__expertise">
-            <option value="all">All Expertise</option>
+        <div class="dropdown">
+          <div class="select">
+            <span class="selected selected-role">Filter By Role</span>
+            <div class="caret"></div>
+          </div>
+          <ul id="team__role" class="menu team__expertise">
+            <li value="all">All Roles</li>
+            <li value="Associates">Associates</li>
+            <li value="Leadership Team">Leadership Team</li>
+            <li value="Support Team">Support Team</li>
+          </ul>
+        </div>
+
+
+        <div class="dropdown">
+          <div class="select">
+            <span class="selected selected-expertise">Filter By Expertise</span>
+            <div class="caret"></div>
+          </div>
+          <ul id="team__expertise" class="menu team__expertise">
+            <li value="all">All Expertise</li>
             <?php 
           $expertise = new WP_Query(array(
           'posts_per_page' => 20,
@@ -39,12 +49,17 @@ get_header();
           ));
           while ($expertise->have_posts()): $expertise->the_post();
          ?>
-            <option value="<?php the_title() ?>"><?php the_title() ?></option>
+            <li value="<?php the_title() ?>"><?php the_title() ?></li>
             <?php endwhile ?>
             <?php wp_reset_postdata() ?>
-          </select>
-        </section>
-        <input type="text" id="myFilter" class="form-control" placeholder="Search">
+          </ul>
+        </div>
+
+
+
+
+
+        <input type="text" id="myFilter" class="dropdown select" placeholder="Search">
       </section>
 
 
@@ -61,7 +76,7 @@ get_header();
         <article class="team__card">
           <a href="<?php the_permalink($team_member) ?>">
             <figure class="team__card__image">
-              <img class="lazyload" src="<?php echo get_the_post_thumbnail_url($team_member) ?>"
+              <img class="lazyload" src="<?php echo get_template_directory_uri(); ?>/images/Team_Blue.png"
                 alt="<?php echo $name; ?>" title="<?php echo $name; ?>">
             </figure>
           </a>
@@ -86,6 +101,10 @@ get_header();
       </section>
     </section>
   </section>
+  <!-- Hiring -->
+  <?php include get_template_directory() . '/modules/hiring.php'; ?>
+
+
 </main>
 <?php 
 get_footer();

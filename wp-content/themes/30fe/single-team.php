@@ -64,6 +64,11 @@
       </article>
     </section>
   </section>
+
+  <!-- Hiring -->
+  <?php include get_template_directory() . '/modules/hiring.php'; ?>
+
+
 </main>
 
 <?php get_footer(); ?>

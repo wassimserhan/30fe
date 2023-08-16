@@ -121,6 +121,7 @@
 .single-blog {
   font-family: 'Inter', sans-serif;
   background-color: $whiteSmoke;
+  padding: 128px 128px 0;
 
   &__single-post {
     & > figure {
@@ -131,6 +132,10 @@
     & > p {
       font-size: 18px;
       padding: 128px 128px 0;
+    }
+
+    & img {
+      width: 200px;
     }
 
     & > p:has(img) {

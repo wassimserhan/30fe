@@ -3,6 +3,8 @@
 
   &__search {
     display: flex;
+    justify-content: center;
+    gap: 10px;
   }
 
   &__dropdown {
@@ -96,14 +98,14 @@
 
   &__grid {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     align-items: flex-start;
     align-self: stretch;
   }
 
   &__card {
-    width: 21%;
+    width: 22%;
     padding: 30px 0;
 
     &__image {
@@ -143,4 +145,91 @@
       text-transform: uppercase;
     }
   }
+}
+.dropdown {
+  min-width: 310px;
+  position: relative;
+}
+
+.dropdown * {
+  box-sizing: border-box;
+}
+
+.select {
+  background: $whiteSmoke;
+  color: $black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px $taupe solid;
+  padding: 16px 32px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 150%; /* 18px */
+  text-transform: uppercase;
+}
+
+// .select-clicked {
+//   border: 2px #26489a solid;
+//   box-shadow: 0 0 0.8em #26489a;
+// }
+
+// .select:hover {
+//   background: $taupe;
+// }
+
+.caret {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid $black;
+  transition: 0.3s;
+}
+
+.caret-rotate {
+  transform: rotate(180deg);
+}
+
+.menu {
+  list-style: none;
+  padding: 0.2em 0;
+  background: $whiteSmoke;
+  border: 1px $taupe solid;
+  color: #9fa5b5;
+  position: absolute;
+  top: 3em;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  opacity: 0;
+  display: none;
+  transition: 0.2s;
+  z-index: 1;
+}
+
+.menu li {
+  padding: 16px;
+  cursor: pointer;
+  border-bottom: 1px $taupe solid;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 150%; /* 18px */
+  text-transform: uppercase;
+  color: $black;
+}
+
+.menu li:hover {
+  background: $taupe;
+}
+
+// .active {
+//   background: #23242a;
+// }
+
+.menu-open {
+  display: block;
+  opacity: 1;
 }

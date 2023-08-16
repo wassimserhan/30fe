@@ -18,8 +18,6 @@
       include get_template_directory() . '/modules/home-contact.php';
 
       // include get_template_directory() . '/modules/industries-form.php';
-      // include get_template_directory() . '/modules/hiring.php';
-
     ?>
 </main>
 <?php get_footer(); ?>
