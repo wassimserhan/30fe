@@ -121,31 +121,25 @@
 .single-blog {
   font-family: 'Inter', sans-serif;
   background-color: $whiteSmoke;
-  padding: 128px 128px 0;
+  padding: 0 128px;
 
   &__single-post {
-    & > figure {
-      margin: 0;
-      padding: 128px 0;
-    }
-
-    & > p {
-      font-size: 18px;
-      padding: 128px 128px 0;
+    & > ol {
+      list-style: auto;
+      margin: 0 0 1.5em 3em;
     }
 
     & img {
-      width: 200px;
+      max-width: 100%;
     }
 
-    & > p:has(img) {
-      padding: 0;
+    & > p {
+      font-size: 15px;
+      padding: 10px 0;
     }
 
     & > h2 {
-      font-size: 4.5rem;
-      color: $orange;
-      padding: 64px 128px;
+      padding: 25px 0;
     }
   }
 
@@ -154,6 +148,7 @@
     flex-wrap: wrap;
     justify-content: center;
     background-color: $taupe;
+    gap: 10px;
   }
 
   &__card {
@@ -191,4 +186,24 @@
       line-height: 150%;
     }
   }
+}
+
+.alignleft {
+  float: left;
+  margin-right: 1.5em;
+}
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin: 0 auto;
+}
+
+.alignright {
+  float: right;
+  margin-left: 1.5em;
+}
+
+.alignright {
+  margin-bottom: 1.5em;
 }

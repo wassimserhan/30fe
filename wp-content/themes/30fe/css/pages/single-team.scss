@@ -1,6 +1,5 @@
 .member {
   font-family: 'Inter', sans-serif;
-  padding: 128px;
   background-color: $whiteSmoke;
 
   &__card {
@@ -10,6 +9,7 @@
 
   & img {
     width: 500px;
+    height: 500px;
   }
 
   &__person {

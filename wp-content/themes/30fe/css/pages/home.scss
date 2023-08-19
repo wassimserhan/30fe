@@ -1,0 +1,25 @@
+.home {
+  font-family: 'Inter', sans-serif;
+
+  &__hero {
+    &__headline {
+      font-size: 200px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 100%; /* 256px */
+      letter-spacing: -12.8px;
+      color: $white;
+      margin: 0;
+      padding-bottom: 32px;
+    }
+
+    &__copy {
+      font-size: 64px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 100%; /* 64px */
+      letter-spacing: -3.2px;
+      color: $white;
+    }
+  }
+}

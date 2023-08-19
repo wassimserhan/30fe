@@ -15,7 +15,7 @@
 
 <footer class="footer dark-bg">
   <section class="max-width max-padding">
-    <section class="footer__nav">
+    <!-- <section class="footer__nav">
       <figure>
         <img loading="lazy" class="footer__logo"
           src="<?php echo get_template_directory_uri(); ?>/images/30fe-logo-white.svg"
@@ -82,7 +82,7 @@
           <li class="footer__nav__links">Link Five</li>
         </ul>
       </section>
-    </section>
+    </section> -->
 
 
 

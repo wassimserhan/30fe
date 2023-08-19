@@ -4,9 +4,11 @@
       <div id="statsBar" class="stats__background">
         <div class="stats__progress-wrap" style="opacity: 0.9, width: 0;">
           <div class="stats__progress dark-bg">
-            <div id="stats-1" class="stats__overlay-percent">25,000+</div>
+            <section>
+              <div id="stats-1" class="stats__overlay-percent">25,000+</div>
 
-            <div id="label-1" class="stats__label stats__label-orange orange-bg">Cases Investigated</div>
+              <div id="label-1" class="stats__label stats__label-orange orange-bg">Cases Investigated</div>
+            </section>
 
           </div>
         </div>

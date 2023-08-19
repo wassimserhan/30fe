@@ -3781,17 +3781,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _splidejs_splide_css_sea_green__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @splidejs/splide/css/sea-green */ "./node_modules/@splidejs/splide/dist/css/themes/splide-sea-green.min.css");
 /* harmony import */ var _splidejs_splide_css_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @splidejs/splide/css/core */ "./node_modules/@splidejs/splide/dist/css/splide-core.min.css");
 /* harmony import */ var _splidejs_splide__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @splidejs/splide */ "./node_modules/@splidejs/splide/dist/js/splide.esm.js");
-/* harmony import */ var _modules_main__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/main */ "./src/modules/main.js");
-/* harmony import */ var _modules_main__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_modules_main__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _modules_teamSearch__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/teamSearch */ "./src/modules/teamSearch.js");
+/* harmony import */ var _modules_teamSearch__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_modules_teamSearch__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _modules_teamImages__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/teamImages */ "./src/modules/teamImages.js");
 /* harmony import */ var _modules_teamImages__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_modules_teamImages__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _modules_homeStats__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/homeStats */ "./src/modules/homeStats.js");
-/* harmony import */ var _modules_homeStats__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_modules_homeStats__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/accordion */ "./src/modules/accordion.js");
-/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_modules_accordion__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _modules_navColors__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/navColors */ "./src/modules/navColors.js");
-/* harmony import */ var _modules_navColors__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_modules_navColors__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _modules_search__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/search */ "./src/modules/search.js");
+/* harmony import */ var _modules_blogSearch__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/blogSearch */ "./src/modules/blogSearch.js");
+/* harmony import */ var _modules_blogSearch__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_modules_blogSearch__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _modules_homeStats__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/homeStats */ "./src/modules/homeStats.js");
+/* harmony import */ var _modules_homeStats__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_modules_homeStats__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/accordion */ "./src/modules/accordion.js");
+/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_modules_accordion__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _modules_navColors__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/navColors */ "./src/modules/navColors.js");
+/* harmony import */ var _modules_navColors__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_modules_navColors__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _modules_navbar__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/navbar */ "./src/modules/navbar.js");
+/* harmony import */ var _modules_navbar__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_modules_navbar__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _modules_search__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modules/search */ "./src/modules/search.js");
 
 
 //splide modules
@@ -3844,12 +3848,14 @@ if (slider2) {
 
 
 
+
+
 // import main from './main';
 // import navbar from './navbar';
 
 // classes
 
-const magicalSearch = new _modules_search__WEBPACK_IMPORTED_MODULE_11__["default"]();
+const magicalSearch = new _modules_search__WEBPACK_IMPORTED_MODULE_13__["default"]();
 
 /***/ }),
 
@@ -3872,6 +3878,119 @@ accordionArray.forEach(item => {
     }
   });
 });
+
+/***/ }),
+
+/***/ "./src/modules/blogSearch.js":
+/*!***********************************!*\
+  !*** ./src/modules/blogSearch.js ***!
+  \***********************************/
+/***/ (() => {
+
+//Search Filter
+const input = document.getElementById("blogFilter");
+if (input) {
+  input.addEventListener('focus', function () {
+    resetFilterText('selected-role', 'Filter By Category');
+    showAllTeam('insights__card', 'block');
+  });
+  input.addEventListener('keyup', blogFilter);
+  function blogFilter() {
+    var filter, cards, cardContainer, title, i;
+    filter = input.value.toUpperCase();
+    cardContainer = document.getElementById("insights");
+    cards = cardContainer.getElementsByClassName("insights__card");
+    for (i = 0; i < cards.length; i++) {
+      title = cards[i].querySelector(".insights__card__title");
+      if (title.innerText.toUpperCase().indexOf(filter) > -1) {
+        cards[i].style.display = "";
+      } else {
+        cards[i].style.display = "none";
+      }
+    }
+  }
+}
+
+//Search Filter
+
+const dropdownsInsights = document.querySelectorAll('.insights__filter-dropdown');
+const roleListInsights = document.querySelectorAll("ul > li");
+dropdownsInsights.forEach(dropdown => {
+  const selectInsights = dropdown.querySelector('.insights__select');
+  const caretInsights = dropdown.querySelector('.insights__caret');
+  const menuInsights = dropdown.querySelector('.insights__menu');
+  const optionsInsights = dropdown.querySelectorAll('.insights__menu li');
+  const selectedInsights = dropdown.querySelector('.insights__selected');
+  if (selectInsights) {
+    selectInsights.addEventListener('click', () => {
+      console.log(selectInsights);
+      selectInsights.classList.toggle('insights__select-clicked');
+      caretInsights.classList.toggle('insights__caret-rotate');
+      menuInsights.classList.toggle('insights__menu-open');
+      categoryFilter();
+
+      // I'm using "click" but it works with any event
+      document.addEventListener('click', event => {
+        const isClickInside = selectInsights.contains(event.target);
+        if (!isClickInside) {
+          caretInsights.classList.remove('insights__caret-rotate');
+          menuInsights.classList.remove('insights__menu-open');
+          // The click was OUTSIDE the specifiedElement, do something
+        }
+      });
+    });
+  }
+
+  optionsInsights.forEach(option => {
+    option.addEventListener('click', () => {
+      selectedInsights.innerText = option.innerText;
+      selectInsights.classList.remove('insights__select-clicked');
+      caretInsights.classList.remove('insights__caret-rotate');
+      menuInsights.classList.remove('insights__menu-open');
+      optionsInsights.forEach(option => {
+        option.classList.remove('active');
+      });
+      option.classList.add('active');
+    });
+  });
+});
+function categoryFilter() {
+  resetFilterText('selected-role', 'Filter By Category');
+  showAllTeam('insights__card', 'block');
+  roleListInsights.forEach(function (item) {
+    var filter, cards, cardContainer, i;
+    item.addEventListener('click', e => {
+      filter = e.target.textContent.toUpperCase();
+      cardContainer = document.getElementById("insights");
+      cards = cardContainer.getElementsByClassName("insights__card");
+      for (i = 0; i < cards.length; i++) {
+        titleRoles = cards[i].querySelector(".insights__card__label__category__text");
+        if (filter == "ALL CATEGORIES") {
+          cards[i].style.display = "block";
+        } else if (titleRoles.innerText.toUpperCase().indexOf(filter) > -1) {
+          cards[i].style.display = "block";
+        } else {
+          cards[i].style.display = "none";
+        }
+      }
+    });
+  });
+}
+
+//Show all cards
+function showAllTeam(className, displayState) {
+  var elements = document.getElementsByClassName(className);
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].style.display = displayState;
+  }
+}
+function resetFilterText(className, text) {
+  var elements = document.getElementsByClassName(className);
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].innerText = text;
+    console.log(elements[i].innerText);
+  }
+}
 
 /***/ }),
 
@@ -3930,121 +4049,6 @@ init = function () {
   }
 };
 window.onload = init();
-
-/***/ }),
-
-/***/ "./src/modules/main.js":
-/*!*****************************!*\
-  !*** ./src/modules/main.js ***!
-  \*****************************/
-/***/ (() => {
-
-//Search Filter
-const input = document.getElementById("myFilter");
-if (input) {
-  input.addEventListener('focus', function () {
-    resetFilterText('selected-role', 'Filter By Role');
-    resetFilterText('selected-expertise', 'Filter By Expertise');
-    showAllTeam('team__card', 'block');
-  });
-  input.addEventListener('keyup', teamFilter);
-  function teamFilter() {
-    var filter, cards, cardContainer, title, i;
-    filter = input.value.toUpperCase();
-    cardContainer = document.getElementById("team");
-    cards = cardContainer.getElementsByClassName("team__card");
-    for (i = 0; i < cards.length; i++) {
-      title = cards[i].querySelector(".team__card__name");
-      if (title.innerText.toUpperCase().indexOf(filter) > -1) {
-        cards[i].style.display = "";
-      } else {
-        cards[i].style.display = "none";
-      }
-    }
-  }
-}
-
-//Search Filter
-
-const dropdowns = document.querySelectorAll('.dropdown');
-const roleList = document.querySelectorAll("ul > li");
-dropdowns.forEach(dropdown => {
-  const select = dropdown.querySelector('.select');
-  const caret = dropdown.querySelector('.caret');
-  const menu = dropdown.querySelector('.menu');
-  const options = dropdown.querySelectorAll('.menu li');
-  const selected = dropdown.querySelector('.selected');
-  if (select) {
-    select.addEventListener('click', () => {
-      select.classList.toggle('select-clicked');
-      caret.classList.toggle('caret-rotate');
-      menu.classList.toggle('menu-open');
-      roleFilter();
-
-      // I'm using "click" but it works with any event
-      document.addEventListener('click', event => {
-        const isClickInside = select.contains(event.target);
-        if (!isClickInside) {
-          caret.classList.remove('caret-rotate');
-          menu.classList.remove('menu-open');
-          // The click was OUTSIDE the specifiedElement, do something
-        }
-      });
-    });
-  }
-
-  options.forEach(option => {
-    option.addEventListener('click', () => {
-      selected.innerText = option.innerText;
-      select.classList.remove('select-clicked');
-      caret.classList.remove('caret-rotate');
-      menu.classList.remove('menu-open');
-      options.forEach(option => {
-        option.classList.remove('active');
-      });
-      option.classList.add('active');
-    });
-  });
-});
-function roleFilter() {
-  resetFilterText('selected-role', 'Filter By Role');
-  resetFilterText('selected-expertise', 'Filter By Expertise');
-  showAllTeam('team__card', 'block');
-  roleList.forEach(function (item) {
-    var filter, cards, cardContainer, i;
-    item.addEventListener('click', e => {
-      filter = e.target.textContent.toUpperCase();
-      cardContainer = document.getElementById("team");
-      cards = cardContainer.getElementsByClassName("team__card");
-      for (i = 0; i < cards.length; i++) {
-        titleRoles = cards[i].querySelector(".team__card__role");
-        titleExpertise = cards[i].querySelector(".team__card__expertise");
-        if (filter == "ALL ROLES" || filter == "ALL EXPERTISE") {
-          cards[i].style.display = "block";
-        } else if (titleRoles.innerText.toUpperCase().indexOf(filter) > -1 || titleExpertise.innerText.toUpperCase().indexOf(filter) > -1) {
-          cards[i].style.display = "block";
-        } else {
-          cards[i].style.display = "none";
-        }
-      }
-    });
-  });
-}
-
-//Show all cards
-function showAllTeam(className, displayState) {
-  var elements = document.getElementsByClassName(className);
-  for (var i = 0; i < elements.length; i++) {
-    elements[i].style.display = displayState;
-  }
-}
-function resetFilterText(className, text) {
-  var elements = document.getElementsByClassName(className);
-  for (var i = 0; i < elements.length; i++) {
-    elements[i].innerText = text;
-    console.log(elements[i].innerText);
-  }
-}
 
 /***/ }),
 
@@ -4135,6 +4139,52 @@ function resetFilterText(className, text) {
 
 /***/ }),
 
+/***/ "./src/modules/navbar.js":
+/*!*******************************!*\
+  !*** ./src/modules/navbar.js ***!
+  \*******************************/
+/***/ (() => {
+
+const hamburger = document.querySelector('.nav__menu');
+const nav = document.querySelector('.nav');
+const body = document.getElementsByTagName('body')[0];
+const navItems = document.querySelectorAll('.nav__items');
+const dropdown = document.querySelector('.nav__dropdown');
+function dropdownMenu() {
+  if (dropdown.style.display === 'grid') {
+    dropdown.style.display = 'none';
+    hamburger.classList.remove('is-active');
+    nav.classList.remove("dark-bg");
+    hamburger.classList.remove("nav__menu-reverse");
+  } else {
+    dropdown.style.display = 'grid';
+    hamburger.classList.add('is-active');
+    nav.classList.add("dark-bg");
+    hamburger.classList.add("nav__menu-reverse");
+  }
+}
+
+// jQuery(window).on('resize', function () {
+//   var win = jQuery(this); //this = window
+//   if (win.width() >= 1201) {
+//     dropdown.style.display = 'none';
+//     hamburger.classList.remove('is-active');
+//   }
+// });
+
+hamburger.addEventListener('click', dropdownMenu);
+navItems.forEach(item => {
+  item.addEventListener('click', function () {
+    dropdown.style.display = 'none';
+    hamburger.classList.remove('is-active');
+    nav.classList.remove("dark-bg");
+    hamburger.classList.remove("nav__menu-reverse");
+  });
+  body.classList.remove('fixed-postion');
+});
+
+/***/ }),
+
 /***/ "./src/modules/search.js":
 /*!*******************************!*\
   !*** ./src/modules/search.js ***!
@@ -4193,23 +4243,68 @@ class Search {
   getResults() {
     jquery__WEBPACK_IMPORTED_MODULE_0___default().getJSON(siteData.root_url + '/wp-json/30fe/v1/search?term=' + this.searchField.val(), results => {
       this.resultsDiv.html(`
-        ${results.length ? '<section class="search__results">' : '<h4 class="search__result__none">No results match that search.</h4>'}
-              ${results.map(item => `
-            
+        <div class="row">
+          <div class="one-third">
+            <h2 class="search-overlay__section-title">Team</h2>
+            ${results.team.length ? '<section class="search__results">' : '<h4 class="search__result__none">No results match that search.</h4>'}
+              ${results.team.map(item => `
                 <a class="search__result__link" href="${item.permalink}">
                   <section class="search__result">
                     <img src="${item.image}">
                     <section class="search__result__detail">
-                       <section class="pill pill-white search__result__pill">
-                        <p class="pill__label">${item.pill}</p>
-                      </section>
+                   
                       <h4 class="search__result__title">${item.title}</h4>
                     </section>
                  </section>
-                </a>
-              
-              `).join('')}
-              ${results.length ? '</section>' : ''}        
+                </a>`).join('')}
+              ${results.team.length ? '</section>' : ''}  
+          </div>
+           <div class="one-third">
+              <h2 class="search-overlay__section-title">Expertise</h2>
+              ${results.expertise.length ? '<section class="search__results">' : '<h4 class="search__result__none">No results match that search.</h4>'}
+              ${results.expertise.map(item => `
+                <a class="search__result__link" href="${item.permalink}">
+                  <section class="search__result">
+                    <img src="${item.image}">
+                    <section class="search__result__detail">
+                   
+                      <h4 class="search__result__title">${item.title}</h4>
+                    </section>
+                 </section>
+                </a>`).join('')}
+              ${results.expertise.length ? '</section>' : ''}  
+
+               <h2 class="search-overlay__section-title">Sectors</h2>
+              ${results.industry.length ? '<section class="search__results">' : '<h4 class="search__result__none">No results match that search.</h4>'}
+              ${results.industry.map(item => `
+                <a class="search__result__link" href="${item.permalink}">
+                  <section class="search__result">
+                    <img src="${item.image}">
+                    <section class="search__result__detail">
+                       
+                      <h4 class="search__result__title">${item.title}</h4>
+                    </section>
+                 </section>
+                </a>`).join('')}
+              ${results.industry.length ? '</section>' : ''}  
+          </div>
+           <div class="one-third">
+              <h2 class="search-overlay__section-title">Insights</h2>
+              ${results.post.length ? '<section class="search__results">' : '<h4 class="search__result__none">No results match that search.</h4>'}
+              ${results.post.map(item => `
+                <a class="search__result__link" href="${item.permalink}">
+                  <section class="search__result">
+                    <img src="${item.image}">
+                    <section class="search__result__detail">
+                   
+                      <h4 class="search__result__title">${item.title}</h4>
+                    </section>
+                 </section>
+                </a>`).join('')}
+              ${results.post.length ? '</section>' : ''}  
+          </div>
+        </div>
+            
       `);
       this.isSpinnerVisible = false;
     });
@@ -4303,6 +4398,121 @@ if (document.querySelector(".member__image") !== null) {
     }, "+=" + stayDuration);
   };
   window.onload = init();
+}
+
+/***/ }),
+
+/***/ "./src/modules/teamSearch.js":
+/*!***********************************!*\
+  !*** ./src/modules/teamSearch.js ***!
+  \***********************************/
+/***/ (() => {
+
+//Search Filter
+const input = document.getElementById("teamFilter");
+if (input) {
+  input.addEventListener('focus', function () {
+    resetFilterText('team__selected-role', 'Filter By Role');
+    resetFilterText('team__selected-expertise', 'Filter By Expertise');
+    showAllTeam('team__card', 'block');
+  });
+  input.addEventListener('keyup', teamFilter);
+  function teamFilter() {
+    var filter, cards, cardContainer, title, i;
+    filter = input.value.toUpperCase();
+    cardContainer = document.getElementById("team");
+    cards = cardContainer.getElementsByClassName("team__card");
+    for (i = 0; i < cards.length; i++) {
+      title = cards[i].querySelector(".team__card__name");
+      if (title.innerText.toUpperCase().indexOf(filter) > -1) {
+        cards[i].style.display = "";
+      } else {
+        cards[i].style.display = "none";
+      }
+    }
+  }
+}
+
+//Search Filter
+
+const dropdowns = document.querySelectorAll('.team__filter-dropdown');
+const roleList = document.querySelectorAll("ul > li");
+dropdowns.forEach(dropdown => {
+  const select = dropdown.querySelector('.team__select');
+  const caret = dropdown.querySelector('.team__caret');
+  const menu = dropdown.querySelector('.team__menu');
+  const options = dropdown.querySelectorAll('.team__menu li');
+  const selected = dropdown.querySelector('.team__selected');
+  if (select) {
+    select.addEventListener('click', () => {
+      select.classList.toggle('team__select-clicked');
+      caret.classList.toggle('team__caret-rotate');
+      menu.classList.toggle('team__menu-open');
+      roleFilter();
+
+      // I'm using "click" but it works with any event
+      document.addEventListener('click', event => {
+        const isClickInside = select.contains(event.target);
+        if (!isClickInside) {
+          caret.classList.remove('team__caret-rotate');
+          menu.classList.remove('team__menu-open');
+          // The click was OUTSIDE the specifiedElement, do something
+        }
+      });
+    });
+  }
+
+  options.forEach(option => {
+    option.addEventListener('click', () => {
+      selected.innerText = option.innerText;
+      select.classList.remove('team__select-clicked');
+      caret.classList.remove('team__caret-rotate');
+      menu.classList.remove('team__menu-open');
+      options.forEach(option => {
+        option.classList.remove('active');
+      });
+      option.classList.add('active');
+    });
+  });
+});
+function roleFilter() {
+  resetFilterText('selected-role', 'Filter By Role');
+  resetFilterText('selected-expertise', 'Filter By Expertise');
+  showAllTeam('team__card', 'block');
+  roleList.forEach(function (item) {
+    var filter, cards, cardContainer, i;
+    item.addEventListener('click', e => {
+      filter = e.target.textContent.toUpperCase();
+      cardContainer = document.getElementById("team");
+      cards = cardContainer.getElementsByClassName("team__card");
+      for (i = 0; i < cards.length; i++) {
+        titleRoles = cards[i].querySelector(".team__card__role");
+        titleExpertise = cards[i].querySelector(".team__card__expertise");
+        if (filter == "ALL ROLES" || filter == "ALL EXPERTISE") {
+          cards[i].style.display = "block";
+        } else if (titleRoles.innerText.toUpperCase().indexOf(filter) > -1 || titleExpertise.innerText.toUpperCase().indexOf(filter) > -1) {
+          cards[i].style.display = "block";
+        } else {
+          cards[i].style.display = "none";
+        }
+      }
+    });
+  });
+}
+
+//Show all cards
+function showAllTeam(className, displayState) {
+  var elements = document.getElementsByClassName(className);
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].style.display = displayState;
+  }
+}
+function resetFilterText(className, text) {
+  var elements = document.getElementsByClassName(className);
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].innerText = text;
+    console.log(elements[i].innerText);
+  }
 }
 
 /***/ }),

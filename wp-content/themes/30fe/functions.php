@@ -2,6 +2,10 @@
 
 require get_theme_file_path('/includes/search-route.php');
 
+// register REST here
+
+
+
 function theme_files() {
     $css_version_number = get_field( 'css_version_number', get_option( 'page_on_front' ) );
 
@@ -168,7 +172,7 @@ function theme_post_type_industry() {
         "public" => true,
         "publicly_queryable" => true,
         "show_ui" => true,
-        "show_in_rest" => false,
+        "show_in_rest" => true,
         "rest_base" => "",
         "has_archive" => false,
         "menu_icon" => 'dashicons-building',
@@ -205,7 +209,7 @@ function theme_post_type_expertise() {
         "public" => true,
         "publicly_queryable" => true,
         "show_ui" => true,
-        "show_in_rest" => false,
+        "show_in_rest" => true,
         "rest_base" => "",
         "has_archive" => false,
         "menu_icon" => 'dashicons-lightbulb',
@@ -331,10 +335,10 @@ add_action( 'admin_head', 'bks_replace_admin_menu_icons_css' );
 
 
 // Remove P tag
-function remove_the_wpautop_function() {
-    remove_filter( 'the_content', 'wpautop' );
-    remove_filter( 'the_excerpt', 'wpautop' );
-}
+// function remove_the_wpautop_function() {
+//     remove_filter( 'the_content', 'wpautop' );
+//     remove_filter( 'the_excerpt', 'wpautop' );
+// }
 
 add_action( 'after_setup_theme', 'remove_the_wpautop_function' );
 

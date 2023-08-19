@@ -23,29 +23,33 @@
               alt="<?php echo $alt; ?>" title="<?php echo $title; ?>">
           </figure>
         </div>
-
       </section>
 
 
       <section class="single-blog">
-        <section class="single-blog__single-post">
-          <?php
+        <section class="max-width max-padding">
+          <section class="single-blog__single-post">
+            <?php
           while( have_posts()) {
           the_post();
           $subtitle = get_field ('subtitle'); 
           ?>
 
-          <!-- Display Content -->
-          <?php echo the_content();?>
+            <!-- Display Content -->
+            <?php echo the_content();?>
+          </section>
+
+
+
+
+          <?php }  ?>
         </section>
+      </section>
+    </section>
 
-        <!-- Team Member -->
-        <section class="single-blog__wrapper">
-
-
-          <?php 
-
-          // Retrieve Team Member Info
+    <!-- Expert -->
+    <section class="single-blog__wrapper">
+      <?php 
           $team_members = get_field ( 'team_member' ); 
         
           foreach ($team_members as $team_member):     
@@ -55,31 +59,10 @@
           $email = get_field('email', $team_member);
           $img = get_field('headshot', $team_member);
           $image = $img['url']; ?>
-          <section class="single-blog__card">
-            <figure class="single-blog__card__image">
-              <img class="lazyload" src="<?php echo get_template_directory_uri(); ?>/images/people.png"" alt=" #"
-                title="#">
-            </figure>
-            <section class="pill">
-              <p class="pill__label">Practice Leads</p>
-            </section>
-            <article class="single-blog__details">
-              <div class="single-blog__card__name">
-                <?php echo $name ?>
-              </div>
-              <p><?php echo $title ?></p>
-              <p>Direct: <?php echo $phone ?></p>
-              <p><?php echo $email ?></p>
-            </article>
-
-          </section>
-          <?php endforeach; ?>
-        </section>
-
-
-        <?php }  ?>
-      </section>
+      <?php include get_template_directory() . '/modules/team-card.php';?>
+      <?php endforeach; ?>
     </section>
+
   </main>
 
   <?php get_footer() ?>

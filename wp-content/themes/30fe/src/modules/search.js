@@ -53,23 +53,68 @@ class Search {
   getResults() {
     $.getJSON(siteData.root_url + '/wp-json/30fe/v1/search?term=' + this.searchField.val(), (results) => {
       this.resultsDiv.html(`
-        ${results.length ? '<section class="search__results">' : '<h4 class="search__result__none">No results match that search.</h4>'}
-              ${results.map(item => `
-            
+        <div class="row">
+          <div class="one-third">
+            <h2 class="search-overlay__section-title">Team</h2>
+            ${results.team.length ? '<section class="search__results">' : '<h4 class="search__result__none">No results match that search.</h4>'}
+              ${results.team.map(item => `
                 <a class="search__result__link" href="${item.permalink}">
                   <section class="search__result">
                     <img src="${item.image}">
                     <section class="search__result__detail">
-                       <section class="pill pill-white search__result__pill">
-                        <p class="pill__label">${item.pill}</p>
-                      </section>
+                   
                       <h4 class="search__result__title">${item.title}</h4>
                     </section>
                  </section>
-                </a>
-              
-              `).join('')}
-              ${results.length ? '</section>' : ''}        
+                </a>`).join('')}
+              ${results.team.length ? '</section>' : ''}  
+          </div>
+           <div class="one-third">
+              <h2 class="search-overlay__section-title">Expertise</h2>
+              ${results.expertise.length ? '<section class="search__results">' : '<h4 class="search__result__none">No results match that search.</h4>'}
+              ${results.expertise.map(item => `
+                <a class="search__result__link" href="${item.permalink}">
+                  <section class="search__result">
+                    <img src="${item.image}">
+                    <section class="search__result__detail">
+                   
+                      <h4 class="search__result__title">${item.title}</h4>
+                    </section>
+                 </section>
+                </a>`).join('')}
+              ${results.expertise.length ? '</section>' : ''}  
+
+               <h2 class="search-overlay__section-title">Sectors</h2>
+              ${results.industry.length ? '<section class="search__results">' : '<h4 class="search__result__none">No results match that search.</h4>'}
+              ${results.industry.map(item => `
+                <a class="search__result__link" href="${item.permalink}">
+                  <section class="search__result">
+                    <img src="${item.image}">
+                    <section class="search__result__detail">
+                       
+                      <h4 class="search__result__title">${item.title}</h4>
+                    </section>
+                 </section>
+                </a>`).join('')}
+              ${results.industry.length ? '</section>' : ''}  
+          </div>
+           <div class="one-third">
+              <h2 class="search-overlay__section-title">Insights</h2>
+              ${results.post.length ? '<section class="search__results">' : '<h4 class="search__result__none">No results match that search.</h4>'}
+              ${results.post.map(item => `
+                <a class="search__result__link" href="${item.permalink}">
+                  <section class="search__result">
+                    <img src="${item.image}">
+                    <section class="search__result__detail">
+                   
+                      <h4 class="search__result__title">${item.title}</h4>
+                    </section>
+                 </section>
+                </a>`).join('')}
+              ${results.post.length ? '</section>' : ''}  
+          </div>
+        </div>
+            
       `);
       this.isSpinnerVisible = false;
     });

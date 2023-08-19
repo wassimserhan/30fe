@@ -3,7 +3,7 @@
      <section class="pill">
        <p class="pill__label">Blog</p>
      </section>
-     <h1 class="insights__headline">30 Publications</h1>
+     <h1 class="insights__headline">Latest Insights</h1>
      <h6>Read our latest insights from our best experts.</h6>
      <br>
 
@@ -13,7 +13,7 @@
        <?php 
 
      $homepagePosts = new WP_Query(array(
-      'posts_per_page' => 4
+      'posts_per_page' => 3
      ));
       while ($homepagePosts->have_posts()): $homepagePosts->the_post();
       ?>

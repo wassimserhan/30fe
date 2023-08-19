@@ -1,6 +1,5 @@
 .home-expertise {
   font-family: 'Inter', sans-serif;
-  padding: 128px 0;
   background-color: $whiteSmoke;
 
   &__headline {
@@ -14,7 +13,6 @@
 
   &__list {
     display: flex;
-    max-width: 980px;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -26,7 +24,7 @@
   &__item {
     display: flex;
     place-items: center;
-    width: 304px;
+    min-width: 264px;
     background-color: transparent;
     border: none;
     color: $monochromeBlack;
@@ -48,6 +46,10 @@
 
     &:hover &__arrow {
       transform: rotate(-40deg);
+    }
+
+    & p {
+      max-width: 170px;
     }
   }
 }

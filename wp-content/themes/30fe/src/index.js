@@ -52,11 +52,13 @@ if (slider2) {
 
 
 // modules
-import './modules/main';
+import './modules/teamSearch';
 import './modules/teamImages';
+import './modules/blogSearch';
 import './modules/homeStats';
 import './modules/accordion';
 import './modules/navColors';
+import './modules/navbar';
 import Search from './modules/search';
 
 // import main from './main';

@@ -1,12 +1,12 @@
 
 
 //Search Filter
-const input = document.getElementById("myFilter");
+const input = document.getElementById("teamFilter");
 
 if (input) {
   input.addEventListener('focus', function () {
-    resetFilterText('selected-role', 'Filter By Role');
-    resetFilterText('selected-expertise', 'Filter By Expertise');
+    resetFilterText('team__selected-role', 'Filter By Role');
+    resetFilterText('team__selected-expertise', 'Filter By Expertise');
     showAllTeam('team__card', 'block');
   })
 
@@ -32,31 +32,31 @@ if (input) {
 //Search Filter
 
 
-const dropdowns = document.querySelectorAll('.dropdown');
+const dropdowns = document.querySelectorAll('.team__filter-dropdown');
 const roleList = document.querySelectorAll("ul > li");
 
 
 dropdowns.forEach(dropdown => {
-  const select = dropdown.querySelector('.select');
-  const caret = dropdown.querySelector('.caret');
-  const menu = dropdown.querySelector('.menu');
-  const options = dropdown.querySelectorAll('.menu li');
-  const selected = dropdown.querySelector('.selected');
+  const select = dropdown.querySelector('.team__select');
+  const caret = dropdown.querySelector('.team__caret');
+  const menu = dropdown.querySelector('.team__menu');
+  const options = dropdown.querySelectorAll('.team__menu li');
+  const selected = dropdown.querySelector('.team__selected');
 
 
   if (select) {
     select.addEventListener('click', () => {
-      select.classList.toggle('select-clicked');
-      caret.classList.toggle('caret-rotate');
-      menu.classList.toggle('menu-open');
+      select.classList.toggle('team__select-clicked');
+      caret.classList.toggle('team__caret-rotate');
+      menu.classList.toggle('team__menu-open');
       roleFilter();
 
       // I'm using "click" but it works with any event
       document.addEventListener('click', event => {
         const isClickInside = select.contains(event.target)
         if (!isClickInside) {
-          caret.classList.remove('caret-rotate');
-          menu.classList.remove('menu-open');
+          caret.classList.remove('team__caret-rotate');
+          menu.classList.remove('team__menu-open');
           // The click was OUTSIDE the specifiedElement, do something
         }
       })
@@ -70,9 +70,9 @@ dropdowns.forEach(dropdown => {
   options.forEach(option => {
     option.addEventListener('click', () => {
       selected.innerText = option.innerText;
-      select.classList.remove('select-clicked');
-      caret.classList.remove('caret-rotate');
-      menu.classList.remove('menu-open');
+      select.classList.remove('team__select-clicked');
+      caret.classList.remove('team__caret-rotate');
+      menu.classList.remove('team__menu-open');
 
       options.forEach(option => {
         option.classList.remove('active');

@@ -68,7 +68,11 @@ button {
 }
 
 .dark-bg {
-  background-color: $black;
+  background-color: $monochromeBlack !important;
+}
+
+.black-bg {
+  background-color: $black !important;
 }
 
 .taupe-bg {
@@ -109,10 +113,6 @@ img {
   @include bp(phone) {
     padding: 128px 32px;
   }
-}
-
-.max-padding-block {
-  padding: 128px 0;
 }
 
 .center-text {

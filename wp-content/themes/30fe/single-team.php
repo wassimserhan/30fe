@@ -13,55 +13,57 @@
       $bio = get_field('bio');
     ?>
   <section class="member">
-    <section class="member__card">
-      <section class="fadein">
-        <?php 
+    <section class="max-width max-padding">
+      <section class="member__card">
+        <section class="fadein">
+          <?php 
         
         $images = get_field('images');
         foreach($images as $item):?>
 
-        <img class="member__image" src="<?php echo $item['url']; ?>" alt="<?php echo $name; ?>"
-          title="<?php echo $name; ?>" width="100%">
-        <?php endforeach; ?>
-      </section>
+          <img class="member__image" src="<?php echo $item['url']; ?>" alt="<?php echo $name; ?>"
+            title="<?php echo $name; ?>" width="100%">
+          <?php endforeach; ?>
+        </section>
 
 
-      <article class="member__person">
-        <h2 class="member__headline"><?php echo $name ?></h2>
-        <article class="member__details">
-          <p><?php echo $qualifications ?></p>
-          <p><?php echo $title ?></p>
-          <p><?php echo $location ?></p>
-          <p><?php echo $phone ?></p>
-          <a href="mailto:<?php echo $email ;?>"><?php echo $email ?></a>
-          <?php if($cv) : ?>
-          <a href="<?php echo $cv ?>"><button class="member__details__button">Download CV</button></a>
-          <?php endif ?>
+        <article class="member__person">
+          <h2 class="member__headline"><?php echo $name ?></h2>
+          <article class="member__details">
+            <p><?php echo $qualifications ?></p>
+            <p><?php echo $title ?></p>
+            <p><?php echo $location ?></p>
+            <p><?php echo $phone ?></p>
+            <a href="mailto:<?php echo $email ;?>"><?php echo $email ?></a>
+            <?php if($cv) : ?>
+            <a href="<?php echo $cv ?>"><button class="member__details__button">Download CV</button></a>
+            <?php endif ?>
 
-        </article>
-        <article class="member__details member__details__bio">
-          <p><?php echo $bio ?></p>
-        </article>
+          </article>
+          <article class="member__details member__details__bio">
+            <p><?php echo $bio ?></p>
+          </article>
 
-        <?php 
+          <?php 
           if( have_rows('specialized_competencies') ): ?>
-        <h6 class="member__competencies">Specialised Competencies</h6>
-        <hr class="member__line">
-        <section class="member__pillbox">
-          <?php
+          <h6 class="member__competencies">Specialised Competencies</h6>
+          <hr class="member__line">
+          <section class="member__pillbox">
+            <?php
           while( have_rows('specialized_competencies') ) : the_row();
             $competency = get_sub_field('competency'); ?>
-          <p class="pill member__pill"><?php echo $competency ?></p>
-          <?php
+            <p class="pill member__pill"><?php echo $competency ?></p>
+            <?php
             endwhile; ?>
-        </section>
-        <?php endif;
+          </section>
+          <?php endif;
         ?>
 
 
 
 
-      </article>
+        </article>
+      </section>
     </section>
   </section>
 

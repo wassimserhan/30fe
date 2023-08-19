@@ -33,8 +33,8 @@ get_header();
         and
         depositions.</h4>
       <section class="about__intro__buttons">
-        <button class="about__intro__button">Work with Us</button>
-        <button class="about__intro__button about__intro__button-transparent">Learn More</button>
+        <button class="about__intro__button">Browse Experts</button>
+        <!-- <button class="about__intro__button about__intro__button-transparent">Learn More</button> -->
       </section>
 
     </section>
@@ -84,33 +84,31 @@ get_header();
           <p class="pill__label">mission</p>
         </section>
         <h2 class="about__mission__headline">Precision in investigation, clarity in solutions. </h2>
-        <p class="about__mission__copy">Fugiat eiusmod dolore enim officia nulla nulla esse labore fugiat amet tempor
-          minim
-          magna proident consequat. Duis labore labore nostrud laboris duis do commodo sunt. Aliquip velit do aliqua
-          cupidatat aliquip irure id est. Est dolor sint excepteur irure Lorem est fugiat consequat.</p>
+        <p class="about__mission__copy">By applying science to evidence, our forensic experts uncover the truth behind
+          each case. Our mission is to facilitate clear and unbiased understanding of the facts, allowing our clients to
+          make decisions with confidence.</p>
       </section>
     </section>
 
-    <!-- image-text -->
+    <!-- Hero-->
 
     <section class="about__thirty whitesmoke-bg">
-      <section class="max-width">
-        <section class="hero__card">
-          <figure class="hero__figure">
+      <section class="">
+        <section class="about__whatis__card">
+          <figure class="about__whatis__image">
             <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/hero-image.jpg" alt=""
               title="lock">
           </figure>
-          <article class="hero__detail hero__detail--left" style="">
-            <h1 class="hero__headline">What is 30?</h1>
-            <p class="hero__copy">From its inception, our firm has built a reputation for reporting facts intelligently,
+          <article class="about__whatis__detail about__whatis__detail--left" style="">
+            <h1 class="about__whatis__headline">What is 30?</h1>
+            <p class="about__whatis__copy">From its inception, our firm has built a reputation for reporting facts
+              intelligently,
               accurately, thoroughly, and without bias. Yes, we’re forensic investigators, but in a way, we’re really
               reporters. And that got us thinking. Years ago, when newspaper reporters submitted final copy to be
               published, they would type “-30-” at the bottom centre of the page. This would signify to the typesetter
               that it was the end of the piece, that the facts were all there—the whole story. We couldn’t think of a
               better way to describe who we are, and what we do.
             </p>
-
-
           </article>
         </section>
       </section>

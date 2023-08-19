@@ -25,8 +25,10 @@
     color: $white;
   }
 
-  &__figure {
-    width: 100%;
+  &__image {
+    & img {
+      width: 100%;
+    }
   }
 
   &__list {
@@ -39,7 +41,8 @@
       display: flex;
       justify-content: space-between;
       place-items: center;
-      width: 900px;
+      max-width: 1020px;
+      border-bottom: 1px solid $white;
     }
   }
 
@@ -50,6 +53,7 @@
     line-height: 100%; /* 48px */
     letter-spacing: -2.4px;
     padding: 64px 0;
+    color: $white;
 
     &__arrow {
       max-width: 20px;

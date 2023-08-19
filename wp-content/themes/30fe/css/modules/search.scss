@@ -223,3 +223,12 @@
     list-style: none;
   }
 }
+
+.row {
+  display: flex;
+  gap: 20px;
+}
+
+.one-third {
+  width: 33.33%;
+}

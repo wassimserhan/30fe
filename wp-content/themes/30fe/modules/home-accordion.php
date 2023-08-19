@@ -1,5 +1,5 @@
   <section class="whitesmoke-bg">
-    <section class="max-width ">
+    <section class="max-width">
       <div class="accordion accordion--horizontal fullscreen">
 
         <?php $k=0;
@@ -17,9 +17,9 @@
             style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'dark-bg') echo 'color: #ffffff'?>">
             <?php echo $headline ?></h1>
           <div class="accordion__body">
-            <h3 class="accordion__headline"
+            <!-- <h3 class="accordion__headline"
               style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'dark-bg') echo 'color: #ffffff'?>">
-              <?php echo $headline ?></h3>
+              <?php echo $headline ?></h3> -->
             <p class="accordion__copy"
               style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'dark-bg') echo 'color: #ffffff'?>">
               <?php echo $copy; ?>

@@ -22,7 +22,7 @@ get_header();
         <p class="sectors__copy"><?php the_content() ?></p>
       </section>
     </section>
-    <figure class="sectors__figure">
+    <figure class="sectors__image">
       <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/image.jpg" alt="<?php echo $alt; ?>"
         title="<?php echo $title; ?>">
     </figure>
@@ -30,7 +30,7 @@ get_header();
 
 
 
-    <section class="sectors__list fullscreen">
+    <section class="sectors__list fullscreen dark-bg">
       <section class="max-width max-padding">
 
         <?php 
@@ -46,8 +46,8 @@ get_header();
 
             <p class="sectors__list-item"><?php the_title() ?></p>
 
-            <img class="sectors__list-item__arrow" src="<?php echo get_template_directory_uri(); ?>/images/arrow.svg"
-              alt="arrow" tabindex=0>
+            <img class="sectors__list-item__arrow"
+              src="<?php echo get_template_directory_uri(); ?>/images/arrow-white.svg" alt="arrow" tabindex=0>
 
           </article>
         </a>
@@ -57,7 +57,7 @@ get_header();
 
       </section>
     </section>
-
+    <?php include get_template_directory() . '/modules/home-contact.php'; ?>
 
   </section>
 </main>

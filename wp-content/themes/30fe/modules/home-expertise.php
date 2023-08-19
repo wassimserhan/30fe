@@ -10,7 +10,8 @@
         while ($customQuery->have_posts()): $customQuery->the_post();
         ?>
       <a href="<?php echo the_permalink() ?>">
-        <button class="home-expertise__item"><?php the_title() ?>
+        <button class="home-expertise__item">
+          <p><?php the_title() ?></p>
           <img class="home-expertise__item__arrow" src="<?php echo get_template_directory_uri(); ?>/images/arrow.svg"
             alt="arrow" tabindex=0>
         </button>

@@ -1,12 +1,22 @@
 // Breakpoints
 // ---------------------------------------------
 $breakpoints: (
-  phone_small: (
-    max-width: 375px
-  ),
   phone: (
     max-width: 479px
   ),
+
+  phone_small: (
+    max-width: 375px
+  ),
+
+  laptop: (
+    max-width: 1366px
+  ),
+
+  desktop: (
+    max-width: 1920px
+  ),
+
   tablet_small: (
     max-width: 639px
   ),
@@ -46,9 +56,7 @@ $breakpoints: (
   custom_tablet: (
     min-width: 860px
   ),
-  desktop: (
-    min-width: 1024px
-  ),
+
   custom_desktop: (
     min-width: 1201px
   ),

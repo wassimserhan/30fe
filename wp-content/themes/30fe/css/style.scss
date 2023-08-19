@@ -20,9 +20,9 @@
 @import 'components/line';
 @import 'components/common';
 @import 'components/animation';
-@import 'components/dropdown-icon';
 @import 'components/pill';
 @import 'components/splide';
+@import 'components/card';
 
 //----------------------------------*\
 // MODULES
@@ -32,19 +32,19 @@
 @import 'modules/top';
 @import 'modules/hiring';
 @import 'modules/forms';
-@import 'modules/timeline';
+@import 'modules/home-timeline';
 @import 'modules/expertise-form';
-@import 'modules/stats';
-@import 'modules/home-work';
+@import 'modules/home-stats';
+@import 'modules/home-email';
 @import 'modules/home-quote';
 @import 'modules/home-testimonials';
 @import 'modules/home-expertise';
 @import 'modules/home-accordion';
-@import 'modules/about-hero';
 
 //----------------------------------*\
 // PAGES
 //----------------------------------*/
+@import 'pages/home';
 @import 'pages/about';
 @import 'pages/team';
 @import 'pages/single-team';

@@ -21,12 +21,12 @@ get_header();
         procedures for each file.</p>
       <br>
       <section class="team__search">
-        <div class="dropdown">
-          <div class="select">
-            <span class="selected selected-role">Filter By Role</span>
-            <div class="caret"></div>
+        <div class="team__filter-dropdown">
+          <div class="team__select">
+            <span class="team__selected team__selected-role">Filter By Role</span>
+            <div class="team__caret"></div>
           </div>
-          <ul id="team__role" class="menu team__expertise">
+          <ul id="team__role" class="team__menu team__expertise">
             <li value="all">All Roles</li>
             <li value="Associates">Associates</li>
             <li value="Leadership Team">Leadership Team</li>
@@ -35,12 +35,12 @@ get_header();
         </div>
 
 
-        <div class="dropdown">
-          <div class="select">
-            <span class="selected selected-expertise">Filter By Expertise</span>
-            <div class="caret"></div>
+        <div class="team__filter-dropdown">
+          <div class="team__select">
+            <span class="team__selected team__selected-expertise">Filter By Expertise</span>
+            <div class="team__caret"></div>
           </div>
-          <ul id="team__expertise" class="menu team__expertise">
+          <ul id="team__expertise" class="team__menu team__expertise">
             <li value="all">All Expertise</li>
             <?php 
           $expertise = new WP_Query(array(
@@ -54,12 +54,7 @@ get_header();
             <?php wp_reset_postdata() ?>
           </ul>
         </div>
-
-
-
-
-
-        <input type="text" id="myFilter" class="dropdown select" placeholder="Search">
+        <input type="text" id="teamFilter" class="team__select" placeholder="Search">
       </section>
 
 
@@ -76,7 +71,7 @@ get_header();
         <article class="team__card">
           <a href="<?php the_permalink($team_member) ?>">
             <figure class="team__card__image">
-              <img class="lazyload" src="<?php echo get_template_directory_uri(); ?>/images/Team_Blue.png"
+              <img class="lazyload" src="<?php echo get_the_post_thumbnail_url($team_member); ?>"
                 alt="<?php echo $name; ?>" title="<?php echo $name; ?>">
             </figure>
           </a>

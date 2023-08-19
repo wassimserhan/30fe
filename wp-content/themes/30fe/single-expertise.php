@@ -26,7 +26,7 @@ get_header();
 
 
     <section class="max-width">
-      <article class="industry__categories">
+      <article class="industry__categories dark-bg">
         <!-- display industry categories -->
         <?php
           if( have_rows('column_list') ): 
@@ -35,46 +35,47 @@ get_header();
 
 
         <section class="industry__category <?php if( get_row_index()== 2) echo "industry__category-bullets-border" ?>">
-          <section class="industry__category-items">
-            <p><?php echo '0' . get_row_index() ?></p>
-            <h4 class="industry__category-item"><?php echo $industryItems ?></h4>
-          </section>
+          <section class="max-width">
+            <section class="industry__category-items">
+              <p><?php echo '0' . get_row_index() ?></p>
+              <h4 class="industry__category-item"><?php echo $industryItems ?></h4>
+            </section>
 
-          <section class="industry__category-bullets">
-            <?php
+            <section class="industry__category-bullets">
+              <?php
           if( have_rows('items') ): 
           while( have_rows('items') ) : the_row();
             $industryItem = get_sub_field('item'); ?>
-            <section class=" industry__category-bullets__items">
-              <figure class="industry__category-bullets__arrow">
-                <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/blue-arrow.svg"
-                  alt="<?php echo $alt; ?>" title="<?php echo $title; ?>">
-              </figure>
-              <article>
-                <h5 class="industry__category-bullets__item"><?php echo $industryItem ?></h5>
-                <?php
+              <section class=" industry__category-bullets__items">
+                <figure class="industry__category-bullets__arrow">
+                  <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/blue-arrow.svg"
+                    alt="<?php echo $alt; ?>" title="<?php echo $title; ?>">
+                </figure>
+                <article>
+                  <h5 class="industry__category-bullets__item"><?php echo $industryItem ?></h5>
+                  <?php
           if( have_rows('subitems') ): ?>
-                <ul class="industry__category-bullets__subitem">
-                  <?php  
+                  <ul class="industry__category-bullets__subitem">
+                    <?php  
           while( have_rows('subitems') ) : the_row();
             $subItem = get_sub_field('subitem'); ?>
-                  <li><?php echo $subItem ?></li>
+                    <li><?php echo $subItem ?></li>
 
 
-                  <?php
+                    <?php
             endwhile; ?>
-                  <?php endif;
+                    <?php endif;
             ?>
-              </article>
+                </article>
+              </section>
+              <?php
+            endwhile; ?>
+              <ul>
+                <?php endif;
+            ?>
             </section>
-            <?php
-            endwhile; ?>
-            <ul>
-              <?php endif;
-            ?>
           </section>
         </section>
-
 
 
         <?php
