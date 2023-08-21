@@ -59,7 +59,7 @@ class Search {
         <p class="pill__label pill__label-white">Team</p>
       </section>
            
-            ${results.team.length ? '<section class="search__results">' : '<h4 class="search__result__none">No results match that search.</h4>'}
+            ${results.team.length ? '<section class="search__results">' : `<p class="search__result__none"> No results match that search. <a href="${siteData.root_url}/team">View Team</a></p>`}
               ${results.team.map(item => `
                 <a class="search__result__link" href="${item.permalink}">
                   <section class="search__result">
@@ -76,7 +76,7 @@ class Search {
                <section class="pill search-overlay__pill pill-white">
         <p class="pill__label pill__label-white">Expertise</p>
       </section>
-              ${results.expertise.length ? '<section class="search__results">' : '<h4 class="search__result__none">No results match that search.</h4>'}
+              ${results.expertise.length ? '<section class="search__results">' : `<p class="search__result__none"> No results match that search. <a href="${siteData.root_url}/expertise">View Expertise</a></p>`}
               ${results.expertise.map(item => `
                 <a class="search__result__link" href="${item.permalink}">
                   <section class="search__result">
@@ -92,7 +92,7 @@ class Search {
                <section class="pill search-overlay__pill pill-white">
         <p class="pill__label pill__label-white">Sectors</p>
       </section>
-              ${results.industry.length ? '<section class="search__results">' : '<h4 class="search__result__none">No results match that search.</h4>'}
+              ${results.industry.length ? '<section class="search__results">' : `<p class="search__result__none"> No results match that search. <a href="${siteData.root_url}/sectors">View Sectors</a></p>`}
               ${results.industry.map(item => `
                 <a class="search__result__link" href="${item.permalink}">
                   <section class="search__result">
@@ -106,10 +106,10 @@ class Search {
               ${results.industry.length ? '</section>' : ''}  
           </div>
            <div class="one-third">
-              < <section class="pill search-overlay__pill pill-white">
+              <section class="pill search-overlay__pill pill-white">
         <p class="pill__label pill__label-white">Insights</p>
       </section>
-              ${results.post.length ? '<section class="search__results">' : '<h4 class="search__result__none">No results match that search.</h4>'}
+              ${results.post.length ? '<section class="search__results">' : `<p class="search__result__none"> No results match that search. <a href="${siteData.root_url}/insights">View Insights</a></p>`}
               ${results.post.map(item => `
                 <a class="search__result__link" href="${item.permalink}">
                   <section class="search__result">

@@ -17,7 +17,6 @@
 //----------------------------------*\
 // COMPONENTS
 //----------------------------------*/
-@import 'components/line';
 @import 'components/common';
 @import 'components/animation';
 @import 'components/pill';
@@ -30,11 +29,9 @@
 //----------------------------------*/
 @import 'modules/navbar';
 @import 'modules/search';
-@import 'modules/top';
 @import 'modules/hiring';
 @import 'modules/forms';
 @import 'modules/timeline';
-@import 'modules/timeline2';
 @import 'modules/expertise-form';
 @import 'modules/home-stats';
 @import 'modules/home-email';
@@ -59,3 +56,4 @@
 @import 'pages/contact';
 @import 'pages/footer';
 @import 'pages/404';
+@import 'pages/careers';

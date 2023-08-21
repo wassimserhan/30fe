@@ -1,6 +1,6 @@
 
 const $whitesmoke = '#f2f1ed';
-$monochromeBlack = '#1d1c1d';
+$black = '#1d1c1d';
 $taupe = '#cbbea5';
 $orange = '#ff6f48';
 $blue = '#0175df';

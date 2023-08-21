@@ -386,20 +386,6 @@ ul {
   padding: 0px;
 }
 
-/* use dark color on this variable */
-/* use dark color on this variable */
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #cbbea5;
-  margin: 40px auto;
-}
-
-.divider {
-  border-top: 1px solid #b9a569;
-}
-
 html,
 body {
   width: 100%;
@@ -538,6 +524,14 @@ img:not([src]) {
 
 .hidden {
   display: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cbbea5;
+  margin: 40px auto;
 }
 
 .fadeIn {
@@ -713,15 +707,28 @@ img:not([src]) {
   border-bottom: 2px solid #1d1c1d;
   border-left: 2px solid #1d1c1d;
 }
-@media (max-width: 767px) {
-  .plus {
-    position: relative;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin: 0 auto;
-  }
+
+.plus--white {
+  position: absolute;
+  right: 30px;
+  width: 16px;
+  height: 12px;
+  margin-top: -6px;
+  transition: all 250ms;
+  top: 26px;
+  cursor: pointer;
+}
+.plus--white::after {
+  position: absolute;
+  top: -2px;
+  right: 3px;
+  display: block;
+  width: 8px;
+  height: 8px;
+  content: "";
+  transform: rotate(-45deg);
+  border-bottom: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
 }
 
 .plus-active {
@@ -858,7 +865,7 @@ img:not([src]) {
   transform: scale(1.09);
   transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
   box-sizing: border-box;
-  padding: 60px 128px;
+  padding: 20px 128px;
 }
 @media (max-width: 479px) {
   .search-overlay {
@@ -936,7 +943,12 @@ body.admin-bar .search-overlay {
 }
 .search__result__none {
   color: #ffffff;
-  padding: 60px 0;
+  padding: 90px 0;
+  font-size: 13px;
+}
+.search__result__none a {
+  color: #ffffff;
+  text-decoration: underline;
 }
 .search__result__detail__title {
   font-size: 32px;
@@ -1051,26 +1063,6 @@ body.admin-bar .search-overlay {
   .one-third {
     width: 100%;
   }
-}
-
-.scroll-button {
-  display: none;
-  position: fixed;
-  bottom: 14%;
-  left: 4%;
-  z-index: 8;
-}
-.scroll-button:hover {
-  cursor: pointer;
-}
-.scroll-button__scroll-arrow {
-  margin: 0 auto;
-  width: 40px;
-}
-.scroll-button__p {
-  margin-top: 10px;
-  font-family: "Retina Book";
-  font-size: 1rem;
 }
 
 .hiring {
@@ -1267,17 +1259,34 @@ body.admin-bar .search-overlay {
   text-transform: uppercase;
 }
 
-.about__timeline2 {
+.about__timeline {
   background-color: #1d1c1d;
   padding: 64px 0 160px;
 }
-.about__timeline2__headline {
+.about__timeline__headline {
   color: #ffffff;
   font-size: 72px;
   font-weight: 700;
   line-height: 100%; /* 72px */
   letter-spacing: -3.6px;
   text-align: center;
+}
+.about__timeline__year {
+  min-height: 200px;
+  background-color: #cbbea5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about__timeline__year h4 {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 100%; /* 72px */
+  letter-spacing: -3.6px;
+}
+.about__timeline__copy {
+  padding-top: 64px;
+  color: #ffffff;
 }
 
 .body-wrap {
@@ -1605,36 +1614,6 @@ body.admin-bar .search-overlay {
 
 .cards-container section img {
   width: 100%;
-}
-
-.about__timeline {
-  background-color: #1d1c1d;
-  padding: 64px 0 160px;
-}
-.about__timeline__headline {
-  color: #ffffff;
-  font-size: 72px;
-  font-weight: 700;
-  line-height: 100%; /* 72px */
-  letter-spacing: -3.6px;
-  text-align: center;
-}
-.about__timeline__year {
-  min-height: 200px;
-  background-color: #cbbea5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.about__timeline__year h4 {
-  font-size: 72px;
-  font-weight: 700;
-  line-height: 100%; /* 72px */
-  letter-spacing: -3.6px;
-}
-.about__timeline__copy {
-  padding-top: 64px;
-  color: #ffffff;
 }
 
 .expertise-form {
@@ -2145,7 +2124,7 @@ body.admin-bar .search-overlay {
 .accordion-faq__wrapper .plus {
   display: none;
 }
-@media (max-width: 479px) {
+@media (max-width: 1023px) {
   .accordion-faq__wrapper .plus {
     display: block;
     position: absolute;
@@ -2165,7 +2144,7 @@ body.admin-bar .search-overlay {
   line-height: 22px;
   font-family: "Retina Light", sans-serif;
 }
-@media (max-width: 479px) {
+@media (max-width: 1023px) {
   .accordion-faq__content {
     max-height: 0;
     opacity: 0;
@@ -2183,11 +2162,6 @@ body.admin-bar .search-overlay {
 .accordion {
   display: flex;
   height: 80vh; /* <--- This is what you need */
-}
-@media (max-width: 479px) {
-  .accordion {
-    display: none;
-  }
 }
 .accordion--horizontal .accordion__item {
   width: 50px;
@@ -3573,10 +3547,6 @@ body.admin-bar .search-overlay {
   color: #ff6f48;
   text-align: center;
 }
-.single__headline__line {
-  border-bottom: 1px solid #abadb0;
-  padding-bottom: 16px;
-}
 .single__copy {
   color: #ffffff;
   font-size: 1.25rem;
@@ -3597,7 +3567,7 @@ body.admin-bar .search-overlay {
 }
 .single__stats-item--number {
   font-size: 3rem;
-  color: #2a7f89;
+  color: #ffffff;
   border-right: 1px solid rgba(128, 131, 102, 0.3);
 }
 .single__stats-item--label {
@@ -3692,13 +3662,16 @@ body.admin-bar .search-overlay {
   display: none;
   width: 100%;
 }
+.contact__image--active {
+  display: block;
+}
 .contact__locations {
   display: flex;
   gap: 32px;
   background-color: #1d1c1d;
   padding: 64px 128px;
 }
-@media (max-width: 479px) {
+@media (max-width: 1023px) {
   .contact__locations {
     flex-direction: column;
   }
@@ -3714,6 +3687,7 @@ body.admin-bar .search-overlay {
   letter-spacing: -1.6px;
   color: #ffffff;
   padding-bottom: 24px;
+  cursor: pointer;
 }
 .contact__location h2 h2:nth-of-type(0) {
   color: #08cb80;
@@ -3727,7 +3701,7 @@ body.admin-bar .search-overlay {
 .contact__information {
   display: flex;
 }
-@media (max-width: 479px) {
+@media (max-width: 1023px) {
   .contact__information {
     flex-direction: column;
   }
@@ -3735,7 +3709,7 @@ body.admin-bar .search-overlay {
 .contact__form {
   width: 50%;
 }
-@media (max-width: 479px) {
+@media (max-width: 1023px) {
   .contact__form {
     width: 100%;
   }
@@ -3750,7 +3724,7 @@ body.admin-bar .search-overlay {
 .contact__details {
   width: 50%;
 }
-@media (max-width: 479px) {
+@media (max-width: 1023px) {
   .contact__details {
     width: 100%;
   }
@@ -3774,34 +3748,12 @@ body.admin-bar .search-overlay {
 }
 .contact__detail li a {
   color: #1d1c1d;
-}
-
-#toronto {
-  display: block;
-}
-
-#vancouver {
-  display: none;
-}
-
-#ottawa {
-  display: none;
-}
-
-#calgary {
-  display: none;
-}
-
-.show-map {
-  display: none;
+  text-decoration: underline;
 }
 
 .footer {
   font-family: "Inter", sans-serif;
   flex-shrink: 0;
-}
-.footer a:hover {
-  color: #b9a569;
 }
 .footer figure {
   margin: 0;
@@ -3906,6 +3858,104 @@ body.admin-bar .search-overlay {
 .error-404 a {
   color: #1d1c1d;
   text-decoration: underline;
+}
+
+.careers {
+  font-family: "Inter", sans-serif;
+}
+.careers__hero__headline {
+  color: #f2f1ed;
+  text-align: center;
+  font-size: 128px;
+  font-weight: 700;
+  line-height: 100%; /* 128px */
+  letter-spacing: -6.4px;
+}
+.careers__headline {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 100%; /* 72px */
+  letter-spacing: -3.6px;
+  padding-bottom: 32px;
+}
+.careers__headline--white {
+  color: #ffffff;
+}
+.careers__copy {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+}
+.careers__list {
+  color: #ffffff;
+  list-style: initial;
+  margin-left: 15px;
+}
+.careers__list--black {
+  color: #1d1c1d;
+}
+.careers__list li {
+  padding-bottom: 10px;
+}
+
+.accordion-careers {
+  width: 100%;
+  overflow: hidden;
+  color: #ffffff;
+  border-top: 2px solid #ffffff;
+}
+.accordion-careers:last-child {
+  border-bottom: 2px solid #ffffff;
+}
+.accordion-careers__title {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.accordion-careers__wrapper {
+  position: relative;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.accordion-careers__wrapper .arrow-down {
+  position: absolute;
+  top: 15px;
+  right: 4px;
+  max-width: 15px;
+}
+.accordion-careers__wrapper .arrow-down::after {
+  position: absolute;
+  top: -2px;
+}
+.accordion-careers__intro {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 140%; /* 28px */
+  letter-spacing: -0.6px;
+}
+@media (max-width: 1023px) {
+  .accordion-careers__intro--hide {
+    display: none;
+  }
+}
+.accordion-careers__content {
+  max-height: 0;
+  overflow: hidden;
+  will-change: max-height;
+  transition: all 0.25s ease-out;
+  color: #ffffff;
+  opacity: 0;
+  font-size: 0.9rem;
+  line-height: 22px;
+}
+.accordion-careers__active .accordion-careers__content {
+  margin-bottom: 15px;
+  opacity: 1;
+}
+.accordion-careers__active .plus {
+  transition: all 250ms;
+  transform: rotate(180deg);
 }
 
 /*# sourceMappingURL=style-index.css.map*/

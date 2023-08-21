@@ -74,11 +74,6 @@
     letter-spacing: -3.6px;
     color: $orange;
     text-align: center;
-
-    &__line {
-      border-bottom: 1px solid $senary;
-      padding-bottom: 16px;
-    }
   }
 
   &__copy {
@@ -104,7 +99,7 @@
 
     &--number {
       font-size: 3rem;
-      color: $tertiary;
+      color: $white;
       // font-weight: 600;
       border-right: 1px solid rgba(128, 131, 102, 0.3);
     }

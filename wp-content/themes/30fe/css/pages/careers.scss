@@ -1,0 +1,123 @@
+.careers {
+  font-family: 'Inter', sans-serif;
+
+  &__hero {
+    &__headline {
+      color: $whitesmoke;
+      text-align: center;
+      font-size: 128px;
+      font-weight: 700;
+      line-height: 100%; /* 128px */
+      letter-spacing: -6.4px;
+    }
+  }
+
+  &__headline {
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 100%; /* 72px */
+    letter-spacing: -3.6px;
+    padding-bottom: 32px;
+
+    &--white {
+      color: $white;
+    }
+  }
+
+  &__copy {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+  }
+
+  &__list {
+    color: $white;
+    list-style: initial;
+    margin-left: 15px;
+
+    &--black {
+      color: $black;
+    }
+
+    & li {
+      padding-bottom: 10px;
+    }
+  }
+}
+
+.accordion-careers {
+  width: 100%;
+  // max-width: 800px;
+  overflow: hidden;
+  color: $white;
+  border-top: 2px solid $white;
+
+  &:last-child {
+    border-bottom: 2px solid $white;
+  }
+
+  &__title {
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+
+  &__wrapper {
+    position: relative;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .arrow-down {
+      position: absolute;
+      top: 15px;
+      right: 4px;
+      max-width: 15px;
+
+      &::after {
+        position: absolute;
+        top: -2px;
+      }
+    }
+  }
+
+  &__intro {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 140%; /* 28px */
+    letter-spacing: -0.6px;
+
+    &--hide {
+      @include bp(tablet) {
+        display: none;
+      }
+    }
+  }
+
+  &__content {
+    // padding: 0 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    will-change: max-height;
+    transition: all 0.25s ease-out;
+    color: $white;
+    opacity: 0;
+    font-size: 0.9rem;
+    line-height: 22px;
+  }
+
+  &__active {
+    .accordion-careers__intro {
+    }
+
+    .accordion-careers__content {
+      margin-bottom: 15px;
+      opacity: 1;
+    }
+
+    .plus {
+      transition: all 250ms;
+      transform: rotate(180deg);
+    }
+  }
+}

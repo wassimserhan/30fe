@@ -3,8 +3,8 @@
   // height: max-content;
   height: 80vh; /* <--- This is what you need */
 
-  @include bp(phone) {
-    display: none;
+  @include bp(tablet) {
+    // display: none;
   }
 
   &--horizontal {

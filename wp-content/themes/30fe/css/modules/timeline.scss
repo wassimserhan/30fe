@@ -1,7 +1,6 @@
-.about__timeline2 {
+.about__timeline {
   background-color: $black;
   padding: 64px 0 160px;
-
   &__headline {
     color: $white;
     font-size: 72px;
@@ -9,6 +8,26 @@
     line-height: 100%; /* 72px */
     letter-spacing: -3.6px;
     text-align: center;
+  }
+
+  &__year {
+    min-height: 200px;
+    background-color: $taupe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & h4 {
+      font-size: 72px;
+      font-weight: 700;
+      line-height: 100%; /* 72px */
+      letter-spacing: -3.6px;
+    }
+  }
+
+  &__copy {
+    padding-top: 64px;
+    color: $white;
   }
 }
 

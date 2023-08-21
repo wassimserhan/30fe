@@ -4,15 +4,19 @@
   &__image {
     display: none;
     width: 100%;
+
+    &--active {
+      display: block;
+    }
   }
 
   &__locations {
     display: flex;
     gap: 32px;
-    background-color: $monochromeBlack;
+    background-color: $black;
     padding: 64px 128px;
 
-    @include bp(phone) {
+    @include bp(tablet) {
       flex-direction: column;
     }
   }
@@ -27,6 +31,7 @@
       letter-spacing: -1.6px;
       color: $white;
       padding-bottom: 24px;
+      cursor: pointer;
 
       & h2:nth-of-type(0) {
         color: $green;
@@ -43,14 +48,14 @@
 
   &__information {
     display: flex;
-    @include bp(phone) {
+    @include bp(tablet) {
       flex-direction: column;
     }
   }
 
   &__form {
     width: 50%;
-    @include bp(phone) {
+    @include bp(tablet) {
       width: 100%;
     }
 
@@ -65,7 +70,7 @@
 
   &__details {
     width: 50%;
-    @include bp(phone) {
+    @include bp(tablet) {
       width: 100%;
     }
 
@@ -91,28 +96,9 @@
       }
 
       & a {
-        color: $monochromeBlack;
+        color: $black;
+        text-decoration: underline;
       }
     }
   }
-}
-
-#toronto {
-  display: block;
-}
-
-#vancouver {
-  display: none;
-}
-
-#ottawa {
-  display: none;
-}
-
-#calgary {
-  display: none;
-}
-
-.show-map {
-  display: none;
 }

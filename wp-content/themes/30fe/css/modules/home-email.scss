@@ -28,7 +28,7 @@
   }
 
   & input {
-    border: 1px solid $monochromeBlack;
+    border: 1px solid $black;
     border-radius: 0;
     background-color: transparent;
     height: 50px;
@@ -44,24 +44,24 @@
     font-weight: 400;
     line-height: 150%;
     text-transform: uppercase;
-    color: $monochromeBlack;
+    color: $black;
   }
 
   & a {
-    color: $monochromeBlack;
+    color: $black;
     text-decoration: underline;
   }
 
   &__submit {
     font-size: 0.8em;
     text-transform: uppercase;
-    background-color: $monochromeBlack;
+    background-color: $black;
     border-radius: 0;
     padding: 0 32px;
     color: $whitesmoke;
     height: 50px;
     line-height: 50px;
-    border: 1px solid $monochromeBlack;
+    border: 1px solid $black;
     display: inline;
     margin-top: 32px;
   }

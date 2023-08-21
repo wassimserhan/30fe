@@ -54,7 +54,7 @@
       line-height: 150%;
       text-transform: uppercase;
       &::placeholder {
-        color: $monochromeBlack;
+        color: $black;
         &::after {
           content: ' *';
           color: red;
@@ -63,8 +63,8 @@
 
       &[type='submit'] {
         font-size: 0.8em;
-        background-color: $monochromeBlack;
-        border: 1px solid $monochromeBlack;
+        background-color: $black;
+        border: 1px solid $black;
         color: $white;
         padding: 16px 32px;
         text-transform: uppercase;
@@ -136,14 +136,14 @@
   height: initial;
 
   ::placeholder {
-    color: $monochromeBlack;
+    color: $black;
   }
 }
 
 .frm_style_formidable-style.with_frm_style .frm_submit button {
   font-size: 0.8em;
-  background-color: $monochromeBlack;
-  border: 1px solid $monochromeBlack;
+  background-color: $black;
+  border: 1px solid $black;
   color: $white;
   padding: 16px 32px;
   text-transform: uppercase;

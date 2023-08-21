@@ -3781,28 +3781,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _splidejs_splide_css_sea_green__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @splidejs/splide/css/sea-green */ "./node_modules/@splidejs/splide/dist/css/themes/splide-sea-green.min.css");
 /* harmony import */ var _splidejs_splide_css_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @splidejs/splide/css/core */ "./node_modules/@splidejs/splide/dist/css/splide-core.min.css");
 /* harmony import */ var _splidejs_splide__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @splidejs/splide */ "./node_modules/@splidejs/splide/dist/js/splide.esm.js");
-/* harmony import */ var _modules_expertise__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/expertise */ "./src/modules/expertise.js");
-/* harmony import */ var _modules_expertise__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_modules_expertise__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _modules_timeline__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/timeline */ "./src/modules/timeline.js");
-/* harmony import */ var _modules_contact__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/contact */ "./src/modules/contact.js");
-/* harmony import */ var _modules_contact__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_modules_contact__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _modules_teamSearch__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/teamSearch */ "./src/modules/teamSearch.js");
-/* harmony import */ var _modules_teamSearch__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_modules_teamSearch__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _modules_teamImages__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/teamImages */ "./src/modules/teamImages.js");
-/* harmony import */ var _modules_teamImages__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_modules_teamImages__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _modules_blogSearch__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/blogSearch */ "./src/modules/blogSearch.js");
-/* harmony import */ var _modules_blogSearch__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_modules_blogSearch__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _modules_homeStatsMobile__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/homeStatsMobile */ "./src/modules/homeStatsMobile.js");
-/* harmony import */ var _modules_homeStatsMobile__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_modules_homeStatsMobile__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var _modules_homeStats__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modules/homeStats */ "./src/modules/homeStats.js");
-/* harmony import */ var _modules_homeStats__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_modules_homeStats__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./modules/accordion */ "./src/modules/accordion.js");
-/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_modules_accordion__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var _modules_navColors__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./modules/navColors */ "./src/modules/navColors.js");
-/* harmony import */ var _modules_navColors__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_modules_navColors__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var _modules_navbar__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./modules/navbar */ "./src/modules/navbar.js");
-/* harmony import */ var _modules_navbar__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_modules_navbar__WEBPACK_IMPORTED_MODULE_16__);
-/* harmony import */ var _modules_search__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./modules/search */ "./src/modules/search.js");
+/* harmony import */ var _modules_careers__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/careers */ "./src/modules/careers.js");
+/* harmony import */ var _modules_careers__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_modules_careers__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _modules_expertise__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/expertise */ "./src/modules/expertise.js");
+/* harmony import */ var _modules_expertise__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_modules_expertise__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _modules_timeline__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/timeline */ "./src/modules/timeline.js");
+/* harmony import */ var _modules_contact__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/contact */ "./src/modules/contact.js");
+/* harmony import */ var _modules_teamSearch__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/teamSearch */ "./src/modules/teamSearch.js");
+/* harmony import */ var _modules_teamSearch__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_modules_teamSearch__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _modules_teamImages__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/teamImages */ "./src/modules/teamImages.js");
+/* harmony import */ var _modules_teamImages__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_modules_teamImages__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _modules_blogSearch__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/blogSearch */ "./src/modules/blogSearch.js");
+/* harmony import */ var _modules_blogSearch__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_modules_blogSearch__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _modules_homeStatsMobile__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modules/homeStatsMobile */ "./src/modules/homeStatsMobile.js");
+/* harmony import */ var _modules_homeStatsMobile__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_modules_homeStatsMobile__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var _modules_homeStats__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./modules/homeStats */ "./src/modules/homeStats.js");
+/* harmony import */ var _modules_homeStats__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_modules_homeStats__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./modules/accordion */ "./src/modules/accordion.js");
+/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_modules_accordion__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var _modules_navColors__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./modules/navColors */ "./src/modules/navColors.js");
+/* harmony import */ var _modules_navColors__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_modules_navColors__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var _modules_navbar__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./modules/navbar */ "./src/modules/navbar.js");
+/* harmony import */ var _modules_navbar__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_modules_navbar__WEBPACK_IMPORTED_MODULE_17__);
+/* harmony import */ var _modules_search__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./modules/search */ "./src/modules/search.js");
 
 
 //splide modules
@@ -3846,23 +3847,9 @@ if (slider2) {
     autoplay: true
   }).mount();
 }
-const slider3 = document.getElementById('slider3');
-if (slider3) {
-  new _splidejs_splide__WEBPACK_IMPORTED_MODULE_5__["default"]('#slider3', {
-    classes: {
-      arrows: 'splide__arrows splide-timeline__arrows',
-      arrow: 'splide__arrow splide-timeline__arrow',
-      prev: 'splide__arrow--prev splide-timeline__arrow--prev',
-      next: 'splide__arrow--next splide-timeline__arrow--next'
-    },
-    type: 'loop',
-    perPage: 1,
-    pagination: false,
-    autoplay: true
-  }).mount();
-}
 
 // modules
+
 
 
 
@@ -3881,7 +3868,7 @@ if (slider3) {
 
 // classes
 
-const magicalSearch = new _modules_search__WEBPACK_IMPORTED_MODULE_17__["default"]();
+const magicalSearch = new _modules_search__WEBPACK_IMPORTED_MODULE_18__["default"]();
 
 /***/ }),
 
@@ -4020,21 +4007,56 @@ function resetFilterText(className, text) {
 
 /***/ }),
 
+/***/ "./src/modules/careers.js":
+/*!********************************!*\
+  !*** ./src/modules/careers.js ***!
+  \********************************/
+/***/ (() => {
+
+const accordionscareers = document.querySelectorAll('.accordion-careers');
+const openAccordioncareers = accordion => {
+  const content = accordion.querySelector('.accordion-careers__content');
+  accordion.classList.add('accordion-careers__active');
+  content.style.maxHeight = content.scrollHeight + 5 + 'px';
+};
+const closeAccordioncareers = accordion => {
+  const content = accordion.querySelector('.accordion-careers__content');
+  accordion.classList.remove('accordion-careers__active');
+  content.style.maxHeight = null;
+  content.style.paddingTop = null;
+};
+accordionscareers.forEach(accordion => {
+  const intro = accordion.querySelector('.accordion-careers__wrapper');
+  const content = accordion.querySelector('.accordion-careers__content');
+  intro.onclick = () => {
+    if (content.style.maxHeight) {
+      closeAccordioncareers(accordion);
+    } else {
+      accordionscareers.forEach(accordion => closeAccordioncareers(accordion));
+      openAccordioncareers(accordion);
+    }
+  };
+});
+
+/***/ }),
+
 /***/ "./src/modules/contact.js":
 /*!********************************!*\
   !*** ./src/modules/contact.js ***!
   \********************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-function showMap(id) {
-  var element = document.getElementById(id);
-  var elements = document.getElementsByClassName("contact__image");
-  for (var i = 0; i < elements.length; i++) {
-    elements[i].classList.add['show-map'];
-  }
-  element.classList.add = 'block';
-}
-window.showMap = showMap;
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "jquery");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+jquery__WEBPACK_IMPORTED_MODULE_0___default()('.contact__location__city').click(function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('img[id^=city]').hide(); //hide all
+  var id = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('id'); //get the id of the clicked button
+  var end = id.slice(-2); //get last 2 character from id
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(`img[id$=${end}]`).show(); //match the div with id ends with the character and show
+});
 
 /***/ }),
 
@@ -4174,7 +4196,7 @@ window.onload = init();
 /***/ (() => {
 
 const $whitesmoke = '#f2f1ed';
-$monochromeBlack = '#1d1c1d';
+$black = '#1d1c1d';
 $taupe = '#cbbea5';
 $orange = '#ff6f48';
 $blue = '#0175df';
@@ -4250,7 +4272,6 @@ const logoWhite = document.querySelector('.nav__logo__white');
 function dropdownMenu() {
   if (dropdown.style.display === 'grid') {
     dropdown.style.display = 'none';
-    hamburger.classList.remove('is-active');
     nav.classList.remove("dark-bg");
     hamburger.classList.remove("nav__menu-reverse");
     document.body.classList.remove('no-scroll');
@@ -4258,7 +4279,6 @@ function dropdownMenu() {
     logoWhite.style.display = "none";
   } else {
     dropdown.style.display = 'grid';
-    hamburger.classList.add('is-active');
     nav.classList.add("dark-bg");
     hamburger.classList.add("nav__menu-reverse");
     document.body.classList.add('no-scroll');
@@ -4345,7 +4365,7 @@ class Search {
         <p class="pill__label pill__label-white">Team</p>
       </section>
            
-            ${results.team.length ? '<section class="search__results">' : '<h4 class="search__result__none">No results match that search.</h4>'}
+            ${results.team.length ? '<section class="search__results">' : `<p class="search__result__none"> No results match that search. <a href="${siteData.root_url}/team">View Team</a></p>`}
               ${results.team.map(item => `
                 <a class="search__result__link" href="${item.permalink}">
                   <section class="search__result">
@@ -4362,7 +4382,7 @@ class Search {
                <section class="pill search-overlay__pill pill-white">
         <p class="pill__label pill__label-white">Expertise</p>
       </section>
-              ${results.expertise.length ? '<section class="search__results">' : '<h4 class="search__result__none">No results match that search.</h4>'}
+              ${results.expertise.length ? '<section class="search__results">' : `<p class="search__result__none"> No results match that search. <a href="${siteData.root_url}/expertise">View Expertise</a></p>`}
               ${results.expertise.map(item => `
                 <a class="search__result__link" href="${item.permalink}">
                   <section class="search__result">
@@ -4378,7 +4398,7 @@ class Search {
                <section class="pill search-overlay__pill pill-white">
         <p class="pill__label pill__label-white">Sectors</p>
       </section>
-              ${results.industry.length ? '<section class="search__results">' : '<h4 class="search__result__none">No results match that search.</h4>'}
+              ${results.industry.length ? '<section class="search__results">' : `<p class="search__result__none"> No results match that search. <a href="${siteData.root_url}/sectors">View Sectors</a></p>`}
               ${results.industry.map(item => `
                 <a class="search__result__link" href="${item.permalink}">
                   <section class="search__result">
@@ -4392,10 +4412,10 @@ class Search {
               ${results.industry.length ? '</section>' : ''}  
           </div>
            <div class="one-third">
-              < <section class="pill search-overlay__pill pill-white">
+              <section class="pill search-overlay__pill pill-white">
         <p class="pill__label pill__label-white">Insights</p>
       </section>
-              ${results.post.length ? '<section class="search__results">' : '<h4 class="search__result__none">No results match that search.</h4>'}
+              ${results.post.length ? '<section class="search__results">' : `<p class="search__result__none"> No results match that search. <a href="${siteData.root_url}/insights">View Insights</a></p>`}
               ${results.post.map(item => `
                 <a class="search__result__link" href="${item.permalink}">
                   <section class="search__result">

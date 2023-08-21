@@ -1,14 +1,8 @@
-function showMap(id) {
-  var element = document.getElementById(id);
-  var elements = document.getElementsByClassName("contact__image");
+import $ from 'jquery';
 
-  for (var i = 0; i < elements.length; i++) {
-    elements[i].classList.add['show-map'];
-  }
-
-  element.classList.add = 'block';
-
-
-}
-
-window.showMap = showMap
+$('.contact__location__city').click(function () {
+  $('img[id^=city]').hide(); //hide all
+  var id = $(this).attr('id'); //get the id of the clicked button
+  var end = id.slice(-2);      //get last 2 character from id
+  $(`img[id$=${end}]`).show(); //match the div with id ends with the character and show
+});

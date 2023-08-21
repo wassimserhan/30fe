@@ -23,8 +23,8 @@ button {
   border: none;
   cursor: pointer;
   transition: all 0.3s ease 0s;
-  background-color: $monochromeBlack;
-  border: 1px solid $monochromeBlack;
+  background-color: $black;
+  border: 1px solid $black;
   color: $white;
   padding: 8px 16px;
   text-transform: uppercase;
@@ -68,7 +68,7 @@ button {
 }
 
 .dark-bg {
-  background-color: $monochromeBlack !important;
+  background-color: $black !important;
 }
 
 .black-bg {
@@ -135,4 +135,12 @@ img:not([src]) {
 
 .hidden {
   display: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid $taupe;
+  margin: 40px auto;
 }

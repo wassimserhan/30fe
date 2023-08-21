@@ -27,7 +27,7 @@
     min-width: 264px;
     background-color: transparent;
     border: none;
-    color: $monochromeBlack;
+    color: $black;
     min-height: 100px;
     font-size: 1rem;
     font-weight: 700;
@@ -67,7 +67,7 @@
 
     .plus {
       display: none;
-      @include bp(phone) {
+      @include bp(tablet) {
         display: block;
         position: absolute;
         right: 4px;
@@ -90,7 +90,7 @@
     line-height: 22px;
     font-family: 'Retina Light', sans-serif;
 
-    @include bp(phone) {
+    @include bp(tablet) {
       max-height: 0;
       opacity: 0;
     }

@@ -2,10 +2,6 @@
   font-family: 'Inter', sans-serif;
   flex-shrink: 0;
 
-  a:hover {
-    color: $secondary;
-  }
-
   & figure {
     margin: 0;
   }
@@ -48,10 +44,6 @@
     color: $black;
     font-size: 1em;
   }
-
-  // &__link:hover {
-  //   color: $secondary;
-  // }
 
   &__legal {
     text-align: center;
