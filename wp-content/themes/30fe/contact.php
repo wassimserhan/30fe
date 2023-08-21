@@ -7,35 +7,76 @@ get_header();
 <main class="main-container">
   <section class="contact">
     <section class="contact__hero">
-      <figure class="contact__image">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/map.jpg" alt="">
-      </figure>
+      <img id="toronto" class="contact__image" src="<?php echo get_template_directory_uri(); ?>/images/maps/toronto.jpg"
+        alt="Map of Toronto">
+      <img id="vancouver" class="contact__image"
+        src="<?php echo get_template_directory_uri(); ?>/images/maps/vancouver.jpg" alt="Map of Toronto">
+      <img id="ottawa" classs="contact__image" src="<?php echo get_template_directory_uri(); ?>/images/maps/ottawa.jpg"
+        alt="Map of Toronto">
+      <img id="calgary" class="contact__image" src="<?php echo get_template_directory_uri(); ?>/images/maps/calgary.jpg"
+        alt="Map of Toronto">
+
     </section>
-    <section class="contact__locations max-padding">
+    <section class="contact__locations">
       <article class="contact__location">
-        <h2>Toronto</h2>
-        <p>40 University Avenue, Suite 902Toronto, ON M5J 1T1Office (416) 368-1700Emergency Services Line 1 (800)
-          564-5313</p>
+
+        <h2 onclick="showMap('toronto');" style="color:#ff6f48">Toronto</h2>
+        <a
+          href="https://www.google.com/maps/place/40+University+Ave+%23800,+Toronto,+ON+M5J,+Canada/@43.6460292,-79.3865919,17z/data=!3m1!4b1!4m5!3m4!1s0x882b34d3be43bda7:0x50f557a7fc8959ad!8m2!3d43.6460292!4d-79.3843979?shorturl=1">
+          <p>40 University Avenue, Suite 902<br>
+            Toronto, ON M5J 1T1Office (416) 368-1700Emergency Services Line 1 (800)
+            564-5313</p>
+        </a>
       </article>
       <article class="contact__location">
-        <h2>Toronto</h2>
-        <p>40 University Avenue, Suite 902Toronto, ON M5J 1T1Office (416) 368-1700Emergency Services Line 1 (800)
-          564-5313</p>
+
+        <h2 onclick="showMap('vancouver');" style="color:#08cb80 ">Vancouver</h2>
+        <a
+          href="https://www.google.com/maps/place/555+Burrard+St,+Vancouver,+BC+V7X+1M8/@49.2863716,-123.1212611,17z/data=!3m1!4b1!4m5!3m4!1s0x548671822d969bd9:0x3899cbe47e0fa337!8m2!3d49.2863681!4d-123.1190724?shorturl=1">
+          <p>555 Burrard Street,15th Floor, Suite 110<br>
+            Vancouver, BC V7X 1M8Office (604) 674-1100</p>
+        </a>
       </article>
       <article class="contact__location">
-        <h2>Toronto</h2>
-        <p>40 University Avenue, Suite 902Toronto, ON M5J 1T1Office (416) 368-1700Emergency Services Line 1 (800)
-          564-5313</p>
+
+        <h2 onclick="showMap('ottawa');" style="color: #0175df">Ottawa</h2>
+        <a
+          href="https://www.google.com/maps/place/280+Albert+St,+Ottawa,+ON+K1P+5G8/@45.4192483,-75.7038062,17z/data=!3m1!4b1!4m5!3m4!1s0x4cce05532ae00d19:0xd5ce26367f8c0b5a!8m2!3d45.4192446!4d-75.7016175">
+          <p>280 Albert Street, Suite 206<br>
+            Ottawa, ON K1P 5G8Office (613) 903-6900
+          </p>
+        </a>
       </article>
       <article class="contact__location">
-        <h2>Toronto</h2>
-        <p>40 University Avenue, Suite 902Toronto, ON M5J 1T1Office (416) 368-1700Emergency Services Line 1 (800)
-          564-5313</p>
+
+        <h2 onclick="showMap('calgary');" style="color: #cbbea5">Calgary</h2>
+        <a
+          href="https://www.google.com/maps/place/700+2+St+SW,+Calgary,+AB+T2P+2W3/@51.0463194,-114.0695824,17z/data=!3m1!4b1!4m5!3m4!1s0x53716ffcfa05cc9b:0x521d670e6bbed796!8m2!3d51.046316!4d-114.0673937">
+          <p>30 Forensic Engineering c/o WeWorkFloor 19700 2nd Street SW<br>
+            Calgary, AB T2P 2W2Office (403) 208-4545</p>
+        </a>
       </article>
+    </section>
+    <section class="contact__information">
+      <section class="contact__form whitesmoke-bg max-padding">
+        <h3>Submit an assignment</h3>
+        <?php echo FrmFormsController::get_form_shortcode( array( 'id' => 1 ) ); ?>
+      </section>
+      <section class="contact__details taupe-bg  max-padding">
+        <h3>More ways to reach us</h3>
+        <ul class="contact__detail">
+          <li> <i class="fa fa-phone" aria-hidden="true"></i> <a href="tel:1-800-564-5313">1 (800) 564-5313</a></li>
+          <li><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:info@30fe.com">info@30fe.com</a></li>
+          <li><i class="fa fa-twitter" aria-hidden="true"></i> <a
+              href="https://twitter.com/30Forensics">@30Forensics</a></li>
+          <li> <i class="fa fa-linkedin" aria-hidden="true"></i> <a
+              href="https://ca.linkedin.com/company/-30-forensic-engineering">-30- Forensic Engineering</a></li>
+        </ul>
+      </section>
     </section>
 
   </section>
-  <h1 style="text-align: center">This is the Contact Page</h1>
+
 </main>
 
 

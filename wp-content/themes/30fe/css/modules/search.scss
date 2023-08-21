@@ -15,9 +15,9 @@
   box-sizing: border-box;
   padding: 60px 128px;
 
-  // p {
-  //   padding-top: 15px;
-  // }
+  @include bp(phone) {
+    padding: 20px;
+  }
 
   .event-summary p {
     padding-top: 0;
@@ -53,13 +53,10 @@
     transform: scale(1);
   }
 
-  &__section-title {
+  &__pill {
     margin: 30px 0 1px 0;
     font-weight: 400;
-    color: $blue;
     font-size: 2rem;
-    padding: 15px 0;
-    border-bottom: 1px solid #ccc;
   }
 
   &__close {
@@ -90,7 +87,7 @@
   &__result {
     display: flex;
     gap: 32px;
-    border: 1px solid $whiteSmoke;
+    border: 1px solid $whitesmoke;
     border-radius: 10px;
     place-items: center;
     margin: 32px 0;
@@ -101,7 +98,7 @@
   }
 
   &__result img {
-    max-width: 200px;
+    max-width: 150px;
     border-top-left-radius: 7px;
     border-bottom-left-radius: 10px;
   }
@@ -227,8 +224,15 @@
 .row {
   display: flex;
   gap: 20px;
+
+  @include bp(phone) {
+    flex-direction: column;
+  }
 }
 
 .one-third {
   width: 33.33%;
+  @include bp(phone) {
+    width: 100%;
+  }
 }

@@ -53,6 +53,15 @@
     &__wrapper {
       display: flex;
       gap: 70px;
+      @include bp(phone) {
+        flex-direction: column;
+      }
+    }
+
+    &__bullets {
+      @include bp(phone) {
+        padding: 0px 30px;
+      }
     }
 
     & article {
@@ -163,12 +172,19 @@
       display: flex;
       color: #000000;
       justify-content: space-evenly;
+      @include bp(phone) {
+        flex-direction: column;
+      }
     }
 
     &__image {
       margin: 0;
       width: 50%;
       position: relative;
+
+      @include bp(phone) {
+        width: 100%;
+      }
 
       & img {
         width: 100%;
@@ -180,6 +196,9 @@
       width: 50%;
       margin: 0 auto;
       padding: 60px;
+      @include bp(phone) {
+        width: 100%;
+      }
     }
 
     &__detail--left {

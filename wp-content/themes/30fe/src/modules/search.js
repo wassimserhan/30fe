@@ -55,7 +55,10 @@ class Search {
       this.resultsDiv.html(`
         <div class="row">
           <div class="one-third">
-            <h2 class="search-overlay__section-title">Team</h2>
+          <section class="pill search-overlay__pill pill-white">
+        <p class="pill__label pill__label-white">Team</p>
+      </section>
+           
             ${results.team.length ? '<section class="search__results">' : '<h4 class="search__result__none">No results match that search.</h4>'}
               ${results.team.map(item => `
                 <a class="search__result__link" href="${item.permalink}">
@@ -70,7 +73,9 @@ class Search {
               ${results.team.length ? '</section>' : ''}  
           </div>
            <div class="one-third">
-              <h2 class="search-overlay__section-title">Expertise</h2>
+               <section class="pill search-overlay__pill pill-white">
+        <p class="pill__label pill__label-white">Expertise</p>
+      </section>
               ${results.expertise.length ? '<section class="search__results">' : '<h4 class="search__result__none">No results match that search.</h4>'}
               ${results.expertise.map(item => `
                 <a class="search__result__link" href="${item.permalink}">
@@ -84,7 +89,9 @@ class Search {
                 </a>`).join('')}
               ${results.expertise.length ? '</section>' : ''}  
 
-               <h2 class="search-overlay__section-title">Sectors</h2>
+               <section class="pill search-overlay__pill pill-white">
+        <p class="pill__label pill__label-white">Sectors</p>
+      </section>
               ${results.industry.length ? '<section class="search__results">' : '<h4 class="search__result__none">No results match that search.</h4>'}
               ${results.industry.map(item => `
                 <a class="search__result__link" href="${item.permalink}">
@@ -99,7 +106,9 @@ class Search {
               ${results.industry.length ? '</section>' : ''}  
           </div>
            <div class="one-third">
-              <h2 class="search-overlay__section-title">Insights</h2>
+              < <section class="pill search-overlay__pill pill-white">
+        <p class="pill__label pill__label-white">Insights</p>
+      </section>
               ${results.post.length ? '<section class="search__results">' : '<h4 class="search__result__none">No results match that search.</h4>'}
               ${results.post.map(item => `
                 <a class="search__result__link" href="${item.permalink}">

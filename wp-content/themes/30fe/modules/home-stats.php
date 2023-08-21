@@ -34,3 +34,35 @@
     </div>
   </section>
 </section>
+
+
+
+
+<section class="mobile-stats whitesmoke-bg">
+  <section id="statsBaMobile" class="mobile-stats__wrapper">
+    <section id="statsBox-1" class="mobile-stats__box orange-bg">
+      <section class="mobile-stat__item">
+        <h2>25,000+</h2>
+        <p>Cases Investigated</p>
+      </section>
+    </section>
+    <section id="statsBox-2" class="mobile-stats__box mobile-stats__box__left green-bg">
+      <section class="mobile-stats__item">
+        <h2>25,000+</h2>
+        <p>Cases Investigated</p>
+      </section>
+    </section>
+    <section id="statsBox-3" class="mobile-stats__box blue-bg">
+      <section class="mobile-stats__item">
+        <h2>25,000+</h2>
+        <p>Cases Investigated</p>
+      </section>
+    </section>
+    <section id="statsBox-4" class="mobile-stats__box taupe-bg">
+      <section class="mobile-stats__item">
+        <h2>25,000+</h2>
+        <p>Cases Investigated</p>
+      </section>
+    </section>
+  </section>
+</section>

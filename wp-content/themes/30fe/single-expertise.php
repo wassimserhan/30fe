@@ -26,7 +26,7 @@ get_header();
 
 
     <section class="max-width">
-      <article class="industry__categories dark-bg">
+      <article class="industry__categories">
         <!-- display industry categories -->
         <?php
           if( have_rows('column_list') ): 
@@ -91,7 +91,7 @@ get_header();
 
   <!-- Form -->
   <section class="expertise-form">
-    <section class="max-width">
+    <section class="max-width max-padding">
       <section class="expertise-form__wrapper">
         <section class="expertise-form__form">
           <h3 class="expertise-form__headline">For more information</h3>
@@ -177,7 +177,8 @@ get_header();
               width="100%">
           </figure>
           <article class="insights__card__label">
-            <aside class="insights__card__label__category">
+            <?php require get_theme_file_path('/includes/blog-colors.php');?>
+            <aside class="insights__card__label__category <?php echo $label_color; ?>">
               <p class="insights__card__label__category__text">
                 <?php echo get_the_category_list(', '); ?>
               </p>

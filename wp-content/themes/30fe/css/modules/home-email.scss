@@ -34,8 +34,8 @@
     height: 50px;
     line-height: 50px;
     padding: 0 10px;
-    margin: -5px;
-    min-width: 440px;
+    max-width: 440px;
+    width: 100%;
   }
 
   & input::placeholder {
@@ -58,11 +58,12 @@
     background-color: $monochromeBlack;
     border-radius: 0;
     padding: 0 32px;
-    color: $whiteSmoke;
+    color: $whitesmoke;
     height: 50px;
     line-height: 50px;
     border: 1px solid $monochromeBlack;
     display: inline;
+    margin-top: 32px;
   }
 
   &__disclaimer {

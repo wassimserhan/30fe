@@ -2,18 +2,117 @@
   font-family: 'Inter', sans-serif;
 
   &__image {
-    & img {
-      width: 100%;
-    }
+    display: none;
+    width: 100%;
   }
 
   &__locations {
     display: flex;
     gap: 32px;
+    background-color: $monochromeBlack;
+    padding: 64px 128px;
+
+    @include bp(phone) {
+      flex-direction: column;
+    }
   }
 
   &__location {
+    max-width: 250px;
     & h2 {
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 120%; /* 38.4px */
+      letter-spacing: -1.6px;
+      color: $white;
+      padding-bottom: 24px;
+
+      & h2:nth-of-type(0) {
+        color: $green;
+      }
+    }
+
+    & p {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 150%; /* 18px */
+      color: $white;
     }
   }
+
+  &__information {
+    display: flex;
+    @include bp(phone) {
+      flex-direction: column;
+    }
+  }
+
+  &__form {
+    width: 50%;
+    @include bp(phone) {
+      width: 100%;
+    }
+
+    & h3 {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 100%; /* 48px */
+      letter-spacing: -2.4px;
+      padding-bottom: 64px;
+    }
+  }
+
+  &__details {
+    width: 50%;
+    @include bp(phone) {
+      width: 100%;
+    }
+
+    & h3 {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 100%; /* 48px */
+      letter-spacing: -2.4px;
+      padding-bottom: 64px;
+    }
+  }
+
+  &__detail {
+    & li {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 140%; /* 28px */
+      letter-spacing: -0.6px;
+      padding-bottom: 32px;
+
+      & i {
+        padding: 0 32px 0;
+      }
+
+      & a {
+        color: $monochromeBlack;
+      }
+    }
+  }
+}
+
+#toronto {
+  display: block;
+}
+
+#vancouver {
+  display: none;
+}
+
+#ottawa {
+  display: none;
+}
+
+#calgary {
+  display: none;
+}
+
+.show-map {
+  display: none;
 }

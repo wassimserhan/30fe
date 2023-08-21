@@ -9,6 +9,10 @@ $breakpoints: (
     max-width: 375px
   ),
 
+  tablet: (
+    max-width: 1023px
+  ),
+
   laptop: (
     max-width: 1366px
   ),
@@ -26,9 +30,7 @@ $breakpoints: (
   custom_screen: (
     max-width: 936px
   ),
-  tablet: (
-    max-width: 1023px
-  ),
+
   ipad_pro: (
     max-width: 1025px
   ),

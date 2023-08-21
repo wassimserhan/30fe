@@ -3781,21 +3781,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _splidejs_splide_css_sea_green__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @splidejs/splide/css/sea-green */ "./node_modules/@splidejs/splide/dist/css/themes/splide-sea-green.min.css");
 /* harmony import */ var _splidejs_splide_css_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @splidejs/splide/css/core */ "./node_modules/@splidejs/splide/dist/css/splide-core.min.css");
 /* harmony import */ var _splidejs_splide__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @splidejs/splide */ "./node_modules/@splidejs/splide/dist/js/splide.esm.js");
-/* harmony import */ var _modules_teamSearch__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/teamSearch */ "./src/modules/teamSearch.js");
-/* harmony import */ var _modules_teamSearch__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_modules_teamSearch__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _modules_teamImages__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/teamImages */ "./src/modules/teamImages.js");
-/* harmony import */ var _modules_teamImages__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_modules_teamImages__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _modules_blogSearch__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/blogSearch */ "./src/modules/blogSearch.js");
-/* harmony import */ var _modules_blogSearch__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_modules_blogSearch__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _modules_homeStats__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/homeStats */ "./src/modules/homeStats.js");
-/* harmony import */ var _modules_homeStats__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_modules_homeStats__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/accordion */ "./src/modules/accordion.js");
-/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_modules_accordion__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _modules_navColors__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/navColors */ "./src/modules/navColors.js");
-/* harmony import */ var _modules_navColors__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_modules_navColors__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _modules_navbar__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/navbar */ "./src/modules/navbar.js");
-/* harmony import */ var _modules_navbar__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_modules_navbar__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var _modules_search__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modules/search */ "./src/modules/search.js");
+/* harmony import */ var _modules_expertise__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/expertise */ "./src/modules/expertise.js");
+/* harmony import */ var _modules_expertise__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_modules_expertise__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _modules_timeline__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/timeline */ "./src/modules/timeline.js");
+/* harmony import */ var _modules_contact__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/contact */ "./src/modules/contact.js");
+/* harmony import */ var _modules_contact__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_modules_contact__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _modules_teamSearch__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/teamSearch */ "./src/modules/teamSearch.js");
+/* harmony import */ var _modules_teamSearch__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_modules_teamSearch__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _modules_teamImages__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/teamImages */ "./src/modules/teamImages.js");
+/* harmony import */ var _modules_teamImages__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_modules_teamImages__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _modules_blogSearch__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/blogSearch */ "./src/modules/blogSearch.js");
+/* harmony import */ var _modules_blogSearch__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_modules_blogSearch__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _modules_homeStatsMobile__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/homeStatsMobile */ "./src/modules/homeStatsMobile.js");
+/* harmony import */ var _modules_homeStatsMobile__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_modules_homeStatsMobile__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _modules_homeStats__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modules/homeStats */ "./src/modules/homeStats.js");
+/* harmony import */ var _modules_homeStats__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_modules_homeStats__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./modules/accordion */ "./src/modules/accordion.js");
+/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_modules_accordion__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var _modules_navColors__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./modules/navColors */ "./src/modules/navColors.js");
+/* harmony import */ var _modules_navColors__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_modules_navColors__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var _modules_navbar__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./modules/navbar */ "./src/modules/navbar.js");
+/* harmony import */ var _modules_navbar__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_modules_navbar__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var _modules_search__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./modules/search */ "./src/modules/search.js");
 
 
 //splide modules
@@ -3839,8 +3846,27 @@ if (slider2) {
     autoplay: true
   }).mount();
 }
+const slider3 = document.getElementById('slider3');
+if (slider3) {
+  new _splidejs_splide__WEBPACK_IMPORTED_MODULE_5__["default"]('#slider3', {
+    classes: {
+      arrows: 'splide__arrows splide-timeline__arrows',
+      arrow: 'splide__arrow splide-timeline__arrow',
+      prev: 'splide__arrow--prev splide-timeline__arrow--prev',
+      next: 'splide__arrow--next splide-timeline__arrow--next'
+    },
+    type: 'loop',
+    perPage: 1,
+    pagination: false,
+    autoplay: true
+  }).mount();
+}
 
 // modules
+
+
+
+
 
 
 
@@ -3855,7 +3881,7 @@ if (slider2) {
 
 // classes
 
-const magicalSearch = new _modules_search__WEBPACK_IMPORTED_MODULE_13__["default"]();
+const magicalSearch = new _modules_search__WEBPACK_IMPORTED_MODULE_17__["default"]();
 
 /***/ }),
 
@@ -3994,6 +4020,57 @@ function resetFilterText(className, text) {
 
 /***/ }),
 
+/***/ "./src/modules/contact.js":
+/*!********************************!*\
+  !*** ./src/modules/contact.js ***!
+  \********************************/
+/***/ (() => {
+
+function showMap(id) {
+  var element = document.getElementById(id);
+  var elements = document.getElementsByClassName("contact__image");
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].classList.add['show-map'];
+  }
+  element.classList.add = 'block';
+}
+window.showMap = showMap;
+
+/***/ }),
+
+/***/ "./src/modules/expertise.js":
+/*!**********************************!*\
+  !*** ./src/modules/expertise.js ***!
+  \**********************************/
+/***/ (() => {
+
+const accordionsFaq = document.querySelectorAll('.accordion-faq');
+const openAccordionFaq = accordion => {
+  const content = accordion.querySelector('.accordion-faq__content');
+  accordion.classList.add('accordion-faq__active');
+  content.style.maxHeight = content.scrollHeight + 5 + 'px';
+};
+const closeAccordionFaq = accordion => {
+  const content = accordion.querySelector('.accordion-faq__content');
+  accordion.classList.remove('accordion-faq__active');
+  content.style.maxHeight = null;
+  content.style.paddingTop = null;
+};
+accordionsFaq.forEach(accordion => {
+  const intro = accordion.querySelector('.accordion-faq__wrapper');
+  const content = accordion.querySelector('.accordion-faq__content');
+  intro.onclick = () => {
+    if (content.style.maxHeight) {
+      closeAccordionFaq(accordion);
+    } else {
+      accordionsFaq.forEach(accordion => closeAccordionFaq(accordion));
+      openAccordionFaq(accordion);
+    }
+  };
+});
+
+/***/ }),
+
 /***/ "./src/modules/homeStats.js":
 /*!**********************************!*\
   !*** ./src/modules/homeStats.js ***!
@@ -4052,90 +4129,109 @@ window.onload = init();
 
 /***/ }),
 
+/***/ "./src/modules/homeStatsMobile.js":
+/*!****************************************!*\
+  !*** ./src/modules/homeStatsMobile.js ***!
+  \****************************************/
+/***/ (() => {
+
+init = function () {
+  const bar = document.getElementById('statsBaMobile');
+  if (bar) {
+    gsap.registerPlugin(ScrollTrigger);
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".mobile-stats__wrapper"
+      }
+    });
+    tl.to('#statsBox-1', {
+      x: 0,
+      duration: 1,
+      ease: "power2.out"
+    }, "-=.6").to('#statsBox-2', {
+      x: 30,
+      duration: 1,
+      ease: "power2.out"
+    }, "-=.6").to('#statsBox-3', {
+      x: 0,
+      duration: 1,
+      ease: "power2.out"
+    }, "-=.6").to('#statsBox-4', {
+      x: 20,
+      duration: 1,
+      ease: "power2.out"
+    }, "-=.6");
+  }
+};
+window.onload = init();
+
+/***/ }),
+
 /***/ "./src/modules/navColors.js":
 /*!**********************************!*\
   !*** ./src/modules/navColors.js ***!
   \**********************************/
 /***/ (() => {
 
+const $whitesmoke = '#f2f1ed';
+$monochromeBlack = '#1d1c1d';
+$taupe = '#cbbea5';
+$orange = '#ff6f48';
+$blue = '#0175df';
+$green = '#08cb80';
+$black = '#1d1c1d';
+$white = '#ffffff';
+let navData = document.querySelector('.nav');
+let pageTitle = navData.getAttribute('data-page');
+let navColors;
+switch (pageTitle) {
+  case 'Home':
+    // gsap.set(".nav", { backgroundColor: $black });
+    // gsap.set(".nav__items", { color: $white });
+    navColors = [$whitesmoke, $taupe, $whitesmoke, $whitesmoke, $whitesmoke, $whitesmoke, $taupe];
+    break;
+  case 'About':
+    // gsap.set(".nav", { backgroundColor: $black });
+    // gsap.set(".nav__items", { color: $white });
+    navColors = [$white, $whitesmoke, $whitesmoke, $taupe];
+    break;
+  case 'Team':
+    navColors = [$taupe];
+    break;
+  case 'Expertise':
+    // gsap.set(".nav", { backgroundColor: $green });
+    // gsap.set(".nav__items", { color: $white });
+    navColors = [$green, $whitesmoke, $taupe];
+    break;
+  case 'Sectors':
+    // gsap.set(".nav", { backgroundColor: $black });
+    // gsap.set(".nav__items", { color: $white });
+    navColors = [$black, $black, $taupe, $whitesmoke];
+    break;
+}
 
-// const $whiteSmoke = '#f2f1ed';
-// $monochromeBlack = '#1d1c1d';
-// $taupe = '#cbbea5';
-// $orange = '#ff6f48';
-// $black = '#000000';
-// $blue = '#0175df';
-// $green = '#08cb80';
-// $black = '#000000';
-// $white = '#ffffff';
+// const sectionColors = ["#00BFFF", "#FFA07A"]
 
-// let navData = document.querySelector('.nav');
-// let pageTitle = navData.getAttribute('data-page');
-// let navColors;
-// let itemColors;
+gsap.registerPlugin(ScrollTrigger);
 
-// switch (pageTitle) {
-//   case 'Home':
-//     navColors = [$whiteSmoke, $taupe, $whiteSmoke, $whiteSmoke, $whiteSmoke, $taupe];
-//     itemColors = $black;
-//     break;
-//   case 'Team':
-//     navColors = [$whiteSmoke, $taupe, $whiteSmoke, $whiteSmoke, $whiteSmoke, $taupe];
-//     itemColors = $black;
-//     break;
-//   case 'Expertise':
-//     gsap.set(".nav", { backgroundColor: $green });
-//     // gsap.set(".nav__items", { color: $white });
-//     navColors = [$green, $whiteSmoke, $whiteSmoke];
-//     itemColors = [$black, $black, $black];
-//     break;
-//   case 'Sectors':
-//     gsap.set(".nav", { backgroundColor: $black });
-//     gsap.set(".nav__items", { color: $white });
-//     navColors = [$black, $whiteSmoke, $whiteSmoke];
-//     itemColors = [$white, $black, $black];
-//     break;
-// }
+//apply sectionColors to each .fullscreen element
+// gsap.set(".fullscreen", { backgroundColor: gsap.utils.wrap(sectionColors) })
 
-// // const sectionColors = ["#00BFFF", "#FFA07A"]
-
-// gsap.registerPlugin(ScrollTrigger)
-
-// //apply sectionColors to each .fullscreen element
-// // gsap.set(".fullscreen", { backgroundColor: gsap.utils.wrap(sectionColors) })
-
-// const sections = gsap.utils.toArray(".fullscreen")
-
-// sections.forEach(function (section, index) {
-//   let tl = gsap.timeline();
-//   console.log(itemColors[index])
-//   ScrollTrigger.create({
-//     trigger: section,
-//     start: "top 78px",
-//     end: "bottom 78px",
-//     animation: tl.to(".nav", { backgroundColor: navColors[index], immediateRender: false })
-//       .to(".nav__items", { color: itemColors[index], immediateRender: false }, '<'),
-//     toggleActions: "restart none none reverse"
-
-//   })
-// })
-
-// //Nav Scroll
-
-// var prev = 0;
-// var nav = document.querySelector("header");
-
-// window.addEventListener("scroll", function () {
-//   var scrollTop = window.pageYOffset || 0;
-
-//   if (scrollTop > prev) {
-//     nav.classList.add("hidden");
-//   } else {
-//     nav.classList.remove("hidden");
-//   }
-
-//   prev = scrollTop;
-// });
+const sections = gsap.utils.toArray(".fullscreen");
+sections.forEach(function (section, index) {
+  let tl = gsap.timeline();
+  console.log(pageTitle);
+  ScrollTrigger.create({
+    trigger: section,
+    start: "top 78px",
+    end: "bottom 78px",
+    animation: tl.to(".nav", {
+      backgroundColor: navColors[index],
+      immediateRender: false
+    }),
+    toggleActions: "play none none reverse"
+  });
+});
 
 /***/ }),
 
@@ -4147,31 +4243,29 @@ window.onload = init();
 
 const hamburger = document.querySelector('.nav__menu');
 const nav = document.querySelector('.nav');
-const body = document.getElementsByTagName('body')[0];
 const navItems = document.querySelectorAll('.nav__items');
 const dropdown = document.querySelector('.nav__dropdown');
+const logoBlack = document.querySelector('.nav__logo__black');
+const logoWhite = document.querySelector('.nav__logo__white');
 function dropdownMenu() {
   if (dropdown.style.display === 'grid') {
     dropdown.style.display = 'none';
     hamburger.classList.remove('is-active');
     nav.classList.remove("dark-bg");
     hamburger.classList.remove("nav__menu-reverse");
+    document.body.classList.remove('no-scroll');
+    logoBlack.style.display = "block";
+    logoWhite.style.display = "none";
   } else {
     dropdown.style.display = 'grid';
     hamburger.classList.add('is-active');
     nav.classList.add("dark-bg");
     hamburger.classList.add("nav__menu-reverse");
+    document.body.classList.add('no-scroll');
+    logoBlack.style.display = "none";
+    logoWhite.style.display = "block";
   }
 }
-
-// jQuery(window).on('resize', function () {
-//   var win = jQuery(this); //this = window
-//   if (win.width() >= 1201) {
-//     dropdown.style.display = 'none';
-//     hamburger.classList.remove('is-active');
-//   }
-// });
-
 hamburger.addEventListener('click', dropdownMenu);
 navItems.forEach(item => {
   item.addEventListener('click', function () {
@@ -4179,8 +4273,10 @@ navItems.forEach(item => {
     hamburger.classList.remove('is-active');
     nav.classList.remove("dark-bg");
     hamburger.classList.remove("nav__menu-reverse");
+    document.body.classList.remove('no-scroll');
+    logoBlack.style.display = "block";
+    logoWhite.style.display = "none";
   });
-  body.classList.remove('fixed-postion');
 });
 
 /***/ }),
@@ -4245,7 +4341,10 @@ class Search {
       this.resultsDiv.html(`
         <div class="row">
           <div class="one-third">
-            <h2 class="search-overlay__section-title">Team</h2>
+          <section class="pill search-overlay__pill pill-white">
+        <p class="pill__label pill__label-white">Team</p>
+      </section>
+           
             ${results.team.length ? '<section class="search__results">' : '<h4 class="search__result__none">No results match that search.</h4>'}
               ${results.team.map(item => `
                 <a class="search__result__link" href="${item.permalink}">
@@ -4260,7 +4359,9 @@ class Search {
               ${results.team.length ? '</section>' : ''}  
           </div>
            <div class="one-third">
-              <h2 class="search-overlay__section-title">Expertise</h2>
+               <section class="pill search-overlay__pill pill-white">
+        <p class="pill__label pill__label-white">Expertise</p>
+      </section>
               ${results.expertise.length ? '<section class="search__results">' : '<h4 class="search__result__none">No results match that search.</h4>'}
               ${results.expertise.map(item => `
                 <a class="search__result__link" href="${item.permalink}">
@@ -4274,7 +4375,9 @@ class Search {
                 </a>`).join('')}
               ${results.expertise.length ? '</section>' : ''}  
 
-               <h2 class="search-overlay__section-title">Sectors</h2>
+               <section class="pill search-overlay__pill pill-white">
+        <p class="pill__label pill__label-white">Sectors</p>
+      </section>
               ${results.industry.length ? '<section class="search__results">' : '<h4 class="search__result__none">No results match that search.</h4>'}
               ${results.industry.map(item => `
                 <a class="search__result__link" href="${item.permalink}">
@@ -4289,7 +4392,9 @@ class Search {
               ${results.industry.length ? '</section>' : ''}  
           </div>
            <div class="one-third">
-              <h2 class="search-overlay__section-title">Insights</h2>
+              < <section class="pill search-overlay__pill pill-white">
+        <p class="pill__label pill__label-white">Insights</p>
+      </section>
               ${results.post.length ? '<section class="search__results">' : '<h4 class="search__result__none">No results match that search.</h4>'}
               ${results.post.map(item => `
                 <a class="search__result__link" href="${item.permalink}">
@@ -4513,6 +4618,288 @@ function resetFilterText(className, text) {
     elements[i].innerText = text;
     console.log(elements[i].innerText);
   }
+}
+
+/***/ }),
+
+/***/ "./src/modules/timeline.js":
+/*!*********************************!*\
+  !*** ./src/modules/timeline.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "jquery");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+const timelineCheck = document.getElementById('timeline');
+if (timelineCheck) {
+  var PRESTimeline = /** @class */function () {
+    function PRESTimeline(target, color) {
+      // this.__process_stylesheet(document.styleSheets[0]);
+      this.base = target;
+      this.color = color;
+      // console.log(this.color)
+      this.periodContainer = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.base).find('.periods-container');
+      this.cardContainer = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.base).find('.cards-container');
+      this.timelineNodeContainer = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.base).find('.timeline-container .timeline');
+      // this.activePeriod = $(this.base).find('.periods-container section.active')
+      this._parseData();
+      this._initialColor();
+      this._generateTimeline();
+      this._setStateClasses();
+      this._assignBtn();
+      this._adjustPeriodContainer();
+      this._adjustCardContainer();
+      // console.log(this.cardData)
+    }
+
+    PRESTimeline.prototype._parseData = function () {
+      var base = this.base;
+      var periods = jquery__WEBPACK_IMPORTED_MODULE_0___default()(base).find('.periods-container section');
+      for (var _i = 0, periods_1 = periods; _i < periods_1.length; _i++) {
+        var section = periods_1[_i];
+        section.period = jquery__WEBPACK_IMPORTED_MODULE_0___default()(section).attr('period');
+        section.index = jquery__WEBPACK_IMPORTED_MODULE_0___default()(section).index();
+      }
+      // console.log(periods)
+      this.periodData = periods;
+      var data = jquery__WEBPACK_IMPORTED_MODULE_0___default()(base).find('.cards-container section');
+      // console.log(data)
+      for (var _a = 0, data_1 = data; _a < data_1.length; _a++) {
+        var section = data_1[_a];
+        section.period = jquery__WEBPACK_IMPORTED_MODULE_0___default()(section).attr('period');
+        section.index = jquery__WEBPACK_IMPORTED_MODULE_0___default()(section).index();
+      }
+      // console.log(data)
+      this.cardData = data;
+      // #assign initial entry point (active items)
+      this.activePeriod = this.periodData[0];
+      this.activePeriodIndex = 0;
+      this.activeCard = this.cardData[0];
+      this.activeCardIndex = 0;
+    };
+    PRESTimeline.prototype._setStateClasses = function () {
+      // # periods
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.base).find('.periods-container section.active').removeClass('active');
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.base).find('.periods-container section.prev').removeClass('prev');
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.base).find('.periods-container section.next').removeClass('next');
+      // console.log("setclass: " + this.activePeriod.index)
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.activePeriod).addClass('active');
+      // console.log(this.activePeriod.index)
+      // this.activePeriodIndex = this.activePeriod.index
+      if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.activePeriod).prev().length != 0) {
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.activePeriod).prev().addClass('prev');
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.base).find('.periods-container .btn-back').removeClass('hide');
+      } else {
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.base).find('.periods-container .btn-back').addClass('hide');
+      }
+      if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.activePeriod).next().length != 0) {
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.activePeriod).next().addClass('next');
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.base).find('.periods-container .btn-next').removeClass('hide');
+      } else {
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.base).find('.periods-container .btn-next').addClass('hide');
+      }
+      // ## cards
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.base).find('.cards-container section.active').removeClass('active');
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.base).find('.cards-container section.prev').removeClass('prev');
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.base).find('.cards-container section.next').removeClass('next');
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.activeCard).addClass('active');
+      // this.activeCardIndex - this.activeCard.index
+      if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.activeCard).prev().length != 0) {
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.activeCard).prev().addClass('prev');
+      }
+      if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.activeCard).next().length != 0) {
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.activeCard).next().addClass('next');
+      }
+      // ## timeline 
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.base).find('.timeline li.active').removeClass('active');
+      // let findNode = $(this.base).find('.timeline ol li')[this.activeCard.index]
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.timelineData[this.activeCard.index]).addClass('active');
+      var timelineB = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.base).find('.timeline-container .btn-back');
+      var timelineN = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.base).find('.timeline-container .btn-next');
+      // console.log($(timelineN))
+      if (this.activeCardIndex === 0) {
+        timelineB.addClass('hide');
+      } else {
+        timelineB.removeClass('hide');
+      }
+      if (this.activeCardIndex >= this.cardData.length - 1) {
+        timelineN.addClass('hide');
+      } else {
+        timelineN.removeClass('hide');
+      }
+    };
+    // ## timeline generater
+    PRESTimeline.prototype._generateTimeline = function () {
+      // ## create node list
+      var htmlWrap = '<ol></ol>';
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.timelineNodeContainer).append(htmlWrap);
+      var wrap = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.timelineNodeContainer).find('ol');
+      var numNode = this.cardData.length;
+      for (var i = 0; i < numNode; i++) {
+        var c = this.cardData[i].color;
+        var el = wrap.append('<li class="' + this.cardData[i].period + '" style="border-color: ' + c + '"></li>');
+      }
+      // ## width of timeline
+      var nodeW = 200;
+      wrap.css('width', nodeW * numNode - 16);
+      var nodeList = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.base).find('.timeline ol li');
+      this.timelineData = nodeList;
+    };
+    // ## assign button actions
+    PRESTimeline.prototype._assignBtn = function () {
+      var _this = this;
+      var periodPrev = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.base).find('.periods-container .btn-back');
+      var periodNext = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.base).find('.periods-container .btn-next');
+      periodPrev.click(function () {
+        if (_this.activePeriodIndex > 0) {
+          // console.log('prev')
+          _this.activePeriodIndex -= 1;
+          _this.activePeriod = _this.periodData[_this.activePeriodIndex];
+          _this._chainActions('period');
+          _this._setStateClasses();
+        }
+        _this._adjustPeriodContainer();
+      });
+      periodNext.click(function () {
+        if (_this.activePeriodIndex < _this.periodData.length - 1) {
+          // console.log('next' + this.activePeriodIndex)
+          _this.activePeriodIndex += 1;
+          _this.activePeriod = _this.periodData[_this.activePeriodIndex];
+          _this._chainActions('period');
+          _this._setStateClasses();
+        }
+        _this._adjustPeriodContainer();
+      });
+      var timelinePrev = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.base).find('.timeline-container .btn-back');
+      var timelineNext = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.base).find('.timeline-container .btn-next');
+      timelinePrev.click(function () {
+        if (_this.activeCardIndex > 0) {
+          _this.activeCardIndex -= 1;
+          _this.activeCard = _this.cardData[_this.activeCardIndex];
+          _this._chainActions('timeline');
+          _this._setStateClasses();
+        }
+        _this._adjustCardContainer();
+        _this._adjustPeriodContainer();
+      });
+      timelineNext.click(function () {
+        if (_this.activeCardIndex < _this.cardData.length - 1) {
+          _this.activeCardIndex += 1;
+          _this.activeCard = _this.cardData[_this.activeCardIndex];
+          _this._chainActions('timeline');
+          _this._setStateClasses();
+        }
+        _this._adjustCardContainer();
+        _this._adjustPeriodContainer();
+      });
+      var _loop_1 = function (i) {
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()(this_1.timelineData[i]).click(function () {
+          _this.activeCardIndex = _this.cardData[i].index;
+          _this.activeCard = _this.cardData[_this.activeCardIndex];
+          _this._chainActions('timeline');
+          _this._setStateClasses();
+          _this._adjustCardContainer();
+          _this._shiftTimeline();
+        });
+      };
+      var this_1 = this;
+      // ## assign each timeline li
+      for (var i = 0; i < this.timelineData.length; i++) {
+        _loop_1(i);
+      }
+    };
+    // ## color ##
+    PRESTimeline.prototype._initialColor = function () {
+      for (var i = 0; i < this.periodData.length; i++) {
+        var p = this.periodData[i].period;
+        this.periodData[i].color = this.color[p];
+        var temp = this.periodData[i];
+        // $(temp).css('border-color', temp.color);
+        // $(temp).find('.year').css('color', temp.color);
+        // ## color for timeline items, this part utilize the period name as class which will be add to the li later
+        // ### cross browser bug fix
+        var sbstyle = document.createElement("style");
+        document.head.appendChild(sbstyle);
+        // let sheet = document.styleSheets[0]
+        sbstyle.sheet.insertRule('li.' + p + '.active { background-color: ' + this.color[p] + ' !important } ', 0);
+        sbstyle.sheet.insertRule('li.' + p + '::before { background-color: ' + this.color[p] + ' } ', 0);
+        sbstyle.sheet.insertRule('li.' + p + '::after { background-color: ' + this.color[p] + ' } ', 0);
+      }
+      for (var i = 0; i < this.cardData.length; i++) {
+        var p = this.cardData[i].period;
+        this.cardData[i].color = this.color[p];
+        var temp = this.cardData[i];
+        // $(temp).css('border-color', temp.color);
+        // $(temp).find('.year').css('color', temp.color);
+      }
+    };
+
+    PRESTimeline.prototype._adjustPeriodContainer = function () {
+      var activeH = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.activePeriod).outerHeight();
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.periodContainer).height(activeH);
+      console.log('top adjusted');
+    };
+    PRESTimeline.prototype._adjustCardContainer = function () {
+      var activeH = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.activeCard).outerHeight() + 24;
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.cardContainer).height(activeH);
+      console.log('bot adjusted');
+    };
+    PRESTimeline.prototype._shiftTimeline = function () {
+      // #### We need to fix this part if using this component in different sizes ####
+      var timelineW = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.base).find('.timeline-container').outerWidth();
+      var timelinePadding = 210;
+      var timelineCenter = 300;
+      var liWidth = 16;
+      var activeNodeX = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.timelineData[this.activeCardIndex]).position().left;
+      var finalPos = -activeNodeX + timelinePadding;
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.timelineNodeContainer).css('left', finalPos);
+      console.log(activeNodeX);
+    };
+    PRESTimeline.prototype._chainActions = function (state) {
+      switch (state) {
+        case 'period':
+          console.log('period');
+          if (this.activePeriod.period != this.activeCard.period) {
+            // ## find the closest li with the active period
+            var ta = [];
+            for (var i = 0; i < this.cardData.length; i++) {
+              var temp = this.cardData[i];
+              if (this.activePeriod.period === temp.period) ta.push(temp);
+            }
+            this.activeCard = ta[0];
+            this.activeCardIndex = ta[0].index;
+          }
+          break;
+        case 'timeline':
+          console.log('timeline');
+          if (this.activeCard.period != this.activePeriod.period) {
+            var ta = void 0;
+            for (var i = 0; i < this.periodData.length; i++) {
+              var temp = this.periodData[i];
+              if (this.activeCard.period === temp.period) ta = temp;
+            }
+            this.activePeriod = ta;
+            this.activePeriodIndex = ta.index;
+          }
+          break;
+      }
+      this._shiftTimeline();
+      this._adjustCardContainer();
+    };
+    return PRESTimeline;
+  }();
+  // ## document load ##
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
+    var colorcode = {
+      'period1': '#fff',
+      'period2': '#fff',
+      'period3': '#fff'
+    };
+    var timeline = new PRESTimeline(jquery__WEBPACK_IMPORTED_MODULE_0___default()('#this-timeline'), colorcode);
+  });
 }
 
 /***/ }),

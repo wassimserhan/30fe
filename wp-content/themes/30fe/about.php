@@ -90,8 +90,46 @@ get_header();
       </section>
     </section>
 
-    <!-- Hero-->
 
+
+    <?php include get_template_directory() . '/modules/timeline.php'; ?>
+
+
+
+    <!-- Timeline 2 -->
+    <section class="about__timeline">
+      <h3 class="about__timeline__headline">Our Story</h3>
+
+      <hr>
+      <section id="slider3" class="splide splide-timeline" aria-labelledby="carousel-heading">
+
+        <div class="splide__track">
+          <ul class="splide__list">
+
+            <li class="splide__slide">
+              <section class="about__timeline__year">
+                <h4 class="">2018</h4>
+              </section>
+              <section class="about__timeline__copy">
+                <h4 class="">Lorem ipsum dolor sit amet.</h4>
+              </section>
+            </li>
+            <li class="splide__slide">
+              <section class="about__timeline__year">
+                <h4 class="">2019</h4>
+              </section>
+              <section class="about__timeline__copy">
+                <h4 class="">Lorem ipsum dolor sit amet.</h4>
+              </section>
+            </li>
+
+          </ul>
+        </div>
+      </section>
+    </section>
+
+
+    <!-- Hero-->
     <section class="about__thirty whitesmoke-bg">
       <section class="">
         <section class="about__whatis__card">

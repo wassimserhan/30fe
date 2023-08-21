@@ -1,6 +1,6 @@
 .home-expertise {
   font-family: 'Inter', sans-serif;
-  background-color: $whiteSmoke;
+  background-color: $whitesmoke;
 
   &__headline {
     font-size: 48px;
@@ -50,6 +50,64 @@
 
     & p {
       max-width: 170px;
+    }
+  }
+}
+
+//Accordion
+
+.accordion-faq {
+  &__title {
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+
+  &__wrapper {
+    position: relative;
+
+    .plus {
+      display: none;
+      @include bp(phone) {
+        display: block;
+        position: absolute;
+        right: 4px;
+        width: 16px;
+        top: 20px;
+        left: auto;
+      }
+    }
+  }
+
+  &__content {
+    // padding: 0 0 20px;
+
+    overflow: hidden;
+    will-change: max-height;
+    transition: all 0.25s ease-out;
+    color: $black;
+    opacity: 1;
+    font-size: 0.9rem;
+    line-height: 22px;
+    font-family: 'Retina Light', sans-serif;
+
+    @include bp(phone) {
+      max-height: 0;
+      opacity: 0;
+    }
+  }
+
+  &__active {
+    .accordion-faq__intro {
+    }
+
+    .accordion-faq__content {
+      margin-bottom: 15px;
+      opacity: 1;
+    }
+
+    .plus {
+      transition: all 250ms;
+      transform: rotate(180deg);
     }
   }
 }

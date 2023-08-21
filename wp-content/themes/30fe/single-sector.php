@@ -25,7 +25,7 @@ get_header();
 
 
     <section class="max-width">
-      <article class="industry__categories dark-bg">
+      <article class="industry__categories">
         <!-- display industry categories -->
         <?php
           if( have_rows('column_list') ): 
@@ -33,7 +33,7 @@ get_header();
             $industryItems = get_sub_field('list_item'); ?>
 
 
-        <section class="industry__category <?php if( get_row_index()== 2) echo "industry__category-bullets-border" ?>">
+        <section class="industry__category industry__category-bullets-border">
           <section class="max-width">
             <section class="industry__category-items">
               <p><?php echo '0' . get_row_index() ?></p>
@@ -90,7 +90,7 @@ get_header();
 
   <!-- Expert Form -->
   <section class="information">
-    <section class="information__wrapper">
+    <section class="information__wrapper max-width">
       <?php 
                 $team = get_field('expert');
                 foreach ($team_members as $team_member): 

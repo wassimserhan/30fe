@@ -50,11 +50,34 @@ if (slider2) {
   }).mount();
 }
 
+const slider3 = document.getElementById('slider3');
+
+if (slider3) {
+  new Splide('#slider3', {
+    classes: {
+      arrows: 'splide__arrows splide-timeline__arrows',
+      arrow: 'splide__arrow splide-timeline__arrow',
+      prev: 'splide__arrow--prev splide-timeline__arrow--prev',
+      next: 'splide__arrow--next splide-timeline__arrow--next',
+    },
+
+    type: 'loop',
+    perPage: 1,
+    pagination: false,
+    autoplay: true,
+  }).mount();
+}
+
+
 
 // modules
+import './modules/expertise';
+import './modules/timeline';
+import './modules/contact';
 import './modules/teamSearch';
 import './modules/teamImages';
 import './modules/blogSearch';
+import './modules/homeStatsMobile';
 import './modules/homeStats';
 import './modules/accordion';
 import './modules/navColors';

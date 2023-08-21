@@ -1,7 +1,7 @@
 .stats {
   padding: 128px 0;
-  background-color: $whiteSmoke;
-  @include bp(phone) {
+  background-color: $whitesmoke;
+  @include bp(tablet) {
     display: none;
   }
 
@@ -61,7 +61,7 @@
     font-weight: 700;
     line-height: 100%; /* 128px */
     letter-spacing: -6.4px;
-    background-color: $whiteSmoke;
+    background-color: $whitesmoke;
     color: $black;
     position: absolute;
   }
@@ -78,16 +78,39 @@
   }
 }
 
-// .stats-bar-overlay-percent,
-// .stats-bar-overlay-text {
-//   line-height: 1;
-//   white-space: nowrap;
-//   color: #fff;
-// }
+.mobile-stats {
+  display: none;
+  @include bp(tablet) {
+    display: block;
+  }
 
-// .stats-bar-background,
-// .stats-bar-progress {
-//   background-position: top left;
-//   background-attachment: fixed;
-//   background-size: 44px 44px;
-// }
+  &__wrapper {
+    max-width: 300px;
+    margin: auto;
+    position: relative;
+  }
+
+  &__item {
+    text-align: center;
+    // min-height: 100px;
+  }
+
+  &__box {
+    // min-height: 100px;
+    padding: 32px;
+
+    & h2 {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 100%; /* 48px */
+      letter-spacing: -2.4px;
+    }
+
+    & p {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 140%; /* 28px */
+      letter-spacing: -0.6px;
+    }
+  }
+}

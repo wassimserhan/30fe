@@ -1,4 +1,4 @@
-  <section class="testimonials whitesmoke-bg">
+  <section class="testimonials whitesmoke-bg fullscreen">
     <section class="max-width max-padding">
       <h2 class="testimonials__headline">Testimonials</h2>
       <section id="slider1" class="splide splide-testimonials" aria-labelledby="carousel-heading">

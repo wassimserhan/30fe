@@ -1,6 +1,6 @@
 .industry {
   font-family: 'Inter', sans-serif;
-  background-color: $whiteSmoke;
+  background-color: $whitesmoke;
 
   &__title {
     font-size: 128px;
@@ -10,6 +10,10 @@
     letter-spacing: -6.4px;
     color: $monochromeBlack;
     margin: 0;
+    @include bp(tablet) {
+      font-size: 48px;
+      letter-spacing: -2.4px;
+    }
   }
 
   &__copy {
@@ -35,10 +39,17 @@
     font-weight: 700;
     line-height: 120%; /* 38.4px */
     letter-spacing: -1.6px;
+
+    @include bp(phone) {
+      flex-direction: column;
+    }
   }
 
   &__category {
     width: 100%;
+    border-right: 1px solid $black;
+    border-top: 1px solid $black;
+    border-bottom: 1px solid $black;
 
     &-items {
       display: flex;
@@ -46,6 +57,7 @@
       place-items: center;
       padding: 0 64px;
       min-height: 250px;
+      background-color: $monochromeBlack;
 
       & p {
         padding-right: 64px;
@@ -62,12 +74,14 @@
       justify-content: space-between;
       flex-direction: column;
       padding: 64px;
-      background-color: $whiteSmoke;
+      background-color: $whitesmoke;
 
-      &-border {
-        border-left: 1px solid $black;
-        border-right: 1px solid $black;
-      }
+      // &-border {
+      //   // border-left: 1px solid $black;
+      //   border-right: 1px solid $black;
+      //   border-top: 1px solid $black;
+      //   border-bottom: 1px solid $black;
+      // }
 
       &__items {
         display: flex;

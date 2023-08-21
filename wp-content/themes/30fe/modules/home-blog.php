@@ -25,7 +25,8 @@
              width="100%">
          </figure>
          <article class="insights__card__label">
-           <aside class="insights__card__label__category">
+           <?php require get_theme_file_path('/includes/blog-colors.php');?>
+           <aside class="insights__card__label__category <?php echo $label_color; ?>">
              <p class="insights__card__label__category__text">
                <?php echo get_the_category_list(', '); ?>
              </p>

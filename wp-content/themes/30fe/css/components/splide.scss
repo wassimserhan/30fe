@@ -1,6 +1,7 @@
 //Splide Customization
 .splide-form {
-  width: 480px;
+  width: 100%;
+  max-width: 480px;
   overflow: hidden;
   background-color: $taupe;
   padding-right: 0;
@@ -30,6 +31,20 @@
     left: 0 !important;
     right: 50px !important;
     margin: auto !important;
+  }
+}
+
+.splide-timeline {
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+
+  &__arrow--next {
+    background-color: $white !important;
+  }
+
+  &__arrow--prev {
+    background-color: $white !important;
   }
 }
 

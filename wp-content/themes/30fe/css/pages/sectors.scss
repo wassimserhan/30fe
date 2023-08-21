@@ -13,6 +13,10 @@
     letter-spacing: -6.4px;
     color: $white;
     margin: 0;
+    @include bp(phone) {
+      font-size: 48px;
+      letter-spacing: -2.4px;
+    }
   }
 
   &__copy + p {
@@ -32,7 +36,7 @@
   }
 
   &__list {
-    background-color: $whiteSmoke;
+    background-color: $whitesmoke;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,7 +46,7 @@
       justify-content: space-between;
       place-items: center;
       max-width: 1020px;
-      border-bottom: 1px solid $white;
+      border-bottom: 1px solid $black;
     }
   }
 
@@ -55,8 +59,15 @@
     padding: 64px 0;
     color: $white;
 
+    @include bp(phone) {
+      font-size: 20px;
+      letter-spacing: -0.6px;
+      padding: 24px 0;
+    }
+
     &__arrow {
       max-width: 20px;
+      margin-left: auto;
     }
   }
 
