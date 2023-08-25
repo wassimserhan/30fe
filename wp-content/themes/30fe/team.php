@@ -65,8 +65,6 @@ get_header();
           foreach ($team_members as $team_member):     
           $name = get_the_title($team_member);
           $title = get_field('title', $team_member);
-          $img = get_field('headshot', $team_member);
-          $image = $img['url'];
         ?>
         <article class="team__card">
           <a href="<?php the_permalink($team_member) ?>">
