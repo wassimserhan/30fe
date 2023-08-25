@@ -16,12 +16,15 @@ get_header();
       </section>
       <section class="industry__intro">
         <h1 class="industry__title industry__title"><?php the_title() ?></h1>
-        <p class="industry__copy industry__copy"><?php the_content() ?></p>
+        <p class="industry__copy industry__copy"><?php echo get_field('intro') ;?></p>
       </section>
     </section>
     <figure class="industry__figure">
       <img loading="lazy" src="<?php echo get_the_post_thumbnail_url() ?>" alt="<?php echo $alt; ?>"
         title="<?php echo $title; ?>">
+
+      <img class="industry__figure--mobile" loading="lazy" src="<?php echo get_field('featured_image_mobile')['url'] ?>"
+        alt="<?php echo $alt; ?>" title="<?php echo $title; ?>">
     </figure>
 
 
@@ -110,34 +113,30 @@ get_header();
             <div class="splide__track">
               <ul class="splide__list">
                 <?php 
-                $team = get_field('expert');
-                foreach ($team as $item): 
-                $name = get_the_title($item);
-                $title = get_field('title', $item);
-                $phone = get_field('phone', $item);
-                $email = get_field('email', $item);
-                $img =   get_field('headshot', $item);
-                $image = $img['url'];
-                ?>
+
+              $relatedExpertiseTeam = get_posts(array(
+              'posts_per_page' => -1,
+              'post_type'=> 'Team',
+              'meta_query' => array(
+                array(
+                'key'      => 'expertise',
+                'value'    => '"' . get_the_ID() . '"',
+                'compare'  => 'LIKE'
+                )
+          ),
+      ));
+
+              foreach( $relatedExpertiseTeam as $item ):
+              $name = get_the_title($item);
+              $title = get_field('title', $item);
+              $phone = get_field('phone', $item);
+              $email = get_field('email', $item);
+              $img =   get_field('headshot', $item);
+              $image = $img['url'];
+              ?>
                 <li class="splide__slide">
-                  <section class="expertise-form__card">
-                    <figure class="expertise-form__card__image">
-                      <img class="lazyload" src="<?php echo get_the_post_thumbnail_url($item) ?>"
-                        alt="<?php echo $name; ?>" title="<?php echo $name; ?>">
-                    </figure>
-                    <section class="pill">
-                      <p class="pill__label">Practice Leads</p>
-                    </section>
-                    <div class="expertise-form__card__name">
-                      <?php echo $name; ?>
-                    </div>
-                    <div class="expertise-form__card__title">
-                      <?php echo $title; ?>
-                    </div>
-                    <div class="expertise-form__card__email">
-                      <?php echo $email; ?>
-                    </div>
-                  </section>
+
+                  <?php include get_template_directory() . '/modules/team-card.php'; ?>
                 </li>
                 <?php endforeach ?>
               </ul>

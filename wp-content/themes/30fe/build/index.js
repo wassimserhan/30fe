@@ -3781,29 +3781,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _splidejs_splide_css_sea_green__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @splidejs/splide/css/sea-green */ "./node_modules/@splidejs/splide/dist/css/themes/splide-sea-green.min.css");
 /* harmony import */ var _splidejs_splide_css_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @splidejs/splide/css/core */ "./node_modules/@splidejs/splide/dist/css/splide-core.min.css");
 /* harmony import */ var _splidejs_splide__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @splidejs/splide */ "./node_modules/@splidejs/splide/dist/js/splide.esm.js");
-/* harmony import */ var _modules_careers__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/careers */ "./src/modules/careers.js");
-/* harmony import */ var _modules_careers__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_modules_careers__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _modules_expertise__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/expertise */ "./src/modules/expertise.js");
-/* harmony import */ var _modules_expertise__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_modules_expertise__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _modules_timeline__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/timeline */ "./src/modules/timeline.js");
-/* harmony import */ var _modules_contact__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/contact */ "./src/modules/contact.js");
-/* harmony import */ var _modules_teamSearch__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/teamSearch */ "./src/modules/teamSearch.js");
-/* harmony import */ var _modules_teamSearch__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_modules_teamSearch__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _modules_teamImages__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/teamImages */ "./src/modules/teamImages.js");
-/* harmony import */ var _modules_teamImages__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_modules_teamImages__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _modules_blogSearch__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/blogSearch */ "./src/modules/blogSearch.js");
-/* harmony import */ var _modules_blogSearch__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_modules_blogSearch__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var _modules_homeStatsMobile__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modules/homeStatsMobile */ "./src/modules/homeStatsMobile.js");
-/* harmony import */ var _modules_homeStatsMobile__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_modules_homeStatsMobile__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var _modules_homeStats__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./modules/homeStats */ "./src/modules/homeStats.js");
-/* harmony import */ var _modules_homeStats__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_modules_homeStats__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./modules/accordion */ "./src/modules/accordion.js");
-/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_modules_accordion__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var _modules_navColors__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./modules/navColors */ "./src/modules/navColors.js");
-/* harmony import */ var _modules_navColors__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_modules_navColors__WEBPACK_IMPORTED_MODULE_16__);
-/* harmony import */ var _modules_navbar__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./modules/navbar */ "./src/modules/navbar.js");
-/* harmony import */ var _modules_navbar__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_modules_navbar__WEBPACK_IMPORTED_MODULE_17__);
-/* harmony import */ var _modules_search__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./modules/search */ "./src/modules/search.js");
+/* harmony import */ var _modules_changeBackground__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/changeBackground */ "./src/modules/changeBackground.js");
+/* harmony import */ var _modules_changeBackground__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_modules_changeBackground__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _modules_careers__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/careers */ "./src/modules/careers.js");
+/* harmony import */ var _modules_careers__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_modules_careers__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _modules_expertise__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/expertise */ "./src/modules/expertise.js");
+/* harmony import */ var _modules_expertise__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_modules_expertise__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _modules_timeline__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/timeline */ "./src/modules/timeline.js");
+/* harmony import */ var _modules_contact__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/contact */ "./src/modules/contact.js");
+/* harmony import */ var _modules_teamSearch__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/teamSearch */ "./src/modules/teamSearch.js");
+/* harmony import */ var _modules_teamSearch__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_modules_teamSearch__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _modules_teamImages__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/teamImages */ "./src/modules/teamImages.js");
+/* harmony import */ var _modules_teamImages__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_modules_teamImages__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _modules_blogSearch__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modules/blogSearch */ "./src/modules/blogSearch.js");
+/* harmony import */ var _modules_blogSearch__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_modules_blogSearch__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var _modules_homeStatsMobile__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./modules/homeStatsMobile */ "./src/modules/homeStatsMobile.js");
+/* harmony import */ var _modules_homeStatsMobile__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_modules_homeStatsMobile__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var _modules_homeStats__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./modules/homeStats */ "./src/modules/homeStats.js");
+/* harmony import */ var _modules_homeStats__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_modules_homeStats__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./modules/accordion */ "./src/modules/accordion.js");
+/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_modules_accordion__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var _modules_navColors__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./modules/navColors */ "./src/modules/navColors.js");
+/* harmony import */ var _modules_navColors__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_modules_navColors__WEBPACK_IMPORTED_MODULE_17__);
+/* harmony import */ var _modules_navbar__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./modules/navbar */ "./src/modules/navbar.js");
+/* harmony import */ var _modules_navbar__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(_modules_navbar__WEBPACK_IMPORTED_MODULE_18__);
+/* harmony import */ var _modules_search__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./modules/search */ "./src/modules/search.js");
 
 
 //splide modules
@@ -3843,7 +3845,8 @@ if (slider2) {
     },
     type: 'loop',
     perPage: 1,
-    pagination: false,
+    // pagination: focus,
+    keyboard: true,
     autoplay: true
   }).mount();
 }
@@ -3863,12 +3866,13 @@ if (slider2) {
 
 
 
+
 // import main from './main';
 // import navbar from './navbar';
 
 // classes
 
-const magicalSearch = new _modules_search__WEBPACK_IMPORTED_MODULE_18__["default"]();
+const magicalSearch = new _modules_search__WEBPACK_IMPORTED_MODULE_19__["default"]();
 
 /***/ }),
 
@@ -3889,6 +3893,32 @@ accordionArray.forEach(item => {
       }
       ;
     }
+  });
+});
+
+//Mobile Accordion
+
+const items = gsap.utils.toArray(".item");
+let currentItem = null;
+items.forEach((e, i) => {
+  const content = e.querySelector(".content");
+  const t = gsap.to(content, {
+    height: "auto",
+    paused: true
+  });
+  e._accordionTween = t;
+  e.addEventListener("click", () => {
+    if (currentItem !== null) {
+      items[currentItem].classList.toggle("active");
+      if (currentItem === i) {
+        currentItem = null;
+        return t.reverse();
+      }
+      items[currentItem]._accordionTween.reverse();
+    }
+    e.classList.toggle("active");
+    t.play();
+    currentItem = i;
   });
 });
 
@@ -4040,6 +4070,26 @@ accordionscareers.forEach(accordion => {
 
 /***/ }),
 
+/***/ "./src/modules/changeBackground.js":
+/*!*****************************************!*\
+  !*** ./src/modules/changeBackground.js ***!
+  \*****************************************/
+/***/ (() => {
+
+var colors = ['#ff6f48', '#0175df', '#08cb80'];
+const homeHero = document.getElementById("home-hero");
+const homeNav = document.querySelector("nav");
+if (homeHero) {
+  var changeBackground = function () {
+    const color = colors[Math.floor(Math.random() * colors.length)];
+    homeHero.style.background = color;
+    homeNav.style.background = color;
+  };
+  changeBackground();
+}
+
+/***/ }),
+
 /***/ "./src/modules/contact.js":
 /*!********************************!*\
   !*** ./src/modules/contact.js ***!
@@ -4052,10 +4102,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()('.contact__location__city').click(function () {
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('img[id^=city]').hide(); //hide all
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('section[id^=city]').hide(); //hide all
   var id = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('id'); //get the id of the clicked button
   var end = id.slice(-2); //get last 2 character from id
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()(`img[id$=${end}]`).show(); //match the div with id ends with the character and show
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(`section[id$=${end}]`).show(); //match the div with id ends with the character and show
 });
 
 /***/ }),
@@ -4201,34 +4251,29 @@ $taupe = '#cbbea5';
 $orange = '#ff6f48';
 $blue = '#0175df';
 $green = '#08cb80';
-$black = '#1d1c1d';
 $white = '#ffffff';
 let navData = document.querySelector('.nav');
 let pageTitle = navData.getAttribute('data-page');
-let navColors;
+let sectionColors;
 switch (pageTitle) {
   case 'Home':
-    // gsap.set(".nav", { backgroundColor: $black });
-    // gsap.set(".nav__items", { color: $white });
-    navColors = [$whitesmoke, $taupe, $whitesmoke, $whitesmoke, $whitesmoke, $whitesmoke, $taupe];
+    sectionColors = [$whitesmoke, $taupe, $whitesmoke, $whitesmoke, $taupe, $whitesmoke, $taupe];
+    // navColors = [$black, $whitesmoke, $taupe, $whitesmoke, $whitesmoke, $taupe, $whitesmoke, $taupe];
     break;
   case 'About':
-    // gsap.set(".nav", { backgroundColor: $black });
-    // gsap.set(".nav__items", { color: $white });
-    navColors = [$white, $whitesmoke, $whitesmoke, $taupe];
+    sectionColors = [$black, $whitesmoke, $whitesmoke, $taupe, $black, $whitesmoke, $taupe];
     break;
   case 'Team':
-    navColors = [$taupe];
+    sectionColors = [$whitesmoke, $taupe];
     break;
   case 'Expertise':
-    // gsap.set(".nav", { backgroundColor: $green });
-    // gsap.set(".nav__items", { color: $white });
-    navColors = [$green, $whitesmoke, $taupe];
+    sectionColors = [$green, $whitesmoke, $taupe];
     break;
   case 'Sectors':
-    // gsap.set(".nav", { backgroundColor: $black });
-    // gsap.set(".nav__items", { color: $white });
-    navColors = [$black, $black, $taupe, $whitesmoke];
+    sectionColors = [$black, $black, $taupe, $whitesmoke];
+    break;
+  case 'Careers':
+    sectionColors = [$black, $orange, $blue, $green, $taupe, $black];
     break;
 }
 
@@ -4237,21 +4282,23 @@ switch (pageTitle) {
 gsap.registerPlugin(ScrollTrigger);
 
 //apply sectionColors to each .fullscreen element
-// gsap.set(".fullscreen", { backgroundColor: gsap.utils.wrap(sectionColors) })
+gsap.set(".fullscreen", {
+  backgroundColor: gsap.utils.wrap(sectionColors)
+});
+// gsap.set(".nav", { backgroundColor: gsap.utils.wrap(sectionColors) })
 
 const sections = gsap.utils.toArray(".fullscreen");
 sections.forEach(function (section, index) {
   let tl = gsap.timeline();
-  console.log(pageTitle);
   ScrollTrigger.create({
     trigger: section,
     start: "top 78px",
     end: "bottom 78px",
     animation: tl.to(".nav", {
-      backgroundColor: navColors[index],
+      backgroundColor: sectionColors[index],
       immediateRender: false
     }),
-    toggleActions: "play none none reverse"
+    toggleActions: "restart none none reverse"
   });
 });
 
@@ -4263,41 +4310,66 @@ sections.forEach(function (section, index) {
   \*******************************/
 /***/ (() => {
 
+// const hamburger = document.querySelector('.nav__menu');
+// const nav = document.querySelector('.nav');
+// const navItems = document.querySelectorAll('.nav__items');
+// const dropdown = document.querySelector('.nav__dropdown');
+// const logoBlack = document.querySelector('.nav__logo__black');
+// const logoWhite = document.querySelector('.nav__logo__white');
+
+// function dropdownMenu() {
+//   if (dropdown.style.display === 'grid') {
+//     dropdown.style.display = 'none';
+//     nav.classList.remove("black-bg");
+//     hamburger.classList.remove("nav__menu-reverse");
+//     document.body.classList.remove('no-scroll');
+//     logoBlack.style.display = "block";
+//     logoWhite.style.display = "none";
+//   } else {
+//     dropdown.style.display = 'grid';
+//     nav.classList.add("black-bg");
+//     hamburger.classList.add("nav__menu-reverse");
+//     document.body.classList.add('no-scroll');
+//     logoBlack.style.display = "none";
+//     logoWhite.style.display = "block";
+//   }
+// }
+
+// hamburger.addEventListener('click', dropdownMenu);
+
+// navItems.forEach(item => {
+//   item.addEventListener('click', function () {
+//     dropdown.style.display = 'none';
+//     hamburger.classList.remove('is-active');
+//     nav.classList.remove("black-bg");
+//     hamburger.classList.remove("nav__menu-reverse");
+//     document.body.classList.remove('no-scroll');
+//     logoBlack.style.display = "block";
+//     logoWhite.style.display = "none";
+//   });
+// });
+
 const hamburger = document.querySelector('.nav__menu');
-const nav = document.querySelector('.nav');
-const navItems = document.querySelectorAll('.nav__items');
-const dropdown = document.querySelector('.nav__dropdown');
-const logoBlack = document.querySelector('.nav__logo__black');
-const logoWhite = document.querySelector('.nav__logo__white');
-function dropdownMenu() {
-  if (dropdown.style.display === 'grid') {
-    dropdown.style.display = 'none';
-    nav.classList.remove("dark-bg");
-    hamburger.classList.remove("nav__menu-reverse");
-    document.body.classList.remove('no-scroll');
-    logoBlack.style.display = "block";
-    logoWhite.style.display = "none";
-  } else {
-    dropdown.style.display = 'grid';
-    nav.classList.add("dark-bg");
-    hamburger.classList.add("nav__menu-reverse");
-    document.body.classList.add('no-scroll');
-    logoBlack.style.display = "none";
-    logoWhite.style.display = "block";
-  }
+const body = document.getElementsByTagName('body')[0];
+const sideNav = document.querySelector('.nav__dropdown');
+hamburger.addEventListener('click', menu);
+function menu() {
+  sideNav.classList.toggle('show-nav');
+  sideNav.classList.toggle('hide-nav');
+  body.classList.toggle('fixed-position');
+  hamburger.classList.toggle('is-active');
 }
-hamburger.addEventListener('click', dropdownMenu);
+
+// Side Nav open/close on menu item click
+const navItems = document.querySelectorAll('.nav__items');
 navItems.forEach(item => {
-  item.addEventListener('click', function () {
-    dropdown.style.display = 'none';
-    hamburger.classList.remove('is-active');
-    nav.classList.remove("dark-bg");
-    hamburger.classList.remove("nav__menu-reverse");
-    document.body.classList.remove('no-scroll');
-    logoBlack.style.display = "block";
-    logoWhite.style.display = "none";
-  });
+  item.addEventListener('click', closeSideMenu);
 });
+function closeSideMenu() {
+  hamburger.classList.remove('is-active');
+  sideNav.classList.remove('show-nav');
+  body.classList.remove('fixed-position');
+}
 
 /***/ }),
 

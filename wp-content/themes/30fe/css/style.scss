@@ -21,8 +21,9 @@
 @import 'components/animation';
 @import 'components/pill';
 @import 'components/splide';
-@import 'components/card';
+@import 'components/team-card';
 @import 'components/accordion-arrow';
+@import 'components/scroll-text-animation';
 
 //----------------------------------*\
 // MODULES
@@ -30,7 +31,7 @@
 @import 'modules/navbar';
 @import 'modules/search';
 @import 'modules/hiring';
-@import 'modules/forms';
+@import 'modules/sector-form';
 @import 'modules/timeline';
 @import 'modules/expertise-form';
 @import 'modules/home-stats';

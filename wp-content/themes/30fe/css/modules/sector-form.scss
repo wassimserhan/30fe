@@ -1,11 +1,15 @@
-.information {
+.sector-form {
   font-family: 'Inter', sans-serif;
-  padding: 128px;
+  // padding: 128px;
   background-color: $whitesmoke;
 
   &__wrapper {
     display: flex;
     justify-content: space-between;
+
+    @include bp(tablet) {
+      flex-direction: column;
+    }
   }
 
   &__headline {

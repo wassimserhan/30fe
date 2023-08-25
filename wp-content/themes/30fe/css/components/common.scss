@@ -67,10 +67,6 @@ button {
   color: $green;
 }
 
-.dark-bg {
-  background-color: $black !important;
-}
-
 .black-bg {
   background-color: $black !important;
 }
@@ -110,7 +106,7 @@ img {
 
 .max-padding {
   padding: 128px;
-  @include bp(phone) {
+  @include bp(tablet) {
     padding: 128px 32px;
   }
 }

@@ -1,4 +1,4 @@
-<section id="timeline" class="about__timeline">
+<section id="timeline" class="about__timeline fullscreen">
   <h2 class="about__timeline__headline text-center">Our Story</h2>
   <div class="body-wrap">
     <!-- # component starts -->
@@ -30,8 +30,8 @@
           eligendi quam reiciendis, rem explicabo dolores tenetur libero minus, facilis quibusdam. Consectetur amet
           beatae fuga, architecto magnam.</p> -->
         </section>
-        <div class="btn-back"></div>
-        <div class="btn-next"></div>
+        <!-- <div class="btn-back"></div>
+        <div class="btn-next"></div> -->
       </div>
       <!--   </div> -->
       <!-- ### -->
@@ -40,16 +40,16 @@
         <!--     # timeline graphic place holder - fill with js -->
         <div class="timeline"></div>
 
-        <div class="btn-back"><svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+        <!-- <div class="btn-back"><svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
             <path fill="none" d="M0 0h30v30H0z" />
             <path fill="#D8D8D8" fill-rule="evenodd"
               d="M11.828 15l7.89-7.89-2.83-2.828L6.283 14.89l.11.11-.11.11L16.89 25.72l2.828-2.83" />
-          </svg></div>
-        <div class="btn-next"><svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+          </svg></div> -->
+        <!-- <div class="btn-next"><svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
             <path fill="none" d="M0 0h30v30H0z" />
             <path fill="#D8D8D8" fill-rule="evenodd"
               d="M18.172 14.718l-7.89-7.89L13.112 4l10.606 10.607-.11.11.11.11-10.608 10.61-2.828-2.83 7.89-7.89" />
-          </svg></div>
+          </svg></div> -->
       </div>
       <!--   </div> -->
       <!-- ### -->

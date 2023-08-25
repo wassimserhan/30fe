@@ -19,7 +19,6 @@ const slider1 = document.getElementById('slider1');
 if (slider1) {
   new Splide('#slider1', {
     classes: {
-
       arrows: 'splide__arrows splide-testimonials__arrows',
       arrow: 'splide__arrow splide-testimonials__arrow',
       prev: 'splide__arrow--prev splide-testimonials__arrow--prev',
@@ -45,7 +44,8 @@ if (slider2) {
 
     type: 'loop',
     perPage: 1,
-    pagination: false,
+    // pagination: focus,
+    keyboard: true,
     autoplay: true,
   }).mount();
 }
@@ -55,6 +55,7 @@ if (slider2) {
 
 
 // modules
+import './modules/changeBackground';
 import './modules/careers';
 import './modules/expertise';
 import './modules/timeline';

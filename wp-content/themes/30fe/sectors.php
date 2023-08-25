@@ -12,7 +12,7 @@ get_header();
 } ?>
 
 <main class="main-container">
-  <section class="sectors dark-bg">
+  <section class="sectors black-bg">
     <section class="max-width max-padding fullscreen">
       <section class="pill pill-white">
         <p class="pill__label pill__label-white">Sectors</p>
@@ -30,7 +30,7 @@ get_header();
 
 
 
-    <section class="sectors__list fullscreen dark-bg">
+    <section class="sectors__list fullscreen black-bg">
       <section class="max-width max-padding">
 
         <?php 

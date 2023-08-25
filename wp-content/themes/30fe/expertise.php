@@ -13,8 +13,8 @@ get_header();
 } ?>
 
 <main class="main-container">
-  <section class="expertise green-bg">
-    <section class="max-width max-padding fullscreen">
+  <section class="expertise green-bg fullscreen">
+    <section class="max-width max-padding ">
       <section class="pill pill-white">
         <p class="pill__label">Expertise</p>
       </section>
@@ -59,7 +59,7 @@ get_header();
       </section>
     </section>
 
-    <?php include get_template_directory() . '/modules/home-contact.php'; ?>
+    <?php include get_template_directory() . '/modules/email.php'; ?>
   </section>
 </main>
 

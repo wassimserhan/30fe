@@ -12,7 +12,7 @@
       $image = $img['url'];
       $bio = get_field('bio');
     ?>
-  <section class="member">
+  <section class="member fullscreen">
     <section class="max-width max-padding">
       <section class="member__card">
         <section class="fadein">
@@ -44,24 +44,22 @@
             <p><?php echo $bio ?></p>
           </article>
 
+
+
+
+
           <?php 
-          if( have_rows('specialized_competencies') ): ?>
+$terms = get_field('competencies');
+if( $terms ): ?>
           <h6 class="member__competencies">Specialised Competencies</h6>
           <hr class="member__line">
-          <section class="member__pillbox">
-            <?php
-          while( have_rows('specialized_competencies') ) : the_row();
-            $competency = get_sub_field('competency'); ?>
-            <p class="pill member__pill"><?php echo $competency ?></p>
-            <?php
-            endwhile; ?>
-          </section>
-          <?php endif;
-        ?>
+          <?php foreach( $terms as $term ): ?>
 
-
-
-
+          <sction class="member__pillbox">
+            <p class="pill member__pill"><?php echo $term->name; ?></p>
+            <?php endforeach; ?>
+          </sction>
+          <?php endif; ?>
         </article>
       </section>
     </section>

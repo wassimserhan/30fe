@@ -15,12 +15,15 @@ get_header();
       </section>
       <section class="industry__intro">
         <h1 class="industry__title industry__title"><?php the_title() ?></h1>
-        <p class="industry__copy industry__copy"><?php the_content() ?></p>
+        <p class="industry__copy industry__copy"><?php echo get_field('intro') ;?></p>
       </section>
     </section>
     <figure class="industry__figure">
-      <img loading="lazy" src="<?php echo get_the_post_thumbnail_url() ?>" alt="<?php echo $alt; ?>"
-        title="<?php echo $title; ?>">
+      <img class="industry__figure--desktop" loading="lazy" src="<?php echo get_the_post_thumbnail_url() ?>"
+        alt="<?php echo $alt; ?>" title="<?php echo $title; ?>">
+
+      <img class="industry__figure--mobile" loading="lazy" src="<?php echo get_field('featured_image_mobile')['url'] ?>"
+        alt="<?php echo $alt; ?>" title="<?php echo $title; ?>">
     </figure>
 
 
@@ -89,38 +92,50 @@ get_header();
 
 
   <!-- Expert Form -->
-  <section class="information">
-    <section class="information__wrapper max-width">
+  <section class="sector-form">
+    <section class="sector-form__wrapper max-width max-padding">
       <?php 
-                $team = get_field('expert');
-                foreach ($team_members as $team_member): 
-                $name = get_the_title($team_member);
-                $title = get_field('title', $team_member);
-                $phone = get_field('phone', $team_member);
-                $email = get_field('email', $team_member);
-                $img =   get_field('headshot', $team_member);
-                $image = $img['url'];
-                ?>
 
-      <?php include get_template_directory() . '/modules/team-card.php';?>
-      <?php endforeach ?>
+              $relatedSectorTeam = get_posts(array(
+              'posts_per_page' => -1,
+              'post_type'=> 'Team',
+              'meta_query' => array(
+                array(
+                'key'      => 'sector',
+                'value'    => '"' . get_the_ID() . '"',
+                'compare'  => 'LIKE'
+                )
+          ),
+      ));
 
-      <section class="information__form">
-        <h3 class="information__headline">For more information</h3>
-        <p class="information__form__copy">Fill up this form and someone from our team will be in touch with you
+              foreach( $relatedSectorTeam as $item ):
+              $name = get_the_title($item);
+              $title = get_field('title', $item);
+              $phone = get_field('phone', $item);
+              $email = get_field('email', $item);
+              $img =   get_field('headshot', $item);
+              $image = $img['url'];
+              ?>
+
+      <?php include get_template_directory() . '/modules/team-card.php'; ?>
+
+      <?php endforeach; ?>
+      <?php wp_reset_postdata() ?>
+
+      <section class="sector-form__form">
+        <h3 class="sector-form__headline">For more Information</h3>
+        <p class="sector-form__form__copy">Fill up this form and someone from our team will be in touch with you
           shortly.</p>
-        <p class="information__form__required">*REQUIRED</p>
+        <p class="sector-form__form__required">*REQUIRED</p>
         <!-- form inserted here -->
         <!-- <?php echo FrmFormsController::get_form_shortcode( array( 'id' => 2 ) ); ?> -->
         <?php echo FrmFormsController::get_form_shortcode( array( 'id' => 1 ) ); ?>
         <!-- form inserted here -->
       </section>
-
-
     </section>
   </section>
 
-  <?php include get_template_directory() . '/modules/home-contact.php'; ?>
+  <?php include get_template_directory() . '/modules/email.php'; ?>
 
 
 </main>

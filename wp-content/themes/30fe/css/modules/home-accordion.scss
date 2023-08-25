@@ -1,3 +1,16 @@
+#accordion {
+  @include bp(tablet) {
+    display: none;
+  }
+}
+
+#accordion-mobile {
+  display: none;
+  @include bp(tablet) {
+    display: block;
+  }
+}
+
 .accordion {
   display: flex;
   // height: max-content;
@@ -46,11 +59,15 @@
         transform: rotate(-180deg);
         margin: 0px;
         cursor: pointer;
-
         font-size: 20px;
         font-weight: 700;
         line-height: 120%; /* 24px */
         letter-spacing: -0.6px;
+
+        // @include bp(tablet) {
+        //   writing-mode: initial;
+        //   transform: initial;
+        // }
       }
 
       &__body {
@@ -100,4 +117,37 @@
     line-height: 0.75;
     padding: 16px;
   }
+}
+
+//Mobile Accordion
+
+.item {
+  border: 1px solid #555;
+  cursor: pointer;
+  padding: 10px 25px;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.title {
+  color: $black;
+  margin: 0px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 120%; /* 24px */
+  letter-spacing: -0.6px;
+  padding-bottom: 10px;
+}
+
+.content {
+  height: 0;
+  overflow: hidden;
+}
+
+.content p {
+  margin: 0;
+  padding: 1rem;
 }

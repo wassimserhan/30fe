@@ -1,6 +1,7 @@
 <?php ?>
 
-<nav data-page="<?php the_title()?>" class="nav">
+
+<nav data-page="<?php echo the_title()?>" class="nav">
   <section class="nav__bar">
     <a href="<?php echo get_home_url(); ?>">
       <img class="nav__logo nav__logo__black" src="<?php echo get_template_directory_uri(); ?>/images/logo-black.svg"
@@ -20,7 +21,7 @@
   </section>
 
   <!-- Mobile Menu -->
-  <section class="nav__dropdown">
+  <section class="nav__dropdown hide-nav">
     <section class="nav__links__list">
       <a class="nav__items nav-links" href="<?php echo site_url('/about')?>" target="_self">About</a>
       <a class="nav__items nav-links" href="<?php echo site_url('/team')?>" target="_self">Team</a>

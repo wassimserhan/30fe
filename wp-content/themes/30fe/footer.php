@@ -13,7 +13,7 @@
 
 
 
-<footer class="footer dark-bg">
+<footer class="footer black-bg">
   <section class="max-width max-padding">
     <!-- <section class="footer__nav">
       <figure>

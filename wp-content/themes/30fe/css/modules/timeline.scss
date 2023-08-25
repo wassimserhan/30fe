@@ -1,5 +1,5 @@
 .about__timeline {
-  background-color: $black;
+  // background-color: $black;
   padding: 64px 0 160px;
   &__headline {
     color: $white;
@@ -60,7 +60,7 @@
   background-color: $black;
 }
 .periods-container:before {
-  background-image: linear-gradient(left, #fff, rgba(248, 248, 248, 0));
+  // background-image: linear-gradient(left, #fff, rgba(248, 248, 248, 0));
   left: 0;
   content: '';
   position: absolute;
@@ -70,7 +70,7 @@
   width: 100px;
 }
 .periods-container:after {
-  background-image: linear-gradient(right, #fff, rgba(248, 248, 248, 0));
+  // background-image: linear-gradient(right, #fff, rgba(248, 248, 248, 0));
   right: 0;
   content: '';
   position: absolute;
@@ -162,7 +162,7 @@
   overflow: hidden;
 }
 .timeline-container:before {
-  background-image: linear-gradient(left, #fff, rgba(248, 248, 248, 0));
+  // background-image: linear-gradient(left, #fff, rgba(248, 248, 248, 0));
   left: 0;
   content: '';
   position: absolute;
@@ -172,7 +172,7 @@
   width: 100px;
 }
 .timeline-container:after {
-  background-image: linear-gradient(right, #fff, rgba(248, 248, 248, 0));
+  // background-image: linear-gradient(right, #fff, rgba(248, 248, 248, 0));
   right: 0;
   content: '';
   position: absolute;
@@ -256,7 +256,7 @@
 }
 
 .cards-container:before {
-  background-image: linear-gradient(left, #fff, rgba(248, 248, 248, 0));
+  // background-image: linear-gradient(left, #fff, rgba(248, 248, 248, 0));
   left: 0;
   content: '';
   position: absolute;
@@ -266,7 +266,7 @@
   width: 100px;
 }
 .cards-container:after {
-  background-image: linear-gradient(right, #fff, rgba(248, 248, 248, 0));
+  // background-image: linear-gradient(right, #fff, rgba(248, 248, 248, 0));
   right: 0;
   content: '';
   position: absolute;

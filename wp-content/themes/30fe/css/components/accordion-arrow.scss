@@ -22,14 +22,25 @@
   }
 }
 
-.plus--white {
-  position: absolute;
+.plus-active {
+  transition: all 250ms;
+  transform: rotate(180deg);
+}
+
+//Careers
+
+.arrow {
+  // position: absolute;
+  top: 25px;
   right: 30px;
+
+  position: absolute;
+  // right: 30px;
   width: 16px;
   height: 12px;
   margin-top: -6px;
   transition: all 250ms;
-  top: 26px;
+  // top: 26px;
   cursor: pointer;
 
   &::after {
@@ -41,12 +52,12 @@
     height: 8px;
     content: '';
     transform: rotate(-45deg);
-    border-bottom: 2px solid $white;
-    border-left: 2px solid $white;
+    border-bottom: 2px solid $black;
+    border-left: 2px solid $black;
   }
 }
 
-.plus-active {
+.arrow-active {
   transition: all 250ms;
   transform: rotate(180deg);
 }

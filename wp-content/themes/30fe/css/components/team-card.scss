@@ -4,6 +4,11 @@
   margin: 32px 0;
   max-width: 300px;
   height: max-content;
+  background-color: $whitesmoke;
+
+  &--slide {
+    border: none;
+  }
 
   &__pill {
     margin: 24px 0 18px;
@@ -35,5 +40,10 @@
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
+
+    & a {
+      color: $black;
+      text-decoration: underline;
+    }
   }
 }

@@ -6,7 +6,7 @@ get_header();
 
 
 <main class="main-container">
-  <section class="team whitesmoke-bg">
+  <section class="team fullscreen">
     <section class="max-width max-padding">
       <section class="pill">
         <p class="pill__label">Our Team</p>

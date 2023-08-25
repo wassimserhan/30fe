@@ -7,14 +7,26 @@ get_header();
 <main class="main-container">
   <section class="contact">
     <section class="contact__hero">
-      <img id="cityTO" class="contact__image contact__image--active"
-        src="<?php echo get_template_directory_uri(); ?>/images/maps/toronto.jpg" alt="Map of Toronto">
-      <img id="cityVA" class="contact__image"
-        src="<?php echo get_template_directory_uri(); ?>/images/maps/vancouver.jpg" alt="Map of Vancouver">
-      <img id="cityOT" class="contact__image" src="<?php echo get_template_directory_uri(); ?>/images/maps/ottawa.jpg"
-        alt="Map of Ottawa">
-      <img id="cityCA" class="contact__image" src="<?php echo get_template_directory_uri(); ?>/images/maps/calgary.jpg"
-        alt="Map of Calgary">
+      <section id="cityTO" class="contact__image contact__image--active">
+        <img class="contact__image__pin--orange"
+          src="<?php echo get_template_directory_uri(); ?>/images/maps/orange-pin.svg" alt="Pin">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/maps/toronto.svg" alt="Map of Toronto">
+      </section>
+      <section id="cityVA" class="contact__image">
+        <img class="contact__image__pin--green"
+          src="<?php echo get_template_directory_uri(); ?>/images/maps/green-pin.svg" alt="Pin">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/maps/vancouver.svg" alt="Map of Vancouver">
+      </section>
+      <section id="cityOT" class="contact__image">
+        <img class="contact__image__pin--blue"
+          src="<?php echo get_template_directory_uri(); ?>/images/maps/blue-pin.svg" alt="Pin">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/maps/ottawa.svg" alt="Map of Ottawa">
+      </section>
+      <section id="cityCA" class="contact__image">
+        <img class="contact__image__pin--taupe"
+          src="<?php echo get_template_directory_uri(); ?>/images/maps/taupe-pin.svg" alt="Pin">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/maps/calgary.svg" alt="Map of Calgary">
+      </section>
     </section>
     <section class="contact__locations">
       <article class="contact__location">

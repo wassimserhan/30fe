@@ -2,13 +2,46 @@
   font-family: 'Inter', sans-serif;
 
   &__hero {
+    position: relative;
+    // min-height: 400px;
+
+    &__buttons {
+      display: flex;
+      justify-content: space-between;
+      max-width: 350px;
+      width: 100%;
+      gap: 16px;
+
+      @include bp(tablet) {
+        flex-direction: column;
+      }
+    }
+
+    &__button--white {
+      background-color: transparent;
+      color: $black;
+    }
+
     &__headline {
+      padding: 80px 128px;
+      @include bp(tablet) {
+        padding: 25px;
+      }
+    }
+
+    &__scroll-container {
+      display: flex;
+      flex-direction: row;
+      max-width: 1400px;
+    }
+    &__scroll {
+      white-space: nowrap;
       font-size: 200px;
       font-style: normal;
       font-weight: 700;
       line-height: 100%; /* 256px */
       letter-spacing: -12.8px;
-      color: $white;
+      color: $black;
       margin: 0;
       padding-bottom: 32px;
     }

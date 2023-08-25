@@ -28,6 +28,20 @@
 
   &__figure {
     width: 100%;
+
+    &--desktop {
+      display: block;
+      @include bp(phone) {
+        display: none;
+      }
+    }
+
+    &--mobile {
+      display: none;
+      @include bp(phone) {
+        display: block;
+      }
+    }
   }
 
   &__categories {

@@ -6,7 +6,7 @@
    ?>
 
   <main class="main-container">
-    <section id="single" class="single dark-bg">
+    <section id="single" class="single black-bg">
       <section class="max-width">
         <div class="single__card">
           <article class="single__detail single__detail--left">
@@ -25,39 +25,32 @@
         </div>
       </section>
 
-
       <section class="single-blog">
         <section class="max-width max-padding">
           <section class="single-blog__single-post">
             <?php
           while( have_posts()) {
           the_post();
-          $subtitle = get_field ('subtitle'); 
           ?>
-
             <!-- Display Content -->
             <?php echo the_content();?>
           </section>
-
-
-
-
           <?php }  ?>
         </section>
       </section>
     </section>
 
-    <!-- Expert -->
+    <!-- Related Expert -->
     <section class="single-blog__wrapper">
       <?php 
           $team_members = get_field ( 'team_member' ); 
         
-          foreach ($team_members as $team_member):     
-          $name = get_the_title($team_member);
-          $title = get_field('title', $team_member);
-          $phone = get_field('phone', $team_member);
-          $email = get_field('email', $team_member);
-          $img = get_field('headshot', $team_member);
+          foreach ($team_members as $item):     
+          $name = get_the_title($item);
+          $title = get_field('title', $item);
+          $phone = get_field('phone', $item);
+          $email = get_field('email', $item);
+          $img = get_field('headshot', $item);
           $image = $img['url']; ?>
       <?php include get_template_directory() . '/modules/team-card.php';?>
       <?php endforeach; ?>

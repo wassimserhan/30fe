@@ -10,7 +10,7 @@ get_header();
 
   <!-- Hero -->
 
-  <section class="about__hero dark-bg">
+  <section class="about__hero fullscreen">
     <section class="max-width max-padding">
       <h1 class="about__hero__headline">We are 30</h1>
       <h2 class="about__hero__copy">We are over <span class="orange">60 experts</span> in <span class="green">14
@@ -23,105 +23,108 @@ get_header();
   </section>
 
   <!-- Intro -->
-  <section class="about__intro whitesmoke-bg">
+  <?php
+if( have_rows('intro') ):
+while( have_rows('intro') ) : the_row(); 
+?>
+  <section class="about__intro fullscreen">
     <section class="max-width max-padding">
-      <h4 class="about__intro__copy">Our strengths are our diversity and our experience. With access to an in-house
-        multidisciplinary team, each of
-        our practices can explore every possible cause of an incident from a technical and scientific perspective while
-        considering the relevant governing regulations, common practices, and legal precedents. Our experts are
-        court-qualified, having provided expert evidence across Canada in support of trials, mediations, arbitrations,
-        and
-        depositions.</h4>
+      <h4 class="about__intro__copy"><?php echo get_field('intro_copy') ;?></h4>
       <section class="about__intro__buttons">
-        <button class="about__intro__button">Browse Experts</button>
-        <!-- <button class="about__intro__button about__intro__button-transparent">Learn More</button> -->
+        <a href="<?php echo site_url('/team')?>"><button class="about__intro__button">Browse Experts</button></a>
       </section>
-
     </section>
   </section>
+  <?php endwhile; endif; ?>
 
   <!-- 360 Investigations -->
-  <section class="about__investigations whitesmoke-bg">
+
+  <?php
+if( have_rows('360_services') ):
+while( have_rows('360_services') ) : the_row(); 
+?>
+  <section class="about__investigations fullscreen">
     <section class="max-width max-padding">
       <section class="about__investigations__wrapper">
         <article>
           <section class="pill">
             <p class="pill__label">360&deg; Services</p>
           </section>
-          <?php 
-          $k=0;
-          $headline = get_field('headline');
-          $copy = get_field('copy');
-          ?>
-          <h2 class="about__investigations__headline"><?php echo $headline; ?></h2>
-          <p class="about__investigations__copy"><?php echo $copy; ?></p>
+
+          <h2 class="about__investigations__headline"><?php echo get_sub_field('services_headline'); ?></h2>
+          <p class="about__investigations__copy"><?php echo get_sub_field('services_copy'); ?></p>
         </article>
         <ul class="about__investigations__bullets">
           <?php 
+           $k=0;
           if( have_rows('services') ): 
           while( have_rows('services') ) : the_row();
-          $bullet_headline = get_sub_field('headline');
-          $bullet_copy = get_sub_field('copy');
+          $list_headline = get_sub_field('list_headline');
+          $list_copy = get_sub_field('list_copy');
           $colors = [ 'taupe', 'blue','green', 'orange' ];
           ?>
           <li class="about__investigations__bullet about__investigations__bullet--<?php echo $colors[$k]; ?>">
-            <h3><?php echo $bullet_headline; ?></h3>
-            <p><?php echo $bullet_copy; ?></p>
+            <h3><?php echo $list_headline; ?></h3>
+            <p><?php echo $list_copy; ?></p>
           </li>
           <?php $k++ ?>
           <?php
           endwhile; ?>
           <?php endif;
             ?>
+
         </ul>
       </section>
     </section>
+  </section>
+  <?php endwhile; endif; ?>
 
-    <!-- Mission -->
-    <section class="about__mission taupe-bg">
-      <section class="max-width max-padding">
-        <section class="pill about__mission__pill">
-          <p class="pill__label">mission</p>
-        </section>
-        <h2 class="about__mission__headline">Precision in investigation, clarity in solutions. </h2>
-        <p class="about__mission__copy">By applying science to evidence, our forensic experts uncover the truth behind
-          each case. Our mission is to facilitate clear and unbiased understanding of the facts, allowing our clients to
-          make decisions with confidence.</p>
+
+  <!-- Mission -->
+  <?php
+if( have_rows('mission') ):
+while( have_rows('mission') ) : the_row(); 
+?>
+  <section class="about__mission fullscreen">
+    <section class="max-width max-padding">
+      <section class="pill about__mission__pill">
+        <p class="pill__label">mission</p>
+      </section>
+      <h2 class="about__mission__headline"><?php echo get_sub_field('mission_headline'); ?> </h2>
+      <p class="about__mission__copy"><?php echo get_sub_field('mission_copy'); ?> </p>
+    </section>
+  </section>
+  <?php endwhile; endif; ?>
+
+
+  <?php include get_template_directory() . '/modules/timeline.php'; ?>
+
+
+
+
+  <!-- Hero-->
+  <?php
+if( have_rows('what_is_30') ):
+while( have_rows('what_is_30') ) : the_row(); 
+?>
+  <section class="about__thirty fullscreen">
+    <section class="">
+      <section class="about__whatis__card">
+        <figure class="about__whatis__image">
+          <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/what-is-30.gif" alt=""
+            title="lock">
+        </figure>
+        <article class="about__whatis__detail about__whatis__detail--left" style="">
+          <h1 class="about__whatis__headline"><?php echo get_sub_field('what_headline'); ?></h1>
+          <p class="about__whatis__copy"><?php echo get_sub_field('what_copy'); ?>
+          </p>
+        </article>
       </section>
     </section>
-
-
-
-    <?php include get_template_directory() . '/modules/timeline.php'; ?>
-
-
-
-
-    <!-- Hero-->
-    <section class="about__thirty whitesmoke-bg">
-      <section class="">
-        <section class="about__whatis__card">
-          <figure class="about__whatis__image">
-            <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/hero-image.jpg" alt=""
-              title="lock">
-          </figure>
-          <article class="about__whatis__detail about__whatis__detail--left" style="">
-            <h1 class="about__whatis__headline">What is 30?</h1>
-            <p class="about__whatis__copy">From its inception, our firm has built a reputation for reporting facts
-              intelligently,
-              accurately, thoroughly, and without bias. Yes, we’re forensic investigators, but in a way, we’re really
-              reporters. And that got us thinking. Years ago, when newspaper reporters submitted final copy to be
-              published, they would type “-30-” at the bottom centre of the page. This would signify to the typesetter
-              that it was the end of the piece, that the facts were all there—the whole story. We couldn’t think of a
-              better way to describe who we are, and what we do.
-            </p>
-          </article>
-        </section>
-      </section>
-    </section>
-
-    <!-- Hiring -->
-    <?php include get_template_directory() . '/modules/hiring.php'; ?>
+  </section>
+  <?php endwhile; endif; ?>
+  <!-- Hiring -->
+  <?php include get_template_directory() . '/modules/hiring.php'; ?>
 
 
 

@@ -6,12 +6,12 @@
   background-color: $taupe;
   padding-right: 0;
   &__arrow--next {
-    top: 97% !important;
+    top: 94% !important;
     left: 7em !important;
   }
 
   &__arrow--prev {
-    top: 97% !important;
+    top: 94% !important;
     left: 10% !important;
   }
 }
@@ -67,4 +67,16 @@
   // background: #000;
   border: 1px solid $black;
   transition: opacity 0.2s, top 0.2s, right 0.2s;
+}
+
+.splide__pagination__page.is-active {
+  background-color: $black !important;
+}
+
+.splide__arrow:focus-visible {
+  outline: none !important;
+}
+
+.splide__pagination {
+  bottom: 38px !important;
 }

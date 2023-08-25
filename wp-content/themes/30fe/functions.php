@@ -16,9 +16,9 @@ function theme_files() {
      wp_enqueue_script( 'jquery', 'https://code.jquery.com/jquery-3.5.1.slim.min.js', array(), null, 1);
      wp_script_add_data( 'jquery', array( 'integrity', 'crossorigin' ) , array( 'sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=', 'anonymous' ) );
 
-    wp_enqueue_script( 'gsap', '//cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js');
+    wp_enqueue_script( 'gsap', '//cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js');
 
-    wp_enqueue_script( 'gsap-scroll', '//cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js');
+    wp_enqueue_script( 'gsap-scroll', '//cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js');
     
    
     
@@ -263,13 +263,54 @@ function theme_post_type_expertise() {
 
     register_post_type( "team", $args );
 
-    
-
 
 }
 
 
     add_action( 'init', 'theme_post_type_team' );
+
+
+
+    function theme_post_type_careers() {
+    $labels = array(
+        "name" => __( "Careers", "" ),
+        "singular_name" => __( "Career", "" ),
+        'add_new' => _x('Add New', 'career item'), 
+        'add_new_item' => __('Add New Career'), 
+        'edit_item' => __('Edit Career'), 
+        'new_item' => __('New Career'),
+    );
+
+    $args = array(
+        "labels" => $labels,
+        "description" => "",
+        "public" => true,
+        "publicly_queryable" => true,
+        "show_ui" => true,
+        "show_in_rest" => true,
+        "rest_base" => "",
+        "has_archive" => false,
+        "menu_icon" => 'dashicons-businessperson',
+        "show_in_menu" => true,
+        "show_in_nav_menus" => true,
+        "exclude_from_search" => false,
+        "capability_type" => "post",
+        "map_meta_cap" => true,
+        "hierarchical" => false,
+        "rewrite" => array( "slug" => "career", "with_front" => true ),
+        "query_var" => true,
+        "supports" => array( "title", "thumbnail", "editor" ),
+    );
+
+    register_post_type( "careers", $args );
+
+
+}
+
+
+    add_action( 'init', 'theme_post_type_careers' );
+
+    
 
 
     

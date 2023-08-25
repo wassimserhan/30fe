@@ -46,7 +46,8 @@
     array_push($results['industry'], array(
       'title' => get_the_title(),
       'permalink' => get_the_permalink(),
-      'image' => get_the_post_thumbnail_url()
+      'image' => get_the_post_thumbnail_url(),
+      'id' => get_the_ID()
     ));
     }
       if(get_post_type() === 'post') {
@@ -59,7 +60,7 @@
   }
 
 
-// Pull any Team related to an Expertise
+  // Pull any Team related to an Expertise
   // $limitInsights = new WP_Query(array(
   //   'post_type' => 'post',
   //   'posts_per_page' => 3
@@ -79,9 +80,8 @@
 
 
   // Pull any Team related to an Expertise
-
   if($results['expertise']) {
-$expertiseMetaQuery = array('relation'=>'OR');
+  $expertiseMetaQuery = array('relation'=>'OR');
 
   foreach($results['expertise'] as $item) {
     array_push($expertiseMetaQuery, array(
@@ -107,9 +107,48 @@ $expertiseMetaQuery = array('relation'=>'OR');
     }
   }
 
+
   //Remove duplicates
   $results['team'] = array_values(array_unique($results['team'], SORT_REGULAR));
   }
+
+
+
+
+   // Pull any Team related to a Sector
+  if($results['industry']) {
+  $sectorMetaQuery = array('relation'=>'OR');
+
+  foreach($results['industry'] as $item) {
+     array_push($sectorMetaQuery, array(
+      'key' => 'sector',
+      'compare' => 'LIKE',
+      'value' => '"' . $item['id'] . '"'
+    ));
+  }
+  
+  $sectorRelationshipQuery = new WP_Query(array(
+    'post_type' => 'team',
+    'meta_query' => $sectorMetaQuery
+  ));
+
+  while($sectorRelationshipQuery->have_posts() ) {
+      $sectorRelationshipQuery->the_post();
+      if(get_post_type() === 'team') {
+      array_push($results['team'], array(
+      'title' => get_the_title(),
+      'permalink' => get_the_permalink(),
+      'image' => get_the_post_thumbnail_url()
+    ));
+    }
+  }
+
+
+  //Remove duplicates
+  $results['team'] = array_values(array_unique($results['team'], SORT_REGULAR));
+  }
+
+
   
   
   
