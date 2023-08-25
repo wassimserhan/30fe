@@ -1,6 +1,6 @@
 .member {
   font-family: 'Inter', sans-serif;
-  // background-color: $whitesmoke;
+  background-color: $whitesmoke;
 
   &__card {
     display: flex;
@@ -8,9 +8,8 @@
   }
 
   & img {
-    max-width: 500px;
-    max-height: 500px;
-    // width: 100%;
+    width: 500px;
+    height: 500px;
   }
 
   &__person {
