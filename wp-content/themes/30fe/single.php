@@ -48,9 +48,7 @@
           $name = get_the_title($item);
           $title = get_field('title', $item);
           $phone = get_field('phone', $item);
-          $email = get_field('email', $item);
-          $img = get_field('headshot', $item);
-          $image = $img['url']; ?>
+          $email = get_field('email', $item); ?>
       <?php include get_template_directory() . '/modules/team-card.php';?>
       <?php endforeach; ?>
     </section>
