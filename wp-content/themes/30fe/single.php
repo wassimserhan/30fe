@@ -43,8 +43,7 @@
     <!-- Related Expert -->
     <section class="single-blog__wrapper">
       <?php 
-          $team_members = get_field ( 'team_member' ); 
-        
+          $team_members = get_field ( 'expert' ); 
           foreach ($team_members as $item):     
           $name = get_the_title($item);
           $title = get_field('title', $item);
