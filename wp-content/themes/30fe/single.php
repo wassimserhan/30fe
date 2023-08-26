@@ -44,6 +44,7 @@
     <section class="single-blog__wrapper">
       <?php 
           $team_members = get_field ( 'expert' ); 
+          if($team_members ) :
           foreach ($team_members as $item):     
           $name = get_the_title($item);
           $title = get_field('title', $item);
@@ -51,6 +52,7 @@
           $email = get_field('email', $item); ?>
       <?php include get_template_directory() . '/modules/team-card.php';?>
       <?php endforeach; ?>
+      <?php endif ;?>
     </section>
 
   </main>
