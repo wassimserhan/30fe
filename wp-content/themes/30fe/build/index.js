@@ -4359,6 +4359,11 @@ const hamburger = document.querySelector('.nav__menu');
 const body = document.getElementsByTagName('body')[0];
 const sideNav = document.querySelector('.nav__dropdown');
 hamburger.addEventListener('click', menu);
+document.addEventListener('click', e => {
+  if (!hamburger.contains(e.target)) {
+    closeSideMenu();
+  }
+});
 function menu() {
   sideNav.classList.toggle('show-nav');
   sideNav.classList.toggle('hide-nav');
