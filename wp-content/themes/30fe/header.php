@@ -34,8 +34,12 @@ global $post;
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/reset.css" type="text/css">
     <?php wp_head(); ?>
-    <link rel='shortcut icon' type='image/x-icon'
-      href='<?php echo get_template_directory_uri(); ?>/images/favicon.png' />
+    <link rel='icon' type='image/svg+xml' href='<?php echo get_template_directory_uri(); ?>/images/favicon.svg' />
+    <link rel='icon' type='image/png' href='<?php echo get_template_directory_uri(); ?>/images/favicon.png' />
+
+
+
+
   </head>
 
   <body <?php body_class(); ?>>
