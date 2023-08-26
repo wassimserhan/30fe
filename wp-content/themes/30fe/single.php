@@ -6,19 +6,19 @@
    ?>
 
   <main class="main-container">
-    <section id="single" class="single black-bg">
+    <section id="single" class="single-post black-bg">
       <section class="max-width">
-        <div class="single__card">
-          <article class="single__detail single__detail--left">
+        <div class="single-post__card">
+          <article class="single-post__detail single-post__detail--left">
             <section class="pill pill-single">
               <p class="pill__label pill__label-single insights__card__label__category__text">
                 <?php echo get_the_category_list(', '); ?>
               </p>
             </section>
-            <h1 class="single__headline"><?php the_title() ?></h1>
-            <p class="single__copy"><?php echo $subtitle ?></p>
+            <h1 class="single-post__headline"><?php the_title() ?></h1>
+            <p class="single-post__copy"><?php echo $subtitle ?></p>
           </article>
-          <figure class="single__figure">
+          <figure class="single-post__figure">
             <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/traffic.jpg"
               alt="<?php echo $alt; ?>" title="<?php echo $title; ?>">
           </figure>

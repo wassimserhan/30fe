@@ -376,12 +376,12 @@ add_action( 'admin_head', 'bks_replace_admin_menu_icons_css' );
 
 
 // Remove P tag
-// function remove_the_wpautop_function() {
-//     remove_filter( 'the_content', 'wpautop' );
-//     remove_filter( 'the_excerpt', 'wpautop' );
-// }
+function remove_the_wpautop_function() {
+    remove_filter( 'the_content', 'wpautop' );
+    remove_filter( 'the_excerpt', 'wpautop' );
+}
 
-// add_action( 'after_setup_theme', 'remove_the_wpautop_function' );
+add_action( 'after_setup_theme', 'remove_the_wpautop_function' );
 
 
 /**
