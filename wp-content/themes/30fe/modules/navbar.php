@@ -1,7 +1,7 @@
 <?php ?>
 
 
-<nav data-page="<?php echo the_title()?>" class="nav">
+<nav data-page="<?php echo single_post_title()?>" class="nav">
   <section class="nav__bar">
     <a href="<?php echo get_home_url(); ?>">
       <img class="nav__logo nav__logo__black" src="<?php echo get_template_directory_uri(); ?>/images/logo-black.svg"
