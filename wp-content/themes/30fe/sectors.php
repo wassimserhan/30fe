@@ -57,7 +57,7 @@ get_header();
 
       </section>
     </section>
-    <?php include get_template_directory() . '/modules/home-contact.php'; ?>
+    <?php include get_template_directory() . '/modules/email.php'; ?>
 
   </section>
 </main>
