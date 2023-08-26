@@ -131,8 +131,6 @@ get_header();
               $title = get_field('title', $item);
               $phone = get_field('phone', $item);
               $email = get_field('email', $item);
-              $img =   get_field('headshot', $item);
-              $image = $img['url'];
               ?>
                 <li class="splide__slide">
 
