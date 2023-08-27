@@ -20,7 +20,7 @@
     </section>
   </section>
 
-  <section class="home-expertise fullscreen whitesmoke-bg">
+  <section class="home-expertise fullscreen">
     <section class="max-width max-padding">
       <article class="accordion-faq">
         <div class="accordion-faq__wrapper">
@@ -51,14 +51,14 @@
     </section>
   </section>
 
-  <section class="quote fullscreen taupe-bg">
+  <section class="quote fullscreen">
     <section class="max-width max-padding">
       <h2 class="quote__headline"><?php echo get_field('intro') ?></h2>
       <a href="<?php echo site_url('/team')?>"><button class="quote__button">Find an Expert</button></a>
     </section>
   </section>
 
-  <section id="stats" class="stats fullscreen whitesmoke-bg">
+  <section id="stats" class="stats fullscreen">
     <section class="max-width">
       <div class="stats__bar">
         <div id="statsBar" class="stats__background">
@@ -98,7 +98,7 @@
 
 
 
-  <section class="mobile-stats whitesmoke-bg">
+  <section class="mobile-stats">
     <section id="statsBaMobile" class="mobile-stats__wrapper">
       <section id="statsBox-1" class="mobile-stats__box orange-bg">
         <section class="mobile-stat__item">
@@ -132,15 +132,15 @@
       <div class="accordion accordion--horizontal ">
 
         <?php $k=0;
-        if( have_rows('accordion_items') ): 
-      while( have_rows('accordion_items') ) : the_row();
-      $headline = get_sub_field('headline');
-      $copy = get_sub_field('copy');
-      $img = get_sub_field('image');
-      $image = $img['url'];
-      $alt = $img['alt'];
-      $colors = [ 'whitesmoke-bg', 'blue-bg','green-bg', 'orange-bg', 'taupe-bg','black-bg' ];
-    ?>
+            if( have_rows('accordion_items') ): 
+          while( have_rows('accordion_items') ) : the_row();
+          $headline = get_sub_field('headline');
+          $copy = get_sub_field('copy');
+          $img = get_sub_field('image');
+          $image = $img['url'];
+          $alt = $img['alt'];
+          $colors = [ 'whitesmoke-bg', 'blue-bg','green-bg', 'orange-bg', 'taupe-bg','black-bg' ];
+        ?>
         <div class="accordion__item <?php if(get_row_index() === 1) echo 'active' ?> <?php echo $colors[$k] ?>">
           <h1 class="accordion__heading"
             style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'black-bg') echo 'color: #ffffff'?>">
@@ -161,7 +161,7 @@
         </div>
 
         <?php
-  endwhile; ?>
+        endwhile; ?>
         <?php endif;
             ?>
 
@@ -169,7 +169,7 @@
     </section>
   </section>
 
-  <section id="accordion-mobile" class="whitesmoke-bg">
+  <section id="accordion-mobile" class="">
     <section class="max-width max-padding">
 
       <?php $k=0;
@@ -202,7 +202,7 @@
       </div>
 
       <?php
-  endwhile; ?>
+      endwhile; ?>
       <?php endif;
             ?>
 
@@ -210,7 +210,7 @@
   </section>
 
 
-  <section class="testimonials fullscreen whitesmoke-bg">
+  <section class="testimonials fullscreen">
     <section class="max-width max-padding">
       <h2 class="testimonials__headline">Testimonials</h2>
       <section id="slider1" class="splide splide-testimonials" aria-labelledby="carousel-heading">
@@ -229,7 +229,7 @@
 
             </li>
             <?php
-  endwhile; ?>
+          endwhile; ?>
             <?php endif;
             ?>
           </ul>
@@ -238,7 +238,7 @@
     </section>
 
   </section>
-  <section class="insights fullscreen whitesmoke-bg">
+  <section class="insights fullscreen">
     <section class="max-width max-padding">
       <section class="pill">
         <p class="pill__label">Blog</p>

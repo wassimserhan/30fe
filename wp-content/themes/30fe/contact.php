@@ -6,7 +6,7 @@ get_header();
 
 <main class="main-container">
   <section class="contact">
-    <section class="contact__hero">
+    <section class="contact__hero fullscreen">
       <section id="cityTO" class="contact__image contact__image--active">
         <img class="contact__image__pin--orange"
           src="<?php echo get_template_directory_uri(); ?>/images/maps/orange-pin.svg" alt="Pin">
@@ -28,7 +28,7 @@ get_header();
         <img src="<?php echo get_template_directory_uri(); ?>/images/maps/calgary.svg" alt="Map of Calgary">
       </section>
     </section>
-    <section class="contact__locations">
+    <section class="contact__locations fullscreen">
       <article class="contact__location">
         <h2 id="showTO" class="contact__location__city" style="color:#ff6f48">Toronto</h2>
         <a
@@ -67,7 +67,7 @@ get_header();
         </a>
       </article>
     </section>
-    <section class="contact__information">
+    <section class="contact__information fullscreen">
       <section class="contact__form whitesmoke-bg max-padding">
         <h3>Submit an assignment</h3>
         <?php echo FrmFormsController::get_form_shortcode( array( 'id' => 1 ) ); ?>
