@@ -2354,6 +2354,7 @@ body.admin-bar .search-overlay {
 }
 .home__hero {
   position: relative;
+  height: 100vh;
 }
 .home__hero__buttons {
   display: flex;
@@ -3485,7 +3486,7 @@ body.admin-bar .search-overlay {
   align-self: stretch;
 }
 .insights__card {
-  max-width: 320px;
+  max-width: 280px;
   padding: 24px 0;
 }
 .insights__card__label {

@@ -254,7 +254,7 @@
         <?php 
 
      $homepagePosts = new WP_Query(array(
-      'posts_per_page' => 3
+      'posts_per_page' => 4
      ));
       while ($homepagePosts->have_posts()): $homepagePosts->the_post();
       ?>

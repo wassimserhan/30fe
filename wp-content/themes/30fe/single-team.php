@@ -21,8 +21,8 @@
         $images = get_field('images');
         foreach($images as $item):?>
 
-          <img class="member__image" src="<?php echo $item['url']; ?>" alt="<?php echo $name; ?>"
-            title="<?php echo $name; ?>" width="100%">
+          <img class="member__image" src="<?php echo $item; ?>" alt="<?php echo $name; ?>" title="<?php echo $name; ?>"
+            width="100%">
           <?php endforeach; ?>
         </section>
 

@@ -12,8 +12,8 @@ global $template;
     <a href="<?php echo get_home_url(); ?>">
       <img class="nav__logo nav__logo__black" src="<?php echo get_template_directory_uri(); ?>/images/logo-black.svg"
         alt="<?php echo get_bloginfo( 'name' ); ?> logo" title="<?php echo get_bloginfo( 'name' ); ?>" width="100%">
-      <img class="nav__logo nav__logo__white" src="<?php echo get_template_directory_uri(); ?>/images/logo-white.svg"
-        alt="<?php echo get_bloginfo( 'name' ); ?> logo" title="<?php echo get_bloginfo( 'name' ); ?>" width="100%">
+      <!-- <img class="nav__logo nav__logo__white" src="<?php echo get_template_directory_uri(); ?>/images/logo-white.svg"
+        alt="<?php echo get_bloginfo( 'name' ); ?> logo" title="<?php echo get_bloginfo( 'name' ); ?>" width="100%"> -->
     </a>
 
 
@@ -35,6 +35,9 @@ global $template;
       <a class="nav__items nav-links" href="<?php echo site_url('/sectors')?>" target="_self">Sectors</a>
       <a class="nav__items nav-links" href="<?php echo site_url('/insights')?>" target="_self">Insights</a>
       <a class="nav__items nav-links" href="<?php echo site_url('/contact')?>" target="_self">Contact</a>
+      <a class="nav__items nav-links" href="<?php echo site_url('/careers')?>" target="_self">Careers</a>
+      <a class="nav__items nav-links" href="#" target="_self">Associations</a>
+      <a class="nav__items nav-links" href="#" target="_self">Community</a>
     </section>
   </section>
 </nav>
