@@ -16,6 +16,9 @@ if (fullscreen) {
   let navData = document.querySelector('.nav');
   let pageTitle = navData.getAttribute('data-page');
   let sectionColors;
+  // let navColors;
+  // let logoBlack = document.querySelector('.nav__logo__black');
+  // let logoWhite = document.querySelector('.nav__logo__white');
 
   switch (pageTitle) {
     case 'Home':

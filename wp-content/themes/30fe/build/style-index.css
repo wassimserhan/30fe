@@ -3747,6 +3747,7 @@ body.admin-bar .search-overlay {
 }
 .single-blog__single-post img {
   max-width: 100%;
+  padding: 20px 0;
 }
 .single-blog__single-post > p {
   font-size: 15px;
