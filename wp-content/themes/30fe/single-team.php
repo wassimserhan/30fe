@@ -8,8 +8,6 @@
       $phone = get_field('phone');
       $email = get_field('email');
       $cv = get_field('cv');
-      $img = get_field('headshot', $team_member);
-      $image = $img['url'];
       $bio = get_field('bio');
     ?>
   <section class="member fullscreen">
