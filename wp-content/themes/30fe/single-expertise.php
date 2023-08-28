@@ -9,7 +9,7 @@ get_header();
 ?>
 
 <main class="main-container">
-  <section class="industry">
+  <section class="industry fullscreen">
     <section class="max-width max-padding">
       <section class="pill">
         <p class="pill__label">Expertise</p>
@@ -93,7 +93,7 @@ get_header();
 
 
   <!-- Form -->
-  <section class="expertise-form">
+  <section class="expertise-form fullscreen">
     <section class="max-width max-padding">
       <section class="expertise-form__wrapper">
         <section class="expertise-form__form">
@@ -146,7 +146,7 @@ get_header();
   </section>
   <!-- Blog -->
 
-  <section class="insights whitesmoke-bg ">
+  <section class="insights fullscreen">
     <section class="max-width max-padding">
       <section class="pill">
         <p class="pill__label">Blog</p>

@@ -10,7 +10,7 @@ get_header();
 
   <!-- Hero -->
 
-  <section class="about__hero fullscreen">
+  <section class="about__hero fullscreen about__hero__transparent">
     <section class="max-width max-padding">
       <h1 class="about__hero__headline">We are 30</h1>
       <h2 class="about__hero__copy">We are over <span class="orange">60 experts</span> in <span class="green">14

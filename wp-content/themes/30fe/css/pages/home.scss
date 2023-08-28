@@ -8,13 +8,17 @@
     &__buttons {
       display: flex;
       justify-content: space-between;
-      max-width: 350px;
+      max-width: 340px;
       width: 100%;
-      gap: 16px;
 
       @include bp(tablet) {
         flex-direction: column;
       }
+    }
+
+    &__button {
+      text-align: center;
+      margin: 20px 0 0;
     }
 
     &__button--white {
@@ -32,7 +36,6 @@
     &__scroll-container {
       display: flex;
       flex-direction: row;
-      max-width: 1400px;
     }
     &__scroll {
       white-space: nowrap;

@@ -7,17 +7,18 @@
       <article class="home__hero__headline">
         <h4 class="about__intro__copy">Precision in Investigation, <br> Clarity in Solutions</h4>
         <section class="home__hero__buttons">
-          <a href="#"><button class="about__intro__button">Submit an
+          <a href="#"><button class="home__hero__button">Submit an
               Assignment</button></a>
-          <a href="<?php echo site_url('/team')?>"><button class="about__intro__button home__hero__button--white">Browse
+          <a href="<?php echo site_url('/team')?>"><button class="home__hero__button home__hero__button--white">Browse
               Experts</button></a>
         </section>
       </article>
-      <article class="scroll-text home__hero__scroll-container">
-        <p class="home__hero__scroll ">We are Engineers &mdash; Scientists &mdash; Experts &mdash; Truth Seekers &mdash;
-          Detectives &mdash; Problem Solvers &mdash; Reporters</p>
-      </article>
     </section>
+    <article class="scroll-text home__hero__scroll-container">
+      <p class="home__hero__scroll ">We are Engineers &mdash; Scientists &mdash; Experts &mdash; Truth Seekers &mdash;
+        Detectives &mdash; Problem Solvers &mdash; Reporters</p>
+    </article>
+
   </section>
 
   <section class="home-expertise fullscreen">

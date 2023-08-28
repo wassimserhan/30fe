@@ -6,8 +6,8 @@
    ?>
 
   <main class="main-container">
-    <section id="single" class="single-post black-bg">
-      <section class="max-width">
+    <section id="single" class="single-post ">
+      <section class="max-width fullscreen">
         <div class="single-post__card">
           <article class="single-post__detail single-post__detail--left">
             <section class="pill pill-single">
@@ -25,7 +25,7 @@
         </div>
       </section>
 
-      <section class="single-blog">
+      <section class="single-blog fullscreen">
         <section class="max-width max-padding">
           <section class="single-blog__single-post">
             <?php
@@ -41,7 +41,7 @@
     </section>
 
     <!-- Related Expert -->
-    <section class="single-blog__wrapper">
+    <section class="single-blog__wrapper fullscreen">
       <?php 
           $team_members = get_field ( 'expert' ); 
           if($team_members ) :

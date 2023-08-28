@@ -8,7 +8,7 @@ Template Post Type: post, industry
 get_header();
 ?>
 <main class="main-container">
-  <section class="industry">
+  <section class="industry fullscreen">
     <section class="max-width max-padding">
       <section class="pill">
         <p class="pill__label">Sectors</p>
@@ -92,7 +92,7 @@ get_header();
 
 
   <!-- Expert Form -->
-  <section class="sector-form">
+  <section class="sector-form fullscreen">
     <section class="sector-form__wrapper max-width max-padding">
       <?php 
 

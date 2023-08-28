@@ -4262,46 +4262,64 @@ if (fullscreen) {
   // let logoWhite = document.querySelector('.nav__logo__white');
 
   switch (pageTitle) {
-    case 'Home':
+    case 'front-page.php':
       sectionColors = [$whitesmoke, $taupe, $whitesmoke, $whitesmoke, $taupe, $whitesmoke, $taupe];
       navColors = [$whitesmoke, $taupe, $whitesmoke, $whitesmoke, $taupe, $whitesmoke, $taupe];
       break;
-    case 'About':
+    case 'about.php':
       sectionColors = [$black, $whitesmoke, $whitesmoke, $taupe, $black, $whitesmoke, $taupe];
       navColors = [$black, $whitesmoke, $whitesmoke, $taupe, $black, $whitesmoke, $taupe];
       break;
-    case 'Team':
+    case 'team.php':
       gsap.set(".nav", {
         backgroundColor: $whitesmoke
       });
       sectionColors = [$whitesmoke, $taupe];
       navColors = [$whitesmoke, $taupe];
       break;
-    case 'Expertise':
+    case 'expertise.php':
       gsap.set(".nav", {
         backgroundColor: $green
       });
       sectionColors = [$green, $whitesmoke, $taupe];
       navColors = [$green, $whitesmoke, $taupe];
       break;
-    case 'Sectors':
+    case 'sectors.php':
       sectionColors = [$black, $black, $taupe, $whitesmoke];
       navColors = [$black, $black, $taupe, $whitesmoke];
       break;
-    case 'Contact':
+    case 'contact.php':
       sectionColors = [$black, $black, $taupe];
       navColors = [$black, $black, $taupe];
       break;
-    case 'Careers':
+    case 'careers.php':
       sectionColors = [$black, $orange, $blue, $green, $taupe, $black];
       navColors = [$black, $orange, $blue, $green, $taupe, $black];
       break;
-    case 'Insights':
+    case 'home.php':
       gsap.set(".nav", {
         backgroundColor: $whitesmoke
       });
       sectionColors = [$whitesmoke];
       navColors = [$whitesmoke];
+      break;
+    case 'single-expertise.php':
+      gsap.set(".nav", {
+        backgroundColor: $whitesmoke
+      });
+      sectionColors = [$whitesmoke, $whitesmoke, $whitesmoke];
+      navColors = [$whitesmoke, $whitesmoke, $whitesmoke];
+      break;
+    case 'single-sector.php':
+      gsap.set(".nav", {
+        backgroundColor: $whitesmoke
+      });
+      sectionColors = [$whitesmoke, $whitesmoke, $taupe];
+      navColors = [$whitesmoke, $whitesmoke, $taupe];
+      break;
+    case 'single.php':
+      sectionColors = [$black, $whitesmoke, $taupe];
+      navColors = [$black, $whitesmoke, $taupe];
       break;
   }
 
