@@ -4318,7 +4318,6 @@ if (fullscreen) {
       trigger: section,
       start: "top 78px",
       end: "bottom 78px",
-      markers: true,
       animation: gsap.to(".nav", {
         backgroundColor: navColors[index],
         immediateRender: false
