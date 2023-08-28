@@ -25,6 +25,7 @@ if (fullscreen) {
     case 'front-page.php':
       sectionColors = [$whitesmoke, $taupe, $whitesmoke, $whitesmoke, $taupe, $whitesmoke, $taupe];
       navColors = [$whitesmoke, $taupe, $whitesmoke, $whitesmoke, $taupe, $whitesmoke, $taupe];
+      logoColor = [$logoBlack]
       break;
     case 'about.php':
       gsap.set(".nav__logo__black", { filter: $logoWhite })
@@ -36,11 +37,13 @@ if (fullscreen) {
       gsap.set(".nav", { backgroundColor: $whitesmoke })
       sectionColors = [$whitesmoke, $taupe];
       navColors = [$whitesmoke, $taupe];
+      logoColor = [$logoBlack]
       break;
     case 'expertise.php':
       gsap.set(".nav", { backgroundColor: $green })
       sectionColors = [$green, $whitesmoke, $taupe];
       navColors = [$green, $whitesmoke, $taupe];
+      logoColor = [$logoBlack]
       break;
     case 'sectors.php':
       gsap.set(".nav__logo__black", { filter: $logoWhite })
@@ -64,21 +67,25 @@ if (fullscreen) {
       gsap.set(".nav", { backgroundColor: $whitesmoke })
       sectionColors = [$whitesmoke];
       navColors = [$whitesmoke];
+      logoColor = [$logoBlack]
       break;
     case 'single-expertise.php':
       gsap.set(".nav", { backgroundColor: $whitesmoke })
       sectionColors = [$whitesmoke, $whitesmoke, $whitesmoke];
       navColors = [$whitesmoke, $whitesmoke, $whitesmoke];
+      logoColor = [$logoBlack]
       break;
     case 'single-sector.php':
       gsap.set(".nav", { backgroundColor: $whitesmoke })
       sectionColors = [$whitesmoke, $whitesmoke, $taupe];
       navColors = [$whitesmoke, $whitesmoke, $taupe];
+      logoColor = [$logoBlack]
       break;
     case 'single-team.php':
       gsap.set(".nav", { backgroundColor: $whitesmoke })
       sectionColors = [$whitesmoke, $taupe];
       navColors = [$whitesmoke, $taupe];
+      logoColor = [$logoBlack]
       break;
     case 'single.php':
       gsap.set(".nav__logo__black", { filter: $logoWhite })
