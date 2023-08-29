@@ -882,6 +882,7 @@ hr {
   max-width: 300px;
   transform: translateX(100%);
   grid-auto-rows: minmax(min-content, 70px);
+  z-index: 1;
 }
 @media (max-width: 479px) {
   .nav__dropdown {
@@ -1018,6 +1019,26 @@ hr {
 .accordion-about__active .plus-nav {
   transition: all 250ms;
   transform: rotate(180deg);
+}
+
+.body__hider {
+  background-color: rgba(29, 24, 95, 0.5);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: inherit;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.35s;
+  transition-delay: 0s;
+  margin-left: 0;
+}
+
+.hide__body {
+  opacity: 1;
 }
 
 .search-overlay {
@@ -4128,9 +4149,6 @@ body.admin-bar .search-overlay {
   text-transform: uppercase;
   display: flex;
   justify-content: space-between;
-}
-.footer__notices {
-  padding: 10px 0 0;
 }
 .footer__link {
   padding: 0 0.8em;

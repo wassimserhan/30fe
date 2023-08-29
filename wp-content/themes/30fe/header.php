@@ -47,4 +47,5 @@ global $post;
       <?php 
              get_template_part( 'modules/navbar' );
       ?>
+      <section class="body__hider"></section>
     </header>

@@ -4396,6 +4396,7 @@ if (fullscreen) {
 const hamburger = document.querySelector('.nav__menu');
 const body = document.getElementsByTagName('body')[0];
 const sideNav = document.querySelector('.nav__dropdown');
+const addTint = document.querySelector('.body__hider');
 hamburger.addEventListener('click', menu);
 
 // document.addEventListener('click', e => {
@@ -4409,6 +4410,7 @@ function menu() {
   sideNav.classList.toggle('hide-nav');
   body.classList.toggle('fixed-position');
   hamburger.classList.toggle('is-active');
+  addTint.classList.toggle('hide__body');
 }
 
 // Side Nav open/close on menu item click
