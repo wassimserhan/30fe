@@ -11,7 +11,7 @@
         <div class="single-post__card">
           <article class="single-post__detail single-post__detail--left">
             <section class="pill pill-single">
-              <p class="pill__label pill__label-single insights__card__label__category__text">
+              <p class="pill__label pill__label-single insights__card__label__category__text--single">
                 <?php echo get_the_category_list(', '); ?>
               </p>
             </section>

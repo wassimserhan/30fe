@@ -3625,6 +3625,16 @@ body.admin-bar .search-overlay {
 .insights__card__label__category__text a {
   color: #1d1c1d;
 }
+.insights__card__label__category__text--single {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  padding: 2px 8px;
+}
+.insights__card__label__category__text--single a {
+  color: #ffffff;
+}
 .insights__card__label__read {
   font-size: 12px;
   font-style: normal;

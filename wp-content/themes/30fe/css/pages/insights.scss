@@ -69,10 +69,21 @@
           font-weight: 700;
           line-height: 150%;
           padding: 2px 8px;
-          // pointer-events: none;
 
           & a {
             color: $black;
+          }
+        }
+
+        &__text--single {
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 150%;
+          padding: 2px 8px;
+
+          & a {
+            color: $white;
           }
         }
       }
