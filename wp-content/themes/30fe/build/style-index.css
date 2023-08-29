@@ -714,7 +714,8 @@ hr {
 .blog-card {
   border: 1px solid #1d1c1d;
   padding: 32px;
-  margin: 32px;
+  margin: 32px auto;
+  max-width: 300px;
   height: -moz-max-content;
   height: max-content;
   background-color: #f2f1ed;
@@ -3841,6 +3842,8 @@ body.admin-bar .search-overlay {
   display: flex;
   color: #1d1c1d;
   height: 100vh;
+  max-height: -moz-max-content;
+  max-height: max-content;
 }
 @media (max-width: 767px) {
   .single-post__card {
@@ -3927,6 +3930,9 @@ body.admin-bar .search-overlay {
 .single-blog {
   font-family: "Inter", sans-serif;
   background-color: #f2f1ed;
+}
+.single-blog__button {
+  margin: 40px 0 0;
 }
 .single-blog__single-post > ol {
   list-style: auto;

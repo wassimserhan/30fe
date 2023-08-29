@@ -41,7 +41,6 @@ function theme_features() {
   add_filter('acf/settings/remove_wp_meta_box', '__return_false');
 
 
-
 }
 
 add_action('after_setup_theme', 'theme_features');

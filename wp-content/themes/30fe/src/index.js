@@ -56,14 +56,7 @@ if (slider3) {
   new Splide('#slider3', {
 
     breakpoints: {
-      1024: {
-        perPage: 3,
 
-      },
-      767: {
-        perPage: 2,
-
-      },
       640: {
         perPage: 1,
         width: '100%',
@@ -78,7 +71,7 @@ if (slider3) {
     // },
     width: '80%',
     type: 'loop',
-    perPage: 3,
+    // perPage: 3,
     pagination: false,
     keyboard: true,
     autoplay: true,

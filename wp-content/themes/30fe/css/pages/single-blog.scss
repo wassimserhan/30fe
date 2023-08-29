@@ -1,5 +1,6 @@
 .single-post {
   padding: 0px;
+
   // @include bp(phone) {
   //   display: block;
   // }
@@ -25,6 +26,8 @@
     display: flex;
     color: $black;
     height: 100vh;
+    max-height: max-content;
+
     @include bp(before_ipad) {
       flex-direction: column;
       max-width: 100%;
@@ -121,6 +124,10 @@
 
   @include bp(phone) {
     // padding: 60px 0;
+  }
+
+  &__button {
+    margin: 40px 0 0;
   }
 
   &__single-post {

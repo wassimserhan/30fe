@@ -7,7 +7,7 @@
 
   <main class="main-container">
     <section id="single" class="single-post ">
-      <section class="max-width fullscreen">
+      <section class="fullscreen">
         <div class="single-post__card">
           <article class="single-post__detail single-post__detail--left">
             <section class="pill pill-single">
@@ -36,17 +36,57 @@
             <?php echo the_content();?>
           </section>
           <?php }  ?>
+          <?php if($download = get_field('download_attachment')) : ?>
+          <a href="<?php echo $cv ?>"><button class="single-blog__button">Download Attachment</button></a>
+          <?php endif ?>
         </section>
       </section>
     </section>
 
     <!-- Related Expert -->
 
-
-
     <section class="single-blog__wrapper fullscreen">
-      <section id="slider3" class="splide splide-blog" aria-labelledby="carousel-heading">
 
+
+      <?php $expert_count = count(get_field('expert')); 
+    
+    if($expert_count < 2) { ?>
+      <?php 
+          $team_members = get_field ( 'expert' ); 
+          if($team_members ) :
+          foreach ($team_members as $item):     
+          $name = get_the_title($item);
+          $title = get_field('title', $item);
+          $phone = get_field('phone', $item);
+          $email = get_field('email', $item); ?>
+
+      <section class="blog-card">
+        <a href="<?php the_permalink($item); ?>">
+          <img class="lazyload blog-card__image" src="<?php echo get_the_post_thumbnail_url($item); ?>" src="
+                  <?php echo $image ?>" alt="<?php echo $name; ?>" title="<?php echo $name; ?>">
+        </a>
+        <section class="pill blog-card__pill">
+          <p class="pill__label">Practice Leads</p>
+        </section>
+        <div class="blog-card__name">
+          <?php echo $name ;?>
+        </div>
+        <div class="blog-card__title">
+          <?php echo $title ;?>
+        </div>
+        <div class="blog-card__email">
+          e: <a href="mailto:<?php echo $email ;?>"><?php echo $email ;?></a>
+        </div>
+      </section>
+      <?php endforeach; ?>
+      <?php endif ;?>
+      <?php } else { ?>
+
+
+
+      <!-- Slider Activated -->
+      <section id="slider3" class="splide splide-blog"
+        data-splide='{"type":"loop","perPage":<?php echo min($expert_count, 3) ;?>}' aria-labelledby="carousel-heading">
         <div class="splide__track">
           <ul class="splide__list">
             <?php 
@@ -58,13 +98,10 @@
           $phone = get_field('phone', $item);
           $email = get_field('email', $item); ?>
             <li class="splide__slide">
-
-
-
               <section class="blog-card">
                 <a href="<?php the_permalink($item); ?>">
                   <img class="lazyload blog-card__image" src="<?php echo get_the_post_thumbnail_url($item); ?>" src="
-        <?php echo $image ?>" alt="<?php echo $name; ?>" title="<?php echo $name; ?>">
+                  <?php echo $image ?>" alt="<?php echo $name; ?>" title="<?php echo $name; ?>">
                 </a>
                 <section class="pill blog-card__pill">
                   <p class="pill__label">Practice Leads</p>
@@ -85,9 +122,8 @@
           </ul>
         </div>
       </section>
+      <?php } ?>
     </section>
-
-
 
 
   </main>

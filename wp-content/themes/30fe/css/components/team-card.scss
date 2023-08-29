@@ -51,8 +51,8 @@
 .blog-card {
   border: 1px solid $black;
   padding: 32px;
-  margin: 32px;
-  // max-width: 300px;
+  margin: 32px auto;
+  max-width: 300px;
   height: max-content;
   background-color: $whitesmoke;
 
