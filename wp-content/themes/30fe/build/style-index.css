@@ -602,6 +602,18 @@ hr {
 .splide-testimonials {
   padding: 0 !important;
 }
+.splide-testimonials__arrow--next {
+  top: 97% !important;
+  left: 50px !important;
+  right: 0 !important;
+  margin: auto !important;
+}
+.splide-testimonials__arrow--prev {
+  top: 97% !important;
+  left: 0 !important;
+  right: 50px !important;
+  margin: auto !important;
+}
 
 .splide-blog {
   background-color: #cbbea5;
