@@ -59,7 +59,26 @@
           $email = get_field('email', $item); ?>
             <li class="splide__slide">
 
-              <?php include get_template_directory() . '/modules/team-card.php'; ?>
+
+
+              <section class="blog-card">
+                <a href="<?php the_permalink($item); ?>">
+                  <img class="lazyload blog-card__image" src="<?php echo get_the_post_thumbnail_url($item); ?>" src="
+        <?php echo $image ?>" alt="<?php echo $name; ?>" title="<?php echo $name; ?>">
+                </a>
+                <section class="pill blog-card__pill">
+                  <p class="pill__label">Practice Leads</p>
+                </section>
+                <div class="blog-card__name">
+                  <?php echo $name ;?>
+                </div>
+                <div class="blog-card__title">
+                  <?php echo $title ;?>
+                </div>
+                <div class="blog-card__email">
+                  e: <a href="mailto:<?php echo $email ;?>"><?php echo $email ;?></a>
+                </div>
+              </section>
             </li>
             <?php endforeach; ?>
             <?php endif ;?>

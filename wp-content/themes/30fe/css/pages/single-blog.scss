@@ -1,8 +1,8 @@
 .single-post {
   padding: 0px;
-  @include bp(phone) {
-    display: block;
-  }
+  // @include bp(phone) {
+  //   display: block;
+  // }
 
   &__figure {
     margin: auto 0;

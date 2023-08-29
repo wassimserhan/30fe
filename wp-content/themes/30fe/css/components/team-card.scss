@@ -47,3 +47,53 @@
     }
   }
 }
+
+.blog-card {
+  border: 1px solid $black;
+  padding: 32px;
+  margin: 32px;
+  // max-width: 300px;
+  height: max-content;
+  background-color: $whitesmoke;
+
+  &--slide {
+    border: none;
+  }
+
+  &__pill {
+    margin: 24px 0 18px;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__name {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -1.6px;
+  }
+
+  &__title {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    text-transform: uppercase;
+    padding: 8px 0 16px;
+  }
+
+  &__email {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+
+    & a {
+      color: $black;
+      text-decoration: underline;
+    }
+  }
+}
