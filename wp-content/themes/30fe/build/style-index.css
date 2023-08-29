@@ -658,6 +658,10 @@ hr {
   bottom: 38px !important;
 }
 
+.splide__arrow:before {
+  border: none !important;
+}
+
 .team-card {
   border: 1px solid #1d1c1d;
   padding: 32px;
@@ -780,6 +784,12 @@ hr {
   border-bottom: 2px solid #ffffff;
   border-left: 2px solid #ffffff;
 }
+@media (max-width: 1023px) {
+  .plus-nav::after {
+    border-bottom: 2px solid #1d1c1d;
+    border-left: 2px solid #1d1c1d;
+  }
+}
 
 .plus-active {
   transition: all 250ms;
@@ -873,6 +883,13 @@ hr {
   transform: translateX(100%);
   grid-auto-rows: minmax(min-content, 70px);
 }
+@media (max-width: 479px) {
+  .nav__dropdown {
+    background-color: #f2f1ed;
+    max-width: 500px;
+    width: 100%;
+  }
+}
 .nav__dropdown .nav__links__list {
   display: flex;
   justify-content: space-between;
@@ -895,7 +912,8 @@ hr {
     font-weight: 500;
     line-height: 140%; /* 28px */
     letter-spacing: -0.6px;
-    color: #ffffff;
+    color: #1d1c1d;
+    text-align: center;
   }
 }
 .nav__logo {
@@ -956,6 +974,11 @@ hr {
 .accordion-about__wrapper {
   position: relative;
 }
+@media (max-width: 479px) {
+  .accordion-about__wrapper {
+    text-align: center;
+  }
+}
 .accordion-about__wrapper .plus {
   display: none;
 }
@@ -979,6 +1002,11 @@ hr {
   font-size: 0.8rem;
   line-height: 22px;
   padding: 0 15px;
+}
+@media (max-width: 479px) {
+  .accordion-about__content {
+    text-align: center;
+  }
 }
 .accordion-about__content > .nav__items {
   font-size: 0.9rem;
@@ -3478,6 +3506,11 @@ body.admin-bar .search-overlay {
   padding: 64px;
   background-color: #f2f1ed;
 }
+@media (max-width: 479px) {
+  .industry__category-bullets {
+    padding: 64px 30px;
+  }
+}
 .industry__category-bullets__items {
   display: flex;
   justify-content: flex-start;
@@ -4154,6 +4187,9 @@ body.admin-bar .search-overlay {
 
 .careers {
   font-family: "Inter", sans-serif;
+}
+.careers__hero {
+  height: 100vh;
 }
 .careers__hero__headline {
   color: #f2f1ed;

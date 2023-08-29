@@ -44,7 +44,9 @@ global $template;
 
 
           <a class="nav__items nav-links" href="<?php echo site_url('/careers')?>" target="_self">Careers</a>
+          <br>
           <a class="nav__items nav-links" href="#" target="_self">Associations</a>
+          <br>
           <a class="nav__items nav-links" href="#" target="_self">Community</a>
 
         </section>

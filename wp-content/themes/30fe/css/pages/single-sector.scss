@@ -90,6 +90,10 @@
       padding: 64px;
       background-color: $whitesmoke;
 
+      @include bp(phone) {
+        padding: 64px 30px;
+      }
+
       // &-border {
       //   // border-left: 1px solid $black;
       //   border-right: 1px solid $black;

@@ -44,7 +44,7 @@ if (slider2) {
 
     type: 'loop',
     perPage: 1,
-    // pagination: focus,
+    pagination: false,
     keyboard: true,
     autoplay: true,
   }).mount();

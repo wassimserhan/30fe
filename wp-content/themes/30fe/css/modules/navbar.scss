@@ -59,16 +59,13 @@
     height: 100vh;
     max-width: 300px;
     transform: translateX(100%);
-    // transition: 300ms transform;
     grid-auto-rows: minmax(min-content, 70px);
-    // display: none;
-    // position: absolute;
-    // background-color: $black;
-    // text-align: center;
-    // padding: 40px 42px 0;
-    // height: 100vh;
-    // width: 100%;
-    // grid-auto-rows: minmax(min-content, 0);
+
+    @include bp(phone) {
+      background-color: $whitesmoke;
+      max-width: 500px;
+      width: 100%;
+    }
 
     .nav__links__list {
       display: flex;
@@ -93,7 +90,8 @@
       font-weight: 500;
       line-height: 140%; /* 28px */
       letter-spacing: -0.6px;
-      color: $white;
+      color: $black;
+      text-align: center;
     }
   }
 
@@ -161,6 +159,10 @@
   &__wrapper {
     position: relative;
 
+    @include bp(phone) {
+      text-align: center;
+    }
+
     .plus {
       display: none;
       @include bp(tablet) {
@@ -185,6 +187,10 @@
     font-size: 0.8rem;
     line-height: 22px;
     padding: 0 15px;
+
+    @include bp(phone) {
+      text-align: center;
+    }
 
     & > .nav__items {
       font-size: 0.9rem;
