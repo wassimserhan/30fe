@@ -1039,6 +1039,7 @@ hr {
 
 .hide__body {
   opacity: 1;
+  z-index: 3;
 }
 
 .search-overlay {
@@ -2050,17 +2051,16 @@ body.admin-bar .search-overlay {
   opacity: 0;
 }
 .stats__label-orange {
-  right: 60px;
+  right: 200px;
 }
 .stats__label-green {
-  right: 380px;
+  right: 518px;
 }
 .stats__label-blue {
-  right: 141px;
+  right: 280px;
 }
 .stats__label-dark {
-  right: 503px;
-  color: #ffffff;
+  right: 644px;
 }
 .stats__overlay-percent {
   margin-left: auto;

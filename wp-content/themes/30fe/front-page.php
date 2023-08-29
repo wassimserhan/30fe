@@ -88,7 +88,7 @@
           <div class="stats__progress-wrap" style="opacity: 0.9, width: 0;">
             <div class="stats__progress black-bg">
               <div id="stats-4" class="stats__overlay-percent">20+</div>
-              <div id="label-4" class="stats__label stats__label-dark black-bg">Court Certified Experts</div>
+              <div id="label-4" class="stats__label stats__label-dark taupe-bg">Court Certified Experts</div>
             </div>
           </div>
         </div>

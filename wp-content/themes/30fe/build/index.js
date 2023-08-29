@@ -4159,7 +4159,7 @@ init = function () {
       }
     });
     tl.to('#statsBar .stats__progress-wrap', {
-      duration: 2,
+      duration: 1,
       width: "100%",
       ease: "power2.out"
     }).to('#stats-1', {
@@ -4182,19 +4182,19 @@ init = function () {
       opacity: 1,
       duration: .5,
       ease: "ease"
-    }).to('#label-2', {
+    }, "<").to('#label-2', {
       opacity: 1,
       duration: .5,
       ease: "ease"
-    }, "+=.2").to('#label-3', {
+    }, "<").to('#label-3', {
       opacity: 1,
       duration: .5,
       ease: "ease"
-    }, "+=.3").to('#label-4', {
+    }, "<").to('#label-4', {
       opacity: 1,
       duration: .5,
       ease: "ease"
-    }, "+=.4");
+    }, "<");
   }
 };
 window.onload = init();
