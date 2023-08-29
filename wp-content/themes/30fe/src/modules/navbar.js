@@ -4,11 +4,11 @@ const sideNav = document.querySelector('.nav__dropdown');
 
 hamburger.addEventListener('click', menu);
 
-document.addEventListener('click', e => {
-  if (!hamburger.contains(e.target)) {
-    closeSideMenu();
-  }
-})
+// document.addEventListener('click', e => {
+//   if (!hamburger.contains(e.target)) {
+//     closeSideMenu();
+//   }
+// })
 
 function menu() {
   sideNav.classList.toggle('show-nav');
@@ -33,3 +33,35 @@ function closeSideMenu() {
   body.classList.remove('fixed-position');
 }
 
+
+
+// About Accordion
+
+const accordionsAbout = document.querySelectorAll('.accordion-about');
+
+const openAccordionAbout = accordion => {
+  const content = accordion.querySelector('.accordion-about__content');
+  accordion.classList.add('accordion-about__active');
+  content.style.maxHeight = content.scrollHeight + 5 + 'px';
+};
+
+const closeAccordionAbout = accordion => {
+  const content = accordion.querySelector('.accordion-about__content');
+  accordion.classList.remove('accordion-about__active');
+  content.style.maxHeight = null;
+  content.style.paddingTop = null;
+};
+
+accordionsAbout.forEach(accordion => {
+  const intro = accordion.querySelector('.accordion-about__wrapper');
+  const content = accordion.querySelector('.accordion-about__content');
+
+  intro.onclick = () => {
+    if (content.style.maxHeight) {
+      closeAccordionAbout(accordion);
+    } else {
+      accordionsAbout.forEach(accordion => closeAccordionAbout(accordion));
+      openAccordionAbout(accordion);
+    }
+  };
+});

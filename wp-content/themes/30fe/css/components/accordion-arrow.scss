@@ -61,3 +61,33 @@
   transition: all 250ms;
   transform: rotate(180deg);
 }
+
+// About Nav
+.plus-nav {
+  position: absolute;
+  right: 30px;
+  width: 16px;
+  height: 12px;
+  margin-top: -6px;
+  transition: all 250ms;
+  top: 12px;
+  cursor: pointer;
+
+  &::after {
+    position: absolute;
+    top: -2px;
+    right: 3px;
+    display: block;
+    width: 8px;
+    height: 8px;
+    content: '';
+    transform: rotate(-45deg);
+    border-bottom: 2px solid $white;
+    border-left: 2px solid $white;
+  }
+}
+
+.plus-active {
+  transition: all 250ms;
+  transform: rotate(180deg);
+}

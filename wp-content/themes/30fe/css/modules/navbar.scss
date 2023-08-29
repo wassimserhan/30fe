@@ -57,7 +57,7 @@
     text-align: left;
     padding: 100px 57px 0;
     height: 100vh;
-    width: 300px;
+    max-width: 300px;
     transform: translateX(100%);
     // transition: 300ms transform;
     grid-auto-rows: minmax(min-content, 70px);
@@ -148,4 +148,61 @@
 
 .hide-nav {
   transition: 300ms transform;
+}
+
+//Accordion
+
+.accordion-about {
+  &__title {
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+
+  &__wrapper {
+    position: relative;
+
+    .plus {
+      display: none;
+      @include bp(tablet) {
+        display: block;
+        position: absolute;
+        right: 4px;
+        width: 16px;
+        top: 20px;
+        left: auto;
+      }
+    }
+  }
+
+  &__content {
+    // padding: 0 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    will-change: max-height;
+    transition: all 0.25s ease-out;
+    color: $white;
+    opacity: 1;
+    font-size: 0.8rem;
+    line-height: 22px;
+    padding: 0 15px;
+
+    & > .nav__items {
+      font-size: 0.9rem;
+    }
+  }
+
+  &__active {
+    .accordion-faq__intro {
+    }
+
+    .accordion-faq__content {
+      margin-bottom: 15px;
+      opacity: 1;
+    }
+
+    .plus-nav {
+      transition: all 250ms;
+      transform: rotate(180deg);
+    }
+  }
 }

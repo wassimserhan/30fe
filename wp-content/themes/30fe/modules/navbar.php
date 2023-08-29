@@ -29,15 +29,41 @@ global $template;
   <!-- Mobile Menu -->
   <section class="nav__dropdown hide-nav">
     <section class="nav__links__list">
+
+
+
+
+
+
+      <article class="accordion-about">
+        <div class="accordion-about__wrapper">
+          <a class="nav__items nav-links" href="<?php echo site_url('/about')?>" target="_self">About</a>
+          <div class="plus-nav"></div>
+        </div>
+        <section class="accordion-about__content">
+
+
+          <a class="nav__items nav-links" href="<?php echo site_url('/careers')?>" target="_self">Careers</a>
+          <a class="nav__items nav-links" href="#" target="_self">Associations</a>
+          <a class="nav__items nav-links" href="#" target="_self">Community</a>
+
+        </section>
+      </article>
+
+
+      <!-- 
       <a class="nav__items nav-links" href="<?php echo site_url('/about')?>" target="_self">About</a>
+
+      <a class="nav__items nav-links" href="<?php echo site_url('/careers')?>" target="_self">Careers</a>
+      <a class="nav__items nav-links" href="#" target="_self">Associations</a>
+      <a class="nav__items nav-links" href="#" target="_self">Community</a> -->
+
       <a class="nav__items nav-links" href="<?php echo site_url('/team')?>" target="_self">Team</a>
       <a class="nav__items nav-links" href="<?php echo site_url('/expertise')?>" target="_self">Expertise</a>
       <a class="nav__items nav-links" href="<?php echo site_url('/sectors')?>" target="_self">Sectors</a>
       <a class="nav__items nav-links" href="<?php echo site_url('/insights')?>" target="_self">Insights</a>
       <a class="nav__items nav-links" href="<?php echo site_url('/contact')?>" target="_self">Contact</a>
-      <a class="nav__items nav-links" href="<?php echo site_url('/careers')?>" target="_self">Careers</a>
-      <a class="nav__items nav-links" href="#" target="_self">Associations</a>
-      <a class="nav__items nav-links" href="#" target="_self">Community</a>
+
     </section>
   </section>
 </nav>
