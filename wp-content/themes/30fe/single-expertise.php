@@ -123,8 +123,8 @@ get_header();
                 'value'    => '"' . get_the_ID() . '"',
                 'compare'  => 'LIKE'
                 )
-          ),
-      ));
+                  ),
+              ));
 
               foreach( $relatedExpertiseTeam as $item ):
               $name = get_the_title($item);

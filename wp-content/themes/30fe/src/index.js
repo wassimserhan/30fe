@@ -54,12 +54,12 @@ const slider3 = document.getElementById('slider3');
 
 if (slider3) {
   new Splide('#slider3', {
-    classes: {
-      arrows: 'splide__arrows splide-form__arrows',
-      arrow: 'splide__arrow splide-form__arrow',
-      prev: 'splide__arrow--prev splide-form__arrow--prev',
-      next: 'splide__arrow--next splide-form__arrow--next',
-    },
+    // classes: {
+    //   arrows: 'splide__arrows splide-form__arrows',
+    //   arrow: 'splide__arrow splide-form__arrow',
+    //   prev: 'splide__arrow--prev splide-form__arrow--prev',
+    //   next: 'splide__arrow--next splide-form__arrow--next',
+    // },
 
     type: 'loop',
     perPage: 3,

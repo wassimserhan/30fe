@@ -41,8 +41,15 @@
     </section>
 
     <!-- Related Expert -->
+
+
+
     <section class="single-blog__wrapper fullscreen">
-      <?php 
+      <section id="slider3" class="splide splide-blog" aria-labelledby="carousel-heading">
+
+        <div class="splide__track">
+          <ul class="splide__list">
+            <?php 
           $team_members = get_field ( 'expert' ); 
           if($team_members ) :
           foreach ($team_members as $item):     
@@ -50,10 +57,19 @@
           $title = get_field('title', $item);
           $phone = get_field('phone', $item);
           $email = get_field('email', $item); ?>
-      <?php include get_template_directory() . '/modules/team-card.php';?>
-      <?php endforeach; ?>
-      <?php endif ;?>
+            <li class="splide__slide">
+
+              <?php include get_template_directory() . '/modules/team-card.php'; ?>
+            </li>
+            <?php endforeach; ?>
+            <?php endif ;?>
+          </ul>
+        </div>
+      </section>
     </section>
+
+
+
 
   </main>
 
