@@ -562,7 +562,8 @@ hr {
   box-shadow: 0px 0px 1px 0px #ffffff;
 }
 .pill-single {
-  margin: auto;
+  margin: 0;
+  padding: 0;
 }
 .pill__label {
   font-size: 12px;
@@ -2197,7 +2198,11 @@ body.admin-bar .search-overlay {
 
 .quote {
   font-family: "Inter", sans-serif;
-  background-color: #cbbea5;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 128px;
 }
 .quote__headline {
   font-size: 48px;
@@ -2249,6 +2254,10 @@ body.admin-bar .search-overlay {
   font-weight: 700;
   line-height: 140%; /* 33.6px */
   letter-spacing: -0.72px;
+}
+.testimonials__quote__client {
+  font-size: 20px;
+  padding: 10px 0;
 }
 
 .home-expertise {
@@ -3770,7 +3779,7 @@ body.admin-bar .search-overlay {
   }
 }
 .single-post__figure {
-  margin: 0;
+  margin: auto 0;
   width: 50%;
   position: relative;
 }
@@ -3789,7 +3798,7 @@ body.admin-bar .search-overlay {
   position: relative;
   display: flex;
   color: #1d1c1d;
-  background-color: #1d1c1d;
+  height: 100vh;
 }
 @media (max-width: 767px) {
   .single-post__card {
@@ -3823,6 +3832,12 @@ body.admin-bar .search-overlay {
   margin: 0 auto;
   padding: 128px 60px;
 }
+@media (max-width: 479px) {
+  .single-post__detail {
+    width: 100%;
+    padding: 128px 20px;
+  }
+}
 .single-post__detail--center {
   text-align: center;
   max-width: 500px;
@@ -3837,7 +3852,7 @@ body.admin-bar .search-overlay {
   line-height: 100%;
   letter-spacing: -3.6px;
   color: #ff6f48;
-  text-align: center;
+  text-align: left;
 }
 .single-post__copy {
   color: #ffffff;
@@ -3845,7 +3860,6 @@ body.admin-bar .search-overlay {
   font-style: normal;
   font-weight: 500;
   line-height: 150%;
-  text-align: center;
 }
 .single-post__stats {
   display: flex;
@@ -3871,7 +3885,6 @@ body.admin-bar .search-overlay {
 .single-blog {
   font-family: "Inter", sans-serif;
   background-color: #f2f1ed;
-  padding: 0 128px;
 }
 .single-blog__single-post > ol {
   list-style: auto;

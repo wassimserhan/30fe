@@ -53,7 +53,7 @@
   </section>
 
   <section class="quote fullscreen">
-    <section class="max-width max-padding">
+    <section class="max-width">
       <h2 class="quote__headline"><?php echo get_field('intro') ?></h2>
       <a href="<?php echo site_url('/team')?>"><button class="quote__button">Find an Expert</button></a>
     </section>
@@ -222,10 +222,12 @@
     if( have_rows('testimonials') ): 
       while( have_rows('testimonials') ) : the_row();
       $quote = get_sub_field('quote');
+      $client = get_sub_field('client');
     ?>
             <li class="splide__slide">
               <section class="testimonials__card">
                 <h3 class="testimonials__quote"><?php echo $quote ?></h3>
+                <p class="testimonials__quote__client"><?php echo $client ?></p>
               </section>
 
             </li>

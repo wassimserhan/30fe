@@ -27,5 +27,10 @@
     font-weight: 700;
     line-height: 140%; /* 33.6px */
     letter-spacing: -0.72px;
+
+    &__client {
+      font-size: 20px;
+      padding: 10px 0;
+    }
   }
 }

@@ -1,6 +1,10 @@
 .quote {
   font-family: 'Inter', sans-serif;
-  background-color: $taupe;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 128px;
 
   &__headline {
     font-size: 48px;
