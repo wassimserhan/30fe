@@ -4010,14 +4010,26 @@ body.admin-bar .search-overlay {
   gap: 32px;
   background-color: #1d1c1d;
   padding: 64px 128px;
+  justify-content: center;
 }
 @media (max-width: 1023px) {
   .contact__locations {
+    padding: 64px 25px;
+  }
+}
+@media (max-width: 479px) {
+  .contact__locations {
     flex-direction: column;
+    padding: 64px 25px;
   }
 }
 .contact__location {
   max-width: 250px;
+}
+@media (max-width: 1023px) {
+  .contact__location {
+    max-width: 150px;
+  }
 }
 .contact__location h2 {
   font-size: 32px;

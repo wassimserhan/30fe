@@ -70,14 +70,24 @@
     gap: 32px;
     background-color: $black;
     padding: 64px 128px;
+    justify-content: center;
 
     @include bp(tablet) {
+      padding: 64px 25px;
+    }
+
+    @include bp(phone) {
       flex-direction: column;
+      padding: 64px 25px;
     }
   }
 
   &__location {
     max-width: 250px;
+
+    @include bp(tablet) {
+      max-width: 150px;
+    }
     & h2 {
       font-size: 32px;
       font-style: normal;
