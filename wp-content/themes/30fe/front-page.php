@@ -225,7 +225,7 @@
     ?>
             <li class="splide__slide">
               <section class="testimonials__card">
-                <h3 class="testimonials__quote">&ldquo;<?php echo $quote ?>&rdquo;</h3>
+                <h3 class="testimonials__quote"><?php echo $quote ?></h3>
               </section>
 
             </li>

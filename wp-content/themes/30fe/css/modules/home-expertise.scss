@@ -46,6 +46,7 @@
 
     &:hover &__arrow {
       transform: rotate(-40deg);
+      transition: 300ms transform;
     }
 
     & p {
