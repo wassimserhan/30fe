@@ -19,8 +19,8 @@
             <p class="single-post__copy"><?php echo $subtitle ?></p>
           </article>
           <figure class="single-post__figure">
-            <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/traffic.jpg"
-              alt="<?php echo $alt; ?>" title="<?php echo $title; ?>">
+            <img loading="lazy" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo $alt; ?>"
+              title="<?php echo $title; ?>">
           </figure>
         </div>
       </section>
