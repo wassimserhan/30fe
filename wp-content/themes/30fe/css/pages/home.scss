@@ -33,6 +33,10 @@
       }
     }
 
+    &__copy {
+      font-size: 4rem;
+    }
+
     &__scroll-container {
       display: flex;
       flex-direction: row;
@@ -47,15 +51,6 @@
       color: $black;
       margin: 0;
       padding-bottom: 32px;
-    }
-
-    &__copy {
-      font-size: 64px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 100%; /* 64px */
-      letter-spacing: -3.2px;
-      color: $white;
     }
   }
 }

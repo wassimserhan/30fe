@@ -8,33 +8,37 @@
   <main class="main-container">
     <section id="single" class="single-post ">
       <section class="fullscreen">
-        <div class="single-post__card">
-          <article class="single-post__detail single-post__detail--left">
-            <section class="pill pill-single">
-              <p class="pill__label pill__label-single insights__card__label__category__text--single">
-                <?php echo get_the_category_list(', '); ?>
-              </p>
-            </section>
-            <h1 class="single-post__headline"><?php the_title() ?></h1>
-            <p class="single-post__copy"><?php echo $subtitle ?></p>
-            <p class="single-post__date"><?php echo get_the_date( 'F j, Y' ); ?></p>
-          </article>
+        <section class="max-width">
 
-          <figure class="single-post__figure">
-            <?php if(get_the_post_thumbnail_url()) { ?>
-            <img loading="lazy" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo $alt; ?>"
-              title="<?php echo $title; ?>">
-            <?php } else { 
+
+          <div class="single-post__card">
+            <article class="single-post__detail single-post__detail--left">
+              <section class="pill pill-single">
+                <p class="pill__label pill__label-single insights__card__label__category__text--single">
+                  <?php echo get_the_category_list(', '); ?>
+                </p>
+              </section>
+              <h1 class="single-post__headline"><?php the_title() ?></h1>
+              <p class="single-post__copy"><?php echo $subtitle ?></p>
+              <p class="single-post__date"><?php echo get_the_date( 'F j, Y' ); ?></p>
+            </article>
+
+            <figure class="single-post__figure">
+              <?php if(get_the_post_thumbnail_url()) { ?>
+              <img loading="lazy" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo $alt; ?>"
+                title="<?php echo $title; ?>">
+              <?php } else { 
               
             foreach((get_the_category()) as $category) { 
             } ?>
-            <img loading="lazy"
-              src="<?php echo get_template_directory_uri(); ?>/images/blog/<?php echo $category->cat_name?>.png"
-              alt="<?php echo $alt; ?>" title="<?php echo $title; ?>">
-            <?php } ?>
-          </figure>
+              <img loading="lazy"
+                src="<?php echo get_template_directory_uri(); ?>/images/blog/<?php echo $category->cat_name?>.png"
+                alt="<?php echo $alt; ?>" title="<?php echo $title; ?>">
+              <?php } ?>
+            </figure>
 
-        </div>
+          </div>
+        </section>
       </section>
 
       <section class="single-blog fullscreen">

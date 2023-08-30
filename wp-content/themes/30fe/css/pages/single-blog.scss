@@ -6,60 +6,43 @@
   // }
 
   &__figure {
-    margin: auto 0;
-    width: 50%;
+    margin: auto;
+    width: 100%;
+    max-width: 1000px;
     position: relative;
-    @include bp(before_ipad) {
-      width: 100%;
-      max-width: 100%;
-    }
-  }
-
-  &__figure--partial img {
-    @include bp(before_ipad) {
-      height: 160px;
-    }
   }
 
   &__card {
-    position: relative;
-    display: flex;
     color: $black;
-    height: 100vh;
-    max-height: max-content;
-
-    @include bp(before_ipad) {
-      flex-direction: column;
-      max-width: 100%;
-    }
+    text-align: center;
   }
 
-  &__image-wrapper {
-    margin: 0;
-    width: 600px;
-    flex: 0 0 600px;
-    @include bp(tablet) {
-      max-width: 100%;
-      flex: 0 0 400px;
-    }
-    @include bp(phone) {
-      max-width: 100%;
-      flex: 0 0 250px;
-    }
-  }
+  // &__image-wrapper {
+  //   margin: 0;
+  //   width: 600px;
+  //   flex: 0 0 600px;
+  //   @include bp(tablet) {
+  //     max-width: 100%;
+  //     flex: 0 0 400px;
+  //   }
+  //   @include bp(phone) {
+  //     max-width: 100%;
+  //     flex: 0 0 250px;
+  //   }
+  // }
 
-  &__image {
-    max-width: 100%;
-  }
+  // &__image {
+  //   max-width: 100%;
+  // }
 
   &__detail {
-    align-self: center;
-    width: 50%;
-    margin: 0 auto;
-    padding: 128px;
+    // align-self: center;
+    // width: 50%;
+    // margin: 0 auto;
+    padding: 128px 0;
     @include bp(phone) {
       width: 100%;
-      padding: 128px 20px;
+      padding: 60px 20px;
     }
 
     &--center {
@@ -79,7 +62,6 @@
     line-height: 100%;
     letter-spacing: -3.6px;
     color: $white;
-    text-align: left;
   }
 
   &__copy {
