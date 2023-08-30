@@ -46,7 +46,7 @@
   }
 
   &__legal {
-    text-align: center;
+    text-align: left;
     color: $taupe;
     font-family: Inter;
     font-size: 0.75rem;
@@ -54,41 +54,5 @@
     font-weight: 400;
     line-height: 150%;
     text-transform: uppercase;
-    display: flex;
-    justify-content: space-between;
   }
-
-  &__notices {
-    // padding: 10px 0 0;
-  }
-
-  &__link {
-    // border-right: 1px solid $black;
-    padding: 0 0.8em;
-    color: $black;
-    @include bp(phone) {
-      display: inline;
-    }
-  }
-
-  &__link:not(:first-child) {
-    border-left: 1px solid $black;
-  }
-}
-
-.btn--footer {
-  background-color: $black;
-  border-radius: 5px;
-  padding: 10px 26px;
-  text-align: center;
-  margin: 16px auto;
-  display: block;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-.btn--link {
-  color: $white;
-  display: block;
-  line-height: 15px;
 }

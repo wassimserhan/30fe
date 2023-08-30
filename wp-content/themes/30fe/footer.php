@@ -97,7 +97,7 @@
         document.write(new Date().getFullYear());
         </script>&nbsp; 30 Forensic engineering
       </p>
-      <p class="footer__notices">
+      <p>
         Office: 1-800-564-5313
       </p>
     </div>
