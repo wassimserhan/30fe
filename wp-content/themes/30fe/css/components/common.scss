@@ -54,6 +54,7 @@ h1 {
   font-weight: bold;
   line-height: 120%;
   letter-spacing: -0.344rem;
+  margin: 0;
   @include bp(phone) {
     font-size: 5rem;
   }
@@ -64,6 +65,7 @@ h2 {
   font-weight: bold;
   line-height: 120%;
   letter-spacing: -0.125rem;
+  margin: 0;
   @include bp(phone) {
     font-size: 3rem;
   }
@@ -73,11 +75,13 @@ h3 {
   font-size: 2.5rem;
   font-weight: bold;
   line-height: 120%;
+  margin: 0;
 }
 
 p {
   font-size: 1.25rem;
   line-height: 160%;
+  margin: 0;
 }
 
 .blue {

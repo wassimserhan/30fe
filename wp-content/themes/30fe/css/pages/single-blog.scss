@@ -1,45 +1,20 @@
 .single-post {
   padding: 0px;
 
-  // @include bp(phone) {
-  //   display: block;
-  // }
+  &__card {
+    color: $black;
+    text-align: center;
+    padding: 0 128px;
+  }
 
   &__figure {
     margin: auto;
     width: 100%;
-    max-width: 1000px;
     position: relative;
   }
 
-  &__card {
-    color: $black;
-    text-align: center;
-  }
-
-  // &__image-wrapper {
-  //   margin: 0;
-  //   width: 600px;
-  //   flex: 0 0 600px;
-  //   @include bp(tablet) {
-  //     max-width: 100%;
-  //     flex: 0 0 400px;
-  //   }
-  //   @include bp(phone) {
-  //     max-width: 100%;
-  //     flex: 0 0 250px;
-  //   }
-  // }
-
-  // &__image {
-  //   max-width: 100%;
-  // }
-
   &__detail {
-    // align-self: center;
-    // width: 50%;
-    // margin: 0 auto;
-    padding: 128px 0;
+    padding: 60px 0 20px;
     @include bp(phone) {
       width: 100%;
       padding: 60px 20px;
@@ -62,6 +37,7 @@
     line-height: 100%;
     letter-spacing: -3.6px;
     color: $white;
+    padding: 20px 0;
   }
 
   &__copy {
@@ -70,6 +46,7 @@
     font-style: normal;
     font-weight: 500;
     line-height: 150%;
+    padding: 0 0 20px;
   }
 
   &__date {
@@ -78,7 +55,7 @@
     font-style: normal;
     font-weight: 500;
     line-height: 150%;
-    padding-top: 20px;
+    padding: 0 0 20px;
   }
 
   &__stats {
