@@ -3874,7 +3874,7 @@ body.admin-bar .search-overlay {
   align-self: center;
   width: 50%;
   margin: 0 auto;
-  padding: 128px 60px;
+  padding: 128px;
 }
 @media (max-width: 479px) {
   .single-post__detail {
