@@ -53,7 +53,7 @@
   padding: 32px;
   margin: 32px auto;
   max-width: 300px;
-  height: max-content;
+  min-height: 575px;
   background-color: $whitesmoke;
 
   &--slide {

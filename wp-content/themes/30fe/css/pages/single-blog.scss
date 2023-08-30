@@ -78,7 +78,7 @@
     font-weight: 700;
     line-height: 100%;
     letter-spacing: -3.6px;
-    color: $orange;
+    color: $white;
     text-align: left;
   }
 
@@ -88,6 +88,15 @@
     font-style: normal;
     font-weight: 500;
     line-height: 150%;
+  }
+
+  &__date {
+    color: $white;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    padding-top: 20px;
   }
 
   &__stats {

@@ -716,8 +716,7 @@ hr {
   padding: 32px;
   margin: 32px auto;
   max-width: 300px;
-  height: -moz-max-content;
-  height: max-content;
+  min-height: 575px;
   background-color: #f2f1ed;
 }
 .blog-card--slide {
@@ -3896,7 +3895,7 @@ body.admin-bar .search-overlay {
   font-weight: 700;
   line-height: 100%;
   letter-spacing: -3.6px;
-  color: #ff6f48;
+  color: #ffffff;
   text-align: left;
 }
 .single-post__copy {
@@ -3905,6 +3904,14 @@ body.admin-bar .search-overlay {
   font-style: normal;
   font-weight: 500;
   line-height: 150%;
+}
+.single-post__date {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  padding-top: 20px;
 }
 .single-post__stats {
   display: flex;
