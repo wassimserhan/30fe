@@ -3915,7 +3915,9 @@ body.admin-bar .search-overlay {
   padding: 10px 0;
 }
 .single-blog__single-post > h2 {
+  font-size: 100px;
   padding: 25px 0;
+  color: red;
 }
 .single-blog__wrapper {
   display: flex;
