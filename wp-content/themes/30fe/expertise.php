@@ -26,10 +26,7 @@ get_header();
         <p class="expertise__copy"><?php the_content() ?></p>
       </section>
     </section>
-    <!-- <figure class="expertise__figure">
-      <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/image.jpg" alt="<?php echo $alt; ?>"
-        title="<?php echo $title; ?>">
-    </figure> -->
+
 
 
 

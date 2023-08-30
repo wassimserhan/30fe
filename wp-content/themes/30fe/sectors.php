@@ -18,14 +18,14 @@ get_header();
         <p class="pill__label pill__label-white">Sectors</p>
       </section>
       <section class="sectors__intro">
-        <h1 class="sectors__title"><?php the_title() ?></h1>
+        <figure class="expertise__figure">
+          <img loading="lazy" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo $alt; ?>"
+            title="<?php echo $title; ?>">
+        </figure>
         <p class="sectors__copy"><?php the_content() ?></p>
       </section>
     </section>
-    <figure class="sectors__image">
-      <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/image.jpg" alt="<?php echo $alt; ?>"
-        title="<?php echo $title; ?>">
-    </figure>
+
 
 
 
