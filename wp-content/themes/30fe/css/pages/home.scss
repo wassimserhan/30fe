@@ -34,7 +34,11 @@
     }
 
     &__copy {
-      font-size: 4rem;
+      font-size: 64px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 100%; /* 64px */
+      letter-spacing: -3.2px;
     }
 
     &__scroll-container {

@@ -2571,7 +2571,11 @@ body.admin-bar .search-overlay {
   }
 }
 .home__hero__copy {
-  font-size: 4rem;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 64px */
+  letter-spacing: -3.2px;
 }
 .home__hero__scroll-container {
   display: flex;
@@ -3564,7 +3568,7 @@ body.admin-bar .search-overlay {
   justify-content: flex-start;
   place-items: center;
   padding: 0 64px;
-  min-height: 250px;
+  min-height: 170px;
   background-color: #1d1c1d;
 }
 .industry__category-items p {
@@ -3572,6 +3576,9 @@ body.admin-bar .search-overlay {
 }
 .industry__category-item {
   padding: 64px 0;
+  font-size: 26px;
+  line-height: 115%;
+  letter-spacing: -0.6px;
 }
 .industry__category-bullets {
   display: flex;
@@ -3591,12 +3598,11 @@ body.admin-bar .search-overlay {
   gap: 20px;
 }
 .industry__category-bullets__item {
-  font-size: 24px;
+  font-size: 18px;
   font-style: normal;
-  font-weight: 700;
-  line-height: 140%; /* 33.6px */
+  font-weight: 400;
   letter-spacing: -0.72px;
-  padding-bottom: 48px;
+  padding-bottom: 20px;
   color: #1d1c1d;
 }
 .industry__category-bullets__subitem {
@@ -3910,14 +3916,38 @@ body.admin-bar .search-overlay {
   max-width: 100%;
   padding: 20px 0;
 }
+.single-blog__single-post > h1 {
+  font-size: 30px;
+  line-height: normal;
+  letter-spacing: normal;
+  padding: 25px 0 0;
+}
+.single-blog__single-post > h2 {
+  font-size: 30px;
+  line-height: normal;
+  letter-spacing: normal;
+  padding: 25px 0 0;
+}
+.single-blog__single-post > h3 {
+  font-size: 30px;
+  line-height: normal;
+  letter-spacing: normal;
+  padding: 25px 0 0;
+}
+.single-blog__single-post > h4 {
+  font-size: 30px;
+  line-height: normal;
+  letter-spacing: normal;
+  padding: 25px 0 0;
+}
+.single-blog__single-post > h5 {
+  font-size: 13px;
+  line-height: normal;
+  letter-spacing: normal;
+}
 .single-blog__single-post > p {
   font-size: 15px;
   padding: 10px 0;
-}
-.single-blog__single-post > h2 {
-  font-size: 100px;
-  padding: 25px 0;
-  color: red;
 }
 .single-blog__wrapper {
   display: flex;
