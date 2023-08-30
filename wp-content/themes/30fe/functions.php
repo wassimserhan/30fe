@@ -358,6 +358,18 @@ function change_post_object_label() {
 }
 add_action( 'init', 'change_post_object_label' );
 
+function myprefix_unregister_tags() {
+    unregister_taxonomy_for_object_type('post_tag', 'post');
+}
+add_action('init', 'myprefix_unregister_tags');
+
+add_action( 'init', 'gp_register_taxonomy_for_object_type' );
+function gp_register_taxonomy_for_object_type() {
+    register_taxonomy_for_object_type( 'post_tag', 'team' );
+};
+
+
+
 function bks_replace_admin_menu_icons_css() {
     ?>
 <style>
