@@ -26,10 +26,10 @@
     <p class="insights__card__label__read"><?php echo display_read_time(); ?></p>
   </article>
   <h6 class="insights__card__title">
-    <?php the_title() ?>
+    <?php echo wp_trim_words( get_the_title(), 5, '...' ); ?>
   </h6>
   <p class="insights__card__copy">
-    <?php echo $subtitle ?>
+    <?php echo trim($subtitle) ?>
   </p>
   <p class="insights__card__more"><a href="<?php the_permalink() ?>">Read more <img
         src="<?php echo get_template_directory_uri(); ?>/images/chevron.svg" /></a></p>
