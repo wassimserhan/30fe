@@ -3,7 +3,7 @@ get_header();
 ?>
 
 <main class="main-container">
-  <section class="insights whitesmoke-bg">
+  <section class="insights fullscreen">
     <section class="max-width max-padding">
       <section class="pill">
         <p class="pill__label">Insights Category Archives</p>
