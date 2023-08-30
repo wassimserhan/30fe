@@ -16,10 +16,13 @@ get_header();
   <section class="expertise green-bg fullscreen">
     <section class="max-width max-padding ">
       <section class="pill pill-white">
-        <p class="pill__label">Expertise</p>
+        <p class="pill__label pill__label-white">Expertise</p>
       </section>
       <section class="expertise__intro">
-        <h1 class="expertise__title"><?php the_title() ?></h1>
+        <figure class="expertise__figure">
+          <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/expertise.gif"
+            alt="<?php echo $alt; ?>" title="<?php echo $title; ?>">
+        </figure>
         <p class="expertise__copy"><?php the_content() ?></p>
       </section>
     </section>

@@ -4306,12 +4306,12 @@ if (fullscreen) {
       logoColor = [$logoBlack];
       break;
     case 'expertise.php':
-      gsap.set(".nav", {
-        backgroundColor: $green
+      gsap.set(".nav__logo__black", {
+        filter: $logoWhite
       });
-      sectionColors = [$green, $whitesmoke, $taupe];
-      navColors = [$green, $whitesmoke, $taupe];
-      logoColor = [$logoBlack];
+      sectionColors = [$black, $whitesmoke, $taupe];
+      navColors = [$black, $whitesmoke, $taupe];
+      logoColor = [$logoWhite, $logoBlack, $logoBlack];
       break;
     case 'sectors.php':
       gsap.set(".nav__logo__black", {
