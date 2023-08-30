@@ -44,13 +44,11 @@
     </section>
 
     <!-- Related Expert -->
-
+    <?php if(get_field ( 'expert' ) ) : ?>
     <section class="single-blog__wrapper fullscreen">
-
-
       <?php $expert_count = count(get_field('expert')); 
     
-    if($expert_count < 2) { ?>
+      if($expert_count < 2) { ?>
       <?php 
           $team_members = get_field ( 'expert' ); 
           if($team_members ) :
@@ -124,6 +122,7 @@
       </section>
       <?php } ?>
     </section>
+    <?php endif ;?>
 
 
   </main>
