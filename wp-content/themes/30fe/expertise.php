@@ -36,7 +36,7 @@ get_header();
 
         <?php 
           $customQuery = new WP_Query(array(
-          'posts_per_page' => 20,
+          'posts_per_page' => -1,
           'post_type'=> 'Expertise'
         ));
 

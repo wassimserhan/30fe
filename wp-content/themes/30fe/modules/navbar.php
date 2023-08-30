@@ -41,8 +41,6 @@ global $template;
           <div class="plus-nav"></div>
         </div>
         <section class="accordion-about__content">
-
-
           <a class="nav__items nav-links" href="<?php echo site_url('/careers')?>" target="_self">Careers</a>
           <br>
           <a class="nav__items nav-links" href="#" target="_self">Associations</a>
@@ -52,16 +50,52 @@ global $template;
         </section>
       </article>
 
+      <article class="accordion-about">
+        <div class="accordion-about__wrapper">
+          <a class="nav__items nav-links" href="<?php echo site_url('/about')?>" target="_self">Expertise</a>
+          <div class="plus-nav"></div>
+        </div>
+        <section class="accordion-about__content">
+          <?php 
+          $customQuery = new WP_Query(array(
+          'posts_per_page' => -1,
+          'post_type'=> 'Expertise'
+        ));
 
-      <!-- 
-      <a class="nav__items nav-links" href="<?php echo site_url('/about')?>" target="_self">About</a>
+        while ($customQuery->have_posts()): $customQuery->the_post();
+        ?>
+          <a class="nav__items nav-links" href="<?php echo the_permalink() ?>" target="_self"><?php the_title() ?></a>
+          <?php endwhile ?>
 
-      <a class="nav__items nav-links" href="<?php echo site_url('/careers')?>" target="_self">Careers</a>
-      <a class="nav__items nav-links" href="#" target="_self">Associations</a>
-      <a class="nav__items nav-links" href="#" target="_self">Community</a> -->
+          <?php wp_reset_postdata() ?>
+
+        </section>
+      </article>
+
+      <article class="accordion-about">
+        <div class="accordion-about__wrapper">
+          <a class="nav__items nav-links" href="<?php echo site_url('/about')?>" target="_self">Sectors</a>
+          <div class="plus-nav"></div>
+        </div>
+        <section class="accordion-about__content">
+          <?php 
+          $customQuery = new WP_Query(array(
+          'posts_per_page' => -1,
+          'post_type'=> 'industry'
+        ));
+
+        while ($customQuery->have_posts()): $customQuery->the_post();
+        ?>
+          <a class="nav__items nav-links" href="<?php echo the_permalink() ?>" target="_self"><?php the_title() ?></a>
+          <?php endwhile ?>
+
+          <?php wp_reset_postdata() ?>
+
+        </section>
+      </article>
 
       <a class="nav__items nav-links" href="<?php echo site_url('/team')?>" target="_self">Team</a>
-      <a class="nav__items nav-links" href="<?php echo site_url('/expertise')?>" target="_self">Expertise</a>
+
       <a class="nav__items nav-links" href="<?php echo site_url('/sectors')?>" target="_self">Sectors</a>
       <a class="nav__items nav-links" href="<?php echo site_url('/insights')?>" target="_self">Insights</a>
       <a class="nav__items nav-links" href="<?php echo site_url('/contact')?>" target="_self">Contact</a>
