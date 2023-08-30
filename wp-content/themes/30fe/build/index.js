@@ -4385,6 +4385,14 @@ if (fullscreen) {
       navColors = [$whitesmoke];
       logoColor = [$logoBlack];
       break;
+    case 'seminars.php':
+      gsap.set(".nav", {
+        backgroundColor: $whitesmoke
+      });
+      sectionColors = [$whitesmoke];
+      navColors = [$whitesmoke];
+      logoColor = [$logoBlack];
+      break;
   }
 
   // const sectionColors = ["#00BFFF", "#FFA07A"]

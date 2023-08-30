@@ -4411,4 +4411,53 @@ body.admin-bar .search-overlay {
   transform: rotate(180deg);
 }
 
+.seminars__button {
+  margin: 40px 0 0;
+}
+.seminars > ol {
+  list-style: auto;
+  margin: 0 0 1.5em 3em;
+}
+.seminars img {
+  max-width: 100%;
+  padding: 20px 0;
+}
+.seminars > h1 {
+  font-size: 30px;
+  line-height: normal;
+  letter-spacing: normal;
+  padding: 25px 0 0;
+}
+.seminars > h2 {
+  font-size: 30px;
+  line-height: normal;
+  letter-spacing: normal;
+  padding: 25px 0 0;
+}
+.seminars > h3 {
+  font-size: 30px;
+  line-height: normal;
+  letter-spacing: normal;
+  padding: 25px 0 0;
+}
+.seminars > h4 {
+  font-size: 30px;
+  line-height: normal;
+  letter-spacing: normal;
+  padding: 25px 0 0;
+}
+.seminars > h5 {
+  font-size: 13px;
+  line-height: normal;
+  letter-spacing: normal;
+}
+.seminars > p {
+  font-size: 15px;
+  padding: 10px 0;
+}
+.seminars > ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
 /*# sourceMappingURL=style-index.css.map*/

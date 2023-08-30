@@ -6,22 +6,23 @@ get_header();
 
 
 <main class="main-container">
-  <section class="single-post">
-    <section class="single-blog fullscreen">
-      <section class="max-width max-padding">
-        <section class="single-blog__single-post">
-          <?php
+
+  <section class="seminars fullscreen">
+    <section class="max-width max-padding">
+      <section class="seminars">
+        <?php
           while( have_posts()) {
           the_post();
           ?>
-          <!-- Display Content -->
-          <?php echo the_content();?>
-        </section>
-        <?php }  ?>
-
+        <h1> <?php echo the_title();?></h1>
+        <!-- Display Content -->
+        <?php echo the_content();?>
       </section>
+      <?php }  ?>
+
     </section>
   </section>
+
 
 </main>
 
