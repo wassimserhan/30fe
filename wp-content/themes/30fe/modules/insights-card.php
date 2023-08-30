@@ -8,7 +8,8 @@
               
             foreach((get_the_category()) as $category) { 
             } ?>
-      <img loading="lazy"
+      <img class="backup-image" loading="lazy"
+        data-img="<?php echo get_template_directory_uri(); ?>/images/blog/<?php echo $category->cat_name?>.png"
         src="<?php echo get_template_directory_uri(); ?>/images/blog/<?php echo $category->cat_name?>.png"
         alt="<?php echo $alt; ?>" title="<?php echo $title; ?>">
       <?php } ?>

@@ -4602,7 +4602,10 @@ class Search {
               ${results.post.map(item => `
                 <a class="search__result__link" href="${item.permalink}">
                   <section class="search__result">
-                    <img src="${item.image}">
+
+                  ${item.image ? `<img src="${item.image}">` : `<img src="${document.querySelector('.backup-image').getAttribute('data-img')}">`}
+
+                
                     <section class="search__result__detail">
                    
                       <h4 class="search__result__title">${item.title}</h4>

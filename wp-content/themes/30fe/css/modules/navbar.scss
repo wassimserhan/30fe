@@ -28,7 +28,7 @@
     min-height: 78px;
     padding: 0 128px;
     position: relative;
-    z-index: 2;
+    z-index: 5;
     @include bp(tablet) {
       padding: 0 15px;
     }
@@ -60,7 +60,7 @@
     max-width: 300px;
     transform: translateX(100%);
     grid-auto-rows: minmax(min-content, 70px);
-    z-index: 1;
+    z-index: 4;
 
     @include bp(phone) {
       background-color: $whitesmoke;
@@ -229,9 +229,11 @@
   transition-delay: 0s;
   margin-left: 0;
   z-index: -10;
+  visibility: hidden;
 }
 
 .hide__body {
   opacity: 1;
-  z-index: 3;
+  z-index: 2;
+  visibility: visible;
 }
