@@ -1,7 +1,5 @@
             <?php 
             
-            
-            
             foreach((get_the_category()) as $category) {
 
             if($category->cat_name === "Collision Reconstruction" || str_contains($category->cat_name, "Biomechanics") || $category->cat_name === "Digital Media Analysis" || $category->cat_name === "Human Factors" || $category->cat_name === "Special Investigations" || $category->cat_name === "Transportation") {

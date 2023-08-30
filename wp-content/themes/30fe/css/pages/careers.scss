@@ -19,8 +19,9 @@
       position: absolute;
 
       &--orange {
-        top: 140px;
-        left: 250px;
+        top: 70px;
+        left: 200px;
+        z-index: 2;
       }
 
       &--taupe {
@@ -50,7 +51,8 @@
 
       &--four {
         top: 130px;
-        left: 30px;
+        left: 90px;
+        z-index: 1;
       }
     }
   }

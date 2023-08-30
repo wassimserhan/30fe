@@ -19,10 +19,21 @@
             <p class="single-post__copy"><?php echo $subtitle ?></p>
             <p class="single-post__date"><?php echo get_the_date( 'F j, Y' ); ?></p>
           </article>
+
           <figure class="single-post__figure">
+            <?php if(get_the_post_thumbnail_url()) { ?>
             <img loading="lazy" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo $alt; ?>"
               title="<?php echo $title; ?>">
+            <?php } else { 
+              
+            foreach((get_the_category()) as $category) { 
+            } ?>
+            <img loading="lazy"
+              src="<?php echo get_template_directory_uri(); ?>/images/blog/<?php echo $category->cat_name?>.png"
+              alt="<?php echo $alt; ?>" title="<?php echo $title; ?>">
+            <?php } ?>
           </figure>
+
         </div>
       </section>
 
