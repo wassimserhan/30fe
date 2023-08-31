@@ -1,10 +1,13 @@
 .quote {
   font-family: 'Inter', sans-serif;
-  height: 100vh;
+
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 0 128px;
+  padding: 128px;
+  @include bp(phone) {
+    padding: 128px 15px;
+  }
 
   &__headline {
     font-size: 48px;

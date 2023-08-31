@@ -39,6 +39,9 @@
       font-weight: 700;
       line-height: 100%; /* 64px */
       letter-spacing: -3.2px;
+      @include bp(phone) {
+        font-size: 44px;
+      }
     }
 
     &__scroll-container {
