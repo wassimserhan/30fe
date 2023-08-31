@@ -29,9 +29,9 @@
     padding: 0 128px;
     position: relative;
     z-index: 5;
-    @include bp(tablet) {
-      padding: 0 15px;
-    }
+    // @include bp(tablet) {
+    //   padding: 0 15px;
+    // }
   }
 
   &__links {
@@ -41,9 +41,9 @@
     align-self: stretch;
     place-items: center;
 
-    @include bp(tablet) {
-      display: none;
-    }
+    // @include bp(tablet) {
+    //   display: none;
+    // }
   }
 
   &__dropdown {
@@ -61,6 +61,7 @@
     transform: translateX(100%);
     grid-auto-rows: minmax(min-content, 70px);
     z-index: 4;
+    overflow: scroll;
 
     @include bp(phone) {
       background-color: $whitesmoke;
@@ -86,14 +87,14 @@
     text-transform: uppercase;
     position: relative;
 
-    @include bp(tablet) {
-      font-size: 20px;
-      font-weight: 500;
-      line-height: 140%; /* 28px */
-      letter-spacing: -0.6px;
-      color: $black;
-      text-align: center;
-    }
+    // @include bp(tablet) {
+    //   font-size: 20px;
+    //   font-weight: 500;
+    //   line-height: 140%; /* 28px */
+    //   letter-spacing: -0.6px;
+    //   color: $black;
+    //   text-align: center;
+    // }
   }
 
   &__logo {
@@ -122,12 +123,12 @@
   display: flex;
   transition: all 0.2s ease-out;
 
-  @include bp(tablet) {
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 200px;
-  }
+  // @include bp(tablet) {
+  //   left: 0;
+  //   right: 0;
+  //   margin: auto;
+  //   width: 200px;
+  // }
 }
 
 .fixed-position {
@@ -166,14 +167,14 @@
 
     .plus {
       display: none;
-      @include bp(tablet) {
-        display: block;
-        position: absolute;
-        right: 4px;
-        width: 16px;
-        top: 20px;
-        left: auto;
-      }
+      // @include bp(tablet) {
+      //   display: block;
+      //   position: absolute;
+      //   right: 4px;
+      //   width: 16px;
+      //   top: 20px;
+      //   left: auto;
+      // }
     }
   }
 
