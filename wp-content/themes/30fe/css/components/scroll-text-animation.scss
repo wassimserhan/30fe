@@ -1,6 +1,8 @@
 .scroll-text {
   overflow: hidden;
-  position: relative;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
 }
 
 .scroll-text * {

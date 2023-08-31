@@ -466,7 +466,7 @@ h2 {
 }
 @media (max-width: 479px) {
   h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
 
@@ -489,9 +489,10 @@ h4 {
 
 p {
   font-size: 1.25rem;
-  line-height: 160%;
+  line-height: 140%;
   margin: 0;
   color: #1d1c1d;
+  letter-spacing: -0.6px;
 }
 
 .label {
@@ -904,7 +905,9 @@ hr {
 
 .scroll-text {
   overflow: hidden;
-  position: relative;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
 }
 
 .scroll-text * {
@@ -2124,28 +2127,6 @@ body.admin-bar .search-overlay {
 .stats__background {
   width: 100%;
 }
-.stats__label {
-  position: absolute;
-  top: -12px;
-  padding: 0 10px;
-  opacity: 0;
-  font-size: 1.25rem;
-  font-weight: 700;
-  line-height: 120%;
-  letter-spacing: -0.05rem;
-}
-.stats__label-orange {
-  right: 200px;
-}
-.stats__label-green {
-  right: 518px;
-}
-.stats__label-blue {
-  right: 280px;
-}
-.stats__label-dark {
-  right: 644px;
-}
 .stats__overlay-percent {
   margin-left: auto;
   padding: 0 20px;
@@ -2157,6 +2138,30 @@ body.admin-bar .search-overlay {
   background-color: #f2f1ed;
   color: #1d1c1d;
   position: absolute;
+}
+.stats__label {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -0.05rem;
+  opacity: 0;
+  text-align: center;
+}
+.stats__label-orange {
+  transform: translate(792px, 0px);
+  max-width: 200px;
+}
+.stats__label-green {
+  transform: translate(514px, 0px);
+  max-width: 243px;
+}
+.stats__label-blue {
+  transform: translate(530px, 0px);
+  max-width: 340px;
+}
+.stats__label-dark {
+  transform: translate(411px, 0px);
+  max-width: 230px;
 }
 .stats__progress {
   padding: 0 20px;
@@ -2213,11 +2218,6 @@ body.admin-bar .search-overlay {
   }
 }
 .email__copy {
-  font-size: 1.25rem;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 140%;
-  letter-spacing: -0.6px;
   padding: 24px 0;
 }
 .email form {
@@ -2425,6 +2425,7 @@ body.admin-bar .search-overlay {
 
 .accordion {
   display: flex;
+  min-height: 800px;
 }
 .accordion--horizontal .accordion__item {
   width: 50px;
@@ -2593,7 +2594,7 @@ body.admin-bar .search-overlay {
 }
 .home__hero__scroll {
   white-space: nowrap;
-  font-size: 15vw;
+  font-size: 200px;
   font-style: normal;
   font-weight: 700;
   line-height: 100%; /* 256px */
@@ -2601,6 +2602,11 @@ body.admin-bar .search-overlay {
   color: #1d1c1d;
   margin: 0;
   padding-bottom: 30px;
+}
+@media (min-width: 1920px) {
+  .home__hero__scroll {
+    font-size: 300px;
+  }
 }
 
 .about {
@@ -3621,6 +3627,9 @@ body.admin-bar .search-overlay {
   line-height: 160%;
   margin: 0;
   padding: 2px 8px;
+}
+.insights__card__title {
+  font-size: 1.2rem;
 }
 .insights__card__copy {
   color: #1d1c1d;

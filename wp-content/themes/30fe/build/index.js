@@ -4209,7 +4209,7 @@ init = function () {
       width: "100%",
       ease: "power2.out"
     }).to('#stats-1', {
-      x: 500,
+      x: 380,
       duration: 1,
       ease: "power2.out"
     }, "-=.6").to('#stats-2', {
@@ -4217,7 +4217,7 @@ init = function () {
       duration: 1,
       ease: "power2.out"
     }, "-=.6").to('#stats-3', {
-      x: 400,
+      x: 320,
       duration: 1,
       ease: "power2.out"
     }, "-=.6").to('#stats-4', {

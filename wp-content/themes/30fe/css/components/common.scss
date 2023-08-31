@@ -76,7 +76,7 @@ h2 {
   margin: 0;
   color: $black;
   @include bp(phone) {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
 
@@ -99,9 +99,10 @@ h4 {
 
 p {
   font-size: 1.25rem;
-  line-height: 160%;
+  line-height: 140%;
   margin: 0;
   color: $black;
+  letter-spacing: -0.6px;
 }
 
 .label {

@@ -13,9 +13,9 @@ init = function () {
     });
 
     tl.to('#statsBar .stats__progress-wrap', { duration: 1, width: "100%", ease: "power2.out" })
-      .to('#stats-1', { x: 500, duration: 1, ease: "power2.out" }, "-=.6")
+      .to('#stats-1', { x: 380, duration: 1, ease: "power2.out" }, "-=.6")
       .to('#stats-2', { x: 300, duration: 1, ease: "power2.out" }, "-=.6")
-      .to('#stats-3', { x: 400, duration: 1, ease: "power2.out" }, "-=.6")
+      .to('#stats-3', { x: 320, duration: 1, ease: "power2.out" }, "-=.6")
       .to('#stats-4', { x: 200, duration: 1, ease: "power2.out" }, "-=.6")
       .to('#label-1', { opacity: 1, duration: .5, ease: "ease" }, "<")
       .to('#label-2', { opacity: 1, duration: .5, ease: "ease" }, "<")

@@ -24,33 +24,6 @@
     width: 100%;
   }
 
-  &__label {
-    position: absolute;
-    top: -12px;
-    padding: 0 10px;
-    opacity: 0;
-    font-size: 1.25rem;
-    font-weight: 700;
-    line-height: 120%;
-    letter-spacing: -0.05rem;
-
-    &-orange {
-      right: 200px;
-    }
-
-    &-green {
-      right: 518px;
-    }
-
-    &-blue {
-      right: 280px;
-    }
-
-    &-dark {
-      right: 644px;
-    }
-  }
-
   &__overlay-percent {
     margin-left: auto;
     padding: 0 20px;
@@ -62,6 +35,45 @@
     background-color: $whitesmoke;
     color: $black;
     position: absolute;
+  }
+
+  &__label {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -0.05rem;
+    opacity: 0;
+    text-align: center;
+
+    // margin-left: auto;
+    // position: absolute;
+    // top: -12px;
+    // padding: 0 10px;
+
+    // font-size: 1.25rem;
+    // font-weight: 700;
+    // line-height: 120%;
+    // letter-spacing: -0.05rem;
+
+    &-orange {
+      transform: translate(792px, 0px);
+      max-width: 200px;
+    }
+
+    &-green {
+      transform: translate(514px, 0px);
+      max-width: 243px;
+    }
+
+    &-blue {
+      transform: translate(530px, 0px);
+      max-width: 340px;
+    }
+
+    &-dark {
+      transform: translate(411px, 0px);
+      max-width: 230px;
+    }
   }
 
   &__progress {

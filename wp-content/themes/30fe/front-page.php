@@ -67,7 +67,7 @@
           <div class="stats__progress black-bg">
             <section>
               <div id="stats-1" class="stats__overlay-percent">25,000+</div>
-
+              <!-- <div id="stats-1" class="stats__overlay-percent test-label">Cases Investigated</div> -->
               <div id="label-1" class="stats__label stats__label-orange orange-bg">Cases Investigated</div>
             </section>
 
@@ -146,7 +146,7 @@
         <h1 class="accordion__heading"
           style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'black-bg') echo 'color: #ffffff'?>">
           <?php echo $headline ?></h1>
-        <h4 class="accordion__body active">
+        <section class="accordion__body active">
           <!-- <h3 class="accordion__headline"
               style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'black-bg') echo 'color: #ffffff'?>">
               <?php echo $headline ?></h3> -->
@@ -157,7 +157,7 @@
           <figure class="accordion__image">
             <img class="lazyload" src="<?php echo $image ?>" alt="<?php echo $alt; ?>" title="<?php echo $alt; ?>">
           </figure>
-        </h4>
+        </section>
         <?php $k++ ?>
       </div>
 
@@ -249,8 +249,8 @@
         <p class="pill__label">Blog</p>
       </section>
       <h2 class="insights__headline">Latest Insights</h2>
-      <h6>Read our latest insights from our best experts.</h6>
-      <br>
+      <p>Read our latest insights from our best experts.</p>
+
 
 
       <section class="insights__grid">
@@ -258,7 +258,7 @@
         <?php 
 
      $homepagePosts = new WP_Query(array(
-      'posts_per_page' => 4
+      'posts_per_page' => 3
      ));
       while ($homepagePosts->have_posts()): $homepagePosts->the_post();
       ?>
