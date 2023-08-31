@@ -86,6 +86,7 @@
     line-height: 150%;
     text-transform: uppercase;
     position: relative;
+    display: block;
 
     @include bp(phone) {
       font-size: 20px;
