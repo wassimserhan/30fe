@@ -441,6 +441,7 @@ h1 {
   line-height: 100%;
   letter-spacing: -0.344rem;
   margin: 0;
+  color: #1d1c1d;
 }
 @media (max-width: 479px) {
   h1 {
@@ -454,6 +455,7 @@ h2 {
   line-height: 120%;
   letter-spacing: -0.125rem;
   margin: 0;
+  color: #1d1c1d;
 }
 @media (max-width: 479px) {
   h2 {
@@ -467,6 +469,7 @@ h3 {
   line-height: 120%;
   letter-spacing: -0.125rem;
   margin: 0;
+  color: #1d1c1d;
 }
 
 h4 {
@@ -474,18 +477,21 @@ h4 {
   font-weight: bold;
   line-height: 120%;
   margin: 0;
+  color: #1d1c1d;
 }
 
 p {
   font-size: 1.25rem;
   line-height: 160%;
   margin: 0;
+  color: #1d1c1d;
 }
 
 .label {
   font-size: 0.75rem;
   line-height: 160%;
   margin: 0;
+  color: #1d1c1d;
 }
 
 .blue {
@@ -877,6 +883,12 @@ hr {
   border-bottom: 2px solid #ffffff;
   border-left: 2px solid #ffffff;
 }
+@media (max-width: 479px) {
+  .plus-nav::after {
+    border-bottom: 2px solid #1d1c1d;
+    border-left: 2px solid #1d1c1d;
+  }
+}
 
 .plus-active {
   transition: all 250ms;
@@ -938,6 +950,11 @@ hr {
   position: relative;
   z-index: 5;
 }
+@media (max-width: 479px) {
+  .nav__bar {
+    padding: 0 15px;
+  }
+}
 .nav__links {
   display: flex;
   align-items: flex-start;
@@ -985,6 +1002,16 @@ hr {
   text-transform: uppercase;
   position: relative;
 }
+@media (max-width: 479px) {
+  .nav__items {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 140%; /* 28px */
+    letter-spacing: -0.6px;
+    color: #1d1c1d;
+    text-align: center;
+  }
+}
 .nav__logo {
   max-width: 50px;
   width: 100%;
@@ -1007,6 +1034,14 @@ hr {
   z-index: 2;
   display: flex;
   transition: all 0.2s ease-out;
+}
+@media (max-width: 1023px) {
+  .brand__container {
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 200px;
+  }
 }
 
 .fixed-position {

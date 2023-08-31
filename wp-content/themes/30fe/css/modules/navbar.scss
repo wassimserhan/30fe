@@ -29,9 +29,9 @@
     padding: 0 128px;
     position: relative;
     z-index: 5;
-    // @include bp(tablet) {
-    //   padding: 0 15px;
-    // }
+    @include bp(phone) {
+      padding: 0 15px;
+    }
   }
 
   &__links {
@@ -87,14 +87,14 @@
     text-transform: uppercase;
     position: relative;
 
-    // @include bp(tablet) {
-    //   font-size: 20px;
-    //   font-weight: 500;
-    //   line-height: 140%; /* 28px */
-    //   letter-spacing: -0.6px;
-    //   color: $black;
-    //   text-align: center;
-    // }
+    @include bp(phone) {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 140%; /* 28px */
+      letter-spacing: -0.6px;
+      color: $black;
+      text-align: center;
+    }
   }
 
   &__logo {
@@ -123,12 +123,12 @@
   display: flex;
   transition: all 0.2s ease-out;
 
-  // @include bp(tablet) {
-  //   left: 0;
-  //   right: 0;
-  //   margin: auto;
-  //   width: 200px;
-  // }
+  @include bp(tablet) {
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 200px;
+  }
 }
 
 .fixed-position {

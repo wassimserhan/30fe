@@ -85,10 +85,10 @@
     border-bottom: 2px solid $white;
     border-left: 2px solid $white;
 
-    // @include bp(tablet) {
-    //   border-bottom: 2px solid $black;
-    //   border-left: 2px solid $black;
-    // }
+    @include bp(phone) {
+      border-bottom: 2px solid $black;
+      border-left: 2px solid $black;
+    }
   }
 }
 
