@@ -3908,7 +3908,7 @@ const magicalSearch = new _modules_search__WEBPACK_IMPORTED_MODULE_19__["default
 const accordion = document.querySelectorAll(".accordion__item");
 var accordionArray = [...accordion];
 accordionArray.forEach(item => {
-  item.addEventListener("click", function () {
+  item.addEventListener("mouseover", function () {
     item.classList.add("active");
     for (let sibling of item.parentNode.children) {
       if (sibling !== item) {

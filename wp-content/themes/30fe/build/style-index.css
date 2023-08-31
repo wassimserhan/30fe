@@ -2285,11 +2285,19 @@ body.admin-bar .search-overlay {
   padding: 0 128px;
 }
 .quote__headline {
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: -2.4px;
   color: #1d1c1d;
   text-align: center;
 }
 @media (max-width: 479px) {
   .quote__headline {
+    font-size: 32px;
+    line-height: 120%; /* 38.4px */
+    letter-spacing: -1.6px;
     text-align: left;
   }
 }
@@ -2326,6 +2334,11 @@ body.admin-bar .search-overlay {
   background-color: #f2f1ed;
 }
 .home-expertise__headline {
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: -2.4px;
   padding-bottom: 32px;
 }
 .home-expertise__list {
@@ -3575,7 +3588,6 @@ body.admin-bar .search-overlay {
   padding-right: 64px;
 }
 .industry__category-item {
-  padding: 64px 0;
   font-size: 26px;
   line-height: 115%;
   letter-spacing: -0.6px;

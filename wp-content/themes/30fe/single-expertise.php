@@ -28,69 +28,69 @@ get_header();
     </figure>
 
 
-    <section class="max-width">
-      <article class="industry__categories">
-        <!-- display industry categories -->
-        <?php
+
+    <article class="industry__categories">
+      <!-- display industry categories -->
+      <?php
           if( have_rows('column_list') ): 
           while( have_rows('column_list') ) : the_row();
             $industryItems = get_sub_field('list_item'); ?>
 
 
-        <section class="industry__category <?php if( get_row_index()== 2) echo "industry__category-bullets-border" ?>">
-          <section class="max-width">
-            <section class="industry__category-items">
-              <p class="industry__category-item <?php echo get_field('category_color')?>">
-                <?php echo '0' . get_row_index() ?></p>
-              <h4 class="industry__category-item"><?php echo $industryItems ?></h4>
-            </section>
+      <section class="industry__category <?php if( get_row_index()== 2) echo "industry__category-bullets-border" ?>">
 
-            <section class="industry__category-bullets">
-              <?php
+        <section class="industry__category-items">
+          <p class="industry__category-item <?php echo get_field('category_color')?>">
+            <?php echo '0' . get_row_index() ?></p>
+          <h4 class="industry__category-item"><?php echo $industryItems ?></h4>
+        </section>
+
+        <section class="industry__category-bullets">
+          <?php
           if( have_rows('items') ): 
           while( have_rows('items') ) : the_row();
             $industryItem = get_sub_field('item'); ?>
-              <section class=" industry__category-bullets__items">
-                <figure class="industry__category-bullets__arrow">
-                  <img loading="lazy"
-                    src="<?php echo get_template_directory_uri(); ?>/images/<?php echo get_field('category_color')?>-arrow.svg"
-                    alt="<?php echo $alt; ?>" title="<?php echo $title; ?>">
-                </figure>
-                <article>
-                  <h5 class="industry__category-bullets__item"><?php echo $industryItem ?></h5>
-                  <?php
+          <section class=" industry__category-bullets__items">
+            <figure class="industry__category-bullets__arrow">
+              <img loading="lazy"
+                src="<?php echo get_template_directory_uri(); ?>/images/<?php echo get_field('category_color')?>-arrow.svg"
+                alt="<?php echo $alt; ?>" title="<?php echo $title; ?>">
+            </figure>
+            <article>
+              <h5 class="industry__category-bullets__item"><?php echo $industryItem ?></h5>
+              <?php
           if( have_rows('subitems') ): ?>
-                  <ul class="industry__category-bullets__subitem">
-                    <?php  
+              <ul class="industry__category-bullets__subitem">
+                <?php  
           while( have_rows('subitems') ) : the_row();
             $subItem = get_sub_field('subitem'); ?>
-                    <li><?php echo $subItem ?></li>
+                <li><?php echo $subItem ?></li>
 
 
-                    <?php
+                <?php
             endwhile; ?>
-                    <?php endif;
-            ?>
-                </article>
-              </section>
-              <?php
-            endwhile; ?>
-              <ul>
                 <?php endif;
             ?>
-            </section>
+            </article>
           </section>
-        </section>
-
-
-        <?php
+          <?php
             endwhile; ?>
-        <?php endif;
+          <ul>
+            <?php endif;
             ?>
-      </article>
-    </section>
+        </section>
+      </section>
 
+
+
+      <?php
+            endwhile; ?>
+      <?php endif;
+            ?>
+    </article>
   </section>
+
+
 
 
 

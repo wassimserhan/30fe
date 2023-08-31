@@ -142,7 +142,7 @@
           $alt = $img['alt'];
           $colors = [ 'whitesmoke-bg', 'blue-bg','green-bg', 'orange-bg', 'taupe-bg','black-bg' ];
         ?>
-        <div class="accordion__item <?php if(get_row_index() === 1) echo 'active' ?> <?php echo $colors[$k] ?>">
+        <div class="accordion__item <?php if(get_row_index() === 1) echo 'active' ?> <?php  echo $colors[$k] ?>">
           <h1 class="accordion__heading"
             style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'black-bg') echo 'color: #ffffff'?>">
             <?php echo $headline ?></h1>
@@ -274,6 +274,7 @@
 
 
   <?php include get_template_directory() . '/modules/email.php'; ?>
+  <?php include get_template_directory() . '/modules/blocks.php'; ?>
 
 
 </main>

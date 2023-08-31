@@ -7,9 +7,17 @@
   padding: 0 128px;
 
   &__headline {
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: -2.4px;
     color: $black;
     text-align: center;
     @include bp(phone) {
+      font-size: 32px;
+      line-height: 120%; /* 38.4px */
+      letter-spacing: -1.6px;
       text-align: left;
     }
   }
