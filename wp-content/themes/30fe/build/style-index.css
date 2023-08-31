@@ -2763,7 +2763,6 @@ body.admin-bar .search-overlay {
 }
 .team__search {
   display: flex;
-  justify-content: space-between;
   gap: 20px;
 }
 @media (max-width: 1023px) {
@@ -2839,10 +2838,16 @@ body.admin-bar .search-overlay {
 }
 .team__grid {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   align-items: flex-start;
   align-self: stretch;
+  gap: 20px;
+}
+@media (max-width: 479px) {
+  .team__grid {
+    gap: 10px;
+  }
 }
 .team__card {
   width: 22%;
@@ -2869,8 +2874,8 @@ body.admin-bar .search-overlay {
   text-transform: uppercase;
 }
 .team__filter-dropdown {
-  min-width: 310px;
   position: relative;
+  flex-grow: 1;
 }
 .team__filter-dropdown * {
   box-sizing: border-box;
@@ -2903,7 +2908,6 @@ body.admin-bar .search-overlay {
 }
 .team__menu {
   list-style: none;
-  padding: 0.2em 0;
   background: #f2f1ed;
   border: 1px #cbbea5 solid;
   color: #9fa5b5;

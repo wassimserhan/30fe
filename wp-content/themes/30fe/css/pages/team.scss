@@ -3,7 +3,7 @@
 
   &__search {
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
     gap: 20px;
 
     @include bp(tablet) {
@@ -90,10 +90,14 @@
 
   &__grid {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     align-items: flex-start;
     align-self: stretch;
+    gap: 20px;
+    @include bp(phone) {
+      gap: 10px;
+    }
   }
 
   &__card {
@@ -123,8 +127,9 @@
   }
 
   &__filter-dropdown {
-    min-width: 310px;
+    // min-width: 310px;
     position: relative;
+    flex-grow: 1;
   }
 
   &__filter-dropdown * {
@@ -162,7 +167,7 @@
 
   &__menu {
     list-style: none;
-    padding: 0.2em 0;
+    // padding: 0.2em 0;
     background: $whitesmoke;
     border: 1px $taupe solid;
     color: #9fa5b5;
