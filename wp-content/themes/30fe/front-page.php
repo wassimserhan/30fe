@@ -196,7 +196,9 @@
           <img class="lazyload accordion-mobile__image" src="<?php echo $image ?>" alt="<?php echo $alt; ?>"
             title="<?php echo $alt; ?>">
 
-          <p class="accordion-mobile__copy"> <?php echo $copy; ?></p>
+          <p class="accordion-mobile__copy"
+            style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'black-bg') echo 'color: #ffffff'?>">
+            <?php echo $copy; ?></p>
 
         </div>
         <?php $k++ ?>
