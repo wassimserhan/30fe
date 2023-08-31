@@ -43,6 +43,8 @@ global $template;
         <section class="accordion-about__content">
           <a class="nav__items nav-links" href="<?php echo site_url('/careers')?>" target="_self">Careers</a>
           <br>
+          <a class="nav__items nav-links" href="<?php echo site_url('/news')?>" target="_self">News</a>
+          <br>
           <a class="nav__items nav-links" href="<?php echo site_url('/seminars')?>" target="_self">Seminars</a>
           <br>
           <a class="nav__items nav-links" href="#" target="_self">Community</a>

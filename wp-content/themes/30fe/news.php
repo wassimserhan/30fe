@@ -25,9 +25,12 @@ get_header();
 
 
         <?php 
+        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; // changed all page to paged
+
           $Newspost = new WP_Query(array(
-          'posts_per_page' => -1,
-          'post_type'=> 'news'
+          'posts_per_page' => 10,
+          'post_type'=> 'news',
+          'paged' => $paged, // changed page to paged
           //  'category_name' => sanitize_title('Geotechnical Engineering')
 
           ));

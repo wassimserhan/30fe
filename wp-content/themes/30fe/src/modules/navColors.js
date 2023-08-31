@@ -105,6 +105,18 @@ if (fullscreen) {
       navColors = [$whitesmoke];
       logoColor = [$logoBlack];
       break;
+    case 'news.php':
+      gsap.set(".nav", { backgroundColor: $whitesmoke })
+      sectionColors = [$whitesmoke];
+      navColors = [$whitesmoke];
+      logoColor = [$logoBlack];
+      break;
+    case 'single-news.php':
+      gsap.set(".nav", { backgroundColor: $whitesmoke })
+      sectionColors = [$whitesmoke];
+      navColors = [$whitesmoke];
+      logoColor = [$logoBlack];
+      break;
   }
 
 
