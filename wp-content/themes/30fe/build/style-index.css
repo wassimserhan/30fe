@@ -438,7 +438,7 @@ button {
 h1 {
   font-size: 6rem;
   font-weight: bold;
-  line-height: 120%;
+  line-height: 100%;
   letter-spacing: -0.344rem;
   margin: 0;
 }
@@ -465,11 +465,25 @@ h3 {
   font-size: 2.5rem;
   font-weight: bold;
   line-height: 120%;
+  letter-spacing: -0.125rem;
+  margin: 0;
+}
+
+h4 {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 120%;
   margin: 0;
 }
 
 p {
   font-size: 1.25rem;
+  line-height: 160%;
+  margin: 0;
+}
+
+.label {
+  font-size: 0.75rem;
   line-height: 160%;
   margin: 0;
 }
@@ -979,7 +993,7 @@ hr {
 .nav__items {
   color: #ffffff;
   font-family: "Inter", sans-serif;
-  font-size: 16px;
+  font-size: 13px;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
@@ -1089,7 +1103,7 @@ hr {
   }
 }
 .accordion-about__content > .nav__items {
-  font-size: 0.9rem;
+  font-size: 13px;
 }
 .accordion-about__active .accordion-faq__content {
   margin-bottom: 15px;
@@ -1341,20 +1355,9 @@ body.admin-bar .search-overlay {
   font-family: "Inter", sans-serif;
 }
 .hiring__headline {
-  font-size: 4.5rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 100%;
-  letter-spacing: -3.6px;
-  margin: 0;
   padding-top: 24px;
 }
 .hiring__copy {
-  font-size: 1.25rem;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 140%;
-  letter-spacing: -0.6px;
   padding: 24px 0;
 }
 .hiring__copy a {
@@ -2289,12 +2292,6 @@ body.admin-bar .search-overlay {
   }
 }
 .quote__headline {
-  font-size: 48px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 100%;
-  letter-spacing: -2.4px;
-  color: #1d1c1d;
   text-align: center;
 }
 @media (max-width: 479px) {
@@ -2338,11 +2335,6 @@ body.admin-bar .search-overlay {
   background-color: #f2f1ed;
 }
 .home-expertise__headline {
-  font-size: 48px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 100%;
-  letter-spacing: -2.4px;
   padding-bottom: 32px;
 }
 .home-expertise__list {
@@ -2506,6 +2498,7 @@ body.admin-bar .search-overlay {
 }
 .accordion__item {
   flex-grow: 0;
+  transition: flex-grow 0.2s ease;
   overflow: hidden;
 }
 .accordion__item.active {
@@ -2517,9 +2510,11 @@ body.admin-bar .search-overlay {
   color: #1d1c1d;
   padding: 20px 64px;
   opacity: 0;
+  transition: opacity 0.22s ease;
 }
 .accordion__body.active {
   opacity: 1;
+  transition: opacity 0.22s ease;
 }
 .accordion__heading {
   font-size: 1.8rem;
@@ -2644,19 +2639,7 @@ body.admin-bar .search-overlay {
   padding-bottom: 32px;
 }
 .about__hero__copy {
-  font-size: 64px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 100%; /* 64px */
-  letter-spacing: -3.2px;
   color: #ffffff;
-}
-.about__intro__copy {
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 120%; /* 38.4px */
-  letter-spacing: -1.6px;
 }
 .about__intro__buttons {
   display: flex;
@@ -2687,10 +2670,6 @@ body.admin-bar .search-overlay {
   }
 }
 .about__investigations__headline {
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 100%; /* 48px */
-  letter-spacing: -2.4px;
   padding: 24px 0;
 }
 .about__investigations__copy {
@@ -2757,11 +2736,6 @@ body.admin-bar .search-overlay {
   margin: auto;
 }
 .about__mission__headline {
-  font-size: 54px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 100%; /* 72px */
-  letter-spacing: -3.6px;
   padding: 32px 0;
 }
 .about__mission__copy {
@@ -2810,18 +2784,8 @@ body.admin-bar .search-overlay {
   margin: 0;
 }
 .about__whatis__headline {
-  font-size: 72px;
-  font-weight: 700;
-  line-height: 100%; /* 72px */
-  letter-spacing: -3.6px;
+  padding-bottom: 20px;
 }
-.about__whatis__copy {
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 140%; /* 28px */
-  letter-spacing: -0.6px;
-}
-
 .team {
   font-family: "Inter", sans-serif;
 }
@@ -3132,11 +3096,6 @@ body.admin-bar .search-overlay {
   border-bottom: 1px solid #1d1c1d;
 }
 .expertise__list-item {
-  font-size: 48px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 100%; /* 48px */
-  letter-spacing: -2.4px;
   padding: 64px 0;
 }
 @media (max-width: 479px) {
@@ -3353,11 +3312,6 @@ body.admin-bar .search-overlay {
   border-bottom: 1px solid #ffffff;
 }
 .sectors__list-item {
-  font-size: 48px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 100%; /* 48px */
-  letter-spacing: -2.4px;
   padding: 64px 0;
   color: #ffffff;
 }
@@ -3536,21 +3490,6 @@ body.admin-bar .search-overlay {
   font-family: "Inter", sans-serif;
   background-color: #f2f1ed;
 }
-.industry__title {
-  font-size: 128px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 100%; /* 128px */
-  letter-spacing: -6.4px;
-  color: #1d1c1d;
-  margin: 0;
-}
-@media (max-width: 1023px) {
-  .industry__title {
-    font-size: 48px;
-    letter-spacing: -2.4px;
-  }
-}
 .industry__copy {
   padding-top: 48px;
   font-size: 20px;
@@ -3661,19 +3600,7 @@ body.admin-bar .search-overlay {
   font-family: "Inter", sans-serif;
 }
 .insights__headline {
-  font-size: 72px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 100%;
-  letter-spacing: -3.6px;
-  margin: 0;
   padding: 48px 0;
-}
-@media (max-width: 479px) {
-  .insights__headline {
-    font-size: 48px;
-    letter-spacing: -2.4px;
-  }
 }
 .insights__copy {
   font-size: 1.25rem;
@@ -3717,10 +3644,9 @@ body.admin-bar .search-overlay {
   place-items: center;
 }
 .insights__card__label__category__text {
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 150%;
+  font-size: 0.75rem;
+  line-height: 160%;
+  margin: 0;
   padding: 2px 8px;
 }
 .insights__card__label__category__text a {
@@ -3741,13 +3667,6 @@ body.admin-bar .search-overlay {
   font-style: normal;
   font-weight: 700;
   line-height: 150%;
-}
-.insights__card__title {
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 140%;
-  letter-spacing: -0.4 0.5rem;
 }
 .insights__card__copy {
   color: #1d1c1d;

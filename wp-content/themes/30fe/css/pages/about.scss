@@ -18,22 +18,12 @@
     }
 
     &__copy {
-      font-size: 64px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 100%; /* 64px */
-      letter-spacing: -3.2px;
       color: $white;
     }
   }
 
   &__intro {
     &__copy {
-      font-size: 32px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 120%; /* 38.4px */
-      letter-spacing: -1.6px;
     }
 
     &__buttons {
@@ -72,10 +62,6 @@
     }
 
     &__headline {
-      font-size: 48px;
-      font-weight: 700;
-      line-height: 100%; /* 48px */
-      letter-spacing: -2.4px;
       padding: 24px 0;
     }
 
@@ -153,11 +139,11 @@
     }
 
     &__headline {
-      font-size: 54px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 100%; /* 72px */
-      letter-spacing: -3.6px;
+      // font-size: 54px;
+      // font-style: normal;
+      // font-weight: 700;
+      // line-height: 100%; /* 72px */
+      // letter-spacing: -3.6px;
       padding: 32px 0;
     }
 
@@ -210,17 +196,14 @@
     }
 
     &__headline {
-      font-size: 72px;
-      font-weight: 700;
-      line-height: 100%; /* 72px */
-      letter-spacing: -3.6px;
+      padding-bottom: 20px;
     }
 
     &__copy {
-      font-size: 20px;
-      font-weight: 500;
-      line-height: 140%; /* 28px */
-      letter-spacing: -0.6px;
+      // font-size: 20px;
+      // font-weight: 500;
+      // line-height: 140%; /* 28px */
+      // letter-spacing: -0.6px;
     }
   }
 }

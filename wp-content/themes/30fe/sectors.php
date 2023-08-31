@@ -44,7 +44,7 @@ get_header();
         <a href="<?php echo the_permalink() ?>">
           <article class="sectors__list-section">
 
-            <p class="sectors__list-item"><?php the_title() ?></p>
+            <h3 class="sectors__list-item"><?php the_title() ?></h3>
 
             <img class="sectors__list-item__arrow"
               src="<?php echo get_template_directory_uri(); ?>/images/arrow-white.svg" alt="arrow" tabindex=0>

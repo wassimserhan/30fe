@@ -3,17 +3,17 @@
   background-color: $whitesmoke;
 
   &__title {
-    font-size: 128px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 100%; /* 128px */
-    letter-spacing: -6.4px;
-    color: $black;
-    margin: 0;
-    @include bp(tablet) {
-      font-size: 48px;
-      letter-spacing: -2.4px;
-    }
+    // font-size: 128px;
+    // font-style: normal;
+    // font-weight: 700;
+    // line-height: 100%; /* 128px */
+    // letter-spacing: -6.4px;
+    // color: $black;
+    // margin: 0;
+    // @include bp(tablet) {
+    //   font-size: 48px;
+    //   letter-spacing: -2.4px;
+    // }
   }
 
   &__copy {

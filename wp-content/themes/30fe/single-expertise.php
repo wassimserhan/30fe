@@ -15,7 +15,7 @@ get_header();
         <p class="pill__label">Expertise</p>
       </section>
       <section class="industry__intro">
-        <h1 class="industry__title industry__title"><?php the_title() ?></h1>
+        <h2 class="industry__title industry__title"><?php the_title() ?></h2>
         <p class="industry__copy industry__copy"><?php echo get_field('intro') ;?></p>
       </section>
     </section>

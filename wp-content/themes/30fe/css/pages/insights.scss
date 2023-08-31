@@ -2,17 +2,7 @@
   font-family: 'Inter', sans-serif;
 
   &__headline {
-    font-size: 72px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 100%;
-    letter-spacing: -3.6px;
-    margin: 0;
     padding: 48px 0;
-    @include bp(phone) {
-      font-size: 48px;
-      letter-spacing: -2.4px;
-    }
   }
 
   &__copy {
@@ -64,10 +54,9 @@
       &__category {
         // background-color: $blue;
         &__text {
-          font-size: 12px;
-          font-style: normal;
-          font-weight: 700;
-          line-height: 150%;
+          font-size: 0.75rem;
+          line-height: 160%;
+          margin: 0;
           padding: 2px 8px;
 
           & a {
@@ -97,11 +86,6 @@
     }
 
     &__title {
-      font-size: 24px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 140%;
-      letter-spacing: -0.4.5rem;
     }
 
     &__copy {

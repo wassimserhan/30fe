@@ -13,12 +13,12 @@ get_header();
   <section class="about__hero fullscreen about__hero__transparent">
     <section class="max-width max-padding">
       <h1 class="about__hero__headline">We are 30</h1>
-      <h2 class="about__hero__copy">We are over <span class="orange">60 experts</span> in <span class="green">14
+      <h3 class="about__hero__copy">We are over <span class="orange">60 experts</span> in <span class="green">14
           practice
           areas</span>, we offer
         evidence-based solutions to
         <span class="blue">clients worldwide</span>.
-      </h2>
+      </h3>
     </section>
   </section>
 
@@ -51,7 +51,7 @@ while( have_rows('360_services') ) : the_row();
             <p class="pill__label">360&deg; Services</p>
           </section>
 
-          <h2 class="about__investigations__headline"><?php echo get_sub_field('services_headline'); ?></h2>
+          <h3 class="about__investigations__headline"><?php echo get_sub_field('services_headline'); ?></h3>
           <p class="about__investigations__copy"><?php echo get_sub_field('services_copy'); ?></p>
         </article>
         <ul class="about__investigations__bullets">
@@ -90,7 +90,7 @@ while( have_rows('mission') ) : the_row();
       <section class="pill about__mission__pill">
         <p class="pill__label">mission</p>
       </section>
-      <h2 class="about__mission__headline"><?php echo get_sub_field('mission_headline'); ?> </h2>
+      <h3 class="about__mission__headline"><?php echo get_sub_field('mission_headline'); ?> </h3>
       <p class="about__mission__copy"><?php echo get_sub_field('mission_copy'); ?> </p>
     </section>
   </section>
@@ -115,7 +115,7 @@ while( have_rows('what_is_30') ) : the_row();
             title="lock">
         </figure>
         <article class="about__whatis__detail about__whatis__detail--left" style="">
-          <h1 class="about__whatis__headline"><?php echo get_sub_field('what_headline'); ?></h1>
+          <h3 class="about__whatis__headline"><?php echo get_sub_field('what_headline'); ?></h3>
           <p class="about__whatis__copy"><?php echo get_sub_field('what_copy'); ?>
           </p>
         </article>

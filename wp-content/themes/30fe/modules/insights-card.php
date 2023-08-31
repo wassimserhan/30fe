@@ -25,9 +25,9 @@
     </aside>
     <p class="insights__card__label__read"><?php echo display_read_time(); ?></p>
   </article>
-  <h6 class="insights__card__title">
+  <h4 class="insights__card__title">
     <?php echo wp_trim_words( get_the_title(), 5, '...' ); ?>
-  </h6>
+  </h4>
   <p class="insights__card__copy">
     <?php echo trim($subtitle) ?>
   </p>

@@ -54,7 +54,7 @@
 
   <section class="quote fullscreen">
     <section class="max-width">
-      <h2 class="quote__headline"><?php echo get_field('intro') ?></h2>
+      <h3 class="quote__headline"><?php echo get_field('intro') ?></h3>
       <a href="<?php echo site_url('/team')?>"><button class="quote__button">Find an Expert</button></a>
     </section>
   </section>
@@ -228,7 +228,7 @@
     ?>
             <li class="splide__slide">
               <section class="testimonials__card">
-                <h3 class="testimonials__quote"><?php echo $quote ?></h3>
+                <p class="testimonials__quote"><?php echo $quote ?></p>
                 <p class="testimonials__quote__client"><?php echo $client ?></p>
               </section>
 
@@ -248,7 +248,7 @@
       <section class="pill">
         <p class="pill__label">Blog</p>
       </section>
-      <h1 class="insights__headline">Latest Insights</h1>
+      <h3 class="insights__headline">Latest Insights</h3>
       <h6>Read our latest insights from our best experts.</h6>
       <br>
 
