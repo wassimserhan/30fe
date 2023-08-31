@@ -2612,6 +2612,9 @@ body.admin-bar .search-overlay {
 .home__hero__scroll-container {
   display: flex;
   flex-direction: row;
+  position: absolute;
+  width: 100%;
+  bottom: 42px;
 }
 .home__hero__scroll {
   white-space: nowrap;

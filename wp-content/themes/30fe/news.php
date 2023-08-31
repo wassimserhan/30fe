@@ -14,7 +14,7 @@ get_header();
       <section class="pill">
         <p class="pill__label">News</p>
       </section>
-      <h1 class="insights__hadline">30FE News</h1>
+      <h1 class="insights__hadline">News</h1>
       <h6>Find all past and future news and reports by our finest writers.</h6>
       <br>
 
