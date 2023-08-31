@@ -20,7 +20,7 @@
   }
 
   &__copy + p {
-    padding-top: 48px;
+    padding-top: 20px;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -29,9 +29,9 @@
     color: $white;
   }
 
-  &__image {
+  &__figure {
     & img {
-      width: 100%;
+      max-width: 640px;
     }
   }
 

@@ -1195,7 +1195,7 @@ body.admin-bar .search-overlay {
 
 .search__result {
   display: flex;
-  gap: 32px;
+  gap: 10px;
   border: 1px solid #f2f1ed;
   border-radius: 10px;
   place-items: center;
@@ -3111,7 +3111,7 @@ body.admin-bar .search-overlay {
   }
 }
 .expertise__copy + p {
-  padding-top: 48px;
+  padding-top: 20px;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -3119,8 +3119,8 @@ body.admin-bar .search-overlay {
   letter-spacing: -0.6px;
   color: #ffffff;
 }
-.expertise__image img {
-  width: 100%;
+.expertise__figure img {
+  max-width: 640px;
 }
 .expertise__list {
   background-color: #f2f1ed;
@@ -3332,7 +3332,7 @@ body.admin-bar .search-overlay {
   }
 }
 .sectors__copy + p {
-  padding-top: 48px;
+  padding-top: 20px;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -3340,8 +3340,8 @@ body.admin-bar .search-overlay {
   letter-spacing: -0.6px;
   color: #ffffff;
 }
-.sectors__image img {
-  width: 100%;
+.sectors__figure img {
+  max-width: 640px;
 }
 .sectors__list {
   background-color: #f2f1ed;
