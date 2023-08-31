@@ -34,8 +34,6 @@ get_header();
 
       <section id="insights" class="insights__grid">
 
-
-
         <?php 
           
           while (have_posts()):the_post(); ?>

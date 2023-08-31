@@ -28,15 +28,15 @@ get_header();
         $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; // changed all page to paged
 
           $Newspost = new WP_Query(array(
-          'posts_per_page' => 10,
+          'posts_per_page' => 12,
           'post_type'=> 'news',
           'paged' => $paged, // changed page to paged
-          //  'category_name' => sanitize_title('Geotechnical Engineering')
+          
 
           ));
           while ($Newspost->have_posts()): $Newspost->the_post(); ?>
 
-        <?php include get_template_directory() . '/modules/insights-card.php'; ?>
+        <?php include get_template_directory() . '/modules/news-card.php'; ?>
 
         <?php endwhile ?>
         <?php wp_reset_postdata() ?>
