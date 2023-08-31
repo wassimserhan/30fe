@@ -38,7 +38,8 @@ get_header();
       <section class="industry__category industry__category-bullets-border">
         <section class="max-width">
           <section class="industry__category-items">
-            <p class="industry__category-item"><?php echo '0' . get_row_index() ?></p>
+            <p class="industry__category-item <?php echo get_field('category_color')?>">
+              <?php echo '0' . get_row_index() ?></p>
             <h4 class="industry__category-item"><?php echo $industryItems ?></h4>
           </section>
 
