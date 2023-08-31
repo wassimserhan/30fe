@@ -29,7 +29,7 @@ while( have_rows('intro') ) : the_row();
 ?>
   <section class="about__intro fullscreen">
     <section class="max-width max-padding">
-      <h4 class="about__intro__copy"><?php echo get_field('intro_copy') ;?></h4>
+      <h3 class="about__intro__copy"><?php echo get_field('intro_copy') ;?></h3>
       <section class="about__intro__buttons">
         <a href="<?php echo site_url('/team')?>"><button class="about__intro__button">Browse Experts</button></a>
       </section>
@@ -90,8 +90,8 @@ while( have_rows('mission') ) : the_row();
       <section class="pill about__mission__pill">
         <p class="pill__label">mission</p>
       </section>
-      <h3 class="about__mission__headline"><?php echo get_sub_field('mission_headline'); ?> </h3>
-      <p class="about__mission__copy"><?php echo get_sub_field('mission_copy'); ?> </p>
+      <h1 class="about__mission__headline"><?php echo get_sub_field('mission_headline'); ?> </h1>
+      <h4 class="about__mission__copy"><?php echo get_sub_field('mission_copy'); ?> </h4>
     </section>
   </section>
   <?php endwhile; endif; ?>

@@ -2,11 +2,6 @@
   font-family: 'Inter', sans-serif;
 
   &__headline {
-    font-size: 4.5rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 100%;
-    letter-spacing: -3.6px;
     margin: 0;
     @include bp(phone) {
       font-size: 48px;

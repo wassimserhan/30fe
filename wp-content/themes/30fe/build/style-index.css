@@ -435,6 +435,13 @@ button {
   margin-top: 78px;
 }
 
+.large-text {
+  font-size: 12.5rem;
+  font-weight: bold;
+  line-height: 100%; /* 256px */
+  letter-spacing: -8px;
+}
+
 h1 {
   font-size: 6rem;
   font-weight: bold;
@@ -2197,11 +2204,6 @@ body.admin-bar .search-overlay {
   font-family: "Inter", sans-serif;
 }
 .email__headline {
-  font-size: 4.5rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 100%;
-  letter-spacing: -3.6px;
   margin: 0;
 }
 @media (max-width: 479px) {
@@ -2588,31 +2590,27 @@ body.admin-bar .search-overlay {
 .home__hero__scroll-container {
   display: flex;
   flex-direction: row;
-  position: absolute;
-  width: 100%;
-  bottom: 42px;
 }
 .home__hero__scroll {
   white-space: nowrap;
-  font-size: 300px;
+  font-size: 15vw;
   font-style: normal;
   font-weight: 700;
   line-height: 100%; /* 256px */
   letter-spacing: -12.8px;
   color: #1d1c1d;
   margin: 0;
-  padding-bottom: 32px;
+  padding-bottom: 30px;
 }
 
 .about {
   font-family: "Inter", sans-serif;
 }
 .about__hero__headline {
-  font-size: 200px;
-  font-style: normal;
-  font-weight: 700;
+  font-size: 12.5rem;
+  font-weight: bold;
   line-height: 100%; /* 256px */
-  letter-spacing: -12.8px;
+  letter-spacing: -8px;
   color: #ffffff;
   margin: 0;
   padding-bottom: 32px;
@@ -2697,10 +2695,6 @@ body.admin-bar .search-overlay {
   padding: 0 0 20px;
 }
 .about__investigations__bullet h3 {
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 120%; /* 38.4px */
-  letter-spacing: -1.6px;
   display: inline;
 }
 .about__investigations__bullet p {
@@ -2716,13 +2710,6 @@ body.admin-bar .search-overlay {
 }
 .about__mission__headline {
   padding: 32px 0;
-}
-.about__mission__copy {
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 140%; /* 33.6px */
-  letter-spacing: -0.72px;
 }
 .about__whatis__card {
   position: relative;
@@ -3643,10 +3630,10 @@ body.admin-bar .search-overlay {
   color: #ffffff;
 }
 .insights__card__label__read {
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 150%;
+  font-size: 0.75rem;
+  line-height: 160%;
+  margin: 0;
+  padding: 2px 8px;
 }
 .insights__card__copy {
   color: #1d1c1d;
@@ -3656,6 +3643,9 @@ body.admin-bar .search-overlay {
   line-height: 150%;
 }
 .insights__card__more {
+  font-size: 0.75rem;
+  line-height: 160%;
+  margin: 0;
   padding-top: 24px;
 }
 .insights__card__more img {

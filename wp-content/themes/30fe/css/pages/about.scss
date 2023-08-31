@@ -7,11 +7,10 @@
     //   background: rgba(0, 0, 0, 0.5);
     // }
     &__headline {
-      font-size: 200px;
-      font-style: normal;
-      font-weight: 700;
+      font-size: 12.5rem;
+      font-weight: bold;
       line-height: 100%; /* 256px */
-      letter-spacing: -12.8px;
+      letter-spacing: -8px;
       color: $white;
       margin: 0;
       padding-bottom: 32px;
@@ -116,10 +115,6 @@
       padding: 0 0 20px;
 
       & h3 {
-        font-size: 32px;
-        font-weight: 700;
-        line-height: 120%; /* 38.4px */
-        letter-spacing: -1.6px;
         display: inline;
       }
 
@@ -148,11 +143,11 @@
     }
 
     &__copy {
-      font-size: 24px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 140%; /* 33.6px */
-      letter-spacing: -0.72px;
+      // font-size: 24px;
+      // font-style: normal;
+      // font-weight: 700;
+      // line-height: 140%; /* 33.6px */
+      // letter-spacing: -0.72px;
     }
   }
 

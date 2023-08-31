@@ -78,10 +78,10 @@
       }
 
       &__read {
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 150%;
+        font-size: 0.75rem;
+        line-height: 160%;
+        margin: 0;
+        padding: 2px 8px;
       }
     }
 
@@ -97,6 +97,9 @@
     }
 
     &__more {
+      font-size: 0.75rem;
+      line-height: 160%;
+      margin: 0;
       padding-top: 24px;
 
       & img {
