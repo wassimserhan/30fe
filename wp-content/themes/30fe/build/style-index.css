@@ -2441,7 +2441,6 @@ body.admin-bar .search-overlay {
 
 .accordion {
   display: flex;
-  height: 80vh; /* <--- This is what you need */
 }
 .accordion--horizontal .accordion__item {
   width: 50px;
@@ -2480,6 +2479,7 @@ body.admin-bar .search-overlay {
 }
 .accordion--horizontal .accordion__body {
   min-width: 318px;
+  max-width: 1280px;
   overflow: hidden;
   color: #1d1c1d;
   padding: 20px 64px;
@@ -2497,12 +2497,8 @@ body.admin-bar .search-overlay {
   letter-spacing: -0.6px;
   padding: 24px 0;
 }
-.accordion--horizontal .accordion__image {
-  padding-bottom: 24px;
-}
 .accordion--horizontal .accordion__image img {
-  width: 640px;
-  height: 360px;
+  max-width: 1280px;
 }
 .accordion__item {
   flex-grow: 0;
@@ -2512,10 +2508,22 @@ body.admin-bar .search-overlay {
 .accordion__item.active {
   flex-grow: 1;
 }
+.accordion__body {
+  min-width: 318px;
+  overflow: hidden;
+  color: #1d1c1d;
+  padding: 20px 64px;
+  opacity: 1;
+  transition: opacity 0.3s ease 0.3s;
+}
+.accordion__body.active {
+  opacity: 0;
+  transition: opacity 0.2s ease 0;
+}
 .accordion__heading {
   font-size: 1.8rem;
   line-height: 0.75;
-  padding: 16px;
+  padding: 20px;
 }
 
 .item {
@@ -2547,6 +2555,16 @@ body.admin-bar .search-overlay {
 .content p {
   margin: 0;
   padding: 1rem;
+}
+
+.content-hide {
+  opacity: 0;
+  transition: opacity 0.2s ease 0;
+}
+
+.content-show {
+  opacity: 1;
+  transition: opacity 0.3s ease 0.3s;
 }
 
 .home {

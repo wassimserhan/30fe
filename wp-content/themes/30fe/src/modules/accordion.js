@@ -6,6 +6,7 @@ var accordionArray = [...accordion];
 accordionArray.forEach(item => {
 
   item.addEventListener("mouseover", function () {
+    console.log(item)
     item.classList.add("active");
 
 
@@ -13,11 +14,10 @@ accordionArray.forEach(item => {
     for (let sibling of item.parentNode.children) {
       if (sibling !== item) {
         sibling.classList.remove('active');
-
-
-
       };
     }
+
+
   });
 });
 

@@ -14,7 +14,7 @@
 .accordion {
   display: flex;
   // height: max-content;
-  height: 80vh; /* <--- This is what you need */
+  // height: 80vh; /* <--- This is what you need */
 
   @include bp(tablet) {
     // display: none;
@@ -72,6 +72,7 @@
 
       &__body {
         min-width: calc(590px - 272px);
+        max-width: 1280px;
         overflow: hidden;
         color: $black;
         padding: 20px 64px;
@@ -93,10 +94,9 @@
       }
 
       &__image {
-        padding-bottom: 24px;
+        // padding-bottom: 24px;
         & img {
-          width: 640px;
-          height: 360px;
+          max-width: 1280px;
         }
       }
     }
@@ -112,10 +112,24 @@
     }
   }
 
+  &__body {
+    min-width: calc(590px - 272px);
+    overflow: hidden;
+    color: $black;
+    padding: 20px 64px;
+    opacity: 1;
+    transition: opacity 0.3s ease 0.3s;
+
+    &.active {
+      opacity: 0;
+      transition: opacity 0.2s ease 0;
+    }
+  }
+
   &__heading {
     font-size: 1.8rem;
     line-height: 0.75;
-    padding: 16px;
+    padding: 20px;
   }
 }
 
@@ -152,12 +166,12 @@
   padding: 1rem;
 }
 
-// .content-hide {
-//   opacity: 0;
-//   transition: opacity 0.2s ease 0;
-// }
+.content-hide {
+  opacity: 0;
+  transition: opacity 0.2s ease 0;
+}
 
-// .content-show {
-//   opacity: 1;
-//   transition: opacity 0.3s ease 0.3s;
-// }
+.content-show {
+  opacity: 1;
+  transition: opacity 0.3s ease 0.3s;
+}

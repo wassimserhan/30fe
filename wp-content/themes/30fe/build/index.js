@@ -3909,6 +3909,7 @@ const accordion = document.querySelectorAll(".accordion__item");
 var accordionArray = [...accordion];
 accordionArray.forEach(item => {
   item.addEventListener("mouseover", function () {
+    console.log(item);
     item.classList.add("active");
     for (let sibling of item.parentNode.children) {
       if (sibling !== item) {
