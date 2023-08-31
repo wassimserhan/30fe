@@ -104,7 +104,7 @@
 
   &__item {
     flex-grow: 0;
-    transition: flex-grow 0.25s ease-in;
+    // transition: flex-grow 0.1s ease-in;
     overflow: hidden;
 
     &.active {
@@ -117,12 +117,12 @@
     overflow: hidden;
     color: $black;
     padding: 20px 64px;
-    opacity: 1;
-    transition: opacity 0.3s ease 0.3s;
+    opacity: 0;
+    // transition: opacity 0.4s ease-in;
 
     &.active {
-      opacity: 0;
-      transition: opacity 0.2s ease 0;
+      opacity: 1;
+      // transition: opacity 0.4s ease-in;
     }
   }
 

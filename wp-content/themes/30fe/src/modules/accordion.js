@@ -1,25 +1,44 @@
-const accordion = document.querySelectorAll(".accordion__item");
 
-var accordionArray = [...accordion];
-
-
-accordionArray.forEach(item => {
-
-  item.addEventListener("mouseover", function () {
-    console.log(item)
-    item.classList.add("active");
+import $ from 'jquery';
 
 
-
-    for (let sibling of item.parentNode.children) {
-      if (sibling !== item) {
-        sibling.classList.remove('active');
-      };
-    }
-
-
-  });
+$(".accordion__item").on("mouseover", function () {
+  $(this).addClass("active").siblings().removeClass("active").children().removeClass("active");
+  $(this).children().eq(1).addClass("active")
 });
+
+
+
+// const accordion = document.querySelectorAll(".accordion__item");
+
+// var accordionArray = [...accordion];
+
+
+// accordionArray.forEach(item => {
+
+//   item.addEventListener("mouseover", function () {
+//     item.classList.add("active");
+
+//     for (let child of item.children) {
+
+//       if (child == item) {
+//         child.classList.add("active");
+//       }
+
+//     }
+
+
+//     for (let sibling of item.parentNode.children) {
+
+//       if (sibling !== item) {
+
+//         sibling.classList.remove('active');
+//       };
+//     }
+
+
+//   });
+// });
 
 
 

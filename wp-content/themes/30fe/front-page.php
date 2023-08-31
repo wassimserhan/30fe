@@ -146,7 +146,7 @@
         <h1 class="accordion__heading"
           style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'black-bg') echo 'color: #ffffff'?>">
           <?php echo $headline ?></h1>
-        <div class="accordion__body">
+        <div class="accordion__body active">
           <!-- <h3 class="accordion__headline"
               style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'black-bg') echo 'color: #ffffff'?>">
               <?php echo $headline ?></h3> -->

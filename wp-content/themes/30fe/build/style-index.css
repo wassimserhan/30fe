@@ -2502,7 +2502,6 @@ body.admin-bar .search-overlay {
 }
 .accordion__item {
   flex-grow: 0;
-  transition: flex-grow 0.25s ease-in;
   overflow: hidden;
 }
 .accordion__item.active {
@@ -2513,12 +2512,10 @@ body.admin-bar .search-overlay {
   overflow: hidden;
   color: #1d1c1d;
   padding: 20px 64px;
-  opacity: 1;
-  transition: opacity 0.3s ease 0.3s;
+  opacity: 0;
 }
 .accordion__body.active {
-  opacity: 0;
-  transition: opacity 0.2s ease 0;
+  opacity: 1;
 }
 .accordion__heading {
   font-size: 1.8rem;

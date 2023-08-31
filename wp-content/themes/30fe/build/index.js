@@ -3800,7 +3800,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_homeStats__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./modules/homeStats */ "./src/modules/homeStats.js");
 /* harmony import */ var _modules_homeStats__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_modules_homeStats__WEBPACK_IMPORTED_MODULE_15__);
 /* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./modules/accordion */ "./src/modules/accordion.js");
-/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_modules_accordion__WEBPACK_IMPORTED_MODULE_16__);
 /* harmony import */ var _modules_navColors__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./modules/navColors */ "./src/modules/navColors.js");
 /* harmony import */ var _modules_navColors__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_modules_navColors__WEBPACK_IMPORTED_MODULE_17__);
 /* harmony import */ var _modules_navbar__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./modules/navbar */ "./src/modules/navbar.js");
@@ -3903,22 +3902,45 @@ const magicalSearch = new _modules_search__WEBPACK_IMPORTED_MODULE_19__["default
 /*!**********************************!*\
   !*** ./src/modules/accordion.js ***!
   \**********************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-const accordion = document.querySelectorAll(".accordion__item");
-var accordionArray = [...accordion];
-accordionArray.forEach(item => {
-  item.addEventListener("mouseover", function () {
-    console.log(item);
-    item.classList.add("active");
-    for (let sibling of item.parentNode.children) {
-      if (sibling !== item) {
-        sibling.classList.remove('active');
-      }
-      ;
-    }
-  });
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "jquery");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(".accordion__item").on("mouseover", function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass("active").siblings().removeClass("active").children().removeClass("active");
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).children().eq(1).addClass("active");
 });
+
+// const accordion = document.querySelectorAll(".accordion__item");
+
+// var accordionArray = [...accordion];
+
+// accordionArray.forEach(item => {
+
+//   item.addEventListener("mouseover", function () {
+//     item.classList.add("active");
+
+//     for (let child of item.children) {
+
+//       if (child == item) {
+//         child.classList.add("active");
+//       }
+
+//     }
+
+//     for (let sibling of item.parentNode.children) {
+
+//       if (sibling !== item) {
+
+//         sibling.classList.remove('active');
+//       };
+//     }
+
+//   });
+// });
 
 //Mobile Accordion
 
