@@ -65,22 +65,10 @@
   }
 
   &__headline {
-    font-size: 4.5rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 100%;
-    letter-spacing: -3.6px;
-    margin: 0;
     padding: 48px 0;
   }
 
   &__copy {
-    font-size: 1.25rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 140%;
-    letter-spacing: -0.6px;
-
     & a {
       color: inherit;
       text-decoration: underline;

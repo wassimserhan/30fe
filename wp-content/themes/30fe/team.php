@@ -11,7 +11,7 @@ get_header();
       <section class="pill">
         <p class="pill__label">Our Team</p>
       </section>
-      <h1 class="team__headline">Meet the people behind 30</h1>
+      <h2 class="team__headline">Meet the people behind 30</h2>
       <p class="team__copy">Worlds of experience, working together. Our engineers, scientists, technical experts and
         support personnel work as teams across their many disciplines to provide a depth of expertise and services to
         our
@@ -73,9 +73,9 @@ get_header();
                 alt="<?php echo $name; ?>" title="<?php echo $name; ?>">
             </figure>
           </a>
-          <h6 class="team__card__name">
+          <h4 class="team__card__name">
             <?php echo $name ?>
-          </h6>
+          </h4>
           <p class="team__card__title">
             <?php echo $title ?>
           </p>

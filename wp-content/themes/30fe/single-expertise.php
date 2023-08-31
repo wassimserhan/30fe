@@ -153,7 +153,7 @@ get_header();
       <section class="pill">
         <p class="pill__label">Blog</p>
       </section>
-      <h1 class="insights__headline">Insights on <?php echo the_title() ?></h1>
+      <h2 class="insights__headline">Insights on <?php echo the_title() ?></h2>
       <h6>Read our latest insights from our best experts.</h6>
       <br>
 

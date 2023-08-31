@@ -2814,20 +2814,7 @@ body.admin-bar .search-overlay {
   visibility: visible;
 }
 .team__headline {
-  font-size: 4.5rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 100%;
-  letter-spacing: -3.6px;
-  margin: 0;
   padding: 48px 0;
-}
-.team__copy {
-  font-size: 1.25rem;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 140%;
-  letter-spacing: -0.6px;
 }
 .team__copy a {
   color: inherit;
@@ -4028,11 +4015,6 @@ body.admin-bar .search-overlay {
   }
 }
 .contact__location h2 {
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 120%; /* 38.4px */
-  letter-spacing: -1.6px;
   color: #ffffff;
   padding-bottom: 24px;
   cursor: pointer;
@@ -4063,10 +4045,6 @@ body.admin-bar .search-overlay {
   }
 }
 .contact__form h3 {
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 100%; /* 48px */
-  letter-spacing: -2.4px;
   padding-bottom: 64px;
 }
 .contact__details {
@@ -4078,10 +4056,6 @@ body.admin-bar .search-overlay {
   }
 }
 .contact__details h3 {
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 100%; /* 48px */
-  letter-spacing: -2.4px;
   padding-bottom: 64px;
 }
 .contact__detail li {
