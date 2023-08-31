@@ -495,15 +495,15 @@ p {
 }
 
 .blue {
-  color: #0175df;
+  color: #0175df !important;
 }
 
 .orange {
-  color: #ff6f48;
+  color: #ff6f48 !important;
 }
 
 .green {
-  color: #08cb80;
+  color: #08cb80 !important;
 }
 
 .black-bg {
@@ -3550,6 +3550,7 @@ body.admin-bar .search-overlay {
   font-size: 26px;
   line-height: 115%;
   letter-spacing: -0.6px;
+  color: #ffffff;
 }
 .industry__category-bullets {
   display: flex;
