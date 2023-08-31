@@ -37,13 +37,8 @@ get_header();
 
 
         <?php 
-          $Insightpost = new WP_Query(array(
-          'posts_per_page' => -1,
-          'post_type'=> 'post'
-          //  'category_name' => sanitize_title('Geotechnical Engineering')
-
-          ));
-          while ($Insightpost->have_posts()): $Insightpost->the_post(); ?>
+          
+          while (have_posts()):the_post(); ?>
 
         <?php include get_template_directory() . '/modules/insights-card.php'; ?>
 

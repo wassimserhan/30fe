@@ -4167,13 +4167,15 @@ body.admin-bar .search-overlay {
 }
 .footer__legal {
   text-align: left;
-  color: #cbbea5;
   font-family: Inter;
   font-size: 0.75rem;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
   text-transform: uppercase;
+}
+.footer__copyright {
+  color: #cbbea5;
 }
 
 .error-404 {
