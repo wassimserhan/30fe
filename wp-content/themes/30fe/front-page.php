@@ -5,7 +5,7 @@
   <section id="home-hero" class="home__hero">
     <section class="max-width">
       <article class="home__hero__headline">
-        <h1 class="home__hero__copy">Precision in Investigation, <br> Clarity in Solutions</h1>
+        <h2 class="home__hero__copy">Precision in Investigation, <br> Clarity in Solutions</h2>
         <section class="home__hero__buttons">
           <a href="#"><button class="home__hero__button">Submit an
               Assignment</button></a>
@@ -25,7 +25,7 @@
     <section class="max-width max-padding">
       <article class="accordion-faq">
         <div class="accordion-faq__wrapper">
-          <h3 class="home-expertise__headline">Our Expertise</h3>
+          <h2 class="home-expertise__headline">Our Expertise</h2>
           <div class="plus"></div>
         </div>
         <section class="accordion-faq__content">
@@ -146,7 +146,7 @@
         <h1 class="accordion__heading"
           style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'black-bg') echo 'color: #ffffff'?>">
           <?php echo $headline ?></h1>
-        <div class="accordion__body active">
+        <h4 class="accordion__body active">
           <!-- <h3 class="accordion__headline"
               style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'black-bg') echo 'color: #ffffff'?>">
               <?php echo $headline ?></h3> -->
@@ -157,7 +157,7 @@
           <figure class="accordion__image">
             <img class="lazyload" src="<?php echo $image ?>" alt="<?php echo $alt; ?>" title="<?php echo $alt; ?>">
           </figure>
-        </div>
+        </h4>
         <?php $k++ ?>
       </div>
 

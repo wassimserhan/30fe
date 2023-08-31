@@ -7,7 +7,7 @@
         <button class="email__submit">Submit</button>
 
       </form>
-      <p class="email__disclaimer">By clicking submit, you're confirming that you agree with our <a href="#">Terms and
-          Conditions</a>.</p>
+      <!-- <p class="email__disclaimer">By clicking submit, you're confirming that you agree with our <a href="#">Terms and
+          Conditions</a>.</p> -->
     </section>
   </section>
