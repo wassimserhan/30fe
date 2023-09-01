@@ -13,7 +13,7 @@ get_header();
 } ?>
 
 <main class="main-container">
-  <section class="expertise green-bg fullscreen ">
+  <section class="expertise fullscreen">
     <section class="max-width max-padding full-height">
       <section class="pill pill-white">
         <p class="pill__label pill__label-white">Expertise</p>
