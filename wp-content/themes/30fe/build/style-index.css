@@ -1589,20 +1589,18 @@ body.admin-bar .search-overlay {
   z-index: 3;
 }
 .about__timeline__story {
-  color: #ffffff;
+  color: #787878;
   text-align: center;
-  opacity: 0.8;
 }
 
 .is-next .about__timeline__story {
   color: #ffffff;
-  opacity: 1;
-  transition: opacity 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .is-next .about__timeline__pill__text {
   color: #1d1c1d;
-  opacity: 1;
+  transition: color 0.2s ease;
 }
 
 .is-next .about__timeline__pill {
@@ -2356,14 +2354,14 @@ body.admin-bar .search-overlay {
 .about {
   font-family: "Inter", sans-serif;
 }
-.about__hero__video iframe {
+.about__hero__video {
   width: 145px;
   position: absolute;
-  top: -20px;
+  top: 310px;
   right: 100px;
 }
 @media (max-width: 479px) {
-  .about__hero__video iframe {
+  .about__hero__video {
     width: 145px;
     position: absolute;
     top: -230px;

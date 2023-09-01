@@ -6,10 +6,10 @@
   font-family: 'Inter', sans-serif;
 
   &__hero {
-    &__video iframe {
+    &__video {
       width: 145px;
       position: absolute;
-      top: -20px;
+      top: 310px;
       right: 100px;
 
       @include bp(phone) {

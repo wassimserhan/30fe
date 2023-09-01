@@ -16,9 +16,9 @@ get_header();
 
 
 
-      <section>
-        <h1 class="about__hero__headline">We are 30</h1>
-      </section>
+
+      <h1 class="about__hero__headline">We are 30</h1>
+
 
 
       <h3 class="about__hero__copy">We are over <span class="orange">60 experts</span> in <span class="green">14
@@ -27,9 +27,9 @@ get_header();
         evidence-based solutions to
         <span class="blue">clients worldwide</span>.
       </h3>
-      <section class="about__hero__video"><iframe src="https://player.vimeo.com/video/860104123?h=3ec7ecc0c1?muted=1"
-          width="640" height="864" frameborder="0" allow="autoplay"></iframe>
-        </iframe></section>
+
+      <img class="about__hero__video" src="<?php echo get_template_directory_uri(); ?>/images/about.gif"
+        alt="About 30FE">
     </section>
   </section>
 
