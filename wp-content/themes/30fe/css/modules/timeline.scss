@@ -40,21 +40,19 @@
   }
 
   &__story {
-    color: $white;
+    color: #787878;
     text-align: center;
-    opacity: 0.8;
   }
 }
 
 .is-next .about__timeline__story {
   color: $white;
-  opacity: 1;
-  transition: opacity 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .is-next .about__timeline__pill__text {
   color: $black;
-  opacity: 1;
+  transition: color 0.2s ease;
 }
 
 .is-next .about__timeline__pill {
