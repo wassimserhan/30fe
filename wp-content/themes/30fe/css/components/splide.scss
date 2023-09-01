@@ -18,13 +18,10 @@
 
 //Timeline
 .splide-timeline {
+  margin: auto;
   .splide__arrow:before {
     border: 1px solid $whitesmoke;
   }
-
-  // .splide__arrow:before {
-  //   background-color: $black;
-  // }
 
   &__arrow--next {
     top: 28% !important;

@@ -660,6 +660,9 @@ hr {
   left: 10% !important;
 }
 
+.splide-timeline {
+  margin: auto;
+}
 .splide-timeline .splide__arrow:before {
   border: 1px solid #f2f1ed;
 }
