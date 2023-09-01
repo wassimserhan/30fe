@@ -66,7 +66,7 @@ class Search {
                     <img src="${item.image}">
                     <section class="search__result__detail">
                    
-                      <h4 class="search__result__title">${item.title}</h4>
+                      <p class="search__result__title">${item.title}</p>
                     </section>
                  </section>
                 </a>`).join('')}
@@ -83,7 +83,7 @@ class Search {
                     <img src="${item.image}">
                     <section class="search__result__detail">
                    
-                      <h4 class="search__result__title">${item.title}</h4>
+                      <p class="search__result__title">${item.title}</p>
                     </section>
                  </section>
                 </a>`).join('')}
@@ -99,7 +99,7 @@ class Search {
                     <img src="${item.image}">
                     <section class="search__result__detail">
                        
-                      <h4 class="search__result__title">${item.title}</h4>
+                      <p class="search__result__title">${item.title}</p>
                     </section>
                  </section>
                 </a>`).join('')}
@@ -119,7 +119,7 @@ class Search {
                 
                     <section class="search__result__detail">
                    
-                      <h4 class="search__result__title">${item.title}</h4>
+                      <p class="search__result__title">${item.title}</p>
                     </section>
                  </section>
                 </a>`).join('')}
