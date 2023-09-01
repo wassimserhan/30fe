@@ -2260,7 +2260,10 @@ body.admin-bar .search-overlay {
   font-weight: 700;
   line-height: 120%; /* 24px */
   letter-spacing: -0.6px;
-  padding-bottom: 10px;
+}
+
+.accordion-mobile__image {
+  padding-top: 10px;
 }
 
 .content {

@@ -4018,6 +4018,33 @@ items.forEach((e, i) => {
   });
 });
 
+// const itemsVertical = gsap.utils.toArray(".itemVertical");
+// let currentItemVertical = null;
+
+// items.forEach((e, i) => {
+//   const contentVertical = e.querySelector(".contentVertical");
+//   const t = gsap.to(contentVertical, {
+//     height: "auto",
+//     paused: true
+//   });
+
+//   e._accordionTween = t;
+
+//   e.addEventListener("click", () => {
+//     if (currentItemVertical !== null) {
+//       items[currentItemVertical].classList.toggle("active");
+//       if (currentItemVertical === i) {
+//         currentItemVertical = null;
+//         return t.reverse();
+//       }
+//       itemsVertical[currentItemVertical]._accordionTween.reverse();
+//     }
+//     e.classList.toggle("active");
+//     t.play();
+//     currentItemVertical = i;
+//   });
+// });
+
 /***/ }),
 
 /***/ "./src/modules/blogSearch.js":
