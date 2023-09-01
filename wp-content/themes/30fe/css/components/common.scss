@@ -105,6 +105,13 @@ p {
   letter-spacing: -0.6px;
 }
 
+.full-height {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .label {
   font-size: 0.75rem;
   line-height: 160%;

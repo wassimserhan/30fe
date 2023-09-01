@@ -13,12 +13,11 @@
 
 .accordion {
   display: flex;
-
   // height: max-content;
   // height: 80vh; /* <--- This is what you need */
 
-  @include bp(laptop) {
-    // min-height: 800px;
+  @include bp(tablet) {
+    // display: none;
   }
 
   &--horizontal {
@@ -102,7 +101,7 @@
 
   &__item {
     flex-grow: 0;
-    transition: flex-grow 0.1s ease;
+    transition: flex-grow 0.2s ease;
     overflow: hidden;
 
     &.active {
@@ -115,12 +114,12 @@
     overflow: hidden;
     color: $black;
     padding: 20px 64px;
-    // opacity: 0;
-    // transition: opacity 0.22s ease;
+    opacity: 0;
+    transition: opacity 0.22s ease;
 
     &.active {
-      // opacity: 1;
-      // transition: opacity 0.22s ease;
+      opacity: 1;
+      transition: opacity 0.22s ease;
     }
   }
 

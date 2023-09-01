@@ -12,8 +12,8 @@ get_header();
 } ?>
 
 <main class="main-container">
-  <section class="sectors black-bg">
-    <section class="max-width max-padding fullscreen">
+  <section class="sectors fullscreen">
+    <section class="max-width max-padding  full-height">
       <section class="pill pill-white">
         <p class="pill__label pill__label-white">Sectors</p>
       </section>

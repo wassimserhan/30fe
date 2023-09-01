@@ -21,7 +21,7 @@
 
   </section>
 
-  <section class="home-expertise fullscreen">
+  <section class="home-expertise fullscreen full-height">
     <section class="max-width max-padding">
       <article class="accordion-faq">
         <div class="accordion-faq__wrapper">
@@ -213,7 +213,7 @@
   </section>
 
 
-  <section class="testimonials fullscreen">
+  <section class="testimonials fullscreen full-height">
     <section class="max-width max-padding">
       <h2 class="testimonials__headline">Testimonials</h2>
       <section id="slider1" class="splide splide-testimonials" aria-labelledby="carousel-heading">

@@ -490,6 +490,13 @@ p {
   letter-spacing: -0.6px;
 }
 
+.full-height {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .label {
   font-size: 0.75rem;
   line-height: 160%;
@@ -2273,6 +2280,7 @@ body.admin-bar .search-overlay {
 
 .quote {
   font-family: "Inter", sans-serif;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -2481,7 +2489,7 @@ body.admin-bar .search-overlay {
 }
 .accordion__item {
   flex-grow: 0;
-  transition: flex-grow 0.1s ease;
+  transition: flex-grow 0.2s ease;
   overflow: hidden;
 }
 .accordion__item.active {
@@ -2492,6 +2500,12 @@ body.admin-bar .search-overlay {
   overflow: hidden;
   color: #1d1c1d;
   padding: 20px 64px;
+  opacity: 0;
+  transition: opacity 0.22s ease;
+}
+.accordion__body.active {
+  opacity: 1;
+  transition: opacity 0.22s ease;
 }
 .accordion__heading {
   font-size: 1.8rem;
@@ -3756,6 +3770,11 @@ body.admin-bar .search-overlay {
   text-align: center;
   padding: 0 128px;
 }
+@media (max-width: 479px) {
+  .single-post__card {
+    padding: 0;
+  }
+}
 .single-post__figure {
   margin: auto;
   width: 100%;
@@ -3785,6 +3804,11 @@ body.admin-bar .search-overlay {
   letter-spacing: -3.6px;
   color: #ffffff;
   padding: 20px 0;
+}
+@media (max-width: 479px) {
+  .single-post__headline {
+    font-size: 2rem;
+  }
 }
 .single-post__copy {
   color: #ffffff;

@@ -10,7 +10,7 @@ get_header();
 
   <!-- Hero -->
 
-  <section class="about__hero fullscreen about__hero__transparent">
+  <section class="about__hero fullscreen about__hero__transparent full-height">
     <section class="max-width max-padding">
       <h1 class="about__hero__headline">We are 30</h1>
       <h3 class="about__hero__copy">We are over <span class="orange">60 experts</span> in <span class="green">14
@@ -43,7 +43,7 @@ while( have_rows('intro') ) : the_row();
 if( have_rows('360_services') ):
 while( have_rows('360_services') ) : the_row(); 
 ?>
-  <section class="about__investigations fullscreen">
+  <section class="about__investigations fullscreen full-height">
     <section class="max-width max-padding">
       <section class="about__investigations__wrapper">
         <article>
@@ -85,7 +85,7 @@ while( have_rows('360_services') ) : the_row();
 if( have_rows('mission') ):
 while( have_rows('mission') ) : the_row(); 
 ?>
-  <section class="about__mission fullscreen">
+  <section class="about__mission fullscreen full-height">
     <section class="max-width max-padding">
       <section class="pill about__mission__pill">
         <p class="pill__label">mission</p>
@@ -107,7 +107,7 @@ while( have_rows('mission') ) : the_row();
 if( have_rows('what_is_30') ):
 while( have_rows('what_is_30') ) : the_row(); 
 ?>
-  <section class="about__thirty fullscreen">
+  <section class="about__thirty fullscreen full-height">
     <section class="">
       <section class="about__whatis__card">
         <figure class="about__whatis__image">
