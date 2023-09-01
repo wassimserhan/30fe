@@ -72,7 +72,7 @@ h2 {
   font-size: 4rem;
   font-weight: bold;
   line-height: 120%;
-  letter-spacing: -0.125rem;
+  letter-spacing: -0.2rem;
   margin: 0;
   // color: $black;
   @include bp(phone) {
@@ -94,6 +94,7 @@ h4 {
   font-weight: bold;
   line-height: 120%;
   margin: 0;
+  letter-spacing: -0.04rem;
   // color: $black;
 }
 
