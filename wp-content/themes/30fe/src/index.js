@@ -136,12 +136,12 @@ if (slider5) {
     perMove: 1,
     width: '98%',
     perPage: 3,
-    type: 'slide',
+    type: 'loop',
     arrows: true,
     pagination: false,
     keyboard: true,
     // omitEnd: false,
-    focus: 'left',
+    // focus: 'left',
     // isNavigation: true
   }).mount();
 }

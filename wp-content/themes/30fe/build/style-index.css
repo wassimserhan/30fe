@@ -663,16 +663,25 @@ hr {
 .splide-timeline {
   margin: auto;
 }
+.splide-timeline .splide-timeline .splide__arrow {
+  background: #1d1c1d;
+  opacity: 1;
+}
 .splide-timeline .splide__arrow:before {
   border: 1px solid #f2f1ed;
+  right: -1px;
 }
 .splide-timeline__arrow--next {
   top: 28% !important;
   right: 0 !important;
+  background-color: #1d1c1d !important;
+  opacity: 1 !important;
 }
 .splide-timeline__arrow--prev {
   top: 28% !important;
   left: 0 !important;
+  background-color: #1d1c1d !important;
+  opacity: 1 !important;
 }
 .splide-timeline .splide__arrow svg {
   fill: #ffffff !important;
