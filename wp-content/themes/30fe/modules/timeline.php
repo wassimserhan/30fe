@@ -55,7 +55,38 @@
             </section>
           </section>
         </section>
+        <section class="splide__slide">
+          <section class="about__timeline__wrapper">
 
+
+            <section class="about__timeline__pill about__timeline__pill">
+              <p class="about__timeline__pill__text">2015</p>
+            </section>
+
+            <section class="about__timeline__story">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum cum recusandae doloribus voluptate
+              eveniet qui earum, delectus quia! Tenetur, distinctio atque mollitia facere voluptas nulla sequi voluptate
+              temporibus culpa odio.
+
+            </section>
+          </section>
+        </section>
+        <section class="splide__slide">
+          <section class="about__timeline__wrapper">
+
+
+            <section class="about__timeline__pill about__timeline__pill">
+              <p class="about__timeline__pill__text">2015</p>
+            </section>
+
+            <section class="about__timeline__story">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum cum recusandae doloribus voluptate
+              eveniet qui earum, delectus quia! Tenetur, distinctio atque mollitia facere voluptas nulla sequi voluptate
+              temporibus culpa odio.
+
+            </section>
+          </section>
+        </section>
       </ul>
     </div>
   </section>

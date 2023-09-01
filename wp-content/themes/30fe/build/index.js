@@ -3915,10 +3915,12 @@ if (slider5) {
     perMove: 1,
     width: '98%',
     perPage: 3,
-    type: 'loop',
+    type: 'slide',
     arrows: true,
     pagination: false,
-    keyboard: true
+    keyboard: true,
+    // omitEnd: false,
+    focus: 'left'
     // isNavigation: true
   }).mount();
 }

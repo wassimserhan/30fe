@@ -4122,28 +4122,28 @@ body.admin-bar .search-overlay {
   padding: 20px 0;
 }
 .seminars > h1 {
-  font-size: 30px;
+  font-size: 50px;
   line-height: normal;
   letter-spacing: normal;
-  padding: 25px 0 0;
+  padding: 0 0 25px;
 }
 .seminars > h2 {
   font-size: 30px;
   line-height: normal;
   letter-spacing: normal;
-  padding: 25px 0 0;
+  padding: 20px 0 10px;
 }
 .seminars > h3 {
   font-size: 30px;
   line-height: normal;
   letter-spacing: normal;
-  padding: 25px 0 0;
+  padding: 0 0 10px;
 }
 .seminars > h4 {
   font-size: 30px;
   line-height: normal;
   letter-spacing: normal;
-  padding: 25px 0 0;
+  padding: 0 0 10px;
 }
 .seminars > h5 {
   font-size: 13px;
