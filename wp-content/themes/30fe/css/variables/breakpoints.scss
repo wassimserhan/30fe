@@ -1,20 +1,20 @@
 // Breakpoints
 // ---------------------------------------------
 $breakpoints: (
-  phone: (
-    max-width: 479px
-  ),
-
   phone_small: (
     max-width: 375px
   ),
 
+  phone: (
+    max-width: 479px
+  ),
+
   tablet: (
-    max-width: 1024px
+    max-width: 768px
   ),
 
   laptop: (
-    max-width: 1366px
+    max-width: 1024px
   ),
 
   desktop: (

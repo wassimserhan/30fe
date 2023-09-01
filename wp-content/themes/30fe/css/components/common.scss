@@ -62,7 +62,7 @@ h1 {
   line-height: 100%;
   letter-spacing: -0.344rem;
   margin: 0;
-  color: $black;
+  // color: $black;
   @include bp(phone) {
     font-size: 5rem;
   }
@@ -74,7 +74,7 @@ h2 {
   line-height: 120%;
   letter-spacing: -0.125rem;
   margin: 0;
-  color: $black;
+  // color: $black;
   @include bp(phone) {
     font-size: 2.5rem;
   }
@@ -86,7 +86,7 @@ h3 {
   line-height: 120%;
   letter-spacing: -0.125rem;
   margin: 0;
-  color: $black;
+  // color: $black;
 }
 
 h4 {
@@ -94,14 +94,14 @@ h4 {
   font-weight: bold;
   line-height: 120%;
   margin: 0;
-  color: $black;
+  // color: $black;
 }
 
 p {
   font-size: 1.25rem;
   line-height: 140%;
   margin: 0;
-  color: $black;
+  // color: $black;
   letter-spacing: -0.6px;
 }
 
@@ -109,7 +109,7 @@ p {
   font-size: 0.75rem;
   line-height: 160%;
   margin: 0;
-  color: $black;
+  // color: $black;
 }
 
 .blue {
@@ -163,7 +163,7 @@ img {
 
 .max-padding {
   padding: 128px;
-  @include bp(tablet) {
+  @include bp(laptop) {
     padding: 128px 32px;
   }
 }

@@ -448,7 +448,6 @@ h1 {
   line-height: 100%;
   letter-spacing: -0.344rem;
   margin: 0;
-  color: #1d1c1d;
 }
 @media (max-width: 479px) {
   h1 {
@@ -462,7 +461,6 @@ h2 {
   line-height: 120%;
   letter-spacing: -0.125rem;
   margin: 0;
-  color: #1d1c1d;
 }
 @media (max-width: 479px) {
   h2 {
@@ -476,7 +474,6 @@ h3 {
   line-height: 120%;
   letter-spacing: -0.125rem;
   margin: 0;
-  color: #1d1c1d;
 }
 
 h4 {
@@ -484,14 +481,12 @@ h4 {
   font-weight: bold;
   line-height: 120%;
   margin: 0;
-  color: #1d1c1d;
 }
 
 p {
   font-size: 1.25rem;
   line-height: 140%;
   margin: 0;
-  color: #1d1c1d;
   letter-spacing: -0.6px;
 }
 
@@ -499,7 +494,6 @@ p {
   font-size: 0.75rem;
   line-height: 160%;
   margin: 0;
-  color: #1d1c1d;
 }
 
 .blue {
@@ -1046,7 +1040,7 @@ hr {
   display: flex;
   transition: all 0.2s ease-out;
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .brand__container {
     left: 0;
     right: 0;
@@ -1383,7 +1377,7 @@ body.admin-bar .search-overlay {
   justify-content: center;
   gap: 50px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .sector-form__wrapper {
     flex-direction: column;
     align-items: center;
@@ -1948,7 +1942,7 @@ body.admin-bar .search-overlay {
   justify-content: space-between;
   gap: 20px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .expertise-form__wrapper {
     flex-direction: column-reverse;
     align-items: center;
@@ -2111,7 +2105,7 @@ body.admin-bar .search-overlay {
   padding: 128px 0;
   background-color: #f2f1ed;
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .stats {
     display: none;
   }
@@ -2180,7 +2174,7 @@ body.admin-bar .search-overlay {
 .mobile-stats {
   display: none;
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .mobile-stats {
     display: block;
   }
@@ -2377,7 +2371,7 @@ body.admin-bar .search-overlay {
 .accordion-faq__wrapper .plus {
   display: none;
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .accordion-faq__wrapper .plus {
     display: block;
     position: absolute;
@@ -2397,7 +2391,7 @@ body.admin-bar .search-overlay {
   line-height: 22px;
   font-family: "Retina Light", sans-serif;
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .accordion-faq__content {
     max-height: 0;
     opacity: 0;
@@ -2412,7 +2406,7 @@ body.admin-bar .search-overlay {
   transform: rotate(180deg);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   #accordion {
     display: none;
   }
@@ -2421,7 +2415,7 @@ body.admin-bar .search-overlay {
 #accordion-mobile {
   display: none;
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   #accordion-mobile {
     display: block;
   }
@@ -2429,7 +2423,6 @@ body.admin-bar .search-overlay {
 
 .accordion {
   display: flex;
-  min-height: 800px;
 }
 .accordion--horizontal .accordion__item {
   width: 50px;
@@ -2488,7 +2481,7 @@ body.admin-bar .search-overlay {
 }
 .accordion__item {
   flex-grow: 0;
-  transition: flex-grow 0.2s ease;
+  transition: flex-grow 0.1s ease;
   overflow: hidden;
 }
 .accordion__item.active {
@@ -2499,12 +2492,6 @@ body.admin-bar .search-overlay {
   overflow: hidden;
   color: #1d1c1d;
   padding: 20px 64px;
-  opacity: 0;
-  transition: opacity 0.22s ease;
-}
-.accordion__body.active {
-  opacity: 1;
-  transition: opacity 0.22s ease;
 }
 .accordion__heading {
   font-size: 1.8rem;
@@ -2566,7 +2553,7 @@ body.admin-bar .search-overlay {
   max-width: 340px;
   width: 100%;
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .home__hero__buttons {
     flex-direction: column;
   }
@@ -2582,7 +2569,7 @@ body.admin-bar .search-overlay {
 .home__hero__headline {
   padding: 80px 128px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .home__hero__headline {
     padding: 25px;
   }
@@ -2848,9 +2835,9 @@ body.admin-bar .search-overlay {
   align-self: stretch;
   gap: 0 68px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .team__grid {
-    gap: 0 64px;
+    gap: 0 44px;
   }
 }
 @media (max-width: 479px) {
@@ -2861,6 +2848,11 @@ body.admin-bar .search-overlay {
 .team__card {
   width: 20%;
   padding: 30px 0;
+}
+@media (max-width: 479px) {
+  .team__card {
+    width: 48%;
+  }
 }
 .team__card__image {
   height: auto;
@@ -3954,7 +3946,7 @@ body.admin-bar .search-overlay {
   right: 0;
   left: 584px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .contact__image__pin--orange {
     bottom: 0;
     right: 0;
@@ -3968,7 +3960,7 @@ body.admin-bar .search-overlay {
   right: 0;
   left: 584px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .contact__image__pin--green {
     bottom: 0;
     right: 0;
@@ -3982,7 +3974,7 @@ body.admin-bar .search-overlay {
   right: 0;
   left: 584px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .contact__image__pin--blue {
     bottom: 0;
     right: 0;
@@ -3996,7 +3988,7 @@ body.admin-bar .search-overlay {
   right: 0;
   left: 584px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .contact__image__pin--taupe {
     bottom: 0;
     right: 0;
@@ -4013,7 +4005,7 @@ body.admin-bar .search-overlay {
   padding: 64px 128px;
   justify-content: center;
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .contact__locations {
     padding: 64px 25px;
   }
@@ -4027,7 +4019,7 @@ body.admin-bar .search-overlay {
 .contact__location {
   max-width: 250px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .contact__location {
     max-width: 150px;
   }
@@ -4049,7 +4041,7 @@ body.admin-bar .search-overlay {
 .contact__information {
   display: flex;
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .contact__information {
     flex-direction: column;
   }
@@ -4057,7 +4049,7 @@ body.admin-bar .search-overlay {
 .contact__form {
   width: 50%;
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .contact__form {
     width: 100%;
   }
@@ -4068,7 +4060,7 @@ body.admin-bar .search-overlay {
 .contact__details {
   width: 50%;
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .contact__details {
     width: 100%;
   }
@@ -4289,7 +4281,7 @@ body.admin-bar .search-overlay {
   line-height: 140%; /* 28px */
   letter-spacing: -0.6px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .accordion-careers__intro--hide {
     display: none;
   }

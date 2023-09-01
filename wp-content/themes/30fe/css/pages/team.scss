@@ -97,9 +97,8 @@
     gap: 0 68px;
 
     @include bp(tablet) {
-      gap: 0 64px;
+      gap: 0 44px;
     }
-
     @include bp(phone) {
       gap: 10px;
     }
@@ -108,9 +107,9 @@
   &__card {
     width: 20%;
     padding: 30px 0;
-    // @include bp(tablet) {
-    //   width: 48%;
-    // }
+    @include bp(phone) {
+      width: 48%;
+    }
 
     &__image {
       height: auto;
