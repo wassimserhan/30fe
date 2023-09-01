@@ -6,7 +6,7 @@
     // justify-content: space-between;
     gap: 20px;
 
-    @include bp(tablet) {
+    @include bp(phone) {
       flex-direction: column;
     }
   }
@@ -94,23 +94,29 @@
     flex-wrap: wrap;
     align-items: flex-start;
     align-self: stretch;
-    gap: 20px;
+    gap: 0 68px;
+
+    @include bp(tablet) {
+      gap: 0 64px;
+    }
+
     @include bp(phone) {
       gap: 10px;
     }
   }
 
   &__card {
-    width: 22%;
+    width: 20%;
     padding: 30px 0;
-    @include bp(tablet) {
-      width: 48%;
-    }
+    // @include bp(tablet) {
+    //   width: 48%;
+    // }
 
     &__image {
       height: auto;
       position: relative;
       margin: auto;
+      max-width: 300px;
     }
 
     &__name {

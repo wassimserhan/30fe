@@ -5,10 +5,12 @@
 
   &__wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 50px;
 
     @include bp(tablet) {
       flex-direction: column;
+      align-items: center;
     }
   }
 
