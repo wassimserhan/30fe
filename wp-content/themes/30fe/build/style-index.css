@@ -1142,6 +1142,11 @@ hr {
   visibility: visible;
 }
 
+.search-icon {
+  max-width: 15px;
+  margin-left: auto;
+}
+
 .search-overlay {
   overflow-y: auto;
   overflow-x: hidden;
@@ -2615,8 +2620,18 @@ body.admin-bar .search-overlay {
   }
 }
 
+.TinyProgressBar_module_tinyBarSVG__f8a567ff {
+  display: none !important;
+}
+
 .about {
   font-family: "Inter", sans-serif;
+}
+.about__hero__video {
+  width: 145px;
+  position: absolute;
+  top: -100px;
+  right: 110px;
 }
 .about__hero__headline {
   font-size: 12.5rem;

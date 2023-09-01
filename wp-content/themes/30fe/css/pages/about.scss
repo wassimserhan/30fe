@@ -1,3 +1,7 @@
+.TinyProgressBar_module_tinyBarSVG__f8a567ff {
+  display: none !important;
+}
+
 .about {
   font-family: 'Inter', sans-serif;
 
@@ -6,6 +10,13 @@
     //   background: #7f7f7f;
     //   background: rgba(0, 0, 0, 0.5);
     // }
+
+    &__video {
+      width: 145px;
+      position: absolute;
+      top: -100px;
+      right: 110px;
+    }
     &__headline {
       font-size: 12.5rem;
       font-weight: bold;
