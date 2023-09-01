@@ -5,7 +5,7 @@
   <section id="home-hero" class="home__hero">
     <section class="max-width">
       <article class="home__hero__headline">
-        <h2 class="home__hero__copy">Precision in Investigation, <br> Clarity in Solutions</h2>
+        <h1 class="home__hero__copy">Precision in Investigation, <br> Clarity in Solutions</h1>
         <section class="home__hero__buttons">
           <a href="#"><button class="home__hero__button">Submit an
               Assignment</button></a>

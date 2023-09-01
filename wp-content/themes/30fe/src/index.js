@@ -85,7 +85,8 @@ if (slider4) {
 
     breakpoints: {
 
-      480: {
+      640: {
+        perPage: 1,
         width: '100%',
 
       },
@@ -96,6 +97,50 @@ if (slider4) {
     pagination: false,
     keyboard: true,
     autoplay: true,
+  }).mount();
+}
+
+
+const slider5 = document.getElementById('slider5');
+
+if (slider5) {
+  new Splide('#slider5', {
+
+    classes: {
+      arrows: 'splide__arrows splide-timeline__arrows',
+      arrow: 'splide__arrow splide-timeline__arrow',
+      prev: 'splide__arrow--prev splide-timeline__arrow--prev',
+      next: 'splide__arrow--next splide-timeline__arrow--next',
+    },
+
+    breakpoints: {
+
+      480: {
+        width: '100%',
+        perPage: 1,
+
+      },
+
+      1024: {
+        width: '100%',
+        perPage: 2,
+
+      },
+
+      768: {
+        width: '100%',
+        perPage: 1,
+
+      },
+    },
+    perMove: 1,
+    width: '98%',
+    perPage: 3,
+    type: 'loop',
+    arrows: true,
+    pagination: false,
+    keyboard: true,
+    // isNavigation: true
   }).mount();
 }
 

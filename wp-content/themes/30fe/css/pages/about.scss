@@ -11,6 +11,13 @@
       position: absolute;
       top: -20px;
       right: 100px;
+
+      @include bp(phone) {
+        width: 145px;
+        position: absolute;
+        top: -230px;
+        right: 60px;
+      }
     }
     &__headline {
       font-size: 12.5rem;
