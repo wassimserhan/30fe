@@ -1225,7 +1225,6 @@ body.admin-bar .search-overlay {
   display: flex;
   gap: 16px;
   border: 1px solid #f2f1ed;
-  border-radius: 10px;
   place-items: center;
   margin: 32px 0;
 }
@@ -1235,8 +1234,6 @@ body.admin-bar .search-overlay {
 .search__result img {
   width: 100px;
   height: 100px;
-  border-top-left-radius: 7px;
-  border-bottom-left-radius: 10px;
 }
 .search__result__pill {
   margin-top: 0;
