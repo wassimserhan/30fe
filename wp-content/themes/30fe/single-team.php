@@ -13,16 +13,34 @@
   <section class="member fullscreen">
     <section class="max-width max-padding">
       <section class="member__card">
-        <section class="fadein">
-          <?php 
-        
+
+        <section id="slider4" class="splide splide-team" aria-labelledby="carousel-heading">
+
+          <div class="splide__track">
+            <ul class="splide__list">
+              <?php 
+
+               
         $images = get_field('images');
         foreach($images as $item):?>
+              <li class="splide__slide">
 
-          <img class="member__image" src="<?php echo $item; ?>" alt="<?php echo $name; ?>" title="<?php echo $name; ?>"
-            width="100%">
-          <?php endforeach; ?>
+                <img src="<?php echo $item; ?>" alt="<?php echo $name; ?>" title="<?php echo $name; ?>" width="100%">
+
+              </li>
+              <?php endforeach ?>
+            </ul>
+          </div>
         </section>
+
+
+
+
+        <!-- <section class="fadein"> -->
+
+
+
+        <!-- </section> -->
 
 
         <article class="member__person">

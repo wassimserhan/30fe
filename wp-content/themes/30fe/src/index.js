@@ -78,6 +78,27 @@ if (slider3) {
   }).mount();
 }
 
+const slider4 = document.getElementById('slider4');
+
+if (slider4) {
+  new Splide('#slider4', {
+
+    breakpoints: {
+
+      480: {
+        width: '100%',
+
+      },
+    },
+    width: '50%',
+    type: 'fade',
+    arrows: false,
+    pagination: false,
+    keyboard: true,
+    autoplay: true,
+  }).mount();
+}
+
 
 
 

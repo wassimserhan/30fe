@@ -5,6 +5,9 @@
   &__card {
     display: flex;
     gap: 64px;
+    @include bp(phone) {
+      flex-direction: column;
+    }
   }
 
   & img {

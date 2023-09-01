@@ -3872,6 +3872,22 @@ if (slider3) {
     autoplay: true
   }).mount();
 }
+const slider4 = document.getElementById('slider4');
+if (slider4) {
+  new _splidejs_splide__WEBPACK_IMPORTED_MODULE_5__["default"]('#slider4', {
+    breakpoints: {
+      480: {
+        width: '100%'
+      }
+    },
+    width: '50%',
+    type: 'fade',
+    arrows: false,
+    pagination: false,
+    keyboard: true,
+    autoplay: true
+  }).mount();
+}
 
 // modules
 

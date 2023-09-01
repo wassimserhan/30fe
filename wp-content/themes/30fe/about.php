@@ -13,8 +13,11 @@ get_header();
   <section class="about__hero fullscreen about__hero__transparent full-height">
     <section class="max-width max-padding">
 
-      <section class="about__hero__video"><iframe c src="https://player.vimeo.com/video/860104123?h=3ec7ecc0c1"
-          width="640" height="864" frameborder="0" allow="autoplay;"></iframe></section>
+      <section class="about__hero__video"><iframe src="https://player.vimeo.com/video/860104123?h=3ec7ecc0c1?muted=1"
+          width="640" height="864" frameborder="0" allow="autoplay"></iframe>
+        </iframe></section>
+
+
 
 
       <h1 class="about__hero__headline">We are 30</h1>

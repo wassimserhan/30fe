@@ -459,7 +459,7 @@ h2 {
   font-size: 4rem;
   font-weight: bold;
   line-height: 120%;
-  letter-spacing: -0.125rem;
+  letter-spacing: -0.2rem;
   margin: 0;
 }
 @media (max-width: 479px) {
@@ -481,6 +481,7 @@ h4 {
   font-weight: bold;
   line-height: 120%;
   margin: 0;
+  letter-spacing: -0.04rem;
 }
 
 p {
@@ -677,6 +678,10 @@ hr {
 
 .splide-blog {
   background-color: #cbbea5;
+}
+
+.splide-team {
+  padding: 0 !important;
 }
 
 .splide-timeline {
@@ -1218,7 +1223,7 @@ body.admin-bar .search-overlay {
 
 .search__result {
   display: flex;
-  gap: 10px;
+  gap: 16px;
   border: 1px solid #f2f1ed;
   border-radius: 10px;
   place-items: center;
@@ -2975,6 +2980,11 @@ body.admin-bar .search-overlay {
 .member__card {
   display: flex;
   gap: 64px;
+}
+@media (max-width: 479px) {
+  .member__card {
+    flex-direction: column;
+  }
 }
 .member img {
   width: 500px;
