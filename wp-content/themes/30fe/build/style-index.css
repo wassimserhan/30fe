@@ -3650,18 +3650,8 @@ body.admin-bar .search-overlay {
   margin: 0;
 }
 .single-post__headline {
-  font-size: 4.5rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 100%;
-  letter-spacing: -3.6px;
   color: #ffffff;
   padding: 20px 0;
-}
-@media (max-width: 479px) {
-  .single-post__headline {
-    font-size: 2rem;
-  }
 }
 .single-post__copy {
   color: #ffffff;
