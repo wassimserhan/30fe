@@ -97,6 +97,7 @@ if (slider4) {
     pagination: false,
     keyboard: true,
     autoplay: true,
+    rewind: true,
   }).mount();
 }
 

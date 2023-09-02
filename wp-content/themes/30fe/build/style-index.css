@@ -526,6 +526,11 @@ p {
   justify-content: center;
   flex-direction: column;
 }
+@media (max-width: 1024px) {
+  .full-height {
+    min-height: auto;
+  }
+}
 
 .blue {
   color: #0175df !important;
@@ -2192,9 +2197,10 @@ body.admin-bar .search-overlay {
 
 .accordion {
   display: flex;
+  min-height: 600px;
 }
 .accordion--horizontal .accordion__item {
-  width: 50px;
+  width: 69px;
   display: flex;
   position: relative;
   border-top: 1px solid #1d1c1d;
@@ -2545,7 +2551,7 @@ body.admin-bar .search-overlay {
   color: #1d1c1d;
   justify-content: space-evenly;
 }
-@media (max-width: 479px) {
+@media (max-width: 768px) {
   .about__whatis__card {
     flex-direction: column;
   }
@@ -2555,7 +2561,7 @@ body.admin-bar .search-overlay {
   width: 50%;
   position: relative;
 }
-@media (max-width: 479px) {
+@media (max-width: 768px) {
   .about__whatis__image {
     width: 100%;
   }
@@ -2569,7 +2575,7 @@ body.admin-bar .search-overlay {
   margin: 0 auto;
   padding: 60px;
 }
-@media (max-width: 479px) {
+@media (max-width: 768px) {
   .about__whatis__detail {
     width: 100%;
   }
@@ -3430,7 +3436,7 @@ body.admin-bar .search-overlay {
   align-self: stretch;
 }
 .insights__card {
-  max-width: 280px;
+  width: 280px;
   padding: 24px 0;
 }
 .insights__card__label {

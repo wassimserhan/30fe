@@ -129,6 +129,9 @@ p {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  @include bp(laptop) {
+    min-height: auto;
+  }
 }
 
 .blue {

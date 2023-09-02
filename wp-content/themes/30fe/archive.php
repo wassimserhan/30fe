@@ -10,13 +10,11 @@ get_header();
       </section>
       <h1 class="insights__headline"><?php single_cat_title() ?> </h1>
       <h6>Find all past and future publications and reports by our finest writers.</h6>
-      <br>
-      <p>Search and Filter goes here</p>
+
       <section class="insights__grid">
         <?php 
         while(have_posts()) {
-        the_post();
-        $subtitle = get_field ('subtitle'); ?>
+        the_post(); ?>
         <?php include get_template_directory() . '/modules/insights-card.php'; ?>
         <?php } ?>
       </section>

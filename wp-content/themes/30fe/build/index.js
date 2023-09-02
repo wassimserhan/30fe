@@ -3886,7 +3886,8 @@ if (slider4) {
     arrows: false,
     pagination: false,
     keyboard: true,
-    autoplay: true
+    autoplay: true,
+    rewind: true
   }).mount();
 }
 const slider5 = document.getElementById('slider5');

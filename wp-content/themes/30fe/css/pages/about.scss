@@ -184,7 +184,7 @@
       display: flex;
       color: $black;
       justify-content: space-evenly;
-      @include bp(phone) {
+      @include bp(tablet) {
         flex-direction: column;
       }
     }
@@ -194,7 +194,7 @@
       width: 50%;
       position: relative;
 
-      @include bp(phone) {
+      @include bp(tablet) {
         width: 100%;
       }
 
@@ -208,7 +208,7 @@
       width: 50%;
       margin: 0 auto;
       padding: 60px;
-      @include bp(phone) {
+      @include bp(tablet) {
         width: 100%;
       }
     }
