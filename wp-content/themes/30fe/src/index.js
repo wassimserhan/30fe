@@ -124,13 +124,13 @@ if (slider5) {
 
       1024: {
         width: '100%',
-        perPage: 2,
+        perPage: 3,
 
       },
 
       768: {
         width: '100%',
-        perPage: 1,
+        perPage: 2,
 
       },
     },

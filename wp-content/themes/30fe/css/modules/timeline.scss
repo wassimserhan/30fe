@@ -7,6 +7,9 @@
     top: 221px;
     width: 100%;
     border-top: 1px solid $whitesmoke;
+    @include bp(phone) {
+      top: 196px;
+    }
   }
 
   &__pill {
@@ -18,9 +21,15 @@
     box-shadow: 0px 0px 1px 0px #787878;
     background-color: $black;
     color: #787878;
+    @include bp(phone) {
+      background: $taupe;
+    }
 
     &__text {
       color: #787878;
+      @include bp(phone) {
+        color: $black;
+      }
     }
   }
 
@@ -42,6 +51,9 @@
   &__story {
     color: #787878;
     text-align: center;
+    @include bp(phone) {
+      color: $white;
+    }
   }
 }
 

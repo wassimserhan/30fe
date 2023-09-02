@@ -35,6 +35,9 @@
     right: 0 !important;
     background-color: $black !important;
     opacity: 1 !important ;
+    @include bp(phone) {
+      top: 25% !important;
+    }
   }
 
   &__arrow--prev {
@@ -42,6 +45,9 @@
     left: 0 !important;
     background-color: $black !important;
     opacity: 1 !important ;
+    @include bp(phone) {
+      top: 25% !important;
+    }
   }
 
   & .splide__arrow svg {
