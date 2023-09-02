@@ -48,8 +48,7 @@
 
   &__icon {
     margin-right: 10px;
-    font-size: 1.8rem;
-    color: $taupe;
+    max-width: 15px;
   }
 
   &--active {
@@ -66,12 +65,11 @@
 
   &__close {
     position: absolute;
-    top: 13px;
+    top: 20px;
     right: 6px;
-    font-size: 2.1rem;
     cursor: pointer;
     transition: all 0.3s;
-    background-color: #fff;
+    max-width: 15px;
     color: $taupe;
     line-height: 0.7;
   }

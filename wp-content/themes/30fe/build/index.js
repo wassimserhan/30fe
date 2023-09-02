@@ -4772,11 +4772,15 @@ class Search {
     <section class="search-overlay">
       <section class="search-overlay__top ">
         <section class="search-overlay__wrapper max-width">
-        <i class="fa fa-search search-overlay__icon" aria-hidden="true"></i>
+        <img class="search-overlay__icon" src="${siteData.root_url}/wp-content/themes/30fe/images/search-icon.svg"
+        alt="search icon"> 
+   
         <input id="search-term" type="text" class="search-term" placeholder="What are you looking for today?"
         autocomplete="off">
-        <i class="fa fa-window-close search-overlay__close" aria-hidden="true"></i>
-      </section>
+
+<img class="search-overlay__close" src="${siteData.root_url}/wp-content/themes/30fe/images/cross.svg"
+        alt="close search">      
+        </section>
     </section>
     <section class="container">
      <section id="search-overlay__results"></section>

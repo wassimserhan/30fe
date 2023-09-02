@@ -22,9 +22,7 @@ global $template;
       <button class="nav__menu">
         Menu
       </button>
-      <button class="search-trigger js-search-trigger"><img class="search-icon"
-          src="<?php echo get_template_directory_uri(); ?>/images/search-icon-taupe.svg" alt="search-icon"
-          tabindex=0></button>
+      <button class="search-trigger js-search-trigger"><i class="fa fa-search" aria-hidden="true"></i></button>
     </section>
   </section>
 

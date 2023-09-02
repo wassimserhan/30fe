@@ -1239,8 +1239,7 @@ body.admin-bar .search-overlay {
 }
 .search-overlay__icon {
   margin-right: 10px;
-  font-size: 1.8rem;
-  color: #cbbea5;
+  max-width: 15px;
 }
 .search-overlay--active {
   visibility: visible;
@@ -1254,12 +1253,11 @@ body.admin-bar .search-overlay {
 }
 .search-overlay__close {
   position: absolute;
-  top: 13px;
+  top: 20px;
   right: 6px;
-  font-size: 2.1rem;
   cursor: pointer;
   transition: all 0.3s;
-  background-color: #fff;
+  max-width: 15px;
   color: #cbbea5;
   line-height: 0.7;
 }
