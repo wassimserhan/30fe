@@ -1299,12 +1299,8 @@ body.admin-bar .search-overlay {
   color: #ffffff;
   text-decoration: underline;
 }
-.search__result__detail__title {
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 120%; /* 38.4px */
-  letter-spacing: -1.6px;
+.search__result__title {
+  font-size: 1rem;
 }
 
 .search-term {
