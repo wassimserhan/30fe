@@ -20,8 +20,8 @@ get_header();
       </section>
     </section>
     <figure class="industry__figure">
-      <img loading="lazy" src="<?php echo get_the_post_thumbnail_url() ?>" alt="<?php echo $alt; ?>"
-        title="<?php echo $title; ?>">
+      <img class="industry__figure--desktop" loading="lazy" src="<?php echo get_the_post_thumbnail_url() ?>"
+        alt="<?php echo $alt; ?>" title="<?php echo $title; ?>">
 
       <img class="industry__figure--mobile" loading="lazy" src="<?php echo get_field('featured_image_mobile')['url'] ?>"
         alt="<?php echo $alt; ?>" title="<?php echo $title; ?>">
