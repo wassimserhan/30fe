@@ -39,16 +39,17 @@ global $template;
 
       <article class="accordion-about">
         <div class="accordion-about__wrapper">
-          <a class="nav__items nav-links" href="<?php echo site_url('/about')?>" target="_self">About</a>
+          <a class="nav__items nav__items--main nav-links" href="<?php echo site_url('/about')?>"
+            target="_self">About</a>
           <div class="plus-nav"></div>
         </div>
         <section class="accordion-about__content">
           <a class="nav__items nav-links" href="<?php echo site_url('/careers')?>" target="_self">Careers</a>
-          <br>
+
           <a class="nav__items nav-links" href="<?php echo site_url('/news')?>" target="_self">News</a>
-          <br>
+
           <a class="nav__items nav-links" href="<?php echo site_url('/seminars')?>" target="_self">Seminars</a>
-          <br>
+
           <a class="nav__items nav-links" href="#" target="_self">Community</a>
 
         </section>
@@ -56,7 +57,8 @@ global $template;
 
       <article class="accordion-about">
         <div class="accordion-about__wrapper">
-          <a class="nav__items nav-links" href="<?php echo site_url('/expertise')?>" target="_self">Expertise</a>
+          <a class="nav__items nav__items--main nav-links" href="<?php echo site_url('/expertise')?>"
+            target="_self">Expertise</a>
           <div class="plus-nav"></div>
         </div>
         <section class="accordion-about__content">
@@ -78,7 +80,8 @@ global $template;
 
       <article class="accordion-about">
         <div class="accordion-about__wrapper">
-          <a class="nav__items nav-links" href="<?php echo site_url('/sectors')?>" target="_self">Sectors</a>
+          <a class="nav__items nav__items--main nav-links" href="<?php echo site_url('/sectors')?>"
+            target="_self">Sectors</a>
           <div class="plus-nav"></div>
         </div>
         <section class="accordion-about__content">

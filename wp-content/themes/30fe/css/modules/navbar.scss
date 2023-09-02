@@ -35,11 +35,11 @@
   }
 
   &__links {
-    display: flex;
-    align-items: flex-start;
-    gap: 48px;
-    align-self: stretch;
-    place-items: center;
+    // display: flex;
+    // align-items: flex-start;
+    // gap: 48px;
+    // align-self: stretch;
+    // place-items: center;
 
     // @include bp(tablet) {
     //   display: none;
@@ -95,6 +95,10 @@
       letter-spacing: -0.6px;
       color: $black;
       text-align: center;
+    }
+
+    &--main {
+      width: max-content;
     }
   }
 
@@ -196,7 +200,8 @@
     }
 
     & > .nav__items {
-      font-size: 13px;
+      font-size: 12px;
+      padding: 5px 0;
     }
   }
 

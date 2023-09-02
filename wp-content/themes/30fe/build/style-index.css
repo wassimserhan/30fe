@@ -1022,13 +1022,6 @@ hr {
     padding: 0 15px;
   }
 }
-.nav__links {
-  display: flex;
-  align-items: flex-start;
-  gap: 48px;
-  align-self: stretch;
-  place-items: center;
-}
 .nav__dropdown {
   display: grid;
   position: absolute;
@@ -1079,6 +1072,10 @@ hr {
     color: #1d1c1d;
     text-align: center;
   }
+}
+.nav__items--main {
+  width: -moz-max-content;
+  width: max-content;
 }
 .nav__logo {
   max-width: 50px;
@@ -1163,7 +1160,8 @@ hr {
   }
 }
 .accordion-about__content > .nav__items {
-  font-size: 13px;
+  font-size: 12px;
+  padding: 5px 0;
 }
 .accordion-about__active .accordion-faq__content {
   margin-bottom: 15px;
