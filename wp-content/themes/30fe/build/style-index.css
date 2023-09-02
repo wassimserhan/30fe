@@ -438,7 +438,7 @@ button {
 .large-text {
   font-size: 12.5rem;
   font-weight: bold;
-  line-height: 100%; /* 256px */
+  line-height: 100%;
   letter-spacing: -8px;
 }
 
@@ -451,7 +451,9 @@ h1 {
 }
 @media (max-width: 479px) {
   h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
+    line-height: 120%;
+    letter-spacing: -0.12rem;
   }
 }
 
@@ -464,7 +466,8 @@ h2 {
 }
 @media (max-width: 479px) {
   h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    letter-spacing: -0.12rem;
   }
 }
 
@@ -475,6 +478,12 @@ h3 {
   letter-spacing: -0.125rem;
   margin: 0;
 }
+@media (max-width: 479px) {
+  h3 {
+    font-size: 1.5rem;
+    letter-spacing: -0.04rem;
+  }
+}
 
 h4 {
   font-size: 1.5rem;
@@ -483,12 +492,32 @@ h4 {
   margin: 0;
   letter-spacing: -0.04rem;
 }
+@media (max-width: 479px) {
+  h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: -0.04rem;
+  }
+}
 
 p {
   font-size: 1.25rem;
   line-height: 140%;
   margin: 0;
-  letter-spacing: -0.6px;
+}
+@media (max-width: 479px) {
+  p {
+    font-size: 0.625rem;
+    font-weight: 400;
+    line-height: 160%;
+    letter-spacing: -0.04rem;
+  }
+}
+
+.label {
+  font-size: 0.75rem;
+  line-height: 160%;
+  margin: 0;
 }
 
 .full-height {
@@ -496,12 +525,6 @@ p {
   display: flex;
   justify-content: center;
   flex-direction: column;
-}
-
-.label {
-  font-size: 0.75rem;
-  line-height: 160%;
-  margin: 0;
 }
 
 .blue {
@@ -2370,16 +2393,24 @@ body.admin-bar .search-overlay {
   font-family: "Inter", sans-serif;
 }
 .about__hero__video {
-  width: 145px;
+  width: 160px;
   position: absolute;
   top: 310px;
-  right: 100px;
+  right: 80px;
 }
-@media (max-width: 479px) {
+@media (max-width: 1024px) {
   .about__hero__video {
-    width: 145px;
+    width: 215px;
     position: absolute;
-    top: -230px;
+    top: 110px;
+    right: 190px;
+  }
+}
+@media (max-width: 768px) {
+  .about__hero__video {
+    width: 215px;
+    position: absolute;
+    top: 210px;
     right: 60px;
   }
 }
@@ -2387,10 +2418,28 @@ body.admin-bar .search-overlay {
   font-size: 12.5rem;
   font-weight: bold;
   line-height: 100%; /* 256px */
-  letter-spacing: -8px;
+  letter-spacing: -0.5rem;
   color: #ffffff;
   margin: 0;
   padding-bottom: 32px;
+}
+@media (max-width: 1024px) {
+  .about__hero__headline {
+    font-size: 6.5rem;
+    line-height: 120%;
+    letter-spacing: -0.12rem;
+    z-index: 3;
+    position: relative;
+  }
+}
+@media (max-width: 768px) {
+  .about__hero__headline {
+    font-size: 6.5rem;
+    line-height: 120%;
+    letter-spacing: -0.12rem;
+    z-index: 3;
+    position: relative;
+  }
 }
 .about__hero__copy {
   color: #ffffff;

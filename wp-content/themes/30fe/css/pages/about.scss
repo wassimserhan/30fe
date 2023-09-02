@@ -7,15 +7,22 @@
 
   &__hero {
     &__video {
-      width: 145px;
+      width: 160px;
       position: absolute;
       top: 310px;
-      right: 100px;
+      right: 80px;
 
-      @include bp(phone) {
-        width: 145px;
+      @include bp(laptop) {
+        width: 215px;
         position: absolute;
-        top: -230px;
+        top: 110px;
+        right: 190px;
+      }
+
+      @include bp(tablet) {
+        width: 215px;
+        position: absolute;
+        top: 210px;
         right: 60px;
       }
     }
@@ -23,10 +30,25 @@
       font-size: 12.5rem;
       font-weight: bold;
       line-height: 100%; /* 256px */
-      letter-spacing: -8px;
+      letter-spacing: -0.5rem;
       color: $white;
       margin: 0;
       padding-bottom: 32px;
+
+      @include bp(laptop) {
+        font-size: 6.5rem;
+        line-height: 120%;
+        letter-spacing: -0.12rem;
+        z-index: 3;
+        position: relative;
+      }
+      @include bp(tablet) {
+        font-size: 6.5rem;
+        line-height: 120%;
+        letter-spacing: -0.12rem;
+        z-index: 3;
+        position: relative;
+      }
     }
 
     &__copy {
