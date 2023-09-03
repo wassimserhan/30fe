@@ -151,19 +151,17 @@
   background-image: url('/images/maps/vancouver.svg');
 }
 
-//Pins
-
-.toronto {
-  display: block;
-  max-width: 35px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 38%;
-  top: 40%;
+#ottawa {
+  background-image: url('/images/maps/ottawa.svg');
 }
 
-.vancouver {
+#calgary {
+  background-image: url('/images/maps/calgary.svg');
+}
+
+//Pins
+
+#toronto-pin {
   display: block;
   max-width: 35px;
   position: absolute;
@@ -171,4 +169,42 @@
   right: 0;
   left: 38%;
   top: 40%;
+  background-image: url('/images/maps/orange-pin.svg');
+  background-repeat: no-repeat;
+}
+
+#vancouver-pin {
+  display: block;
+  max-width: 35px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 38%;
+  top: 37%;
+  background-image: url('/images/maps/green-pin.svg');
+  background-repeat: no-repeat;
+}
+
+#ottawa-pin {
+  display: block;
+  max-width: 35px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 36%;
+  top: 54%;
+  background-image: url('/images/maps/blue-pin.svg');
+  background-repeat: no-repeat;
+}
+
+#calgary-pin {
+  display: block;
+  max-width: 35px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 38%;
+  top: 37%;
+  background-image: url('/images/maps/taupe-pin.svg');
+  background-repeat: no-repeat;
 }

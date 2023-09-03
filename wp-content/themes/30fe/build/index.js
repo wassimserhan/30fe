@@ -4244,6 +4244,7 @@ mapLocationArray.forEach(mapLocation => {
     let city = mapLocation.innerHTML.toLowerCase();
     console.log(cityMap);
     cityMap.id = city;
+    cityPin.id = city.concat('-pin');
   });
 });
 
@@ -4253,14 +4254,28 @@ gsap.to("#toronto-pin", {
   duration: 0.6,
   y: 20,
   ease: "circ.in",
-  repeat: 2,
+  repeat: -1,
   yoyo: true
 });
 gsap.to("#vancouver-pin", {
   duration: 0.6,
   y: 20,
   ease: "circ.in",
-  repeat: 2,
+  repeat: -1,
+  yoyo: true
+});
+gsap.to("#ottowa-pin", {
+  duration: 0.6,
+  y: 20,
+  ease: "circ.in",
+  repeat: -1,
+  yoyo: true
+});
+gsap.to("#calgary-pin", {
+  duration: 0.6,
+  y: 20,
+  ease: "circ.in",
+  repeat: -1,
   yoyo: true
 });
 

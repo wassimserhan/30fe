@@ -9,10 +9,12 @@ get_header();
     <section class="contact__hero fullscreen">
 
       <section id="toronto" class="contact__hero__maps">
-        <img class="contact__image__pin toronto"
+
+        <div id="toronto-pin" class="contact__image__pin"></div>
+        <!-- <img 
           src="<?php echo get_template_directory_uri(); ?>/images/maps/orange-pin.svg" alt="Pin">
         <img class="contact__image__pin vancouver"
-          src="<?php echo get_template_directory_uri(); ?>/images/maps/green-pin.svg" alt="Pin">
+          src="<?php echo get_template_directory_uri(); ?>/images/maps/green-pin.svg" alt="Pin"> -->
 
         <section class="contact__locations fullscreen">
           <article class="contact__location">
