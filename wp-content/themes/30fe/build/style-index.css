@@ -3405,20 +3405,18 @@ body.admin-bar .search-overlay {
   font-style: normal;
   font-weight: 400;
   letter-spacing: -0.72px;
-  padding-bottom: 20px;
+  padding-top: 20px;
   color: #1d1c1d;
 }
 .industry__category-bullets__subitem {
   list-style: disc;
 }
 .industry__category-bullets__subitem li {
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 140%;
-  letter-spacing: -0.72px;
-  padding-bottom: 48px;
+  font-size: 1rem;
+  margin-left: 1rem;
+  font-weight: 400;
   color: #1d1c1d;
+  letter-spacing: -0.7px;
 }
 .industry__category-bullets__arrow img {
   width: 20px;

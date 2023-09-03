@@ -57,7 +57,7 @@ get_header();
                 alt="<?php echo $alt; ?>" title="<?php echo $title; ?>">
             </figure>
             <article>
-              <h5 class="industry__category-bullets__item"><?php echo $industryItem ?></h5>
+              <p class="industry__category-bullets__item"><?php echo $industryItem ?></p>
               <?php
           if( have_rows('subitems') ): ?>
               <ul class="industry__category-bullets__subitem">
