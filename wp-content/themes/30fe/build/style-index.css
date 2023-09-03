@@ -3399,13 +3399,13 @@ body.admin-bar .search-overlay {
   display: flex;
   justify-content: flex-start;
   gap: 20px;
+  padding: 5px 0;
 }
 .industry__category-bullets__item {
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   letter-spacing: -0.72px;
-  padding-top: 20px;
   color: #1d1c1d;
 }
 .industry__category-bullets__subitem {
