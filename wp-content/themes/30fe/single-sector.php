@@ -95,6 +95,16 @@ get_header();
   <!-- Expert Form -->
   <section class="sector-form fullscreen">
     <section class="sector-form__wrapper max-width max-padding">
+      <section class="sector-form__form">
+        <h3 class="sector-form__headline">For more Information</h3>
+        <p class="sector-form__form__copy">Fill up this form and someone from our team will be in touch with you
+          shortly.</p>
+        <p class="sector-form__form__required">*REQUIRED</p>
+        <!-- form inserted here -->
+        <!-- <?php echo FrmFormsController::get_form_shortcode( array( 'id' => 2 ) ); ?> -->
+        <?php echo FrmFormsController::get_form_shortcode( array( 'id' => 1 ) ); ?>
+        <!-- form inserted here -->
+      </section>
       <?php 
 
               $relatedSectorTeam = get_posts(array(
@@ -121,16 +131,7 @@ get_header();
       <?php endforeach; ?>
       <?php wp_reset_postdata() ?>
 
-      <section class="sector-form__form">
-        <h3 class="sector-form__headline">For more Information</h3>
-        <p class="sector-form__form__copy">Fill up this form and someone from our team will be in touch with you
-          shortly.</p>
-        <p class="sector-form__form__required">*REQUIRED</p>
-        <!-- form inserted here -->
-        <!-- <?php echo FrmFormsController::get_form_shortcode( array( 'id' => 2 ) ); ?> -->
-        <?php echo FrmFormsController::get_form_shortcode( array( 'id' => 1 ) ); ?>
-        <!-- form inserted here -->
-      </section>
+
     </section>
   </section>
 

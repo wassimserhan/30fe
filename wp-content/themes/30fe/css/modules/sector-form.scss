@@ -5,8 +5,8 @@
 
   &__wrapper {
     display: flex;
-    justify-content: center;
-    gap: 50px;
+    justify-content: space-between;
+    gap: 20px;
 
     @include bp(tablet) {
       flex-direction: column;

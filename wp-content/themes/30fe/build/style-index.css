@@ -778,7 +778,7 @@ hr {
 .team-card {
   border: 1px solid #1d1c1d;
   padding: 32px;
-  margin: 32px 0;
+  margin: 0 0 32px;
   max-width: 300px;
   height: -moz-max-content;
   height: max-content;
@@ -1430,8 +1430,8 @@ body.admin-bar .search-overlay {
 }
 .sector-form__wrapper {
   display: flex;
-  justify-content: center;
-  gap: 50px;
+  justify-content: space-between;
+  gap: 20px;
 }
 @media (max-width: 768px) {
   .sector-form__wrapper {
