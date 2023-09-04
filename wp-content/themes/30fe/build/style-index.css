@@ -692,7 +692,7 @@ hr {
   right: -1px;
 }
 .splide-timeline__arrow--next {
-  top: 28% !important;
+  top: 40% !important;
   right: 0 !important;
   background-color: #1d1c1d !important;
   opacity: 1 !important;
@@ -703,7 +703,7 @@ hr {
   }
 }
 .splide-timeline__arrow--prev {
-  top: 28% !important;
+  top: 40% !important;
   left: 0 !important;
   background-color: #1d1c1d !important;
   opacity: 1 !important;
