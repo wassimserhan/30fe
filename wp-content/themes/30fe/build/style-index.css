@@ -4206,6 +4206,12 @@ body.admin-bar .search-overlay {
   background-color: #f2f1ed;
   padding: 0 15px;
 }
+.accordion-careers__content ul {
+  list-style: initial;
+}
+.accordion-careers__content ul li {
+  margin-left: 1rem;
+}
 .accordion-careers__button {
   background-color: transparent;
   padding: 12px 24px;

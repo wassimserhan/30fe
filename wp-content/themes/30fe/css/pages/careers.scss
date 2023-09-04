@@ -161,6 +161,14 @@
     line-height: 22px;
     background-color: $whitesmoke;
     padding: 0 15px;
+
+    & ul {
+      list-style: initial;
+
+      & li {
+        margin-left: 1rem;
+      }
+    }
   }
 
   &__button {
