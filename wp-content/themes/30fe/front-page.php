@@ -232,8 +232,10 @@
     ?>
             <li class="splide__slide">
               <section class="testimonials__card">
-                <h4 class="testimonials__quote"><?php echo $quote ?></h4>
-                <p class="testimonials__quote__client"><?php echo $client ?></p>
+                <section class="testimonials__card__wrapper">
+                  <h4 class="testimonials__quote"><?php echo $quote ?></h4>
+                  <p class="testimonials__quote__client"><?php echo $client ?></p>
+                </section>
               </section>
 
             </li>

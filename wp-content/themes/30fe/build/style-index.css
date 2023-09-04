@@ -2130,6 +2130,10 @@ body.admin-bar .search-overlay {
   margin: auto;
   text-align: center;
 }
+.testimonials__card__wrapper {
+  max-width: 600px;
+  margin: auto;
+}
 .testimonials__quote__client {
   font-size: 20px;
   padding: 10px 0;
