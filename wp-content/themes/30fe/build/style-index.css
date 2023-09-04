@@ -448,6 +448,7 @@ h1 {
   line-height: 100%;
   letter-spacing: -0.344rem;
   margin: 0;
+  color: #1d1c1d;
 }
 @media (max-width: 479px) {
   h1 {
@@ -463,6 +464,7 @@ h2 {
   line-height: 120%;
   letter-spacing: -0.2rem;
   margin: 0;
+  color: #1d1c1d;
 }
 @media (max-width: 479px) {
   h2 {
@@ -477,6 +479,7 @@ h3 {
   line-height: 120%;
   letter-spacing: -0.125rem;
   margin: 0;
+  color: #1d1c1d;
 }
 @media (max-width: 479px) {
   h3 {
@@ -490,6 +493,7 @@ h4 {
   font-weight: 600;
   line-height: 120%;
   margin: 0;
+  color: #1d1c1d;
   letter-spacing: -0.04rem;
 }
 @media (max-width: 479px) {
@@ -504,6 +508,7 @@ p {
   line-height: 160%;
   margin: 0;
   letter-spacing: -0.01875rem;
+  color: #1d1c1d;
 }
 
 .label {
