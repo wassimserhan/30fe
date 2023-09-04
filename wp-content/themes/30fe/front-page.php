@@ -154,9 +154,10 @@
             style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'black-bg') echo 'color: #ffffff'?>">
             <?php echo $copy; ?>
           </p>
-          <figure class="accordion__image">
-            <img class="lazyload" src="<?php echo $image ?>" alt="<?php echo $alt; ?>" title="<?php echo $alt; ?>">
-          </figure>
+
+          <img class="accordion__image lazyload" src="<?php echo $image ?>" alt="<?php echo $alt; ?>"
+            title="<?php echo $alt; ?>">
+
         </section>
         <?php $k++ ?>
       </div>
