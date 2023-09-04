@@ -666,7 +666,8 @@ hr {
 
 .splide-form {
   width: 100%;
-  max-width: 480px;
+  max-width: 375px;
+  width: 100%;
   overflow: hidden;
   background-color: #cbbea5;
   padding-right: 0;
