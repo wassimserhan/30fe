@@ -217,7 +217,7 @@
 
 
   <section class="testimonials fullscreen">
-    <section class="max-width max-padding">
+    <section class="max-width">
       <h2 class="testimonials__headline">Testimonials</h2>
       <section id="slider1" class="splide splide-testimonials" aria-labelledby="carousel-heading">
         <div class="splide__track">

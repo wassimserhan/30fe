@@ -4,6 +4,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  padding: 128px 10px;
   @include bp(phone) {
     display: block;
   }
