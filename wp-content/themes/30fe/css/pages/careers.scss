@@ -2,7 +2,14 @@
   font-family: 'Inter', sans-serif;
 
   &__hero {
-    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    &__block {
+      position: relative;
+    }
     &__headline {
       color: $whitesmoke;
       text-align: center;
@@ -10,23 +17,39 @@
       font-weight: 700;
       line-height: 100%; /* 128px */
       letter-spacing: -6.4px;
+      z-index: 5;
       position: relative;
     }
 
     &__box {
-      width: 150px;
-      height: 150px;
+      width: 100px;
+      height: 100px;
       position: absolute;
 
       &--orange {
-        top: 70px;
-        left: 200px;
+        top: -100%;
+        left: -30%;
         z-index: 2;
       }
 
       &--taupe {
-        top: 400px;
-        right: 220px;
+        top: 150%;
+        right: -50%;
+        z-index: 2;
+      }
+
+      &--blue {
+        top: 60%;
+        right: -7%;
+        z-index: 1;
+        width: 75px;
+        height: 75px;
+      }
+
+      &--green {
+        top: -100%;
+        right: 40%;
+        z-index: 1;
       }
     }
 
@@ -35,23 +58,27 @@
       position: absolute;
 
       &--one {
-        top: 400px;
-        left: 70px;
+        top: -140%;
+        right: 0;
+        width: 200px;
+        z-index: 2;
       }
 
       &--two {
-        top: 300px;
-        right: 0px;
+        top: 83%;
+        right: 62%;
+        width: 250px;
       }
 
       &--three {
-        top: 130px;
-        right: 90px;
+        top: 51%;
+        right: -70%;
+        z-index: 1;
       }
 
       &--four {
-        top: 130px;
-        left: 90px;
+        top: -40%;
+        left: -55%;
         z-index: 1;
       }
     }

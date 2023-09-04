@@ -10,10 +10,13 @@ get_header();
   <!-- Hero -->
   <section class="careers__hero black-bg fullscreen">
     <section class="max-width max-padding">
-      <h1 class="careers__hero__headline">Careers</h1>
-      <section class="careers__hero__box careers__hero__box--orange orange-bg"></section>
-      <section class="careers__hero__box careers__hero__box--taupe taupe-bg"></section>
-      <?php
+      <section class="careers__hero__block">
+        <h1 class="careers__hero__headline">Careers</h1>
+        <section class="careers__hero__box careers__hero__box--orange orange-bg"></section>
+        <section class="careers__hero__box careers__hero__box--taupe taupe-bg"></section>
+        <section class="careers__hero__box careers__hero__box--blue blue-bg"></section>
+        <section class="careers__hero__box careers__hero__box--green green-bg"></section>
+        <?php
         if( have_rows('banner_images') ):
         while( have_rows('banner_images') ) : the_row(); 
           $gif_1 = get_sub_field('gif_1')['url'];
@@ -21,11 +24,15 @@ get_header();
               $gif_3 = get_sub_field('gif_3')['url'];
               $gif_4 = get_sub_field('gif_4')['url'];
         ?>
-      <img class="careers__hero__images careers__hero__images--one" src="<?php echo $gif_1 ?>" alt="">
-      <img class="careers__hero__images careers__hero__images--two" src="<?php echo $gif_2 ?>" alt="">
-      <img class="careers__hero__images careers__hero__images--three" src="<?php echo $gif_3 ?>" alt="">
-      <img class="careers__hero__images careers__hero__images--four" src="<?php echo $gif_4 ?>" alt="">
-      <?php endwhile; endif; ?>
+        <img class="careers__hero__images careers__hero__images--one" src="<?php echo $gif_1 ?>" alt="">
+        <img class="careers__hero__images careers__hero__images--two" src="<?php echo $gif_2 ?>" alt="">
+        <img class="careers__hero__images careers__hero__images--three" src="<?php echo $gif_3 ?>" alt="">
+        <img class="careers__hero__images careers__hero__images--four" src="<?php echo $gif_4 ?>" alt="">
+        <?php endwhile; endif; ?>
+
+      </section>
+
+
     </section>
   </section>
 
