@@ -506,9 +506,17 @@ h4 {
 p {
   font-size: 1.25rem;
   line-height: 160%;
+  font-weight: 400;
   margin: 0;
   letter-spacing: -0.01875rem;
   color: #1d1c1d;
+}
+@media (max-width: 479px) {
+  p {
+    font-size: 0.625rem;
+    font-weight: 400;
+    letter-spacing: -0.04rem;
+  }
 }
 
 .label {

@@ -121,7 +121,7 @@ while( have_rows('mission') ) : the_row();
 if( have_rows('what_is_30') ):
 while( have_rows('what_is_30') ) : the_row(); 
 ?>
-  <section class="about__thirty fullscreen full-height">
+  <section class="about__thirty fullscreen">
     <section class="">
       <section class="about__whatis__card">
         <figure class="about__whatis__image">
