@@ -513,7 +513,7 @@ p {
 }
 @media (max-width: 479px) {
   p {
-    font-size: 0.625rem;
+    font-size: 1.125rem;
     font-weight: 400;
     letter-spacing: -0.04rem;
   }
