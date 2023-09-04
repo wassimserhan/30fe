@@ -3866,8 +3866,9 @@ body.admin-bar .search-overlay {
 }
 @media (max-width: 479px) {
   .contact__locations {
-    flex-direction: column;
+    flex-direction: row;
     padding: 64px 25px;
+    flex-wrap: wrap;
   }
 }
 .contact__location {
@@ -3878,10 +3879,14 @@ body.admin-bar .search-overlay {
     max-width: 150px;
   }
 }
-.contact__location h2 {
-  color: #ffffff;
-  padding-bottom: 24px;
+.contact__location__city {
   cursor: pointer;
+  padding-bottom: 15px;
+}
+@media (max-width: 768px) {
+  .contact__location__city {
+    font-size: 1.9rem;
+  }
 }
 .contact__location h2 h2:nth-of-type(0) {
   color: #08cb80;

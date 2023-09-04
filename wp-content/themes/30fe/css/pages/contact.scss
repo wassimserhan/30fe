@@ -64,8 +64,9 @@
     }
 
     @include bp(phone) {
-      flex-direction: column;
+      flex-direction: row;
       padding: 64px 25px;
+      flex-wrap: wrap;
     }
   }
 
@@ -75,11 +76,16 @@
     @include bp(tablet) {
       max-width: 150px;
     }
-    & h2 {
-      color: $white;
-      padding-bottom: 24px;
-      cursor: pointer;
 
+    &__city {
+      cursor: pointer;
+      padding-bottom: 15px;
+      @include bp(tablet) {
+        font-size: 1.9rem;
+      }
+    }
+
+    & h2 {
       & h2:nth-of-type(0) {
         color: $green;
       }
