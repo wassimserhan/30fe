@@ -48,7 +48,6 @@ global $template;
 
           <a class="nav__items nav-links" href="<?php echo site_url('/seminars')?>" target="_self">Seminars</a>
 
-          <a class="nav__items nav-links" href="#" target="_self">Community</a>
 
         </section>
       </article>
