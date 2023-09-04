@@ -28,15 +28,6 @@ get_header();
           </article>
           <article class="contact__location">
 
-            <h3 class="contact__location__city" style="color:#08cb80 ">Vancouver</h3>
-            <a
-              href="https://www.google.com/maps/place/555+Burrard+St,+Vancouver,+BC+V7X+1M8/@49.2863716,-123.1212611,17z/data=!3m1!4b1!4m5!3m4!1s0x548671822d969bd9:0x3899cbe47e0fa337!8m2!3d49.2863681!4d-123.1190724?shorturl=1">
-              <p>555 Burrard Street,15th Floor, Suite 110<br>
-                Vancouver, BC V7X 1M8Office (604) 674-1100</p>
-            </a>
-          </article>
-          <article class="contact__location">
-
             <h3 id="showOT" class="contact__location__city" style="color: #0175df">Ottawa</h3>
             <a
               href="https://www.google.com/maps/place/280+Albert+St,+Ottawa,+ON+K1P+5G8/@45.4192483,-75.7038062,17z/data=!3m1!4b1!4m5!3m4!1s0x4cce05532ae00d19:0xd5ce26367f8c0b5a!8m2!3d45.4192446!4d-75.7016175">
@@ -54,6 +45,17 @@ get_header();
                 Calgary, AB T2P 2W2Office (403) 208-4545</p>
             </a>
           </article>
+          <article class="contact__location">
+
+            <h3 class="contact__location__city" style="color:#08cb80 ">Vancouver</h3>
+            <a
+              href="https://www.google.com/maps/place/555+Burrard+St,+Vancouver,+BC+V7X+1M8/@49.2863716,-123.1212611,17z/data=!3m1!4b1!4m5!3m4!1s0x548671822d969bd9:0x3899cbe47e0fa337!8m2!3d49.2863681!4d-123.1190724?shorturl=1">
+              <p>555 Burrard Street,15th Floor, Suite 110<br>
+                Vancouver, BC V7X 1M8Office (604) 674-1100</p>
+            </a>
+          </article>
+
+
         </section>
         <!-- <section id="cityTO" class="contact__image contact__image--active">
           <img class="contact__image__pin--orange"

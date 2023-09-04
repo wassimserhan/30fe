@@ -6,11 +6,14 @@
   font-family: 'Inter', sans-serif;
 
   &__hero {
+    &__wrapper {
+      position: relative;
+    }
     &__video {
-      width: 160px;
+      width: 200px;
       position: absolute;
-      top: 310px;
-      right: 80px;
+      top: 48%;
+      right: -3%;
 
       @include bp(laptop) {
         width: 215px;

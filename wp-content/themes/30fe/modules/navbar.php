@@ -52,6 +52,9 @@ global $template;
         </section>
       </article>
 
+      <a class="nav__items nav-links" href="<?php echo site_url('/team')?>" target="_self">Team</a>
+
+
       <article class="accordion-about">
         <div class="accordion-about__wrapper">
           <a class="nav__items nav__items--main nav-links" href="<?php echo site_url('/expertise')?>"
@@ -98,9 +101,8 @@ global $template;
         </section>
       </article>
 
-      <a class="nav__items nav-links" href="<?php echo site_url('/team')?>" target="_self">Team</a>
 
-      <a class="nav__items nav-links" href="<?php echo site_url('/sectors')?>" target="_self">Sectors</a>
+
       <a class="nav__items nav-links" href="<?php echo site_url('/insights')?>" target="_self">Insights</a>
       <a class="nav__items nav-links" href="<?php echo site_url('/contact')?>" target="_self">Contact</a>
 
