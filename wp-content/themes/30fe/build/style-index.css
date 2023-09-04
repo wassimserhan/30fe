@@ -2096,6 +2096,9 @@ body.admin-bar .search-overlay {
 .testimonials {
   font-family: "Inter", sans-serif;
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 .testimonials__headline {
   text-align: center;
