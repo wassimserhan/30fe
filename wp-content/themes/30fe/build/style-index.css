@@ -2100,6 +2100,11 @@ body.admin-bar .search-overlay {
   justify-content: center;
   flex-direction: column;
 }
+@media (max-width: 479px) {
+  .testimonials {
+    display: block;
+  }
+}
 .testimonials__headline {
   text-align: center;
 }
