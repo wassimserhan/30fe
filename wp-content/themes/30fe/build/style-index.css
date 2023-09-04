@@ -2387,6 +2387,9 @@ body.admin-bar .search-overlay {
     padding: 25px;
   }
 }
+.home__hero__copy {
+  font-size: 5rem;
+}
 @media (max-width: 479px) {
   .home__hero__copy {
     font-size: 2.5rem;

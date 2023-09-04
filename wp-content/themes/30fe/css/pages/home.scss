@@ -34,12 +34,13 @@
     }
 
     &__copy {
-      // font-size: 4rem;
+      font-size: 5rem;
       // font-weight: bold;
       // line-height: 120%;
       // letter-spacing: -0.2rem;
       // margin: 0;
       // color: $black;
+
       @include bp(phone) {
         font-size: 2.5rem;
       }
