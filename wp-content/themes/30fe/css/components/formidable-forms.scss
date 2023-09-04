@@ -1,3 +1,18 @@
 .frm_style_formidable-style.with_frm_style .frm_error_style {
-  background-color: $orange;
+  border: none !important;
+  background-color: rgba(255, 203, 168, 0.3) !important;
+}
+
+.with_frm_style .frm_message,
+.frm_success_style {
+  border: none !important;
+  background-color: rgba(150, 238, 198, 0.3) !important;
+}
+
+.with_frm_style .frm_message p {
+  color: $green !important;
+}
+
+.frm_style_formidable-style.with_frm_style .frm_error_style {
+  color: $orange !important;
 }
