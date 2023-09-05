@@ -1325,6 +1325,7 @@ body.admin-bar .search-overlay {
 }
 .search__result__title {
   font-size: 1rem;
+  color: #ffffff;
 }
 
 .search-term {
