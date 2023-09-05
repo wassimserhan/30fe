@@ -2337,6 +2337,7 @@ body.admin-bar .search-overlay {
 }
 .accordion--horizontal .accordion__copy {
   padding: 24px 0;
+  min-height: 140px;
 }
 .accordion__item {
   flex-grow: 0;

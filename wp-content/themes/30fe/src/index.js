@@ -156,6 +156,7 @@ if (slider5) {
 
 
 // modules
+import './modules/test';
 import './modules/changeBackground';
 import './modules/careers';
 import './modules/expertise';
