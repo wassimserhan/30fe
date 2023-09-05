@@ -4247,6 +4247,8 @@ body.admin-bar .search-overlay {
 }
 .accordion-careers__wrapper:hover {
   background-color: #f2f1ed;
+}
+.accordion-careers__wrapper:hover p {
   color: #1d1c1d;
 }
 .accordion-careers__wrapper .arrow-down {
@@ -4264,6 +4266,7 @@ body.admin-bar .search-overlay {
   font-weight: 700;
   line-height: 140%; /* 28px */
   letter-spacing: -0.6px;
+  color: #ffffff;
 }
 @media (max-width: 768px) {
   .accordion-careers__intro--hide {
@@ -4301,6 +4304,8 @@ body.admin-bar .search-overlay {
 }
 .accordion-careers__active {
   background-color: #f2f1ed;
+}
+.accordion-careers__active .accordion-careers__intro {
   color: #1d1c1d;
 }
 .accordion-careers__active .accordion-careers__content {

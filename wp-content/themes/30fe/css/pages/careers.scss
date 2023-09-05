@@ -147,7 +147,9 @@
 
     &:hover {
       background-color: $whitesmoke;
-      color: $black;
+      & p {
+        color: $black;
+      }
     }
 
     .arrow-down {
@@ -168,6 +170,7 @@
     font-weight: 700;
     line-height: 140%; /* 28px */
     letter-spacing: -0.6px;
+    color: $white;
 
     &--hide {
       @include bp(tablet) {
@@ -213,8 +216,9 @@
 
   &__active {
     background-color: $whitesmoke;
-    color: $black;
+
     .accordion-careers__intro {
+      color: $black;
     }
 
     .accordion-careers__content {
