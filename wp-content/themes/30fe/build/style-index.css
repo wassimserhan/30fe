@@ -1656,7 +1656,7 @@ body.admin-bar .search-overlay {
 }
 @media (max-width: 479px) {
   .about__timeline__line {
-    top: 196px;
+    top: 201px;
   }
 }
 .about__timeline__pill {
@@ -1695,6 +1695,7 @@ body.admin-bar .search-overlay {
   margin: auto;
   padding: 10px;
   z-index: 3;
+  min-height: 240px;
 }
 .about__timeline__story {
   color: #787878;
