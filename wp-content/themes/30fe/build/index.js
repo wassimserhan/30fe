@@ -3830,6 +3830,7 @@ if (slider1) {
       next: 'splide__arrow--next splide-testimonials__arrow--next'
     },
     type: 'loop',
+    arrowPath: 'M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z',
     perPage: 1,
     pagination: false
   }).mount();
@@ -3847,7 +3848,8 @@ if (slider2) {
     perPage: 1,
     pagination: false,
     keyboard: true,
-    autoplay: true
+    autoplay: true,
+    arrowPath: 'M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z'
   }).mount();
 }
 const slider3 = document.getElementById('slider3');
@@ -3920,7 +3922,9 @@ if (slider5) {
     type: 'loop',
     arrows: true,
     pagination: false,
-    keyboard: true
+    keyboard: true,
+    arrowPath: 'M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z'
+
     // omitEnd: false,
     // focus: 'left',
     // isNavigation: true
@@ -4775,7 +4779,7 @@ class Search {
                 <a class="search__result__link" href="${item.permalink}">
                   <section class="search__result">
 
-                                   ${item.image ? `<img src="${item.image}">` : `<img src="${document.querySelector('.backup-image').getAttribute('data-img')}">`}
+                 ${item.image ? `<img src="${item.image}">` : `<img src="${document.querySelector('.backup-image').getAttribute('data-img')}">`}
 
 
                 

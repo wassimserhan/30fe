@@ -685,6 +685,12 @@ hr {
   background-color: #cbbea5;
   padding-right: 0;
 }
+.splide-form .splide__arrow--prev svg {
+  transform: scaleX(-1) translate(17%, 20%) !important;
+}
+.splide-form .splide__arrow--next svg {
+  transform: scaleX(1) translate(17%, 20%) !important;
+}
 .splide-form__arrow--next {
   top: 94% !important;
   left: 7em !important;
@@ -696,6 +702,12 @@ hr {
 
 .splide-timeline {
   margin: auto;
+}
+.splide-timeline .splide__arrow--prev svg {
+  transform: scaleX(-1) translate(17%, 20%) !important;
+}
+.splide-timeline .splide__arrow--next svg {
+  transform: scaleX(1) translate(17%, 20%) !important;
 }
 .splide-timeline .splide-timeline .splide__arrow {
   background: #1d1c1d;
@@ -735,6 +747,15 @@ hr {
 
 .splide-testimonials {
   padding: 0 !important;
+}
+.splide-testimonials .splide__arrow svg {
+  fill: #1d1c1d !important;
+}
+.splide-testimonials .splide__arrow--prev svg {
+  transform: scaleX(-1) translate(17%, 20%) !important;
+}
+.splide-testimonials .splide__arrow--next svg {
+  transform: scaleX(1) translate(17%, 20%) !important;
 }
 .splide-testimonials__arrow--next {
   top: 97% !important;

@@ -6,6 +6,15 @@
   overflow: hidden;
   background-color: $taupe;
   padding-right: 0;
+
+  .splide__arrow--prev svg {
+    transform: scaleX(-1) translate(17%, 20%) !important;
+  }
+
+  .splide__arrow--next svg {
+    transform: scaleX(1) translate(17%, 20%) !important;
+  }
+
   &__arrow--next {
     top: 94% !important;
     left: 7em !important;
@@ -20,6 +29,14 @@
 //Timeline
 .splide-timeline {
   margin: auto;
+
+  .splide__arrow--prev svg {
+    transform: scaleX(-1) translate(17%, 20%) !important;
+  }
+
+  .splide__arrow--next svg {
+    transform: scaleX(1) translate(17%, 20%) !important;
+  }
 
   .splide-timeline .splide__arrow {
     background: #1d1c1d;
@@ -61,6 +78,21 @@
 .splide-testimonials {
   padding: 0 !important;
 
+  .splide__arrow svg {
+    fill: $black !important;
+
+    // height: 1.5em !important;
+    // width: 1.5em !important;
+  }
+
+  .splide__arrow--prev svg {
+    transform: scaleX(-1) translate(17%, 20%) !important;
+  }
+
+  .splide__arrow--next svg {
+    transform: scaleX(1) translate(17%, 20%) !important;
+  }
+
   &__arrow--next {
     top: 97% !important;
     left: 50px !important;
@@ -99,6 +131,7 @@
 
 .splide__arrow svg {
   fill: $black !important;
+
   height: 1.5em !important;
   width: 1.5em !important;
 }

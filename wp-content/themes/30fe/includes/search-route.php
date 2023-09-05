@@ -54,7 +54,7 @@
     array_push($results['post'], array(
       'title' => get_the_title(),
       'permalink' => get_the_permalink(),
-      'image' =>get_the_post_thumbnail_url(0, 'square')
+      'image' => get_the_post_thumbnail_url(0, 'square')
     ));
     }
   }
