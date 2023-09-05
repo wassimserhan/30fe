@@ -74,7 +74,7 @@
     max-width: 200px;
 
     @include bp(tablet) {
-      max-width: 150px;
+      max-width: 170px;
     }
 
     &__city {
@@ -159,10 +159,12 @@
 
 #ottawa {
   background-image: url('/images/maps/ottawa.svg');
+  background-position: 25% 55%;
 }
 
 #calgary {
   background-image: url('/images/maps/calgary.svg');
+  background-position: (top);
 }
 
 //Pins
@@ -197,8 +199,8 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  left: 36%;
-  top: 54%;
+  left: 50%;
+  top: 40%;
   background-image: url('/images/maps/blue-pin.svg');
   background-repeat: no-repeat;
 }
