@@ -43,6 +43,9 @@
   &__card {
     width: 280px;
     padding: 24px 0;
+    @include bp(phone) {
+      width: 500px;
+    }
 
     &__label {
       display: flex;

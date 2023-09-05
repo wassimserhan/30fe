@@ -3512,6 +3512,11 @@ body.admin-bar .search-overlay {
   width: 280px;
   padding: 24px 0;
 }
+@media (max-width: 479px) {
+  .insights__card {
+    width: 500px;
+  }
+}
 .insights__card__label {
   display: flex;
   justify-content: flex-start;
