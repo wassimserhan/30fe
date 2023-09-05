@@ -1,18 +1,8 @@
 <article class="insights__card">
   <a href="<?php the_permalink() ?>">
     <figure>
-      <?php if(get_the_post_thumbnail_url()) { ?>
       <img loading="lazy" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo $alt; ?>"
         title="<?php echo $title; ?>">
-      <?php } else { 
-              
-            foreach((get_the_category()) as $category) { 
-            } ?>
-      <img class="backup-image" loading="lazy"
-        data-img="<?php echo get_template_directory_uri(); ?>/images/blog/<?php echo $category->cat_name?>.png"
-        src="<?php echo get_template_directory_uri(); ?>/images/blog/<?php echo $category->cat_name?>.png"
-        alt="<?php echo $alt; ?>" title="<?php echo $title; ?>">
-      <?php } ?>
     </figure>
   </a>
   <article class="insights__card__label">

@@ -4778,13 +4778,8 @@ class Search {
               ${results.post.map(item => `
                 <a class="search__result__link" href="${item.permalink}">
                   <section class="search__result">
-
-                 ${item.image ? `<img src="${item.image}">` : `<img src="${siteData.root_url}/wp-content/themes/30fe/images/blog/general.png">`}
-
-
-                
+                    <img src="${item.image}">
                     <section class="search__result__detail">
-                   
                       <p class="search__result__title">${item.title}</p>
                     </section>
                  </section>
