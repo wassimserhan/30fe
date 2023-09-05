@@ -115,7 +115,7 @@ class Search {
                 <a class="search__result__link" href="${item.permalink}">
                   <section class="search__result">
 
-                 ${item.image ? `<img src="${item.image}">` : `<img src="${siteData.root_url}/wp-content/themes/30fe/images/blog/general.png">`}
+                 ${item.image ? `<img src="${item.image}">` : `<img src="${siteData.root_url}/wp-content/themes/30fe/images/blog/General.png">`}
 
 
                 
