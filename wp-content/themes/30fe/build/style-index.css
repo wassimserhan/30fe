@@ -2679,6 +2679,7 @@ body.admin-bar .search-overlay {
 .team__search {
   display: flex;
   gap: 20px;
+  padding: 2rem 0;
 }
 @media (max-width: 479px) {
   .team__search {
@@ -3475,7 +3476,7 @@ body.admin-bar .search-overlay {
   font-family: "Inter", sans-serif;
 }
 .insights__headline {
-  padding: 48px 0;
+  padding: 1.5rem 0;
 }
 .insights__copy {
   font-size: 1.25rem;

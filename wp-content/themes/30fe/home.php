@@ -8,8 +8,8 @@ get_header();
       <section class="pill">
         <p class="pill__label">Insights</p>
       </section>
-      <h2 class="insights__headline">30 Publications</h2>
-      <h6>Find all past and future publications and reports by our finest writers.</h6>
+      <h1 class="insights__headline">30 Publications</h1>
+      <p>Find all past and future publications and reports by our finest writers.</p>
       <br>
       <section class="team__search">
         <div class="insights__filter-dropdown">
