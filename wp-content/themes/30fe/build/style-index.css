@@ -4309,11 +4309,10 @@ body.admin-bar .search-overlay {
 }
 .accordion-careers__wrapper {
   position: relative;
-  height: 52px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 15px;
+  padding: 10px 15px;
   cursor: pointer;
 }
 .accordion-careers__wrapper:hover {
