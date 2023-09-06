@@ -8,11 +8,11 @@
   padding-right: 0;
 
   .splide__arrow--prev svg {
-    transform: scaleX(-1) translate(21%, 24%) !important;
+    transform: scaleX(-1) translate(16%, 27%) !important;
   }
 
   .splide__arrow--next svg {
-    transform: scaleX(1) translate(21%, 24%) !important;
+    transform: scaleX(1) translate(24%, 27%) !important;
   }
 
   &__arrow--next {
@@ -31,11 +31,11 @@
   margin: auto;
 
   .splide__arrow--prev svg {
-    transform: scaleX(-1) translate(21%, 24%) !important;
+    transform: scaleX(-1) translate(16%, 27%) !important;
   }
 
   .splide__arrow--next svg {
-    transform: scaleX(1) translate(21%, 24%) !important;
+    transform: scaleX(1) translate(24%, 27%) !important;
   }
 
   .splide-timeline .splide__arrow {
@@ -86,11 +86,11 @@
   }
 
   .splide__arrow--prev svg {
-    transform: scaleX(-1) translate(21%, 24%) !important;
+    transform: scaleX(-1) translate(16%, 27%) !important;
   }
 
   .splide__arrow--next svg {
-    transform: scaleX(1) translate(21%, 24%) !important;
+    transform: scaleX(1) translate(24%, 27%) !important;
   }
 
   &__arrow--next {
@@ -163,6 +163,6 @@
   bottom: 38px !important;
 }
 
-// .splide__arrow:before {
-//   border: none !important;
-// }
+button.splide__arrow:hover {
+  background-color: transparent !important;
+}
