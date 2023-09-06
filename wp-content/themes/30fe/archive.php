@@ -9,7 +9,7 @@ get_header();
         <p class="pill__label">Insights Category Archives</p>
       </section>
       <h1 class="insights__headline"><?php single_cat_title() ?> </h1>
-      <h6>Find all past and future publications and reports by our finest writers.</h6>
+      <p>Find all past and future publications and reports by our finest writers.</p>
 
       <section class="insights__grid">
         <?php 

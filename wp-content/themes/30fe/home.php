@@ -35,7 +35,7 @@ get_header();
       <section id="insights" class="insights__grid">
 
         <?php 
-          
+        
           while (have_posts()):the_post(); ?>
 
         <?php include get_template_directory() . '/modules/insights-card.php'; ?>

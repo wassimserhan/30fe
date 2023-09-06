@@ -34,10 +34,11 @@
 
   &__grid {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
     align-items: flex-start;
     align-self: stretch;
+    gap: 20px;
   }
 
   &__card {
