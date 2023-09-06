@@ -19,6 +19,10 @@
     &__button {
       text-align: center;
       margin: 20px 0 0;
+      @include bp(phone) {
+        width: 100%;
+        text-align: left;
+      }
     }
 
     &__button--white {

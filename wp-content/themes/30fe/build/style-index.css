@@ -414,9 +414,13 @@ button {
   background-color: #1d1c1d;
   border: 1px solid #1d1c1d;
   color: #ffffff;
-  padding: 8px 16px;
+  padding: 1rem 1.5rem;
   text-transform: uppercase;
   line-height: 150%;
+}
+button:hover {
+  background-color: #ffffff;
+  color: #1d1c1d;
 }
 
 *:focus {
@@ -918,6 +922,11 @@ hr {
   transform: rotate(-45deg);
   border-bottom: 2px solid #1d1c1d;
   border-left: 2px solid #1d1c1d;
+}
+@media (max-width: 479px) {
+  .plus::after {
+    top: 4px;
+  }
 }
 
 .plus-active {
@@ -1786,7 +1795,7 @@ body.admin-bar .search-overlay {
 .expertise-form__wrapper {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 50px;
 }
 @media (max-width: 768px) {
   .expertise-form__wrapper {
@@ -2098,16 +2107,6 @@ body.admin-bar .search-overlay {
   text-decoration: underline;
 }
 .email__submit {
-  font-size: 0.8em;
-  text-transform: uppercase;
-  background-color: #1d1c1d;
-  border-radius: 0;
-  padding: 0 32px;
-  color: #f2f1ed;
-  height: 50px;
-  line-height: 50px;
-  border: 1px solid #1d1c1d;
-  display: inline;
   margin-top: 32px;
 }
 .email__disclaimer {
@@ -2127,7 +2126,7 @@ body.admin-bar .search-overlay {
 }
 @media (max-width: 479px) {
   .quote {
-    padding: 128px 15px;
+    padding: 128px 24px;
   }
 }
 .quote__headline {
@@ -2179,9 +2178,23 @@ body.admin-bar .search-overlay {
 .home-expertise {
   font-family: "Inter", sans-serif;
   background-color: #f2f1ed;
+  padding: 128px;
+}
+@media (max-width: 479px) {
+  .home-expertise {
+    padding: 30px;
+  }
 }
 .home-expertise__headline {
   padding-bottom: 32px;
+}
+@media (max-width: 479px) {
+  .home-expertise__headline {
+    font-size: 2.5rem;
+    line-height: 120%;
+    letter-spacing: -0.125rem;
+    padding-bottom: 0;
+  }
 }
 .home-expertise__list {
   display: flex;
@@ -2367,7 +2380,7 @@ body.admin-bar .search-overlay {
 .item {
   border: 1px solid #555;
   cursor: pointer;
-  padding: 10px 25px;
+  padding: 16px 25px;
 }
 
 .item:last-child {
@@ -2429,6 +2442,12 @@ body.admin-bar .search-overlay {
 .home__hero__button {
   text-align: center;
   margin: 20px 0 0;
+}
+@media (max-width: 479px) {
+  .home__hero__button {
+    width: 100%;
+    text-align: left;
+  }
 }
 .home__hero__button--white {
   background-color: transparent;
@@ -3389,7 +3408,7 @@ body.admin-bar .search-overlay {
   line-height: 120%; /* 38.4px */
   letter-spacing: -1.6px;
 }
-@media (max-width: 479px) {
+@media (max-width: 768px) {
   .industry__categories {
     flex-direction: column;
   }

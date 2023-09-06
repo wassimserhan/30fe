@@ -7,7 +7,7 @@
   flex-direction: column;
   padding: 128px;
   @include bp(phone) {
-    padding: 128px 15px;
+    padding: 128px 24px;
   }
 
   &__headline {

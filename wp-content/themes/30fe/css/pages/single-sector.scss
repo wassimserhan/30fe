@@ -54,7 +54,7 @@
     line-height: 120%; /* 38.4px */
     letter-spacing: -1.6px;
 
-    @include bp(phone) {
+    @include bp(tablet) {
       flex-direction: column;
     }
   }

@@ -22,7 +22,7 @@
   </section>
 
   <section class="home-expertise fullscreen full-height">
-    <section class="max-width max-padding">
+    <section class="max-width">
       <article class="accordion-faq">
         <div class="accordion-faq__wrapper">
           <h2 class="home-expertise__headline">Our Expertise</h2>
@@ -175,7 +175,7 @@
 
 
   <section id="accordion-mobile" class="">
-    <section class="max-width max-padding">
+    <section class="max-width">
 
       <?php $k=0;
         if( have_rows('accordion_items') ): 

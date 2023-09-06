@@ -26,9 +26,14 @@ button {
   background-color: $black;
   border: 1px solid $black;
   color: $white;
-  padding: 8px 16px;
+  padding: 1rem 1.5rem;
   text-transform: uppercase;
   line-height: 150%;
+
+  &:hover {
+    background-color: $white;
+    color: $black;
+  }
 }
 
 *:focus {
