@@ -22,7 +22,7 @@
   </section>
 
   <section class="home-expertise fullscreen full-height">
-    <section class="max-width">
+    <section class="max-width max-padding">
       <article class="accordion-faq">
         <div class="accordion-faq__wrapper">
           <h2 class="home-expertise__headline">Our Expertise</h2>

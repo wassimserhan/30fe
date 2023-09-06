@@ -2183,7 +2183,6 @@ body.admin-bar .search-overlay {
 .home-expertise {
   font-family: "Inter", sans-serif;
   background-color: #f2f1ed;
-  padding: 128px;
 }
 @media (max-width: 479px) {
   .home-expertise {

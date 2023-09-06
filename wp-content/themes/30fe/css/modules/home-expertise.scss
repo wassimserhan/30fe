@@ -1,7 +1,6 @@
 .home-expertise {
   font-family: 'Inter', sans-serif;
   background-color: $whitesmoke;
-  padding: 128px;
   @include bp(phone) {
     padding: 30px;
   }
