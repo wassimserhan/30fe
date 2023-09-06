@@ -17,12 +17,12 @@
 
   &__arrow--next {
     top: 94% !important;
-    left: 7em !important;
+    left: 25% !important;
   }
 
   &__arrow--prev {
     top: 94% !important;
-    left: 10% !important;
+    left: 13% !important;
   }
 }
 
@@ -48,8 +48,12 @@
     right: -1px;
   }
 
+  button.splide__arrow:hover {
+    background-color: $black !important;
+  }
+
   &__arrow--next {
-    top: 40% !important;
+    top: 25% !important;
     right: 0 !important;
     background-color: $black !important;
     opacity: 1 !important ;
@@ -59,7 +63,7 @@
   }
 
   &__arrow--prev {
-    top: 40% !important;
+    top: 25% !important;
     left: 0 !important;
     background-color: $black !important;
     opacity: 1 !important ;

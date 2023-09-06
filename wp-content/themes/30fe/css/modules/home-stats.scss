@@ -56,22 +56,22 @@
     // letter-spacing: -0.05rem;
 
     &-orange {
-      transform: translate(792px, 0px);
+      transform: translate(792px, -10px);
       max-width: 200px;
     }
 
     &-green {
-      transform: translate(514px, 0px);
+      transform: translate(514px, -10px);
       max-width: 243px;
     }
 
     &-blue {
-      transform: translate(530px, 0px);
+      transform: translate(530px, -10px);
       max-width: 340px;
     }
 
     &-dark {
-      transform: translate(411px, 0px);
+      transform: translate(411px, -10px);
       max-width: 230px;
     }
   }

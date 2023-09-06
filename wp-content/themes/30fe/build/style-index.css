@@ -698,11 +698,11 @@ hr {
 }
 .splide-form__arrow--next {
   top: 94% !important;
-  left: 7em !important;
+  left: 25% !important;
 }
 .splide-form__arrow--prev {
   top: 94% !important;
-  left: 10% !important;
+  left: 13% !important;
 }
 
 .splide-timeline {
@@ -722,8 +722,11 @@ hr {
   border: 1px solid #f2f1ed;
   right: -1px;
 }
+.splide-timeline button.splide__arrow:hover {
+  background-color: #1d1c1d !important;
+}
 .splide-timeline__arrow--next {
-  top: 40% !important;
+  top: 25% !important;
   right: 0 !important;
   background-color: #1d1c1d !important;
   opacity: 1 !important;
@@ -734,7 +737,7 @@ hr {
   }
 }
 .splide-timeline__arrow--prev {
-  top: 40% !important;
+  top: 25% !important;
   left: 0 !important;
   background-color: #1d1c1d !important;
   opacity: 1 !important;
@@ -1095,7 +1098,7 @@ button.splide__arrow:hover {
   background-color: #1d1c1d;
   text-align: left;
   padding: 100px 57px 0;
-  height: 92vh;
+  height: 100vh;
   max-width: 300px;
   transform: translateX(100%);
   grid-auto-rows: minmax(min-content, 70px);
@@ -1247,7 +1250,7 @@ button.splide__arrow:hover {
   filter: alpha(opacity=0);
   opacity: 0;
   transition-property: opacity;
-  transition-duration: 0.35s;
+  transition-duration: 0.1s;
   transition-delay: 0s;
   margin-left: 0;
   z-index: -10;
@@ -1717,6 +1720,7 @@ body.admin-bar .search-overlay {
 .about__timeline__story {
   color: #787878;
   text-align: center;
+  margin-top: 1rem;
 }
 @media (max-width: 479px) {
   .about__timeline__story {
@@ -2009,19 +2013,19 @@ body.admin-bar .search-overlay {
   text-align: center;
 }
 .stats__label-orange {
-  transform: translate(792px, 0px);
+  transform: translate(792px, -10px);
   max-width: 200px;
 }
 .stats__label-green {
-  transform: translate(514px, 0px);
+  transform: translate(514px, -10px);
   max-width: 243px;
 }
 .stats__label-blue {
-  transform: translate(530px, 0px);
+  transform: translate(530px, -10px);
   max-width: 340px;
 }
 .stats__label-dark {
-  transform: translate(411px, 0px);
+  transform: translate(411px, -10px);
   max-width: 230px;
 }
 .stats__progress {
