@@ -53,7 +53,7 @@
   </section>
 
   <section class="quote fullscreen">
-    <section class="max-width">
+    <section class="max-width max-padding">
       <h3 class="quote__headline"><?php echo get_field('intro') ?></h3>
       <a href="<?php echo site_url('/team')?>"><button class="quote__button">Find an Expert</button></a>
     </section>
@@ -221,7 +221,7 @@
 
 
   <section class="testimonials fullscreen">
-    <section class="max-width">
+    <section class="max-width max-padding">
       <h2 class="testimonials__headline">Testimonials</h2>
       <section id="slider1" class="splide splide-testimonials" aria-labelledby="carousel-heading">
         <div class="splide__track">

@@ -1,10 +1,9 @@
 .testimonials {
   font-family: 'Inter', sans-serif;
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 128px 10px;
   @include bp(phone) {
     display: block;
   }

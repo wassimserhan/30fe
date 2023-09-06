@@ -3,12 +3,12 @@
 
   &__hero {
     position: relative;
-    height: 100vh;
+    height: 90vh;
 
     &__buttons {
       display: flex;
-      justify-content: space-between;
-      max-width: 340px;
+      justify-content: flex-start;
+      // max-width: 340px;
       width: 100%;
 
       @include bp(tablet) {
@@ -18,7 +18,7 @@
 
     &__button {
       text-align: center;
-      margin: 20px 0 0;
+      margin: 24px 24px 0 0;
       @include bp(phone) {
         width: 100%;
         text-align: left;

@@ -135,7 +135,7 @@ p {
 }
 
 .full-height {
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -191,12 +191,13 @@ img {
 .max-width {
   max-width: 1440px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .max-padding {
-  padding: 128px;
-  @include bp(laptop) {
-    padding: 128px 32px;
+  padding: 8rem;
+  @include bp(phone) {
+    padding: 8rem 1.5rem;
   }
 }
 

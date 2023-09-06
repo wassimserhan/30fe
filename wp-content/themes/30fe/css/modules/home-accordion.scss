@@ -13,9 +13,9 @@
 
 .accordion {
   display: flex;
-  min-height: 600px;
+  // min-height: 600px;
   // height: max-content;
-  // height: 80vh; /* <--- This is what you need */
+  height: 90vh; /* <--- This is what you need */
 
   @include bp(tablet) {
     // display: none;
