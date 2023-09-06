@@ -824,8 +824,7 @@ button.splide__arrow:hover {
   padding: 32px;
   margin: 0 0 32px;
   max-width: 300px;
-  height: -moz-max-content;
-  height: max-content;
+  min-height: 575px;
   background-color: #f2f1ed;
 }
 .team-card--slide {
