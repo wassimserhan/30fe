@@ -148,6 +148,14 @@ get_header();
   </section>
   <!-- Blog -->
 
+  <?php 
+     $homepagePosts = new WP_Query(array(
+      'posts_per_page' => 3,
+      'category_name' => $post->post_name,
+      )); ?>
+
+  <?php if($homepagePosts->have_posts()) :?>
+
   <section class="insights fullscreen">
     <section class="max-width max-padding">
       <section class="pill">
@@ -160,25 +168,23 @@ get_header();
 
       <section class="insights__grid">
 
-        <?php 
 
-     $homepagePosts = new WP_Query(array(
-      'posts_per_page' => 3,
-      'category_name' => $post->post_name,
-      ));
-      while ($homepagePosts->have_posts()): $homepagePosts->the_post();
+        <?php while ($homepagePosts->have_posts()): $homepagePosts->the_post();
       ?>
 
         <?php include get_template_directory() . '/modules/insights-card.php'; ?>
 
         <?php endwhile ?>
 
-        <?php wp_reset_postdata() ?>
+
       </section>
 
 
     </section>
   </section>
+  <?php endif?>
+
+  <?php wp_reset_postdata() ?>
 </main>
 <?php 
 get_footer();
