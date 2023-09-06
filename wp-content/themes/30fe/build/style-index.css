@@ -2222,7 +2222,7 @@ body.admin-bar .search-overlay {
 .home-expertise__item {
   display: flex;
   place-items: center;
-  min-width: 264px;
+  min-width: 225px;
   background-color: transparent;
   border: none;
   color: #1d1c1d;
@@ -2234,6 +2234,7 @@ body.admin-bar .search-overlay {
   font-weight: 600;
   line-height: 140%;
   letter-spacing: -0.05rem;
+  padding: 1rem 0;
 }
 .home-expertise__item:hover {
   background-color: #cbbea5;
@@ -2699,7 +2700,7 @@ body.admin-bar .search-overlay {
   gap: 20px;
   padding: 2rem 0;
 }
-@media (max-width: 768px) {
+@media (max-width: 936px) {
   .team__search {
     flex-direction: column;
   }
@@ -2776,6 +2777,7 @@ body.admin-bar .search-overlay {
   padding: 0 0 20px;
   justify-content: flex-start;
   text-align: left;
+  gap: 20px;
 }
 @media (max-width: 768px) {
   .team__grid {
@@ -2789,7 +2791,6 @@ body.admin-bar .search-overlay {
 }
 .team__card {
   width: 22%;
-  margin: 40px 10px 10px 10px;
 }
 @media (max-width: 768px) {
   .team__card {

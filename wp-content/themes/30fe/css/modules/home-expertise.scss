@@ -16,6 +16,9 @@
   }
 
   &__list {
+    // display: grid;
+    // grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -28,7 +31,7 @@
   &__item {
     display: flex;
     place-items: center;
-    min-width: 264px;
+    min-width: 225px;
     background-color: transparent;
     border: none;
     color: $black;
@@ -40,6 +43,7 @@
     font-weight: 600;
     line-height: 140%;
     letter-spacing: -0.05rem;
+    padding: 1rem 0;
 
     &:hover {
       background-color: $taupe;
