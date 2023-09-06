@@ -9,6 +9,11 @@
     background-color: $white;
     color: $black;
     display: block;
+    padding: 8px 16px;
+  }
+
+  &__search {
+    padding: 8px 16px;
   }
 
   &__menu-reverse {
@@ -25,12 +30,12 @@
     flex: 1 0 0;
     margin: auto;
     width: 100%;
-    min-height: 10vh;
-    padding: 0 128px;
+    min-height: 8vh;
+    padding: 0 8rem;
     position: relative;
     z-index: 5;
     @include bp(tablet) {
-      padding: 0 15px;
+      padding: 0 1.5rem;
     }
   }
 
@@ -56,7 +61,7 @@
     background-color: $black;
     text-align: left;
     padding: 100px 57px 0;
-    height: 90vh;
+    height: 92vh;
     max-width: 300px;
     transform: translateX(100%);
     grid-auto-rows: minmax(min-content, 70px);

@@ -436,7 +436,7 @@ button:hover {
 .main-container {
   width: 100%;
   flex: 1 0 auto;
-  margin-top: 78px;
+  margin-top: 8vh;
 }
 
 .large-text {
@@ -530,7 +530,7 @@ p {
 }
 
 .full-height {
-  min-height: 90vh;
+  min-height: 92vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -1054,6 +1054,10 @@ hr {
   background-color: #ffffff;
   color: #1d1c1d;
   display: block;
+  padding: 8px 16px;
+}
+.nav__search {
+  padding: 8px 16px;
 }
 .nav__menu-reverse {
   background-color: #1d1c1d;
@@ -1068,14 +1072,14 @@ hr {
   flex: 1 0 0;
   margin: auto;
   width: 100%;
-  min-height: 10vh;
-  padding: 0 128px;
+  min-height: 8vh;
+  padding: 0 8rem;
   position: relative;
   z-index: 5;
 }
 @media (max-width: 768px) {
   .nav__bar {
-    padding: 0 15px;
+    padding: 0 1.5rem;
   }
 }
 .nav__dropdown {
@@ -1088,7 +1092,7 @@ hr {
   background-color: #1d1c1d;
   text-align: left;
   padding: 100px 57px 0;
-  height: 90vh;
+  height: 92vh;
   max-width: 300px;
   transform: translateX(100%);
   grid-auto-rows: minmax(min-content, 70px);
@@ -2119,7 +2123,7 @@ body.admin-bar .search-overlay {
 
 .quote {
   font-family: "Inter", sans-serif;
-  min-height: 90vh;
+  min-height: 92vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -2142,7 +2146,7 @@ body.admin-bar .search-overlay {
 
 .testimonials {
   font-family: "Inter", sans-serif;
-  min-height: 90vh;
+  min-height: 92vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -2293,7 +2297,7 @@ body.admin-bar .search-overlay {
 
 .accordion {
   display: flex;
-  height: 90vh; /* <--- This is what you need */
+  height: 92vh; /* <--- This is what you need */
 }
 .accordion--horizontal .accordion__item {
   width: 69px;
@@ -2422,7 +2426,7 @@ body.admin-bar .search-overlay {
 }
 .home__hero {
   position: relative;
-  height: 90vh;
+  height: 92vh;
 }
 .home__hero__buttons {
   display: flex;
@@ -3876,7 +3880,7 @@ body.admin-bar .search-overlay {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 90vh;
+  height: 92vh;
   position: relative;
   background-position: bottom;
 }
@@ -4160,7 +4164,7 @@ body.admin-bar .search-overlay {
   font-family: "Inter", sans-serif;
 }
 .careers__hero {
-  min-height: 90vh;
+  min-height: 92vh;
   display: flex;
   justify-content: center;
   flex-direction: column;

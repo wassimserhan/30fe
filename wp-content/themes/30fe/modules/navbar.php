@@ -22,7 +22,8 @@ global $template;
       <button class="nav__menu">
         Menu
       </button>
-      <button class="search-trigger js-search-trigger"><i class="fa fa-search" aria-hidden="true"></i></button>
+      <button class="nav__search search-trigger js-search-trigger"><i class="fa fa-search"
+          aria-hidden="true"></i></button>
     </section>
   </section>
 
