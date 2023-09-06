@@ -1006,7 +1006,7 @@ button.splide__arrow:hover {
 .scroll-text {
   overflow: hidden;
   position: absolute;
-  bottom: 20px;
+  bottom: -7%;
   width: 100%;
 }
 
@@ -2173,11 +2173,6 @@ body.admin-bar .search-overlay {
   justify-content: center;
   flex-direction: column;
 }
-@media (max-width: 479px) {
-  .testimonials {
-    display: block;
-  }
-}
 .testimonials__headline {
   text-align: center;
 }
@@ -2503,11 +2498,9 @@ body.admin-bar .search-overlay {
   font-size: 200px;
   font-style: normal;
   font-weight: 700;
-  line-height: 100%; /* 256px */
   letter-spacing: -12.8px;
   color: #1d1c1d;
   margin: 0;
-  padding-bottom: 30px;
 }
 @media (min-width: 1920px) {
   .home__hero__scroll {
@@ -2779,11 +2772,10 @@ body.admin-bar .search-overlay {
 }
 .team__grid {
   display: flex;
-  justify-content: flex-start;
   flex-wrap: wrap;
-  align-items: flex-start;
-  align-self: stretch;
-  gap: 0 68px;
+  padding: 0 0 20px;
+  justify-content: flex-start;
+  text-align: left;
 }
 @media (max-width: 768px) {
   .team__grid {
@@ -2796,8 +2788,8 @@ body.admin-bar .search-overlay {
   }
 }
 .team__card {
-  width: 20%;
-  padding: 30px 0;
+  width: 22%;
+  margin: 40px 10px 10px 10px;
 }
 @media (max-width: 768px) {
   .team__card {
@@ -2805,10 +2797,15 @@ body.admin-bar .search-overlay {
   }
 }
 .team__card__image {
+  width: 90%;
   height: auto;
-  position: relative;
-  margin: auto;
-  max-width: 300px;
+}
+.team__card__image img {
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .team__card__name {
   padding: 24px 0 8px;

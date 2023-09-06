@@ -4,9 +4,9 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  @include bp(phone) {
-    display: block;
-  }
+  // @include bp(phone) {
+  //   display: block;
+  // }
 
   &__headline {
     text-align: center;

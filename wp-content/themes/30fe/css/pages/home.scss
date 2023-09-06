@@ -61,11 +61,11 @@
       font-size: 200px;
       font-style: normal;
       font-weight: 700;
-      line-height: 100%; /* 256px */
+      // line-height: 100%; /* 256px */
       letter-spacing: -12.8px;
       color: $black;
       margin: 0;
-      padding-bottom: 30px;
+      // padding-bottom: 30px;
       @include bp(largescreen) {
         font-size: 300px;
       }

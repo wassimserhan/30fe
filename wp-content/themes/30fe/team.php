@@ -68,10 +68,10 @@ get_header();
         ?>
         <article class="team__card">
           <a href="<?php the_permalink($team_member) ?>">
-
-            <img class="lazyload team__card__image" src="<?php echo get_the_post_thumbnail_url($team_member); ?>"
-              alt="<?php echo $name; ?>" title="<?php echo $name; ?>">
-
+            <figure class="team__card__image">
+              <img class="lazyload " src="<?php echo get_the_post_thumbnail_url($team_member); ?>"
+                alt="<?php echo $name; ?>" title="<?php echo $name; ?>">
+            </figure>
           </a>
           <h4 class="team__card__name">
             <?php echo $name ?>
