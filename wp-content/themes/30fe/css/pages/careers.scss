@@ -176,13 +176,12 @@
 
   &__wrapper {
     position: relative;
-    height: 52px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 15px;
+    padding: 10px 15px;
     cursor: pointer;
-    // max-width: 630px;
 
     &:hover {
       background-color: $whitesmoke;
