@@ -1062,8 +1062,23 @@ button.splide__arrow:hover {
   display: block;
   padding: 8px 16px;
 }
+.nav__menu:hover {
+  background-color: #ffffff;
+}
 .nav__search {
-  padding: 8px 16px;
+  padding: 0.5rem 1rem;
+  display: block;
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+  font-size: 0.75rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  background-color: #1d1c1d;
+  border: 1px solid #1d1c1d;
+  color: #ffffff;
+  text-transform: uppercase;
+  line-height: 150%;
 }
 .nav__menu-reverse {
   background-color: #1d1c1d;
