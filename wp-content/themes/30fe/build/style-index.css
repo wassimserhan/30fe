@@ -450,7 +450,7 @@ h1 {
   margin: 0;
   color: #1d1c1d;
 }
-@media (max-width: 479px) {
+@media (max-width: 768px) {
   h1 {
     font-size: 3rem;
     line-height: 120%;
@@ -466,7 +466,7 @@ h2 {
   margin: 0;
   color: #1d1c1d;
 }
-@media (max-width: 479px) {
+@media (max-width: 768px) {
   h2 {
     font-size: 3rem;
     letter-spacing: -0.12rem;
@@ -481,7 +481,7 @@ h3 {
   margin: 0;
   color: #1d1c1d;
 }
-@media (max-width: 479px) {
+@media (max-width: 768px) {
   h3 {
     font-size: 1.5rem;
     letter-spacing: -0.04rem;
@@ -496,7 +496,7 @@ h4 {
   color: #1d1c1d;
   letter-spacing: -0.04rem;
 }
-@media (max-width: 479px) {
+@media (max-width: 768px) {
   h4 {
     font-size: 1rem;
     letter-spacing: -0.04rem;
@@ -511,7 +511,7 @@ p {
   letter-spacing: -0.01875rem;
   color: #1d1c1d;
 }
-@media (max-width: 479px) {
+@media (max-width: 768px) {
   p {
     font-size: 1.125rem;
     font-weight: 400;
@@ -1063,7 +1063,7 @@ hr {
   position: relative;
   z-index: 5;
 }
-@media (max-width: 479px) {
+@media (max-width: 768px) {
   .nav__bar {
     padding: 0 15px;
   }
@@ -1265,7 +1265,7 @@ hr {
   box-sizing: border-box;
   padding: 20px 128px;
 }
-@media (max-width: 479px) {
+@media (max-width: 768px) {
   .search-overlay {
     padding: 20px;
   }
@@ -1951,7 +1951,7 @@ body.admin-bar .search-overlay {
   padding: 128px 0;
   background-color: #f2f1ed;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .stats {
     display: none;
   }
@@ -2020,7 +2020,7 @@ body.admin-bar .search-overlay {
 .mobile-stats {
   display: none;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .mobile-stats {
     display: block;
   }
@@ -2337,7 +2337,6 @@ body.admin-bar .search-overlay {
 }
 .accordion--horizontal .accordion__copy {
   padding: 24px 0;
-  min-height: 140px;
 }
 .accordion__item {
   flex-grow: 0;
@@ -2668,7 +2667,7 @@ body.admin-bar .search-overlay {
   gap: 20px;
   padding: 2rem 0;
 }
-@media (max-width: 479px) {
+@media (max-width: 768px) {
   .team__search {
     flex-direction: column;
   }
@@ -2752,7 +2751,7 @@ body.admin-bar .search-overlay {
     gap: 0 44px;
   }
 }
-@media (max-width: 479px) {
+@media (max-width: 768px) {
   .team__grid {
     gap: 10px;
   }
@@ -2761,7 +2760,7 @@ body.admin-bar .search-overlay {
   width: 20%;
   padding: 30px 0;
 }
-@media (max-width: 479px) {
+@media (max-width: 768px) {
   .team__card {
     width: 48%;
   }
@@ -2803,6 +2802,7 @@ body.admin-bar .search-overlay {
   font-weight: 400;
   line-height: 150%; /* 18px */
   text-transform: uppercase;
+  border-radius: 0;
 }
 .team__caret {
   width: 0;
@@ -3920,7 +3920,7 @@ body.admin-bar .search-overlay {
     padding: 64px 25px;
   }
 }
-@media (max-width: 479px) {
+@media (max-width: 768px) {
   .contact__locations {
     flex-direction: row;
     padding: 64px 25px;
@@ -4193,7 +4193,7 @@ body.admin-bar .search-overlay {
   right: -50%;
   z-index: 2;
 }
-@media (max-width: 479px) {
+@media (max-width: 768px) {
   .careers__hero__box--taupe {
     left: -50%;
   }
@@ -4205,7 +4205,7 @@ body.admin-bar .search-overlay {
   width: 75px;
   height: 75px;
 }
-@media (max-width: 479px) {
+@media (max-width: 768px) {
   .careers__hero__box--blue {
     display: none;
   }
@@ -4215,7 +4215,7 @@ body.admin-bar .search-overlay {
   right: 40%;
   z-index: 1;
 }
-@media (max-width: 479px) {
+@media (max-width: 768px) {
   .careers__hero__box--green {
     display: none;
   }
@@ -4230,7 +4230,7 @@ body.admin-bar .search-overlay {
   width: 200px;
   z-index: 2;
 }
-@media (max-width: 479px) {
+@media (max-width: 768px) {
   .careers__hero__images--one {
     top: 390%;
     right: -80px;
@@ -4241,7 +4241,7 @@ body.admin-bar .search-overlay {
   right: 62%;
   width: 250px;
 }
-@media (max-width: 479px) {
+@media (max-width: 768px) {
   .careers__hero__images--two {
     display: none;
   }
@@ -4251,7 +4251,7 @@ body.admin-bar .search-overlay {
   right: -70%;
   z-index: 1;
 }
-@media (max-width: 479px) {
+@media (max-width: 768px) {
   .careers__hero__images--three {
     top: -469%;
     left: -30%;
@@ -4263,7 +4263,7 @@ body.admin-bar .search-overlay {
   left: -55%;
   z-index: 1;
 }
-@media (max-width: 479px) {
+@media (max-width: 768px) {
   .careers__hero__images--four {
     left: 65%;
   }
@@ -4295,8 +4295,10 @@ body.admin-bar .search-overlay {
   overflow: hidden;
   color: #ffffff;
   border-top: 2px solid #ffffff;
-  border-bottom: 2px solid #ffffff;
   background-color: #1d1c1d;
+}
+.accordion-careers:last-of-type {
+  border-bottom: 2px solid #ffffff;
 }
 .accordion-careers:last-child {
   border-bottom: 2px solid #ffffff;
@@ -4336,6 +4338,7 @@ body.admin-bar .search-overlay {
   line-height: 140%; /* 28px */
   letter-spacing: -0.6px;
   color: #ffffff;
+  flex: 1 1 0px;
 }
 @media (max-width: 768px) {
   .accordion-careers__intro--hide {

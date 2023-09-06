@@ -77,6 +77,7 @@
         overflow: hidden;
         color: $black;
         padding: 20px 64px;
+        // height: 600px;
       }
 
       &__headline {
@@ -89,7 +90,6 @@
 
       &__copy {
         padding: 24px 0;
-        min-height: 140px;
       }
 
       &__image {

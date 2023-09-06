@@ -63,7 +63,7 @@
       padding: 64px 25px;
     }
 
-    @include bp(phone) {
+    @include bp(tablet) {
       flex-direction: row;
       padding: 64px 25px;
       flex-wrap: wrap;

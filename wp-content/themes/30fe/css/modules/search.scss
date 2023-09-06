@@ -20,7 +20,7 @@
   box-sizing: border-box;
   padding: 20px 128px;
 
-  @include bp(phone) {
+  @include bp(tablet) {
     padding: 20px;
   }
 

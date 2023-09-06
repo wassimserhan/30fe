@@ -1,7 +1,7 @@
 .stats {
   padding: 128px 0;
   background-color: $whitesmoke;
-  @include bp(tablet) {
+  @include bp(laptop) {
     display: none;
   }
 
@@ -90,7 +90,7 @@
 
 .mobile-stats {
   display: none;
-  @include bp(tablet) {
+  @include bp(laptop) {
     display: block;
   }
 

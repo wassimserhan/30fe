@@ -155,8 +155,11 @@
             <?php echo $copy; ?>
           </p>
 
+
+
           <img class="accordion__image lazyload" src="<?php echo $image ?>" alt="<?php echo $alt; ?>"
             title="<?php echo $alt; ?>">
+
 
         </section>
         <?php $k++ ?>
