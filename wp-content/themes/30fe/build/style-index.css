@@ -3535,8 +3535,9 @@ body.admin-bar .search-overlay {
   gap: 20px;
 }
 .insights__card {
-  width: 280px;
+  width: 31%;
   padding: 24px 0;
+  flex-grow: 1;
 }
 @media (max-width: 479px) {
   .insights__card {
