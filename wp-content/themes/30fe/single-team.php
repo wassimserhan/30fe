@@ -50,7 +50,7 @@
             <p><?php echo $title ?></p>
             <p><?php echo $location ?></p>
             <p><?php echo $phone ?></p>
-            <a href="mailto:<?php echo $email ;?>"><?php echo $email ?></a>
+            <p><a href="mailto:<?php echo $email ;?>"><?php echo $email ?></a></p>
             <?php if($cv) : ?>
             <a href="<?php echo $cv ?>"><button class="member__details__button">Download CV</button></a>
             <?php endif ?>
