@@ -2790,7 +2790,9 @@ body.admin-bar .search-overlay {
   }
 }
 .team__card {
+  max-width: 280px;
   width: 22%;
+  flex-grow: 1;
 }
 .team__card__card:last-of-type {
   flex-grow: 0;
@@ -3537,6 +3539,7 @@ body.admin-bar .search-overlay {
   gap: 20px;
 }
 .insights__card {
+  max-width: 280px;
   width: 31%;
   padding: 24px 0;
   flex-grow: 1;
