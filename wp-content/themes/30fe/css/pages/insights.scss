@@ -46,8 +46,9 @@
     width: 31%;
     padding: 24px 0;
     flex-grow: 1;
-    @include bp(phone) {
-      width: 500px;
+
+    @include bp(tablet) {
+      width: 48%;
     }
     //
 
