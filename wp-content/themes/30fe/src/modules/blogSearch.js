@@ -21,6 +21,7 @@ if (input) {
       title = cards[i].querySelector(".insights__card__title");
       if (title.innerText.toUpperCase().indexOf(filter) > -1) {
         cards[i].style.display = "";
+        cards[i].style.flexGrow = 0;
       } else {
         cards[i].style.display = "none";
       }
