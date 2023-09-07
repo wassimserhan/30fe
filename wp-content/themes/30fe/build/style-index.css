@@ -4230,8 +4230,8 @@ body.admin-bar .search-overlay {
 }
 @media (max-width: 768px) {
   .careers__hero__box--orange {
-    top: -480%;
-    left: 90%;
+    top: -360%;
+    left: 68%;
     z-index: 2;
   }
 }
@@ -4279,8 +4279,8 @@ body.admin-bar .search-overlay {
 }
 @media (max-width: 768px) {
   .careers__hero__images--one {
-    top: 390%;
-    right: -80px;
+    top: 270%;
+    right: -9px;
   }
 }
 .careers__hero__images--two {
@@ -4294,13 +4294,13 @@ body.admin-bar .search-overlay {
   }
 }
 .careers__hero__images--three {
-  top: 51%;
-  right: -70%;
+  top: -329%;
+  left: -30%;
   z-index: 1;
 }
 @media (max-width: 768px) {
   .careers__hero__images--three {
-    top: -469%;
+    top: -329%;
     left: -30%;
     z-index: 1;
   }
@@ -4312,7 +4312,7 @@ body.admin-bar .search-overlay {
 }
 @media (max-width: 768px) {
   .careers__hero__images--four {
-    left: 65%;
+    left: 54%;
   }
 }
 .careers__headline {
