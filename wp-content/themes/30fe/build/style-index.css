@@ -3610,6 +3610,7 @@ body.admin-bar .search-overlay {
 .insights__filter-dropdown {
   min-width: 310px;
   position: relative;
+  flex-grow: 1;
 }
 .insights__filter-dropdown * {
   box-sizing: border-box;
@@ -3628,6 +3629,7 @@ body.admin-bar .search-overlay {
   font-weight: 400;
   line-height: 150%; /* 18px */
   text-transform: uppercase;
+  flex-grow: 1;
 }
 .insights__caret {
   width: 0;

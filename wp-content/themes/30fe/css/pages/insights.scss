@@ -131,6 +131,7 @@
   &__filter-dropdown {
     min-width: 310px;
     position: relative;
+    flex-grow: 1;
   }
 
   &__filter-dropdown * {
@@ -151,6 +152,7 @@
     font-weight: 400;
     line-height: 150%; /* 18px */
     text-transform: uppercase;
+    flex-grow: 1;
   }
 
   &__caret {
