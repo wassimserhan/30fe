@@ -3539,7 +3539,7 @@ body.admin-bar .search-overlay {
   gap: 20px;
 }
 .insights__card {
-  max-width: 280px;
+  max-width: 330px;
   width: 31%;
   padding: 24px 0;
   flex-grow: 1;
