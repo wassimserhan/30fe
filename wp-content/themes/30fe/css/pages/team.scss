@@ -107,13 +107,17 @@
 
   &__card {
     width: 22%;
+    // flex-grow: 1;
     // margin: 40px 10px 10px 10px;
+
+    &__card:last-of-type {
+      flex-grow: 0;
+    }
     @include bp(tablet) {
       width: 48%;
     }
 
     &__image {
-      width: 90%;
       height: auto;
 
       & img {

@@ -8,6 +8,7 @@ if (input) {
     resetFilterText('team__selected-role', 'Filter By Role');
     resetFilterText('team__selected-expertise', 'Filter By Expertise');
     showAllTeam('team__card', 'block');
+    resetFlex();
   })
 
 
@@ -22,10 +23,17 @@ if (input) {
       title = cards[i].querySelector(".team__card__name");
       if (title.innerText.toUpperCase().indexOf(filter) > -1) {
         cards[i].style.display = "";
+        cards[i].style.flexGrow = 0;
       } else {
         cards[i].style.display = "none";
       }
+
+      if (!input.value) {
+        cards[i].style.flexGrow = 1;
+      }
     }
+
+
   }
 }
 
@@ -88,6 +96,8 @@ function roleFilter() {
   resetFilterText('selected-role', 'Filter By Role');
   resetFilterText('selected-expertise', 'Filter By Expertise');
   showAllTeam('team__card', 'block');
+  resetFlex();
+
 
 
 
@@ -136,6 +146,17 @@ function resetFilterText(className, text) {
     elements[i].innerText = text;
     console.log(elements[i].innerText);
   }
+}
+
+function resetFlex() {
+  cardContainer = document.getElementById("team");
+  cards = cardContainer.getElementsByClassName("team__card");
+  for (i = 0; i < cards.length; i++) {
+    cards[i].style.flexGrow = 1;
+
+  }
+
+
 }
 
 

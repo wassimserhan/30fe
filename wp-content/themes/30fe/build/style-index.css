@@ -2792,13 +2792,15 @@ body.admin-bar .search-overlay {
 .team__card {
   width: 22%;
 }
+.team__card__card:last-of-type {
+  flex-grow: 0;
+}
 @media (max-width: 768px) {
   .team__card {
     width: 48%;
   }
 }
 .team__card__image {
-  width: 90%;
   height: auto;
 }
 .team__card__image img {
