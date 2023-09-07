@@ -2904,19 +2904,12 @@ body.admin-bar .search-overlay {
   }
 }
 .member img {
-  width: 500px;
-  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .member__person {
   max-width: 400px;
   width: 100%;
-}
-.member__headline {
-  font-size: 4.5rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 100%;
-  letter-spacing: -3.6px;
 }
 .member article {
   font-size: 16px;
@@ -3979,7 +3972,7 @@ body.admin-bar .search-overlay {
 }
 @media (max-width: 768px) {
   .contact__location {
-    max-width: 170px;
+    max-width: 140px;
   }
 }
 .contact__location__city {
