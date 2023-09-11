@@ -3918,6 +3918,7 @@ if (slider5) {
         perPage: 2
       }
     },
+    start: 3,
     perMove: 1,
     width: '98%',
     perPage: 3,
