@@ -136,7 +136,7 @@ if (slider5) {
 
       },
     },
-    start: 3,
+    start: 0,
     perMove: 1,
     width: '98%',
     perPage: 3,
