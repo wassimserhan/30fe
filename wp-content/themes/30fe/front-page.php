@@ -81,7 +81,7 @@
         </div>
         <div class="stats__progress-wrap" style="opacity: 0.9, width: 0;">
           <div class="stats__progress black-bg">
-            <div id="stats-3" class="stats__overlay-percent">65+</div>
+            <div id="stats-3" class="stats__overlay-percent">20+</div>
             <div id="label-3" class="stats__label stats__label-blue blue-bg">Project and Operational Specialists</div>
           </div>
         </div>
@@ -115,7 +115,7 @@
       </section>
       <section id="statsBox-3" class="mobile-stats__box blue-bg">
         <section class="mobile-stats__item">
-          <h2>65+</h2>
+          <h2>20+</h2>
           <p>Project and Operational Specialists</p>
         </section>
       </section>

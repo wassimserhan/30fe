@@ -3918,7 +3918,7 @@ if (slider5) {
         perPage: 2
       }
     },
-    start: 3,
+    start: 0,
     perMove: 1,
     width: '98%',
     perPage: 3,
