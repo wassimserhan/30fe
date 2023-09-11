@@ -18,53 +18,33 @@
     padding: 24px 0;
   }
 
-  & form {
-    padding: 16px 0;
+  &__form {
+    width: 50%;
   }
+}
 
-  & input {
-    border: 1px solid $black;
-    border-radius: 0;
-    background-color: transparent;
-    height: 50px;
-    line-height: 50px;
-    padding: 0 10px;
-    max-width: 440px;
-    width: 100%;
-  }
+.email__form > .with_frm_style input[type='text'],
+.email__form > .with_frm_style input[type='email'],
+.email__form > .with_frm_style input[type='tel'],
+.email__form > .with_frm_style textarea {
+  padding: 12px;
+  background-color: transparent;
+  border: 1px solid $black;
+  border-radius: 0;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  height: initial;
 
-  & input::placeholder {
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%;
-    text-transform: uppercase;
+  ::placeholder {
     color: $black;
   }
+}
 
-  & a {
-    color: $black;
-    text-decoration: underline;
-  }
-
-  &__submit {
-    // font-size: 0.8em;
-    // text-transform: uppercase;
-    // background-color: $black;
-    // border-radius: 0;
-    // padding: 0 32px;
-    // color: $whitesmoke;
-    // height: 50px;
-    // line-height: 50px;
-    // border: 1px solid $black;
-    // display: inline;
-    margin-top: 32px;
-  }
-
-  &__disclaimer {
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%;
-  }
+.email__form > .with_frm_style select {
+  background-color: $taupe;
+  border: 1px solid $black;
 }

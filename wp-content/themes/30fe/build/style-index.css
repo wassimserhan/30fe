@@ -1050,6 +1050,17 @@ button.splide__arrow:hover {
   color: #ff6f48 !important;
 }
 
+.with_frm_style .vertical_radio .frm_checkbox,
+.with_frm_style .vertical_radio .frm_radio,
+.vertical_radio .frm_catlevel_1 {
+  display: block;
+  padding: 0.2rem !important;
+}
+
+.with_frm_style .frm_primary_label {
+  color: #1d1c1d !important;
+}
+
 .nav {
   background-color: #1d1c1d;
 }
@@ -2100,47 +2111,39 @@ body.admin-bar .search-overlay {
 .email__copy {
   padding: 24px 0;
 }
-.email form {
-  padding: 16px 0;
+.email__form {
+  width: 50%;
 }
-.email input {
+
+.email__form > .with_frm_style input[type=text],
+.email__form > .with_frm_style input[type=email],
+.email__form > .with_frm_style input[type=tel],
+.email__form > .with_frm_style textarea {
+  padding: 12px;
+  background-color: transparent;
   border: 1px solid #1d1c1d;
   border-radius: 0;
-  background-color: transparent;
-  height: 50px;
-  line-height: 50px;
-  padding: 0 10px;
-  max-width: 440px;
-  width: 100%;
-}
-.email input::-moz-placeholder {
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
   text-transform: uppercase;
+  margin-bottom: 16px;
+  height: initial;
+}
+.email__form > .with_frm_style input[type=text] ::-moz-placeholder, .email__form > .with_frm_style input[type=email] ::-moz-placeholder, .email__form > .with_frm_style input[type=tel] ::-moz-placeholder, .email__form > .with_frm_style textarea ::-moz-placeholder {
   color: #1d1c1d;
 }
-.email input::placeholder {
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%;
-  text-transform: uppercase;
+.email__form > .with_frm_style input[type=text] ::placeholder,
+.email__form > .with_frm_style input[type=email] ::placeholder,
+.email__form > .with_frm_style input[type=tel] ::placeholder,
+.email__form > .with_frm_style textarea ::placeholder {
   color: #1d1c1d;
 }
-.email a {
-  color: #1d1c1d;
-  text-decoration: underline;
-}
-.email__submit {
-  margin-top: 32px;
-}
-.email__disclaimer {
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%;
+
+.email__form > .with_frm_style select {
+  background-color: #cbbea5;
+  border: 1px solid #1d1c1d;
 }
 
 .quote {

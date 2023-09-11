@@ -16,3 +16,14 @@
 .frm_style_formidable-style.with_frm_style .frm_error_style {
   color: $orange !important;
 }
+
+.with_frm_style .vertical_radio .frm_checkbox,
+.with_frm_style .vertical_radio .frm_radio,
+.vertical_radio .frm_catlevel_1 {
+  display: block;
+  padding: 0.2rem !important;
+}
+
+.with_frm_style .frm_primary_label {
+  color: $black !important;
+}
