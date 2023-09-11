@@ -59,17 +59,17 @@
   }
 }
 
-.is-next .about__timeline__story {
+.is-active > .about__timeline__wrapper .about__timeline__story {
   color: $white;
   transition: color 0.2s ease;
 }
 
-.is-next .about__timeline__pill__text {
+.is-active > .about__timeline__wrapper .about__timeline__pill__text {
   color: $black;
   transition: color 0.2s ease;
 }
 
-.is-next .about__timeline__pill {
+.is-active > .about__timeline__wrapper .about__timeline__pill {
   background: $taupe;
   transition: background 0.2s ease;
 }

@@ -1754,17 +1754,17 @@ body.admin-bar .search-overlay {
   }
 }
 
-.is-next .about__timeline__story {
+.is-active > .about__timeline__wrapper .about__timeline__story {
   color: #ffffff;
   transition: color 0.2s ease;
 }
 
-.is-next .about__timeline__pill__text {
+.is-active > .about__timeline__wrapper .about__timeline__pill__text {
   color: #1d1c1d;
   transition: color 0.2s ease;
 }
 
-.is-next .about__timeline__pill {
+.is-active > .about__timeline__wrapper .about__timeline__pill {
   background: #cbbea5;
   transition: background 0.2s ease;
 }
