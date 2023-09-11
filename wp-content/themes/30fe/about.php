@@ -25,7 +25,7 @@ get_header();
 
 
 
-      <h3 class="about__hero__copy">We are over <span class="orange">60 experts</span> in <span class="green">14
+      <h3 class="about__hero__copy">With over <span class="orange">60 experts</span> in <span class="green">14
           practice
           areas</span>, we offer
         evidence-based solutions to
