@@ -253,11 +253,11 @@
   </section>
   <section class="insights fullscreen">
     <section class="max-width max-padding">
-      <section class="pill">
+      <!-- <section class="pill">
         <p class="pill__label">Blog</p>
-      </section>
+      </section> -->
       <h2 class="insights__headline">Latest Insights</h2>
-      <p>Read our latest insights from our best experts.</p>
+      <p>Read our latest publications.</p>
 
 
 
