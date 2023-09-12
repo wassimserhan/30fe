@@ -1,5 +1,7 @@
 <?php 
 get_header();
+
+global $wp_query;
 ?>
 
 <main class="main-container">
@@ -32,18 +34,15 @@ get_header();
       </section>
 
 
-      <section id="insights" class="insights__grid">
-
+      <section id="insights" class="insights__grid"
+        data-page="<?= get_query_var('paged') ? get_query_var('paged') : 1; ?>"
+        data-max="<?= $wp_query->max_num_pages; ?>">
         <?php 
         
-          while (have_posts()):the_post(); ?>
-
-        <?php include get_template_directory() . '/modules/insights-card.php'; ?>
-
-        <?php endwhile ?>
-        <?php wp_reset_postdata() ?>
-      </section>
-      <section class="paginate"> <?php echo paginate_links();?></section>
+          while (have_posts()):the_post(); ?> <?php include get_template_directory() . '/modules/insights-card.php'; ?>
+        <?php endwhile ?> <?php wp_reset_postdata() ?> </section>
+      <!-- <section class="paginate"> <?php echo paginate_links();?></section> -->
+      <button class="insights__load">Load More</button>
     </section>
   </section>
 </main>

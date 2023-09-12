@@ -157,7 +157,7 @@ if (slider5) {
 
 
 // modules
-
+import './modules/ajaxLoadMore';
 import './modules/changeBackground';
 import './modules/careers';
 import './modules/expertise';
