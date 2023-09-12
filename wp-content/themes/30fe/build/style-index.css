@@ -834,7 +834,7 @@ button.splide__arrow:hover {
   border: none;
 }
 .team-card__pill {
-  margin: 24px 0 18px;
+  margin: 24px 0 0;
 }
 .team-card__image {
   width: 100%;
@@ -845,6 +845,7 @@ button.splide__arrow:hover {
   font-weight: 700;
   line-height: 120%;
   letter-spacing: -1.6px;
+  padding-top: 1.2rem;
 }
 .team-card__title {
   font-size: 12px;

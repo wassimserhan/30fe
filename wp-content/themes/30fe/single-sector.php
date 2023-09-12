@@ -104,25 +104,13 @@ get_header();
         <?php echo FrmFormsController::get_form_shortcode( array( 'id' => 2 ) ); ?>
       </section>
       <?php 
-
-              $relatedSectorTeam = get_posts(array(
-              'posts_per_page' => -1,
-              'post_type'=> 'Team',
-              'meta_query' => array(
-                array(
-                'key'      => 'sector',
-                'value'    => '"' . get_the_ID() . '"',
-                'compare'  => 'LIKE'
-                )
-          ),
-      ));
-
-              foreach( $relatedSectorTeam as $item ):
-              $name = get_the_title($item);
-              $title = get_field('title', $item);
-              $phone = get_field('phone', $item);
-              $email = get_field('email', $item);
-              ?>
+                  $team_members = get_field ( 'expert' ); 
+                  foreach ($team_members as $item):   
+                    $k;  
+                    $name = get_the_title($item);
+                    $title = get_field('title', $item);
+                    $phone = get_field('phone', $item);
+                    $email = get_field('email', $item); ?>
 
       <?php include get_template_directory() . '/modules/team-card.php'; ?>
 

@@ -115,29 +115,19 @@ get_header();
             <div class="splide__track">
               <ul class="splide__list">
                 <?php 
+                  $team_members = get_field ( 'expert' ); 
+                  foreach ($team_members as $item):   
+                    $k;  
+                    $name = get_the_title($item);
+                    $title = get_field('title', $item);
+                    $phone = get_field('phone', $item);
+                    $email = get_field('email', $item); ?>
 
-              $relatedExpertiseTeam = get_posts(array(
-              'posts_per_page' => -1,
-              'post_type'=> 'Team',
-              'meta_query' => array(
-                array(
-                'key'      => 'expertise',
-                'value'    => '"' . get_the_ID() . '"',
-                'compare'  => 'LIKE'
-                )
-                  ),
-              ));
-
-              foreach( $relatedExpertiseTeam as $item ):
-              $name = get_the_title($item);
-              $title = get_field('title', $item);
-              $phone = get_field('phone', $item);
-              $email = get_field('email', $item);
-              ?>
                 <li class="splide__slide">
 
                   <?php include get_template_directory() . '/modules/team-card.php'; ?>
                 </li>
+                <?php $k++;?>
                 <?php endforeach ?>
               </ul>
             </div>

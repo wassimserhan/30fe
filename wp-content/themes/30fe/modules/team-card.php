@@ -9,9 +9,14 @@
     <img class="lazyload team-card__image" src="<?php echo get_the_post_thumbnail_url($item); ?>" src="
         <?php echo $image ?>" alt="<?php echo $name; ?>" title="<?php echo $name; ?>">
   </a>
+
+  <?php if($k == 0) : ?>
+
   <section class="pill team-card__pill">
     <p class="pill__label">Practice Leads</p>
   </section>
+  <?php endif ?>
+
   <div class="team-card__name">
     <?php echo $name ;?>
   </div>
