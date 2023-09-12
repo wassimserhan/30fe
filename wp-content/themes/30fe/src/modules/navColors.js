@@ -46,17 +46,19 @@ if (fullscreen) {
       break;
     case 'expertise.php':
       gsap.set(".nav__logo__black", { filter: $logoWhite })
+      gsap.set(".nav__menu-search", { borderColor: $whitesmoke })
       sectionColors = [$black, $whitesmoke, $taupe];
       navColors = [$black, $whitesmoke, $taupe];
       logoColor = [$logoWhite, $logoBlack, $logoBlack];
-      borderColor = [$black];
+      borderColor = [$whitesmoke, $black];
       break;
     case 'sectors.php':
       gsap.set(".nav__logo__black", { filter: $logoWhite })
+      gsap.set(".nav__menu-search", { borderColor: $whitesmoke })
       sectionColors = [$black, $black, $taupe, $whitesmoke];
       navColors = [$black, $black, $taupe, $whitesmoke];
-      logoColor = [$logoWhite, $logoWhite, $logoBlack, $logoBlack];
-      borderColor = [$black];
+      logoColor = [$logoWhite, $logoWhite, $logoBlack];
+      borderColor = [$whitesmoke, $whitesmoke, $black];
       break;
     case 'contact.php':
       gsap.set(".nav__logo__black", { filter: $logoWhite })
