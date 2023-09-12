@@ -26,12 +26,16 @@
     gap: 32px;
     flex: 1 0 0;
     align-self: stretch;
+
+    & a {
+      flex-grow: 1;
+    }
   }
 
   &__item {
     display: flex;
     place-items: center;
-    min-width: 225px;
+    width: 225px;
     background-color: transparent;
     border: none;
     color: $black;

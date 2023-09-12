@@ -42,7 +42,7 @@
   }
 
   &__card {
-    max-width: 328px;
+    // max-width: 328px;
     width: 31%;
     padding: 24px 0;
     flex-grow: 1;
@@ -207,6 +207,10 @@
   &__menu-open {
     display: block;
     opacity: 1;
+  }
+
+  &__load {
+    margin: auto;
   }
 }
 

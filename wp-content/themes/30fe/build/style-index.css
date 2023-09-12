@@ -2222,10 +2222,13 @@ body.admin-bar .search-overlay {
   flex: 1 0 0;
   align-self: stretch;
 }
+.home-expertise__list a {
+  flex-grow: 1;
+}
 .home-expertise__item {
   display: flex;
   place-items: center;
-  min-width: 225px;
+  width: 225px;
   background-color: transparent;
   border: none;
   color: #1d1c1d;
@@ -3535,7 +3538,6 @@ body.admin-bar .search-overlay {
   gap: 20px;
 }
 .insights__card {
-  max-width: 328px;
   width: 31%;
   padding: 24px 0;
   flex-grow: 1;
@@ -3676,6 +3678,9 @@ body.admin-bar .search-overlay {
 .insights__menu-open {
   display: block;
   opacity: 1;
+}
+.insights__load {
+  margin: auto;
 }
 
 .paginate {
