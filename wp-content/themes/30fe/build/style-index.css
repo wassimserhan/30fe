@@ -2111,6 +2111,10 @@ body.admin-bar .search-overlay {
 .email__copy {
   padding: 24px 0;
 }
+.email__copy a {
+  text-decoration: underline;
+  color: #1d1c1d;
+}
 .email__form {
   width: 50%;
 }

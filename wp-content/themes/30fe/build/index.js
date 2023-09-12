@@ -4588,6 +4588,15 @@ if (fullscreen) {
       logoColor = [$logoBlack];
       borderColor = [$black];
       break;
+    case 'submit.php':
+      gsap.set(".nav", {
+        backgroundColor: $whitesmoke
+      });
+      sectionColors = [$whitesmoke];
+      navColors = [$whitesmoke];
+      logoColor = [$logoBlack];
+      borderColor = [$black];
+      break;
   }
 
   // const sectionColors = ["#00BFFF", "#FFA07A"]

@@ -7,7 +7,8 @@
       <article class="home__hero__headline">
         <h1 class="home__hero__copy">Precision in Investigation, <br> Clarity in Solutions</h1>
         <section class="home__hero__buttons">
-          <a href="#"><button class="home__hero__button">Submit an
+          <a href="<?php echo site_url('/submit-an-assignment')?>" target="_self"><button
+              class="home__hero__button">Submit an
               Assignment</button></a>
           <a href="<?php echo site_url('/team')?>"><button class="home__hero__button home__hero__button--white">Browse
               Experts</button></a>
