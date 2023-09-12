@@ -4178,7 +4178,6 @@ body.admin-bar .search-overlay {
   padding-top: 30px;
 }
 .error-404__headline {
-  font-family: "Escrow Banner Light", serif;
   font-weight: 300;
   font-size: 1.6em;
   margin: 0;
@@ -4187,7 +4186,6 @@ body.admin-bar .search-overlay {
 .error-404__copy {
   padding: 20px 0;
   line-height: 25px;
-  font-family: "Retina Light", sans-serif;
   font-size: 1.25rem;
 }
 .error-404 a {
