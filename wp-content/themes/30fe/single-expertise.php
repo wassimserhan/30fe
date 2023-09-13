@@ -40,7 +40,10 @@ get_header();
       <section class="industry__category <?php if( get_row_index()== 2) echo "industry__category-bullets-border" ?>">
 
         <section class="industry__category-items">
-          <p class="industry__category-item <?php echo get_field('category_color')?>">
+
+          <?php $color = get_field('category_color');?>
+
+          <p class="industry__category-item <?php echo esc_html($color['label']); ?>">
             <?php echo '0' . get_row_index() ?></p>
           <h4 class="industry__category-item"><?php echo $industryItems ?></h4>
         </section>
@@ -53,7 +56,7 @@ get_header();
           <section class=" industry__category-bullets__items">
             <figure class="industry__category-bullets__arrow">
               <img loading="lazy"
-                src="<?php echo get_template_directory_uri(); ?>/images/<?php echo get_field('category_color')?>-arrow.svg"
+                src="<?php echo get_template_directory_uri(); ?>/images/<?php echo get_field('category_color')['label']?>-arrow.svg"
                 alt="<?php echo $alt; ?>" title="<?php echo $title; ?>">
             </figure>
             <article>

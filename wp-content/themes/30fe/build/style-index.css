@@ -483,7 +483,6 @@ h3 {
   line-height: 120%;
   letter-spacing: -0.125rem;
   margin: 0;
-  color: #1d1c1d;
 }
 @media (max-width: 768px) {
   h3 {
@@ -3569,10 +3568,6 @@ body.admin-bar .search-overlay {
   color: #1d1c1d;
 }
 .insights__card__label__category__text--single {
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 150%;
   padding: 2px 8px;
 }
 .insights__card__label__category__text--single a {

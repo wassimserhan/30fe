@@ -18,7 +18,7 @@ function ajaxLoadMore() {
       params.append('current_page', current_page);
       params.append('max_pages', max_pages);
 
-      axios.post('/wp-admin/admin-ajax.php', params)
+      axios.post('/30fe/wp-admin/admin-ajax.php', params)
         .then(res => {
 
           let posts_list = document.querySelector('.insights__grid');

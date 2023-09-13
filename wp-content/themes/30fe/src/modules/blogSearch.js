@@ -1,33 +1,33 @@
 
+import axios from 'axios';
 
 //Search Filter
-const input = document.getElementById("blogFilter");
+// const input = document.getElementById("blogFilter");
 
-if (input) {
-  input.addEventListener('focus', function () {
-    resetFilterText('selected-role', 'Filter By Category');
-    showAllTeam('insights__card', 'block');
-  })
+// if (input) {
+//   input.addEventListener('focus', function () {
+//     resetFilterText('selected-role', 'Filter By Category');
+//     showAllTeam('insights__card', 'block');
+//   })
 
 
-  input.addEventListener('keyup', blogFilter);
-  function blogFilter() {
+//   input.addEventListener('keyup', blogFilter);
+//   function blogFilter() {
 
-    var filter, cards, cardContainer, title, i;
-    filter = input.value.toUpperCase();
-    cardContainer = document.getElementById("insights");
-    cards = cardContainer.getElementsByClassName("insights__card");
-    for (i = 0; i < cards.length; i++) {
-      title = cards[i].querySelector(".insights__card__title");
-      if (title.innerText.toUpperCase().indexOf(filter) > -1) {
-        cards[i].style.display = "";
-        cards[i].style.flexGrow = 0;
-      } else {
-        cards[i].style.display = "none";
-      }
-    }
-  }
-}
+//     var filter, cards, cardContainer, title, i;
+//     filter = input.value.toUpperCase();
+//     cardContainer = document.getElementById("insights");
+//     cards = cardContainer.getElementsByClassName("insights__card");
+//     for (i = 0; i < cards.length; i++) {
+//       title = cards[i].querySelector(".insights__card__title");
+//       if (title.innerText.toUpperCase().indexOf(filter) > -1) {
+//         cards[i].style.display = "";
+//       } else {
+//         cards[i].style.display = "none";
+//       }
+//     }
+//   }
+// }
 
 //Search Filter
 
@@ -46,7 +46,6 @@ dropdownsInsights.forEach(dropdown => {
 
   if (selectInsights) {
     selectInsights.addEventListener('click', () => {
-      console.log(selectInsights);
       selectInsights.classList.toggle('insights__select-clicked');
       caretInsights.classList.toggle('insights__caret-rotate');
       menuInsights.classList.toggle('insights__menu-open');
@@ -70,7 +69,12 @@ dropdownsInsights.forEach(dropdown => {
 
   optionsInsights.forEach(option => {
     option.addEventListener('click', () => {
+
+
       selectedInsights.innerText = option.innerText;
+
+
+
       selectInsights.classList.remove('insights__select-clicked');
       caretInsights.classList.remove('insights__caret-rotate');
       menuInsights.classList.remove('insights__menu-open');
@@ -86,32 +90,44 @@ dropdownsInsights.forEach(dropdown => {
 
 function categoryFilter() {
 
-  resetFilterText('selected-role', 'Filter By Category');
-  showAllTeam('insights__card', 'block');
+  // resetFilterText('selected-role', 'Filter By Category');
+  // showAllTeam('insights__card', 'block');
 
 
 
   roleListInsights.forEach(function (item) {
-    var filter, cards, cardContainer, i;
+
 
     item.addEventListener('click', (e) => {
-      filter = e.target.textContent.toUpperCase();
-      cardContainer = document.getElementById("insights");
-      cards = cardContainer.getElementsByClassName("insights__card");
-      for (i = 0; i < cards.length; i++) {
-        titleRoles = cards[i].querySelector(".insights__card__label__category__text");
-        if (filter == "ALL CATEGORIES") {
-          cards[i].style.display = "block";
-        } else if (titleRoles.innerText.toUpperCase().indexOf(filter) > -1) {
 
-          cards[i].style.display = "block";
-        } else {
-          cards[i].style.display = "none";
-        }
+      let category = e.target.attributes.value.nodeValue;
+      const button = document.querySelector('.insights__load');
 
 
-      }
 
+      let params = new URLSearchParams();
+      params.append('action', 'insights_search');
+      params.append('category', category);
+
+      axios.post('/30fe/wp-admin/admin-ajax.php', params)
+        .then(res => {
+
+          let posts_list = document.querySelector('.insights__grid');
+
+          posts_list.innerHTML = res.data.data;
+
+
+          let getUrl = window.location;
+          let baseUrl = getUrl.protocol + "//" + getUrl.host + "/";
+
+          window.history.pushState('', '', baseUrl + 'insights/' + category);
+
+          if (button) {
+            button.parentNode.removeChild(button);
+          }
+
+
+        })
     }
     )
   })

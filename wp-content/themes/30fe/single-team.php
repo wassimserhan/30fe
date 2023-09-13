@@ -67,7 +67,7 @@
           <?php 
 $terms = get_field('competencies');
 if( $terms ): ?>
-          <h6 class="member__competencies">Specialised Competencies</h6>
+          <h6 class="member__competencies">Specialized Expertise</h6>
           <hr class="member__line">
           <?php foreach( $terms as $term ): ?>
 

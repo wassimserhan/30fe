@@ -41,9 +41,12 @@ get_header();
         ));
 
         while ($customQuery->have_posts()): $customQuery->the_post();
+
+          $color = get_field('category_color');
+
         ?>
         <a href="<?php echo the_permalink() ?>">
-          <article class="expertise__list-section">
+          <article data-color="<?php echo esc_html($color['value']); ?>" class="expertise__list-section">
 
             <h3 class="expertise__list-item"><?php the_title() ?></h3>
 

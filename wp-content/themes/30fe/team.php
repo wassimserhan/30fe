@@ -58,40 +58,42 @@ get_header();
       </section>
 
 
-
-      <section id="team" class="team__grid">
-        <?php 
+      <section>
+        <section id="team" class="team__grid">
+          <?php 
           $team_members = get_field ( 'team_member' ); 
           foreach ($team_members as $team_member):     
           $name = get_the_title($team_member);
           $title = get_field('title', $team_member);
         ?>
-        <article class="team__card">
-          <a href="<?php the_permalink($team_member) ?>">
+          <article class="team__card">
+            <a href="<?php the_permalink($team_member) ?>">
+              <img class="lazyload team__card__image" src="<?php echo get_the_post_thumbnail_url($team_member); ?>"
+                alt="<?php echo $name; ?>" title="<?php echo $name; ?>">
 
-            <img class="lazyload team__card__image" src="<?php echo get_the_post_thumbnail_url($team_member); ?>"
-              alt="<?php echo $name; ?>" title="<?php echo $name; ?>">
-
-          </a>
-          <h4 class="team__card__name">
-            <?php echo $name ?>
-          </h4>
-          <p class="team__card__title">
-            <?php echo $title ?>
-          </p>
-          <p class="team__card__expertise" style="display: none">
-            <?php $expertise = get_field('expertise', $team_member);
+            </a>
+            <h4 class="team__card__name">
+              <?php echo $name ?>
+            </h4>
+            <p class="team__card__title">
+              <?php echo $title ?>
+            </p>
+            <p class="team__card__expertise" style="display: none">
+              <?php $expertise = get_field('expertise', $team_member);
             foreach ($expertise as $item):?>
-            <?php echo get_the_title($item);  ?>
-            <?php endforeach; ?></p>
+              <?php echo get_the_title($item);  ?>
+              <?php endforeach; ?></p>
 
-          <?php 
+            <?php 
           $role = get_field("role", $team_member)
           ?>
-          <p class="team__card__role" style="display: none"><?php echo $role;  ?></p>
-        </article>
-        <?php endforeach; ?>
+            <p class="team__card__role" style="display: none"><?php echo $role;  ?></p>
+          </article>
+          <?php endforeach; ?>
+        </section>
       </section>
+
+
     </section>
   </section>
   <!-- Hiring -->

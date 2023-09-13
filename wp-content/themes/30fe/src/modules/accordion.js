@@ -9,36 +9,6 @@ $(".accordion__item").on("mouseover", function () {
 
 
 
-// const accordion = document.querySelectorAll(".accordion__item");
-
-// var accordionArray = [...accordion];
-
-
-// accordionArray.forEach(item => {
-
-//   item.addEventListener("mouseover", function () {
-//     item.classList.add("active");
-
-//     for (let child of item.children) {
-
-//       if (child == item) {
-//         child.classList.add("active");
-//       }
-
-//     }
-
-
-//     for (let sibling of item.parentNode.children) {
-
-//       if (sibling !== item) {
-
-//         sibling.classList.remove('active');
-//       };
-//     }
-
-
-//   });
-// });
 
 
 
@@ -71,31 +41,4 @@ items.forEach((e, i) => {
   });
 });
 
-
-// const itemsVertical = gsap.utils.toArray(".itemVertical");
-// let currentItemVertical = null;
-
-// items.forEach((e, i) => {
-//   const contentVertical = e.querySelector(".contentVertical");
-//   const t = gsap.to(contentVertical, {
-//     height: "auto",
-//     paused: true
-//   });
-
-//   e._accordionTween = t;
-
-//   e.addEventListener("click", () => {
-//     if (currentItemVertical !== null) {
-//       items[currentItemVertical].classList.toggle("active");
-//       if (currentItemVertical === i) {
-//         currentItemVertical = null;
-//         return t.reverse();
-//       }
-//       itemsVertical[currentItemVertical]._accordionTween.reverse();
-//     }
-//     e.classList.toggle("active");
-//     t.play();
-//     currentItemVertical = i;
-//   });
-// });
 

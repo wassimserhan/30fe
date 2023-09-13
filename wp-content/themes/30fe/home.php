@@ -23,7 +23,7 @@ global $wp_query;
             <li value="all">All Categories</li>
             <?php $categories = get_categories(); 
                 foreach($categories as $category): ?>
-            <li value="<?php echo $category->name; ?>"><?php echo $category->name; ?></li>
+            <li value="<?php echo $category->slug; ?>"><?php echo $category->name; ?></li>
             <?php endforeach ;?>
           </ul>
         </div>

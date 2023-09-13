@@ -64,7 +64,9 @@ while( have_rows('values') ) : the_row();
           while( have_rows('values_items') ) : the_row();
           $value_item = get_sub_field('value_item');
           ?>
-        <li><?php echo $value_item; ?></li>
+        <li>
+          <p style="color: #f2f1ed"><?php echo $value_item; ?></p>
+        </li>
         <?php
           endwhile; ?>
         <?php endif;
@@ -101,7 +103,9 @@ while( have_rows('benefits') ) : the_row();
           while( have_rows('benefits_items') ) : the_row();
           $benefits_item = get_sub_field('benefits_item');
           ?>
-        <li><?php echo $benefits_item; ?></li>
+        <li>
+          <p style="color: #1d1c1d"><?php echo $benefits_item; ?></p>
+        </li>
         <?php
           endwhile; ?>
         <?php endif;
