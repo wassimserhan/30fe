@@ -196,7 +196,7 @@ img {
 
 .max-padding {
   padding: 8rem;
-  @include bp(phone) {
+  @include bp(tablet) {
     padding: 8rem 1.5rem;
   }
 }

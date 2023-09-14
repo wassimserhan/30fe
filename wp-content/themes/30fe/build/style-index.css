@@ -593,7 +593,7 @@ img {
 .max-padding {
   padding: 8rem;
 }
-@media (max-width: 479px) {
+@media (max-width: 768px) {
   .max-padding {
     padding: 8rem 1.5rem;
   }
@@ -2787,45 +2787,17 @@ body.admin-bar .search-overlay {
   padding: 0 25px;
 }
 .team__grid {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 0 20px;
-  justify-content: flex-start;
-  text-align: left;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
 }
 @media (max-width: 768px) {
   .team__grid {
-    gap: 0 44px;
-  }
-}
-@media (max-width: 768px) {
-  .team__grid {
-    gap: 10px;
+    grid-template-columns: 1fr 1fr;
   }
 }
 .team__card {
-  max-width: 280px;
-  width: 22%;
-  flex-grow: 1;
-}
-.team__card__card:last-of-type {
-  flex-grow: 0;
-}
-@media (max-width: 768px) {
-  .team__card {
-    width: 48%;
-  }
-}
-.team__card__image {
-  height: auto;
-}
-.team__card__image img {
-  width: 100%;
-  height: 100%;
-  vertical-align: top;
-  -o-object-fit: contain;
-     object-fit: contain;
+  max-width: 300px;
 }
 .team__card__name {
   padding: 24px 0 8px;
@@ -3539,22 +3511,12 @@ body.admin-bar .search-overlay {
   padding: 0 25px;
 }
 .insights__grid {
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  align-self: stretch;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
 }
 .insights__card {
-  width: 31%;
-  padding: 24px 0;
-  flex-grow: 1;
-}
-@media (max-width: 768px) {
-  .insights__card {
-    width: 48%;
-  }
+  max-width: 300px;
 }
 .insights__card__label {
   display: flex;
