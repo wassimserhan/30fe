@@ -2118,6 +2118,11 @@ body.admin-bar .search-overlay {
 .email__form {
   width: 50%;
 }
+@media (max-width: 479px) {
+  .email__form {
+    width: 100%;
+  }
+}
 
 .email__form > .with_frm_style input[type=text],
 .email__form > .with_frm_style input[type=email],
@@ -3648,7 +3653,6 @@ body.admin-bar .search-overlay {
 }
 .insights__menu {
   list-style: none;
-  padding: 0.2em 0;
   background: #f2f1ed;
   border: 1px #cbbea5 solid;
   color: #9fa5b5;
@@ -4133,10 +4137,10 @@ body.admin-bar .search-overlay {
 }
 .footer__nav__title {
   font-size: 1.25rem;
-  padding: 0 0 8px;
+  padding: 0 0 0.5rem;
 }
 .footer__nav__links {
-  padding: 0 0 8px;
+  padding: 0 0 0.5rem;
 }
 .footer__item {
   display: block;
@@ -4443,16 +4447,16 @@ body.admin-bar .search-overlay {
 }
 .seminars img {
   max-width: 100%;
-  padding: 20px 0;
+  padding: 1.25rem 0;
 }
 .seminars > h1 {
-  font-size: 50px;
+  font-size: 3.125rem;
   line-height: normal;
   letter-spacing: normal;
-  padding: 0 0 25px;
+  padding: 0 0 1.563rem;
 }
 .seminars > h2 {
-  font-size: 30px;
+  font-size: 1.875rem;
   line-height: normal;
   letter-spacing: normal;
   padding: 20px 0 10px;

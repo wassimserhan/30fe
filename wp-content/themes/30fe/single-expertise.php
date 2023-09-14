@@ -11,9 +11,11 @@ get_header();
 <main class="main-container">
   <section class="industry fullscreen">
     <section class="max-width max-padding">
-      <section class="pill">
-        <p class="pill__label">Expertise</p>
-      </section>
+      <a href="<?php echo site_url('/expertise')?>">
+        <section class="pill">
+          <p class="pill__label">Expertise</p>
+        </section>
+      </a>
       <section class="industry__intro">
         <h2 class="industry__title industry__title"><?php the_title() ?></h2>
         <p class="industry__copy industry__copy"><?php echo get_field('intro') ;?></p>

@@ -9,8 +9,6 @@
     <section id="single" class="single-post ">
       <section class="fullscreen">
         <section class="max-width">
-
-
           <div class="single-post__card">
             <article class="single-post__detail single-post__detail--left">
               <section class="pill pill-single">
