@@ -25,6 +25,10 @@
 
   &__form {
     width: 50%;
+
+    @include bp(phone) {
+      width: 100%;
+    }
   }
 }
 
