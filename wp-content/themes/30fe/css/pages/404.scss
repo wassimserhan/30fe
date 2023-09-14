@@ -1,8 +1,30 @@
 .error-404 {
-  max-width: 800px;
   margin: auto;
   text-align: center;
   padding-top: 30px;
+
+  &__button {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    font-size: 0.75rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    background-color: $black;
+    border: 1px solid $black;
+    color: $white;
+    padding: 1rem 1.5rem;
+    text-transform: uppercase;
+    line-height: 150%;
+    width: 300px;
+    margin: 30px auto 0;
+
+    &:hover {
+      background-color: #f2f1ec;
+      color: $black;
+    }
+  }
 
   &__headline {
     font-weight: 300;
@@ -17,8 +39,8 @@
     font-size: 1.25rem;
   }
 
-  & a {
-    color: $black;
-    text-decoration: underline;
-  }
+  // & a {
+  //   color: $black;
+  //   text-decoration: underline;
+  // }
 }

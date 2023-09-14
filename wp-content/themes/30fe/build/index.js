@@ -4626,6 +4626,13 @@ if (fullscreen) {
       logoColor = [$logoBlack];
       borderColor = [$black];
       break;
+    case '404.php':
+      // gsap.set(".nav", { backgroundColor: $taupe })
+      sectionColors = [$taupe];
+      navColors = [$taupe];
+      logoColor = [$logoBlack];
+      borderColor = [$black];
+      break;
   }
 
   // const sectionColors = ["#00BFFF", "#FFA07A"]

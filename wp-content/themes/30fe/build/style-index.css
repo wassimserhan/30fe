@@ -4130,10 +4130,30 @@ body.admin-bar .search-overlay {
 }
 
 .error-404 {
-  max-width: 800px;
   margin: auto;
   text-align: center;
   padding-top: 30px;
+}
+.error-404__button {
+  display: block;
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+  font-size: 0.75rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  background-color: #1d1c1d;
+  border: 1px solid #1d1c1d;
+  color: #ffffff;
+  padding: 1rem 1.5rem;
+  text-transform: uppercase;
+  line-height: 150%;
+  width: 300px;
+  margin: 30px auto 0;
+}
+.error-404__button:hover {
+  background-color: #f2f1ec;
+  color: #1d1c1d;
 }
 .error-404__headline {
   font-weight: 300;
@@ -4145,10 +4165,6 @@ body.admin-bar .search-overlay {
   padding: 20px 0;
   line-height: 25px;
   font-size: 1.25rem;
-}
-.error-404 a {
-  color: #1d1c1d;
-  text-decoration: underline;
 }
 
 .careers {
