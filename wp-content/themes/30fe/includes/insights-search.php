@@ -5,6 +5,7 @@ function insights_search() {
   $query = new WP_Query([
     'posts_per_page' => -1,
     'category_name' => $category
+    
   ]);
   if ($query->have_posts()) :
 

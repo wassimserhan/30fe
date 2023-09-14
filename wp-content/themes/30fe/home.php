@@ -10,7 +10,7 @@ global $wp_query;
       <section class="pill">
         <p class="pill__label">Insights</p>
       </section>
-      <h1 class="insights__headline">30 Publications</h1>
+      <h1 class="insights__headline">30 Insights</h1>
       <p>Find all past and future publications and reports by our finest writers.</p>
       <br>
       <section class="team__search">
@@ -20,7 +20,7 @@ global $wp_query;
             <div class="insights__caret"></div>
           </div>
           <ul id="team__role" class="insights__menu team__expertise">
-            <li value="all">All Categories</li>
+            <!-- <li value="all">All Categories</li> -->
             <?php $categories = get_categories(); 
                 foreach($categories as $category): ?>
             <li value="<?php echo $category->slug; ?>"><?php echo $category->name; ?></li>

@@ -4885,7 +4885,7 @@ class Search {
     <section class="search-overlay">
       <section class="search-overlay__top ">
         <section class="search-overlay__wrapper max-width">
-        <img class="search-overlay__icon" src="${siteData.root_url}/wp-content/themes/30fe/images/search-icon.svg"
+        <img class="search-overlay__icon" src="${siteData.root_url}/wp-content/themes/30fe/images/search-icon.svg" width="15" height="15"
         alt="search icon"> 
    
         <input id="search-term" type="text" class="search-term" placeholder="What are you looking for today?"

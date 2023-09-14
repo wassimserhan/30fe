@@ -24,10 +24,10 @@ get_header();
               $gif_3 = get_sub_field('gif_3')['url'];
               $gif_4 = get_sub_field('gif_4')['url'];
         ?>
-        <img class="careers__hero__images careers__hero__images--one" src="<?php echo $gif_1 ?>" alt="">
-        <img class="careers__hero__images careers__hero__images--two" src="<?php echo $gif_2 ?>" alt="">
-        <img class="careers__hero__images careers__hero__images--three" src="<?php echo $gif_3 ?>" alt="">
-        <img class="careers__hero__images careers__hero__images--four" src="<?php echo $gif_4 ?>" alt="">
+        <img class="careers__hero__images careers__hero__images--one" src="<?php echo $gif_1 ?>" alt="careers">
+        <img class="careers__hero__images careers__hero__images--two" src="<?php echo $gif_2 ?>" alt="careers">
+        <img class="careers__hero__images careers__hero__images--three" src="<?php echo $gif_3 ?>" alt="careers">
+        <img class="careers__hero__images careers__hero__images--four" src="<?php echo $gif_4 ?>" alt="careers">
         <?php endwhile; endif; ?>
 
       </section>

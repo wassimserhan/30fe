@@ -223,17 +223,16 @@
 
   <section class="testimonials fullscreen">
     <section class="max-width max-padding">
-      <!-- <h2 class="testimonials__headline">Testimonials</h2> -->
+      <h2 class="testimonials__headline">Testimonials</h2>
       <section id="slider1" class="splide splide-testimonials" aria-labelledby="carousel-heading">
         <div class="splide__track">
           <ul class="splide__list">
-
             <?php 
-    if( have_rows('testimonials') ): 
-      while( have_rows('testimonials') ) : the_row();
-      $quote = get_sub_field('quote');
-      $client = get_sub_field('client');
-    ?>
+              if( have_rows('testimonials') ): 
+              while( have_rows('testimonials') ) : the_row();
+              $quote = get_sub_field('quote');
+              $client = get_sub_field('client');
+              ?>
             <li class="splide__slide">
               <section class="testimonials__card">
                 <section class="testimonials__card__wrapper">

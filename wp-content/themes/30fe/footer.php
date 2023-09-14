@@ -93,9 +93,12 @@
 
     <div class="footer__legal">
       <p class="footer__copyright">&copy;
-        <script type="text/javascript">
-        document.write(new Date().getFullYear());
-        </script>&nbsp; 30 Forensic engineering
+        <span id="copyright">
+          <script>
+          document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
+          </script>
+        </span>
+        &nbsp; 30 Forensic engineering
       </p>
       <p class="footer__copyright">
         Office: 1-800-564-5313

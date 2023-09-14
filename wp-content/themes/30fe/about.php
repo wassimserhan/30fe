@@ -125,7 +125,7 @@ while( have_rows('what_is_30') ) : the_row();
     <section class="">
       <section class="about__whatis__card">
         <figure class="about__whatis__image">
-          <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/what-is-30.gif" alt=""
+          <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/what-is-30.gif" alt="what is 30?"
             title="lock">
         </figure>
         <article class="about__whatis__detail about__whatis__detail--left" style="">
