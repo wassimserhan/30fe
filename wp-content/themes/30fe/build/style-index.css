@@ -3515,9 +3515,6 @@ body.admin-bar .search-overlay {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
 }
-.insights__card {
-  max-width: 300px;
-}
 .insights__card__label {
   display: flex;
   justify-content: flex-start;
