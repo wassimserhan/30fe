@@ -71,10 +71,10 @@ if( $terms ): ?>
           <hr class="member__line">
           <?php foreach( $terms as $term ): ?>
 
-          <sction class="member__pillbox">
-            <p class="pill member__pill"><?php echo $term->name; ?></p>
+          <section class="pill">
+            <p class="pill__label"><?php echo $term->name; ?></p>
             <?php endforeach; ?>
-          </sction>
+          </section>
           <?php endif; ?>
         </article>
       </section>
