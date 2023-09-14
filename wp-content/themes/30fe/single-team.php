@@ -70,7 +70,7 @@ if( $terms ): ?>
           <h6 class="member__competencies">Specialized Expertise</h6>
           <hr class="member__line">
           <?php foreach( $terms as $term ): ?>
-
+          <!-- pill -->
           <section class="pill">
             <p class="pill__label"><?php echo $term->name; ?></p>
             <?php endforeach; ?>
