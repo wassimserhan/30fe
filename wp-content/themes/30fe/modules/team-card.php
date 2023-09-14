@@ -13,7 +13,7 @@
   <?php if($k == 0) : ?>
 
   <section class="pill team-card__pill">
-    <p class="pill__label">Practice Leads</p>
+    <p class="pill__label">Practice Lead</p>
   </section>
   <?php endif ?>
 

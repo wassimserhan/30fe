@@ -4026,7 +4026,7 @@ function ajaxLoadMore() {
       params.append('action', 'load_more_posts');
       params.append('current_page', current_page);
       params.append('max_pages', max_pages);
-      axios__WEBPACK_IMPORTED_MODULE_0__["default"].post('/30fe/wp-admin/admin-ajax.php', params).then(res => {
+      axios__WEBPACK_IMPORTED_MODULE_0__["default"].post('/wp-admin/admin-ajax.php', params).then(res => {
         let posts_list = document.querySelector('.insights__grid');
         posts_list.innerHTML += res.data.data;
         let getUrl = window.location;
@@ -4137,7 +4137,7 @@ function categoryFilter() {
       let params = new URLSearchParams();
       params.append('action', 'insights_search');
       params.append('category', category);
-      axios__WEBPACK_IMPORTED_MODULE_0__["default"].post('/30fe/wp-admin/admin-ajax.php', params).then(res => {
+      axios__WEBPACK_IMPORTED_MODULE_0__["default"].post('/wp-admin/admin-ajax.php', params).then(res => {
         let posts_list = document.querySelector('.insights__grid');
         posts_list.innerHTML = res.data.data;
         let getUrl = window.location;

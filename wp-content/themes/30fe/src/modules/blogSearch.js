@@ -109,7 +109,7 @@ function categoryFilter() {
       params.append('action', 'insights_search');
       params.append('category', category);
 
-      axios.post('/30fe/wp-admin/admin-ajax.php', params)
+      axios.post('/wp-admin/admin-ajax.php', params)
         .then(res => {
 
           let posts_list = document.querySelector('.insights__grid');
