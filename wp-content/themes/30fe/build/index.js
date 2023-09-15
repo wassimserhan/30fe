@@ -4106,7 +4106,9 @@ function categoryFilter() {
       let category = e.target.attributes.value.nodeValue;
       const button = document.querySelector('.insights__load');
       if (category == "all") {
-        category = "";
+        let params = new URLSearchParams();
+        params.append('action', 'reset_insights_search');
+        params.append('category', "");
       }
       let params = new URLSearchParams();
       params.append('action', 'insights_search');

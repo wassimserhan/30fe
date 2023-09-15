@@ -64,7 +64,9 @@ function categoryFilter() {
 
 
       if (category == "all") {
-        category = "";
+        let params = new URLSearchParams();
+        params.append('action', 'reset_insights_search');
+        params.append('category', "");
       }
 
       let params = new URLSearchParams();

@@ -28,4 +28,29 @@ function insights_search() {
 add_action('wp_ajax_insights_search', 'insights_search');
 add_action('wp_ajax_nopriv_insights_search', 'insights_search');
 
+function reset_insights_search() {
+ 
+  if (have_posts()) :
+
+    ob_start();
+
+  while (have_posts()) : the_post();
+
+  get_template_part('modules/insights-card');
+
+  endwhile;
+
+  wp_send_json_success(ob_get_clean());
+
+  else :
+
+    wp_send_json_error('No posts!');
+
+  endif;
+}
+
+
+add_action('wp_ajax_reset_insights_search', 'reset_insights_search');
+add_action('wp_ajax_nopriv_reset_insights_search', 'reset_insights_search')
+
 ?>
