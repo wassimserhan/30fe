@@ -85,7 +85,7 @@ function categoryFilter() {
           // window.history.pushState('', '', baseUrl + '30fe/' + 'insights/' + category);
 
           if (button) {
-            button.parentNode.addChild(button);
+            button.parentNode.removeChild(button);
           }
 
 
