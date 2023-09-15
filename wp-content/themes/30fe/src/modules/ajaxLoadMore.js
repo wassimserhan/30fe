@@ -28,7 +28,7 @@ function ajaxLoadMore() {
           let getUrl = window.location;
           let baseUrl = getUrl.protocol + "//" + getUrl.host + "/";
 
-          window.history.pushState('', '', baseUrl + 'page/' + (parseInt(document.querySelector('.insights__grid').dataset.page) + 1));
+          window.history.pushState('', '', baseUrl + 'insights/' + 'page/' + (parseInt(document.querySelector('.insights__grid').dataset.page) + 1));
 
           console.log(parseInt(document.querySelector('.insights__grid').dataset.page));
 
