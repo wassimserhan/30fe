@@ -4029,10 +4029,14 @@ function ajaxLoadMore() {
       axios__WEBPACK_IMPORTED_MODULE_0__["default"].post('/wp-admin/admin-ajax.php', params).then(res => {
         let posts_list = document.querySelector('.insights__grid');
         posts_list.innerHTML += res.data.data;
-        let getUrl = window.location;
-        let baseUrl = getUrl.protocol + "//" + getUrl.host + "/";
-        window.history.pushState('', '', baseUrl + 'insights/' + 'page/' + (parseInt(document.querySelector('.insights__grid').dataset.page) + 1));
-        console.log(parseInt(document.querySelector('.insights__grid').dataset.page));
+
+        // let getUrl = window.location;
+        // let baseUrl = getUrl.protocol + "//" + getUrl.host + "/";
+
+        // window.history.pushState('', '', baseUrl + 'insights/' + 'page/' + (parseInt(document.querySelector('.insights__grid').dataset.page) + 1));
+
+        // console.log(parseInt(document.querySelector('.insights__grid').dataset.page));
+
         document.querySelector('.insights__grid').dataset.page++;
         if (document.querySelector('.insights__grid').dataset.page == document.querySelector('.insights__grid').dataset.max) {
           button.parentNode.removeChild(button);
@@ -4103,7 +4107,6 @@ function categoryFilter() {
       const button = document.querySelector('.insights__load');
       if (category == "all") {
         category = "";
-        button.parentNode.appendChild(button);
       }
       let params = new URLSearchParams();
       params.append('action', 'insights_search');

@@ -25,12 +25,12 @@ function ajaxLoadMore() {
 
           posts_list.innerHTML += res.data.data;
 
-          let getUrl = window.location;
-          let baseUrl = getUrl.protocol + "//" + getUrl.host + "/";
+          // let getUrl = window.location;
+          // let baseUrl = getUrl.protocol + "//" + getUrl.host + "/";
 
-          window.history.pushState('', '', baseUrl + 'insights/' + 'page/' + (parseInt(document.querySelector('.insights__grid').dataset.page) + 1));
+          // window.history.pushState('', '', baseUrl + 'insights/' + 'page/' + (parseInt(document.querySelector('.insights__grid').dataset.page) + 1));
 
-          console.log(parseInt(document.querySelector('.insights__grid').dataset.page));
+          // console.log(parseInt(document.querySelector('.insights__grid').dataset.page));
 
           document.querySelector('.insights__grid').dataset.page++;
 
