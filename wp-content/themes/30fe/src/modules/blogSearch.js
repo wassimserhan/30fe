@@ -65,6 +65,7 @@ function categoryFilter() {
 
       if (category == "all") {
         category = "";
+        button.parentNode.appendChild(button);
       }
 
       let params = new URLSearchParams();

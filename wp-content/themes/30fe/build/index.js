@@ -4103,6 +4103,7 @@ function categoryFilter() {
       const button = document.querySelector('.insights__load');
       if (category == "all") {
         category = "";
+        button.parentNode.appendChild(button);
       }
       let params = new URLSearchParams();
       params.append('action', 'insights_search');
