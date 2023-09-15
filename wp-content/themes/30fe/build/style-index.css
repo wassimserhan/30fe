@@ -1333,6 +1333,7 @@ body.admin-bar .search-overlay {
 .search-overlay__icon {
   margin-right: 10px;
   max-width: 15px;
+  filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(138deg) brightness(103%) contrast(102%);
 }
 .search-overlay--active {
   visibility: visible;
@@ -3993,6 +3994,10 @@ body.admin-bar .search-overlay {
 }
 .contact__details h3 {
   padding-bottom: 64px;
+}
+.contact__details__icon {
+  margin-right: 10px;
+  max-width: 25px;
 }
 .contact__detail li {
   font-size: 20px;

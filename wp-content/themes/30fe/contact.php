@@ -91,11 +91,14 @@ get_header();
       <section class="contact__details taupe-bg  max-padding">
         <h3>More ways to reach us</h3>
         <ul class="contact__detail">
-          <li> <i class="fa fa-phone" aria-hidden="true"></i> <a href="tel:1-800-564-5313">1 (800) 564-5313</a></li>
-          <li><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:info@30fe.com">info@30fe.com</a></li>
-          <li><i class="fa fa-twitter" aria-hidden="true"></i> <a
-              href="https://twitter.com/30Forensics">@30Forensics</a></li>
-          <li> <i class="fa fa-linkedin" aria-hidden="true"></i> <a
+          <li> <img class="contact__details__icon" src="<?php echo get_template_directory_uri(); ?>/images/Phone.svg"
+              width="25" height="25" alt="Phone icon"> <a href="tel:1-800-564-5313">1 (800) 564-5313</a></li>
+          <li><img class="contact__details__icon" src="<?php echo get_template_directory_uri(); ?>/images/Email.svg"
+              width="25" height="25" alt="Email icon"> <a href="mailto:info@30fe.com">info@30fe.com</a></li>
+          <li><img class="contact__details__icon" src="<?php echo get_template_directory_uri(); ?>/images/Twitter.svg"
+              width="25" height="25" alt="Twitter icon"> <a href="https://twitter.com/30Forensics">@30Forensics</a></li>
+          <li> <img class="contact__details__icon" src="<?php echo get_template_directory_uri(); ?>/images/LinkedIn.svg"
+              width="25" height="25" alt="LinkedIn icon"> <a
               href="https://ca.linkedin.com/company/-30-forensic-engineering">-30- Forensic Engineering</a></li>
         </ul>
       </section>

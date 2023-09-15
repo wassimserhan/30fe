@@ -22,7 +22,10 @@ global $template;
       <button class="nav__menu">
         Menu
       </button>
-      <section class="nav__search search-trigger js-search-trigger"><i class="fa fa-search" aria-hidden="true"></i>
+      <section class="nav__search search-trigger js-search-trigger">
+
+        <img class="search-overlay__icon" src="<?php echo get_template_directory_uri(); ?>/images/search-icon.svg"
+          width="15" height="15" alt="search icon">
       </section>
     </section>
   </section>

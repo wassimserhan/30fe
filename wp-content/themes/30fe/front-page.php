@@ -42,7 +42,8 @@
               <button class="home-expertise__item">
                 <p><?php the_title() ?></p>
                 <img class="home-expertise__item__arrow"
-                  src="<?php echo get_template_directory_uri(); ?>/images/arrow.svg" alt="arrow" tabindex=0>
+                  src="<?php echo get_template_directory_uri(); ?>/images/arrow.svg" alt="arrow" width="20" height="20"
+                  tabindex=0>
               </button>
             </a>
             <?php endwhile ?>
@@ -158,7 +159,7 @@
 
 
 
-          <img class="accordion__image lazyload" src="<?php echo $image ?>" alt="<?php echo $alt; ?>"
+          <img loading="lazy" class="accordion__image" src="<?php echo $image ?>" alt="<?php echo $alt; ?>"
             title="<?php echo $alt; ?>">
 
 
@@ -198,7 +199,7 @@
         </div>
         <div class="accordion-mobile__body content">
 
-          <img class="lazyload accordion-mobile__image" src="<?php echo $image ?>" alt="<?php echo $alt; ?>"
+          <img loading="lazy" class="accordion-mobile__image" src="<?php echo $image ?>" alt="<?php echo $alt; ?>"
             title="<?php echo $alt; ?>">
 
           <p class="accordion-mobile__copy"

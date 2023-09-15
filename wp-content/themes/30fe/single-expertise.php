@@ -59,7 +59,7 @@ get_header();
             <figure class="industry__category-bullets__arrow">
               <img loading="lazy"
                 src="<?php echo get_template_directory_uri(); ?>/images/<?php echo get_field('category_color')['label']?>-arrow.svg"
-                alt="<?php echo $alt; ?>" title="<?php echo $title; ?>">
+                width="20" height="20" alt="<?php echo $alt; ?>" title="<?php echo $title; ?>">
             </figure>
             <article>
               <p class="industry__category-bullets__item"><?php echo $industryItem ?></p>

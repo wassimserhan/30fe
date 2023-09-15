@@ -51,7 +51,7 @@ get_header();
             <h3 class="expertise__list-item"><?php the_title() ?></h3>
 
             <img class="expertise__list-item__arrow" src="<?php echo get_template_directory_uri(); ?>/images/arrow.svg"
-              alt="arrow" tabindex=0>
+              width="20" height="20" alt="arrow" tabindex=0>
 
           </article>
         </a>
