@@ -36,8 +36,7 @@ global $wp_query;
         <?php 
         
           while (have_posts()):the_post(); ?> <?php include get_template_directory() . '/modules/insights-card.php'; ?>
-        <?php endwhile ?> <?php wp_reset_postdata() ?> </section>
-      <!-- <section class="paginate"> <?php echo paginate_links();?></section> -->
+        <?php endwhile ?> </section>
       <button class="insights__load">Load More</button>
     </section>
   </section>
