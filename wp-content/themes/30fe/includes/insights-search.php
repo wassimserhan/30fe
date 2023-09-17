@@ -3,7 +3,7 @@
 function insights_search() {
   $category = $_POST['category'];
   $query = new WP_Query([
-    'posts_per_page' => 12,
+    'posts_per_page' => -1,
     'category_name' => $category
     
   ]);
@@ -29,6 +29,7 @@ add_action('wp_ajax_insights_search', 'insights_search');
 add_action('wp_ajax_nopriv_insights_search', 'insights_search');
 
 function reset_insights_search() {
+echo "hello";
  
   if (have_posts()) :
 

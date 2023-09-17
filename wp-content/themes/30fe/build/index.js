@@ -4105,28 +4105,22 @@ function categoryFilter() {
     item.addEventListener('click', e => {
       let category = e.target.attributes.value.nodeValue;
       const button = document.querySelector('.insights__load');
-      if (category == "all") {
-        let params = new URLSearchParams();
-        params.append('action', 'reset_insights_search');
-        params.append('category', "");
-      } else {
-        let params = new URLSearchParams();
-        params.append('action', 'insights_search');
-        params.append('category', category);
-        axios__WEBPACK_IMPORTED_MODULE_0__["default"].post('/wp-admin/admin-ajax.php', params).then(res => {
-          let posts_list = document.querySelector('.insights__grid');
-          posts_list.innerHTML = res.data.data;
+      let params = new URLSearchParams();
+      params.append('action', 'insights_search');
+      params.append('category', category);
+      axios__WEBPACK_IMPORTED_MODULE_0__["default"].post('/wp-admin/admin-ajax.php', params).then(res => {
+        let posts_list = document.querySelector('.insights__grid');
+        posts_list.innerHTML = res.data.data;
 
-          // let getUrl = window.location;
-          // let baseUrl = getUrl.protocol + "//" + getUrl.host + "/";
+        // let getUrl = window.location;
+        // let baseUrl = getUrl.protocol + "//" + getUrl.host + "/";
 
-          // window.history.pushState('', '', baseUrl + '30fe/' + 'insights/' + category);
+        // window.history.pushState('', '', baseUrl + '30fe/' + 'insights/' + category);
 
-          if (button) {
-            button.parentNode.removeChild(button);
-          }
-        });
-      }
+        if (button) {
+          button.parentNode.removeChild(button);
+        }
+      });
     });
   });
 }

@@ -20,7 +20,7 @@ global $wp_query;
             <div class="insights__caret"></div>
           </div>
           <ul id="team__role" class="insights__menu team__expertise">
-            <li value="all">All Categories</li>
+            <li value="">All Categories</li>
             <?php $categories = get_categories(); 
                 foreach($categories as $category): ?>
             <li value="<?php echo $category->slug; ?>"><?php echo $category->name; ?></li>

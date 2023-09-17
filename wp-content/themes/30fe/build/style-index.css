@@ -3627,7 +3627,7 @@ body.admin-bar .search-overlay {
   z-index: 1;
 }
 .insights__menu li {
-  padding: 16px;
+  padding: 16px 32px;
   cursor: pointer;
   border-bottom: 1px #cbbea5 solid;
   font-size: 12px;
