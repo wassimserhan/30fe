@@ -3,12 +3,32 @@
 //Search Filter
 const input = document.getElementById("teamFilter");
 
+
 if (input) {
+
+
+  // click outside textfield
+  input.addEventListener("blur", function () {
+    let teamRoles = document.querySelectorAll('.team__roles');
+
+    [...teamRoles].forEach(item => {
+      item.style.display = "block"
+    })
+  });
+
+
+
   input.addEventListener('focus', function () {
-    resetFilterText('team__selected-role', 'Filter By Role');
     resetFilterText('team__selected-expertise', 'Filter By Expertise');
     showAllTeam('team__card', 'block');
-    resetFlex();
+
+    let teamRoles = document.querySelectorAll('.team__roles');
+
+    [...teamRoles].forEach(item => {
+      item.style.display = "block"
+    })
+
+
   })
 
 
@@ -19,29 +39,37 @@ if (input) {
     filter = input.value.toUpperCase();
     cardContainer = document.getElementById("team");
     cards = cardContainer.getElementsByClassName("team__card");
+    teamRoles = document.querySelectorAll('.team__roles');
+
+
+
     for (i = 0; i < cards.length; i++) {
       title = cards[i].querySelector(".team__card__name");
       if (title.innerText.toUpperCase().indexOf(filter) > -1) {
         cards[i].style.display = "";
-        cards[i].style.flexGrow = 0;
+        [...teamRoles].forEach(item => {
+          item.style.display = "none"
+        })
+
       } else {
         cards[i].style.display = "none";
+
       }
 
-      if (!input.value) {
-        cards[i].style.flexGrow = 1;
-      }
+
     }
 
 
   }
+} else {
+
 }
 
 //Search Filter
 
 
 const dropdowns = document.querySelectorAll('.team__filter-dropdown');
-const roleList = document.querySelectorAll("ul > li");
+const expertiseList = document.querySelectorAll("ul > li");
 
 
 dropdowns.forEach(dropdown => {
@@ -57,7 +85,7 @@ dropdowns.forEach(dropdown => {
       select.classList.toggle('team__select-clicked');
       caret.classList.toggle('team__caret-rotate');
       menu.classList.toggle('team__menu-open');
-      roleFilter();
+      expertiseFilter();
 
       // I'm using "click" but it works with any event
       document.addEventListener('click', event => {
@@ -91,32 +119,37 @@ dropdowns.forEach(dropdown => {
 });
 
 
-function roleFilter() {
+function expertiseFilter() {
 
-  resetFilterText('selected-role', 'Filter By Role');
   resetFilterText('selected-expertise', 'Filter By Expertise');
   showAllTeam('team__card', 'block');
-  resetFlex();
 
 
 
 
-  roleList.forEach(function (item) {
+
+  expertiseList.forEach(function (item) {
     var filter, cards, cardContainer, i;
 
     item.addEventListener('click', (e) => {
       filter = e.target.textContent.toUpperCase();
       cardContainer = document.getElementById("team");
       cards = cardContainer.getElementsByClassName("team__card");
+      teamRoles = document.querySelectorAll('.team__roles');
       for (i = 0; i < cards.length; i++) {
-        titleRoles = cards[i].querySelector(".team__card__role");
+
         titleExpertise = cards[i].querySelector(".team__card__expertise");
 
-        if (filter == "ALL ROLES" || filter == "ALL EXPERTISE") {
+        if (filter == "ALL EXPERTISE") {
           cards[i].style.display = "block";
-        } else if (titleRoles.innerText.toUpperCase().indexOf(filter) > -1 || titleExpertise.innerText.toUpperCase().indexOf(filter) > -1) {
-
+          [...teamRoles].forEach(item => {
+            item.style.display = "block"
+          })
+        } else if (titleExpertise.innerText.toUpperCase().indexOf(filter) > -1) {
           cards[i].style.display = "block";
+          [...teamRoles].forEach(item => {
+            item.style.display = "none"
+          })
         } else {
           cards[i].style.display = "none";
         }
@@ -140,7 +173,8 @@ function showAllTeam(className, displayState) {
 }
 
 function resetFilterText(className, text) {
-  var elements = document.getElementsByClassName(className);
+  let elements = document.getElementsByClassName(className);
+
 
   for (var i = 0; i < elements.length; i++) {
     elements[i].innerText = text;
@@ -148,16 +182,12 @@ function resetFilterText(className, text) {
   }
 }
 
-function resetFlex() {
-  cardContainer = document.getElementById("team");
-  cards = cardContainer.getElementsByClassName("team__card");
-  for (i = 0; i < cards.length; i++) {
-    cards[i].style.flexGrow = 1;
-
-  }
+function resetTitles() {
 
 
 }
+
+
 
 
 

@@ -2787,6 +2787,9 @@ body.admin-bar .search-overlay {
   margin: auto;
   padding: 0 25px;
 }
+.team__roles {
+  padding: 2rem 0 1rem;
+}
 .team__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));

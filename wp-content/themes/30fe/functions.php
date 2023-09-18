@@ -375,7 +375,7 @@ function display_read_time() {
     return $read_time_output;
 }
 
-// Function to change "posts" to "news" in the admin side menu
+// Function to change "posts" to "insights" in the admin side menu
 function change_post_menu_label() {
     global $menu;
     global $submenu;
@@ -409,6 +409,7 @@ function myprefix_unregister_tags() {
 add_action('init', 'myprefix_unregister_tags');
 
 add_action( 'init', 'gp_register_taxonomy_for_object_type' );
+
 function gp_register_taxonomy_for_object_type() {
     register_taxonomy_for_object_type( 'post_tag', 'team' );
 };
@@ -468,6 +469,23 @@ add_action('manage_industry_posts_custom_column','show_order_column');
 
 
 
+//Add Roles Category in Team Custom Post Type
+function tr_create_my_taxonomy() {
+
+    register_taxonomy(
+        'team-category',
+        'team',
+        array(
+            'label' => __( 'Roles' ),
+            'rewrite' => array( 'slug' => 'team-category' ),
+            'hierarchical' => true,
+            'show_admin_column' => true,
+            'show_in_rest'=> true,
+        )
+        
+    );
+}
+add_action( 'init', 'tr_create_my_taxonomy' );
 
 
 
