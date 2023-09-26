@@ -36,8 +36,24 @@ get_header();
     </section>
   </section>
 
-  <!-- Intro -->
+  <!-- Mission -->
   <?php
+if( have_rows('mission') ):
+while( have_rows('mission') ) : the_row(); 
+?>
+  <section class="about__mission fullscreen full-height">
+    <section class="max-width max-padding">
+      <section class="pill about__mission__pill">
+        <p class="pill__label">mission</p>
+      </section>
+      <h1 class="about__mission__headline"><?php echo get_sub_field('mission_headline'); ?> </h1>
+      <h4 class="about__mission__copy"><?php echo get_sub_field('mission_copy'); ?> </h4>
+    </section>
+  </section>
+  <?php endwhile; endif; ?>
+
+  <!-- Intro -->
+  <!-- <?php
 if( have_rows('intro') ):
 while( have_rows('intro') ) : the_row(); 
 ?>
@@ -49,7 +65,7 @@ while( have_rows('intro') ) : the_row();
       </section>
     </section>
   </section>
-  <?php endwhile; endif; ?>
+  <?php endwhile; endif; ?> -->
 
   <!-- 360 Investigations -->
 
@@ -94,21 +110,7 @@ while( have_rows('360_services') ) : the_row();
   <?php endwhile; endif; ?>
 
 
-  <!-- Mission -->
-  <?php
-if( have_rows('mission') ):
-while( have_rows('mission') ) : the_row(); 
-?>
-  <section class="about__mission fullscreen full-height">
-    <section class="max-width max-padding">
-      <section class="pill about__mission__pill">
-        <p class="pill__label">mission</p>
-      </section>
-      <h1 class="about__mission__headline"><?php echo get_sub_field('mission_headline'); ?> </h1>
-      <h4 class="about__mission__copy"><?php echo get_sub_field('mission_copy'); ?> </h4>
-    </section>
-  </section>
-  <?php endwhile; endif; ?>
+
 
 
   <?php include get_template_directory() . '/modules/timeline.php'; ?>

@@ -821,6 +821,10 @@ button.splide__arrow:hover {
   background-color: transparent !important;
 }
 
+button.splide__arrow:disabled {
+  opacity: 0 !important;
+}
+
 .team-card {
   border: 1px solid #1d1c1d;
   padding: 32px;

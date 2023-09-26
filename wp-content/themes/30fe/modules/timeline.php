@@ -20,7 +20,7 @@ while( have_rows('timeline') ) : the_row();
           $year = get_sub_field('year');
           $story = get_sub_field('story');
           ?>
-        <section class="splide__slide">
+        <section data-splide="<?php echo get_row_index() ?>" class="splide__slide timeline">
           <section class="about__timeline__wrapper">
             <section class="about__timeline__pill about__timeline__pill">
               <p class="about__timeline__pill__text"><?php echo $year ?></p>

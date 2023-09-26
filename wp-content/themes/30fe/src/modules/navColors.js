@@ -32,10 +32,10 @@ if (fullscreen) {
     case 'about.php':
       gsap.set(".nav__logo__black", { filter: $logoWhite })
       gsap.set(".nav__menu-search", { borderColor: $whitesmoke })
-      sectionColors = [$black, $whitesmoke, $whitesmoke, $taupe, $black, $whitesmoke, $taupe];
-      navColors = [$black, $whitesmoke, $whitesmoke, $taupe, $black, $whitesmoke, $taupe];
-      logoColor = [$logoWhite, $logoBlack, $logoBlack, $logoBlack, $logoWhite, $logoBlack, $logoBlack, $logoBlack];
-      borderColor = [$whitesmoke, $black, $black, $black, $whitesmoke, $black, $black];
+      sectionColors = [$black, $whitesmoke, $whitesmoke, $black, $whitesmoke, $taupe];
+      navColors = [$black, $whitesmoke, $whitesmoke, $black, $whitesmoke, $taupe];
+      logoColor = [$logoWhite, $logoBlack, $logoBlack, $logoWhite, $logoBlack, $logoBlack, $logoBlack];
+      borderColor = [$whitesmoke, $black, $black, $whitesmoke, $black, $black];
       break;
     case 'team.php':
       gsap.set(".nav", { backgroundColor: $whitesmoke })

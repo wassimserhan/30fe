@@ -170,3 +170,7 @@
 button.splide__arrow:hover {
   background-color: transparent !important;
 }
+
+button.splide__arrow:disabled {
+  opacity: 0 !important;
+}
