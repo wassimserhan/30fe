@@ -2898,6 +2898,27 @@ body.admin-bar .search-overlay {
     flex-direction: column;
   }
 }
+.member__card__wrapper {
+  width: 50%;
+}
+@media (max-width: 479px) {
+  .member__card__wrapper {
+    width: 100%;
+  }
+}
+@media (max-width: 479px) {
+  .member__card__competencies {
+    display: none;
+  }
+}
+.member__card__competencies--mobile {
+  display: none;
+}
+@media (max-width: 479px) {
+  .member__card__competencies--mobile {
+    display: block;
+  }
+}
 .member img {
   -o-object-fit: cover;
      object-fit: cover;
@@ -2931,11 +2952,17 @@ body.admin-bar .search-overlay {
   font-weight: 500;
   line-height: 140%;
   letter-spacing: -0.6px;
+  padding-top: 1rem;
 }
 .member__line {
   width: 384px;
   height: 1px;
   margin: 8px 0 14px;
+}
+@media (max-width: 479px) {
+  .member__line {
+    width: 100%;
+  }
 }
 .member__pillbox {
   display: flex;

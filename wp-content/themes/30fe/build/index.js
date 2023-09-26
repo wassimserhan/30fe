@@ -3882,7 +3882,7 @@ if (slider4) {
         width: '100%'
       }
     },
-    width: '50%',
+    // width: '50%',
     type: 'fade',
     arrows: false,
     pagination: false,
