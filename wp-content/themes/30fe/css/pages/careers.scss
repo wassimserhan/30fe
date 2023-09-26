@@ -132,12 +132,6 @@
     }
   }
 
-  &__copy {
-    // font-size: 16px;
-    // font-weight: 400;
-    // line-height: 150%; /* 24px */
-  }
-
   &__list {
     color: $white;
     list-style: initial;
@@ -153,9 +147,8 @@
   }
 }
 
-.accordion-careers {
+.careers__positions {
   width: 100%;
-  // max-width: 800px;
   overflow: hidden;
   color: $white;
   border-top: 2px solid $white;
@@ -189,85 +182,29 @@
         color: $black;
       }
     }
-
-    .arrow-down {
-      position: absolute;
-      top: 15px;
-      right: 4px;
-      max-width: 15px;
-
-      &::after {
-        position: absolute;
-        top: -2px;
-      }
-    }
   }
 
   &__intro {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 140%; /* 28px */
     letter-spacing: -0.6px;
     color: $white;
     flex: 1 1 0px;
-
-    &--hide {
-      @include bp(tablet) {
-        display: none;
-      }
-    }
   }
 
-  &__content {
-    // padding: 0 0 20px;
-    max-height: 0;
-    overflow: hidden;
-    will-change: max-height;
-    transition: all 0.25s ease-out;
-    color: $black;
-    opacity: 0;
-    font-size: 0.9rem;
-    line-height: 22px;
-    background-color: $whitesmoke;
-    padding: 0 15px;
-
-    & ul {
-      list-style: initial;
-
-      & li {
-        margin-left: 1rem;
-      }
-    }
+  &__arrow {
+    max-width: 20px;
+    transform: rotate(0);
+    transition: 300ms transform;
+    filter: invert(99%) sepia(1%) saturate(1109%) hue-rotate(30deg)
+      brightness(102%) contrast(90%);
   }
 
-  &__button {
-    background-color: transparent;
-    padding: 12px 24px;
-    text-transform: capitalize;
-    color: $black;
-    border: 1px solid $black;
-    margin: 30px 0;
-
-    & a {
-      color: $black;
-    }
-  }
-
-  &__active {
-    background-color: $whitesmoke;
-
-    .accordion-careers__intro {
-      color: $black;
-    }
-
-    .accordion-careers__content {
-      margin-bottom: 15px;
-      opacity: 1;
-    }
-
-    .arrow {
-      transition: all 250ms;
-      transform: rotate(180deg);
-    }
+  &:hover &__arrow {
+    transform: rotate(-40deg);
+    transition: 300ms transform;
+    filter: invert(6%) sepia(1%) saturate(3414%) hue-rotate(248deg)
+      brightness(85%) contrast(87%);
   }
 }

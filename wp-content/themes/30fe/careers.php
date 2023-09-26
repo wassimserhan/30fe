@@ -136,36 +136,25 @@ while( have_rows('positions') ) : the_row();
           $cta = get_field('cta', $item);
         ?>
 
+      <a href="#">
+        <article class="careers__positions">
+          <div class="careers__positions__wrapper">
+            <p class="careers__positions__intro">
+              <?php echo $title;?>
+            </p>
+            <p class="careers__positions__intro">
+              <?php echo $location;?>
+            </p>
+            <p class="careers__positions__intro">
+              <?php echo $type;?>
+            </p>
+            <img class="careers__positions__arrow"
+              src="https://wassims.sg-host.com/wp-content/themes/30fe/images/arrow.svg" alt="arrow" width="20"
+              height="20" tabindex="0">
+          </div>
 
-      <article class="accordion-careers">
-        <div class="accordion-careers__wrapper">
-          <p class="accordion-careers__intro">
-            <?php echo $title;?>
-          </p>
-          <p class="accordion-careers__intro">
-            <?php echo $location;?>
-          </p>
-          <p class="accordion-careers__intro accordion-careers__intro--hide">
-            <?php echo $type;?>
-          </p>
-          <!-- <img class="arrow-down" src="<?php echo get_template_directory_uri(); ?>/images/arrow-down.svg"
-            alt="arrow-down"> -->
-          <!-- <div class="arrow"></div> -->
-        </div>
-        <section class="accordion-careers__content">
-          <p><?php echo $description;?></p>
-          <!-- CTA -->
-          <?php if ($cta) {
-             $link_target = $cta['target'] ? $cta['target'] : '_self';?>
-          <button class="accordion-careers__button">
-            <a href="<?php echo $cta['url'] ?>" target="<?php echo $link_target; ?>"><?php echo $cta['title'] ?></a>
-          </button>
-          <?php } ;?>
-
-          <!-- CTA -->
-        </section>
-      </article>
-
+        </article>
+      </a>
       <?php endforeach; ?></p>
     </section>
   </section>

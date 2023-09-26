@@ -157,9 +157,7 @@ if (slider5) {
 import './modules/expertiseListHover';
 import './modules/ajaxLoadMore';
 import './modules/changeBackground';
-import './modules/careers';
 import './modules/expertise';
-import './modules/timeline';
 import './modules/contact';
 import './modules/teamSearch';
 import './modules/teamImages';
@@ -171,8 +169,6 @@ import './modules/navColors';
 import './modules/navbar';
 import Search from './modules/search';
 
-// import main from './main';
-// import navbar from './navbar';
 
 // classes
 

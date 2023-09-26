@@ -4327,24 +4327,24 @@ body.admin-bar .search-overlay {
   padding-bottom: 10px;
 }
 
-.accordion-careers {
+.careers__positions {
   width: 100%;
   overflow: hidden;
   color: #ffffff;
   border-top: 2px solid #ffffff;
   background-color: #1d1c1d;
 }
-.accordion-careers:last-of-type {
+.careers__positions:last-of-type {
   border-bottom: 2px solid #ffffff;
 }
-.accordion-careers:last-child {
+.careers__positions:last-child {
   border-bottom: 2px solid #ffffff;
 }
-.accordion-careers__title {
+.careers__positions__title {
   font-size: 0.8rem;
   font-weight: 500;
 }
-.accordion-careers__wrapper {
+.careers__positions__wrapper {
   position: relative;
   display: flex;
   align-items: center;
@@ -4352,77 +4352,30 @@ body.admin-bar .search-overlay {
   padding: 10px 15px;
   cursor: pointer;
 }
-.accordion-careers__wrapper:hover {
+.careers__positions__wrapper:hover {
   background-color: #f2f1ed;
 }
-.accordion-careers__wrapper:hover p {
+.careers__positions__wrapper:hover p {
   color: #1d1c1d;
 }
-.accordion-careers__wrapper .arrow-down {
-  position: absolute;
-  top: 15px;
-  right: 4px;
-  max-width: 15px;
-}
-.accordion-careers__wrapper .arrow-down::after {
-  position: absolute;
-  top: -2px;
-}
-.accordion-careers__intro {
+.careers__positions__intro {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 140%; /* 28px */
   letter-spacing: -0.6px;
   color: #ffffff;
   flex: 1 1 0px;
 }
-@media (max-width: 768px) {
-  .accordion-careers__intro--hide {
-    display: none;
-  }
+.careers__positions__arrow {
+  max-width: 20px;
+  transform: rotate(0);
+  transition: 300ms transform;
+  filter: invert(99%) sepia(1%) saturate(1109%) hue-rotate(30deg) brightness(102%) contrast(90%);
 }
-.accordion-careers__content {
-  max-height: 0;
-  overflow: hidden;
-  will-change: max-height;
-  transition: all 0.25s ease-out;
-  color: #1d1c1d;
-  opacity: 0;
-  font-size: 0.9rem;
-  line-height: 22px;
-  background-color: #f2f1ed;
-  padding: 0 15px;
-}
-.accordion-careers__content ul {
-  list-style: initial;
-}
-.accordion-careers__content ul li {
-  margin-left: 1rem;
-}
-.accordion-careers__button {
-  background-color: transparent;
-  padding: 12px 24px;
-  text-transform: capitalize;
-  color: #1d1c1d;
-  border: 1px solid #1d1c1d;
-  margin: 30px 0;
-}
-.accordion-careers__button a {
-  color: #1d1c1d;
-}
-.accordion-careers__active {
-  background-color: #f2f1ed;
-}
-.accordion-careers__active .accordion-careers__intro {
-  color: #1d1c1d;
-}
-.accordion-careers__active .accordion-careers__content {
-  margin-bottom: 15px;
-  opacity: 1;
-}
-.accordion-careers__active .arrow {
-  transition: all 250ms;
-  transform: rotate(180deg);
+.careers__positions:hover .careers__positions__arrow {
+  transform: rotate(-40deg);
+  transition: 300ms transform;
+  filter: invert(6%) sepia(1%) saturate(3414%) hue-rotate(248deg) brightness(85%) contrast(87%);
 }
 
 .seminars__button {
