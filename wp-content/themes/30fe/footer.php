@@ -14,75 +14,14 @@
 
 
 <footer class="footer black-bg">
+  <section class="scroll-section">
+    <article class="scroll-text scroll-container">
+      <p class="scroll ">We are Engineers &mdash; Scientists &mdash; Experts &mdash; Truth Seekers &mdash;
+        Detectives &mdash; Problem Solvers &mdash; Reporters</p>
+    </article>
+  </section>
   <section class="max-width max-padding">
-    <!-- <section class="footer__nav">
-      <figure>
-        <img loading="lazy" class="footer__logo"
-          src="<?php echo get_template_directory_uri(); ?>/images/30fe-logo-white.svg"
-          alt="<?php echo get_bloginfo( 'name' ); ?> logo" title="<?php echo get_bloginfo( 'name' ); ?>" width="100%">
-      </figure>
 
-      <section>
-        <h6 class="footer__nav__title">
-          Column One
-        </h6>
-        <ul>
-          <li class="footer__nav__links">Link One</li>
-          <li class="footer__nav__links">Link Two</li>
-          <li class="footer__nav__links">Link Three</li>
-          <li class="footer__nav__links">Link Four</li>
-          <li class="footer__nav__links">Link Five</li>
-        </ul>
-      </section>
-      <section class="footer__nav-columns">
-        <h6 class="footer__nav__title">
-          Column Two
-        </h6>
-        <ul>
-          <li class="footer__nav__links">Link One</li>
-          <li class="footer__nav__links">Link Two</li>
-          <li class="footer__nav__links">Link Three</li>
-          <li class="footer__nav__links">Link Four</li>
-          <li class="footer__nav__links">Link Five</li>
-        </ul>
-      </section>
-      <section class="footer__nav-columns">
-        <h6 class="footer__nav__title">
-          Column Three
-        </h6>
-        <ul>
-          <li class="footer__nav__links">Link One</li>
-          <li class="footer__nav__links">Link Two</li>
-          <li class="footer__nav__links">Link Three</li>
-          <li class="footer__nav__links">Link Four</li>
-          <li class="footer__nav__links">Link Five</li>
-        </ul>
-      </section>
-      <section class="footer__nav-columns">
-        <h6 class="footer__nav__title">
-          Column Four
-        </h6>
-        <ul>
-          <li class="footer__nav__links">Link One</li>
-          <li class="footer__nav__links">Link Two</li>
-          <li class="footer__nav__links">Link Three</li>
-          <li class="footer__nav__links">Link Four</li>
-          <li class="footer__nav__links">Link Five</li>
-        </ul>
-      </section>
-      <section class="footer__nav-columns">
-        <h6 class="footer__nav__title">
-          Column Five
-        </h6>
-        <ul>
-          <li class="footer__nav__links">Link One</li>
-          <li class="footer__nav__links">Link Two</li>
-          <li class="footer__nav__links">Link Three</li>
-          <li class="footer__nav__links">Link Four</li>
-          <li class="footer__nav__links">Link Five</li>
-        </ul>
-      </section>
-    </section> -->
 
 
 
@@ -98,11 +37,9 @@
           document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
           </script>
         </span>
-        &nbsp; 30 Forensic engineering
+        &nbsp; 30 Forensic engineering.&nbsp; All Rights Reserved.
       </p>
-      <p class="footer__copyright">
-        Office: 1-800-564-5313
-      </p>
+
     </div>
 
 

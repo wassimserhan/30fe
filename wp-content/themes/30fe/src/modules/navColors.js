@@ -21,26 +21,36 @@ if (fullscreen) {
   let sectionColors;
   let logoColor;
   let borderColor;
+  let navItems;
 
   switch (pageTitle) {
     case 'front-page.php':
-      sectionColors = [$whitesmoke, $taupe, $whitesmoke, $whitesmoke, $taupe, $whitesmoke, $taupe];
-      navColors = [$whitesmoke, $taupe, $whitesmoke, $whitesmoke, $taupe, $whitesmoke, $taupe];
-      logoColor = [$logoBlack];
+      gsap.set(".nav__logo__black", { filter: $logoWhite })
+      gsap.set(".nav__items", { color: $whitesmoke })
+      gsap.set(".nav", { backgroundColor: $black })
+      sectionColors = [$black, $whitesmoke, $whitesmoke, $whitesmoke, $whitesmoke];
+      navColors = [$black, $whitesmoke, $whitesmoke, $whitesmoke, $whitesmoke];
+      navItems = [$whitesmoke, $black]
+      logoColor = [$logoWhite, $logoBlack];
       borderColor = [$black];
       break;
     case 'about.php':
       gsap.set(".nav__logo__black", { filter: $logoWhite })
+      gsap.set(".nav__items", { color: $white })
+      gsap.set(".nav", { backgroundColor: $black })
       gsap.set(".nav__menu-search", { borderColor: $whitesmoke })
       sectionColors = [$black, $whitesmoke, $whitesmoke, $black, $whitesmoke, $taupe];
       navColors = [$black, $whitesmoke, $whitesmoke, $black, $whitesmoke, $taupe];
+      navItems = [$whitesmoke, $black, $black, $whitesmoke, $black, $black]
       logoColor = [$logoWhite, $logoBlack, $logoBlack, $logoWhite, $logoBlack, $logoBlack, $logoBlack];
       borderColor = [$whitesmoke, $black, $black, $whitesmoke, $black, $black];
       break;
     case 'team.php':
       gsap.set(".nav", { backgroundColor: $whitesmoke })
+      gsap.set(".nav__items", { color: $black })
       sectionColors = [$whitesmoke, $taupe];
       navColors = [$whitesmoke, $taupe];
+      navItems = [$black]
       logoColor = [$logoBlack];
       borderColor = [$black];
       break;
@@ -171,14 +181,17 @@ if (fullscreen) {
 
 
     let tl = gsap.timeline({
+      // duration: 1,
       scrollTrigger: {
         trigger: section,
-        start: "top 78px",
-        end: "bottom 78px",
+        start: "top 130px",
+        end: "bottom 130px",
+        markers: false,
         toggleActions: "restart none none reverse"
       }
     })
       .to(".nav", { backgroundColor: navColors[index], immediateRender: false })
+      .to(".nav__items", { color: navItems[index], immediateRender: false }, "<")
       .to(".nav__logo__black", {
         filter: logoColor[index], immediateRender: false
       }, "<")

@@ -1,5 +1,8 @@
 .nav {
-  background-color: $black;
+  // background-color: $whitesmoke;
+  min-height: 20vh;
+  transition: transform 0.2s;
+  transition: background-color 0.4s; /* Add a smooth transition for background color changes */
 
   &__menu-search {
     display: flex;
@@ -19,7 +22,7 @@
 
   &__search {
     padding: 0.5rem 1rem;
-    display: block;
+    display: none;
     font-family: 'Inter', sans-serif;
     text-decoration: none;
     font-size: 0.75rem;
@@ -29,6 +32,10 @@
     color: #ffffff;
     text-transform: uppercase;
     line-height: 150%;
+
+    @include bp(tablet) {
+      display: block;
+    }
   }
 
   &__menu-reverse {
@@ -45,7 +52,7 @@
     flex: 1 0 0;
     margin: auto;
     width: 100%;
-    min-height: 8vh;
+
     padding: 0 8rem;
     position: relative;
     z-index: 5;
@@ -55,15 +62,18 @@
   }
 
   &__links {
-    // display: flex;
-    // align-items: flex-start;
-    // gap: 48px;
-    // align-self: stretch;
-    // place-items: center;
+    display: flex;
+    align-items: flex-start;
+    gap: 48px;
+    align-self: stretch;
+    place-items: center;
+    color: $whitesmoke;
+    justify-content: space-between;
+    padding: 2rem 8rem 0;
 
-    // @include bp(tablet) {
-    //   display: none;
-    // }
+    @include bp(tablet) {
+      display: none;
+    }
   }
 
   &__dropdown {
@@ -264,4 +274,9 @@
   opacity: 1;
   z-index: 2;
   visibility: visible;
+}
+
+.nav--hidden {
+  transform: translateY(calc(-1 * 20vh));
+  box-shadow: none;
 }

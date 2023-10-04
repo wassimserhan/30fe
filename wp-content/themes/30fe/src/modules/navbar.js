@@ -1,7 +1,7 @@
 const hamburger = document.querySelector('.nav__menu');
 const body = document.getElementsByTagName('body')[0];
 const sideNav = document.querySelector('.nav__dropdown');
-const addTint = document.querySelector('.body__hider');
+// const addTint = document.querySelector('.body__hider');
 
 hamburger.addEventListener('click', menu);
 
@@ -67,3 +67,25 @@ accordionsAbout.forEach(accordion => {
     }
   };
 });
+
+
+//Show Nav on Scroll
+
+// Enable hidden nav bar
+{
+  const nav = document.querySelector(".nav");
+  let lastScrollY = window.scrollY;
+
+
+  window.addEventListener("scroll", () => {
+    console.log(window.scrollY)
+    if (lastScrollY < window.scrollY && lastScrollY > 1200) {
+      nav.classList.add("nav--hidden");
+    } else {
+      nav.classList.remove("nav--hidden");
+    }
+
+
+    lastScrollY = window.scrollY;
+  });
+}

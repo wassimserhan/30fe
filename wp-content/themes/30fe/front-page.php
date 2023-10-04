@@ -2,62 +2,153 @@
 <?php get_header(); ?>
 <main class="main-container">
 
-  <section id="home-hero" class="home__hero">
-    <section class="max-width">
-      <article class="home__hero__headline">
-        <h1 class="home__hero__copy">Precision in Investigation, <br> Clarity in Solutions</h1>
+
+
+
+
+
+  <section id="home__hero" class="home__hero">
+    <section class="max-width home__hero__padding">
+      <h1 id="banner-text" class="home__banner__headline"> Precision&nbsp;In <br>Investigation, <br>Clarity
+        in <br>Solutions.
+      </h1>
+      <article class="home__hero__wrapper">
+
+
+        <section class="home__hero__container">
+          <h2 class="home__hero__copy">We are a team of investigators, engineers, scientists and problem solvers. We
+            bring
+            clarity to complex scientific problems to help our clients make decisions with confidence, all backed by
+            uncompromising investigative forensic reporting.
+            <br><br>
+            We are 30.
+          </h2>
+          <img src="<?php echo get_template_directory_uri(); ?>/images/banner.png" alt="">
+        </section>
+
+
+
         <section class="home__hero__buttons">
           <a href="<?php echo site_url('/submit-an-assignment')?>" target="_self"><button
-              class="home__hero__button">Submit an
-              Assignment</button></a>
-          <a href="<?php echo site_url('/team')?>"><button class="home__hero__button home__hero__button--white">Browse
-              Experts</button></a>
+              class="home__hero__button">Work with Us</button></a>
+          <a href="<?php echo site_url('/team')?>"><button class="home__hero__button home__hero__button--white">Learn
+              More</button></a>
         </section>
       </article>
     </section>
-    <article class="scroll-text home__hero__scroll-container">
-      <p class="home__hero__scroll ">We are Engineers &mdash; Scientists &mdash; Experts &mdash; Truth Seekers &mdash;
-        Detectives &mdash; Problem Solvers &mdash; Reporters</p>
-    </article>
-
   </section>
 
-  <section class="home-expertise fullscreen full-height">
+  <section id="accordion" class="fullscreen">
     <section class="max-width max-padding">
-      <article class="accordion-faq">
-        <div class="accordion-faq__wrapper">
-          <h2 class="home-expertise__headline">Our Expertise</h2>
-          <div class="plus"></div>
-        </div>
-        <section class="accordion-faq__content">
-          <section class="home-expertise__list">
-            <?php 
-          $customQuery = new WP_Query(array(
-          'posts_per_page' => 20,
-          'post_type'=> 'expertise'
-        ));
-        while ($customQuery->have_posts()): $customQuery->the_post();
+      <section class="accordion__header">
+        <h2 class="accordion__header__headline">Explore the 30 Approach</h2>
+        <p class="accordion__header__subheadline">A comprehensive and systematic methodology that underpins our forensic
+          investigation
+          services.</p>
+      </section>
+
+      <div class="accordion accordion--horizontal ">
+        <?php $k=0;
+            if( have_rows('accordion_items') ): 
+          while( have_rows('accordion_items') ) : the_row();
+          $headline = get_sub_field('headline');
+          $copy = get_sub_field('copy');
+          $img = get_sub_field('image');
+          $image = $img['url'];
+          $alt = $img['alt'];
+          $colors = [ 'whitesmoke-bg', 'blue-bg','green-bg', 'orange-bg', 'taupe-bg','black-bg' ];
         ?>
-            <a href="<?php echo the_permalink() ?>">
-              <button class="home-expertise__item">
-                <p><?php the_title() ?></p>
-                <img class="home-expertise__item__arrow"
-                  src="<?php echo get_template_directory_uri(); ?>/images/arrow.svg" alt="arrow" width="20" height="20"
-                  tabindex=0>
-              </button>
-            </a>
-            <?php endwhile ?>
-            <?php wp_reset_postdata() ?>
+        <div class="accordion__item <?php if(get_row_index() === 1) echo 'active' ?> <?php    echo $colors[$k] ?>">
+          <article class="accordion__tab">
+            <h1 class="accordion__heading"
+              style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'black-bg') echo 'color: #ffffff'?>">
+              <?php echo $headline ?></h1>
+            <p class="accordion__number"
+              style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'black-bg') echo 'color: #ffffff'?>">
+              <?php echo '0'. get_row_index() ?></p>
+          </article>
+          <section class="accordion__body active">
+            <h3 class="accordion__headline"
+              style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'black-bg') echo 'color: #ffffff'?>">
+              <?php echo $headline ?></h3>
+            <p class="accordion__copy"
+              style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'black-bg') echo 'color: #ffffff'?>">
+              <?php echo $copy; ?>
+            </p>
+
+
+
+            <img loading="lazy" class="accordion__image" src="<?php echo $image ?>" alt="<?php echo $alt; ?>"
+              title="<?php echo $alt; ?>">
+
+
           </section>
-        </section>
-      </article>
+          <?php $k++ ?>
+        </div>
+
+        <?php
+        endwhile; ?>
+        <?php endif;
+            ?>
+
+      </div>
     </section>
   </section>
+
+
+  <section id="accordion-mobile" class="">
+    <section class="max-width">
+
+      <?php $k=0;
+        if( have_rows('accordion_items') ): 
+      while( have_rows('accordion_items') ) : the_row();
+      $headline = get_sub_field('headline');
+      $copy = get_sub_field('copy');
+      $img = get_sub_field('image');
+      $image = $img['url'];
+      $alt = $img['alt'];
+      $colors = [ 'whitesmoke-bg', 'blue-bg','green-bg', 'orange-bg', 'taupe-bg','black-bg' ];
+    ?>
+
+
+      <div
+        class="accordion-mobile__heading item <?php if(get_row_index() === 1) echo 'active' ?> <?php echo $colors[$k] ?>">
+        <div class="title"
+          style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'black-bg') echo 'color: #ffffff'?>">
+          <?php echo $headline ?></h1>
+        </div>
+        <div class="accordion-mobile__body content">
+
+          <img loading="lazy" class="accordion-mobile__image" src="<?php echo $image ?>" alt="<?php echo $alt; ?>"
+            title="<?php echo $alt; ?>">
+
+          <p class="accordion-mobile__copy"
+            style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'black-bg') echo 'color: #ffffff'?>">
+            <?php echo $copy; ?></p>
+
+        </div>
+        <?php $k++ ?>
+      </div>
+
+      <?php
+      endwhile; ?>
+      <?php endif;
+            ?>
+
+    </section>
+  </section>
+
+
 
   <section class="quote fullscreen">
     <section class="max-width max-padding">
       <h3 class="quote__headline"><?php echo get_field('intro') ?></h3>
-      <a href="<?php echo site_url('/team')?>"><button class="quote__button">Find an Expert</button></a>
+      <section class="quote__buttons">
+        <a href="<?php echo site_url('/submit-an-assignment')?>" target="_self"><button class="quote__button">Browse
+            Expertise</button></a>
+        <a href="<?php echo site_url('/team')?>"><button class="quote__button quote__button--white">Browse
+            Sectors</button></a>
+      </section>
     </section>
   </section>
 
@@ -130,126 +221,59 @@
     </section>
   </section>
 
-  <section id="accordion" class="fullscreen">
 
-    <div class="accordion accordion--horizontal ">
-
-      <?php $k=0;
-            if( have_rows('accordion_items') ): 
-          while( have_rows('accordion_items') ) : the_row();
-          $headline = get_sub_field('headline');
-          $copy = get_sub_field('copy');
-          $img = get_sub_field('image');
-          $image = $img['url'];
-          $alt = $img['alt'];
-          $colors = [ 'whitesmoke-bg', 'blue-bg','green-bg', 'orange-bg', 'taupe-bg','black-bg' ];
-        ?>
-      <div class="accordion__item <?php if(get_row_index() === 1) echo 'active' ?> <?php    echo $colors[$k] ?>">
-        <h1 class="accordion__heading"
-          style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'black-bg') echo 'color: #ffffff'?>">
-          <?php echo $headline ?></h1>
-        <section class="accordion__body active">
-          <!-- <h3 class="accordion__headline"
-              style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'black-bg') echo 'color: #ffffff'?>">
-              <?php echo $headline ?></h3> -->
-          <p class="accordion__copy"
-            style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'black-bg') echo 'color: #ffffff'?>">
-            <?php echo $copy; ?>
-          </p>
-
-
-
-          <img loading="lazy" class="accordion__image" src="<?php echo $image ?>" alt="<?php echo $alt; ?>"
-            title="<?php echo $alt; ?>">
-
-
-        </section>
-        <?php $k++ ?>
-      </div>
-
-      <?php
-        endwhile; ?>
-      <?php endif;
-            ?>
-
-    </div>
-  </section>
-
-
-  <section id="accordion-mobile" class="">
-    <section class="max-width">
-
-      <?php $k=0;
-        if( have_rows('accordion_items') ): 
-      while( have_rows('accordion_items') ) : the_row();
-      $headline = get_sub_field('headline');
-      $copy = get_sub_field('copy');
-      $img = get_sub_field('image');
-      $image = $img['url'];
-      $alt = $img['alt'];
-      $colors = [ 'whitesmoke-bg', 'blue-bg','green-bg', 'orange-bg', 'taupe-bg','black-bg' ];
-    ?>
-
-
-      <div
-        class="accordion-mobile__heading item <?php if(get_row_index() === 1) echo 'active' ?> <?php echo $colors[$k] ?>">
-        <div class="title"
-          style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'black-bg') echo 'color: #ffffff'?>">
-          <?php echo $headline ?></h1>
-        </div>
-        <div class="accordion-mobile__body content">
-
-          <img loading="lazy" class="accordion-mobile__image" src="<?php echo $image ?>" alt="<?php echo $alt; ?>"
-            title="<?php echo $alt; ?>">
-
-          <p class="accordion-mobile__copy"
-            style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'black-bg') echo 'color: #ffffff'?>">
-            <?php echo $copy; ?></p>
-
-        </div>
-        <?php $k++ ?>
-      </div>
-
-      <?php
-      endwhile; ?>
-      <?php endif;
-            ?>
-
-    </section>
-  </section>
 
 
 
 
 
   <section class="testimonials fullscreen">
-    <section class="max-width max-padding">
-      <h2 class="testimonials__headline">Testimonials</h2>
-      <section id="slider1" class="splide splide-testimonials" aria-labelledby="carousel-heading">
-        <div class="splide__track">
-          <ul class="splide__list">
-            <?php 
+    <section class="testimonials__wrapper">
+      <section class="testimonials__section max-width">
+        <h2 class="testimonials__headline">Words from our Clients</h2>
+        <section id="slider1" class="splide splide-testimonials" aria-labelledby="carousel-heading">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <?php 
               if( have_rows('testimonials') ): 
               while( have_rows('testimonials') ) : the_row();
               $quote = get_sub_field('quote');
               $client = get_sub_field('client');
               ?>
-            <li class="splide__slide">
-              <section class="testimonials__card">
-                <section class="testimonials__card__wrapper">
-                  <h3 class="testimonials__quote">&ldquo;<?php echo $quote ?>&rdquo;</h3>
+              <li class="splide__slide">
+                <section class="testimonials__card">
+                  <p class="testimonials__quote">&ldquo;<?php echo $quote ?>&rdquo;</p>
                 </section>
+              </li>
+              <?php
+          endwhile; ?>
+              <?php endif;
+            ?>
+            </ul>
+          </div>
+        </section>
+      </section>
+      <section class="testimonials__contact__section taupe-bg">
+        <section class="testimonials__contact__block">
+          <section class="email">
+            <section class="">
+              <h3 class="email__headline"><?php echo get_field('title', get_option( 'page_on_front' )) ?></h3>
+              <p class="email__copy"><?php echo get_field('subheading', get_option( 'page_on_front' )) ?></p>
+              <section class="email__form">
+
+
+                <?php echo get_field('form_code', get_option( 'page_on_front' )) ;?>
               </section>
 
-            </li>
-            <?php
-          endwhile; ?>
-            <?php endif;
-            ?>
-          </ul>
-        </div>
+            </section>
+          </section>
+        </section>
       </section>
+
+
+
     </section>
+
 
   </section>
   <section class="insights fullscreen">
@@ -284,7 +308,6 @@
   </section>
 
 
-  <?php include get_template_directory() . '/modules/email.php'; ?>
 
 
 </main>

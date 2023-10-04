@@ -82,15 +82,15 @@
     position: relative;
 
     .plus {
-      display: none;
-      @include bp(tablet) {
-        display: block;
-        position: absolute;
-        right: 4px;
-        width: 16px;
-        top: 20px;
-        left: auto;
-      }
+      display: block;
+      // @include bp(tablet) {
+      //   display: block;
+      //   position: absolute;
+      //   right: 4px;
+      //   width: 16px;
+      //   top: 20px;
+      //   left: auto;
+      // }
     }
   }
 
@@ -101,15 +101,15 @@
     will-change: max-height;
     transition: all 0.25s ease-out;
     color: $black;
-    opacity: 1;
+    opacity: 0;
     font-size: 0.9rem;
     line-height: 22px;
     font-family: 'Retina Light', sans-serif;
 
-    @include bp(tablet) {
-      max-height: 0;
-      opacity: 0;
-    }
+    // @include bp(tablet) {
+    //   max-height: 0;
+    //   opacity: 0;
+    // }
   }
 
   &__active {

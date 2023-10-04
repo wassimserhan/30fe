@@ -154,6 +154,8 @@ if (slider5) {
 
 
 // modules
+import './modules/navBanner';
+import './modules/homeScroll';
 import './modules/expertiseListHover';
 import './modules/ajaxLoadMore';
 import './modules/changeBackground';

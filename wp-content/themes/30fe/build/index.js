@@ -3781,30 +3781,34 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _splidejs_splide_css_sea_green__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @splidejs/splide/css/sea-green */ "./node_modules/@splidejs/splide/dist/css/themes/splide-sea-green.min.css");
 /* harmony import */ var _splidejs_splide_css_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @splidejs/splide/css/core */ "./node_modules/@splidejs/splide/dist/css/splide-core.min.css");
 /* harmony import */ var _splidejs_splide__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @splidejs/splide */ "./node_modules/@splidejs/splide/dist/js/splide.esm.js");
-/* harmony import */ var _modules_expertiseListHover__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/expertiseListHover */ "./src/modules/expertiseListHover.js");
-/* harmony import */ var _modules_expertiseListHover__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_modules_expertiseListHover__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _modules_ajaxLoadMore__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/ajaxLoadMore */ "./src/modules/ajaxLoadMore.js");
-/* harmony import */ var _modules_changeBackground__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/changeBackground */ "./src/modules/changeBackground.js");
-/* harmony import */ var _modules_changeBackground__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_modules_changeBackground__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _modules_expertise__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/expertise */ "./src/modules/expertise.js");
-/* harmony import */ var _modules_expertise__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_modules_expertise__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _modules_contact__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/contact */ "./src/modules/contact.js");
-/* harmony import */ var _modules_contact__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_modules_contact__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _modules_teamSearch__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/teamSearch */ "./src/modules/teamSearch.js");
-/* harmony import */ var _modules_teamSearch__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_modules_teamSearch__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _modules_teamImages__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/teamImages */ "./src/modules/teamImages.js");
-/* harmony import */ var _modules_teamImages__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_modules_teamImages__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var _modules_blogSearch__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modules/blogSearch */ "./src/modules/blogSearch.js");
-/* harmony import */ var _modules_homeStatsMobile__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./modules/homeStatsMobile */ "./src/modules/homeStatsMobile.js");
-/* harmony import */ var _modules_homeStatsMobile__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_modules_homeStatsMobile__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var _modules_homeStats__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./modules/homeStats */ "./src/modules/homeStats.js");
-/* harmony import */ var _modules_homeStats__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_modules_homeStats__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./modules/accordion */ "./src/modules/accordion.js");
-/* harmony import */ var _modules_navColors__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./modules/navColors */ "./src/modules/navColors.js");
-/* harmony import */ var _modules_navColors__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_modules_navColors__WEBPACK_IMPORTED_MODULE_17__);
-/* harmony import */ var _modules_navbar__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./modules/navbar */ "./src/modules/navbar.js");
-/* harmony import */ var _modules_navbar__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(_modules_navbar__WEBPACK_IMPORTED_MODULE_18__);
-/* harmony import */ var _modules_search__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./modules/search */ "./src/modules/search.js");
+/* harmony import */ var _modules_navBanner__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/navBanner */ "./src/modules/navBanner.js");
+/* harmony import */ var _modules_navBanner__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_modules_navBanner__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _modules_homeScroll__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/homeScroll */ "./src/modules/homeScroll.js");
+/* harmony import */ var _modules_homeScroll__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_modules_homeScroll__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _modules_expertiseListHover__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/expertiseListHover */ "./src/modules/expertiseListHover.js");
+/* harmony import */ var _modules_expertiseListHover__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_modules_expertiseListHover__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _modules_ajaxLoadMore__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/ajaxLoadMore */ "./src/modules/ajaxLoadMore.js");
+/* harmony import */ var _modules_changeBackground__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/changeBackground */ "./src/modules/changeBackground.js");
+/* harmony import */ var _modules_changeBackground__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_modules_changeBackground__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _modules_expertise__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/expertise */ "./src/modules/expertise.js");
+/* harmony import */ var _modules_expertise__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_modules_expertise__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _modules_contact__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/contact */ "./src/modules/contact.js");
+/* harmony import */ var _modules_contact__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_modules_contact__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _modules_teamSearch__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modules/teamSearch */ "./src/modules/teamSearch.js");
+/* harmony import */ var _modules_teamSearch__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_modules_teamSearch__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var _modules_teamImages__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./modules/teamImages */ "./src/modules/teamImages.js");
+/* harmony import */ var _modules_teamImages__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_modules_teamImages__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var _modules_blogSearch__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./modules/blogSearch */ "./src/modules/blogSearch.js");
+/* harmony import */ var _modules_homeStatsMobile__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./modules/homeStatsMobile */ "./src/modules/homeStatsMobile.js");
+/* harmony import */ var _modules_homeStatsMobile__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_modules_homeStatsMobile__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var _modules_homeStats__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./modules/homeStats */ "./src/modules/homeStats.js");
+/* harmony import */ var _modules_homeStats__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_modules_homeStats__WEBPACK_IMPORTED_MODULE_17__);
+/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./modules/accordion */ "./src/modules/accordion.js");
+/* harmony import */ var _modules_navColors__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./modules/navColors */ "./src/modules/navColors.js");
+/* harmony import */ var _modules_navColors__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(_modules_navColors__WEBPACK_IMPORTED_MODULE_19__);
+/* harmony import */ var _modules_navbar__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./modules/navbar */ "./src/modules/navbar.js");
+/* harmony import */ var _modules_navbar__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(_modules_navbar__WEBPACK_IMPORTED_MODULE_20__);
+/* harmony import */ var _modules_search__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./modules/search */ "./src/modules/search.js");
 
 
 //splide modules
@@ -3944,9 +3948,11 @@ if (slider5) {
 
 
 
+
+
 // classes
 
-const magicalSearch = new _modules_search__WEBPACK_IMPORTED_MODULE_19__["default"]();
+const magicalSearch = new _modules_search__WEBPACK_IMPORTED_MODULE_21__["default"]();
 
 /***/ }),
 
@@ -4122,17 +4128,22 @@ function categoryFilter() {
   \*****************************************/
 /***/ (() => {
 
-var colors = ['#ff6f48', '#0175df', '#08cb80'];
-const homeHero = document.getElementById("home-hero");
-const homeNav = document.querySelector("nav");
-if (homeHero) {
-  var changeBackground = function () {
-    const color = colors[Math.floor(Math.random() * colors.length)];
-    homeHero.style.background = color;
-    homeNav.style.background = color;
-  };
-  changeBackground();
-}
+// var colors = ['#ff6f48', '#0175df', '#08cb80'];
+
+// const homeHero = document.getElementById("home-hero");
+// const homeNav = document.querySelector("nav");
+
+// if (homeHero) {
+
+//   var changeBackground = function () {
+
+//     const color = colors[Math.floor(Math.random() * colors.length)];
+//     homeHero.style.background = color;
+//     homeNav.style.background = color;
+//   };
+
+//   changeBackground();
+// }
 
 /***/ }),
 
@@ -4260,6 +4271,205 @@ expertiseItemsArray.forEach(item => {
 
 /***/ }),
 
+/***/ "./src/modules/homeScroll.js":
+/*!***********************************!*\
+  !*** ./src/modules/homeScroll.js ***!
+  \***********************************/
+/***/ (() => {
+
+// init = function () {
+
+//   const bannerText = document.getElementById('banner-text');
+
+//   $logoBlack = 'invert(0%)'
+
+//   if (bannerText) {
+
+//     gsap.set("#banner-text", { color: "#f2f1ed", fontSize: 350 })
+//     gsap.set("#home__hero", { backgroundColor: "#1d1c1d" })
+//     gsap.set("#nav", { backgroundColor: "#1d1c1d" })
+
+//     gsap.registerPlugin(ScrollTrigger)
+
+//     let tl = gsap.timeline({
+//       scrollTrigger: {
+//         trigger: "#banner-text",
+//         markers: true,
+//         start: "top 40%"
+//       }
+//     })
+
+//       .to("#banner-text", { duration: 3, fontSize: 70, color: "#1d1c1d", immediateRender: false })
+//       .to("#home__hero", { backgroundColor: "#f2f1ed", immediateRender: false }, "<")
+//       .to("#nav", { backgroundColor: "#f2f1ed", immediateRender: false }, "<")
+//       .to(".nav__items", { color: "#1d1c1d", immediateRender: false }, "<")
+//       .to(".nav__logo__black", { filter: $logoBlack, immediateRender: false })
+
+//     // tl.to('#banner-text', { duration: 1, width: "100%", ease: "power2.out" })
+//     //   .to('#stats-1', { x: 380, duration: 1, ease: "power2.out" }, "-=.6")
+//     //   .to('#stats-2', { x: 300, duration: 1, ease: "power2.out" }, "-=.6")
+//     //   .to('#stats-3', { x: 320, duration: 1, ease: "power2.out" }, "-=.6")
+//     //   .to('#stats-4', { x: 200, duration: 1, ease: "power2.out" }, "-=.6")
+//     //   .to('#label-1', { opacity: 1, duration: .5, ease: "ease" }, "<")
+//     //   .to('#label-2', { opacity: 1, duration: .5, ease: "ease" }, "<")
+//     //   .to('#label-3', { opacity: 1, duration: .5, ease: "ease" }, "<")
+//     //   .to('#label-4', { opacity: 1, duration: .5, ease: "ease" }, "<");
+
+//   }
+
+// }
+
+// window.onload = init();
+
+//New
+
+// Get a reference to the HTML element whose text size you want to change
+// const scrollText = document.getElementById("banner-text");
+
+// const minimumFontSize = 60;
+// const maxLetterSpacing = 0;
+
+// if (scrollText) {
+
+//   // Function to update the text size based on the scroll position
+//   function updateTextSizeOnScroll() {
+
+//     // Calculate the scroll position as a percentage of the page height
+//     const scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 10000;
+
+//     // Calculate the new font size based on the scroll percentage
+//     // You can adjust the formula to control how text size changes with scrolling
+//     const newSize = 300 - (scrollPercentage * 2); // Example: Increase font size as the user scrolls
+
+//     const newSpacing = -.7 + (scrollPercentage);
+
+//     const fontSize = Math.max(newSize, minimumFontSize);
+
+//     const newLetterSpacing = Math.min(newSpacing, maxLetterSpacing);
+
+//     // // Letter Spacing
+//     // const maxLetterSpacing = 0; // Maximum letter spacing
+//     // const minLetterSpacing = -9; // Minimum letter spacing
+
+//     // Calculate the new letter spacing value based on the scroll position
+//     // const newLetterSpacing = Math.max(
+//     //   maxLetterSpacing,
+//     //   minLetterSpacing // You can adjust the divisor to control the sensitivity
+//     // );
+
+//     // Calculate the new color based on the scroll percentage
+//     const r = Math.round(242 - (scrollPercentage * (242 - 29) / 100));
+//     const g = Math.round(241 - (scrollPercentage * (241 - 28) / 100));
+//     const b = Math.round(237 - (scrollPercentage * (237 - 29) / 100));
+
+//     // Create the new color in the format #RRGGBB
+//     const newColor = `#${r.toString(16).padStart(2, '0')}${g.toString(16).padStart(2, '0')}${b.toString(16).padStart(2, '0')}`;
+
+//     // Update the font size of the element
+//     scrollText.style.fontSize = `${fontSize}px`;
+//     scrollText.style.letterSpacing = newLetterSpacing + 'px';
+//     scrollText.style.color = newColor;
+
+//   }
+
+//   // Add a scroll event listener to call the updateTextSizeOnScroll function
+//   window.addEventListener("scroll", updateTextSizeOnScroll);
+
+//   // Call the function initially to set the initial text size
+//   updateTextSizeOnScroll();
+// }
+
+// // Get a reference to the HTML element whose text size you want to change
+// const heroBG = document.getElementById("home__hero");
+const scrollText = document.getElementById("banner-text");
+const scrollableNav = document.getElementById("nav");
+const minimumFontSize = 60;
+const maxLetterSpacing = 0;
+if (scrollText) {
+  // Function to update the text size based on the scroll position
+  function updateBackgroundOnScroll() {
+    // Get the current scroll position
+    const scrollPosition = window.scrollY;
+
+    // Define the scroll threshold at which the background color change should start
+    const scrollThreshold = 50;
+
+    // Calculate the new font size based on the scroll percentage
+    // You can adjust the formula to control how text size changes with scrolling
+    const newSize = 300 - scrollPosition * 4; // Example: Increase font size as the user scrolls
+
+    const newSpacing = -.7 + scrollPosition;
+    const fontSize = Math.max(newSize, minimumFontSize);
+    const newLetterSpacing = Math.min(newSpacing, maxLetterSpacing);
+
+    // Define the initial and final background colors
+    const initialColor = '#1d1c1d';
+    const finalColor = '#f2f1ed';
+    const newBackgroundColor = scrollPosition > scrollThreshold ? finalColor : initialColor;
+    const newColor = scrollPosition > scrollThreshold ? initialColor : finalColor;
+
+    // Update the font size of the element
+
+    // heroBG.style.backgroundColor = newBackgroundColor;
+
+    scrollText.style.fontSize = `${fontSize}px`;
+    scrollText.style.letterSpacing = newLetterSpacing + 'px';
+    scrollText.style.color = newColor;
+    // scrollableNav.style.backgroundColor = newBackgroundColor;
+  }
+
+  // Add a scroll event listener to call the updateTextSizeOnScroll function
+  window.addEventListener("scroll", updateBackgroundOnScroll);
+
+  // Call the function initially to set the initial text size
+  updateBackgroundOnScroll();
+}
+const scrollableContent = document.querySelector('#home__hero');
+const scrollableNavt = document.querySelector('#nav');
+window.addEventListener('scroll', () => {
+  // Get the current scroll position
+  const scrollPosition = window.scrollY;
+
+  // Calculate the scroll percentage based on the scroll position and the page height
+  const pageHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const scrollPercentage = scrollPosition / pageHeight * 10000;
+
+  // Interpolate the background color between the initial and final colors
+  const initialColor = [29, 28, 29]; // RGB values of #1d1c1d
+  const finalColor = [242, 241, 237]; // RGB values of #f2f1ed
+  const interpolatedColor = initialColor.map((channel, index) => {
+    const range = finalColor[index] - channel;
+    return Math.round(channel + range * scrollPercentage / 100);
+  });
+
+  // Apply the new background color
+  scrollableContent.style.backgroundColor = `rgb(${interpolatedColor.join(', ')})`;
+
+  // Function to check if an element is in the viewport
+
+  // Get the element to check
+  const elementToCheck = document.querySelector('#accordion');
+  let hasPassed = false;
+
+  // Listen for the scroll event
+
+  if (!hasPassed && !isTopOfElementAboveViewport(elementToCheck)) {
+    scrollableNavt.style.backgroundColor = `rgb(${interpolatedColor.join(', ')})`;
+    ;
+    console.log('Scrolled past the element.');
+    // Perform any action you want when you scroll past the element
+    hasPassed = true; // Set a flag to prevent further triggering
+  }
+
+  // Function to check if the top of an element is above the viewport
+  function isTopOfElementAboveViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return rect.top < 0;
+  }
+});
+
+/***/ }),
+
 /***/ "./src/modules/homeStats.js":
 /*!**********************************!*\
   !*** ./src/modules/homeStats.js ***!
@@ -4359,6 +4569,62 @@ window.onload = init();
 
 /***/ }),
 
+/***/ "./src/modules/navBanner.js":
+/*!**********************************!*\
+  !*** ./src/modules/navBanner.js ***!
+  \**********************************/
+/***/ (() => {
+
+
+// const bannerText = document.querySelector("#banner-text");
+// const homeHero = document.querySelector("#home__hero");
+
+// if (bannerText) {
+
+//   const $whitesmoke = '#f2f1ed';
+//   $black = '#1d1c1d';
+//   $taupe = '#cbbea5';
+//   $orange = '#ff6f48';
+//   $blue = '#0175df';
+//   $green = '#08cb80';
+//   $white = '#ffffff';
+//   $logoBlack = 'invert(0%)'
+//   $logoWhite = 'invert(100%)'
+
+//   let navData = document.querySelector('.nav');
+//   let pageTitle = navData.getAttribute('data-page');
+//   let sectionColors;
+//   let logoColor;
+//   let borderColor;
+//   let navItems;
+
+//   gsap.registerPlugin(ScrollTrigger)
+
+//   //apply sectionColors to each .fullscreen element
+//   gsap.set(".fullscreen", { backgroundColor: gsap.utils.wrap(sectionColors) })
+//   // gsap.set(".nav", { backgroundColor: gsap.utils.wrap(sectionColors) })
+
+//   // const sections = gsap.utils.toArray(".fullscreen")
+
+//   // sections.forEach(function (section, index) {
+
+//   let tl = gsap.timeline({
+//     scrollTrigger: {
+//       trigger: homeHero,
+//       start: "top",
+//       end: "bottom 400px",
+//       markers: true,
+//       toggleActions: "restart none none reverse"
+//     }
+//   })
+//     .to(".nav", .8, { backgroundColor: "white", immediateRender: false })
+
+// }
+
+// // }
+
+/***/ }),
+
 /***/ "./src/modules/navColors.js":
 /*!**********************************!*\
   !*** ./src/modules/navColors.js ***!
@@ -4381,22 +4647,40 @@ if (fullscreen) {
   let sectionColors;
   let logoColor;
   let borderColor;
+  let navItems;
   switch (pageTitle) {
     case 'front-page.php':
-      sectionColors = [$whitesmoke, $taupe, $whitesmoke, $whitesmoke, $taupe, $whitesmoke, $taupe];
-      navColors = [$whitesmoke, $taupe, $whitesmoke, $whitesmoke, $taupe, $whitesmoke, $taupe];
-      logoColor = [$logoBlack];
+      gsap.set(".nav__logo__black", {
+        filter: $logoWhite
+      });
+      gsap.set(".nav__items", {
+        color: $whitesmoke
+      });
+      gsap.set(".nav", {
+        backgroundColor: $black
+      });
+      sectionColors = [$black, $whitesmoke, $whitesmoke, $whitesmoke, $whitesmoke];
+      navColors = [$black, $whitesmoke, $whitesmoke, $whitesmoke, $whitesmoke];
+      navItems = [$whitesmoke, $black];
+      logoColor = [$logoWhite, $logoBlack];
       borderColor = [$black];
       break;
     case 'about.php':
       gsap.set(".nav__logo__black", {
         filter: $logoWhite
       });
+      gsap.set(".nav__items", {
+        color: $white
+      });
+      gsap.set(".nav", {
+        backgroundColor: $black
+      });
       gsap.set(".nav__menu-search", {
         borderColor: $whitesmoke
       });
       sectionColors = [$black, $whitesmoke, $whitesmoke, $black, $whitesmoke, $taupe];
       navColors = [$black, $whitesmoke, $whitesmoke, $black, $whitesmoke, $taupe];
+      navItems = [$whitesmoke, $black, $black, $whitesmoke, $black, $black];
       logoColor = [$logoWhite, $logoBlack, $logoBlack, $logoWhite, $logoBlack, $logoBlack, $logoBlack];
       borderColor = [$whitesmoke, $black, $black, $whitesmoke, $black, $black];
       break;
@@ -4404,8 +4688,12 @@ if (fullscreen) {
       gsap.set(".nav", {
         backgroundColor: $whitesmoke
       });
+      gsap.set(".nav__items", {
+        color: $black
+      });
       sectionColors = [$whitesmoke, $taupe];
       navColors = [$whitesmoke, $taupe];
+      navItems = [$black];
       logoColor = [$logoBlack];
       borderColor = [$black];
       break;
@@ -4563,16 +4851,21 @@ if (fullscreen) {
   const sections = gsap.utils.toArray(".fullscreen");
   sections.forEach(function (section, index) {
     let tl = gsap.timeline({
+      // duration: 1,
       scrollTrigger: {
         trigger: section,
-        start: "top 78px",
-        end: "bottom 78px",
+        start: "top 130px",
+        end: "bottom 130px",
+        markers: false,
         toggleActions: "restart none none reverse"
       }
     }).to(".nav", {
       backgroundColor: navColors[index],
       immediateRender: false
-    }).to(".nav__logo__black", {
+    }).to(".nav__items", {
+      color: navItems[index],
+      immediateRender: false
+    }, "<").to(".nav__logo__black", {
       filter: logoColor[index],
       immediateRender: false
     }, "<").to(".nav__menu-search", {
@@ -4593,7 +4886,8 @@ if (fullscreen) {
 const hamburger = document.querySelector('.nav__menu');
 const body = document.getElementsByTagName('body')[0];
 const sideNav = document.querySelector('.nav__dropdown');
-const addTint = document.querySelector('.body__hider');
+// const addTint = document.querySelector('.body__hider');
+
 hamburger.addEventListener('click', menu);
 
 // document.addEventListener('click', e => {
@@ -4648,6 +4942,23 @@ accordionsAbout.forEach(accordion => {
   };
 });
 
+//Show Nav on Scroll
+
+// Enable hidden nav bar
+{
+  const nav = document.querySelector(".nav");
+  let lastScrollY = window.scrollY;
+  window.addEventListener("scroll", () => {
+    console.log(window.scrollY);
+    if (lastScrollY < window.scrollY && lastScrollY > 1200) {
+      nav.classList.add("nav--hidden");
+    } else {
+      nav.classList.remove("nav--hidden");
+    }
+    lastScrollY = window.scrollY;
+  });
+}
+
 /***/ }),
 
 /***/ "./src/modules/search.js":
@@ -4672,7 +4983,9 @@ class Search {
     this.openButton = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".search-trigger");
     this.closeButton = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".search-overlay__close");
     this.searchOverlay = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".search-overlay");
+    this.searchDesktop = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".search-overlay--desktop");
     this.searchField = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#search-term");
+    this.searchFieldDesktop = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#search-term-desktop");
     this.events();
     this.isOverlayOpen = false;
     this.isSpinnerVisible = false;
@@ -4686,6 +4999,7 @@ class Search {
     this.closeButton.on('click', this.closeOverlay.bind(this));
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("keydown", this.keyPressDispatcher.bind(this));
     this.searchField.on("keyup", this.typingLogic.bind(this));
+    this.searchFieldDesktop.on("focus", this.openOverlay.bind(this));
   }
 
   //3. methods (functions)
@@ -4810,7 +5124,7 @@ class Search {
         <img class="search-overlay__icon" src="${siteData.root_url}/wp-content/themes/30fe/images/search-icon.svg" width="15" height="15"
         alt="search icon"> 
    
-        <input id="search-term" type="text" class="search-term" placeholder="What are you looking for today?"
+        <input id="search-term" type="text" class="search-term" placeholder="SEARCH FOR PEOPLE, EXPERTISE, SECTORS, INSIGHTS"
         autocomplete="off">
 
 <img class="search-overlay__close" src="${siteData.root_url}/wp-content/themes/30fe/images/cross.svg"

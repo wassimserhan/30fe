@@ -11,7 +11,9 @@ class Search {
     this.openButton = $(".search-trigger");
     this.closeButton = $(".search-overlay__close");
     this.searchOverlay = $(".search-overlay");
+    this.searchDesktop = $(".search-overlay--desktop");
     this.searchField = $("#search-term");
+    this.searchFieldDesktop = $("#search-term-desktop");
     this.events();
     this.isOverlayOpen = false;
     this.isSpinnerVisible = false;
@@ -26,6 +28,7 @@ class Search {
     this.closeButton.on('click', this.closeOverlay.bind(this));
     $(document).on("keydown", this.keyPressDispatcher.bind(this));
     this.searchField.on("keyup", this.typingLogic.bind(this));
+    this.searchFieldDesktop.on("focus", this.openOverlay.bind(this));
   }
 
 
@@ -136,8 +139,11 @@ class Search {
     if (e.keyCode == 27 && this.isOverlayOpen) {
       this.closeOverlay();
     }
-
   }
+
+
+
+
 
   openOverlay() {
     this.searchOverlay.addClass("search-overlay--active");
@@ -162,7 +168,7 @@ class Search {
         <img class="search-overlay__icon" src="${siteData.root_url}/wp-content/themes/30fe/images/search-icon.svg" width="15" height="15"
         alt="search icon"> 
    
-        <input id="search-term" type="text" class="search-term" placeholder="What are you looking for today?"
+        <input id="search-term" type="text" class="search-term" placeholder="SEARCH FOR PEOPLE, EXPERTISE, SECTORS, INSIGHTS"
         autocomplete="off">
 
 <img class="search-overlay__close" src="${siteData.root_url}/wp-content/themes/30fe/images/cross.svg"

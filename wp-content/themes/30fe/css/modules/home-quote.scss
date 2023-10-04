@@ -7,12 +7,6 @@
   flex-direction: column;
 
   &__headline {
-    // font-size: 48px;
-    // font-style: normal;
-    // font-weight: 700;
-    // line-height: 100%;
-    // letter-spacing: -2.4px;
-    // color: $black;
     text-align: center;
     @include bp(phone) {
       font-size: 32px;
@@ -22,8 +16,28 @@
     }
   }
 
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    // max-width: 340px;
+    width: 100%;
+
+    @include bp(tablet) {
+      flex-direction: column;
+    }
+  }
+
   &__button {
     text-align: center;
-    margin: 64px auto 0;
+    margin: 24px 24px 0 0;
+    @include bp(phone) {
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+  &__button--white {
+    background-color: transparent;
+    color: $black;
   }
 }
