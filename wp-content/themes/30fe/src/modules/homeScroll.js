@@ -250,7 +250,7 @@ window.addEventListener('scroll', () => {
     scrollableNavt.style.backgroundColor = `rgb(${interpolatedColor.join(', ')})`;
     scrollableButton.style.backgroundColor = `rgb(${interpolatedColorText.join(', ')})`
     scrollableButton.style.color = `rgb(${interpolatedColor.join(', ')})`;
-    scrollableLogo.style.filter = "invert(50%)";
+    scrollableLogo.style.filter = "invert(100%)";
 
 
     NavItems.forEach(item => {
