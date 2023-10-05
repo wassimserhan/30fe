@@ -1,8 +1,12 @@
 .nav {
-  // background-color: $whitesmoke;
+  background-color: $black;
   min-height: 20vh;
   transition: transform 0.2s;
   transition: background-color 0.4s; /* Add a smooth transition for background color changes */
+
+  @include bp(phone) {
+    min-height: 8vh;
+  }
 
   &__menu-search {
     display: flex;
@@ -12,11 +16,24 @@
   &__menu {
     background-color: $white;
     color: $black;
-    display: block;
+    display: none;
     padding: 8px 16px;
     border: none;
+    @include bp(phone) {
+      display: block;
+    }
     &:hover {
       background-color: $white;
+    }
+  }
+
+  &__button {
+    background-color: $white;
+    color: $black;
+    padding: 1rem;
+    border: none;
+    @include bp(phone) {
+      display: none;
     }
   }
 
@@ -74,6 +91,12 @@
     @include bp(tablet) {
       display: none;
     }
+
+    &__container {
+      @include bp(phone) {
+        display: none;
+      }
+    }
   }
 
   &__dropdown {
@@ -108,7 +131,7 @@
   }
 
   &__items {
-    color: $white;
+    color: $black;
     font-family: 'Inter', sans-serif;
     font-size: 13px;
     font-style: normal;
@@ -126,10 +149,21 @@
       color: $black;
       text-align: left;
     }
+  }
 
-    &--main {
-      width: max-content;
-    }
+  &__items--mobile {
+    color: $black;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    text-transform: uppercase;
+    position: relative;
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 140%; /* 28px */
+    letter-spacing: -0.6px;
+    color: $black;
+    text-align: left;
   }
 
   &__logo {

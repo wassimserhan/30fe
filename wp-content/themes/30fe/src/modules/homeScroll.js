@@ -130,6 +130,7 @@
 const scrollText = document.getElementById("banner-text");
 const scrollableNav = document.getElementById("nav");
 
+
 const minimumFontSize = 60;
 const maxLetterSpacing = 0;
 
@@ -181,6 +182,8 @@ if (scrollText) {
     // scrollableNav.style.backgroundColor = newBackgroundColor;
 
 
+
+
   }
 
   // Add a scroll event listener to call the updateTextSizeOnScroll function
@@ -193,6 +196,10 @@ if (scrollText) {
 
 const scrollableContent = document.querySelector('#home__hero');
 const scrollableNavt = document.querySelector('#nav');
+const scrollableNavItems = document.querySelectorAll(".nav__items");
+const NavItems = [...scrollableNavItems];
+const scrollableButton = document.querySelector('.nav__button');
+const scrollableLogo = document.querySelector('.nav__logo');
 
 window.addEventListener('scroll', () => {
 
@@ -215,6 +222,17 @@ window.addEventListener('scroll', () => {
     return Math.round(channel + (range * scrollPercentage) / 100);
   });
 
+
+
+
+  // Interpolate the text color between the initial and final colors
+  const initialColorText = [242, 241, 237]; // RGB values of #1d1c1d
+  const finalColorText = [29, 28, 29]; // RGB values of #f2f1ed
+  const interpolatedColorText = initialColorText.map((channel, index) => {
+    const rangeText = finalColorText[index] - channel;
+    return Math.round(channel + (rangeText * scrollPercentage) / 100);
+  });
+
   // Apply the new background color
   scrollableContent.style.backgroundColor = `rgb(${interpolatedColor.join(', ')})`;
 
@@ -229,7 +247,15 @@ window.addEventListener('scroll', () => {
   // Listen for the scroll event
 
   if (!hasPassed && !isTopOfElementAboveViewport(elementToCheck)) {
-    scrollableNavt.style.backgroundColor = `rgb(${interpolatedColor.join(', ')})`;;
+    scrollableNavt.style.backgroundColor = `rgb(${interpolatedColor.join(', ')})`;
+    scrollableButton.style.backgroundColor = `rgb(${interpolatedColorText.join(', ')})`
+    scrollableButton.style.color = `rgb(${interpolatedColor.join(', ')})`;
+    scrollableLogo.style.filter = "invert(50%)";
+
+
+    NavItems.forEach(item => {
+      item.style.color = `rgb(${interpolatedColorText.join(', ')})`
+    })
 
     console.log('Scrolled past the element.');
     // Perform any action you want when you scroll past the element
@@ -239,13 +265,9 @@ window.addEventListener('scroll', () => {
   // Function to check if the top of an element is above the viewport
   function isTopOfElementAboveViewport(element) {
     const rect = element.getBoundingClientRect();
-    return rect.top < 0;
+    console.log(rect)
+    return rect.top < 111;
   }
-
-
-
-
-
 
 });
 

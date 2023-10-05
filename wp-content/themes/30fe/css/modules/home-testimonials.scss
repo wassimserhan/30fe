@@ -21,6 +21,7 @@
     width: 50%;
     padding-left: 8rem;
     @include bp(phone) {
+      padding: 8rem 2rem;
       width: 100%;
     }
   }

@@ -78,7 +78,7 @@ accordionsAbout.forEach(accordion => {
 
 
   window.addEventListener("scroll", () => {
-    console.log(window.scrollY)
+
     if (lastScrollY < window.scrollY && lastScrollY > 1200) {
       nav.classList.add("nav--hidden");
     } else {

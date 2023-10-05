@@ -9,6 +9,10 @@
       font-size: 5rem;
       overflow: hidden;
       letter-spacing: -0.7rem;
+
+      // @include bp(phone) {
+      //   font-size: 13rem !important;
+      // }
     }
   }
 
@@ -20,6 +24,9 @@
 
     &__padding {
       padding: 12rem 0 0 8rem;
+      @include bp(phone) {
+        padding: 8rem 2rem;
+      }
     }
 
     &__buttons {
@@ -53,7 +60,8 @@
       flex-direction: row-reverse;
       gap: 3rem;
       padding: 1rem 8rem 8rem 0;
-      @include bp(tablet) {
+      @include bp(phone) {
+        padding: 2rem 0 0;
         display: block;
       }
     }
@@ -69,8 +77,9 @@
       letter-spacing: 0px;
       margin: 0;
       @include bp(phone) {
-        font-size: 3rem;
-        letter-spacing: -0.12rem;
+        font-size: 1.25rem;
+        line-height: 140%;
+        letter-spacing: -0.6px;
       }
     }
   }

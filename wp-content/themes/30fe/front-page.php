@@ -12,9 +12,10 @@
       <h1 id="banner-text" class="home__banner__headline"> Precision&nbsp;In <br>Investigation, <br>Clarity
         in <br>Solutions.
       </h1>
+
+
+
       <article class="home__hero__wrapper">
-
-
         <section class="home__hero__container">
           <h2 class="home__hero__copy">We are a team of investigators, engineers, scientists and problem solvers. We
             bring
@@ -25,8 +26,6 @@
           </h2>
           <img src="<?php echo get_template_directory_uri(); ?>/images/banner.png" alt="">
         </section>
-
-
 
         <section class="home__hero__buttons">
           <a href="<?php echo site_url('/submit-an-assignment')?>" target="_self"><button
