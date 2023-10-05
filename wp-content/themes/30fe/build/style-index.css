@@ -2922,7 +2922,7 @@ body.admin-bar .search-overlay--desktop {
   .about__hero__video {
     width: 215px;
     position: absolute;
-    top: 80px;
+    top: 140px;
     right: -10px;
   }
 }
@@ -2942,8 +2942,8 @@ body.admin-bar .search-overlay--desktop {
 }
 @media (max-width: 768px) {
   .about__hero__headline {
-    padding-bottom: 32px;
-    font-size: 3.75rem;
+    padding-bottom: 10px;
+    font-size: 4.4rem;
     line-height: 120%;
     letter-spacing: -0.12rem;
     z-index: 3;
@@ -2955,6 +2955,11 @@ body.admin-bar .search-overlay--desktop {
   max-width: 730px;
   width: 100%;
   position: relative;
+}
+@media (max-width: 768px) {
+  .about__hero__copy {
+    font-size: 2rem;
+  }
 }
 .about__intro__buttons {
   display: flex;

@@ -14,7 +14,7 @@ get_header();
     <section class="max-width max-padding">
 
       <section class="about__hero__wrapper">
-        <h1 class="about__hero__headline">We are 30</h1>
+        <h1 class="about__hero__headline">We are 30.</h1>
 
 
 

@@ -4281,7 +4281,7 @@ expertiseItemsArray.forEach(item => {
 // const heroBG = document.getElementById("home__hero");
 const scrollText = document.getElementById("banner-text");
 const scrollableNav = document.getElementById("nav");
-const minimumFontSize = 60;
+const minimumFontSize = 50;
 const maxLetterSpacing = 0;
 if (scrollText) {
   // Function to update the text size based on the scroll position
@@ -4335,20 +4335,22 @@ window.addEventListener('scroll', () => {
   console.log(scrollPosition);
 
   // Calculate the scroll percentage based on the scroll position and the page height
-  const pageHeight = document.documentElement.scrollHeight - window.innerHeight;
-  const scrollPercentage = scrollPosition / pageHeight * 10000;
+  const scrollTop = window.scrollY;
+  const windowHeight = window.innerHeight;
+  const documentHeight = scrollableContent.clientHeight;
+  const scrollPercentage = scrollTop / (documentHeight - windowHeight) * 1000;
 
   // Interpolate the background color between the initial and final colors
   const initialColor = [29, 28, 29]; // RGB values of #1d1c1d
   const finalColor = [242, 241, 237]; // RGB values of #f2f1ed
   const interpolatedColor = initialColor.map((channel, index) => {
     const range = finalColor[index] - channel;
-    return Math.round(channel + range * scrollPercentage / 100);
+    return Math.min(channel + range * scrollPercentage / 100, (242, 241, 237));
   });
 
   // Interpolate the text color between the initial and final colors
-  const initialColorText = [242, 241, 237]; // RGB values of #1d1c1d
-  const finalColorText = [29, 28, 29]; // RGB values of #f2f1ed
+  const initialColorText = [242, 241, 237];
+  const finalColorText = [29, 28, 29]; // 
   const interpolatedColorText = initialColorText.map((channel, index) => {
     const rangeText = finalColorText[index] - channel;
     return Math.round(channel + rangeText * scrollPercentage / 100);
@@ -4387,7 +4389,7 @@ window.addEventListener('scroll', () => {
   function isTopOfElementAboveViewport(element) {
     const rect = element.getBoundingClientRect();
     console.log(rect);
-    return rect.top < 111;
+    return rect.top < 200;
   }
 });
 
@@ -4872,7 +4874,7 @@ accordionsAbout.forEach(accordion => {
   const nav = document.querySelector(".nav");
   let lastScrollY = window.scrollY;
   window.addEventListener("scroll", () => {
-    if (lastScrollY < window.scrollY && lastScrollY > 1200) {
+    if (lastScrollY < window.scrollY && lastScrollY > 800) {
       nav.classList.add("nav--hidden");
     } else {
       nav.classList.remove("nav--hidden");
