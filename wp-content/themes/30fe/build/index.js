@@ -4360,14 +4360,13 @@ window.addEventListener('scroll', () => {
   // Apply Filer to SVG
 
   const filterScroll = 100 - Math.min(scrollPercentage, 100);
-  console.log(filterScroll);
 
   // Function to check if an element is in the viewport
 
   // Get the element to check
   const elementToCheck = document.querySelector('#accordion');
   let hasPassed = false;
-  scrollableLogo.style.filter = `invert(${filterScroll}%)`;
+
   // Listen for the scroll event
 
   if (!hasPassed && !isTopOfElementAboveViewport(elementToCheck)) {
@@ -4375,6 +4374,7 @@ window.addEventListener('scroll', () => {
     scrollableButton.style.backgroundColor = `rgb(${interpolatedColorText.join(', ')})`;
     scrollableButton.style.color = `rgb(${interpolatedColor.join(', ')})`;
     scrollableNav.style.display = "block";
+    scrollableLogo.style.filter = `invert(${filterScroll}%)`;
     NavItems.forEach(item => {
       item.style.color = `rgb(${interpolatedColorText.join(', ')})`;
     });
