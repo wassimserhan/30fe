@@ -8,12 +8,15 @@
   &__hero {
     &__wrapper {
       position: relative;
+      @include bp(phone) {
+        position: absolute;
+      }
     }
     &__video {
       width: 200px;
       position: absolute;
       top: 48%;
-      right: -3%;
+      right: 9%;
 
       // @include bp(laptop) {
       //   width: 215px;
@@ -25,12 +28,12 @@
       @include bp(tablet) {
         width: 215px;
         position: absolute;
-        top: -170px;
+        top: 80px;
         right: -10px;
       }
 
       @include bp(phone) {
-        right: 2px;
+        right: 25px;
       }
     }
 

@@ -4774,7 +4774,7 @@ if (fullscreen) {
         trigger: section,
         start: "top 130px",
         end: "bottom 130px",
-        markers: false,
+        // markers: false,
         toggleActions: "restart none none reverse"
       }
     }).to(".nav", {

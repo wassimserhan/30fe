@@ -2907,23 +2907,28 @@ body.admin-bar .search-overlay--desktop {
 .about__hero__wrapper {
   position: relative;
 }
+@media (max-width: 479px) {
+  .about__hero__wrapper {
+    position: absolute;
+  }
+}
 .about__hero__video {
   width: 200px;
   position: absolute;
   top: 48%;
-  right: -3%;
+  right: 9%;
 }
 @media (max-width: 768px) {
   .about__hero__video {
     width: 215px;
     position: absolute;
-    top: -170px;
+    top: 80px;
     right: -10px;
   }
 }
 @media (max-width: 479px) {
   .about__hero__video {
-    right: 2px;
+    right: 25px;
   }
 }
 .about__hero__headline {

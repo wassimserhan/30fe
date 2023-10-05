@@ -16,21 +16,23 @@ get_header();
       <section class="about__hero__wrapper">
         <h1 class="about__hero__headline">We are 30</h1>
 
-        <img class="about__hero__video" src="<?php echo get_template_directory_uri(); ?>/images/about.gif"
-          alt="About 30FE">
+
+
+        <h3 class="about__hero__copy">With over <span class="orange">60 experts</span> in <span class="green">14
+            practice
+            areas</span>, we offer
+          evidence-based solutions to
+          <span class="blue">clients worldwide</span>.
+        </h3>
 
 
       </section>
 
+      <img class="about__hero__video" src="<?php echo get_template_directory_uri(); ?>/images/about.gif"
+        alt="About 30FE">
 
 
 
-      <h3 class="about__hero__copy">With over <span class="orange">60 experts</span> in <span class="green">14
-          practice
-          areas</span>, we offer
-        evidence-based solutions to
-        <span class="blue">clients worldwide</span>.
-      </h3>
 
 
     </section>
