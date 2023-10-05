@@ -59,6 +59,7 @@ if (fullscreen) {
       gsap.set(".nav__menu-search", { borderColor: $whitesmoke })
       sectionColors = [$black, $whitesmoke, $taupe];
       navColors = [$black, $whitesmoke, $taupe];
+      navItems = [$whitesmoke, $black]
       logoColor = [$logoWhite, $logoBlack, $logoBlack];
       borderColor = [$whitesmoke, $black];
       break;
@@ -67,6 +68,7 @@ if (fullscreen) {
       gsap.set(".nav__menu-search", { borderColor: $whitesmoke })
       sectionColors = [$black, $black, $taupe, $whitesmoke];
       navColors = [$black, $black, $taupe, $whitesmoke];
+      navItems = [$whitesmoke, $whitesmoke, $black]
       logoColor = [$logoWhite, $logoWhite, $logoBlack];
       borderColor = [$whitesmoke, $whitesmoke, $black];
       break;
@@ -74,6 +76,7 @@ if (fullscreen) {
       gsap.set(".nav__logo__black", { filter: $logoWhite })
       sectionColors = [$black, $black, $taupe];
       navColors = [$black, $black, $taupe];
+      navItems = [$whitesmoke, $whitesmoke, $black]
       logoColor = [$logoWhite, $logoWhite, $logoBlack];
       borderColor = [$black];
       break;
@@ -81,6 +84,8 @@ if (fullscreen) {
       gsap.set(".nav__logo__black", { filter: $logoWhite })
       sectionColors = [$black, $orange, $blue, $green, $taupe, $black];
       navColors = [$black, $orange, $blue, $green, $taupe, $black];
+      navItems = [$whitesmoke, $black, $black, $black, $black, $whitesmoke]
+
       logoColor = [$logoWhite, $logoBlack, $logoBlack, $logoBlack, $logoBlack, $logoWhite];
       borderColor = [$black];
       break;
@@ -88,6 +93,7 @@ if (fullscreen) {
       gsap.set(".nav", { backgroundColor: $whitesmoke })
       sectionColors = [$whitesmoke];
       navColors = [$whitesmoke];
+      navItems = [$black];
       logoColor = [$logoBlack];
       borderColor = [$black];
       break;
@@ -95,6 +101,7 @@ if (fullscreen) {
       gsap.set(".nav", { backgroundColor: $whitesmoke })
       sectionColors = [$whitesmoke, $whitesmoke, $whitesmoke];
       navColors = [$whitesmoke, $whitesmoke, $whitesmoke];
+      navItems = [$black];
       logoColor = [$logoBlack];
       borderColor = [$black];
       break;
@@ -102,6 +109,7 @@ if (fullscreen) {
       gsap.set(".nav", { backgroundColor: $whitesmoke })
       sectionColors = [$whitesmoke, $whitesmoke, $taupe];
       navColors = [$whitesmoke, $whitesmoke, $taupe];
+      navItems = [$black];
       logoColor = [$logoBlack];
       borderColor = [$black];
       break;
@@ -109,6 +117,7 @@ if (fullscreen) {
       gsap.set(".nav", { backgroundColor: $whitesmoke })
       sectionColors = [$whitesmoke, $taupe];
       navColors = [$whitesmoke, $taupe];
+      navItems = [$black];
       logoColor = [$logoBlack];
       borderColor = [$black];
       break;
@@ -116,6 +125,8 @@ if (fullscreen) {
       gsap.set(".nav__logo__black", { filter: $logoWhite })
       sectionColors = [$black, $whitesmoke, $taupe];
       navColors = [$black, $whitesmoke, $taupe];
+      navItems = [$black];
+
       logoColor = [$logoWhite, $logoBlack, $logoBlack];
       borderColor = [$black];
       break;
@@ -123,6 +134,8 @@ if (fullscreen) {
       gsap.set(".nav", { backgroundColor: $whitesmoke })
       sectionColors = [$whitesmoke];
       navColors = [$whitesmoke];
+      navItems = [$black];
+
       logoColor = [$logoBlack];
       borderColor = [$black];
       break;
@@ -130,6 +143,8 @@ if (fullscreen) {
       gsap.set(".nav", { backgroundColor: $whitesmoke })
       sectionColors = [$whitesmoke];
       navColors = [$whitesmoke];
+      navItems = [$black];
+
       logoColor = [$logoBlack];
       borderColor = [$black];
       break;
@@ -137,6 +152,8 @@ if (fullscreen) {
       gsap.set(".nav", { backgroundColor: $whitesmoke })
       sectionColors = [$whitesmoke];
       navColors = [$whitesmoke];
+      navItems = [$black];
+
       logoColor = [$logoBlack];
       borderColor = [$black];
       break;
@@ -144,6 +161,8 @@ if (fullscreen) {
       gsap.set(".nav", { backgroundColor: $whitesmoke })
       sectionColors = [$whitesmoke];
       navColors = [$whitesmoke];
+      navItems = [$black];
+
       logoColor = [$logoBlack];
       borderColor = [$black];
       break;
@@ -151,6 +170,8 @@ if (fullscreen) {
       gsap.set(".nav", { backgroundColor: $whitesmoke })
       sectionColors = [$whitesmoke];
       navColors = [$whitesmoke];
+      navItems = [$black];
+
       logoColor = [$logoBlack];
       borderColor = [$black];
       break;
@@ -158,6 +179,7 @@ if (fullscreen) {
       // gsap.set(".nav", { backgroundColor: $taupe })
       sectionColors = [$taupe];
       navColors = [$taupe];
+      navItems = [$black];
       logoColor = [$logoBlack];
       borderColor = [$black];
       break;

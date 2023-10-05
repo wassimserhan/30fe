@@ -81,90 +81,91 @@ const NavItems = [...scrollableNavItems];
 const scrollableButton = document.querySelector('.nav__button');
 const scrollableLogo = document.querySelector('.nav__logo');
 
+if (scrollableContent) {
+
+
+
+  window.addEventListener('scroll', () => {
+
+
+
+    // Get the current scroll position
+    const scrollPosition = window.scrollY;
+
+    console.log(scrollPosition);
+
+    // Calculate the scroll percentage based on the scroll position and the page height
+    const scrollTop = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const documentHeight = scrollableContent.clientHeight;
+    const scrollPercentage = (scrollTop / (documentHeight - windowHeight)) * 1000;
+
+    // Interpolate the background color between the initial and final colors
+    const initialColor = [29, 28, 29]; // RGB values of #1d1c1d
+    const finalColor = [242, 241, 237]; // RGB values of #f2f1ed
+    const interpolatedColor = initialColor.map((channel, index) => {
+      const range = finalColor[index] - channel;
+      return Math.min((channel + (range * scrollPercentage) / 100), (242, 241, 237));
+    });
 
 
 
 
-window.addEventListener('scroll', () => {
+    // Interpolate the text color between the initial and final colors
+    const initialColorText = [242, 241, 237];
+    const finalColorText = [29, 28, 29]; // 
+    const interpolatedColorText = initialColorText.map((channel, index) => {
+      const rangeText = finalColorText[index] - channel;
+      return Math.round(channel + (rangeText * scrollPercentage) / 100);
+    });
+
+
+    // Apply the new background color
+    scrollableContent.style.backgroundColor = `rgb(${interpolatedColor.join(', ')})`;
+
+
+    // Apply Filer to SVG
+
+    const filterScroll = 100 - (Math.min(scrollPercentage, 100));
 
 
 
-  // Get the current scroll position
-  const scrollPosition = window.scrollY;
+    // Function to check if an element is in the viewport
 
-  console.log(scrollPosition);
 
-  // Calculate the scroll percentage based on the scroll position and the page height
-  const scrollTop = window.scrollY;
-  const windowHeight = window.innerHeight;
-  const documentHeight = scrollableContent.clientHeight;
-  const scrollPercentage = (scrollTop / (documentHeight - windowHeight)) * 1000;
+    // Get the element to check
+    const elementToCheck = document.querySelector('#accordion');
+    let hasPassed = false;
 
-  // Interpolate the background color between the initial and final colors
-  const initialColor = [29, 28, 29]; // RGB values of #1d1c1d
-  const finalColor = [242, 241, 237]; // RGB values of #f2f1ed
-  const interpolatedColor = initialColor.map((channel, index) => {
-    const range = finalColor[index] - channel;
-    return Math.min((channel + (range * scrollPercentage) / 100), (242, 241, 237));
+
+    // Listen for the scroll event
+
+    if (!hasPassed && !isTopOfElementAboveViewport(elementToCheck)) {
+      scrollableNavt.style.backgroundColor = `rgb(${interpolatedColor.join(', ')})`;
+      scrollableButton.style.backgroundColor = `rgb(${interpolatedColorText.join(', ')})`
+      scrollableButton.style.color = `rgb(${interpolatedColor.join(', ')})`;
+
+      scrollableNav.style.display = "block";
+
+      scrollableLogo.style.filter = `invert(${filterScroll}%)`;
+
+
+      NavItems.forEach(item => {
+        item.style.color = `rgb(${interpolatedColorText.join(', ')})`
+      })
+
+      console.log('Scrolled past the element.');
+      // Perform any action you want when you scroll past the element
+      hasPassed = true; // Set a flag to prevent further triggering
+    }
+
+    // Function to check if the top of an element is above the viewport
+    function isTopOfElementAboveViewport(element) {
+      const rect = element.getBoundingClientRect();
+      console.log(rect)
+      return rect.top < 200;
+    }
+
   });
 
-
-
-
-  // Interpolate the text color between the initial and final colors
-  const initialColorText = [242, 241, 237];
-  const finalColorText = [29, 28, 29]; // 
-  const interpolatedColorText = initialColorText.map((channel, index) => {
-    const rangeText = finalColorText[index] - channel;
-    return Math.round(channel + (rangeText * scrollPercentage) / 100);
-  });
-
-
-  // Apply the new background color
-  scrollableContent.style.backgroundColor = `rgb(${interpolatedColor.join(', ')})`;
-
-
-  // Apply Filer to SVG
-
-  const filterScroll = 100 - (Math.min(scrollPercentage, 100));
-
-
-
-  // Function to check if an element is in the viewport
-
-
-  // Get the element to check
-  const elementToCheck = document.querySelector('#accordion');
-  let hasPassed = false;
-
-
-  // Listen for the scroll event
-
-  if (!hasPassed && !isTopOfElementAboveViewport(elementToCheck)) {
-    scrollableNavt.style.backgroundColor = `rgb(${interpolatedColor.join(', ')})`;
-    scrollableButton.style.backgroundColor = `rgb(${interpolatedColorText.join(', ')})`
-    scrollableButton.style.color = `rgb(${interpolatedColor.join(', ')})`;
-
-    scrollableNav.style.display = "block";
-
-    scrollableLogo.style.filter = `invert(${filterScroll}%)`;
-
-
-    NavItems.forEach(item => {
-      item.style.color = `rgb(${interpolatedColorText.join(', ')})`
-    })
-
-    console.log('Scrolled past the element.');
-    // Perform any action you want when you scroll past the element
-    hasPassed = true; // Set a flag to prevent further triggering
-  }
-
-  // Function to check if the top of an element is above the viewport
-  function isTopOfElementAboveViewport(element) {
-    const rect = element.getBoundingClientRect();
-    console.log(rect)
-    return rect.top < 200;
-  }
-
-});
-
+}

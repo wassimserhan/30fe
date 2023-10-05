@@ -4329,69 +4329,71 @@ const scrollableNavItems = document.querySelectorAll(".nav__items");
 const NavItems = [...scrollableNavItems];
 const scrollableButton = document.querySelector('.nav__button');
 const scrollableLogo = document.querySelector('.nav__logo');
-window.addEventListener('scroll', () => {
-  // Get the current scroll position
-  const scrollPosition = window.scrollY;
-  console.log(scrollPosition);
+if (scrollableContent) {
+  window.addEventListener('scroll', () => {
+    // Get the current scroll position
+    const scrollPosition = window.scrollY;
+    console.log(scrollPosition);
 
-  // Calculate the scroll percentage based on the scroll position and the page height
-  const scrollTop = window.scrollY;
-  const windowHeight = window.innerHeight;
-  const documentHeight = scrollableContent.clientHeight;
-  const scrollPercentage = scrollTop / (documentHeight - windowHeight) * 1000;
+    // Calculate the scroll percentage based on the scroll position and the page height
+    const scrollTop = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const documentHeight = scrollableContent.clientHeight;
+    const scrollPercentage = scrollTop / (documentHeight - windowHeight) * 1000;
 
-  // Interpolate the background color between the initial and final colors
-  const initialColor = [29, 28, 29]; // RGB values of #1d1c1d
-  const finalColor = [242, 241, 237]; // RGB values of #f2f1ed
-  const interpolatedColor = initialColor.map((channel, index) => {
-    const range = finalColor[index] - channel;
-    return Math.min(channel + range * scrollPercentage / 100, (242, 241, 237));
-  });
-
-  // Interpolate the text color between the initial and final colors
-  const initialColorText = [242, 241, 237];
-  const finalColorText = [29, 28, 29]; // 
-  const interpolatedColorText = initialColorText.map((channel, index) => {
-    const rangeText = finalColorText[index] - channel;
-    return Math.round(channel + rangeText * scrollPercentage / 100);
-  });
-
-  // Apply the new background color
-  scrollableContent.style.backgroundColor = `rgb(${interpolatedColor.join(', ')})`;
-
-  // Apply Filer to SVG
-
-  const filterScroll = 100 - Math.min(scrollPercentage, 100);
-
-  // Function to check if an element is in the viewport
-
-  // Get the element to check
-  const elementToCheck = document.querySelector('#accordion');
-  let hasPassed = false;
-
-  // Listen for the scroll event
-
-  if (!hasPassed && !isTopOfElementAboveViewport(elementToCheck)) {
-    scrollableNavt.style.backgroundColor = `rgb(${interpolatedColor.join(', ')})`;
-    scrollableButton.style.backgroundColor = `rgb(${interpolatedColorText.join(', ')})`;
-    scrollableButton.style.color = `rgb(${interpolatedColor.join(', ')})`;
-    scrollableNav.style.display = "block";
-    scrollableLogo.style.filter = `invert(${filterScroll}%)`;
-    NavItems.forEach(item => {
-      item.style.color = `rgb(${interpolatedColorText.join(', ')})`;
+    // Interpolate the background color between the initial and final colors
+    const initialColor = [29, 28, 29]; // RGB values of #1d1c1d
+    const finalColor = [242, 241, 237]; // RGB values of #f2f1ed
+    const interpolatedColor = initialColor.map((channel, index) => {
+      const range = finalColor[index] - channel;
+      return Math.min(channel + range * scrollPercentage / 100, (242, 241, 237));
     });
-    console.log('Scrolled past the element.');
-    // Perform any action you want when you scroll past the element
-    hasPassed = true; // Set a flag to prevent further triggering
-  }
 
-  // Function to check if the top of an element is above the viewport
-  function isTopOfElementAboveViewport(element) {
-    const rect = element.getBoundingClientRect();
-    console.log(rect);
-    return rect.top < 200;
-  }
-});
+    // Interpolate the text color between the initial and final colors
+    const initialColorText = [242, 241, 237];
+    const finalColorText = [29, 28, 29]; // 
+    const interpolatedColorText = initialColorText.map((channel, index) => {
+      const rangeText = finalColorText[index] - channel;
+      return Math.round(channel + rangeText * scrollPercentage / 100);
+    });
+
+    // Apply the new background color
+    scrollableContent.style.backgroundColor = `rgb(${interpolatedColor.join(', ')})`;
+
+    // Apply Filer to SVG
+
+    const filterScroll = 100 - Math.min(scrollPercentage, 100);
+
+    // Function to check if an element is in the viewport
+
+    // Get the element to check
+    const elementToCheck = document.querySelector('#accordion');
+    let hasPassed = false;
+
+    // Listen for the scroll event
+
+    if (!hasPassed && !isTopOfElementAboveViewport(elementToCheck)) {
+      scrollableNavt.style.backgroundColor = `rgb(${interpolatedColor.join(', ')})`;
+      scrollableButton.style.backgroundColor = `rgb(${interpolatedColorText.join(', ')})`;
+      scrollableButton.style.color = `rgb(${interpolatedColor.join(', ')})`;
+      scrollableNav.style.display = "block";
+      scrollableLogo.style.filter = `invert(${filterScroll}%)`;
+      NavItems.forEach(item => {
+        item.style.color = `rgb(${interpolatedColorText.join(', ')})`;
+      });
+      console.log('Scrolled past the element.');
+      // Perform any action you want when you scroll past the element
+      hasPassed = true; // Set a flag to prevent further triggering
+    }
+
+    // Function to check if the top of an element is above the viewport
+    function isTopOfElementAboveViewport(element) {
+      const rect = element.getBoundingClientRect();
+      console.log(rect);
+      return rect.top < 200;
+    }
+  });
+}
 
 /***/ }),
 
@@ -4631,6 +4633,7 @@ if (fullscreen) {
       });
       sectionColors = [$black, $whitesmoke, $taupe];
       navColors = [$black, $whitesmoke, $taupe];
+      navItems = [$whitesmoke, $black];
       logoColor = [$logoWhite, $logoBlack, $logoBlack];
       borderColor = [$whitesmoke, $black];
       break;
@@ -4643,6 +4646,7 @@ if (fullscreen) {
       });
       sectionColors = [$black, $black, $taupe, $whitesmoke];
       navColors = [$black, $black, $taupe, $whitesmoke];
+      navItems = [$whitesmoke, $whitesmoke, $black];
       logoColor = [$logoWhite, $logoWhite, $logoBlack];
       borderColor = [$whitesmoke, $whitesmoke, $black];
       break;
@@ -4652,6 +4656,7 @@ if (fullscreen) {
       });
       sectionColors = [$black, $black, $taupe];
       navColors = [$black, $black, $taupe];
+      navItems = [$whitesmoke, $whitesmoke, $black];
       logoColor = [$logoWhite, $logoWhite, $logoBlack];
       borderColor = [$black];
       break;
@@ -4661,6 +4666,7 @@ if (fullscreen) {
       });
       sectionColors = [$black, $orange, $blue, $green, $taupe, $black];
       navColors = [$black, $orange, $blue, $green, $taupe, $black];
+      navItems = [$whitesmoke, $black, $black, $black, $black, $whitesmoke];
       logoColor = [$logoWhite, $logoBlack, $logoBlack, $logoBlack, $logoBlack, $logoWhite];
       borderColor = [$black];
       break;
@@ -4670,6 +4676,7 @@ if (fullscreen) {
       });
       sectionColors = [$whitesmoke];
       navColors = [$whitesmoke];
+      navItems = [$black];
       logoColor = [$logoBlack];
       borderColor = [$black];
       break;
@@ -4679,6 +4686,7 @@ if (fullscreen) {
       });
       sectionColors = [$whitesmoke, $whitesmoke, $whitesmoke];
       navColors = [$whitesmoke, $whitesmoke, $whitesmoke];
+      navItems = [$black];
       logoColor = [$logoBlack];
       borderColor = [$black];
       break;
@@ -4688,6 +4696,7 @@ if (fullscreen) {
       });
       sectionColors = [$whitesmoke, $whitesmoke, $taupe];
       navColors = [$whitesmoke, $whitesmoke, $taupe];
+      navItems = [$black];
       logoColor = [$logoBlack];
       borderColor = [$black];
       break;
@@ -4697,6 +4706,7 @@ if (fullscreen) {
       });
       sectionColors = [$whitesmoke, $taupe];
       navColors = [$whitesmoke, $taupe];
+      navItems = [$black];
       logoColor = [$logoBlack];
       borderColor = [$black];
       break;
@@ -4706,6 +4716,7 @@ if (fullscreen) {
       });
       sectionColors = [$black, $whitesmoke, $taupe];
       navColors = [$black, $whitesmoke, $taupe];
+      navItems = [$black];
       logoColor = [$logoWhite, $logoBlack, $logoBlack];
       borderColor = [$black];
       break;
@@ -4715,6 +4726,7 @@ if (fullscreen) {
       });
       sectionColors = [$whitesmoke];
       navColors = [$whitesmoke];
+      navItems = [$black];
       logoColor = [$logoBlack];
       borderColor = [$black];
       break;
@@ -4724,6 +4736,7 @@ if (fullscreen) {
       });
       sectionColors = [$whitesmoke];
       navColors = [$whitesmoke];
+      navItems = [$black];
       logoColor = [$logoBlack];
       borderColor = [$black];
       break;
@@ -4733,6 +4746,7 @@ if (fullscreen) {
       });
       sectionColors = [$whitesmoke];
       navColors = [$whitesmoke];
+      navItems = [$black];
       logoColor = [$logoBlack];
       borderColor = [$black];
       break;
@@ -4742,6 +4756,7 @@ if (fullscreen) {
       });
       sectionColors = [$whitesmoke];
       navColors = [$whitesmoke];
+      navItems = [$black];
       logoColor = [$logoBlack];
       borderColor = [$black];
       break;
@@ -4751,6 +4766,7 @@ if (fullscreen) {
       });
       sectionColors = [$whitesmoke];
       navColors = [$whitesmoke];
+      navItems = [$black];
       logoColor = [$logoBlack];
       borderColor = [$black];
       break;
@@ -4758,6 +4774,7 @@ if (fullscreen) {
       // gsap.set(".nav", { backgroundColor: $taupe })
       sectionColors = [$taupe];
       navColors = [$taupe];
+      navItems = [$black];
       logoColor = [$logoBlack];
       borderColor = [$black];
       break;
