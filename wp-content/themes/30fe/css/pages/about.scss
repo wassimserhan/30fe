@@ -28,7 +28,12 @@
         top: -170px;
         right: -10px;
       }
+
+      @include bp(phone) {
+        right: 2px;
+      }
     }
+
     &__headline {
       font-size: 12.5rem;
       font-weight: bold;
@@ -77,10 +82,10 @@
     &__button {
       text-align: center;
       margin: 32px 0 0;
-      &-transparent {
-        background-color: transparent;
-        color: $black;
-      }
+      // &-transparent {
+      //   background-color: transparent;
+      //   color: $black;
+      // }
     }
   }
 

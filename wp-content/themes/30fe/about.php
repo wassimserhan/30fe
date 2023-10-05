@@ -10,7 +10,7 @@ get_header();
 
   <!-- Hero -->
 
-  <section class="about__hero fullscreen about__hero__transparent">
+  <section class="about__hero fullscreen full-height about__hero__transparent">
     <section class="max-width max-padding">
 
       <section class="about__hero__wrapper">

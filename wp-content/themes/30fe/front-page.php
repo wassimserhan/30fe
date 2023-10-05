@@ -17,7 +17,7 @@
 
       <article class="home__hero__wrapper">
         <section class="home__hero__container">
-          <p class="">We are a team of investigators, engineers, scientists and problem solvers. We
+          <p class="home__hero__text">We are a team of investigators, engineers, scientists and problem solvers. We
             bring
             clarity to complex scientific problems to help our clients make decisions with confidence, all backed by
             uncompromising investigative forensic reporting.

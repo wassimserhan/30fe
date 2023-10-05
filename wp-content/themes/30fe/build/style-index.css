@@ -508,7 +508,7 @@ h4 {
 
 p {
   font-size: 1.25rem;
-  line-height: 160%;
+  line-height: 150%;
   font-weight: 400;
   margin: 0;
   letter-spacing: -0.01875rem;
@@ -533,11 +533,6 @@ p {
   display: flex;
   justify-content: center;
   flex-direction: column;
-}
-@media (max-width: 1024px) {
-  .full-height {
-    min-height: auto;
-  }
 }
 
 .blue {
@@ -2758,11 +2753,11 @@ body.admin-bar .search-overlay--desktop {
   padding: 2rem;
 }
 .accordion--horizontal .accordion__headline {
-  font-size: 68px;
+  font-size: 47px;
   font-style: normal;
   font-weight: 700;
   line-height: 100%; /* 72px */
-  letter-spacing: -3.6px;
+  letter-spacing: -2.6px;
 }
 .accordion--horizontal .accordion__copy {
   padding: 24px 0;
@@ -2843,6 +2838,7 @@ body.admin-bar .search-overlay--desktop {
   font-size: 5rem;
   overflow: hidden;
   letter-spacing: -0.7rem;
+  line-height: 110%;
 }
 .home__hero {
   position: relative;
@@ -2850,7 +2846,7 @@ body.admin-bar .search-overlay--desktop {
   transition: background-color 0.4s; /* Add a smooth transition for background color changes */
 }
 .home__hero__padding {
-  padding: 12rem 0 0 8rem;
+  padding: 15rem 8rem 0;
 }
 @media (max-width: 479px) {
   .home__hero__padding {
@@ -2885,8 +2881,8 @@ body.admin-bar .search-overlay--desktop {
   display: flex;
   justify-content: flex-start;
   flex-direction: row-reverse;
-  gap: 3rem;
-  padding: 1rem 8rem 8rem 0;
+  gap: 0;
+  padding: 3rem 0 0 0;
 }
 @media (max-width: 479px) {
   .home__hero__wrapper {
@@ -2895,6 +2891,9 @@ body.admin-bar .search-overlay--desktop {
   }
 }
 .home__hero__container {
+  width: 100%;
+}
+.home__hero__text {
   width: 100%;
 }
 .home__hero__copy {
@@ -2936,6 +2935,11 @@ body.admin-bar .search-overlay--desktop {
     right: -10px;
   }
 }
+@media (max-width: 479px) {
+  .about__hero__video {
+    right: 2px;
+  }
+}
 .about__hero__headline {
   font-size: 12.5rem;
   font-weight: bold;
@@ -2970,10 +2974,6 @@ body.admin-bar .search-overlay--desktop {
 .about__intro__button {
   text-align: center;
   margin: 32px 0 0;
-}
-.about__intro__button-transparent {
-  background-color: transparent;
-  color: #1d1c1d;
 }
 .about__investigations__wrapper {
   display: flex;

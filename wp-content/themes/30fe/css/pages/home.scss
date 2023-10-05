@@ -9,6 +9,7 @@
       font-size: 5rem;
       overflow: hidden;
       letter-spacing: -0.7rem;
+      line-height: 110%;
 
       // @include bp(phone) {
       //   font-size: 13rem !important;
@@ -23,7 +24,7 @@
     transition: background-color 0.4s; /* Add a smooth transition for background color changes */
 
     &__padding {
-      padding: 12rem 0 0 8rem;
+      padding: 15rem 8rem 0;
       @include bp(phone) {
         padding: 8rem 2rem;
       }
@@ -58,8 +59,8 @@
       display: flex;
       justify-content: flex-start;
       flex-direction: row-reverse;
-      gap: 3rem;
-      padding: 1rem 8rem 8rem 0;
+      gap: 0;
+      padding: 3rem 0 0 0;
       @include bp(phone) {
         padding: 2rem 0 0;
         display: block;
@@ -67,6 +68,11 @@
     }
 
     &__container {
+      width: 100%;
+    }
+
+    &__text {
+      // max-width: 480px;
       width: 100%;
     }
 

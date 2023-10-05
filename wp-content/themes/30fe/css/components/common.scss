@@ -117,7 +117,7 @@ h4 {
 
 p {
   font-size: 1.25rem;
-  line-height: 160%;
+  line-height: 150%;
   font-weight: 400;
   margin: 0;
   letter-spacing: -0.01875rem;
@@ -140,9 +140,9 @@ p {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  @include bp(laptop) {
-    min-height: auto;
-  }
+  // @include bp(laptop) {
+  //   min-height: auto;
+  // }
 }
 
 .blue {
