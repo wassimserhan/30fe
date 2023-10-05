@@ -4332,6 +4332,7 @@ const scrollableLogo = document.querySelector('.nav__logo');
 window.addEventListener('scroll', () => {
   // Get the current scroll position
   const scrollPosition = window.scrollY;
+  console.log(scrollPosition);
 
   // Calculate the scroll percentage based on the scroll position and the page height
   const pageHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -4356,19 +4357,23 @@ window.addEventListener('scroll', () => {
   // Apply the new background color
   scrollableContent.style.backgroundColor = `rgb(${interpolatedColor.join(', ')})`;
 
+  // Apply Filer to SVG
+
+  const filterScroll = 100 - Math.min(scrollPercentage, 100);
+  console.log(filterScroll);
+
   // Function to check if an element is in the viewport
 
   // Get the element to check
   const elementToCheck = document.querySelector('#accordion');
   let hasPassed = false;
-
+  scrollableLogo.style.filter = `invert(${filterScroll}%)`;
   // Listen for the scroll event
 
   if (!hasPassed && !isTopOfElementAboveViewport(elementToCheck)) {
     scrollableNavt.style.backgroundColor = `rgb(${interpolatedColor.join(', ')})`;
     scrollableButton.style.backgroundColor = `rgb(${interpolatedColorText.join(', ')})`;
     scrollableButton.style.color = `rgb(${interpolatedColor.join(', ')})`;
-    scrollableLogo.style.filter = "invert(0%)";
     scrollableNav.style.display = "block";
     NavItems.forEach(item => {
       item.style.color = `rgb(${interpolatedColorText.join(', ')})`;
