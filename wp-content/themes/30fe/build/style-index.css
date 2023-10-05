@@ -2670,7 +2670,6 @@ body.admin-bar .search-overlay--desktop {
 
 .accordion {
   display: flex;
-  height: 92vh; /* <--- This is what you need */
 }
 .accordion__header {
   width: 850px;
