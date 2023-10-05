@@ -2461,6 +2461,12 @@ body.admin-bar .search-overlay--desktop {
 .email__form > .with_frm_style select {
   background-color: #cbbea5;
   border: 1px solid #1d1c1d;
+  border-radius: 0;
+  min-height: 44px;
+}
+
+.with_frm_style .frm_submit {
+  padding: 1rem 0 0 !important;
 }
 
 .quote {

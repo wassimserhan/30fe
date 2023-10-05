@@ -9,7 +9,7 @@
 
   <section id="home__hero" class="home__hero">
     <section class="max-width home__hero__padding">
-      <h1 id="banner-text" class="home__banner__headline"> Precision&nbsp;In <br>Investigation, <br>Clarity
+      <h1 id="banner-text" class="home__banner__headline"> Precision&nbsp;in <br>Investigation, <br>Clarity
         in <br>Solutions.
       </h1>
 
@@ -17,13 +17,13 @@
 
       <article class="home__hero__wrapper">
         <section class="home__hero__container">
-          <h2 class="home__hero__copy">We are a team of investigators, engineers, scientists and problem solvers. We
+          <p class="">We are a team of investigators, engineers, scientists and problem solvers. We
             bring
             clarity to complex scientific problems to help our clients make decisions with confidence, all backed by
             uncompromising investigative forensic reporting.
             <br><br>
-            We are 30.
-          </h2>
+            <strong>We are 30.</strong>
+          </p>
           <img src="<?php echo get_template_directory_uri(); ?>/images/banner.png" alt="">
         </section>
 
