@@ -93,6 +93,10 @@ global $template;
         <a id="" class="nav__items nav__items--main nav-links" data-name="#"
           href="<?php echo site_url('/contact')?>">Contact Us</a>
       </li>
+      <li class="nav__links__list" role="menuitem">
+        <a id="" class="nav__items nav__items--main nav-links" data-name="#"
+          href="<?php echo site_url('/careers')?>">Careers</a>
+      </li>
     </ul>
   </section>
 

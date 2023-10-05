@@ -1485,7 +1485,7 @@ body.admin-bar .search-overlay {
   padding: 15px 0;
   margin: 0;
   background-color: transparent;
-  font-size: 1rem;
+  font-size: 13px;
   font-weight: 300;
   outline: none;
   color: #ffffff;
@@ -1695,19 +1695,6 @@ body.admin-bar .search-overlay--desktop {
 }
 .search__result__title {
   font-size: 1rem;
-  color: #ffffff;
-}
-
-.search-term {
-  width: 75%;
-  box-sizing: border-box;
-  border: none;
-  padding: 15px 0;
-  margin: 0;
-  background-color: transparent;
-  font-size: 1rem;
-  font-weight: 300;
-  outline: none;
   color: #ffffff;
 }
 
