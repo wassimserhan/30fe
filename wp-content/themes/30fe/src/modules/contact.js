@@ -13,8 +13,8 @@
 
 const mapLocation = document.querySelectorAll('.contact__location h3');
 var mapLocationArray = [...mapLocation];
-const cityMap = document.getElementById('toronto');
-const cityPin = document.getElementById('toronto-pin');
+const cityMap = document.getElementById('vancouver');
+const cityPin = document.getElementById('vancouver-pin');
 
 mapLocationArray.forEach(mapLocation => {
   mapLocation.addEventListener('click', function () {

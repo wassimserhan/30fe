@@ -132,14 +132,10 @@ if (scrollableContent) {
       scrollableNavt.style.backgroundColor = `rgb(${interpolatedColor.join(', ')})`;
       scrollableButton.style.backgroundColor = `rgb(${interpolatedColorText.join(', ')})`
       scrollableButton.style.color = `rgb(${interpolatedColor.join(', ')})`;
-
-      scrollableNav.style.display = "block";
-
+      // scrollableNav.style.display = "block";
       scrollableLogo.style.filter = `invert(${filterScroll}%)`;
       searchIconDesktop.style.filter = `invert(${filterScrollInverse}%)`;
-
       searchBorder.style.borderColor = `rgb(${interpolatedColorText.join(', ')})`;
-
 
       NavItems.forEach(item => {
         item.style.color = `rgb(${interpolatedColorText.join(', ')})`
@@ -154,7 +150,7 @@ if (scrollableContent) {
     function isTopOfElementAboveViewport(element) {
       const rect = element.getBoundingClientRect();
       console.log(rect)
-      return rect.top < 50;
+      return rect.top < 0;
     }
 
   });

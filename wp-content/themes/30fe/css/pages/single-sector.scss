@@ -1,6 +1,6 @@
 .industry {
   font-family: 'Inter', sans-serif;
-  background-color: $whitesmoke;
+  // background-color: $whitesmoke;
 
   &__title {
     // font-size: 128px;
@@ -47,12 +47,13 @@
   &__categories {
     display: flex;
     justify-content: space-between;
-    color: $white;
+    color: $whitesmoke;
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
     line-height: 120%; /* 38.4px */
     letter-spacing: -1.6px;
+    background-color: $whitesmoke;
 
     @include bp(tablet) {
       flex-direction: column;

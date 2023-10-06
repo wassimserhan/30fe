@@ -163,6 +163,7 @@ class Search {
   addSearchHTML() {
     $("body").append(`
     <section class="search-overlay">
+    <section class="max-width">
       <section class="search-overlay__top ">
         <section class="search-overlay__wrapper max-width">
         <img class="search-overlay__icon" src="${siteData.root_url}/wp-content/themes/30fe/images/search-icon.svg" width="15" height="15"
@@ -178,6 +179,7 @@ class Search {
     <section class="container">
      <section id="search-overlay__results"></section>
     </section>
+        </section>
 </section>
     `)
   }

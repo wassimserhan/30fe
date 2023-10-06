@@ -8,8 +8,12 @@ Template Post Type: post, expertise
 get_header();
 ?>
 
+
+<?php $color = get_field('category_color');?>
+
 <main class="main-container">
-  <section class="industry fullscreen">
+  <section data-navColor="<?php echo esc_html($color['value']); ?>"
+    class="industry <?php echo esc_html($color['label'])."-bg"; ?>">
     <section class="max-width max-padding">
       <a href="<?php echo site_url('/expertise')?>">
         <section class="pill">
@@ -43,9 +47,8 @@ get_header();
 
         <section class="industry__category-items">
 
-          <?php $color = get_field('category_color');?>
 
-          <p class="industry__category-item <?php echo esc_html($color['label']); ?>">
+          <p class="industry__category-item">
             <?php echo '0' . get_row_index() ?></p>
           <h4 class="industry__category-item"><?php echo $industryItems ?></h4>
         </section>

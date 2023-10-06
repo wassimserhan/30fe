@@ -22,7 +22,7 @@
   box-sizing: border-box;
   padding: 6px 128px;
 
-  @include bp(tablet) {
+  @include bp(laptop) {
     padding: 20px;
   }
 
@@ -235,14 +235,14 @@
   display: flex;
   gap: 20px;
 
-  @include bp(phone) {
+  @include bp(tablet) {
     flex-direction: column;
   }
 }
 
 .one-third {
   width: 33.33%;
-  @include bp(phone) {
+  @include bp(tablet) {
     width: 100%;
   }
 }

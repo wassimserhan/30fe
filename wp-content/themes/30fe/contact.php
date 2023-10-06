@@ -8,15 +8,27 @@ get_header();
   <section class="contact">
     <section class="contact__hero full-height fullscreen">
 
-      <section id="toronto" class="contact__hero__maps">
-
-        <div id="toronto-pin" class="contact__image__pin"></div>
-        <!-- <img 
-          src="<?php echo get_template_directory_uri(); ?>/images/maps/orange-pin.svg" alt="Pin">
-        <img class="contact__image__pin vancouver"
-          src="<?php echo get_template_directory_uri(); ?>/images/maps/green-pin.svg" alt="Pin"> -->
-
+      <section id="vancouver" class="contact__hero__maps">
+        <div id="vancouver-pin" class="contact__image__pin"></div>
         <section class="contact__locations fullscreen">
+          <article class="contact__location">
+
+            <h3 class="contact__location__city" style="color:#08cb80 ">Vancouver</h3>
+            <a
+              href="https://www.google.com/maps/place/555+Burrard+St,+Vancouver,+BC+V7X+1M8/@49.2863716,-123.1212611,17z/data=!3m1!4b1!4m5!3m4!1s0x548671822d969bd9:0x3899cbe47e0fa337!8m2!3d49.2863681!4d-123.1190724?shorturl=1">
+              <p>555 Burrard Street, 15th Floor, Suite 110<br>
+                Vancouver, BC V7X 1M8<br>Office (604) 674-1100</p>
+            </a>
+          </article>
+          <article class="contact__location">
+
+            <h3 id="showCA" class="contact__location__city" style="color: #cbbea5">Calgary</h3>
+            <a
+              href="https://www.google.com/maps/place/700+2+St+SW,+Calgary,+AB+T2P+2W3/@51.0463194,-114.0695824,17z/data=!3m1!4b1!4m5!3m4!1s0x53716ffcfa05cc9b:0x521d670e6bbed796!8m2!3d51.046316!4d-114.0673937">
+              <p>30 Forensic Engineering<br>c/o WeWorkFloor <br>19700 2nd Street SW<br>
+                Calgary, AB T2P 2W2<br>Office (403) 208-4545</p>
+            </a>
+          </article>
           <article class="contact__location">
             <h3 class="contact__location__city" style="color:#ff6f48">Toronto</h3>
             <a
@@ -36,24 +48,8 @@ get_header();
               </p>
             </a>
           </article>
-          <article class="contact__location">
 
-            <h3 id="showCA" class="contact__location__city" style="color: #cbbea5">Calgary</h3>
-            <a
-              href="https://www.google.com/maps/place/700+2+St+SW,+Calgary,+AB+T2P+2W3/@51.0463194,-114.0695824,17z/data=!3m1!4b1!4m5!3m4!1s0x53716ffcfa05cc9b:0x521d670e6bbed796!8m2!3d51.046316!4d-114.0673937">
-              <p>30 Forensic Engineering<br>c/o WeWorkFloor <br>19700 2nd Street SW<br>
-                Calgary, AB T2P 2W2<br>Office (403) 208-4545</p>
-            </a>
-          </article>
-          <article class="contact__location">
 
-            <h3 class="contact__location__city" style="color:#08cb80 ">Vancouver</h3>
-            <a
-              href="https://www.google.com/maps/place/555+Burrard+St,+Vancouver,+BC+V7X+1M8/@49.2863716,-123.1212611,17z/data=!3m1!4b1!4m5!3m4!1s0x548671822d969bd9:0x3899cbe47e0fa337!8m2!3d49.2863681!4d-123.1190724?shorturl=1">
-              <p>555 Burrard Street, 15th Floor, Suite 110<br>
-                Vancouver, BC V7X 1M8<br>Office (604) 674-1100</p>
-            </a>
-          </article>
 
 
         </section>
