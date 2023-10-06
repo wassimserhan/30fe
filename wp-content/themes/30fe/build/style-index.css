@@ -1001,7 +1001,7 @@ button.splide__arrow:disabled {
 
 .scroll-section {
   position: relative;
-  height: 70vh;
+  height: 20vh;
 }
 
 .scroll-container {
@@ -1027,7 +1027,6 @@ button.splide__arrow:disabled {
 .scroll-text {
   overflow: hidden;
   position: absolute;
-  bottom: -7%;
   width: 100%;
 }
 
