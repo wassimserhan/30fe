@@ -45,7 +45,7 @@ global $template;
       <button class="nav__menu">
         Menu
       </button>
-      <a href="<?php echo site_url('/submit')?>"><button class="nav__button">Submit an Assigment</button></a>
+      <a href="<?php echo site_url('/submit')?>"><button class="nav__button">Submit an Assignment</button></a>
       <section class="nav__search search-trigger js-search-trigger">
 
         <img class="search-overlay__icon"

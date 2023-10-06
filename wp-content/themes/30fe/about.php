@@ -11,7 +11,7 @@ get_header();
   <!-- Hero -->
 
   <section class="about__hero fullscreen full-height about__hero__transparent">
-    <section class="max-width max-padding ">
+    <section class="max-width max-padding">
 
       <section class="about__hero__wrapper">
         <h1 class="about__hero__headline">We are 30.</h1>
@@ -24,12 +24,12 @@ get_header();
           evidence-based solutions to
           <span class="blue">clients worldwide</span>.
         </h3>
-
+        <img class="about__hero__video" src="<?php echo get_template_directory_uri(); ?>/images/about.gif"
+          alt="About 30FE">
 
       </section>
 
-      <img class="about__hero__video" src="<?php echo get_template_directory_uri(); ?>/images/about.gif"
-        alt="About 30FE">
+
 
 
 

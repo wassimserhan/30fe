@@ -37,7 +37,7 @@
     </section>
   </section>
 
-  <section id="accordion" class="fullscreen">
+  <section class="fullscreen">
     <section class="max-width max-padding">
       <section class="accordion__header">
         <h2 class="accordion__header__headline">Explore the 30 Approach</h2>
@@ -46,7 +46,7 @@
           services.</p>
       </section>
 
-      <div class="accordion accordion--horizontal ">
+      <div id="accordion" class="accordion accordion--horizontal ">
         <?php $k=0;
             if( have_rows('accordion_items') ): 
           while( have_rows('accordion_items') ) : the_row();
@@ -91,14 +91,13 @@
             ?>
 
       </div>
-    </section>
-  </section>
 
 
-  <section id="accordion-mobile" class="">
-    <section class="max-width">
 
-      <?php $k=0;
+      <!-- //Mobile -->
+      <section id="accordion-mobile">
+
+        <?php $k=0;
         if( have_rows('accordion_items') ): 
       while( have_rows('accordion_items') ) : the_row();
       $headline = get_sub_field('headline');
@@ -110,32 +109,40 @@
     ?>
 
 
-      <div
-        class="accordion-mobile__heading item <?php if(get_row_index() === 1) echo 'active' ?> <?php echo $colors[$k] ?>">
-        <div class="title"
-          style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'black-bg') echo 'color: #ffffff'?>">
-          <?php echo $headline ?></h1>
-        </div>
-        <div class="accordion-mobile__body content">
-
-          <img loading="lazy" class="accordion-mobile__image" src="<?php echo $image ?>" alt="<?php echo $alt; ?>"
-            title="<?php echo $alt; ?>">
-
-          <p class="accordion-mobile__copy"
+        <div
+          class="accordion-mobile__heading item <?php if(get_row_index() === 1) echo 'active' ?> <?php echo $colors[$k] ?>">
+          <div class="title"
             style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'black-bg') echo 'color: #ffffff'?>">
-            <?php echo $copy; ?></p>
+            <?php echo $headline ?></h1>
+          </div>
+          <div class="accordion-mobile__body content">
 
+            <img loading="lazy" class="accordion-mobile__image" src="<?php echo $image ?>" alt="<?php echo $alt; ?>"
+              title="<?php echo $alt; ?>">
+
+            <p class="accordion-mobile__copy"
+              style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'black-bg') echo 'color: #ffffff'?>">
+              <?php echo $copy; ?></p>
+
+          </div>
+          <?php $k++ ?>
         </div>
-        <?php $k++ ?>
-      </div>
 
-      <?php
+        <?php
       endwhile; ?>
-      <?php endif;
+        <?php endif;
             ?>
 
+      </section>
     </section>
+
   </section>
+  </section>
+
+
+
+
+
 
 
 
