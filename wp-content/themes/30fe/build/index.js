@@ -4336,17 +4336,17 @@ if (scrollableContent) {
     console.log(scrollPosition);
 
     // Calculate the scroll percentage based on the scroll position and the page height
-    const scrollTop = window.scrollY;
-    const windowHeight = window.innerHeight;
-    const documentHeight = scrollableContent.clientHeight;
-    const scrollPercentage = scrollTop / (documentHeight - windowHeight) * 1000;
+    // const scrollTop = window.scrollY;
+    // const windowHeight = window.innerHeight;
+    // const documentHeight = scrollableContent.clientHeight;
+    // const scrollPosition = (scrollTop / (documentHeight - windowHeight)) * 1000;
 
     // Interpolate the background color between the initial and final colors
     const initialColor = [29, 28, 29]; // RGB values of #1d1c1d
     const finalColor = [242, 241, 237]; // RGB values of #f2f1ed
     const interpolatedColor = initialColor.map((channel, index) => {
       const range = finalColor[index] - channel;
-      return Math.min(channel + range * scrollPercentage / 100, (242, 241, 237));
+      return Math.min(channel + range * scrollPosition / 100, (242, 241, 237));
     });
 
     // Interpolate the text color between the initial and final colors
@@ -4354,7 +4354,7 @@ if (scrollableContent) {
     const finalColorText = [29, 28, 29]; // 
     const interpolatedColorText = initialColorText.map((channel, index) => {
       const rangeText = finalColorText[index] - channel;
-      return Math.round(channel + rangeText * scrollPercentage / 100);
+      return Math.round(channel + rangeText * scrollPosition / 100);
     });
 
     // Apply the new background color
@@ -4362,7 +4362,7 @@ if (scrollableContent) {
 
     // Apply Filer to SVG
 
-    const filterScroll = 100 - Math.min(scrollPercentage, 100);
+    const filterScroll = 100 - Math.min(scrollPosition, 100);
 
     // Function to check if an element is in the viewport
 
