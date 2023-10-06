@@ -22,17 +22,23 @@ if (fullscreen) {
   let logoColor;
   let borderColor;
   let navItems;
+  let searchBorder;
+  let searchIcon;
 
   switch (pageTitle) {
     case 'front-page.php':
       gsap.set(".nav__logo__black", { filter: $logoWhite })
       gsap.set(".nav__items", { color: $whitesmoke })
       gsap.set(".nav", { backgroundColor: $black })
+      gsap.set(".search-overlay--desktop__wrapper", { borderColor: $whitesmoke })
+      gsap.set(".search-overlay--desktop__icon", { filter: $logoWhite })
       sectionColors = [$black, $whitesmoke, $whitesmoke, $whitesmoke, $whitesmoke];
       navColors = [$black, $whitesmoke, $whitesmoke, $whitesmoke, $whitesmoke];
       navItems = [$whitesmoke, $black]
       logoColor = [$logoWhite, $logoBlack];
       borderColor = [$black];
+      searchBorder = [$whitesmoke, $black];
+      searchIcon = [$logoWhite, $logoBlack];
       break;
     case 'about.php':
       gsap.set(".nav__logo__black", { filter: $logoWhite })
@@ -220,6 +226,13 @@ if (fullscreen) {
       .to(".nav__menu-search", {
         borderColor: borderColor[index], immediateRender: false
       }, "<")
+      .to(".search-overlay--desktop__wrapper", {
+        borderColor: searchBorder[index], immediateRender: false
+      }, "<")
+      .to(".search-overlay--desktop__icon", {
+        filter: searchIcon[index], immediateRender: false
+      }, "<")
+
   })
 
 }
