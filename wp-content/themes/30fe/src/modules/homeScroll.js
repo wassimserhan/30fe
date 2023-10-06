@@ -102,6 +102,7 @@ if (scrollableContent) {
     });
 
 
+
     // Interpolate the text color between the initial and final colors
     const initialColorText = [242, 241, 237];
     const finalColorText = [29, 28, 29];
@@ -116,7 +117,6 @@ if (scrollableContent) {
 
     // Apply Filer to SVG
     const filterScroll = 100 - (Math.min(scrollPosition, 100));
-
     const filterScrollInverse = (Math.min(scrollPosition, 100));
 
 
@@ -124,7 +124,7 @@ if (scrollableContent) {
 
 
     // Get the element to check
-    const elementToCheck = document.querySelector('#accordion');
+    const elementToCheck = document.querySelector('#accordion-scroll');
     let hasPassed = false;
 
     // Listen for the scroll event
@@ -154,7 +154,7 @@ if (scrollableContent) {
     function isTopOfElementAboveViewport(element) {
       const rect = element.getBoundingClientRect();
       console.log(rect)
-      return rect.top < 200;
+      return rect.top < 50;
     }
 
   });

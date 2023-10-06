@@ -37,7 +37,7 @@
     </section>
   </section>
 
-  <section class="fullscreen">
+  <section id="accordion-scroll" class="fullscreen">
     <section class="max-width max-padding">
       <section class="accordion__header">
         <h2 class="accordion__header__headline">Explore the 30 Approach</h2>

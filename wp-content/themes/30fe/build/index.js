@@ -4362,7 +4362,7 @@ if (scrollableContent) {
     // Function to check if an element is in the viewport
 
     // Get the element to check
-    const elementToCheck = document.querySelector('#accordion');
+    const elementToCheck = document.querySelector('#accordion-scroll');
     let hasPassed = false;
 
     // Listen for the scroll event
@@ -4386,7 +4386,7 @@ if (scrollableContent) {
     function isTopOfElementAboveViewport(element) {
       const rect = element.getBoundingClientRect();
       console.log(rect);
-      return rect.top < 200;
+      return rect.top < 50;
     }
   });
 }
@@ -4575,18 +4575,28 @@ if (fullscreen) {
   let searchIcon;
   switch (pageTitle) {
     case 'front-page.php':
-      // gsap.set(".nav__logo__black", { filter: $logoWhite })
-      // gsap.set(".nav__items", { color: $whitesmoke })
-      // gsap.set(".nav", { backgroundColor: $black })
-      // gsap.set(".search-overlay--desktop__wrapper", { borderColor: $whitesmoke })
-      // gsap.set(".search-overlay--desktop__icon", { filter: $logoWhite })
+      gsap.set(".nav__logo__black", {
+        filter: $logoWhite
+      });
+      gsap.set(".nav__items", {
+        color: $whitesmoke
+      });
+      gsap.set(".nav", {
+        backgroundColor: $black
+      });
+      gsap.set(".search-overlay--desktop__wrapper", {
+        borderColor: $whitesmoke
+      });
+      gsap.set(".search-overlay--desktop__icon", {
+        filter: $logoWhite
+      });
       sectionColors = [$black, $whitesmoke];
       navColors = [$black, $whitesmoke];
       navItems = [$whitesmoke, $black];
       logoColor = [$logoWhite, $logoBlack];
-      borderColor = [$black];
+      borderColor = [$black, $whitesmoke];
       searchBorder = [$whitesmoke, $black];
-      searchIcon = [$logoWhite, $logoBlack];
+      searchIcon = [$logoBlack, $logoWhite];
       break;
     case 'about.php':
       gsap.set(".nav__logo__black", {
