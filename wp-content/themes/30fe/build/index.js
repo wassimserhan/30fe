@@ -4575,21 +4575,11 @@ if (fullscreen) {
   let searchIcon;
   switch (pageTitle) {
     case 'front-page.php':
-      gsap.set(".nav__logo__black", {
-        filter: $logoWhite
-      });
-      gsap.set(".nav__items", {
-        color: $whitesmoke
-      });
-      gsap.set(".nav", {
-        backgroundColor: $black
-      });
-      gsap.set(".search-overlay--desktop__wrapper", {
-        borderColor: $whitesmoke
-      });
-      gsap.set(".search-overlay--desktop__icon", {
-        filter: $logoWhite
-      });
+      // gsap.set(".nav__logo__black", { filter: $logoWhite })
+      // gsap.set(".nav__items", { color: $whitesmoke })
+      // gsap.set(".nav", { backgroundColor: $black })
+      // gsap.set(".search-overlay--desktop__wrapper", { borderColor: $whitesmoke })
+      // gsap.set(".search-overlay--desktop__icon", { filter: $logoWhite })
       sectionColors = [$black, $whitesmoke];
       navColors = [$black, $whitesmoke];
       navItems = [$whitesmoke, $black];
