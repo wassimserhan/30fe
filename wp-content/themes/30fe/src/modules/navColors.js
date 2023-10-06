@@ -32,8 +32,8 @@ if (fullscreen) {
       gsap.set(".nav", { backgroundColor: $black })
       gsap.set(".search-overlay--desktop__wrapper", { borderColor: $whitesmoke })
       gsap.set(".search-overlay--desktop__icon", { filter: $logoWhite })
-      sectionColors = [$black, $whitesmoke, $whitesmoke, $whitesmoke, $whitesmoke];
-      navColors = [$black, $whitesmoke, $whitesmoke, $whitesmoke, $whitesmoke];
+      sectionColors = [$black, $whitesmoke];
+      navColors = [$black, $whitesmoke];
       navItems = [$whitesmoke, $black]
       logoColor = [$logoWhite, $logoBlack];
       borderColor = [$black];

@@ -158,7 +158,7 @@
     </section>
   </section>
 
-  <section id="stats" class="stats fullscreen">
+  <section id="stats" class="stats">
 
     <div class="stats__bar">
       <div id="statsBar" class="stats__background">
@@ -233,7 +233,7 @@
 
 
 
-  <section class="testimonials fullscreen">
+  <section class="testimonials">
     <section class="testimonials__wrapper">
       <section class="testimonials__section max-width">
         <h2 class="testimonials__headline">Words from our Clients</h2>
@@ -282,7 +282,7 @@
 
 
   </section>
-  <section class="insights fullscreen">
+  <section class="insights">
     <section class="max-width max-padding">
       <!-- <section class="pill">
         <p class="pill__label">Blog</p>
