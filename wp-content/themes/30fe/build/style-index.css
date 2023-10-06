@@ -1406,7 +1406,7 @@ body.admin-bar .search-overlay {
 }
 .search-overlay__wrapper {
   position: relative;
-  border-bottom: 1px solid #cbbea5;
+  border-bottom: 1px solid #f2f1ed;
 }
 .search-overlay__icon {
   margin-right: 10px;
@@ -1622,7 +1622,7 @@ body.admin-bar .search-overlay--desktop {
 }
 .search-overlay--desktop__wrapper {
   position: relative;
-  border-bottom: 1px solid #cbbea5;
+  border-bottom: 1px solid #f2f1ed;
 }
 .search-overlay--desktop__icon {
   margin-right: 10px;
