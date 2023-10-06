@@ -8,7 +8,7 @@
 
 
   <section id="home__hero" class="home__hero">
-    <section class="max-width home__hero__padding">
+    <section class="max-width max-padding">
       <h1 id="banner-text" class="home__banner__headline"> Precision&nbsp;in <br>Investigation, <br>Clarity
         in <br>Solutions.
       </h1>

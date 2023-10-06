@@ -437,6 +437,7 @@ button:hover {
 .main-container {
   width: 100%;
   flex: 1 0 auto;
+  margin-top: 13vh;
 }
 
 .large-text {
@@ -529,7 +530,7 @@ p {
 }
 
 .full-height {
-  min-height: 92vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -1082,7 +1083,7 @@ button.splide__arrow:disabled {
 
 .nav {
   background-color: #1d1c1d;
-  min-height: 20vh;
+  min-height: 13vh;
   transition: transform 0.2s;
   transition: background-color 0.4s; /* Add a smooth transition for background color changes */
 }
@@ -1169,7 +1170,7 @@ button.splide__arrow:disabled {
   place-items: center;
   color: #f2f1ed;
   justify-content: space-between;
-  padding: 2rem 8rem 0;
+  padding: 1rem 8rem;
 }
 @media (max-width: 768px) {
   .nav__links {
@@ -2832,7 +2833,7 @@ body.admin-bar .search-overlay--desktop {
   transition: background-color 0.4s; /* Add a smooth transition for background color changes */
 }
 .home__hero__padding {
-  padding: 15rem 8rem 0;
+  padding: 15rem 8rem 8rem;
 }
 @media (max-width: 479px) {
   .home__hero__padding {
@@ -4334,7 +4335,7 @@ body.admin-bar .search-overlay--desktop {
   display: flex;
   gap: 32px;
   background-color: #1d1c1d;
-  padding: 64px 128px;
+  padding: 15px 128px;
   justify-content: space-evenly;
   position: absolute;
   bottom: 0;
@@ -4588,12 +4589,6 @@ body.admin-bar .search-overlay--desktop {
 
 .careers {
   font-family: "Inter", sans-serif;
-}
-.careers__hero {
-  min-height: 92vh;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
 }
 .careers__hero__block {
   position: relative;

@@ -6,7 +6,7 @@ get_header();
 
 <main class="main-container">
   <section class="contact">
-    <section class="contact__hero fullscreen">
+    <section class="contact__hero full-height fullscreen">
 
       <section id="toronto" class="contact__hero__maps">
 

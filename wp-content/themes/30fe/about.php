@@ -11,7 +11,7 @@ get_header();
   <!-- Hero -->
 
   <section class="about__hero fullscreen full-height about__hero__transparent">
-    <section class="max-width max-padding">
+    <section class="max-width max-padding ">
 
       <section class="about__hero__wrapper">
         <h1 class="about__hero__headline">We are 30.</h1>
