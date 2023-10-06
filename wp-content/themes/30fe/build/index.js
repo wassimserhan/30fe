@@ -4330,6 +4330,7 @@ const NavItems = [...scrollableNavItems];
 const scrollableButton = document.querySelector('.nav__button');
 const scrollableLogo = document.querySelector('.nav__logo');
 const searchBorder = document.querySelector(".search-overlay--desktop__wrapper");
+const searchIconDesktop = document.querySelector('.search-overlay--desktop__icon');
 if (scrollableContent) {
   window.addEventListener('scroll', () => {
     // Get the current scroll position
@@ -4356,6 +4357,7 @@ if (scrollableContent) {
 
     // Apply Filer to SVG
     const filterScroll = 100 - Math.min(scrollPosition, 100);
+    const filterScrollInverse = Math.min(scrollPosition, 100);
 
     // Function to check if an element is in the viewport
 
@@ -4370,6 +4372,7 @@ if (scrollableContent) {
       scrollableButton.style.color = `rgb(${interpolatedColor.join(', ')})`;
       scrollableNav.style.display = "block";
       scrollableLogo.style.filter = `invert(${filterScroll}%)`;
+      searchIconDesktop.style.filter = `invert(${filterScrollInverse}%)`;
       searchBorder.style.borderColor = `rgb(${interpolatedColorText.join(', ')})`;
       NavItems.forEach(item => {
         item.style.color = `rgb(${interpolatedColorText.join(', ')})`;

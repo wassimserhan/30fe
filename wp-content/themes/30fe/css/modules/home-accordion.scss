@@ -8,6 +8,7 @@
   display: none;
   @include bp(laptop) {
     display: block;
+    border: 1px solid $whitesmoke;
   }
 }
 
@@ -171,13 +172,13 @@
 //Mobile Accordion
 
 .item {
-  border: 1px solid #555;
+  border: 1px solid $black;
   cursor: pointer;
   padding: 16px 25px;
 }
 
 .item:last-child {
-  border-bottom: none;
+  border: none;
 }
 
 .title {

@@ -1001,7 +1001,6 @@ button.splide__arrow:disabled {
 
 .scroll-section {
   position: relative;
-  height: 20vh;
 }
 
 .scroll-container {
@@ -1026,7 +1025,6 @@ button.splide__arrow:disabled {
 
 .scroll-text {
   overflow: hidden;
-  position: absolute;
   width: 100%;
 }
 
@@ -1370,6 +1368,7 @@ button.splide__arrow:disabled {
 .search-icon {
   max-width: 15px;
   margin-left: auto;
+  filter: invert(100%) sepia(0%) saturate(2494%) hue-rotate(82deg) brightness(100%) contrast(104%);
 }
 
 .search-overlay {
@@ -1579,11 +1578,6 @@ body.admin-bar .search-overlay {
   .one-third {
     width: 100%;
   }
-}
-
-.search-icon {
-  max-width: 15px;
-  margin-left: auto;
 }
 
 .search-overlay--desktop {
@@ -2647,6 +2641,7 @@ body.admin-bar .search-overlay--desktop {
 @media (max-width: 1024px) {
   #accordion-mobile {
     display: block;
+    border: 1px solid #f2f1ed;
   }
 }
 
@@ -2761,13 +2756,13 @@ body.admin-bar .search-overlay--desktop {
 }
 
 .item {
-  border: 1px solid #555;
+  border: 1px solid #1d1c1d;
   cursor: pointer;
   padding: 16px 25px;
 }
 
 .item:last-child {
-  border-bottom: none;
+  border: none;
 }
 
 .title {
