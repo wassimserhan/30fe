@@ -4738,7 +4738,11 @@ if (fullscreen) {
       navItems = [$black];
       logoColor = [$logoBlack];
       borderColor = [$black];
-      navScroll = false;
+      searchBorder = [$black];
+      searchIcon = [$logoWhite];
+      navButton = [$black];
+      navButtonColor = [$whitesmoke];
+      navScroll = true;
       break;
     case 'single-sector.php':
       gsap.set(".nav", {

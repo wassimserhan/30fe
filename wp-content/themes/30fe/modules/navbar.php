@@ -28,8 +28,7 @@ global $template;
           <img class="search-overlay--desktop__icon"
             src="<?php echo get_template_directory_uri(); ?>/images/search-icon.svg" width="15" height="15"
             alt="search icon">
-          <input id="search-term-desktop" type="text" class="search-term"
-            placeholder="SEARCH FOR PEOPLE, EXPERTISE, SECTORS, INSIGHTS" autocomplete="off">
+          <input id="search-term-desktop" type="text" class="search-term" autocomplete="off">
         </section>
       </section>
 
