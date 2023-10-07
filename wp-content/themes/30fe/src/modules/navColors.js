@@ -80,23 +80,36 @@ if (fullscreen) {
       break;
     case 'expertise.php':
       gsap.set(".nav__logo__black", { filter: $logoWhite })
+      gsap.set(".nav__items", { color: $white })
+      gsap.set(".nav", { backgroundColor: $black })
       gsap.set(".nav__menu-search", { borderColor: $whitesmoke })
-      sectionColors = [$black, $whitesmoke, $taupe];
-      navColors = [$black, $whitesmoke, $taupe];
-      navItems = [$whitesmoke, $black]
-      logoColor = [$logoWhite, $logoBlack, $logoBlack];
+      sectionColors = [$whitesmoke, $taupe];
+      navColors = [$whitesmoke, $taupe];
+      navItems = [$black, $black]
+      logoColor = [$logoBlack, $logoBlack];
       borderColor = [$whitesmoke, $black];
-      navScroll = false;
+      searchBorder = [$black, $black];
+      searchIcon = [$logoWhite, $logoWhite];
+      navButton = [$black, $black];
+      navButtonColor = [$whitesmoke, $whitesmoke];
+      navScroll = true;
+
       break;
     case 'sectors.php':
       gsap.set(".nav__logo__black", { filter: $logoWhite })
+      gsap.set(".nav__items", { color: $white })
+      gsap.set(".nav", { backgroundColor: $black })
       gsap.set(".nav__menu-search", { borderColor: $whitesmoke })
-      sectionColors = [$black, $black, $taupe, $whitesmoke];
-      navColors = [$black, $black, $taupe, $whitesmoke];
-      navItems = [$whitesmoke, $whitesmoke, $black]
-      logoColor = [$logoWhite, $logoWhite, $logoBlack];
-      borderColor = [$whitesmoke, $whitesmoke, $black];
-      navScroll = false;
+      sectionColors = [$black, $taupe];
+      navColors = [$black, $taupe];
+      navItems = [$whitesmoke, $black]
+      logoColor = [$logoWhite, $logoBlack];
+      borderColor = [$black, $black];
+      searchBorder = [$whitesmoke, $black];
+      searchIcon = [$logoBlack, $logoWhite];
+      navButton = [$whitesmoke, $black];
+      navButtonColor = [$black, $whitesmoke];
+      navScroll = true;
       break;
     case 'contact.php':
       gsap.set(".nav__logo__black", { filter: $logoWhite })
@@ -143,8 +156,8 @@ if (fullscreen) {
       let expertisePage = document.querySelector('.industry');
       let expertiseNav = expertisePage.getAttribute('data-navColor');
 
-      gsap.set(".nav", { backgroundColor: expertiseNav })
-      sectionColors = [$whitesmoke, $whitesmoke];
+      gsap.set(".nav", { backgroundColor: expertiseNav });
+      sectionColors = [$whitesmoke];
       navColors = [$whitesmoke];
       navItems = [$black];
       logoColor = [$logoBlack];
