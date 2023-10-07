@@ -48,7 +48,7 @@ get_header();
         <section class="industry__category-items">
 
 
-          <p class="industry__category-item">
+          <p class="industry__category-item <?php echo esc_html($color['label']); ?>">
             <?php echo '0' . get_row_index() ?></p>
           <h4 class="industry__category-item"><?php echo $industryItems ?></h4>
         </section>
