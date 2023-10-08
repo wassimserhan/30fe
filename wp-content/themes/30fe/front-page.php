@@ -25,6 +25,7 @@
             <strong>We are 30.</strong>
           </p>
           <img src="<?php echo get_template_directory_uri(); ?>/images/banner.png" alt="">
+
         </section>
 
         <section class="home__hero__buttons">
@@ -33,6 +34,14 @@
           <a href="<?php echo site_url('/team')?>"><button class="home__hero__button home__hero__button--white">Learn
               More</button></a>
         </section>
+        <p class="home__hero__text--mobile">We are a team of investigators, engineers, scientists and problem solvers.
+          We
+          bring
+          clarity to complex scientific problems to help our clients make decisions with confidence, all backed by
+          uncompromising investigative forensic reporting.
+          <br><br>
+          <strong>We are 30.</strong>
+        </p>
       </article>
     </section>
   </section>

@@ -2705,6 +2705,7 @@ body.admin-bar .search-overlay--desktop {
 @media (max-width: 768px) {
   .home__hero__buttons {
     flex-direction: column;
+    width: 100%;
   }
 }
 .home__hero__button {
@@ -2714,7 +2715,7 @@ body.admin-bar .search-overlay--desktop {
 @media (max-width: 479px) {
   .home__hero__button {
     width: 100%;
-    text-align: left;
+    margin: 1rem 0 0;
   }
 }
 .home__hero__button--white {
@@ -2739,6 +2740,20 @@ body.admin-bar .search-overlay--desktop {
 }
 .home__hero__text {
   width: 100%;
+}
+@media (max-width: 479px) {
+  .home__hero__text {
+    display: none;
+  }
+}
+.home__hero__text--mobile {
+  display: none;
+}
+@media (max-width: 479px) {
+  .home__hero__text--mobile {
+    display: block;
+    padding: 2rem 0 0;
+  }
 }
 .home__hero__copy {
   font-size: 1.5rem;

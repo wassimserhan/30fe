@@ -300,9 +300,9 @@ if (fullscreen) {
       // duration: 1,
       scrollTrigger: {
         trigger: section,
-        start: "top 130px",
-        end: "bottom 130px",
-        // markers: false,
+        start: "top 100px",
+        end: "bottom 100px",
+        markers: false,
         toggleActions: "restart none none reverse"
       }
     })
