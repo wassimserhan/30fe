@@ -4616,14 +4616,13 @@ body.admin-bar .search-overlay--desktop {
   width: 100%;
   overflow: hidden;
   color: #ffffff;
-  border-top: 2px solid #ffffff;
   background-color: #1d1c1d;
 }
 .careers__positions:last-of-type {
   border-bottom: 2px solid #ffffff;
 }
-.careers__positions:last-child {
-  border-bottom: 2px solid #ffffff;
+.careers__positions:first-of-type {
+  border-top: 2px solid #ffffff;
 }
 .careers__positions__title {
   font-size: 0.8rem;
