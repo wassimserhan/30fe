@@ -8,7 +8,7 @@ get_header();
 <main class="main-container">
 
   <!-- Hero -->
-  <section class="careers__hero full-height black-bg fullscreen">
+  <section class="careers__hero full-height fullscreen">
     <section class="max-width max-padding ">
       <section class="careers__hero__block">
         <h1 class="careers__hero__headline">Careers</h1>

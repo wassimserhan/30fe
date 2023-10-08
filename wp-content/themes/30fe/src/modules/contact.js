@@ -30,14 +30,16 @@ mapLocationArray.forEach(mapLocation => {
 
 
 
+if (cityMap) {
 
+  // Pin Animation
 
-// Pin Animation
+  gsap.to("#toronto-pin", { duration: 0.6, y: 20, ease: "circ.in", repeat: -1, yoyo: true })
 
-gsap.to("#toronto-pin", { duration: 0.6, y: 20, ease: "circ.in", repeat: -1, yoyo: true })
+  gsap.to("#vancouver-pin", { duration: 0.6, y: 20, ease: "circ.in", repeat: -1, yoyo: true })
 
-gsap.to("#vancouver-pin", { duration: 0.6, y: 20, ease: "circ.in", repeat: -1, yoyo: true })
+  gsap.to("#ottowa-pin", { duration: 0.6, y: 20, ease: "circ.in", repeat: -1, yoyo: true })
 
-gsap.to("#ottowa-pin", { duration: 0.6, y: 20, ease: "circ.in", repeat: -1, yoyo: true })
+  gsap.to("#calgary-pin", { duration: 0.6, y: 20, ease: "circ.in", repeat: -1, yoyo: true })
 
-gsap.to("#calgary-pin", { duration: 0.6, y: 20, ease: "circ.in", repeat: -1, yoyo: true })
+}
