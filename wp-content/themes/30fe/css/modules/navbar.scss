@@ -10,7 +10,6 @@
 
   &__menu-search {
     display: flex;
-    border: 1px solid #1d1c1d;
   }
 
   &__menu {
@@ -28,8 +27,8 @@
   }
 
   &__button {
-    background-color: $white;
-    color: $black;
+    background-color: $black;
+    color: $whitesmoke;
     padding: 1rem;
     border: none;
     width: 190px;
@@ -73,7 +72,7 @@
     padding: 0.5rem 8rem;
     position: relative;
     z-index: 5;
-    @include bp(phone) {
+    @include bp(tablet) {
       padding: 1.5rem;
     }
   }
@@ -108,7 +107,7 @@
     right: 0;
     background-color: $black;
     text-align: left;
-    padding: 100px 57px 0;
+    // padding: 100px 57px 0;
     height: 100vh;
     // max-width: 300px;
     transform: translateX(100%);
@@ -158,12 +157,18 @@
     text-transform: uppercase;
     position: relative;
     display: block;
-    font-size: 20px;
+    font-size: 1.125rem;
     font-weight: 500;
     line-height: 140%; /* 28px */
     letter-spacing: -0.6px;
     color: $black;
-    text-align: center;
+    text-align: left;
+
+    &--accordion {
+      font-size: 1rem;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid $black;
+    }
   }
 
   &__logo {
@@ -230,7 +235,7 @@
   &__wrapper {
     position: relative;
     width: 220px;
-    margin: auto;
+    // margin: auto;
 
     @include bp(phone) {
       text-align: center;

@@ -43,13 +43,13 @@
 
   &__wrapper {
     position: relative;
-    border-bottom: 1px solid $whitesmoke;
+    border-bottom: 1px solid $black;
   }
 
   &__icon {
     margin-right: 10px;
     max-width: 15px;
-    filter: invert(0%);
+    filter: invert(100%);
   }
 
   &--active {

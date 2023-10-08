@@ -16,7 +16,7 @@ get_header();
             <h3 class="contact__location__city" style="color:#08cb80 ">Vancouver</h3>
             <a
               href="https://www.google.com/maps/place/555+Burrard+St,+Vancouver,+BC+V7X+1M8/@49.2863716,-123.1212611,17z/data=!3m1!4b1!4m5!3m4!1s0x548671822d969bd9:0x3899cbe47e0fa337!8m2!3d49.2863681!4d-123.1190724?shorturl=1">
-              <p>555 Burrard Street, 15th Floor, Suite 110<br>
+              <p>555 Burrard Street <br>15th Floor, Suite 110<br>
                 Vancouver, BC V7X 1M8<br>Office (604) 674-1100</p>
             </a>
           </article>
@@ -33,7 +33,7 @@ get_header();
             <h3 class="contact__location__city" style="color:#ff6f48">Toronto</h3>
             <a
               href="https://www.google.com/maps/place/40+University+Ave+%23800,+Toronto,+ON+M5J,+Canada/@43.6460292,-79.3865919,17z/data=!3m1!4b1!4m5!3m4!1s0x882b34d3be43bda7:0x50f557a7fc8959ad!8m2!3d43.6460292!4d-79.3843979?shorturl=1">
-              <p>40 University Avenue, Suite 902<br>
+              <p>40 University Avenue<br> Suite 902<br>
                 Toronto, ON M5J 1T1<br>Office (416) 368-1700<br>Emergency Services Line<br> 1 (800)
                 564-5313</p>
             </a>

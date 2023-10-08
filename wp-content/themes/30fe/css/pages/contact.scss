@@ -5,9 +5,13 @@
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 50vw;
+    height: 70vw;
     position: relative;
-    background-position: (bottom);
+    background-position: bottom;
+    @include bp(tablet) {
+      height: 170vw;
+      background-position: -100vw -60vw;
+    }
   }
 
   &__image {
@@ -50,23 +54,23 @@
   }
 
   &__locations {
-    display: flex;
-    gap: 32px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    // place-items: center;
+    // display: flex;
+    // gap: 32px;
     background-color: $black;
-    padding: 15px 128px;
-    justify-content: space-evenly;
+    padding: 64px;
+    // justify-content: space-evenly;
     position: absolute;
     bottom: 0;
     width: 100%;
+    align-items: baseline;
 
-    @include bp(tablet) {
-      padding: 64px 25px;
-    }
-
-    @include bp(tablet) {
-      flex-direction: row;
-      padding: 64px 25px;
-      flex-wrap: wrap;
+    @include bp(laptop) {
+      place-items: left;
+      grid-template-columns: 1fr 1fr;
     }
   }
 
@@ -80,9 +84,10 @@
     &__city {
       cursor: pointer;
       padding-bottom: 15px;
-      @include bp(tablet) {
-        font-size: 1.9rem;
-      }
+      font-size: 1.9rem;
+      // @include bp(tablet) {
+      //   font-size: 1.9rem;
+      // }
     }
 
     & h2 {

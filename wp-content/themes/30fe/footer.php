@@ -20,7 +20,7 @@
         Detectives &mdash; Problem Solvers &mdash; Reporters</p>
     </article>
   </section>
-  <section class="max-width max-padding">
+  <section class="max-width footer__padding">
 
 
 

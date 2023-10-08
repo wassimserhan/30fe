@@ -12,8 +12,6 @@ global $template;
     <a href="<?php echo get_home_url(); ?>">
       <img class="nav__logo nav__logo__black" src="<?php echo get_template_directory_uri(); ?>/images/logo-black.svg"
         alt="<?php echo get_bloginfo( 'name' ); ?> logo" title="<?php echo get_bloginfo( 'name' ); ?>" width="100%">
-      <!-- <img class="nav__logo nav__logo__white" src="<?php echo get_template_directory_uri(); ?>/images/logo-white.svg"
-        alt="<?php echo get_bloginfo( 'name' ); ?> logo" title="<?php echo get_bloginfo( 'name' ); ?>" width="100%"> -->
     </a>
 
 
@@ -68,12 +66,11 @@ global $template;
     <ul class="nav__links">
       <li class="nav__links__list" role="menuitem">
         <a id="" class="nav__items nav__items--main nav-links" data-name="#"
-          href="<?php echo site_url('/about')?>">About
-          Us</a>
+          href="<?php echo site_url('/about')?>">About</a>
       </li>
       <li class="nav__links__list" role="menuitem">
-        <a id="" class="nav__items nav__items--main nav-links" data-name="#" href="<?php echo site_url('/team')?>">Our
-          People</a>
+        <a id="" class="nav__items nav__items--main nav-links" data-name="#"
+          href="<?php echo site_url('/team')?>">Team</a>
       </li>
       <li class="nav__links__list" role="menuitem">
         <a id="" class="nav__items nav__items--main nav-links" data-name="#"
@@ -90,7 +87,7 @@ global $template;
       </li>
       <li class="nav__links__list" role="menuitem">
         <a id="" class="nav__items nav__items--main nav-links" data-name="#"
-          href="<?php echo site_url('/contact')?>">Contact Us</a>
+          href="<?php echo site_url('/contact')?>">Contact</a>
       </li>
       <li class="nav__links__list" role="menuitem">
         <a id="" class="nav__items nav__items--main nav-links" data-name="#"
@@ -103,15 +100,14 @@ global $template;
 
 
   <!-- Mobile Menu -->
-  <section class="nav__dropdown hide-nav">
+  <section class="nav__dropdown hide-nav max-padding">
     <section class="nav__links__list">
 
 
       <a class="nav__items--mobile nav__items--main nav-links" href="<?php echo site_url('/about')?>"
-        target="_self">About
-        Us</a>
+        target="_self">About</a>
 
-      <a class="nav__items--mobile nav-links" href="<?php echo site_url('/team')?>" target="_self">Our People</a>
+      <a class="nav__items--mobile nav-links" href="<?php echo site_url('/team')?>" target="_self">Team</a>
 
 
       <article class="accordion-about">
@@ -129,7 +125,7 @@ global $template;
 
         while ($customQuery->have_posts()): $customQuery->the_post();
         ?>
-          <a class="nav__items--mobile nav-links" href="<?php echo the_permalink() ?>"
+          <a class="nav__items--mobile nav__items--mobile--accordion nav-links" href="<?php echo the_permalink() ?>"
             target="_self"><?php the_title() ?></a>
           <?php endwhile ?>
 
@@ -153,7 +149,7 @@ global $template;
 
         while ($customQuery->have_posts()): $customQuery->the_post();
         ?>
-          <a class="nav__items--mobile nav-links" href="<?php echo the_permalink() ?>"
+          <a class="nav__items--mobile nav__items--mobile--accordion nav-links" href="<?php echo the_permalink() ?>"
             target="_self"><?php the_title() ?></a>
           <?php endwhile ?>
 
@@ -163,7 +159,7 @@ global $template;
       </article>
 
       <a class="nav__items--mobile nav-links" href="<?php echo site_url('/insights')?>" target="_self">Insights</a>
-      <a class="nav__items--mobile nav-links" href="<?php echo site_url('/contact')?>" target="_self">Contact Us</a>
+      <a class="nav__items--mobile nav-links" href="<?php echo site_url('/contact')?>" target="_self">Contact</a>
       <a class="nav__items--mobile nav-links" href="<?php echo site_url('/careers')?>" target="_self">Careers</a>
 
     </section>

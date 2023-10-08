@@ -2,6 +2,10 @@
   font-family: 'Inter', sans-serif;
   flex-shrink: 0;
 
+  &__padding {
+    padding: 0 8rem 1rem;
+  }
+
   & figure {
     margin: 0;
   }
