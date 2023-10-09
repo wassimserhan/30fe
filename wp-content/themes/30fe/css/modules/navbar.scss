@@ -1,6 +1,6 @@
 .nav {
   background-color: $black;
-  height: 120px;
+  min-height: 110px;
   transition: transform 0.2s;
   transition: background-color 0.4s; /* Add a smooth transition for background color changes */
 

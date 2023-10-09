@@ -437,7 +437,7 @@ button:hover {
 .main-container {
   width: 100%;
   flex: 1 0 auto;
-  margin-top: 13vh;
+  margin-top: 10vh;
 }
 
 .large-text {
@@ -530,7 +530,7 @@ p {
 }
 
 .full-height {
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -1095,7 +1095,7 @@ button.splide__arrow:disabled {
 
 .nav {
   background-color: #1d1c1d;
-  height: 120px;
+  min-height: 110px;
   transition: transform 0.2s;
   transition: background-color 0.4s; /* Add a smooth transition for background color changes */
 }
