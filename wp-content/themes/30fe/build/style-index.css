@@ -530,7 +530,7 @@ p {
 }
 
 .full-height {
-  min-height: 87vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -1095,7 +1095,7 @@ button.splide__arrow:disabled {
 
 .nav {
   background-color: #1d1c1d;
-  min-height: 13vh;
+  height: 120px;
   transition: transform 0.2s;
   transition: background-color 0.4s; /* Add a smooth transition for background color changes */
 }

@@ -297,8 +297,8 @@ if (fullscreen) {
       // duration: 1,
       scrollTrigger: {
         trigger: section,
-        start: "top 100px",
-        end: "bottom 100px",
+        start: "top 120px",
+        end: "bottom 120px",
         markers: false,
         toggleActions: "restart none none reverse"
       }
