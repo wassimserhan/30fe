@@ -185,6 +185,10 @@
 
   &__logo__black {
     display: block;
+
+    &--active {
+      filter: invert(0%) !important;
+    }
   }
 
   &__logo__white {

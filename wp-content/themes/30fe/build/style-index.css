@@ -1269,6 +1269,9 @@ button.splide__arrow:disabled {
 .nav__logo__black {
   display: block;
 }
+.nav__logo__black--active {
+  filter: invert(0%) !important;
+}
 .nav__logo__white {
   display: none;
 }

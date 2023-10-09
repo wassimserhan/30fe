@@ -5009,8 +5009,8 @@ function menu() {
   sideNav.classList.toggle('hide-nav');
   body.classList.toggle('fixed-position');
   hamburger.classList.toggle('is-active');
-  addTint.classList.toggle('hide__body');
-  // navLogo.style.filter = `invert(100%)`;
+  // addTint.classList.toggle('hide__body');
+  navLogo.classList.toggle('nav__logo__black--active');
 }
 
 // Side Nav open/close on menu item click
