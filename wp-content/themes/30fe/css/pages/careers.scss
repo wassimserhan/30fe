@@ -47,28 +47,32 @@
         top: 150%;
         right: 10%;
         z-index: 2;
-        @include bp(tablet) {
-          left: -50%;
+        @include bp(phone) {
+          top: 270%;
+          right: 71%;
         }
       }
 
       &--blue {
-        top: 60%;
+        top: -30%;
         right: 25%;
         z-index: 1;
         width: 75px;
         height: 75px;
         @include bp(tablet) {
-          display: none;
+          top: -130%;
         }
       }
 
       &--green {
-        top: -100%;
+        top: -70%;
         right: 40%;
         z-index: 1;
-        @include bp(tablet) {
-          display: none;
+        @include bp(phone) {
+          top: -210%;
+          right: 60%;
+          width: 70px;
+          height: 70px;
         }
       }
     }
@@ -78,33 +82,37 @@
       position: absolute;
 
       &--one {
-        top: -140%;
-        right: 0;
+        top: -120%;
+        right: 22%;
         width: 200px;
         z-index: 2;
-        @include bp(tablet) {
-          top: 270%;
-          right: -9px;
+        @include bp(phone) {
+          top: 240%;
+          right: 2%;
         }
       }
 
       &--two {
         top: 83%;
-        right: 62%;
+        right: 55%;
         width: 250px;
-        @include bp(tablet) {
+        @include bp(laptop) {
+          right: 45%;
+        }
+
+        @include bp(phone) {
           display: none;
         }
       }
 
       &--three {
-        top: -329%;
-        left: -30%;
+        top: 61%;
+        right: 0%;
         z-index: 1;
 
-        @include bp(tablet) {
-          top: -329%;
-          left: -30%;
+        @include bp(phone) {
+          top: -439%;
+          right: 57%;
           z-index: 1;
         }
       }
@@ -113,9 +121,9 @@
         top: -40%;
         left: 0%;
         z-index: 1;
-        @include bp(tablet) {
-          left: 54%;
-        }
+        // @include bp(tablet) {
+        //   left: 54%;
+        // }
       }
     }
   }

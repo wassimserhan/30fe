@@ -4153,18 +4153,6 @@ function categoryFilter() {
   \********************************/
 /***/ (() => {
 
-// import $ from 'jquery';
-
-// $('.contact__location__city').click(function () {
-//   $('section[id^=city]').hide(); //hide all
-//   var id = $(this).attr('id'); //get the id of the clicked button
-//   // var end = id.slice(-2);      //get last 2 character from id
-//   $('.contact__image__pin').hide();
-
-//   $('.contact__hero__maps').addClass(id).show(); //match the div with id ends with
-//   // $('.contact__image__pin').addClass(id).show();
-// });
-
 const mapLocation = document.querySelectorAll('.contact__location h3');
 var mapLocationArray = [...mapLocation];
 const cityMap = document.getElementById('vancouver');
@@ -4332,6 +4320,7 @@ const scrollableButton = document.querySelector('.nav__button');
 const scrollableLogo = document.querySelector('.nav__logo');
 const searchBorder = document.querySelector(".search-overlay--desktop__wrapper");
 const searchIconDesktop = document.querySelector('.search-overlay--desktop__icon');
+const plus = document.querySelectorAll('.plus-nav');
 if (scrollableContent) {
   window.addEventListener('scroll', () => {
     // Get the current scroll position
@@ -4375,10 +4364,13 @@ if (scrollableContent) {
       scrollableLogo.style.filter = `invert(${filterScroll}%)`;
       searchIconDesktop.style.filter = `invert(${filterScrollInverse}%)`;
       searchBorder.style.borderColor = `rgb(${interpolatedColorText.join(', ')})`;
+      [...plus].forEach(item => {
+        item.style.filter = `invert(${filterScroll}%)`;
+      });
       NavItems.forEach(item => {
         item.style.color = `rgb(${interpolatedColorText.join(', ')})`;
       });
-      console.log('Scrolled past the element.');
+
       // Perform any action you want when you scroll past the element
       hasPassed = true; // Set a flag to prevent further triggering
     }
@@ -4386,7 +4378,6 @@ if (scrollableContent) {
     // Function to check if the top of an element is above the viewport
     function isTopOfElementAboveViewport(element) {
       const rect = element.getBoundingClientRect();
-      console.log(rect);
       return rect.top < 0;
     }
   });
@@ -4576,6 +4567,7 @@ if (fullscreen) {
   let navButton;
   let navButtonColor;
   let navScroll;
+  let plus;
   switch (pageTitle) {
     case 'front-page.php':
       gsap.set(".nav__logo__black", {
@@ -4597,6 +4589,9 @@ if (fullscreen) {
         backgroundColor: $whitesmoke,
         color: $black
       });
+      gsap.set(".plus-nav", {
+        filter: $logoWhite
+      });
       sectionColors = [$black, $whitesmoke];
       navColors = [$black, $whitesmoke];
       navItems = [$whitesmoke, $black];
@@ -4605,6 +4600,7 @@ if (fullscreen) {
       searchIcon = [$logoBlack, $logoWhite];
       navButton = [$whitesmoke, $black];
       navButtonColor = [$black, $whitesmoke];
+      plus = [$logoWhite, $logoBlack];
       navScroll = true;
       break;
     case 'about.php':
@@ -4635,6 +4631,7 @@ if (fullscreen) {
       searchIcon = [$logoBlack, $logoWhite, $logoWhite, $logoBlack, $logoBlack, $logoWhite, $logoBlack];
       navButton = [$whitesmoke, $black, $black, $whitesmoke, $black, $black];
       navButtonColor = [$black, $whitesmoke, $whitesmoke, $black, $whitesmoke, $whitesmoke];
+      plus = [$logoWhite, $logoBlack];
       navScroll = true;
       break;
     case 'team.php':
@@ -4676,6 +4673,9 @@ if (fullscreen) {
         backgroundColor: $whitesmoke,
         color: $black
       });
+      gsap.set(".plus-nav", {
+        filter: $logoWhite
+      });
       sectionColors = [$whitesmoke, $taupe];
       navColors = [$whitesmoke, $taupe];
       navItems = [$black, $black];
@@ -4684,6 +4684,7 @@ if (fullscreen) {
       searchIcon = [$logoWhite, $logoWhite];
       navButton = [$black, $black];
       navButtonColor = [$whitesmoke, $whitesmoke];
+      plus = [$logoWhite, $logoBlack];
       navScroll = true;
       break;
     case 'sectors.php':
@@ -4706,6 +4707,9 @@ if (fullscreen) {
         backgroundColor: $whitesmoke,
         color: $black
       });
+      gsap.set(".plus-nav", {
+        filter: $logoWhite
+      });
       sectionColors = [$black, $taupe];
       navColors = [$black, $taupe];
       navItems = [$whitesmoke, $black];
@@ -4714,6 +4718,7 @@ if (fullscreen) {
       searchIcon = [$logoBlack, $logoWhite];
       navButton = [$whitesmoke, $black];
       navButtonColor = [$black, $whitesmoke];
+      plus = [$logoWhite, $logoBlack];
       navScroll = true;
       break;
     case 'contact.php':
@@ -4728,6 +4733,7 @@ if (fullscreen) {
       searchIcon = [$logoBlack, $logoWhite];
       navButton = [$whitesmoke, $black];
       navButtonColor = [$black, $whitesmoke];
+      plus = [$logoWhite, $logoBlack];
       navScroll = true;
       break;
     case 'careers.php':
@@ -4758,6 +4764,7 @@ if (fullscreen) {
       searchIcon = [$logoBlack, $logoWhite, $logoWhite, $logoWhite, $logoWhite, $logoWhite, $logoBlack];
       navButton = [$whitesmoke, $black, $black, $black, $black, $whitesmoke];
       navButtonColor = [$black, $whitesmoke, $whitesmoke, $whitesmoke, $whitesmoke, $black];
+      plus = [$logoWhite, $logoBlack];
       navScroll = true;
       break;
     case 'home.php':
@@ -4846,6 +4853,7 @@ if (fullscreen) {
       searchIcon = [$logoBlack, $logoWhite];
       navButton = [$whitesmoke, $black];
       navButtonColor = [$black, $whitesmoke];
+      plus = [$logoWhite, $logoBlack];
       navScroll = true;
       break;
     case 'archive.php':
@@ -4964,6 +4972,12 @@ if (fullscreen) {
         immediateRender: false
       }, "<");
     }
+    if (navScroll) {
+      tl.to(".plus-nav", {
+        filter: plus[index],
+        immediateRender: false
+      }, "<");
+    }
   });
 }
 
@@ -5010,7 +5024,7 @@ function closeSideMenu() {
   body.classList.remove('fixed-position');
 }
 
-// About Accordion
+// Mobile Dropdowns
 
 const accordionsAbout = document.querySelectorAll('.accordion-about');
 const openAccordionAbout = accordion => {
@@ -5052,6 +5066,48 @@ accordionsAbout.forEach(accordion => {
     lastScrollY = window.scrollY;
   });
 }
+
+//Desktop Dropdowns
+const plusExpertise = document.querySelector('.plus-expertise');
+const expertiseDropdown = document.querySelector('.nav__dropdown-grid--expertise');
+plusExpertise.addEventListener("click", function () {
+  expertiseDropdown.classList.toggle('nav__dropdown-grid--active');
+  plusExpertise.classList.toggle('plus-nav--active');
+});
+const plusSectors = document.querySelector('.plus-sectors');
+const sectorsDropdown = document.querySelector('.nav__dropdown-grid--sectors');
+plusSectors.addEventListener("click", function () {
+  sectorsDropdown.classList.toggle('nav__dropdown-grid--active');
+  plusSectors.classList.toggle('plus-nav--active');
+});
+window.addEventListener('resize', function (event) {
+  expertiseDropdown.classList.remove('nav__dropdown-grid--active');
+  plusExpertise.classList.remove('plus-nav--active');
+  sectorsDropdown.classList.remove('nav__dropdown-grid--active');
+  plusSectors.classList.remove('plus-nav--active');
+}, true);
+window.addEventListener("scroll", function () {
+  expertiseDropdown.classList.remove('nav__dropdown-grid--active');
+  plusExpertise.classList.remove('plus-nav--active');
+  sectorsDropdown.classList.remove('nav-expertise__grid--active');
+  plusSectors.classList.remove('plus-nav--active');
+}, true);
+
+// I'm using "click" but it works with any event
+document.addEventListener('click', event => {
+  const isClickInside = plusExpertise.contains(event.target);
+  if (!isClickInside) {
+    expertiseDropdown.classList.remove('nav__dropdown-grid--active');
+    plusExpertise.classList.remove('plus-nav--active');
+  }
+});
+document.addEventListener('click', event => {
+  const isClickInside = plusSectors.contains(event.target);
+  if (!isClickInside) {
+    sectorsDropdown.classList.remove('nav__dropdown-grid--active');
+    plusSectors.classList.remove('plus-nav--active');
+  }
+});
 
 /***/ }),
 

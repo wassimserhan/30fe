@@ -30,6 +30,7 @@ if (fullscreen) {
   let navButton;
   let navButtonColor;
   let navScroll;
+  let plus;
 
 
 
@@ -44,6 +45,7 @@ if (fullscreen) {
       gsap.set(".search-overlay--desktop__wrapper", { borderColor: $whitesmoke })
       gsap.set(".search-overlay--desktop__icon", { filter: $logoWhite })
       gsap.set(".nav__button", { backgroundColor: $whitesmoke, color: $black })
+      gsap.set(".plus-nav", { filter: $logoWhite })
       sectionColors = [$black, $whitesmoke];
       navColors = [$black, $whitesmoke];
       navItems = [$whitesmoke, $black]
@@ -52,6 +54,7 @@ if (fullscreen) {
       searchIcon = [$logoBlack, $logoWhite];
       navButton = [$whitesmoke, $black];
       navButtonColor = [$black, $whitesmoke];
+      plus = [$logoWhite, $logoBlack];
       navScroll = true;
       break;
     case 'about.php':
@@ -69,6 +72,7 @@ if (fullscreen) {
       searchIcon = [$logoBlack, $logoWhite, $logoWhite, $logoBlack, $logoBlack, $logoWhite, $logoBlack];
       navButton = [$whitesmoke, $black, $black, $whitesmoke, $black, $black];
       navButtonColor = [$black, $whitesmoke, $whitesmoke, $black, $whitesmoke, $whitesmoke];
+      plus = [$logoWhite, $logoBlack];
       navScroll = true;
       break;
     case 'team.php':
@@ -89,6 +93,7 @@ if (fullscreen) {
       gsap.set(".search-overlay--desktop__wrapper", { borderColor: $whitesmoke })
       gsap.set(".search-overlay--desktop__icon", { filter: $logoBlack })
       gsap.set(".nav__button", { backgroundColor: $whitesmoke, color: $black })
+      gsap.set(".plus-nav", { filter: $logoWhite })
       sectionColors = [$whitesmoke, $taupe];
       navColors = [$whitesmoke, $taupe];
       navItems = [$black, $black]
@@ -97,6 +102,7 @@ if (fullscreen) {
       searchIcon = [$logoWhite, $logoWhite];
       navButton = [$black, $black];
       navButtonColor = [$whitesmoke, $whitesmoke];
+      plus = [$logoWhite, $logoBlack];
       navScroll = true;
 
       break;
@@ -107,6 +113,8 @@ if (fullscreen) {
       gsap.set(".search-overlay--desktop__wrapper", { borderColor: $whitesmoke })
       gsap.set(".search-overlay--desktop__icon", { filter: $logoBlack })
       gsap.set(".nav__button", { backgroundColor: $whitesmoke, color: $black })
+      gsap.set(".plus-nav", { filter: $logoWhite })
+
       sectionColors = [$black, $taupe];
       navColors = [$black, $taupe];
       navItems = [$whitesmoke, $black]
@@ -115,6 +123,7 @@ if (fullscreen) {
       searchIcon = [$logoBlack, $logoWhite];
       navButton = [$whitesmoke, $black];
       navButtonColor = [$black, $whitesmoke];
+      plus = [$logoWhite, $logoBlack];
       navScroll = true;
       break;
     case 'contact.php':
@@ -127,6 +136,7 @@ if (fullscreen) {
       searchIcon = [$logoBlack, $logoWhite];
       navButton = [$whitesmoke, $black];
       navButtonColor = [$black, $whitesmoke];
+      plus = [$logoWhite, $logoBlack];
       navScroll = true;
       break;
     case 'careers.php':
@@ -144,6 +154,7 @@ if (fullscreen) {
       searchIcon = [$logoBlack, $logoWhite, $logoWhite, $logoWhite, $logoWhite, $logoWhite, $logoBlack];
       navButton = [$whitesmoke, $black, $black, $black, $black, $whitesmoke];
       navButtonColor = [$black, $whitesmoke, $whitesmoke, $whitesmoke, $whitesmoke, $black];
+      plus = [$logoWhite, $logoBlack];
       navScroll = true;
       break;
     case 'home.php':
@@ -205,6 +216,7 @@ if (fullscreen) {
       searchIcon = [$logoBlack, $logoWhite];
       navButton = [$whitesmoke, $black];
       navButtonColor = [$black, $whitesmoke];
+      plus = [$logoWhite, $logoBlack];
       navScroll = true;
       break;
 
@@ -310,6 +322,11 @@ if (fullscreen) {
     if (navScroll) {
       tl.to(".nav__button", {
         backgroundColor: navButton[index], color: navButtonColor[index], immediateRender: false
+      }, "<")
+    }
+    if (navScroll) {
+      tl.to(".plus-nav", {
+        filter: plus[index], immediateRender: false
       }, "<")
     }
 

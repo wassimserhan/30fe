@@ -3,6 +3,7 @@ const body = document.getElementsByTagName('body')[0];
 const sideNav = document.querySelector('.nav__dropdown');
 const navLogo = document.querySelector('.nav__logo__black');
 
+
 // const addTint = document.querySelector('.body__hider');
 
 hamburger.addEventListener('click', menu);
@@ -40,7 +41,7 @@ function closeSideMenu() {
 
 
 
-// About Accordion
+// Mobile Dropdowns
 
 const accordionsAbout = document.querySelectorAll('.accordion-about');
 
@@ -88,7 +89,59 @@ accordionsAbout.forEach(accordion => {
       nav.classList.remove("nav--hidden");
     }
 
-
     lastScrollY = window.scrollY;
   });
 }
+
+//Desktop Dropdowns
+const plusExpertise = document.querySelector('.plus-expertise');
+const expertiseDropdown = document.querySelector('.nav__dropdown-grid--expertise');
+
+plusExpertise.addEventListener("click", function () {
+  expertiseDropdown.classList.toggle('nav__dropdown-grid--active');
+  plusExpertise.classList.toggle('plus-nav--active')
+})
+
+
+const plusSectors = document.querySelector('.plus-sectors');
+const sectorsDropdown = document.querySelector('.nav__dropdown-grid--sectors');
+
+plusSectors.addEventListener("click", function () {
+  sectorsDropdown.classList.toggle('nav__dropdown-grid--active');
+  plusSectors.classList.toggle('plus-nav--active');
+})
+
+window.addEventListener('resize', function (event) {
+  expertiseDropdown.classList.remove('nav__dropdown-grid--active');
+  plusExpertise.classList.remove('plus-nav--active');
+  sectorsDropdown.classList.remove('nav__dropdown-grid--active');
+  plusSectors.classList.remove('plus-nav--active');
+}, true);
+
+window.addEventListener("scroll", function () {
+  expertiseDropdown.classList.remove('nav__dropdown-grid--active');
+  plusExpertise.classList.remove('plus-nav--active');
+  sectorsDropdown.classList.remove('nav-expertise__grid--active');
+  plusSectors.classList.remove('plus-nav--active');
+}, true);
+
+
+
+// I'm using "click" but it works with any event
+document.addEventListener('click', event => {
+  const isClickInside = plusExpertise.contains(event.target)
+
+  if (!isClickInside) {
+    expertiseDropdown.classList.remove('nav__dropdown-grid--active');
+    plusExpertise.classList.remove('plus-nav--active');
+  }
+})
+
+document.addEventListener('click', event => {
+  const isClickInside = plusSectors.contains(event.target)
+
+  if (!isClickInside) {
+    sectorsDropdown.classList.remove('nav__dropdown-grid--active');
+    plusSectors.classList.remove('plus-nav--active');
+  }
+})

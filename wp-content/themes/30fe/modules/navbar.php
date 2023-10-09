@@ -50,49 +50,74 @@ global $template;
           alt="search icon">
       </section>
     </section>
-
-
-
-
-
-
-
-
-
   </section>
 
   <!-- Nav Items -->
   <section class="max-width nav__links__container">
     <ul class="nav__links">
-      <li class="nav__links__list" role="menuitem">
-        <a id="" class="nav__items nav__items--main nav-links" data-name="#"
-          href="<?php echo site_url('/about')?>">About</a>
+      <li class="" role="menuitem">
+        <a id="" class="nav__items" data-name="#" href="<?php echo site_url('/about')?>">About</a>
       </li>
-      <li class="nav__links__list" role="menuitem">
-        <a id="" class="nav__items nav__items--main nav-links" data-name="#"
-          href="<?php echo site_url('/team')?>">Team</a>
+      <li class="" role="menuitem">
+        <a id="" class="nav__items" data-name="#" href="<?php echo site_url('/team')?>">Team</a>
       </li>
-      <li class="nav__links__list" role="menuitem">
-        <a id="" class="nav__items nav__items--main nav-links" data-name="#"
-          href="<?php echo site_url('/expertise')?>">Expertise</a>
+      <li class="" role="menuitem">
+        <a id="" class="nav__items" data-name="#" href="<?php echo site_url('/expertise')?>">Expertise</a>
+        <img class="plus-nav plus-expertise" src="<?php echo get_template_directory_uri(); ?>/images/nav-arrow.svg"
+          alt="<?php echo get_bloginfo( 'name' ); ?> logo" title="<?php echo get_bloginfo( 'name' ); ?>" width="100%">
+      </li>
+      <li class="" role="menuitem">
+        <a id="" class="nav__items" data-name="#" href="<?php echo site_url('/sectors')?>">Sectors</a>
+        <img class="plus-nav plus-sectors" src="<?php echo get_template_directory_uri(); ?>/images/nav-arrow.svg"
+          alt="<?php echo get_bloginfo( 'name' ); ?> logo" title="<?php echo get_bloginfo( 'name' ); ?>" width="100%">
+      </li>
+      <li class="" role="menuitem">
+        <a id="" class="nav__items" data-name="#" href="<?php echo site_url('/insights')?>">Insights</a>
+      </li>
+      <li class="" role="menuitem">
+        <a id="" class="nav__items" data-name="#" href="<?php echo site_url('/contact')?>">Contact</a>
+      </li>
+      <li class="" role="menuitem">
+        <a id="" class="nav__items" data-name="#" href="<?php echo site_url('/careers')?>">Careers</a>
+      </li>
+    </ul>
+  </section>
 
-      </li>
-      <li class="nav__links__list" role="menuitem">
-        <a id="" class="nav__items nav__items--main nav-links" data-name="#"
-          href="<?php echo site_url('/sectors')?>">Sectors</a>
-      </li>
-      <li class="nav__links__list" role="menuitem">
-        <a id="" class="nav__items nav__items--main nav-links" data-name="#"
-          href="<?php echo site_url('/insights')?>">Insights</a>
-      </li>
-      <li class="nav__links__list" role="menuitem">
-        <a id="" class="nav__items nav__items--main nav-links" data-name="#"
-          href="<?php echo site_url('/contact')?>">Contact</a>
-      </li>
-      <li class="nav__links__list" role="menuitem">
-        <a id="" class="nav__items nav__items--main nav-links" data-name="#"
-          href="<?php echo site_url('/careers')?>">Careers</a>
-      </li>
+  <!-- Accordion Container -->
+  <section class="max-width">
+    <ul class="nav__dropdown-grid nav__dropdown-grid--expertise">
+      <?php 
+          $customQuery = new WP_Query(array(
+          'posts_per_page' => -1,
+          'post_type'=> 'Expertise'
+        ));
+
+        while ($customQuery->have_posts()): $customQuery->the_post();
+        ?>
+      <a class="nav__items nav-expertise__items" href="<?php echo the_permalink() ?>"
+        target="_self"><?php the_title() ?></a>
+      <?php endwhile ?>
+
+      <?php wp_reset_postdata() ?>
+    </ul>
+  </section>
+
+  <section class="max-width">
+    <ul class="nav__dropdown-grid nav__dropdown-grid--sectors">
+      <?php 
+          $customQuery = new WP_Query(array(
+          'posts_per_page' => -1,
+          'post_type'=> 'Industry'
+        ));
+
+        while ($customQuery->have_posts()): $customQuery->the_post();
+        ?>
+      <a class="nav__items nav-expertise__items" href="<?php echo the_permalink() ?>"
+        target="_self"><?php the_title() ?></a>
+      <?php endwhile ?>
+
+      <?php wp_reset_postdata() ?>
+
     </ul>
   </section>
 
@@ -102,17 +127,14 @@ global $template;
   <!-- Mobile Menu -->
   <section class="nav__dropdown hide-nav max-padding">
     <section class="nav__links__list">
-
-
-      <a class="nav__items--mobile nav__items--main nav-links" href="<?php echo site_url('/about')?>"
-        target="_self">About</a>
+      <a class="nav__items--mobile nav-links" href="<?php echo site_url('/about')?>" target="_self">About</a>
 
       <a class="nav__items--mobile nav-links" href="<?php echo site_url('/team')?>" target="_self">Team</a>
 
 
       <article class="accordion-about">
         <div class="accordion-about__wrapper">
-          <a class="nav__items--mobile nav__items--main nav-links" href="<?php echo site_url('/expertise')?>"
+          <a class="nav__items--mobile nav-links" href="<?php echo site_url('/expertise')?>"
             target="_self">Expertise</a>
           <div class="plus-nav"></div>
         </div>
@@ -136,8 +158,7 @@ global $template;
 
       <article class="accordion-about">
         <div class="accordion-about__wrapper">
-          <a class="nav__items--mobile nav__items--main nav-links" href="<?php echo site_url('/sectors')?>"
-            target="_self">Sectors</a>
+          <a class="nav__items--mobile nav-links" href="<?php echo site_url('/sectors')?>" target="_self">Sectors</a>
           <div class="plus-nav"></div>
         </div>
         <section class="accordion-about__content">

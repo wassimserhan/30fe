@@ -79,6 +79,8 @@ const scrollableButton = document.querySelector('.nav__button');
 const scrollableLogo = document.querySelector('.nav__logo');
 const searchBorder = document.querySelector(".search-overlay--desktop__wrapper");
 const searchIconDesktop = document.querySelector('.search-overlay--desktop__icon');
+const plus = document.querySelectorAll('.plus-nav');
+
 
 if (scrollableContent) {
 
@@ -137,11 +139,15 @@ if (scrollableContent) {
       searchIconDesktop.style.filter = `invert(${filterScrollInverse}%)`;
       searchBorder.style.borderColor = `rgb(${interpolatedColorText.join(', ')})`;
 
+      [...plus].forEach(item => {
+        item.style.filter = `invert(${filterScroll}%)`;
+      })
+
       NavItems.forEach(item => {
         item.style.color = `rgb(${interpolatedColorText.join(', ')})`
       })
 
-      console.log('Scrolled past the element.');
+
       // Perform any action you want when you scroll past the element
       hasPassed = true; // Set a flag to prevent further triggering
     }
@@ -149,7 +155,6 @@ if (scrollableContent) {
     // Function to check if the top of an element is above the viewport
     function isTopOfElementAboveViewport(element) {
       const rect = element.getBoundingClientRect();
-      console.log(rect)
       return rect.top < 0;
     }
 

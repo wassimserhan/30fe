@@ -30,7 +30,7 @@
 
         <section class="home__hero__buttons">
           <a href="<?php echo site_url('/submit-an-assignment')?>" target="_self"><button
-              class="home__hero__button">Work with Us</button></a>
+              class="home__hero__button home__hero__button__arrow">Work with Us</button></a>
           <a href="<?php echo site_url('/team')?>"><button class="home__hero__button home__hero__button--white">Learn
               More</button></a>
         </section>

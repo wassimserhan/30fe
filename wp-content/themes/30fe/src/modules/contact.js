@@ -1,15 +1,3 @@
-// import $ from 'jquery';
-
-// $('.contact__location__city').click(function () {
-//   $('section[id^=city]').hide(); //hide all
-//   var id = $(this).attr('id'); //get the id of the clicked button
-//   // var end = id.slice(-2);      //get last 2 character from id
-//   $('.contact__image__pin').hide();
-
-//   $('.contact__hero__maps').addClass(id).show(); //match the div with id ends with
-//   // $('.contact__image__pin').addClass(id).show();
-// });
-
 
 const mapLocation = document.querySelectorAll('.contact__location h3');
 var mapLocationArray = [...mapLocation];

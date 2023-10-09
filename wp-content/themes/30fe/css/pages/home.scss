@@ -43,11 +43,34 @@
     }
 
     &__button {
+      width: 182px;
+      display: flex;
       text-align: center;
       margin: 5px 24px 0 0;
+      justify-content: center;
+      gap: 5px;
       @include bp(phone) {
         width: 100%;
         margin: 1rem 0 0;
+      }
+    }
+
+    .home__hero__button__arrow {
+      &::after {
+        // max-width: 20px;
+        // width: 100%;
+        // height: 100%;
+        // margin: 0 auto;
+        // padding: 5px 0;
+        filter: invert(100%);
+
+        content: url('../images/arrow.svg');
+      }
+
+      &:hover {
+        &::after {
+          filter: invert(0%);
+        }
       }
     }
 

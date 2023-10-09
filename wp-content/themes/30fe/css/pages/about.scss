@@ -15,14 +15,12 @@
     &__video {
       width: 200px;
       position: absolute;
-      top: 48%;
-      right: 9%;
+      top: 6vw;
+      right: -2vw;
 
       @include bp(tablet) {
-        width: 215px;
-        position: absolute;
-        top: 140px;
-        right: -10px;
+        top: -16vw;
+        right: 8vw;
       }
 
       @include bp(phone) {
@@ -32,7 +30,7 @@
     }
 
     &__headline {
-      font-size: 12.5rem;
+      font-size: 15vw;
       font-weight: bold;
       line-height: 100%; /* 256px */
       letter-spacing: -0.5rem;
@@ -59,17 +57,17 @@
     }
 
     &__copy {
+      font-size: 2rem;
       color: $white;
-      max-width: 730px;
-      width: 100%;
+      max-width: 500px;
+      width: 80%;
       position: relative;
 
       @include bp(tablet) {
-        font-size: 2rem;
+        font-size: 1.7rem;
       }
 
       @include bp(phone) {
-        font-size: 1.6rem;
       }
     }
   }
