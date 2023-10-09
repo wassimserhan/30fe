@@ -132,11 +132,10 @@ while( have_rows('positions') ) : the_row();
           $title = get_the_title($item);
           $location = get_field('location', $item);
           $type = get_field('type', $item);
-          $description = get_field('description', $item);
-          $cta = get_field('cta', $item);
+          $bamboo_link = get_field('bamboo_link', $item);
         ?>
 
-      <a href="#">
+      <a href="<?php echo $bamboo_link; ?>">
         <article class="careers__positions">
           <div class="careers__positions__wrapper">
             <p class="careers__positions__intro">
@@ -152,7 +151,6 @@ while( have_rows('positions') ) : the_row();
               src="https://wassims.sg-host.com/wp-content/themes/30fe/images/arrow.svg" alt="arrow" width="20"
               height="20" tabindex="0">
           </div>
-
         </article>
       </a>
       <?php endforeach; ?></p>
