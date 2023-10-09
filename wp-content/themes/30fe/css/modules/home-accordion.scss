@@ -120,7 +120,6 @@
         overflow: hidden;
         color: $black;
         padding: 2rem;
-        // height: 600px;
       }
 
       &__headline {
@@ -159,12 +158,16 @@
     overflow: hidden;
     color: $black;
     padding: 20px 64px;
-    opacity: 0;
-    transition: opacity 0.22s ease;
+    visibility: hidden;
+    transition: visibility 0.22s ease;
+    height: 100vh;
+    @include bp(widescreen) {
+      height: 60vh;
+    }
 
     &.active {
-      opacity: 1;
-      transition: opacity 0.22s ease;
+      visibility: visible;
+      transition: visibility 0.22s ease;
     }
   }
 }

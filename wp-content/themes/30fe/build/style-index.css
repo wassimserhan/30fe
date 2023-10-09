@@ -1032,7 +1032,7 @@ button.splide__arrow:disabled {
   color: #f2f1ed;
   margin: 0;
 }
-@media (min-width: 1920px) {
+@media (min-width: 1720px) {
   .scroll {
     font-size: 300px;
   }
@@ -2667,12 +2667,18 @@ body.admin-bar .search-overlay--desktop {
   overflow: hidden;
   color: #1d1c1d;
   padding: 20px 64px;
-  opacity: 0;
-  transition: opacity 0.22s ease;
+  visibility: hidden;
+  transition: visibility 0.22s ease;
+  height: 100vh;
+}
+@media (min-width: 1300px) {
+  .accordion__body {
+    height: 60vh;
+  }
 }
 .accordion__body.active {
-  opacity: 1;
-  transition: opacity 0.22s ease;
+  visibility: visible;
+  transition: visibility 0.22s ease;
 }
 
 .item {
