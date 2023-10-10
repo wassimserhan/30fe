@@ -136,7 +136,7 @@ while( have_rows('positions') ) : the_row();
         ?>
 
 
-      <section class="careers__list">
+      <section class="careers__openings">
         <a href="<?php echo $bamboo_link; ?>">
           <article class="careers__positions">
             <div class="careers__positions__wrapper">

@@ -4675,10 +4675,10 @@ body.admin-bar .search-overlay--desktop {
   padding-bottom: 10px;
 }
 
-.careers__list {
+.careers__openings {
   border-top: 2px solid #ffffff;
 }
-.careers__list:last-child {
+.careers__openings:last-child {
   border-bottom: 2px solid #ffffff;
 }
 
