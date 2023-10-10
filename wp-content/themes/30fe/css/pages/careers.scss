@@ -155,20 +155,24 @@
   }
 }
 
+.careers__list {
+  border-top: 2px solid $white;
+
+  &:last-child {
+    border-bottom: 2px solid $white;
+  }
+}
+
 .careers__positions {
   width: 100%;
   overflow: hidden;
   color: $white;
-  // border-top: 2px solid $white;
+
   background-color: $black;
 
-  &:last-of-type {
-    border-bottom: 2px solid $white;
-  }
-
-  &:first-of-type {
-    border-top: 2px solid $white;
-  }
+  // &:first-of-type {
+  //   border-top: 2px solid $white;
+  // }
 
   &__title {
     font-size: 0.8rem;

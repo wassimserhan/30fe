@@ -135,25 +135,28 @@ while( have_rows('positions') ) : the_row();
           $bamboo_link = get_field('bamboo_link', $item);
         ?>
 
-      <a href="<?php echo $bamboo_link; ?>">
-        <article class="careers__positions">
-          <div class="careers__positions__wrapper">
-            <p class="careers__positions__intro">
-              <?php echo $title;?>
-            </p>
-            <p class="careers__positions__intro">
-              <?php echo $location;?>
-            </p>
-            <p class="careers__positions__intro">
-              <?php echo $type;?>
-            </p>
-            <img class="careers__positions__arrow"
-              src="https://wassims.sg-host.com/wp-content/themes/30fe/images/arrow.svg" alt="arrow" width="20"
-              height="20" tabindex="0">
-          </div>
-        </article>
-      </a>
-      <?php endforeach; ?></p>
+
+      <section class="careers__list">
+        <a href="<?php echo $bamboo_link; ?>">
+          <article class="careers__positions">
+            <div class="careers__positions__wrapper">
+              <p class="careers__positions__intro">
+                <?php echo $title;?>
+              </p>
+              <p class="careers__positions__intro">
+                <?php echo $location;?>
+              </p>
+              <p class="careers__positions__intro">
+                <?php echo $type;?>
+              </p>
+              <img class="careers__positions__arrow"
+                src="https://wassims.sg-host.com/wp-content/themes/30fe/images/arrow.svg" alt="arrow" width="20"
+                height="20" tabindex="0">
+            </div>
+          </article>
+        </a>
+      </section>
+      <?php endforeach; ?>
     </section>
   </section>
   <?php endwhile; endif; ?>

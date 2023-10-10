@@ -16,19 +16,15 @@
 <footer class="footer black-bg">
   <section class="scroll-section">
     <article class="scroll-text scroll-container">
-      <p class="scroll ">We are Engineers &mdash; Scientists &mdash; Experts &mdash; Truth Seekers &mdash;
-        Detectives &mdash; Problem Solvers &mdash; Reporters</p>
+      <p class="scroll">We are Engineers &mdash; Scientists &mdash; Experts &mdash; Truth Seekers &mdash;
+        Detectives &mdash; Problem Solvers &mdash; Reporters &mdash;</p>
+
     </article>
   </section>
+
+
+
   <section class="max-width footer__padding">
-
-
-
-
-
-
-
-    <hr>
 
     <div class="footer__legal">
       <p class="footer__copyright">&copy;

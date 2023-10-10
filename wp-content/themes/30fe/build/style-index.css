@@ -2422,7 +2422,7 @@ body.admin-bar .search-overlay--desktop {
 }
 .testimonials__section {
   width: 50%;
-  padding-left: 8rem;
+  padding: 0 8rem;
 }
 @media (max-width: 479px) {
   .testimonials__section {
@@ -3119,7 +3119,7 @@ body.admin-bar .search-overlay--desktop {
 .team__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
+  gap: 2rem;
 }
 @media (max-width: 768px) {
   .team__grid {
@@ -4088,9 +4088,9 @@ body.admin-bar .search-overlay--desktop {
 }
 .single-post__date {
   color: #ffffff;
-  font-size: 1.25rem;
+  font-size: 0.75rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 150%;
   padding: 0 0 20px;
 }
@@ -4160,7 +4160,7 @@ body.admin-bar .search-overlay--desktop {
   letter-spacing: normal;
 }
 .single-blog__single-post > p {
-  font-size: 15px;
+  font-size: 1.25rem;
   padding: 10px 0;
 }
 .single-blog__wrapper {
@@ -4675,17 +4675,18 @@ body.admin-bar .search-overlay--desktop {
   padding-bottom: 10px;
 }
 
+.careers__list {
+  border-top: 2px solid #ffffff;
+}
+.careers__list:last-child {
+  border-bottom: 2px solid #ffffff;
+}
+
 .careers__positions {
   width: 100%;
   overflow: hidden;
   color: #ffffff;
   background-color: #1d1c1d;
-}
-.careers__positions:last-of-type {
-  border-bottom: 2px solid #ffffff;
-}
-.careers__positions:first-of-type {
-  border-top: 2px solid #ffffff;
 }
 .careers__positions__title {
   font-size: 0.8rem;

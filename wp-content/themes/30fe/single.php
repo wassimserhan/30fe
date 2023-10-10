@@ -17,7 +17,9 @@
                 </p>
               </section>
               <h1 class="single-post__headline"><?php the_title() ?></h1>
+              <?php if($subtitle) :?>
               <p class="single-post__copy"><?php echo $subtitle ?></p>
+              <?php endif ?>
               <p class="single-post__date"><?php echo get_the_date( 'F j, Y' ); ?></p>
             </article>
 

@@ -24,7 +24,7 @@
     </p>
     <p class="insights__card__label__date"><?php echo get_the_date( 'F j, Y' ); ?></p>
   </a>
-  <p class="insights__card__more"><a href="<?php the_permalink() ?>">Read more <img
+  <!-- <p class="insights__card__more"><a href="<?php the_permalink() ?>">Read more <img
         src="<?php echo get_template_directory_uri(); ?>/images/chevron.svg" width="20" height="20"
-        alt="read more" /></a></p>
+        alt="read more" /></a></p> -->
 </article>
