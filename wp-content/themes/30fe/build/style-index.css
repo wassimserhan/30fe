@@ -2416,7 +2416,7 @@ body.admin-bar .search-overlay--desktop {
   justify-content: space-between;
   gap: 50px;
 }
-@media (max-width: 479px) {
+@media (max-width: 1024px) {
   .testimonials__wrapper {
     display: block;
   }
@@ -2425,7 +2425,7 @@ body.admin-bar .search-overlay--desktop {
   width: 50%;
   padding: 0 8rem;
 }
-@media (max-width: 479px) {
+@media (max-width: 1024px) {
   .testimonials__section {
     padding: 8rem 2rem;
     width: 100%;
@@ -2434,7 +2434,7 @@ body.admin-bar .search-overlay--desktop {
 .testimonials__contact__section {
   width: 50%;
 }
-@media (max-width: 479px) {
+@media (max-width: 1024px) {
   .testimonials__contact__section {
     margin-top: 2rem;
     width: 100%;
