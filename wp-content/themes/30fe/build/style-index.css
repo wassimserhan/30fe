@@ -1014,53 +1014,54 @@ button.splide__arrow:disabled {
   transform: rotate(180deg);
 }
 
-.scroll-section {
-  position: relative;
-}
-
-.scroll-container {
-  display: flex;
-  flex-direction: row;
-}
-
-.scroll {
+.ticker-wrap {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
   white-space: nowrap;
+  position: static;
+  bottom: 0;
+  background-color: #1d1c1d;
+}
+
+.ticker {
+  display: inline-block;
+  margin-top: 5px;
+  animation: marquee 150s linear infinite;
+  padding: 3rem 0;
+}
+
+.item-collection-1 {
+  position: relative;
+  left: 0%;
+  animation: swap 150s linear infinite;
+}
+
+.item {
+  display: inline-block;
+  padding: 0 1rem;
   font-size: 200px;
   font-style: normal;
   font-weight: 700;
   letter-spacing: -12.8px;
   color: #f2f1ed;
-  margin: 0;
-}
-@media (min-width: 1720px) {
-  .scroll {
-    font-size: 300px;
-  }
 }
 
-.scroll-text {
-  overflow: hidden;
-  width: 100%;
-}
-
-.scroll-text * {
-  display: table;
-  position: relative;
-  /* animation properties */
-  transform: translateX(100%);
-  animation: my-animation 35s linear infinite;
-}
-
-/* for Firefox */
-/* for Chrome */
-@keyframes my-animation {
+/* Transition */
+@keyframes marquee {
   0% {
-    left: 100%;
     transform: translateX(0);
   }
   100% {
-    left: 0;
     transform: translateX(-100%);
+  }
+}
+@keyframes swap {
+  0%, 50% {
+    left: 0%;
+  }
+  50.01%, 100% {
+    left: 100%;
   }
 }
 .frm_style_formidable-style.with_frm_style .frm_error_style {
@@ -4223,7 +4224,7 @@ body.admin-bar .search-overlay--desktop {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 40vw;
+  height: 90vh;
   position: relative;
 }
 @media (max-width: 768px) {

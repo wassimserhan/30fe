@@ -14,31 +14,57 @@
 
 
 <footer class="footer black-bg">
-  <section class="scroll-section">
+
+  <div class="ticker-wrap">
+    <div class="ticker">
+      <span class="item-collection-1">
+        <span class="item">We are Engineers &mdash; Scientists &mdash; Experts &mdash; Truth Seekers &mdash;
+          Detectives &mdash; Problem Solvers &mdash; Reporters</span>
+        <span class="item">We are Engineers &mdash; Scientists &mdash; Experts &mdash; Truth Seekers &mdash;
+          Detectives &mdash; Problem Solvers &mdash; Reporters</span>
+        <span class="item">We are Engineers &mdash; Scientists &mdash; Experts &mdash; Truth Seekers &mdash;
+          Detectives &mdash; Problem Solvers &mdash; Reporters</span>
+        <span class="item">We are Engineers &mdash; Scientists &mdash; Experts &mdash; Truth Seekers &mdash;
+          Detectives &mdash; Problem Solvers &mdash; Reporters</span>
+      </span>
+      <span class="item-collection-2">
+        <span class="item">We are Engineers &mdash; Scientists &mdash; Experts &mdash; Truth Seekers &mdash;
+          Detectives &mdash; Problem Solvers &mdash; Reporters</span>
+        <span class="item">We are Engineers &mdash; Scientists &mdash; Experts &mdash; Truth Seekers &mdash;
+          Detectives &mdash; Problem Solvers &mdash; Reporters</span>
+        <span class="item">We are Engineers &mdash; Scientists &mdash; Experts &mdash; Truth Seekers &mdash;
+          Detectives &mdash; Problem Solvers &mdash; Reporters</span>
+        <span class="item">We are Engineers &mdash; Scientists &mdash; Experts &mdash; Truth Seekers &mdash;
+          Detectives &mdash; Problem Solvers &mdash; Reporters</span>
+      </span>
+    </div>
+    <div>
+
+      <!-- <section class="scroll-section">
     <article class="scroll-text scroll-container">
       <p class="scroll">We are Engineers &mdash; Scientists &mdash; Experts &mdash; Truth Seekers &mdash;
         Detectives &mdash; Problem Solvers &mdash; Reporters</p>
     </article>
-  </section>
+  </section> -->
 
 
 
-  <section class="max-width footer__padding">
+      <section class="max-width footer__padding">
 
-    <div class="footer__legal">
-      <p class="footer__copyright">&copy;
-        <span id="copyright">
-          <script>
-          document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
-          </script>
-        </span>
-        &nbsp; 30 Forensic engineering.&nbsp; All Rights Reserved.
-      </p>
+        <div class="footer__legal">
+          <p class="footer__copyright">&copy;
+            <span id="copyright">
+              <script>
+              document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
+              </script>
+            </span>
+            &nbsp; 30 Forensic engineering.&nbsp; All Rights Reserved.
+          </p>
 
-    </div>
+        </div>
 
 
-  </section>
+      </section>
 
 </footer>
 
