@@ -1,26 +1,22 @@
-.TinyProgressBar_module_tinyBarSVG__f8a567ff {
-  display: none !important;
-}
-
 .about {
   font-family: 'Inter', sans-serif;
 
   &__hero {
     &__wrapper {
       position: relative;
-      @include bp(phone) {
-        position: absolute;
-      }
+      // @include bp(phone) {
+      //   position: absolute;
+      // }
     }
     &__video {
       width: 200px;
       position: absolute;
       top: 6vw;
       right: -2vw;
+      z-index: 1;
 
       @include bp(tablet) {
-        top: -16vw;
-        right: 8vw;
+        position: initial;
       }
 
       @include bp(phone) {
@@ -37,6 +33,12 @@
       color: $white;
       margin: 0;
       padding-bottom: 32px;
+      z-index: 2;
+      position: relative;
+
+      @include bp(laptop) {
+        font-size: 14vw;
+      }
 
       @include bp(tablet) {
         padding-bottom: 10px;
@@ -51,9 +53,9 @@
       //   font-size: 4rem;
       // }
 
-      @include bp(phone_small) {
-        font-size: 4rem;
-      }
+      // @include bp(phone_small) {
+      //   font-size: 4rem;
+      // }
     }
 
     &__copy {

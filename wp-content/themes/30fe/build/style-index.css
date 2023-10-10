@@ -2835,31 +2835,22 @@ body.admin-bar .search-overlay--desktop {
   }
 }
 
-.TinyProgressBar_module_tinyBarSVG__f8a567ff {
-  display: none !important;
-}
-
 .about {
   font-family: "Inter", sans-serif;
 }
 .about__hero__wrapper {
   position: relative;
 }
-@media (max-width: 479px) {
-  .about__hero__wrapper {
-    position: absolute;
-  }
-}
 .about__hero__video {
   width: 200px;
   position: absolute;
   top: 6vw;
   right: -2vw;
+  z-index: 1;
 }
 @media (max-width: 768px) {
   .about__hero__video {
-    top: -16vw;
-    right: 8vw;
+    position: initial;
   }
 }
 @media (max-width: 479px) {
@@ -2876,6 +2867,13 @@ body.admin-bar .search-overlay--desktop {
   color: #ffffff;
   margin: 0;
   padding-bottom: 32px;
+  z-index: 2;
+  position: relative;
+}
+@media (max-width: 1024px) {
+  .about__hero__headline {
+    font-size: 14vw;
+  }
 }
 @media (max-width: 768px) {
   .about__hero__headline {
@@ -2885,11 +2883,6 @@ body.admin-bar .search-overlay--desktop {
     letter-spacing: -0.12rem;
     z-index: 3;
     position: relative;
-  }
-}
-@media (max-width: 375px) {
-  .about__hero__headline {
-    font-size: 4rem;
   }
 }
 .about__hero__copy {
@@ -4230,14 +4223,13 @@ body.admin-bar .search-overlay--desktop {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 70vw;
+  height: 40vw;
   position: relative;
   background-position: bottom;
 }
 @media (max-width: 768px) {
   .contact__hero__maps {
-    height: 170vw;
-    background-position: -100vw -60vw;
+    height: 80vw;
   }
 }
 .contact__image {
@@ -4284,15 +4276,20 @@ body.admin-bar .search-overlay--desktop {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
   background-color: #1d1c1d;
-  padding: 64px;
+  padding: 2rem;
   position: absolute;
   bottom: 0;
   width: 100%;
   align-items: baseline;
+  place-items: center;
 }
 @media (max-width: 1024px) {
   .contact__locations {
-    place-items: left;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  }
+}
+@media (max-width: 768px) {
+  .contact__locations {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -4306,7 +4303,6 @@ body.admin-bar .search-overlay--desktop {
 }
 .contact__location__city {
   cursor: pointer;
-  padding-bottom: 15px;
   font-size: 1.9rem;
 }
 .contact__location h2 h2:nth-of-type(0) {
