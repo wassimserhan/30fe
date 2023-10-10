@@ -59,7 +59,7 @@
 
     <!-- Related Expert -->
     <?php if(get_field ( 'expert' ) ) : ?>
-    <section class="single-blog__wrapper fullscreen">
+    <section class="single-blog__wrapper">
       <?php $expert_count = count(get_field('expert')); 
     
       if($expert_count < 2) { ?>
