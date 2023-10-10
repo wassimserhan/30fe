@@ -19,23 +19,23 @@
     <div class="ticker">
       <span class="item-collection-1">
         <span class="item">We are Engineers &mdash; Scientists &mdash; Experts &mdash; Truth Seekers &mdash;
-          Detectives &mdash; Problem Solvers &mdash; Reporters</span>
+          Detectives &mdash; Problem Solvers &mdash; Reporters &mdash;</span>
         <span class="item">We are Engineers &mdash; Scientists &mdash; Experts &mdash; Truth Seekers &mdash;
-          Detectives &mdash; Problem Solvers &mdash; Reporters</span>
+          Detectives &mdash; Problem Solvers &mdash; Reporters &mdash;</span>
         <span class="item">We are Engineers &mdash; Scientists &mdash; Experts &mdash; Truth Seekers &mdash;
-          Detectives &mdash; Problem Solvers &mdash; Reporters</span>
+          Detectives &mdash; Problem Solvers &mdash; Reporters &mdash;</span>
         <span class="item">We are Engineers &mdash; Scientists &mdash; Experts &mdash; Truth Seekers &mdash;
-          Detectives &mdash; Problem Solvers &mdash; Reporters</span>
+          Detectives &mdash; Problem Solvers &mdash; Reporters &mdash;</span>
       </span>
       <span class="item-collection-2">
         <span class="item">We are Engineers &mdash; Scientists &mdash; Experts &mdash; Truth Seekers &mdash;
-          Detectives &mdash; Problem Solvers &mdash; Reporters</span>
+          Detectives &mdash; Problem Solvers &mdash; Reporters &mdash;</span>
         <span class="item">We are Engineers &mdash; Scientists &mdash; Experts &mdash; Truth Seekers &mdash;
-          Detectives &mdash; Problem Solvers &mdash; Reporters</span>
+          Detectives &mdash; Problem Solvers &mdash; Reporters &mdash;</span>
         <span class="item">We are Engineers &mdash; Scientists &mdash; Experts &mdash; Truth Seekers &mdash;
-          Detectives &mdash; Problem Solvers &mdash; Reporters</span>
+          Detectives &mdash; Problem Solvers &mdash; Reporters &mdash;</span>
         <span class="item">We are Engineers &mdash; Scientists &mdash; Experts &mdash; Truth Seekers &mdash;
-          Detectives &mdash; Problem Solvers &mdash; Reporters</span>
+          Detectives &mdash; Problem Solvers &mdash; Reporters &mdash;</span>
       </span>
     </div>
     <div>

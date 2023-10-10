@@ -1027,14 +1027,14 @@ button.splide__arrow:disabled {
 .ticker {
   display: inline-block;
   margin-top: 5px;
-  animation: marquee 150s linear infinite;
+  animation: marquee 250s linear infinite;
   padding: 3rem 0;
 }
 
 .item-collection-1 {
   position: relative;
   left: 0%;
-  animation: swap 150s linear infinite;
+  animation: swap 250s linear infinite;
 }
 
 .item {
@@ -1043,7 +1043,7 @@ button.splide__arrow:disabled {
   font-size: 200px;
   font-style: normal;
   font-weight: 700;
-  letter-spacing: -12.8px;
+  letter-spacing: -5.9px;
   color: #f2f1ed;
 }
 
