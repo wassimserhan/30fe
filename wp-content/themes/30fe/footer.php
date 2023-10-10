@@ -17,8 +17,7 @@
   <section class="scroll-section">
     <article class="scroll-text scroll-container">
       <p class="scroll">We are Engineers &mdash; Scientists &mdash; Experts &mdash; Truth Seekers &mdash;
-        Detectives &mdash; Problem Solvers &mdash; Reporters &mdash;</p>
-
+        Detectives &mdash; Problem Solvers &mdash; Reporters</p>
     </article>
   </section>
 

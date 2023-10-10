@@ -79,6 +79,7 @@ const scrollableButton = document.querySelector('.nav__button');
 const scrollableLogo = document.querySelector('.nav__logo');
 const searchBorder = document.querySelector(".search-overlay--desktop__wrapper");
 const searchIconDesktop = document.querySelector('.search-overlay--desktop__icon');
+const plus = document.querySelectorAll('.plus-nav');
 const scrollText2 = document.getElementById("banner-text");
 
 
@@ -140,6 +141,10 @@ if (scrollableContent) {
       scrollableLogo.style.filter = `invert(${filterScroll}%)`;
       searchIconDesktop.style.filter = `invert(${filterScrollInverse}%)`;
       searchBorder.style.borderColor = `rgb(${interpolatedColorText.join(', ')})`;
+
+      [...plus].forEach(item => {
+        item.style.filter = `invert(${filterScroll}%)`;
+      })
 
       NavItems.forEach(item => {
         item.style.color = `rgb(${interpolatedColorText.join(', ')})`
