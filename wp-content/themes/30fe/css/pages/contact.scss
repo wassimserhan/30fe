@@ -196,6 +196,11 @@
   top: 25vw;
   background-image: url('/images/maps/orange-pin.svg');
   background-repeat: no-repeat;
+  @include bp(laptop) {
+    left: 35vw;
+    top: 31vw;
+  }
+
   @include bp(tablet) {
     left: 35vw;
     top: 31vw;
@@ -216,9 +221,20 @@
   top: 20vw;
   background-image: url('/images/maps/green-pin.svg');
   background-repeat: no-repeat;
+
+  @include bp(largescreen) {
+    left: 41vw;
+    top: 22vw;
+  }
+
   @include bp(tablet) {
     left: 55vw;
     top: 27vw;
+  }
+
+  @include bp(phone) {
+    left: 67vw;
+    top: 31vw;
   }
 }
 
