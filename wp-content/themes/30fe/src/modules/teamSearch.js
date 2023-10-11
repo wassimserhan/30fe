@@ -35,35 +35,64 @@ if (input) {
   input.addEventListener('keyup', teamFilter);
   function teamFilter() {
 
-    var filter, cards, cardContainer, title, i;
+    var filter, cardContainerLeadership, cardContainerExperts, cardContainerSupport, title, i;
     filter = input.value.toUpperCase();
-    cardContainer = document.getElementById("team");
-    cards = cardContainer.getElementsByClassName("team__card");
+
+    cardContainerLeadership = document.getElementById("leadership");
+    cardContainerExperts = document.getElementById("experts");
+    cardContainerSupport = document.getElementById("support");
+
+    cardsLeadership = cardContainerLeadership.getElementsByClassName("team__card");
+    cardsExperts = cardContainerExperts.getElementsByClassName("team__card");
+    cardsSupport = cardContainerSupport.getElementsByClassName("team__card");
+
     teamRoles = document.querySelectorAll('.team__roles');
 
 
 
-    for (i = 0; i < cards.length; i++) {
-      title = cards[i].querySelector(".team__card__name");
+    for (i = 0; i < cardsLeadership.length; i++) {
+      title = cardsLeadership[i].querySelector(".team__card__name");
       if (title.innerText.toUpperCase().indexOf(filter) > -1) {
-        cards[i].style.display = "";
+        cardsLeadership[i].style.display = "";
         [...teamRoles].forEach(item => {
           item.style.display = "none"
         })
-
       } else {
-        cards[i].style.display = "none";
+        cardsLeadership[i].style.display = "none";
 
       }
-
-
     }
 
 
-  }
-} else {
+    for (i = 0; i < cardsExperts.length; i++) {
+      title = cardsExperts[i].querySelector(".team__card__name");
+      if (title.innerText.toUpperCase().indexOf(filter) > -1) {
+        cardsExperts[i].style.display = "";
+        [...teamRoles].forEach(item => {
+          item.style.display = "none"
+        })
+      } else {
+        cardsExperts[i].style.display = "none";
 
+      }
+    }
+
+    for (i = 0; i < cardsSupport.length; i++) {
+      title = cardsSupport[i].querySelector(".team__card__name");
+      if (title.innerText.toUpperCase().indexOf(filter) > -1) {
+        cardsSupport[i].style.display = "";
+        [...teamRoles].forEach(item => {
+          item.style.display = "none"
+        })
+      } else {
+        cardsSupport[i].style.display = "none";
+
+      }
+    }
+
+  }
 }
+
 
 //Search Filter
 
@@ -129,32 +158,69 @@ function expertiseFilter() {
 
 
   expertiseList.forEach(function (item) {
-    var filter, cards, cardContainer, i;
+    var filter, cardsLeadership, cardsExperts, cardsSupport, cardContainerLeadership, cardContainerExperts, cardContainerSupport, i;
 
     item.addEventListener('click', (e) => {
       filter = e.target.textContent.toUpperCase();
-      cardContainer = document.getElementById("team");
-      cards = cardContainer.getElementsByClassName("team__card");
+      cardContainerLeadership = document.getElementById("leadership");
+      cardContainerExperts = document.getElementById("experts");
+      cardContainerSupport = document.getElementById("support");
+
+      cardsLeadership = cardContainerLeadership.getElementsByClassName("team__card");
+      cardsExperts = cardContainerExperts.getElementsByClassName("team__card");
+      cardsSupport = cardContainerSupport.getElementsByClassName("team__card");
       teamRoles = document.querySelectorAll('.team__roles');
-      for (i = 0; i < cards.length; i++) {
 
-        titleExpertise = cards[i].querySelector(".team__card__expertise");
 
+      for (i = 0; i < cardsLeadership.length; i++) {
+        titleExpertise = cardsLeadership[i].querySelector(".team__card__expertise");
         if (filter == "ALL EXPERTISE") {
-          cards[i].style.display = "block";
+          cardsLeadership[i].style.display = "block";
           [...teamRoles].forEach(item => {
             item.style.display = "block"
           })
         } else if (titleExpertise.innerText.toUpperCase().indexOf(filter) > -1) {
-          cards[i].style.display = "block";
+          cardsLeadership[i].style.display = "block";
           [...teamRoles].forEach(item => {
             item.style.display = "none"
           })
         } else {
-          cards[i].style.display = "none";
+          cardsLeadership[i].style.display = "none";
         }
+      }
 
+      for (i = 0; i < cardsExperts.length; i++) {
+        titleExpertise = cardsExperts[i].querySelector(".team__card__expertise");
+        if (filter == "ALL EXPERTISE") {
+          cardsExperts[i].style.display = "block";
+          [...teamRoles].forEach(item => {
+            item.style.display = "block"
+          })
+        } else if (titleExpertise.innerText.toUpperCase().indexOf(filter) > -1) {
+          cardsExperts[i].style.display = "block";
+          [...teamRoles].forEach(item => {
+            item.style.display = "none"
+          })
+        } else {
+          cardsExperts[i].style.display = "none";
+        }
+      }
 
+      for (i = 0; i < cardsSupport.length; i++) {
+        titleExpertise = cardsSupport[i].querySelector(".team__card__expertise");
+        if (filter == "ALL EXPERTISE") {
+          cardsSupport[i].style.display = "block";
+          [...teamRoles].forEach(item => {
+            item.style.display = "block"
+          })
+        } else if (titleExpertise.innerText.toUpperCase().indexOf(filter) > -1) {
+          cardsSupport[i].style.display = "block";
+          [...teamRoles].forEach(item => {
+            item.style.display = "none"
+          })
+        } else {
+          cardsSupport[i].style.display = "none";
+        }
       }
 
     }

@@ -3114,6 +3114,7 @@ body.admin-bar .search-overlay--desktop {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;
+  padding-bottom: 2rem;
 }
 @media (max-width: 768px) {
   .team__grid {
@@ -4428,7 +4429,7 @@ body.admin-bar .search-overlay--desktop {
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDgwIDEwODAiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojMDBjZTc5O3N0cm9rZS13aWR0aDowcHg7fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0ibTU2MC45NywxMzUuNzNjODYuODksNS44MywxNjkuMjUsNDkuMTQsMjIwLjUxLDE0MS4wNiw3LjU4LDEzLjYsMzQuODgsNjQuNzUsMzcuMzcsMTMxLjg5LDMuMDgsODIuOTgtMzYuMzQsMTQ2LjAyLTkwLjQxLDIzNS4wMy0xNS4yNCwyNS4wOS0xMS4zMSwxNS42My01Mi44MSw3OS4yMi04LjgsMTMuNDgtNDMuOTUsNjcuNDktODkuNzgsMTQyLjYtMTguOTUsMzEuMDUtMzUsNTcuOTgtNDcuNTMsNzkuMjItMjQuMjktMzcuMjQtNDQuMTgtNjguMS01OC4wOS04OS43OC0zOS44NC02Mi4wNy03MC41LTExMC44OS0xMDAuMzUtMTU4LjQ0LTM0LjI0LTU0LjU1LTUxLjM2LTgxLjgyLTUyLjgxLTg0LjUtMjguMi01MS45Mi03Ni44My0xNDEuNDQtNjMuOTUtMjMyLjgxLDE4Ljc2LTEzMy4wMSwxNjUuMTQtMjUyLjM5LDI5Ny44Ni0yNDMuNDhaIi8+PC9zdmc+);
   background-repeat: no-repeat;
 }
-@media (min-width: 1720px) {
+@media (min-width: 1728px) {
   #vancouver-pin {
     left: 41vw;
     top: 22vw;
