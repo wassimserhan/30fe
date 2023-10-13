@@ -14,10 +14,16 @@ $(".accordion__item").on("mouseover", function () {
 
 //Mobile Accordion
 
-const items = gsap.utils.toArray(".item");
+const items = gsap.utils.toArray(".tab");
 let currentItem = null;
+const firstTab = document.querySelector(".tab");
+
+
+
 
 items.forEach((e, i) => {
+  firstTab.children[1].style.height = "auto";
+
   const content = e.querySelector(".content");
   const t = gsap.to(content, {
     height: "auto",
@@ -27,6 +33,7 @@ items.forEach((e, i) => {
   e._accordionTween = t;
 
   e.addEventListener("click", () => {
+    firstTab.children[1].style.height = "";
     if (currentItem !== null) {
       items[currentItem].classList.toggle("active");
       if (currentItem === i) {
@@ -40,5 +47,4 @@ items.forEach((e, i) => {
     currentItem = i;
   });
 });
-
 

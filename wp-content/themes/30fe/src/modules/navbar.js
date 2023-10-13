@@ -97,18 +97,22 @@ accordionsAbout.forEach(accordion => {
 const plusExpertise = document.querySelector('.plus-expertise');
 const expertiseDropdown = document.querySelector('.nav__dropdown-grid--expertise');
 
-plusExpertise.addEventListener("click", function () {
+plusExpertise.addEventListener("mouseover", function () {
   expertiseDropdown.classList.toggle('nav__dropdown-grid--active');
-  plusExpertise.classList.toggle('plus-nav--active')
+  plusExpertise.classList.toggle('plus-nav--active');
+  sectorsDropdown.classList.remove('nav__dropdown-grid--active');
+  plusSectors.classList.remove('plus-nav--active');
 })
 
 
 const plusSectors = document.querySelector('.plus-sectors');
 const sectorsDropdown = document.querySelector('.nav__dropdown-grid--sectors');
 
-plusSectors.addEventListener("click", function () {
+plusSectors.addEventListener("mouseover", function () {
   sectorsDropdown.classList.toggle('nav__dropdown-grid--active');
   plusSectors.classList.toggle('plus-nav--active');
+  expertiseDropdown.classList.remove('nav__dropdown-grid--active');
+  plusExpertise.classList.remove('plus-nav--active');
 })
 
 window.addEventListener('resize', function (event) {

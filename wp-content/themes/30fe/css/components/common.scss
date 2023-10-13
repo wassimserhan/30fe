@@ -136,13 +136,13 @@ p {
 }
 
 .full-height {
-  min-height: 100vh;
+  min-height: 82vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  // @include bp(laptop) {
-  //   min-height: auto;
-  // }
+  @include bp(largescreen) {
+    min-height: 50vh;
+  }
 }
 
 .blue {
@@ -155,6 +155,10 @@ p {
 
 .green {
   color: $green !important;
+}
+
+.whitesmoke {
+  color: $whitesmoke !important;
 }
 
 .black-bg {
@@ -197,7 +201,8 @@ img {
 
 .max-padding {
   padding: 8rem;
-  @include bp(tablet) {
+
+  @include bp(laptop) {
     padding: 8rem 1.5rem;
   }
 }

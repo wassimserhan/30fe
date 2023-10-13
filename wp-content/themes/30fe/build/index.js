@@ -3974,9 +3974,11 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(".accordion__item").on("mouseover"
 
 //Mobile Accordion
 
-const items = gsap.utils.toArray(".item");
+const items = gsap.utils.toArray(".tab");
 let currentItem = null;
+const firstTab = document.querySelector(".tab");
 items.forEach((e, i) => {
+  firstTab.children[1].style.height = "auto";
   const content = e.querySelector(".content");
   const t = gsap.to(content, {
     height: "auto",
@@ -3984,6 +3986,7 @@ items.forEach((e, i) => {
   });
   e._accordionTween = t;
   e.addEventListener("click", () => {
+    firstTab.children[1].style.height = "";
     if (currentItem !== null) {
       items[currentItem].classList.toggle("active");
       if (currentItem === i) {
@@ -4159,8 +4162,31 @@ const cityMap = document.getElementById('vancouver');
 const cityPin = document.getElementById('vancouver-pin');
 mapLocationArray.forEach(mapLocation => {
   mapLocation.addEventListener('click', function () {
+    // Reset the background color for all buttons
+    mapLocationArray.forEach(btn => {
+      btn.classList.remove('vancouver-color');
+      btn.classList.remove('calgary-color');
+      btn.classList.remove('toronto-color');
+      btn.classList.remove('ottawa-color');
+      btn.classList.add('whitesmoke');
+    });
+    if (mapLocation.classList.contains('vancouver')) {
+      mapLocation.classList.remove('whitesmoke');
+      mapLocation.classList.add('vancouver-color');
+    }
+    if (mapLocation.classList.contains('calgary')) {
+      mapLocation.classList.remove('whitesmoke');
+      mapLocation.classList.add('calgary-color');
+    }
+    if (mapLocation.classList.contains('toronto')) {
+      mapLocation.classList.remove('whitesmoke');
+      mapLocation.classList.add('toronto-color');
+    }
+    if (mapLocation.classList.contains('ottawa')) {
+      mapLocation.classList.remove('whitesmoke');
+      mapLocation.classList.add('ottawa-color');
+    }
     let city = mapLocation.innerHTML.toLowerCase();
-    console.log(cityMap);
     cityMap.id = city;
     cityPin.id = city.concat('-pin');
   });
@@ -5072,15 +5098,19 @@ accordionsAbout.forEach(accordion => {
 //Desktop Dropdowns
 const plusExpertise = document.querySelector('.plus-expertise');
 const expertiseDropdown = document.querySelector('.nav__dropdown-grid--expertise');
-plusExpertise.addEventListener("click", function () {
+plusExpertise.addEventListener("mouseover", function () {
   expertiseDropdown.classList.toggle('nav__dropdown-grid--active');
   plusExpertise.classList.toggle('plus-nav--active');
+  sectorsDropdown.classList.remove('nav__dropdown-grid--active');
+  plusSectors.classList.remove('plus-nav--active');
 });
 const plusSectors = document.querySelector('.plus-sectors');
 const sectorsDropdown = document.querySelector('.nav__dropdown-grid--sectors');
-plusSectors.addEventListener("click", function () {
+plusSectors.addEventListener("mouseover", function () {
   sectorsDropdown.classList.toggle('nav__dropdown-grid--active');
   plusSectors.classList.toggle('plus-nav--active');
+  expertiseDropdown.classList.remove('nav__dropdown-grid--active');
+  plusExpertise.classList.remove('plus-nav--active');
 });
 window.addEventListener('resize', function (event) {
   expertiseDropdown.classList.remove('nav__dropdown-grid--active');

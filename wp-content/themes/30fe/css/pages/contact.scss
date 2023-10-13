@@ -1,6 +1,10 @@
 .contact {
   font-family: 'Inter', sans-serif;
 
+  // &__hero {
+  //   padding: 0 8rem;
+  // }
+
   &__hero__maps {
     background-repeat: no-repeat;
     background-size: cover;
@@ -87,7 +91,12 @@
       max-width: 140px;
     }
 
+    // & h3 {
+    //   color: $whitesmoke;
+    // }
+
     &__city {
+      color: $whitesmoke;
       cursor: pointer;
       // padding-bottom: 15px;
       font-size: 1.9rem;
@@ -268,4 +277,20 @@
     left: 27vw;
     top: 39vw;
   }
+}
+
+.vancouver-color {
+  color: $green !important;
+}
+
+.calgary-color {
+  color: $taupe !important;
+}
+
+.toronto-color {
+  color: $orange !important;
+}
+
+.ottawa-color {
+  color: $blue !important;
 }

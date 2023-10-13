@@ -17,10 +17,9 @@
 
       <article class="home__hero__wrapper">
         <section class="home__hero__container">
-          <p class="home__hero__text">We are a team of investigators, engineers, scientists and problem solvers. We
-            bring
-            clarity to complex scientific problems to help our clients make decisions with confidence, all backed by
-            uncompromising investigative forensic reporting.
+          <p class="home__hero__text">We are a team of investigators, engineers, scientists, and problem solvers. We
+            bring clarity to complex scientific problems to help our clients make decisions with confidence. All our
+            work is backed by uncompromising investigative forensic reporting.
             <br><br>
             <strong>We are 30.</strong>
           </p>
@@ -119,7 +118,7 @@
 
 
         <div
-          class="accordion-mobile__heading item <?php if(get_row_index() === 1) echo 'active' ?> <?php echo $colors[$k] ?>">
+          class="accordion-mobile__heading item tab <?php if(get_row_index() === 1) echo 'active' ?> <?php echo $colors[$k] ?>">
           <div class="title"
             style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'black-bg') echo 'color: #ffffff'?>">
             <?php echo $headline ?></h1>
@@ -237,60 +236,41 @@
   </section>
 
 
-
-
-
-
-
   <section class="testimonials">
-    <section class="testimonials__wrapper">
-      <section class="testimonials__section max-width">
-        <h2 class="testimonials__headline">Words from our Clients</h2>
-        <section id="slider1" class="splide splide-testimonials" aria-labelledby="carousel-heading">
-          <div class="splide__track">
-            <ul class="splide__list">
-              <?php 
+    <section class="max-width max-padding">
+      <h2 class="testimonials__headline">Testimonials</h2>
+      <section id="slider1" class="splide splide-testimonials" aria-labelledby="carousel-heading">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <?php 
               if( have_rows('testimonials') ): 
               while( have_rows('testimonials') ) : the_row();
               $quote = get_sub_field('quote');
               $client = get_sub_field('client');
               ?>
-              <li class="splide__slide">
-                <section class="testimonials__card">
-                  <p class="testimonials__quote">&ldquo;<?php echo $quote ?>&rdquo;</p>
+            <li class="splide__slide">
+              <section class="testimonials__card">
+                <section class="testimonials__card__wrapper">
+                  <h3 class="testimonials__quote">&ldquo;<?php echo $quote ?>&rdquo;</h3>
                 </section>
-              </li>
-              <?php
-          endwhile; ?>
-              <?php endif;
-            ?>
-            </ul>
-          </div>
-        </section>
-      </section>
-      <section class="testimonials__contact__section taupe-bg">
-        <section class="testimonials__contact__block">
-          <section class="email">
-            <section class="">
-              <h3 class="email__headline"><?php echo get_field('title', get_option( 'page_on_front' )) ?></h3>
-              <p class="email__copy"><?php echo get_field('subheading', get_option( 'page_on_front' )) ?></p>
-              <section class="email__form">
-
-
-                <?php echo get_field('form_code', get_option( 'page_on_front' )) ;?>
               </section>
 
-            </section>
-          </section>
-        </section>
+            </li>
+            <?php
+          endwhile; ?>
+            <?php endif;
+            ?>
+          </ul>
+        </div>
       </section>
-
-
-
     </section>
 
-
   </section>
+
+
+
+
+
   <section class="insights">
     <section class="max-width max-padding">
       <!-- <section class="pill">

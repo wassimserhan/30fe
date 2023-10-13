@@ -21,7 +21,7 @@
                 <?php 
               $images = get_field('images');
               foreach($images as $item):?>
-                <li class="splide__slide">
+                <li class="splide__slide splide__slide__team">
                   <img src="<?php echo $item; ?>" alt="<?php echo $name; ?>" title="<?php echo $name; ?>" width="100%">
                 </li>
                 <?php endforeach ?>
@@ -29,20 +29,7 @@
             </div>
           </section>
 
-          <section class="member__card__competencies">
-            <?php 
-              $terms = get_field('competencies');
-              if( $terms ): ?>
-            <h6 class="member__competencies">Specialized Expertise</h6>
-            <hr class="member__line">
-            <?php foreach( $terms as $term ): ?>
 
-            <section class="pill">
-              <p class="pill__label"><?php echo $term->name; ?></p>
-            </section>
-            <?php endforeach; ?>
-            <?php endif; ?>
-          </section>
         </section>
 
 
@@ -50,7 +37,6 @@
 
 
         <article class="member__person">
-          <h2 class="member__headline"><?php echo $name ?></h2>
           <article class="member__details">
             <p><?php echo $qualifications ?></p>
             <p><?php echo $title ?></p>
@@ -62,31 +48,37 @@
             <?php endif ?>
 
           </article>
-          <article class="member__details member__details__bio">
-            <p><?php echo $bio ?></p>
-          </article>
-
-          <section class="member__card__competencies--mobile">
-            <?php 
-              $terms = get_field('competencies');
-              if( $terms ): ?>
-            <h6 class="member__competencies">Specialized Expertise</h6>
-            <hr class="member__line">
-            <?php foreach( $terms as $term ): ?>
-
-            <section class="pill">
-              <p class="pill__label"><?php echo $term->name; ?></p>
-            </section>
-            <?php endforeach; ?>
-            <?php endif; ?>
-          </section>
-
-
-
+          <h2 class="member__headline"><?php echo $name ?></h2>
 
 
 
         </article>
+      </section>
+
+      <section>
+        <hr class="member__line">
+        <article class="member__details__bio">
+          <p><?php echo $bio ?></p>
+        </article>
+
+        <section class="member__card__competencies">
+
+
+          <?php 
+              $terms = get_field('competencies');
+              if( $terms ): ?>
+          <hr class="member__line">
+
+          <?php foreach( $terms as $term ): ?>
+
+          <section class="pill">
+            <p class="pill__label"><?php echo $term->name; ?></p>
+          </section>
+          <?php endforeach; ?>
+          <?php endif; ?>
+
+        </section>
+
       </section>
     </section>
   </section>

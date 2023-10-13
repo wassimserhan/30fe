@@ -1,6 +1,6 @@
 .nav {
   background-color: $black;
-  min-height: 110px;
+  min-height: 18vh;
   transition: transform 0.2s;
   transition: background-color 0.4s; /* Add a smooth transition for background color changes */
 
@@ -72,7 +72,7 @@
     padding: 0.5rem 8rem;
     position: relative;
     z-index: 5;
-    @include bp(tablet) {
+    @include bp(laptop) {
       padding: 1.5rem;
     }
   }
@@ -151,6 +151,10 @@
       letter-spacing: -0.6px;
       color: $black;
       text-align: left;
+    }
+
+    &:hover {
+      text-decoration: underline;
     }
   }
 

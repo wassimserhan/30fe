@@ -18,32 +18,32 @@
   <div class="ticker-wrap">
     <div class="ticker">
       <span class="item-collection-1">
-        <span class="item">We are Engineers &mdash; Scientists &mdash; Experts &mdash; Truth Seekers &mdash;
-          Detectives &mdash; Problem Solvers &mdash; Reporters &mdash;</span>
-        <span class="item">We are Engineers &mdash; Scientists &mdash; Experts &mdash; Truth Seekers &mdash;
-          Detectives &mdash; Problem Solvers &mdash; Reporters &mdash;</span>
-        <span class="item">We are Engineers &mdash; Scientists &mdash; Experts &mdash; Truth Seekers &mdash;
-          Detectives &mdash; Problem Solvers &mdash; Reporters &mdash;</span>
-        <span class="item">We are Engineers &mdash; Scientists &mdash; Experts &mdash; Truth Seekers &mdash;
-          Detectives &mdash; Problem Solvers &mdash; Reporters &mdash;</span>
+        <span class="item">We are Engineers &ndash; Scientists &ndash; Experts &ndash; Truth Seekers &ndash;
+          Detectives &ndash; Problem Solvers &ndash; Reporters &ndash;</span>
+        <span class="item">We are Engineers &ndash; Scientists &ndash; Experts &ndash; Truth Seekers &ndash;
+          Detectives &ndash; Problem Solvers &ndash; Reporters &ndash;</span>
+        <span class="item">We are Engineers &ndash; Scientists &ndash; Experts &ndash; Truth Seekers &ndash;
+          Detectives &ndash; Problem Solvers &ndash; Reporters &ndash;</span>
+        <span class="item">We are Engineers &ndash; Scientists &ndash; Experts &ndash; Truth Seekers &ndash;
+          Detectives &ndash; Problem Solvers &ndash; Reporters &ndash;</span>
       </span>
       <span class="item-collection-2">
-        <span class="item">We are Engineers &mdash; Scientists &mdash; Experts &mdash; Truth Seekers &mdash;
-          Detectives &mdash; Problem Solvers &mdash; Reporters &mdash;</span>
-        <span class="item">We are Engineers &mdash; Scientists &mdash; Experts &mdash; Truth Seekers &mdash;
-          Detectives &mdash; Problem Solvers &mdash; Reporters &mdash;</span>
-        <span class="item">We are Engineers &mdash; Scientists &mdash; Experts &mdash; Truth Seekers &mdash;
-          Detectives &mdash; Problem Solvers &mdash; Reporters &mdash;</span>
-        <span class="item">We are Engineers &mdash; Scientists &mdash; Experts &mdash; Truth Seekers &mdash;
-          Detectives &mdash; Problem Solvers &mdash; Reporters &mdash;</span>
+        <span class="item">We are Engineers &ndash; Scientists &ndash; Experts &ndash; Truth Seekers &ndash;
+          Detectives &ndash; Problem Solvers &ndash; Reporters &ndash;</span>
+        <span class="item">We are Engineers &ndash; Scientists &ndash; Experts &ndash; Truth Seekers &ndash;
+          Detectives &ndash; Problem Solvers &ndash; Reporters &ndash;</span>
+        <span class="item">We are Engineers &ndash; Scientists &ndash; Experts &ndash; Truth Seekers &ndash;
+          Detectives &ndash; Problem Solvers &ndash; Reporters &ndash;</span>
+        <span class="item">We are Engineers &ndash; Scientists &ndash; Experts &ndash; Truth Seekers &ndash;
+          Detectives &ndash; Problem Solvers &ndash; Reporters &ndash;</span>
       </span>
     </div>
     <div>
 
       <!-- <section class="scroll-section">
     <article class="scroll-text scroll-container">
-      <p class="scroll">We are Engineers &mdash; Scientists &mdash; Experts &mdash; Truth Seekers &mdash;
-        Detectives &mdash; Problem Solvers &mdash; Reporters</p>
+      <p class="scroll">We are Engineers &ndash; Scientists &ndash; Experts &ndash; Truth Seekers &ndash;
+        Detectives &ndash; Problem Solvers &ndash; Reporters</p>
     </article>
   </section> -->
 
