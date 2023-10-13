@@ -8,7 +8,8 @@
   <article class="insights__card__label">
 
     <?php require get_theme_file_path('/includes/blog-colors.php');?>
-    <aside class="insights__card__label__category <?php echo $label_color; ?>">
+    <aside class="insights__card__label__category"
+      style="border: 1px solid <?php echo substr($label_color, 0, strpos($label_color, "-")); ?>">
       <p class="insights__card__label__category__text">
         <?php echo get_the_category_list(', '); ?>
       </p>
@@ -24,7 +25,5 @@
     </p>
     <p class="insights__card__label__date"><?php echo get_the_date( 'F j, Y' ); ?></p>
   </a>
-  <!-- <p class="insights__card__more"><a href="<?php the_permalink() ?>">Read more <img
-        src="<?php echo get_template_directory_uri(); ?>/images/chevron.svg" width="20" height="20"
-        alt="read more" /></a></p> -->
+
 </article>

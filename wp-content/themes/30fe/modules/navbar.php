@@ -62,12 +62,14 @@ global $template;
         <a id="" class="nav__items" data-name="#" href="<?php echo site_url('/team')?>">Team</a>
       </li>
       <li class="" role="menuitem">
-        <a id="" class="nav__items" data-name="#" href="<?php echo site_url('/expertise')?>">Expertise</a>
-        <img class="plus-nav plus-expertise" src="<?php echo get_template_directory_uri(); ?>/images/nav-arrow.svg"
-          alt="<?php echo get_bloginfo( 'name' ); ?> logo" title="<?php echo get_bloginfo( 'name' ); ?>" width="100%">
+        <a id="" class="nav__items nav-expertise" data-name=" #" href="<?php echo site_url('/expertise')?>">Expertise
+          <img class="plus-nav plus-expertise" src="<?php echo get_template_directory_uri(); ?>/images/nav-arrow.svg"
+            alt="<?php echo get_bloginfo( 'name' ); ?> logo" title="<?php echo get_bloginfo( 'name' ); ?>"
+            width="100%"></a>
+
       </li>
       <li class="" role="menuitem">
-        <a id="" class="nav__items" data-name="#" href="<?php echo site_url('/sectors')?>">Sectors</a>
+        <a id="" class="nav__items nav-sectors" data-name="#" href="<?php echo site_url('/sectors')?>">Sectors</a>
         <img class="plus-nav plus-sectors" src="<?php echo get_template_directory_uri(); ?>/images/nav-arrow.svg"
           alt="<?php echo get_bloginfo( 'name' ); ?> logo" title="<?php echo get_bloginfo( 'name' ); ?>" width="100%">
       </li>

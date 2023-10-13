@@ -94,10 +94,11 @@ accordionsAbout.forEach(accordion => {
 }
 
 //Desktop Dropdowns
+const navExpertise = document.querySelector('.nav-expertise');
 const plusExpertise = document.querySelector('.plus-expertise');
 const expertiseDropdown = document.querySelector('.nav__dropdown-grid--expertise');
 
-plusExpertise.addEventListener("mouseover", function () {
+navExpertise.addEventListener("mouseover", function () {
   expertiseDropdown.classList.toggle('nav__dropdown-grid--active');
   plusExpertise.classList.toggle('plus-nav--active');
   sectorsDropdown.classList.remove('nav__dropdown-grid--active');
@@ -105,10 +106,11 @@ plusExpertise.addEventListener("mouseover", function () {
 })
 
 
+const navSectors = document.querySelector('.nav-sectors');
 const plusSectors = document.querySelector('.plus-sectors');
 const sectorsDropdown = document.querySelector('.nav__dropdown-grid--sectors');
 
-plusSectors.addEventListener("mouseover", function () {
+navSectors.addEventListener("mouseover", function () {
   sectorsDropdown.classList.toggle('nav__dropdown-grid--active');
   plusSectors.classList.toggle('plus-nav--active');
   expertiseDropdown.classList.remove('nav__dropdown-grid--active');

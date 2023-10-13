@@ -41,9 +41,6 @@ mapLocationArray.forEach(mapLocation => {
     cityPin.id = city.concat('-pin');
   });
 
-
-
-
 })
 
 

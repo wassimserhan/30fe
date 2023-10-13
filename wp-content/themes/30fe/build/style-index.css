@@ -896,6 +896,7 @@ button.splide__arrow:disabled {
   width: 100%;
 }
 .blog-card__name {
+  margin: 24px 0 0;
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
@@ -3876,6 +3877,9 @@ body.admin-bar .search-overlay--desktop {
   gap: 10px;
   padding: 24px 0 16px;
   place-items: center;
+}
+.insights__card__label__category {
+  border-radius: 100px;
 }
 .insights__card__label__category__text {
   font-size: 0.75rem;
