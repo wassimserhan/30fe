@@ -60,6 +60,7 @@
         <article class="member__details__bio">
           <p><?php echo $bio ?></p>
         </article>
+        <hr class="member__line">
 
         <section class="member__card__competencies">
 
@@ -67,7 +68,7 @@
           <?php 
               $terms = get_field('competencies');
               if( $terms ): ?>
-          <hr class="member__line">
+
 
           <?php foreach( $terms as $term ): ?>
 

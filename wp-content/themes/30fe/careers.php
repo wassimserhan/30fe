@@ -8,7 +8,7 @@ get_header();
 <main class="main-container">
 
   <!-- Hero -->
-  <section class="careers__hero full-height fullscreen">
+  <section class="careers__hero full-height black-bg">
     <section class="max-width max-padding ">
       <section class="careers__hero__block">
         <h1 class="careers__hero__headline">Careers</h1>
@@ -42,9 +42,9 @@ get_header();
 if( have_rows('vision') ):
 while( have_rows('vision') ) : the_row(); 
 ?>
-  <section class="careers__vision orange-bg fullscreen">
+  <section class="careers__vision black-bg">
     <section class="max-width max-padding">
-      <h2 class="careers__headline"><?php echo get_sub_field('vision_headline') ;?></h2>
+      <h2 class="careers__headline careers__headline--orange"><?php echo get_sub_field('vision_headline') ;?></h2>
       <p class="careers__copy"><?php echo get_sub_field('vision_copy') ;?></p>
     </section>
   </section>
@@ -55,23 +55,31 @@ while( have_rows('vision') ) : the_row();
 if( have_rows('values') ):
 while( have_rows('values') ) : the_row(); 
 ?>
-  <section class="careers__vision blue-bg fullscreen">
-    <section class="max-width max-padding">
-      <h2 class="careers__headline careers__headline--white"><?php echo get_sub_field('values_headline') ;?></h2>
-      <ul class="careers__list">
-        <?php 
+  <section class="careers__vision black-bg">
+    <section class="max-width careers__vision__padding">
+      <h2 class="careers__headline careers__headline--blue"><?php echo get_sub_field('values_headline') ;?></h2>
+      <section id="careers-slider" class="splide splide-careers" aria-labelledby="carousel-heading">
+        <div class="splide__track">
+
+          <section class="splide__list">
+            <?php 
           if( have_rows('values_items') ): 
           while( have_rows('values_items') ) : the_row();
           $value_item = get_sub_field('value_item');
           ?>
-        <li>
-          <p style="color: #f2f1ed"><?php echo $value_item; ?></p>
-        </li>
-        <?php
+            <section class="splide__slide careers__slide__card">
+              <p class="careers__slide__card__number"><?php echo get_row_index(); ?></p>
+              <p class="careers__slide__card__text"><?php echo $value_item; ?></p>
+            </section>
+            <?php
           endwhile; ?>
-        <?php endif;
+            <?php endif;
             ?>
-      </ul>
+          </section>
+
+
+        </div>
+      </section>
     </section>
   </section>
   <?php endwhile; endif; ?>
@@ -81,9 +89,9 @@ while( have_rows('values') ) : the_row();
 if( have_rows('culture') ):
 while( have_rows('culture') ) : the_row(); 
 ?>
-  <section class="careers__vision green-bg fullscreen">
+  <section class="careers__vision black-bg">
     <section class="max-width max-padding">
-      <h2 class="careers__headline"><?php echo get_sub_field('culture_headline') ;?></h2>
+      <h2 class="careers__headline careers__headline--green"><?php echo get_sub_field('culture_headline') ;?></h2>
       <p class="careers__copy"><?php echo get_sub_field('culture_copy') ;?></p>
     </section>
   </section>
@@ -94,17 +102,17 @@ while( have_rows('culture') ) : the_row();
 if( have_rows('benefits') ):
 while( have_rows('benefits') ) : the_row(); 
 ?>
-  <section class="careers__vision taupe-bg fullscreen">
+  <section class="careers__vision black-bg">
     <section class="max-width max-padding">
-      <h2 class="careers__headline"><?php echo get_sub_field('benefits_headline') ;?></h2>
-      <ul class="careers__list careers__list--black">
+      <h2 class="careers__headline careers__headline--taupe "><?php echo get_sub_field('benefits_headline') ;?></h2>
+      <ul class="careers__list careers__list">
         <?php 
           if( have_rows('benefits_items') ): 
           while( have_rows('benefits_items') ) : the_row();
           $benefits_item = get_sub_field('benefits_item');
           ?>
         <li>
-          <p style="color: #1d1c1d"><?php echo $benefits_item; ?></p>
+          <p><?php echo $benefits_item; ?></p>
         </li>
         <?php
           endwhile; ?>

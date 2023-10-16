@@ -112,6 +112,42 @@
   }
 }
 
+.splide-careers {
+  padding: 0 !important;
+
+  .splide__arrow:before {
+    border: 1px solid $whitesmoke;
+    // right: -1px;
+  }
+
+  .splide__arrow svg {
+    fill: $whitesmoke !important;
+
+    // height: 1.5em !important;
+    // width: 1.5em !important;
+  }
+
+  .splide__arrow--prev svg {
+    transform: scaleX(-1) translate(16%, 27%) !important;
+  }
+
+  .splide__arrow--next svg {
+    transform: scaleX(1) translate(24%, 27%) !important;
+  }
+
+  &__arrow--next {
+    top: -13% !important;
+    right: 22% !important;
+    margin: auto !important;
+  }
+
+  &__arrow--prev {
+    top: -13% !important;
+    right: -43% !important;
+    margin: auto !important;
+  }
+}
+
 .splide-blog {
   // width: 100%;
   // max-width: 1200px;

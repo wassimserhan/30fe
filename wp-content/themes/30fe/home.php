@@ -35,8 +35,11 @@ global $wp_query;
         data-max="<?= $wp_query->max_num_pages; ?>">
         <?php 
         
-          while (have_posts()):the_post(); ?> <?php include get_template_directory() . '/modules/insights-card.php'; ?>
-        <?php endwhile ?> </section>
+          while (have_posts()):the_post(); ?>
+
+        <?php include get_template_directory() . '/modules/insights-card.php'; ?>
+        <?php endwhile ?>
+      </section>
       <button class="insights__load">Load More</button>
     </section>
   </section>

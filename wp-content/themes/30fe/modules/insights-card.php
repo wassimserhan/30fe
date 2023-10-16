@@ -6,15 +6,18 @@
     </figure>
   </a>
   <article class="insights__card__label">
-
-    <?php require get_theme_file_path('/includes/blog-colors.php');?>
-    <aside class="insights__card__label__category"
-      style="border: 1px solid <?php echo substr($label_color, 0, strpos($label_color, "-")); ?>">
-      <p class="insights__card__label__category__text">
-        <?php echo get_the_category_list(', '); ?>
-      </p>
-    </aside>
-    <p class="insights__card__label__read"><?php echo display_read_time(); ?></p>
+    <a href="<?php the_permalink() ?>" aria-label="Read more">
+      <?php require get_theme_file_path('/includes/blog-colors.php');?>
+      <aside class="insights__card__label__category"
+        style="border: 1px solid <?php echo substr($label_color , 0, strpos($label_color , "-"));?>">
+        <p class="insights__card__label__category__text">
+          <?php echo get_the_category_list(', '); ?>
+        </p>
+      </aside>
+      <a href="<?php the_permalink() ?>" aria-label="Read more">
+        <p class="insights__card__label__read"><?php echo display_read_time(); ?></p>
+      </a>
+    </a>
   </article>
   <a href="<?php the_permalink() ?>" aria-label="Read more">
     <h4 class="insights__card__title">

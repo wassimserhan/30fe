@@ -149,6 +149,43 @@ if (slider5) {
   }).mount();
 }
 
+const careerSlider = document.getElementById('careers-slider');
+
+if (careerSlider) {
+  new Splide('#careers-slider', {
+
+    classes: {
+      arrows: 'splide__arrows splide-careers__arrows',
+      arrow: 'splide__arrow splide-careers__arrow',
+      prev: 'splide__arrow--prev splide-careers__arrow--prev',
+      next: 'splide__arrow--next splide-careers__arrow--next',
+    },
+    breakpoints: {
+      480: {
+        width: '100%',
+        perPage: 1,
+        arrows: false,
+
+      },
+      786: {
+        width: '100%',
+        perPage: 2,
+        arrows: false,
+
+      },
+    },
+
+    type: 'loop',
+    perMove: 1,
+    perPage: 3,
+    pagination: false,
+    keyboard: true,
+    arrowPath: 'M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z',
+
+    // autoplay: true
+  }).mount();
+}
+
 
 
 

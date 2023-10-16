@@ -294,3 +294,19 @@
 .ottawa-color {
   color: $blue !important;
 }
+
+.vancouver:hover {
+  color: $green;
+}
+
+.calgary:hover {
+  color: $taupe;
+}
+
+.toronto:hover {
+  color: $orange;
+}
+
+.ottawa:hover {
+  color: $blue;
+}

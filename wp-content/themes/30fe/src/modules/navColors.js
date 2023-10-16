@@ -146,16 +146,7 @@ if (fullscreen) {
       gsap.set(".search-overlay--desktop__wrapper", { borderColor: $whitesmoke })
       gsap.set(".search-overlay--desktop__icon", { filter: $logoWhite })
       gsap.set(".nav__button", { backgroundColor: $whitesmoke, color: $black })
-      sectionColors = [$black, $orange, $blue, $green, $taupe, $black];
-      navColors = [$black, $orange, $blue, $green, $taupe, $black];
-      navItems = [$whitesmoke, $black, $black, $black, $black, $whitesmoke]
-      logoColor = [$logoWhite, $logoBlack, $logoBlack, $logoBlack, $logoBlack, $logoWhite];
-      searchBorder = [$whitesmoke, $black, $black, $black, $black, $whitesmoke];
-      searchIcon = [$logoBlack, $logoWhite, $logoWhite, $logoWhite, $logoWhite, $logoWhite, $logoBlack];
-      navButton = [$whitesmoke, $black, $black, $black, $black, $whitesmoke];
-      navButtonColor = [$black, $whitesmoke, $whitesmoke, $whitesmoke, $whitesmoke, $black];
-      plus = [$logoWhite, $logoBlack];
-      navScroll = true;
+      navScroll = false;
       break;
     case 'home.php':
       gsap.set(".nav", { backgroundColor: $whitesmoke })
@@ -303,11 +294,13 @@ if (fullscreen) {
         toggleActions: "restart none none reverse"
       }
     })
-      .to(".nav", { backgroundColor: navColors[index], immediateRender: false })
-      .to(".nav__items", { color: navItems[index], immediateRender: false }, "<")
-      .to(".nav__logo__black", {
-        filter: logoColor[index], immediateRender: false
-      }, "<")
+    if (navScroll) {
+      tl.to(".nav", { backgroundColor: navColors[index], immediateRender: false })
+        .to(".nav__items", { color: navItems[index], immediateRender: false }, "<")
+        .to(".nav__logo__black", {
+          filter: logoColor[index], immediateRender: false
+        }, "<")
+    }
 
     if (navScroll) {
       tl.to(".search-overlay--desktop__wrapper", {

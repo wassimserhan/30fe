@@ -234,3 +234,18 @@
   line-height: 150%;
   text-transform: uppercase;
 }
+
+// .hover_img {
+//   height: 100px;
+//   width: 100px;
+//   margin: 100px;
+//   background: red;
+// }
+.hover_img img {
+  height: 200px;
+  width: 200px;
+  display: none;
+}
+.hover_img:hover img {
+  display: block;
+}

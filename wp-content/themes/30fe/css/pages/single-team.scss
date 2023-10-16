@@ -19,9 +19,9 @@
     }
 
     &__competencies {
-      @include bp(phone) {
-        display: none;
-      }
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0 10px;
     }
 
     &__competencies--mobile {

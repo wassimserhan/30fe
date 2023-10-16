@@ -135,22 +135,38 @@
     letter-spacing: -3.6px;
     padding-bottom: 32px;
 
-    &--white {
-      color: $white;
+    &--orange {
+      color: $orange;
+    }
+
+    &--blue {
+      color: $blue;
+    }
+
+    &--taupe {
+      color: $taupe;
+    }
+
+    &--green {
+      color: $green;
     }
   }
 
+  &__copy {
+    color: $whitesmoke;
+  }
+
   &__list {
-    color: $white;
+    color: $whitesmoke;
     list-style: initial;
     margin-left: 15px;
 
-    &--black {
-      color: $black;
-    }
-
     & li {
       padding-bottom: 10px;
+    }
+
+    & p {
+      color: $whitesmoke;
     }
   }
 }
@@ -218,5 +234,46 @@
     transition: 300ms transform;
     filter: invert(6%) sepia(1%) saturate(3414%) hue-rotate(248deg)
       brightness(85%) contrast(87%);
+  }
+}
+
+.careers__slide {
+  &__card {
+    border: 1px solid $whitesmoke;
+    border-radius: 0% !important;
+    background-color: $black;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 0 10px !important;
+    padding: 10px 20px;
+    min-height: 450px;
+    @include bp(phone) {
+      margin: 0 !important;
+    }
+
+    &__number {
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 120%; /* 38.4px */
+      letter-spacing: -1.6px;
+      color: $blue;
+    }
+
+    &__text {
+      font-size: 48px;
+      font-weight: 700;
+      color: $whitesmoke;
+      line-height: 100%; /* 48px */
+      letter-spacing: -2.4px;
+    }
+  }
+}
+
+.careers__vision__padding {
+  padding: 8rem 0 8rem 8rem;
+  @include bp(phone) {
+    padding: 8rem 1.5rem;
   }
 }

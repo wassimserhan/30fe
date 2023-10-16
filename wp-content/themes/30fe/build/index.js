@@ -3931,6 +3931,37 @@ if (slider5) {
     arrowPath: 'M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z'
   }).mount();
 }
+const careerSlider = document.getElementById('careers-slider');
+if (careerSlider) {
+  new _splidejs_splide__WEBPACK_IMPORTED_MODULE_5__["default"]('#careers-slider', {
+    classes: {
+      arrows: 'splide__arrows splide-careers__arrows',
+      arrow: 'splide__arrow splide-careers__arrow',
+      prev: 'splide__arrow--prev splide-careers__arrow--prev',
+      next: 'splide__arrow--next splide-careers__arrow--next'
+    },
+    breakpoints: {
+      480: {
+        width: '100%',
+        perPage: 1,
+        arrows: false
+      },
+      786: {
+        width: '100%',
+        perPage: 2,
+        arrows: false
+      }
+    },
+    type: 'loop',
+    perMove: 1,
+    perPage: 3,
+    pagination: false,
+    keyboard: true,
+    arrowPath: 'M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z'
+
+    // autoplay: true
+  }).mount();
+}
 
 // modules
 
@@ -4784,16 +4815,7 @@ if (fullscreen) {
         backgroundColor: $whitesmoke,
         color: $black
       });
-      sectionColors = [$black, $orange, $blue, $green, $taupe, $black];
-      navColors = [$black, $orange, $blue, $green, $taupe, $black];
-      navItems = [$whitesmoke, $black, $black, $black, $black, $whitesmoke];
-      logoColor = [$logoWhite, $logoBlack, $logoBlack, $logoBlack, $logoBlack, $logoWhite];
-      searchBorder = [$whitesmoke, $black, $black, $black, $black, $whitesmoke];
-      searchIcon = [$logoBlack, $logoWhite, $logoWhite, $logoWhite, $logoWhite, $logoWhite, $logoBlack];
-      navButton = [$whitesmoke, $black, $black, $black, $black, $whitesmoke];
-      navButtonColor = [$black, $whitesmoke, $whitesmoke, $whitesmoke, $whitesmoke, $black];
-      plus = [$logoWhite, $logoBlack];
-      navScroll = true;
+      navScroll = false;
       break;
     case 'home.php':
       gsap.set(".nav", {
@@ -4971,16 +4993,19 @@ if (fullscreen) {
         markers: false,
         toggleActions: "restart none none reverse"
       }
-    }).to(".nav", {
-      backgroundColor: navColors[index],
-      immediateRender: false
-    }).to(".nav__items", {
-      color: navItems[index],
-      immediateRender: false
-    }, "<").to(".nav__logo__black", {
-      filter: logoColor[index],
-      immediateRender: false
-    }, "<");
+    });
+    if (navScroll) {
+      tl.to(".nav", {
+        backgroundColor: navColors[index],
+        immediateRender: false
+      }).to(".nav__items", {
+        color: navItems[index],
+        immediateRender: false
+      }, "<").to(".nav__logo__black", {
+        filter: logoColor[index],
+        immediateRender: false
+      }, "<");
+    }
     if (navScroll) {
       tl.to(".search-overlay--desktop__wrapper", {
         borderColor: searchBorder[index],
@@ -5128,19 +5153,32 @@ window.addEventListener("scroll", function () {
 }, true);
 
 // I'm using "click" but it works with any event
-document.addEventListener('click', event => {
-  const isClickInside = plusExpertise.contains(event.target);
-  if (!isClickInside) {
-    expertiseDropdown.classList.remove('nav__dropdown-grid--active');
-    plusExpertise.classList.remove('plus-nav--active');
-  }
+// document.addEventListener('', event => {
+//   const isClickInside = plusExpertise.contains(event.target)
+
+//   if (!isClickInside) {
+//     expertiseDropdown.classList.remove('nav__dropdown-grid--active');
+//     plusExpertise.classList.remove('plus-nav--active');
+//   }
+// })
+
+expertiseDropdown.addEventListener('mouseleave', function () {
+  expertiseDropdown.classList.remove('nav__dropdown-grid--active');
+  plusExpertise.classList.remove('plus-nav--active');
 });
-document.addEventListener('click', event => {
-  const isClickInside = plusSectors.contains(event.target);
-  if (!isClickInside) {
-    sectorsDropdown.classList.remove('nav__dropdown-grid--active');
-    plusSectors.classList.remove('plus-nav--active');
-  }
+
+// document.addEventListener('', event => {
+//   const isClickInside = plusSectors.contains(event.target)
+
+//   if (!isClickInside) {
+//     sectorsDropdown.classList.remove('nav__dropdown-grid--active');
+//     plusSectors.classList.remove('plus-nav--active');
+//   }
+// });
+
+sectorsDropdown.addEventListener('mouseleave', function () {
+  sectorsDropdown.classList.remove('nav__dropdown-grid--active');
+  plusSectors.classList.remove('plus-nav--active');
 });
 
 /***/ }),

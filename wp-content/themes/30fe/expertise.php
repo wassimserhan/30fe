@@ -48,7 +48,12 @@ get_header();
         <a href="<?php echo the_permalink() ?>">
           <article data-color="<?php echo esc_html($color['value']); ?>" class="expertise__list-section">
 
+            <!-- <img src="<?php echo get_template_directory_uri(); ?>/images/image.jpg" alt="image" /> -->
+
+
+
             <h3 class="expertise__list-item"><?php the_title() ?></h3>
+
 
             <img class="expertise__list-item__arrow" src="<?php echo get_template_directory_uri(); ?>/images/arrow.svg"
               width="20" height="20" alt="arrow" tabindex=0>
