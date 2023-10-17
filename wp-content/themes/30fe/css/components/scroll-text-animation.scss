@@ -98,13 +98,13 @@
   animation: marquee 250s linear infinite;
   padding: 3rem 0;
 }
-.item-collection-1 {
+.scroll-collection-1 {
   position: relative;
   left: 0%;
   animation: swap 250s linear infinite;
 }
 
-.item {
+.scroll {
   display: inline-block;
   padding: 0 1rem;
   font-size: 200px;

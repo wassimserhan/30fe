@@ -7,8 +7,26 @@ get_header();
 
 <main class="main-container">
 
+  <section class="careers__intro black-bg">
+    <section class="max-width max-padding">
+      <h1 class="careers__intro__headline">At 30, we share a fascination for how things work.
+        We love the mystery. The theory. The mechanics. The science. The rigour.
+        We’re tinkerers at heart. Detectives. Problem-solvers. Truth-seekers.
+        Perhaps most of all, we’re reporters.
+        <br><br>
+        We’re always looking for more people like us to help us with our mission.
+        <br>
+        Are you in?
+      </h1>
+      <a href="#positions"><button class="careers__intro__button">Open Positions</button></a>
+    </section>
+
+  </section>
+
   <!-- Hero -->
-  <section class="careers__hero full-height black-bg">
+
+
+  <section class="careers__hero black-bg">
     <section class="max-width max-padding ">
       <section class="careers__hero__block">
         <h1 class="careers__hero__headline">Careers</h1>
@@ -144,7 +162,7 @@ while( have_rows('positions') ) : the_row();
         ?>
 
 
-      <section class="careers__openings">
+      <section id="positions" class="careers__openings">
         <a href="<?php echo $bamboo_link; ?>">
           <article class="careers__positions">
             <div class="careers__positions__wrapper">

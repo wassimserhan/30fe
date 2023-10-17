@@ -1,6 +1,27 @@
 .careers {
   font-family: 'Inter', sans-serif;
 
+  &__intro {
+    &__headline {
+      max-width: 800px;
+      width: 100%;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 120%; /* 28.8px */
+      letter-spacing: -1.2px;
+      color: $whitesmoke;
+      padding-bottom: 40px;
+    }
+
+    &__button {
+      background-color: $whitesmoke;
+      padding: 12px 24px;
+      // text-transform: capitalize;
+      color: $black;
+    }
+  }
+
   &__hero {
     // min-height: 92vh;
     // display: flex;

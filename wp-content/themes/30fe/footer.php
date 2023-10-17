@@ -17,24 +17,24 @@
 
   <div class="ticker-wrap">
     <div class="ticker">
-      <span class="item-collection-1">
-        <span class="item">We are Engineers &ndash; Scientists &ndash; Experts &ndash; Truth Seekers &ndash;
+      <span class="scroll-collection-1">
+        <span class="scroll">We are Engineers &ndash; Scientists &ndash; Experts &ndash; Truth Seekers &ndash;
           Detectives &ndash; Problem Solvers &ndash; Reporters &ndash;</span>
-        <span class="item">We are Engineers &ndash; Scientists &ndash; Experts &ndash; Truth Seekers &ndash;
+        <span class="scroll">We are Engineers &ndash; Scientists &ndash; Experts &ndash; Truth Seekers &ndash;
           Detectives &ndash; Problem Solvers &ndash; Reporters &ndash;</span>
-        <span class="item">We are Engineers &ndash; Scientists &ndash; Experts &ndash; Truth Seekers &ndash;
+        <span class="scroll">We are Engineers &ndash; Scientists &ndash; Experts &ndash; Truth Seekers &ndash;
           Detectives &ndash; Problem Solvers &ndash; Reporters &ndash;</span>
-        <span class="item">We are Engineers &ndash; Scientists &ndash; Experts &ndash; Truth Seekers &ndash;
+        <span class="scroll">We are Engineers &ndash; Scientists &ndash; Experts &ndash; Truth Seekers &ndash;
           Detectives &ndash; Problem Solvers &ndash; Reporters &ndash;</span>
       </span>
-      <span class="item-collection-2">
-        <span class="item">We are Engineers &ndash; Scientists &ndash; Experts &ndash; Truth Seekers &ndash;
+      <span class="scroll-collection-2">
+        <span class="scroll">We are Engineers &ndash; Scientists &ndash; Experts &ndash; Truth Seekers &ndash;
           Detectives &ndash; Problem Solvers &ndash; Reporters &ndash;</span>
-        <span class="item">We are Engineers &ndash; Scientists &ndash; Experts &ndash; Truth Seekers &ndash;
+        <span class="scroll">We are Engineers &ndash; Scientists &ndash; Experts &ndash; Truth Seekers &ndash;
           Detectives &ndash; Problem Solvers &ndash; Reporters &ndash;</span>
-        <span class="item">We are Engineers &ndash; Scientists &ndash; Experts &ndash; Truth Seekers &ndash;
+        <span class="scroll">We are Engineers &ndash; Scientists &ndash; Experts &ndash; Truth Seekers &ndash;
           Detectives &ndash; Problem Solvers &ndash; Reporters &ndash;</span>
-        <span class="item">We are Engineers &ndash; Scientists &ndash; Experts &ndash; Truth Seekers &ndash;
+        <span class="scroll">We are Engineers &ndash; Scientists &ndash; Experts &ndash; Truth Seekers &ndash;
           Detectives &ndash; Problem Solvers &ndash; Reporters &ndash;</span>
       </span>
     </div>

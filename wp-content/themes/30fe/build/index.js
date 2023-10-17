@@ -4809,7 +4809,7 @@ if (fullscreen) {
         borderColor: $whitesmoke
       });
       gsap.set(".search-overlay--desktop__icon", {
-        filter: $logoWhite
+        filter: $logoBlack
       });
       gsap.set(".nav__button", {
         backgroundColor: $whitesmoke,

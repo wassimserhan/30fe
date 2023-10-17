@@ -553,6 +553,10 @@ p {
   color: #08cb80;
 }
 
+.taupe {
+  color: #cbbea5;
+}
+
 .whitesmoke {
   color: #f2f1ed;
 }
@@ -1075,13 +1079,13 @@ button.splide__arrow:disabled {
   padding: 3rem 0;
 }
 
-.item-collection-1 {
+.scroll-collection-1 {
   position: relative;
   left: 0%;
   animation: swap 250s linear infinite;
 }
 
-.item {
+.scroll {
   display: inline-block;
   padding: 0 1rem;
   font-size: 200px;
@@ -1441,6 +1445,8 @@ button.splide__arrow:disabled {
   gap: 20px;
   padding: 1rem 8rem;
   display: none;
+  border-top: 1px solid #cbbea5;
+  border-bottom: 1px solid #cbbea5;
 }
 @media (max-width: 1024px) {
   .nav__dropdown-grid {
@@ -3150,12 +3156,15 @@ body.admin-bar .search-overlay--desktop {
 }
 .team__filter-dropdown {
   position: relative;
-  flex-grow: 1;
+  max-width: 600px;
+  width: 100%;
 }
 .team__filter-dropdown * {
   box-sizing: border-box;
 }
 .team__select {
+  max-width: 600px;
+  width: 100%;
   background: #f2f1ed;
   color: #1d1c1d;
   display: flex;
@@ -3905,7 +3914,6 @@ body.admin-bar .search-overlay--desktop {
 .insights__card__label {
   display: flex;
   justify-content: flex-start;
-  gap: 10px;
   padding: 24px 0 16px;
   place-items: center;
 }
@@ -4194,7 +4202,7 @@ body.admin-bar .search-overlay--desktop {
 }
 .single-blog__single-post > p {
   font-size: 1.25rem;
-  padding: 10px 0;
+  padding: 10px 100px;
 }
 .single-blog__wrapper {
   display: flex;
@@ -4653,6 +4661,22 @@ body.admin-bar .search-overlay--desktop {
 
 .careers {
   font-family: "Inter", sans-serif;
+}
+.careers__intro__headline {
+  max-width: 800px;
+  width: 100%;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 28.8px */
+  letter-spacing: -1.2px;
+  color: #f2f1ed;
+  padding-bottom: 40px;
+}
+.careers__intro__button {
+  background-color: #f2f1ed;
+  padding: 12px 24px;
+  color: #1d1c1d;
 }
 .careers__hero__block {
   position: relative;
