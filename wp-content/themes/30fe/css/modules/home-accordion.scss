@@ -160,10 +160,10 @@
     padding: 20px 64px;
     visibility: hidden;
     transition: visibility 0.22s ease;
-    height: 100vh;
-    @include bp(widescreen) {
-      height: 60vh;
-    }
+    height: 620px;
+    // @include bp(widescreen) {
+    //   height: 60vh;
+    // }
 
     &.active {
       visibility: visible;

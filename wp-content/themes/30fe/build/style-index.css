@@ -437,7 +437,7 @@ button:hover {
 .main-container {
   width: 100%;
   flex: 1 0 auto;
-  margin-top: 10vh;
+  margin-top: 112px;
 }
 
 .large-text {
@@ -1140,7 +1140,7 @@ button.splide__arrow:disabled {
 
 .nav {
   background-color: #1d1c1d;
-  min-height: 18vh;
+  min-height: 112px;
   transition: transform 0.2s;
   transition: background-color 0.4s; /* Add a smooth transition for background color changes */
 }
@@ -2689,12 +2689,7 @@ body.admin-bar .search-overlay--desktop {
   padding: 20px 64px;
   visibility: hidden;
   transition: visibility 0.22s ease;
-  height: 100vh;
-}
-@media (min-width: 1300px) {
-  .accordion__body {
-    height: 60vh;
-  }
+  height: 620px;
 }
 .accordion__body.active {
   visibility: visible;
