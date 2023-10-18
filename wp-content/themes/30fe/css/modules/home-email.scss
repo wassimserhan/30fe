@@ -58,3 +58,9 @@
 .with_frm_style .frm_submit {
   padding: 1rem 0 0 !important;
 }
+
+.frm_opt_container {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+  padding: 1rem 0 !important;
+}
