@@ -1470,6 +1470,7 @@ button.splide__arrow:disabled {
 
 .nav-expertise__items {
   text-transform: capitalize;
+  padding: 0.5rem 0;
 }
 
 .search-icon {
