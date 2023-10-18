@@ -444,11 +444,11 @@ add_action( 'admin_head', 'bks_replace_admin_menu_icons_css' );
 /**
 * add order column to admin listing screen for header text
 */
-function add_new_industry_column($industry_columns) {
-  $industry_columns['menu_order'] = "Order";
-  return $industry_columns;
-}
-add_action('manage_industry_posts_columns', 'add_new_industry_column');
+// function add_new_industry_column($industry_columns) {
+//   $industry_columns['menu_order'] = "Order";
+//   return $industry_columns;
+// }
+// add_action('manage_industry_posts_columns', 'add_new_industry_column');
 
 /**
 * show custom order column values

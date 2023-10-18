@@ -92,6 +92,8 @@ global $template;
       <?php 
           $customQuery = new WP_Query(array(
           'posts_per_page' => -1,
+          'orderby' => 'title',
+'order'   => 'ASC',
           'post_type'=> 'Expertise'
         ));
 
@@ -110,6 +112,8 @@ global $template;
       <?php 
           $customQuery = new WP_Query(array(
           'posts_per_page' => -1,
+          'orderby' => 'title',
+            'order'   => 'ASC',
           'post_type'=> 'Industry'
         ));
 
