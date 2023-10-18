@@ -4783,7 +4783,26 @@ if (fullscreen) {
       gsap.set(".nav__logo__black", {
         filter: $logoWhite
       });
-      sectionColors = [$black, $black, $taupe];
+      gsap.set(".nav__items", {
+        color: $whitesmoke
+      });
+      gsap.set(".nav", {
+        backgroundColor: $black
+      });
+      gsap.set(".search-overlay--desktop__wrapper", {
+        borderColor: $whitesmoke
+      });
+      gsap.set(".search-overlay--desktop__icon", {
+        filter: $logoBlack
+      });
+      gsap.set(".nav__button", {
+        backgroundColor: $whitesmoke,
+        color: $black
+      });
+      gsap.set(".plus-nav", {
+        filter: $logoWhite
+      });
+      sectionColors = [$black, $taupe];
       navColors = [$black, $taupe];
       navItems = [$whitesmoke, $black];
       logoColor = [$logoWhite, $logoBlack];
@@ -4813,6 +4832,9 @@ if (fullscreen) {
       gsap.set(".nav__button", {
         backgroundColor: $whitesmoke,
         color: $black
+      });
+      gsap.set(".plus-nav", {
+        filter: $logoWhite
       });
       navScroll = false;
       break;

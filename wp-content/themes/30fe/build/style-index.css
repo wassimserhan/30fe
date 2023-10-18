@@ -4851,6 +4851,9 @@ body.admin-bar .search-overlay--desktop {
 .careers__headline--green {
   color: #08cb80;
 }
+.careers__headline--white {
+  color: #f2f1ed;
+}
 .careers__copy {
   color: #f2f1ed;
 }
@@ -4926,7 +4929,7 @@ body.admin-bar .search-overlay--desktop {
   flex-direction: column;
   margin: 0 10px !important;
   padding: 10px 20px;
-  min-height: 450px;
+  min-height: 380px;
 }
 @media (max-width: 479px) {
   .careers__slide__card {

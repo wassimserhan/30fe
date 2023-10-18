@@ -171,6 +171,10 @@
     &--green {
       color: $green;
     }
+
+    &--white {
+      color: $whitesmoke;
+    }
   }
 
   &__copy {
@@ -268,7 +272,7 @@
     flex-direction: column;
     margin: 0 10px !important;
     padding: 10px 20px;
-    min-height: 450px;
+    min-height: 380px;
     @include bp(phone) {
       margin: 0 !important;
     }
