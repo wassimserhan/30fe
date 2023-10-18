@@ -3913,14 +3913,14 @@ body.admin-bar .search-overlay--desktop {
   gap: 1rem;
 }
 .insights__card {
-  max-width: 330px;
+  max-width: 500px;
 }
 .insights__card__image {
   height: 235px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-@media (max-width: 479px) {
+@media (max-width: 768px) {
   .insights__card__image {
     height: auto;
   }
