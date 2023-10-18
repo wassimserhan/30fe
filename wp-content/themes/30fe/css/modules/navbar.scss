@@ -338,8 +338,10 @@
 }
 
 .nav__dropdown-grid {
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+  // grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  // gap: 20px;
+  column-fill: balance;
+  columns: 4;
   padding: 1rem 8rem;
   display: none;
   // border-top: 1px solid $taupe;
@@ -349,7 +351,7 @@
   }
 
   &--active {
-    display: grid;
+    display: block;
   }
 }
 

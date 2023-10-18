@@ -1441,8 +1441,10 @@ button.splide__arrow:disabled {
 }
 
 .nav__dropdown-grid {
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+  -moz-column-fill: balance;
+       column-fill: balance;
+  -moz-columns: 4;
+       columns: 4;
   padding: 1rem 8rem;
   display: none;
   border-bottom: 1px solid #cbbea5;
@@ -1453,7 +1455,7 @@ button.splide__arrow:disabled {
   }
 }
 .nav__dropdown-grid--active {
-  display: grid;
+  display: block;
 }
 
 .nav-expertise__links {
