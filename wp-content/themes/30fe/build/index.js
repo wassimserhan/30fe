@@ -4389,15 +4389,23 @@ if (scrollableContent) {
     const finalColor = [242, 241, 237]; // RGB values of #f2f1ed
     const interpolatedColor = initialColor.map((channel, index) => {
       const range = finalColor[index] - channel;
-      return Math.min(channel + range * scrollPosition / 100, 242);
+      return Math.min(channel + range * scrollPosition / 100, 237);
+    });
+
+    // Interpolate the text color between the initial and final colors
+    const initialColorReverse = [242, 241, 237];
+    const finalColorReverse = [29, 28, 29];
+    const interpolatedColorReverse = initialColorReverse.map((channel, index) => {
+      const range = finalColorReverse[index] - channel;
+      return Math.round(channel + range * scrollPosition / 100, 29);
     });
 
     // Interpolate the text color between the initial and final colors
     const initialColorText = [242, 241, 237];
     const finalColorText = [29, 28, 29];
     const interpolatedColorText = initialColorText.map((channel, index) => {
-      const rangeText = finalColorText[index] - channel;
-      return Math.round(channel + rangeText * scrollPosition / 100, 29);
+      const range = finalColorText[index] - channel;
+      return Math.max(channel + range * scrollPosition / 100, 29);
     });
 
     // Apply the new background color
@@ -4427,7 +4435,7 @@ if (scrollableContent) {
         item.style.filter = `invert(${filterScroll}%)`;
       });
       NavItems.forEach(item => {
-        item.style.color = `rgb(${interpolatedColorText.join(', ')})`;
+        item.style.color = `rgb(${interpolatedColorReverse.join(', ')})`;
       });
       console.log('Scrolled past the element.');
       // Perform any action you want when you scroll past the element
