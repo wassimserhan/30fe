@@ -3912,6 +3912,9 @@ body.admin-bar .search-overlay--desktop {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
 }
+.insights__card {
+  max-width: 330px;
+}
 .insights__card__image {
   height: 235px;
   -o-object-fit: cover;
