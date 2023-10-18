@@ -10,13 +10,13 @@
       // }
     }
     &__video {
-      display: block;
+      // display: block;
       width: 200px;
       padding: 0 0 1rem;
-      // position: absolute;
-      // top: 6vw;
-      // right: -2vw;
-      // z-index: 1;
+      position: absolute;
+      top: 6vw;
+      right: -2vw;
+      z-index: 1;
 
       @include bp(tablet) {
         position: initial;

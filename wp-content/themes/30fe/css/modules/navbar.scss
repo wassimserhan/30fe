@@ -342,7 +342,7 @@
   gap: 20px;
   padding: 1rem 8rem;
   display: none;
-  border-top: 1px solid $taupe;
+  // border-top: 1px solid $taupe;
   border-bottom: 1px solid $taupe;
   @include bp(laptop) {
     display: none;
@@ -361,4 +361,8 @@
   text-transform: uppercase;
   position: relative;
   display: block;
+}
+
+.nav-expertise__items {
+  text-transform: capitalize;
 }

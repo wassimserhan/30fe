@@ -1075,14 +1075,14 @@ button.splide__arrow:disabled {
 .ticker {
   display: inline-block;
   margin-top: 5px;
-  animation: marquee 250s linear infinite;
+  animation: marquee 700s linear infinite;
   padding: 3rem 0;
 }
 
 .scroll-collection-1 {
   position: relative;
   left: 0%;
-  animation: swap 250s linear infinite;
+  animation: swap 700s linear infinite;
 }
 
 .scroll {
@@ -1445,7 +1445,6 @@ button.splide__arrow:disabled {
   gap: 20px;
   padding: 1rem 8rem;
   display: none;
-  border-top: 1px solid #cbbea5;
   border-bottom: 1px solid #cbbea5;
 }
 @media (max-width: 1024px) {
@@ -1465,6 +1464,10 @@ button.splide__arrow:disabled {
   text-transform: uppercase;
   position: relative;
   display: block;
+}
+
+.nav-expertise__items {
+  text-transform: capitalize;
 }
 
 .search-icon {
@@ -2414,6 +2417,12 @@ body.admin-bar .search-overlay--desktop {
   padding: 1rem 0 0 !important;
 }
 
+.frm_opt_container {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+  padding: 1rem 0 !important;
+}
+
 .quote {
   font-family: "Inter", sans-serif;
   min-height: 92vh;
@@ -2863,9 +2872,12 @@ body.admin-bar .search-overlay--desktop {
   position: relative;
 }
 .about__hero__video {
-  display: block;
   width: 200px;
   padding: 0 0 1rem;
+  position: absolute;
+  top: 6vw;
+  right: -2vw;
+  z-index: 1;
 }
 @media (max-width: 768px) {
   .about__hero__video {
@@ -4690,7 +4702,7 @@ body.admin-bar .search-overlay--desktop {
   font-style: normal;
   font-weight: 700;
   line-height: 120%; /* 28.8px */
-  letter-spacing: -1.2px;
+  letter-spacing: -0.2px;
   color: #f2f1ed;
   padding-bottom: 40px;
 }

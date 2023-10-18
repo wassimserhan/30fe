@@ -10,13 +10,11 @@ get_header();
   <section class="careers__intro black-bg">
     <section class="max-width max-padding">
       <h1 class="careers__intro__headline">At 30, we share a fascination for how things work.
-        We love the mystery. The theory. The mechanics. The science. The rigour.
-        We’re tinkerers at heart. Detectives. Problem-solvers. Truth-seekers.
-        Perhaps most of all, we’re reporters.
+        We love the mystery. The&nbsp;theory. The mechanics. The science. The rigour.
+        We’re&nbsp;tinkerers at heart. Detectives. Problem-solvers. Truth-seekers.
+        Perhaps most of all, we’re Reporters.
         <br><br>
-        We’re always looking for more people like us to help us with our mission.
-        <br>
-        Are you in?
+        We’re always looking for more people like us to join us in our mission. Are you in?
       </h1>
       <a href="#positions"><button class="careers__intro__button">Open Positions</button></a>
     </section>
