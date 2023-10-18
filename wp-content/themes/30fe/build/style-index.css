@@ -3920,6 +3920,11 @@ body.admin-bar .search-overlay--desktop {
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media (max-width: 479px) {
+  .insights__card__image {
+    height: auto;
+  }
+}
 .insights__card__label {
   display: flex;
   justify-content: flex-start;
