@@ -12,7 +12,6 @@ if (fullscreen) {
   $orange = '#ff6f48';
   $blue = '#0175df';
   $green = '#08cb80';
-  $white = '#ffffff';
   $logoBlack = 'invert(0%)';
   $logoWhite = 'invert(100%)';
 

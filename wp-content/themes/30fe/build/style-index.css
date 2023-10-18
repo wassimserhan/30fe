@@ -3913,7 +3913,6 @@ body.admin-bar .search-overlay--desktop {
   gap: 1rem;
 }
 .insights__card__image {
-  width: 300px;
   height: 235px;
   -o-object-fit: cover;
      object-fit: cover;
