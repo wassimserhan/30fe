@@ -145,7 +145,7 @@
 
   &__item {
     flex-grow: 0;
-    transition: flex-grow 0.2s ease;
+    transition: flex-grow 0.1s ease;
     overflow: hidden;
 
     &.active {
@@ -159,7 +159,7 @@
     color: $black;
     padding: 20px 64px;
     visibility: hidden;
-    transition: visibility 0.22s ease;
+    transition: visibility 0.1s;
     height: 620px;
     // @include bp(widescreen) {
     //   height: 60vh;
@@ -167,7 +167,7 @@
 
     &.active {
       visibility: visible;
-      transition: visibility 0.22s ease;
+      transition: visibility 0.1s;
     }
   }
 }

@@ -156,8 +156,8 @@ while( have_rows('timeline') ) : the_row();
 if( have_rows('what_is_30') ):
 while( have_rows('what_is_30') ) : the_row(); 
 ?>
-  <section class="about__thirty fullscreen full-height">
-    <section class="">
+  <section class="about__thirty fullscreen">
+    <section class="max-width">
       <section class="about__whatis__card">
         <figure class="about__whatis__image">
           <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/what-is-30.gif" alt="what is 30?"

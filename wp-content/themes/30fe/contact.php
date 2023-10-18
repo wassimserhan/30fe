@@ -67,7 +67,7 @@ get_header();
         <h3>Submit an assignment</h3>
         <?php echo FrmFormsController::get_form_shortcode( array( 'id' => 1 ) ); ?>
       </section>
-      <section class="contact__details taupe-bg  max-padding">
+      <section class="contact__details taupe-bg max-padding">
         <h3>More ways to reach us</h3>
         <ul class="contact__detail">
           <li> <img class="contact__details__icon" src="<?php echo get_template_directory_uri(); ?>/images/Phone.svg"
@@ -80,6 +80,17 @@ get_header();
               width="25" height="25" alt="LinkedIn icon"> <a
               href="https://ca.linkedin.com/company/-30-forensic-engineering">-30- Forensic Engineering</a></li>
         </ul>
+
+        <section class="contact__details__press">
+          <h4>Press Inquiries</h4>
+          <p>If you are a member of the press and would like to connect with our experts or learn more about our work,
+            please contact:
+            <br><br>
+            Paul Aquino <br>
+            Director, Marketing <br>
+            <a href="mailto:paquino@30fe.com">paquino@30fe.com</a>
+          </p>
+        </section>
       </section>
     </section>
   </section>

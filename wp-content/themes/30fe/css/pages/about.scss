@@ -4,16 +4,19 @@
   &__hero {
     &__wrapper {
       position: relative;
+
       // @include bp(phone) {
       //   position: absolute;
       // }
     }
     &__video {
+      display: block;
       width: 200px;
-      position: absolute;
-      top: 6vw;
-      right: -2vw;
-      z-index: 1;
+      padding: 0 0 1rem;
+      // position: absolute;
+      // top: 6vw;
+      // right: -2vw;
+      // z-index: 1;
 
       @include bp(tablet) {
         position: initial;
@@ -200,7 +203,7 @@
       display: flex;
       color: $black;
       justify-content: space-evenly;
-      @include bp(tablet) {
+      @include bp(laptop) {
         flex-direction: column;
       }
     }
@@ -210,12 +213,15 @@
       width: 50%;
       position: relative;
 
-      @include bp(tablet) {
+      @include bp(laptop) {
         width: 100%;
+        text-align: center;
       }
 
       & img {
         width: 100%;
+        max-width: 600px;
+        margin: auto;
       }
     }
 
@@ -224,7 +230,7 @@
       width: 50%;
       margin: 0 auto;
       padding: 60px;
-      @include bp(tablet) {
+      @include bp(laptop) {
         width: 100%;
       }
     }

@@ -151,6 +151,14 @@
       margin-right: 10px;
       max-width: 25px;
     }
+
+    &__press h4 {
+      padding: 2rem 0 1rem;
+    }
+    &__press a {
+      text-decoration: underline;
+      color: $black;
+    }
   }
 
   &__detail {

@@ -1,15 +1,14 @@
 <article class="insights__card">
   <a href="<?php the_permalink() ?>" aria-label="Read more">
-    <figure>
-      <img loading="lazy" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo $alt; ?>"
-        title="<?php echo $title; ?>">
-    </figure>
+
+    <img class="insights__card__image" loading="lazy" src="<?php echo get_the_post_thumbnail_url(); ?>"
+      alt="<?php echo $alt; ?>" title="<?php echo $title; ?>">
+
   </a>
   <article class="insights__card__label">
     <a href="<?php the_permalink() ?>" aria-label="Read more">
       <?php require get_theme_file_path('/includes/blog-colors.php');?>
-      <aside class="insights__card__label__category"
-        style="border: 1px solid <?php echo substr($label_color , 0, strpos($label_color , "-"));?>">
+      <aside class="insights__card__label__category" style="border: 1px solid <?php echo $label_color ;?>">
         <p class="insights__card__label__category__text">
           <?php echo get_the_category_list(', '); ?>
         </p>

@@ -2682,7 +2682,7 @@ body.admin-bar .search-overlay--desktop {
 }
 .accordion__item {
   flex-grow: 0;
-  transition: flex-grow 0.2s ease;
+  transition: flex-grow 0.1s ease;
   overflow: hidden;
 }
 .accordion__item.active {
@@ -2694,12 +2694,12 @@ body.admin-bar .search-overlay--desktop {
   color: #1d1c1d;
   padding: 20px 64px;
   visibility: hidden;
-  transition: visibility 0.22s ease;
+  transition: visibility 0.1s;
   height: 620px;
 }
 .accordion__body.active {
   visibility: visible;
-  transition: visibility 0.22s ease;
+  transition: visibility 0.1s;
 }
 
 .item {
@@ -2863,11 +2863,9 @@ body.admin-bar .search-overlay--desktop {
   position: relative;
 }
 .about__hero__video {
+  display: block;
   width: 200px;
-  position: absolute;
-  top: 6vw;
-  right: -2vw;
-  z-index: 1;
+  padding: 0 0 1rem;
 }
 @media (max-width: 768px) {
   .about__hero__video {
@@ -3013,7 +3011,7 @@ body.admin-bar .search-overlay--desktop {
   color: #1d1c1d;
   justify-content: space-evenly;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .about__whatis__card {
     flex-direction: column;
   }
@@ -3023,13 +3021,16 @@ body.admin-bar .search-overlay--desktop {
   width: 50%;
   position: relative;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .about__whatis__image {
     width: 100%;
+    text-align: center;
   }
 }
 .about__whatis__image img {
   width: 100%;
+  max-width: 600px;
+  margin: auto;
 }
 .about__whatis__detail {
   align-self: center;
@@ -3037,7 +3038,7 @@ body.admin-bar .search-overlay--desktop {
   margin: 0 auto;
   padding: 60px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .about__whatis__detail {
     width: 100%;
   }
@@ -3911,6 +3912,12 @@ body.admin-bar .search-overlay--desktop {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
 }
+.insights__card__image {
+  width: 300px;
+  height: 235px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .insights__card__label {
   display: flex;
   justify-content: flex-start;
@@ -4400,6 +4407,13 @@ body.admin-bar .search-overlay--desktop {
 .contact__details__icon {
   margin-right: 10px;
   max-width: 25px;
+}
+.contact__details__press h4 {
+  padding: 2rem 0 1rem;
+}
+.contact__details__press a {
+  text-decoration: underline;
+  color: #1d1c1d;
 }
 .contact__detail li {
   font-size: 20px;
