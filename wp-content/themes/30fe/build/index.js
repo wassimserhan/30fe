@@ -3941,18 +3941,19 @@ if (careerSlider) {
       next: 'splide__arrow--next splide-careers__arrow--next'
     },
     breakpoints: {
-      480: {
-        width: '100%',
-        perPage: 1,
-        arrows: false
-      },
       786: {
         width: '100%',
-        perPage: 2,
-        arrows: false
+        perPage: 1,
+        arrows: true
+      },
+      1251: {
+        width: '100%',
+        perPage: 2
+        // arrows: false,
       }
     },
-    type: 'loop',
+
+    type: 'slide',
     perMove: 1,
     perPage: 3,
     pagination: false,
@@ -4675,11 +4676,14 @@ if (fullscreen) {
         borderColor: $whitesmoke
       });
       gsap.set(".search-overlay--desktop__icon", {
-        filter: $logoWhite
+        filter: $logoBlack
       });
       gsap.set(".nav__button", {
         backgroundColor: $whitesmoke,
         color: $black
+      });
+      gsap.set(".plus-nav", {
+        filter: $logoWhite
       });
       sectionColors = [$black, $whitesmoke, $whitesmoke, $black, $whitesmoke, $taupe];
       navColors = [$black, $whitesmoke, $whitesmoke, $black, $whitesmoke, $taupe];
@@ -5130,12 +5134,15 @@ accordionsAbout.forEach(accordion => {
 // Enable hidden nav bar
 {
   const nav = document.querySelector(".nav");
+  const header = document.querySelector(".header");
   let lastScrollY = window.scrollY;
   window.addEventListener("scroll", () => {
     if (lastScrollY < window.scrollY && lastScrollY > 800) {
       nav.classList.add("nav--hidden");
+      header.style.zIndex = "1";
     } else {
       nav.classList.remove("nav--hidden");
+      header.style.zIndex = "10";
     }
     lastScrollY = window.scrollY;
   });

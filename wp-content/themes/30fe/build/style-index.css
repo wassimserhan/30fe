@@ -2882,7 +2882,7 @@ body.admin-bar .search-overlay--desktop {
   padding: 0 0 1rem;
   position: absolute;
   top: 6vw;
-  right: -2vw;
+  right: 4vw;
   z-index: 1;
 }
 @media (max-width: 768px) {
@@ -4850,6 +4850,7 @@ body.admin-bar .search-overlay--desktop {
 }
 .careers__headline--blue {
   color: #0175df;
+  padding-bottom: 5rem;
 }
 .careers__headline--taupe {
   color: #cbbea5;

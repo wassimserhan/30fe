@@ -61,8 +61,11 @@ if (fullscreen) {
       gsap.set(".nav__items", { color: $whitesmoke })
       gsap.set(".nav", { backgroundColor: $black })
       gsap.set(".search-overlay--desktop__wrapper", { borderColor: $whitesmoke })
-      gsap.set(".search-overlay--desktop__icon", { filter: $logoWhite })
+      gsap.set(".search-overlay--desktop__icon", { filter: $logoBlack })
       gsap.set(".nav__button", { backgroundColor: $whitesmoke, color: $black })
+      gsap.set(".plus-nav", { filter: $logoWhite })
+
+
       sectionColors = [$black, $whitesmoke, $whitesmoke, $black, $whitesmoke, $taupe];
       navColors = [$black, $whitesmoke, $whitesmoke, $black, $whitesmoke, $taupe];
       navItems = [$whitesmoke, $black, $black, $whitesmoke, $black, $black]

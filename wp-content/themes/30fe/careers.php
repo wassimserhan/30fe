@@ -72,7 +72,7 @@ if( have_rows('values') ):
 while( have_rows('values') ) : the_row(); 
 ?>
   <section class="careers__vision black-bg">
-    <section class="max-width careers__vision__padding">
+    <section class="careers__vision__padding">
       <h2 class="careers__headline careers__headline--blue"><?php echo get_sub_field('values_headline') ;?></h2>
       <section id="careers-slider" class="splide splide-careers" aria-labelledby="carousel-heading">
         <div class="splide__track">

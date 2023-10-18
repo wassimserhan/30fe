@@ -78,6 +78,7 @@ accordionsAbout.forEach(accordion => {
 // Enable hidden nav bar
 {
   const nav = document.querySelector(".nav");
+  const header = document.querySelector(".header");
   let lastScrollY = window.scrollY;
 
 
@@ -85,8 +86,10 @@ accordionsAbout.forEach(accordion => {
 
     if (lastScrollY < window.scrollY && lastScrollY > 800) {
       nav.classList.add("nav--hidden");
+      header.style.zIndex = "1";
     } else {
       nav.classList.remove("nav--hidden");
+      header.style.zIndex = "10";
     }
 
     lastScrollY = window.scrollY;

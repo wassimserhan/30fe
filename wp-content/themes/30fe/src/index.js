@@ -161,21 +161,21 @@ if (careerSlider) {
       next: 'splide__arrow--next splide-careers__arrow--next',
     },
     breakpoints: {
-      480: {
-        width: '100%',
-        perPage: 1,
-        arrows: false,
-
-      },
       786: {
         width: '100%',
+        perPage: 1,
+        arrows: true,
+
+      },
+      1251: {
+        width: '100%',
         perPage: 2,
-        arrows: false,
+        // arrows: false,
 
       },
     },
 
-    type: 'loop',
+    type: 'slide',
     perMove: 1,
     perPage: 3,
     pagination: false,
