@@ -52,7 +52,6 @@
   }
 
   &__icon {
-    margin-right: 10px;
     max-width: 15px;
     filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(138deg)
       brightness(103%) contrast(102%);
@@ -135,7 +134,7 @@
 }
 
 .search-term {
-  width: 75%;
+  width: 95%;
   box-sizing: border-box;
   border: none;
   padding: 15px 0;
@@ -145,6 +144,9 @@
   font-weight: 300;
   outline: none;
   color: $whitesmoke;
+  @include bp(phone) {
+    width: 75%;
+  }
 }
 
 .body-no-scroll {

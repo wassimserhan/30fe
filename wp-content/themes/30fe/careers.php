@@ -144,7 +144,7 @@ while( have_rows('benefits') ) : the_row();
 if( have_rows('positions') ):
 while( have_rows('positions') ) : the_row(); 
 ?>
-  <section class="careers__vision black-bg fullscreen">
+  <section id="positions" class="careers__vision black-bg fullscreen">
     <section class="max-width max-padding">
       <h2 class="careers__headline careers__headline--white"><?php echo get_sub_field('positions_headline') ;?></h2>
 
@@ -160,7 +160,7 @@ while( have_rows('positions') ) : the_row();
         ?>
 
 
-      <section id="positions" class="careers__openings">
+      <section class="careers__openings">
         <a href="<?php echo $bamboo_link; ?>">
           <article class="careers__positions">
             <div class="careers__positions__wrapper">

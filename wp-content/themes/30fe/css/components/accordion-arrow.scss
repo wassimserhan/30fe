@@ -112,6 +112,22 @@
   }
 }
 
+.plus-nav--mobile {
+  position: absolute;
+  right: -24px;
+  width: 24px;
+  height: 24px;
+  transition: all 250ms;
+  top: 2px;
+  cursor: pointer;
+  filter: invert(100%);
+
+  &--active {
+    transition: all 250ms;
+    transform: rotate(180deg);
+  }
+}
+
 .plus-active {
   transition: all 250ms;
   transform: rotate(180deg);

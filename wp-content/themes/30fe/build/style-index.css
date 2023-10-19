@@ -386,6 +386,10 @@ ul {
   padding: 0px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   width: 100%;
@@ -1072,6 +1076,21 @@ button.splide__arrow:disabled {
   transform: rotate(180deg);
 }
 
+.plus-nav--mobile {
+  position: absolute;
+  right: -24px;
+  width: 24px;
+  height: 24px;
+  transition: all 250ms;
+  top: 2px;
+  cursor: pointer;
+  filter: invert(100%);
+}
+.plus-nav--mobile--active {
+  transition: all 250ms;
+  transform: rotate(180deg);
+}
+
 .plus-active {
   transition: all 250ms;
   transform: rotate(180deg);
@@ -1345,7 +1364,7 @@ button.splide__arrow:disabled {
   border-bottom: 1px solid #1d1c1d;
 }
 .nav__logo {
-  max-width: 40px;
+  max-width: 30px;
   width: 100%;
   height: 100%;
   margin: 0 auto;
@@ -1551,7 +1570,6 @@ body.admin-bar .search-overlay {
   border-bottom: 1px solid #f2f1ed;
 }
 .search-overlay__icon {
-  margin-right: 10px;
   max-width: 15px;
   filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(138deg) brightness(103%) contrast(102%);
 }
@@ -1617,7 +1635,7 @@ body.admin-bar .search-overlay {
 }
 
 .search-term {
-  width: 75%;
+  width: 95%;
   box-sizing: border-box;
   border: none;
   padding: 15px 0;
@@ -1627,6 +1645,11 @@ body.admin-bar .search-overlay {
   font-weight: 300;
   outline: none;
   color: #f2f1ed;
+}
+@media (max-width: 479px) {
+  .search-term {
+    width: 75%;
+  }
 }
 
 .body-no-scroll {
@@ -4127,7 +4150,7 @@ body.admin-bar .search-overlay--desktop {
   opacity: 1;
 }
 .insights__load {
-  margin: auto;
+  margin: 2rem auto;
 }
 
 .paginate {
@@ -5071,8 +5094,8 @@ body.admin-bar .search-overlay--desktop {
   justify-content: space-between;
   flex-direction: column;
   margin: 0 10px 0 0 !important;
-  padding: 10px 20px;
-  min-height: 380px;
+  padding: 32px;
+  min-height: 290px;
   width: 400px !important;
 }
 .careers__slide__card__number {
@@ -5084,11 +5107,11 @@ body.admin-bar .search-overlay--desktop {
   color: #0175df;
 }
 .careers__slide__card__text {
-  font-size: 48px;
+  font-size: 2rem;
   font-weight: 700;
   color: #f2f1ed;
   line-height: 100%; /* 48px */
-  letter-spacing: -2.4px;
+  letter-spacing: -0.08rem;
 }
 
 .careers__vision__padding {

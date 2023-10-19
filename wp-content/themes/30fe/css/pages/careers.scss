@@ -310,12 +310,9 @@
     justify-content: space-between;
     flex-direction: column;
     margin: 0 10px 0 0 !important;
-    padding: 10px 20px;
-    min-height: 380px;
+    padding: 32px;
+    min-height: 290px;
     width: 400px !important;
-    // @include bp(phone) {
-    //   margin: 0 !important;
-    // }
 
     &__number {
       font-size: 32px;
@@ -327,11 +324,11 @@
     }
 
     &__text {
-      font-size: 48px;
+      font-size: 2rem;
       font-weight: 700;
       color: $whitesmoke;
       line-height: 100%; /* 48px */
-      letter-spacing: -2.4px;
+      letter-spacing: -0.08rem;
     }
   }
 }
