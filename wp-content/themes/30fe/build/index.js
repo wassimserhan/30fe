@@ -3943,7 +3943,7 @@ if (careerSlider) {
     breakpoints: {
       786: {
         width: '100%',
-        perPage: 1,
+        perPage: 2,
         arrows: true
       },
       1251: {

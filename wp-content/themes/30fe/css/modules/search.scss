@@ -22,8 +22,8 @@
   box-sizing: border-box;
   padding: 6px 128px;
 
-  @include bp(laptop) {
-    padding: 20px;
+  @include bp(tablet) {
+    padding: 6px 1.5rem;
   }
 
   .event-summary p {

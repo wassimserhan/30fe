@@ -113,6 +113,7 @@
 }
 
 .splide-careers {
+  position: relative !important;
   padding: 0 !important;
 
   .splide__arrow:before {
@@ -139,12 +140,18 @@
     top: -13% !important;
     right: 22% !important;
     margin: auto !important;
+    @include bp(tablet) {
+      right: 72% !important;
+    }
   }
 
   &__arrow--prev {
     top: -13% !important;
-    right: -43% !important;
+    left: 69% !important;
     margin: auto !important;
+    @include bp(tablet) {
+      left: 0% !important;
+    }
   }
 }
 

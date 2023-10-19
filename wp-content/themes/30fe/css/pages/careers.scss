@@ -190,7 +190,7 @@
   }
 
   &__headline {
-    font-size: 72px;
+    font-size: 64px;
     font-weight: 700;
     line-height: 100%; /* 72px */
     letter-spacing: -3.6px;
@@ -202,7 +202,9 @@
 
     &--blue {
       color: $blue;
-      padding-bottom: 5rem;
+      @include bp(tablet) {
+        padding-bottom: 5rem;
+      }
     }
 
     &--taupe {
@@ -311,12 +313,13 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    margin: 0 10px !important;
+    margin: 0 10px 0 0 !important;
     padding: 10px 20px;
     min-height: 380px;
-    @include bp(phone) {
-      margin: 0 !important;
-    }
+    width: 400px !important;
+    // @include bp(phone) {
+    //   margin: 0 !important;
+    // }
 
     &__number {
       font-size: 32px;
@@ -339,7 +342,7 @@
 
 .careers__vision__padding {
   padding: 8rem 0 8rem 8rem;
-  @include bp(phone) {
+  @include bp(tablet) {
     padding: 8rem 1.5rem;
   }
 }
