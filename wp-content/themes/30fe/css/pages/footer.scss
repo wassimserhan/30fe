@@ -4,6 +4,9 @@
 
   &__padding {
     padding: 0 8rem 1rem;
+    @include bp(phone) {
+      padding: 0 1.5rem 1rem;
+    }
   }
 
   & figure {

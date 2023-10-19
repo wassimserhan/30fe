@@ -114,6 +114,9 @@
   letter-spacing: -5.9px;
   color: $whitesmoke;
   user-select: none;
+  @include bp(phone) {
+    font-size: 100px;
+  }
 }
 
 /* Transition */

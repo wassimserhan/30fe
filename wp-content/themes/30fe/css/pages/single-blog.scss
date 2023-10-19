@@ -98,8 +98,11 @@
   font-family: 'Inter', sans-serif;
   background-color: $whitesmoke;
 
-  @include bp(phone) {
-    // padding: 60px 0;
+  &__padding {
+    padding: 8rem 10rem;
+    @include bp(phone) {
+      padding: 8rem 1.5rem;
+    }
   }
 
   &__button {
@@ -152,7 +155,7 @@
 
     & > p {
       font-size: 1.25rem;
-      padding: 10px 100px;
+      padding: 10px 0;
     }
   }
 

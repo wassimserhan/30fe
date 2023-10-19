@@ -42,7 +42,7 @@
       </section>
 
       <section class="single-blog fullscreen">
-        <section class="max-width max-padding">
+        <section class="max-width single-blog__padding">
           <section class="single-blog__single-post">
             <?php
           while( have_posts()) {
