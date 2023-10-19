@@ -24,9 +24,9 @@
     transition: background-color 0.4s; /* Add a smooth transition for background color changes */
 
     &__padding {
-      padding: 15rem 8rem 8rem;
+      padding: 8rem;
       @include bp(phone) {
-        padding: 8rem 2rem;
+        padding: 8rem 0 0 1.5rem;
       }
     }
 

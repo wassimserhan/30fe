@@ -153,6 +153,8 @@ expertiseDropdown.addEventListener('mouseleave', function () {
 
 
 
+
+
 // document.addEventListener('', event => {
 //   const isClickInside = plusSectors.contains(event.target)
 

@@ -2826,11 +2826,11 @@ body.admin-bar .search-overlay--desktop {
   transition: background-color 0.4s; /* Add a smooth transition for background color changes */
 }
 .home__hero__padding {
-  padding: 15rem 8rem 8rem;
+  padding: 8rem;
 }
 @media (max-width: 479px) {
   .home__hero__padding {
-    padding: 8rem 2rem;
+    padding: 8rem 0 0 1.5rem;
   }
 }
 .home__hero__buttons {

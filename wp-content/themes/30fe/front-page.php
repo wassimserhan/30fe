@@ -8,13 +8,12 @@
 
 
   <section id="home__hero" class="home__hero">
-    <section class="max-width max-padding">
+    <section class="max-width home__hero__padding">
       <h1 id="banner-text" class="home__banner__headline"> Precision&nbsp;in <br>Investigation, <br>Clarity
         in <br>Solutions.
       </h1>
-
-
-
+    </section>
+    <section class="max-width max-padding">
       <article class="home__hero__wrapper">
         <section class="home__hero__container">
           <p class="home__hero__text">We are a team of investigators, engineers, scientists, and problem solvers. We
