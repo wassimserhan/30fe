@@ -1,6 +1,9 @@
 // Breakpoints
 // ---------------------------------------------
 $breakpoints: (
+  from_phone_small: (
+    min-width: 479px
+  ),
   phone_small: (
     max-width: 375px
   ),

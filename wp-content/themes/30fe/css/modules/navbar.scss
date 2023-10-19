@@ -35,6 +35,15 @@
     @include bp(laptop) {
       display: none;
     }
+
+    &--mobile {
+      display: none;
+      @include bp(laptop) {
+        display: block;
+        background-color: $black !important;
+        color: $whitesmoke !important;
+      }
+    }
   }
 
   &__search {

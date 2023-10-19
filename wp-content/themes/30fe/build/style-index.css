@@ -1186,6 +1186,16 @@ button.splide__arrow:disabled {
     display: none;
   }
 }
+.nav__button--mobile {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .nav__button--mobile {
+    display: block;
+    background-color: #1d1c1d !important;
+    color: #f2f1ed !important;
+  }
+}
 .nav__search {
   padding: 0.5rem 1rem;
   display: none;
@@ -4758,7 +4768,7 @@ body.admin-bar .search-overlay--desktop {
 .careers__hero__padding {
   padding: 8rem;
 }
-@media (max-width: 479px) {
+@media (max-width: 768px) {
   .careers__hero__padding {
     padding: 4rem 1.5rem 7rem;
   }
@@ -4860,6 +4870,12 @@ body.admin-bar .search-overlay--desktop {
     right: 10%;
   }
 }
+@media (max-width: 768px) {
+  .careers__hero__images--one {
+    top: -149%;
+    right: 8%;
+  }
+}
 @media (max-width: 479px) {
   .careers__hero__images--one {
     top: -149%;
@@ -4875,6 +4891,12 @@ body.admin-bar .search-overlay--desktop {
 @media (max-width: 1024px) {
   .careers__hero__images--two {
     right: 43%;
+  }
+}
+@media (max-width: 768px) {
+  .careers__hero__images--two {
+    right: 50%;
+    top: 195%;
   }
 }
 @media (max-width: 479px) {
@@ -4897,7 +4919,7 @@ body.admin-bar .search-overlay--desktop {
 }
 @media (max-width: 768px) {
   .careers__hero__images--three {
-    right: -25%;
+    right: 0%;
   }
 }
 @media (max-width: 479px) {
@@ -4919,7 +4941,8 @@ body.admin-bar .search-overlay--desktop {
 }
 @media (max-width: 768px) {
   .careers__hero__images--four {
-    left: -26%;
+    left: 0%;
+    width: 115px !important;
   }
 }
 @media (max-width: 479px) {

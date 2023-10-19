@@ -23,14 +23,9 @@
   }
 
   &__hero {
-    // min-height: 92vh;
-    // display: flex;
-    // justify-content: center;
-    // flex-direction: column;
-
     &__padding {
       padding: 8rem;
-      @include bp(phone) {
+      @include bp(tablet) {
         padding: 4rem 1.5rem 7rem;
       }
     }
@@ -121,6 +116,12 @@
           top: -130%;
           right: 10%;
         }
+
+        @include bp(tablet) {
+          top: -149%;
+          right: 8%;
+        }
+
         @include bp(phone) {
           top: -149%;
           right: 8%;
@@ -134,6 +135,11 @@
         width: 275px;
         @include bp(laptop) {
           right: 43%;
+        }
+
+        @include bp(tablet) {
+          right: 50%;
+          top: 195%;
         }
 
         @include bp(phone) {
@@ -154,7 +160,7 @@
         }
 
         @include bp(tablet) {
-          right: -25%;
+          right: 0%;
         }
         @include bp(phone) {
           right: 0%;
@@ -172,7 +178,8 @@
         }
 
         @include bp(tablet) {
-          left: -26%;
+          left: 0%;
+          width: 115px !important;
         }
         @include bp(phone) {
           left: 0%;

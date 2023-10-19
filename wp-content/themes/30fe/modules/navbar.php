@@ -188,6 +188,8 @@ global $template;
       <a class="nav__items--mobile nav-links" href="<?php echo site_url('/insights')?>" target="_self">Insights</a>
       <a class="nav__items--mobile nav-links" href="<?php echo site_url('/contact')?>" target="_self">Contact</a>
       <a class="nav__items--mobile nav-links" href="<?php echo site_url('/careers')?>" target="_self">Careers</a>
+      <a href="<?php echo site_url('/submit')?>"><button class="nav__button nav__button--mobile">Submit an
+          Assignment</button></a>
 
     </section>
   </section>
