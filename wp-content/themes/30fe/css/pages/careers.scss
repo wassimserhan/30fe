@@ -335,7 +335,7 @@
 
 .careers__vision__padding {
   padding: 8rem 0 8rem 8rem;
-  @include bp(tablet) {
+  @include bp(laptop) {
     padding: 8rem 1.5rem;
   }
 }

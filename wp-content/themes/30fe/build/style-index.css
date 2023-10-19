@@ -5107,7 +5107,7 @@ body.admin-bar .search-overlay--desktop {
 .careers__vision__padding {
   padding: 8rem 0 8rem 8rem;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .careers__vision__padding {
     padding: 8rem 1.5rem;
   }
