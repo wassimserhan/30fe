@@ -23,7 +23,7 @@
             <br><br>
             <strong>We are 30.</strong>
           </p>
-          <img src="<?php echo get_template_directory_uri(); ?>/images/banner.png" alt="">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/banner.gif" alt="">
 
         </section>
 
