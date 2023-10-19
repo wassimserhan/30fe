@@ -11,7 +11,7 @@ get_header();
   <!-- Hero -->
 
   <section class="about__hero fullscreen full-height about__hero__transparent">
-    <section class="max-width max-padding">
+    <section class="max-width max-padding about__hero__padding">
 
       <section class="about__hero__wrapper">
         <img class="about__hero__video" src="<?php echo get_template_directory_uri(); ?>/images/about.gif"

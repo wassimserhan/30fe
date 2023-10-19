@@ -28,6 +28,13 @@
     // justify-content: center;
     // flex-direction: column;
 
+    &__padding {
+      padding: 8rem;
+      @include bp(phone) {
+        padding: 4rem 1.5rem 7rem;
+      }
+    }
+
     &__block {
       position: relative;
     }
@@ -51,16 +58,16 @@
       width: 100px;
       height: 100px;
       position: absolute;
+      @include bp(tablet) {
+        display: none;
+      }
 
       &--orange {
         top: -90%;
         left: 9%;
         z-index: 2;
-
-        @include bp(tablet) {
-          top: -360%;
-          left: 68%;
-          z-index: 2;
+        @include bp(laptop) {
+          left: 1%;
         }
       }
 
@@ -68,83 +75,109 @@
         top: 150%;
         right: 10%;
         z-index: 2;
-        @include bp(phone) {
-          top: 270%;
-          right: 71%;
+        @include bp(laptop) {
+          right: 4%;
         }
       }
 
       &--blue {
-        top: -30%;
-        right: 25%;
+        top: 73%;
+        right: 30%;
         z-index: 1;
         width: 75px;
         height: 75px;
-        @include bp(tablet) {
-          top: -130%;
+        @include bp(laptop) {
+          display: none;
         }
       }
 
       &--green {
-        top: -70%;
+        top: -50%;
         right: 40%;
         z-index: 1;
-        @include bp(phone) {
-          top: -210%;
-          right: 60%;
-          width: 70px;
-          height: 70px;
+        @include bp(laptop) {
+          top: -60%;
         }
       }
     }
 
     &__images {
-      width: 150px;
       position: absolute;
+      @include bp(tablet) {
+        width: 200px !important;
+      }
+
+      @include bp(phone) {
+        width: 75px !important;
+      }
 
       &--one {
         top: -120%;
         right: 22%;
-        width: 200px;
+        width: 240px;
         z-index: 2;
+
+        @include bp(laptop) {
+          top: -130%;
+          right: 10%;
+        }
         @include bp(phone) {
-          top: 240%;
-          right: 2%;
+          top: -149%;
+          right: 8%;
+          width: 170px !important;
         }
       }
 
       &--two {
         top: 83%;
-        right: 55%;
-        width: 250px;
+        right: 50%;
+        width: 275px;
         @include bp(laptop) {
-          right: 45%;
+          right: 43%;
         }
 
         @include bp(phone) {
-          display: none;
+          right: 50%;
+          top: 195%;
+          width: 150px !important;
         }
       }
 
       &--three {
+        width: 175px;
         top: 61%;
         right: 0%;
         z-index: 1;
 
+        @include bp(laptop) {
+          right: -17%;
+        }
+
+        @include bp(tablet) {
+          right: -25%;
+        }
         @include bp(phone) {
-          top: -439%;
-          right: 57%;
-          z-index: 1;
+          right: 0%;
+          width: 125px !important;
         }
       }
 
       &--four {
+        width: 175px;
         top: -40%;
         left: 0%;
         z-index: 1;
-        // @include bp(tablet) {
-        //   left: 54%;
-        // }
+        @include bp(laptop) {
+          left: -18%;
+        }
+
+        @include bp(tablet) {
+          left: -26%;
+        }
+        @include bp(phone) {
+          left: 0%;
+          width: 115px !important;
+        }
       }
     }
   }

@@ -4,10 +4,15 @@
   &__hero {
     &__wrapper {
       position: relative;
+    }
 
-      // @include bp(phone) {
-      //   position: absolute;
-      // }
+    &__padding {
+      @include bp(laptop) {
+        padding: 4rem 1.5rem;
+      }
+      @include bp(phone) {
+        padding: 0 1.5rem 2rem;
+      }
     }
     &__video {
       // display: block;
@@ -18,13 +23,18 @@
       right: 4vw;
       z-index: 1;
 
+      @include bp(laptop) {
+        width: 200px;
+        top: -6vw;
+      }
+
       @include bp(tablet) {
-        position: initial;
       }
 
       @include bp(phone) {
-        right: 25px;
-        top: -250px;
+        width: 100%;
+        display: block;
+        position: static;
       }
     }
 
@@ -39,22 +49,18 @@
       z-index: 2;
       position: relative;
 
-      @include bp(laptop) {
-        font-size: 14vw;
-      }
-
       @include bp(tablet) {
+        font-size: 13vh;
         padding-bottom: 10px;
-        font-size: 4.4rem;
         line-height: 120%;
         letter-spacing: -0.12rem;
         z-index: 3;
         position: relative;
       }
 
-      // @include bp(phone) {
-      //   font-size: 4rem;
-      // }
+      @include bp(phone) {
+        font-size: 9vh;
+      }
 
       // @include bp(phone_small) {
       //   font-size: 4rem;
@@ -67,12 +73,15 @@
       max-width: 500px;
       width: 80%;
       position: relative;
+      z-index: 2;
 
       @include bp(tablet) {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
       }
 
       @include bp(phone) {
+        max-width: 100%;
+        width: 100%;
       }
     }
   }

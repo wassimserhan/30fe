@@ -25,7 +25,7 @@ get_header();
 
 
   <section class="careers__hero black-bg">
-    <section class="max-width max-padding ">
+    <section class="max-width careers__hero__padding ">
       <section class="careers__hero__block">
         <h1 class="careers__hero__headline">&nbsp;</h1>
         <section class="careers__hero__box careers__hero__box--orange orange-bg"></section>
