@@ -16,7 +16,7 @@ get_header();
       <section class="about__hero__wrapper">
         <img class="about__hero__video" src="<?php echo get_template_directory_uri(); ?>/images/about.gif"
           alt="About 30FE">
-        <h1 class="about__hero__headline">We are 30.</h1>
+        <h1 class="about__hero__headline">We are 30</h1>
 
 
 
