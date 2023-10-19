@@ -68,10 +68,9 @@ global $template;
 
       </li>
       <li class="" role="menuitem">
-        <a id="" class="nav__items nav-sectors" data-name="#" href="<?php echo site_url('/sectors')?>">Sectors
-          <img class="plus-nav plus-sectors" src="<?php echo get_template_directory_uri(); ?>/images/nav-arrow.svg"
-            alt="<?php echo get_bloginfo( 'name' ); ?> logo" title="<?php echo get_bloginfo( 'name' ); ?>"
-            width="100%"></a>
+        <a id="" class="nav__items nav-sectors" data-name="#" href="<?php echo site_url('/sectors')?>">Sectors</a>
+        <img class="plus-nav plus-sectors" src="<?php echo get_template_directory_uri(); ?>/images/nav-arrow.svg"
+          alt="<?php echo get_bloginfo( 'name' ); ?> logo" title="<?php echo get_bloginfo( 'name' ); ?>" width="100%">
       </li>
       <li class="" role="menuitem">
         <a id="" class="nav__items" data-name="#" href="<?php echo site_url('/insights')?>">Insights</a>
@@ -142,7 +141,8 @@ global $template;
         <div class="accordion-about__wrapper">
           <a class="nav__items--mobile nav-links" href="<?php echo site_url('/expertise')?>"
             target="_self">Expertise</a>
-          <div class="plus-nav"></div>
+          <img class="plus-nav plus-nav--mobile" src="<?php echo get_template_directory_uri(); ?>/images/nav-arrow.svg"
+            alt="<?php echo get_bloginfo( 'name' ); ?> logo" title="<?php echo get_bloginfo( 'name' ); ?>" width="100%">
         </div>
         <section class="accordion-about__content">
           <?php 
@@ -165,7 +165,8 @@ global $template;
       <article class="accordion-about">
         <div class="accordion-about__wrapper">
           <a class="nav__items--mobile nav-links" href="<?php echo site_url('/sectors')?>" target="_self">Sectors</a>
-          <div class="plus-nav"></div>
+          <img class="plus-nav plus-nav--mobile" src="<?php echo get_template_directory_uri(); ?>/images/nav-arrow.svg"
+            alt="<?php echo get_bloginfo( 'name' ); ?> logo" title="<?php echo get_bloginfo( 'name' ); ?>" width="100%">
         </div>
         <section class="accordion-about__content">
           <?php 
