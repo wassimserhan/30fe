@@ -3461,6 +3461,7 @@ body.admin-bar .search-overlay--desktop {
   border-bottom: 1px solid #1d1c1d;
 }
 .expertise__list-item {
+  color: inherit;
   padding: 64px 0;
 }
 @media (max-width: 479px) {
