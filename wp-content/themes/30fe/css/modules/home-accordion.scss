@@ -145,7 +145,7 @@
 
   &__item {
     flex-grow: 0;
-    transition: flex-grow 0.1s ease;
+    transition: flex-grow 180ms ease;
     overflow: hidden;
 
     &.active {
@@ -153,21 +153,25 @@
     }
   }
 
+  &__wrapper {
+    height: 620px;
+  }
+
   &__body {
     min-width: calc(590px - 272px);
     overflow: hidden;
     color: $black;
     padding: 20px 64px;
-    visibility: hidden;
-    transition: visibility 0.1s;
-    height: 620px;
+    opacity: 0;
+    transition: opacity 180ms;
+
     // @include bp(widescreen) {
     //   height: 60vh;
     // }
 
     &.active {
-      visibility: visible;
-      transition: visibility 0.1s;
+      opacity: 1;
+      transition: opacity 180ms;
     }
   }
 }

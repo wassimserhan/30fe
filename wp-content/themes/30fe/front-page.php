@@ -68,27 +68,24 @@
         <div class="accordion__item <?php if(get_row_index() === 1) echo 'active' ?> <?php    echo $colors[$k] ?>">
           <article class="accordion__tab">
             <h1 class="accordion__heading"
-              style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'black-bg') echo 'color: #ffffff'?>">
+              style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'black-bg') echo 'color: #f2f1ed;'?>">
               <?php echo $headline ?></h1>
             <p class="accordion__number"
-              style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'black-bg') echo 'color: #ffffff'?>">
+              style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'black-bg') echo 'color: #f2f1ed;'?>">
               <?php echo '0'. get_row_index() ?></p>
           </article>
-          <section class="accordion__body active">
-            <h3 class="accordion__headline"
-              style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'black-bg') echo 'color: #ffffff'?>">
-              <?php echo $headline ?></h3>
-            <p class="accordion__copy"
-              style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'black-bg') echo 'color: #ffffff'?>">
-              <?php echo $copy; ?>
-            </p>
-
-
-
-            <img loading="lazy" class="accordion__image" src="<?php echo $image ?>" alt="<?php echo $alt; ?>"
-              title="<?php echo $alt; ?>">
-
-
+          <section class="accordion__wrapper">
+            <section class="accordion__body active">
+              <h3 class="accordion__headline"
+                style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'black-bg') echo 'color: #f2f1ed;'?>">
+                <?php echo $headline ?></h3>
+              <p class="accordion__copy"
+                style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'black-bg') echo 'color: #f2f1ed;'?>">
+                <?php echo $copy; ?>
+              </p>
+              <img loading="lazy" class="accordion__image" src="<?php echo $image ?>" alt="<?php echo $alt; ?>"
+                title="<?php echo $alt; ?>">
+            </section>
           </section>
           <?php $k++ ?>
         </div>
@@ -120,7 +117,7 @@
         <div
           class="accordion-mobile__heading item tab <?php if(get_row_index() === 1) echo 'active' ?> <?php echo $colors[$k] ?>">
           <div class="title"
-            style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'black-bg') echo 'color: #ffffff'?>">
+            style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'black-bg') echo 'color: #f2f1ed;'?>">
             <?php echo $headline ?></h1>
           </div>
           <div class="accordion-mobile__body content">
@@ -129,7 +126,7 @@
               title="<?php echo $alt; ?>">
 
             <p class="accordion-mobile__copy"
-              style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'black-bg') echo 'color: #ffffff'?>">
+              style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'black-bg') echo 'color: #f2f1ed;'?>">
               <?php echo $copy; ?></p>
 
           </div>

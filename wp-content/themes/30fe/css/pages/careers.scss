@@ -240,23 +240,19 @@
 }
 
 .careers__openings {
-  border-top: 2px solid $white;
+  border-top: 2px solid $whitesmoke;
 
   &:last-child {
-    border-bottom: 2px solid $white;
+    border-bottom: 2px solid $whitesmoke;
   }
 }
 
 .careers__positions {
   width: 100%;
   overflow: hidden;
-  color: $white;
+  color: $whitesmoke;
 
   background-color: $black;
-
-  // &:first-of-type {
-  //   border-top: 2px solid $white;
-  // }
 
   &__title {
     font-size: 0.8rem;
@@ -285,7 +281,7 @@
     font-weight: 400;
     line-height: 140%; /* 28px */
     letter-spacing: -0.6px;
-    color: $white;
+    color: $whitesmoke;
     flex: 1 1 0px;
   }
 

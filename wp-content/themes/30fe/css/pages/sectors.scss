@@ -11,7 +11,7 @@
     font-weight: 700;
     line-height: 100%; /* 128px */
     letter-spacing: -6.4px;
-    color: $white;
+    color: $whitesmoke;
     margin: 0;
     @include bp(phone) {
       font-size: 48px;
@@ -21,12 +21,7 @@
 
   &__copy + p {
     padding-top: 20px;
-    // font-size: 20px;
-    // font-style: normal;
-    // font-weight: 500;
-    // line-height: 140%; /* 28px */
-    // letter-spacing: -0.6px;
-    color: $white;
+    color: $whitesmoke;
   }
 
   &__figure {
@@ -46,7 +41,7 @@
       justify-content: space-between;
       place-items: center;
       // max-width: 1020px;
-      border-bottom: 1px solid $white;
+      border-bottom: 1px solid $whitesmoke;
     }
   }
 
@@ -57,7 +52,7 @@
     // line-height: 100%; /* 48px */
     // letter-spacing: -2.4px;
     padding: 64px 0;
-    color: $white;
+    color: $whitesmoke;
 
     @include bp(phone) {
       font-size: 20px;
@@ -137,7 +132,7 @@
         font-size: 0.8em;
         background-color: $black;
         border: 1px solid $black;
-        color: $white;
+        color: $whitesmoke;
         padding: 16px 32px;
         text-transform: uppercase;
         margin: 16px 0;
@@ -216,7 +211,7 @@
   font-size: 0.8em;
   background-color: $black;
   border: 1px solid $black;
-  color: $white;
+  color: $whitesmoke;
   padding: 16px 32px;
   text-transform: uppercase;
   margin: 16px 0;

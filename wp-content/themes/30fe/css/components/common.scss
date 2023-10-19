@@ -26,7 +26,7 @@ button {
   transition: all 0.3s ease 0s;
   background-color: $black;
   border: 1px solid $black;
-  color: $white;
+  color: $whitesmoke;
   padding: 1rem 1.5rem;
   text-transform: uppercase;
   line-height: 150%;
@@ -95,7 +95,7 @@ h3 {
   line-height: 120%;
   letter-spacing: -0.125rem;
   margin: 0;
-  // color: $black;
+  color: $black;
   @include bp(tablet) {
     font-size: 1.5rem;
     letter-spacing: -0.04rem;

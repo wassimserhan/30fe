@@ -35,7 +35,7 @@
 
   &__headline {
     text-align: center;
-    color: $white;
+    color: $whitesmoke;
   }
 
   &__wrapper {
@@ -54,13 +54,13 @@
     text-align: center;
     margin-top: 1rem;
     @include bp(phone) {
-      color: $white;
+      color: $whitesmoke;
     }
   }
 }
 
 .is-active > .about__timeline__wrapper .about__timeline__story {
-  color: $white;
+  color: $whitesmoke;
   transition: color 0.2s ease;
 }
 
@@ -83,7 +83,7 @@
 }
 
 #splide5 .splide__arrow svg {
-  fill: $white !important;
+  fill: $whitesmoke !important;
   height: 1.5em !important;
   width: 1.5em !important;
 }

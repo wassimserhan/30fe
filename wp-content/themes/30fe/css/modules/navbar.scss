@@ -13,7 +13,7 @@
   }
 
   &__menu {
-    background-color: $white;
+    background-color: $whitesmoke;
     color: $black;
     display: none;
     padding: 8px 16px;
@@ -22,7 +22,7 @@
       display: block;
     }
     &:hover {
-      background-color: $white;
+      background-color: $whitesmoke;
     }
   }
 
@@ -55,7 +55,7 @@
     cursor: pointer;
     transition: all 0.3s ease 0s;
     background-color: #1d1c1d;
-    color: #ffffff;
+    color: $whitesmoke;
     text-transform: uppercase;
     line-height: 150%;
 
@@ -66,8 +66,8 @@
 
   &__menu-reverse {
     background-color: $black;
-    color: $white;
-    border: 1px solid $white;
+    color: $whitesmoke;
+    border: 1px solid $whitesmoke;
   }
 
   &__bar {
@@ -281,7 +281,7 @@
     overflow: hidden;
     will-change: max-height;
     transition: all 0.25s ease-out;
-    color: $white;
+    color: $whitesmoke;
     opacity: 1;
     font-size: 0.8rem;
     line-height: 22px;
