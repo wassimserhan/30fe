@@ -3122,6 +3122,7 @@ body.admin-bar .search-overlay--desktop {
 @media (max-width: 1024px) {
   .about__whatis__detail {
     width: 100%;
+    padding: 60px 1.5rem;
   }
 }
 .about__whatis__detail--left {
@@ -3355,6 +3356,9 @@ body.admin-bar .search-overlay--desktop {
 }
 .member__headline {
   font-size: 4.5rem;
+  max-width: 480px;
+  width: 100%;
+  line-height: 4.5rem;
 }
 @media (max-width: 768px) {
   .member__details {

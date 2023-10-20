@@ -241,6 +241,7 @@
       padding: 60px;
       @include bp(laptop) {
         width: 100%;
+        padding: 60px 1.5rem;
       }
     }
 
