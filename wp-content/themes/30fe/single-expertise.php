@@ -107,9 +107,9 @@ get_header();
     <section class="max-width max-padding">
       <section class="expertise-form__wrapper">
         <section class="expertise-form__form">
-          <h3 class="expertise-form__headline">For more information</h3>
-          <p class="expertise-form__form__copy">Fill up this form and someone from our team will be in touch with you
-            shortly.</p>
+          <h3 class="sector-form__headline">Contact an Expert</h3>
+          <!-- <p class="expertise-form__form__copy">Fill up this form and someone from our team will be in touch with you
+            shortly.</p> -->
           <p class="expertise-form__form__required">*REQUIRED</p>
           <!-- form inserted here -->
           <?php echo FrmFormsController::get_form_shortcode( array( 'id' => 4 ) ); ?>
