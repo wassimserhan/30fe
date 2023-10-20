@@ -154,9 +154,9 @@
     <section class="max-width max-padding">
       <h3 class="quote__headline"><?php echo get_field('intro') ?></h3>
       <section class="quote__buttons">
-        <a href="<?php echo site_url('/submit-an-assignment')?>" target="_self"><button class="quote__button">Browse
+        <a href="<?php echo site_url('/expertise')?>" target="_self"><button class="quote__button">Browse
             Expertise</button></a>
-        <a href="<?php echo site_url('/team')?>"><button class="quote__button quote__button--white">Browse
+        <a href="<?php echo site_url('/sectors')?>"><button class="quote__button quote__button--white">Browse
             Sectors</button></a>
       </section>
     </section>

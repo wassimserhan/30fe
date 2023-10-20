@@ -22,7 +22,7 @@
     // max-width: 340px;
     width: 100%;
 
-    @include bp(tablet) {
+    @include bp(phone) {
       flex-direction: column;
     }
   }
