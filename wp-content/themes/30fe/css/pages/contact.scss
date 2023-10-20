@@ -179,7 +179,7 @@
 // Maps
 #toronto {
   background-image: url('/images/maps/toronto.svg');
-  background-position: center;
+  background-position: 25% 77%;
 }
 
 #vancouver {
@@ -205,21 +205,21 @@
   bottom: 0;
   right: 0;
   left: 45vw;
-  top: 25vw;
+  top: 8vw;
   background-image: url('/images/maps/orange-pin.svg');
   background-repeat: no-repeat;
   @include bp(laptop) {
-    left: 35vw;
-    top: 31vw;
+    left: 44vw;
+    top: 13vw;
   }
 
   @include bp(tablet) {
-    left: 35vw;
-    top: 31vw;
+    left: 53vw;
+    top: 46vw;
   }
   @include bp(phone) {
-    left: 27vw;
-    top: 39vw;
+    left: 59vw;
+    top: 53vw;
   }
 }
 

@@ -179,7 +179,7 @@ function expertiseFilter() {
           [...teamRoles].forEach(item => {
             item.style.display = "block"
           })
-        } else if (titleExpertise.innerText.toUpperCase().indexOf(filter) > -1) {
+        } else if (containsWord(titleExpertise.innerText.toUpperCase(), filter)) {
           cardsLeadership[i].style.display = "block";
           [...teamRoles].forEach(item => {
             item.style.display = "none"
@@ -196,7 +196,7 @@ function expertiseFilter() {
           [...teamRoles].forEach(item => {
             item.style.display = "block"
           })
-        } else if (titleExpertise.innerText.toUpperCase().indexOf(filter) > -1) {
+        } else if (containsWord(titleExpertise.innerText.toUpperCase(), filter)) {
           cardsExperts[i].style.display = "block";
           [...teamRoles].forEach(item => {
             item.style.display = "none"
@@ -213,7 +213,7 @@ function expertiseFilter() {
           [...teamRoles].forEach(item => {
             item.style.display = "block"
           })
-        } else if (titleExpertise.innerText.toUpperCase().indexOf(filter) > -1) {
+        } else if (containsWord(titleExpertise.innerText.toUpperCase(), filter)) {
           cardsSupport[i].style.display = "block";
           [...teamRoles].forEach(item => {
             item.style.display = "none"
@@ -222,6 +222,18 @@ function expertiseFilter() {
           cardsSupport[i].style.display = "none";
         }
       }
+
+
+
+
+      function containsWord(sentence, word) {
+        // Create a regular expression with word boundaries
+        const regex = new RegExp('\\b' + word + '\\b', 'i'); // 'i' flag for case-insensitive matching
+
+        // Test the sentence against the regex
+        return regex.test(sentence);
+      }
+
 
     }
     )
