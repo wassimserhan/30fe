@@ -46,6 +46,9 @@
 
   &__headline {
     font-size: 4.5rem;
+    max-width: 480px;
+    width: 100%;
+    line-height: 4.5rem;
   }
 
   &__details {
