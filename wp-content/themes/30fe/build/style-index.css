@@ -890,6 +890,8 @@ button.splide__arrow:disabled {
 }
 .team-card--slide {
   border: none;
+  min-height: -moz-max-content;
+  min-height: max-content;
 }
 .team-card__pill {
   margin: 24px 0 0;
