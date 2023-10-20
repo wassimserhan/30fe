@@ -156,12 +156,12 @@ while( have_rows('positions') ) : the_row();
           $title = get_the_title($item);
           $location = get_field('location', $item);
           $type = get_field('type', $item);
-          $bamboo_link = get_field('bamboo_link', $item);
+          $bamboo_link = get_field('cta', $item);
         ?>
 
 
       <section class="careers__openings">
-        <a href="<?php echo $bamboo_link; ?>">
+        <a href="<?php echo $bamboo_link['url']; ?>">
           <article class="careers__positions">
             <div class="careers__positions__wrapper">
               <p class="careers__positions__intro">
