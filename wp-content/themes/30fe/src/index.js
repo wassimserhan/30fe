@@ -175,7 +175,7 @@ if (careerSlider) {
       },
     },
 
-    type: 'slide',
+    type: 'loop',
     perMove: 1,
     perPage: 3,
     pagination: false,
