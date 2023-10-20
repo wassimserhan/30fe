@@ -540,7 +540,7 @@ p {
   justify-content: center;
   flex-direction: column;
 }
-@media (min-width: 1728px) {
+@media (min-width: 1693px) {
   .full-height {
     min-height: 50vh;
   }
@@ -2921,6 +2921,8 @@ body.admin-bar .search-overlay--desktop {
   font-family: "Inter", sans-serif;
 }
 .about__hero__wrapper {
+  max-width: 1400px;
+  width: 100%;
   position: relative;
 }
 @media (max-width: 1024px) {
@@ -2940,12 +2942,7 @@ body.admin-bar .search-overlay--desktop {
   top: 6vw;
   right: 4vw;
   z-index: 1;
-}
-@media (max-width: 1024px) {
-  .about__hero__video {
-    width: 200px;
-    top: -6vw;
-  }
+  display: none;
 }
 @media (max-width: 479px) {
   .about__hero__video {
@@ -2965,9 +2962,13 @@ body.admin-bar .search-overlay--desktop {
   z-index: 2;
   position: relative;
 }
+@media (min-width: 1693px) {
+  .about__hero__headline {
+    font-size: 250px;
+  }
+}
 @media (max-width: 768px) {
   .about__hero__headline {
-    font-size: 13vh;
     padding-bottom: 10px;
     line-height: 120%;
     letter-spacing: -0.12rem;
@@ -2977,24 +2978,23 @@ body.admin-bar .search-overlay--desktop {
 }
 @media (max-width: 479px) {
   .about__hero__headline {
-    font-size: 9vh;
+    font-size: 4rem;
   }
 }
 .about__hero__copy {
-  font-size: 2rem;
+  font-size: 4vw;
   color: #f2f1ed;
-  max-width: 500px;
-  width: 80%;
   position: relative;
   z-index: 2;
 }
-@media (max-width: 768px) {
+@media (min-width: 1693px) {
   .about__hero__copy {
-    font-size: 1.5rem;
+    font-size: 4rem;
   }
 }
 @media (max-width: 479px) {
   .about__hero__copy {
+    font-size: 1.5rem;
     max-width: 100%;
     width: 100%;
   }
@@ -4593,7 +4593,7 @@ body.admin-bar .search-overlay--desktop {
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDgwIDEwODAiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojMDBjZTc5O3N0cm9rZS13aWR0aDowcHg7fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0ibTU2MC45NywxMzUuNzNjODYuODksNS44MywxNjkuMjUsNDkuMTQsMjIwLjUxLDE0MS4wNiw3LjU4LDEzLjYsMzQuODgsNjQuNzUsMzcuMzcsMTMxLjg5LDMuMDgsODIuOTgtMzYuMzQsMTQ2LjAyLTkwLjQxLDIzNS4wMy0xNS4yNCwyNS4wOS0xMS4zMSwxNS42My01Mi44MSw3OS4yMi04LjgsMTMuNDgtNDMuOTUsNjcuNDktODkuNzgsMTQyLjYtMTguOTUsMzEuMDUtMzUsNTcuOTgtNDcuNTMsNzkuMjItMjQuMjktMzcuMjQtNDQuMTgtNjguMS01OC4wOS04OS43OC0zOS44NC02Mi4wNy03MC41LTExMC44OS0xMDAuMzUtMTU4LjQ0LTM0LjI0LTU0LjU1LTUxLjM2LTgxLjgyLTUyLjgxLTg0LjUtMjguMi01MS45Mi03Ni44My0xNDEuNDQtNjMuOTUtMjMyLjgxLDE4Ljc2LTEzMy4wMSwxNjUuMTQtMjUyLjM5LDI5Ny44Ni0yNDMuNDhaIi8+PC9zdmc+);
   background-repeat: no-repeat;
 }
-@media (min-width: 1728px) {
+@media (min-width: 1693px) {
   #vancouver-pin {
     left: 41vw;
     top: 22vw;
