@@ -808,23 +808,23 @@ hr {
   transform: scaleX(1) translate(24%, 27%) !important;
 }
 .splide-careers__arrow--next {
-  top: -13% !important;
-  right: 22% !important;
+  position: static !important;
+  transform: translate(184%, -263%) !important;
   margin: auto !important;
 }
 @media (max-width: 768px) {
   .splide-careers__arrow--next {
-    right: 72% !important;
+    transform: translate(-324%, -63%) !important;
   }
 }
 .splide-careers__arrow--prev {
-  top: -13% !important;
-  left: 69% !important;
+  position: static !important;
+  transform: translate(16%, -163%) !important;
   margin: auto !important;
 }
 @media (max-width: 768px) {
   .splide-careers__arrow--prev {
-    left: 0% !important;
+    transform: translate(-504%, 37%) !important;
   }
 }
 
@@ -1353,11 +1353,16 @@ button.splide__arrow:disabled {
   border-bottom: 1px solid #1d1c1d;
 }
 .nav__logo {
-  max-width: 30px;
+  max-width: 40px;
   width: 100%;
   height: 100%;
   margin: 0 auto;
   padding: 5px 0;
+}
+@media (max-width: 479px) {
+  .nav__logo {
+    max-width: 30px;
+  }
 }
 .nav__logo__black {
   display: block;
@@ -2748,7 +2753,7 @@ body.admin-bar .search-overlay--desktop {
   flex-grow: 1;
 }
 .accordion__wrapper {
-  height: 620px;
+  height: 670px;
 }
 .accordion__body {
   min-width: 318px;
@@ -2824,14 +2829,6 @@ body.admin-bar .search-overlay--desktop {
   position: relative;
   background-color: #1d1c1d;
   transition: background-color 0.4s; /* Add a smooth transition for background color changes */
-}
-.home__hero__padding {
-  padding: 8rem;
-}
-@media (max-width: 479px) {
-  .home__hero__padding {
-    padding: 8rem 0 0 1.5rem;
-  }
 }
 .home__hero__buttons {
   display: flex;
@@ -4469,7 +4466,7 @@ body.admin-bar .search-overlay--desktop {
   color: #08cb80;
 }
 .contact__location p {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 150%; /* 18px */
   color: #f2f1ed;
@@ -4988,18 +4985,12 @@ body.admin-bar .search-overlay--desktop {
   font-weight: 700;
   line-height: 100%; /* 72px */
   letter-spacing: -3.6px;
-  padding-bottom: 32px;
 }
 .careers__headline--orange {
   color: #ff6f48;
 }
 .careers__headline--blue {
   color: #0175df;
-}
-@media (max-width: 768px) {
-  .careers__headline--blue {
-    padding-bottom: 5rem;
-  }
 }
 .careers__headline--taupe {
   color: #cbbea5;

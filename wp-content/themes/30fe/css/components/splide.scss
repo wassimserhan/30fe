@@ -137,20 +137,24 @@
   }
 
   &__arrow--next {
-    top: -13% !important;
-    right: 22% !important;
+    position: static !important;
+    transform: translate(184%, -263%) !important;
+    // top: -13% !important;
+    // right: 22% !important;
     margin: auto !important;
     @include bp(tablet) {
-      right: 72% !important;
+      transform: translate(-324%, -63%) !important;
     }
   }
 
   &__arrow--prev {
-    top: -13% !important;
-    left: 69% !important;
+    position: static !important;
+    transform: translate(16%, -163%) !important;
+    // top: -13% !important;
+    // left: 69% !important;
     margin: auto !important;
     @include bp(tablet) {
-      left: 0% !important;
+      transform: translate(-504%, 37%) !important;
     }
   }
 }
