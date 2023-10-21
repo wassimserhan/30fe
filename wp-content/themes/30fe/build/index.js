@@ -3915,7 +3915,7 @@ if (slider5) {
       },
       768: {
         width: '100%',
-        perPage: 2
+        perPage: 1
       }
     },
     start: 0,
@@ -5148,7 +5148,7 @@ accordionsAbout.forEach(accordion => {
   window.addEventListener("scroll", () => {
     if (lastScrollY < window.scrollY && lastScrollY > 800) {
       nav.classList.add("nav--hidden");
-      header.style.zIndex = "1";
+      header.style.zIndex = "-1";
     } else {
       nav.classList.remove("nav--hidden");
       header.style.zIndex = "10";

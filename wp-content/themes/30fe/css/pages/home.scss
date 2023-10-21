@@ -10,23 +10,31 @@
       overflow: hidden;
       letter-spacing: -0.7rem;
       line-height: 110%;
-
-      // @include bp(phone) {
-      //   font-size: 13rem !important;
-      // }
     }
   }
 
   &__hero {
     position: relative;
-    // height: 100vh;
     background-color: #1d1c1d;
     transition: background-color 0.4s; /* Add a smooth transition for background color changes */
+
+    &__padding-top {
+      padding: 8rem 8rem 0;
+      @include bp(phone) {
+        padding: 8rem 0 0 1.5rem;
+      }
+    }
+
+    &__padding-bottom {
+      padding: 0 8rem 8rem;
+      @include bp(phone) {
+        padding: 0 1.5rem 8rem;
+      }
+    }
 
     &__buttons {
       display: flex;
       justify-content: flex-start;
-      // max-width: 340px;
       width: 60%;
 
       @include bp(tablet) {

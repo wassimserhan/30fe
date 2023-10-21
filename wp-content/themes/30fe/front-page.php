@@ -8,12 +8,13 @@
 
 
   <section id="home__hero" class="home__hero">
-    <section class="max-width max-padding">
+    <section class="max-width home__hero__padding-top">
       <h1 id="banner-text" class="home__banner__headline"> Precision&nbsp;in <br>Investigation, <br>Clarity
         in <br>Solutions.
       </h1>
+    </section>
 
-
+    <section class="max-width home__hero__padding-bottom">
       <article class="home__hero__wrapper">
         <section class="home__hero__container">
           <p class="home__hero__text">We are a team of investigators, engineers, scientists, and problem solvers. We
@@ -202,7 +203,7 @@
 
 
 
-  <section class="mobile-stats">
+  <section class="mobile-stats max-padding black-bg">
     <section id="statsBaMobile" class="mobile-stats__wrapper">
       <section id="statsBox-1" class="mobile-stats__box orange-bg">
         <section class="mobile-stat__item">

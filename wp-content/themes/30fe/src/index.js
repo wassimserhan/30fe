@@ -131,7 +131,7 @@ if (slider5) {
 
       768: {
         width: '100%',
-        perPage: 2,
+        perPage: 1,
 
       },
     },

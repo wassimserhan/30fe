@@ -7,8 +7,9 @@
     top: 221px;
     width: 100%;
     border-top: 1px solid $whitesmoke;
-    @include bp(phone) {
-      top: 201px;
+
+    @include bp(tablet) {
+      top: 200px;
     }
   }
 

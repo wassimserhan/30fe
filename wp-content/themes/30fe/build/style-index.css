@@ -2013,9 +2013,9 @@ body.admin-bar .search-overlay--desktop {
   width: 100%;
   border-top: 1px solid #f2f1ed;
 }
-@media (max-width: 479px) {
+@media (max-width: 768px) {
   .about__timeline__line {
-    top: 201px;
+    top: 200px;
   }
 }
 .about__timeline__pill {
@@ -2831,6 +2831,22 @@ body.admin-bar .search-overlay--desktop {
   position: relative;
   background-color: #1d1c1d;
   transition: background-color 0.4s; /* Add a smooth transition for background color changes */
+}
+.home__hero__padding-top {
+  padding: 8rem 8rem 0;
+}
+@media (max-width: 479px) {
+  .home__hero__padding-top {
+    padding: 8rem 0 0 1.5rem;
+  }
+}
+.home__hero__padding-bottom {
+  padding: 0 8rem 8rem;
+}
+@media (max-width: 479px) {
+  .home__hero__padding-bottom {
+    padding: 0 1.5rem 8rem;
+  }
 }
 .home__hero__buttons {
   display: flex;
