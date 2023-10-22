@@ -128,7 +128,7 @@ while( have_rows('benefits') ) : the_row();
           $benefits_item = get_sub_field('benefits_item');
           ?>
         <li>
-          <img class="careers__arrow" src="//localhost:3000/30fe/wp-content/themes/30fe/images/arrow.svg" width="20"
+          <img class="careers__arrow" src="<?php echo get_template_directory_uri(); ?>/images/arrow.svg" width="20"
             height="20" alt="arrow" tabindex="0">
           <p><?php echo $benefits_item; ?></p>
         </li>
