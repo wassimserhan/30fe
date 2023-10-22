@@ -74,8 +74,9 @@
               style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'black-bg') echo 'color: #f2f1ed;'?>">
               <?php echo '0'. get_row_index() ?></p>
           </article>
-          <section class="accordion__wrapper">
-            <section class="accordion__body active">
+          <section class="accordion__body active">
+            <section class="accordion__wrapper">
+
               <h3 class="accordion__headline"
                 style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'black-bg') echo 'color: #f2f1ed;'?>">
                 <?php echo $headline ?></h3>

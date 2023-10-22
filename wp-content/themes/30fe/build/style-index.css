@@ -2729,12 +2729,24 @@ body.admin-bar .search-overlay--desktop {
   letter-spacing: -0.6px;
   padding: 20px;
 }
+.accordion--horizontal .accordion__wrapper {
+  min-height: 600px;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+}
 .accordion--horizontal .accordion__body {
   min-width: 318px;
   max-width: 1280px;
   overflow: hidden;
   color: #1d1c1d;
   padding: 2rem;
+  opacity: 0;
+  transition: opacity 0.2s ease 0;
+}
+.accordion--horizontal .accordion__body.active {
+  opacity: 1;
+  transition: opacity 0.3s ease 0.3s;
 }
 .accordion--horizontal .accordion__headline {
   font-size: 47px;
@@ -2748,28 +2760,14 @@ body.admin-bar .search-overlay--desktop {
 }
 .accordion__item {
   flex-grow: 0;
-  transition: flex-grow 180ms ease;
+  transition: all 200ms ease;
   overflow: hidden;
+  z-index: 0;
 }
 .accordion__item.active {
   flex-grow: 1;
+  z-index: 9;
 }
-.accordion__wrapper {
-  height: 670px;
-}
-.accordion__body {
-  min-width: 318px;
-  overflow: hidden;
-  color: #1d1c1d;
-  padding: 20px 64px;
-  opacity: 0;
-  transition: opacity 180ms;
-}
-.accordion__body.active {
-  opacity: 1;
-  transition: opacity 180ms;
-}
-
 .item {
   border: 1px solid #1d1c1d;
   cursor: pointer;
@@ -2835,7 +2833,7 @@ body.admin-bar .search-overlay--desktop {
 .home__hero__padding-top {
   padding: 8rem 8rem 0;
 }
-@media (max-width: 479px) {
+@media (max-width: 1024px) {
   .home__hero__padding-top {
     padding: 8rem 0 0 1.5rem;
   }
@@ -2843,7 +2841,7 @@ body.admin-bar .search-overlay--desktop {
 .home__hero__padding-bottom {
   padding: 0 8rem 8rem;
 }
-@media (max-width: 479px) {
+@media (max-width: 1024px) {
   .home__hero__padding-bottom {
     padding: 0 1.5rem 8rem;
   }

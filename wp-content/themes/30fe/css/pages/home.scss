@@ -20,14 +20,14 @@
 
     &__padding-top {
       padding: 8rem 8rem 0;
-      @include bp(phone) {
+      @include bp(laptop) {
         padding: 8rem 0 0 1.5rem;
       }
     }
 
     &__padding-bottom {
       padding: 0 8rem 8rem;
-      @include bp(phone) {
+      @include bp(laptop) {
         padding: 0 1.5rem 8rem;
       }
     }
