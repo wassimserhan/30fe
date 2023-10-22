@@ -1,6 +1,12 @@
 .careers {
   font-family: 'Inter', sans-serif;
 
+  &__arrow {
+    max-width: 20px;
+    margin-left: auto;
+    filter: invert(100%);
+  }
+
   &__intro {
     &__headline {
       max-width: 800px;
@@ -227,7 +233,7 @@
 
   &__list {
     color: $whitesmoke;
-    list-style: initial;
+    list-style: none;
     margin-left: 15px;
 
     & li {
@@ -236,6 +242,7 @@
 
     & p {
       color: $whitesmoke;
+      display: inline;
     }
   }
 }

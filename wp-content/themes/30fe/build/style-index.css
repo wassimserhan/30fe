@@ -4798,6 +4798,11 @@ body.admin-bar .search-overlay--desktop {
 .careers {
   font-family: "Inter", sans-serif;
 }
+.careers__arrow {
+  max-width: 20px;
+  margin-left: auto;
+  filter: invert(100%);
+}
 .careers__intro__headline {
   max-width: 800px;
   width: 100%;
@@ -5028,7 +5033,7 @@ body.admin-bar .search-overlay--desktop {
 }
 .careers__list {
   color: #f2f1ed;
-  list-style: initial;
+  list-style: none;
   margin-left: 15px;
 }
 .careers__list li {
@@ -5036,6 +5041,7 @@ body.admin-bar .search-overlay--desktop {
 }
 .careers__list p {
   color: #f2f1ed;
+  display: inline;
 }
 
 .careers__openings {

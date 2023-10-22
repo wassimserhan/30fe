@@ -121,13 +121,15 @@ while( have_rows('benefits') ) : the_row();
   <section class="careers__vision black-bg">
     <section class="max-width max-padding">
       <h2 class="careers__headline careers__headline--taupe "><?php echo get_sub_field('benefits_headline') ;?></h2>
-      <ul class="careers__list careers__list">
+      <ul class="careers__list">
         <?php 
           if( have_rows('benefits_items') ): 
           while( have_rows('benefits_items') ) : the_row();
           $benefits_item = get_sub_field('benefits_item');
           ?>
         <li>
+          <img class="careers__arrow" src="//localhost:3000/30fe/wp-content/themes/30fe/images/arrow.svg" width="20"
+            height="20" alt="arrow" tabindex="0">
           <p><?php echo $benefits_item; ?></p>
         </li>
         <?php
