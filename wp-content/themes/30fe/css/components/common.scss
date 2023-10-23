@@ -55,6 +55,10 @@ button {
   width: 100%;
   flex: 1 0 auto;
   margin-top: 112px;
+
+  @include bp(phone) {
+    margin-top: 0;
+  }
 }
 
 //Tags

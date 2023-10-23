@@ -443,6 +443,11 @@ button:hover {
   flex: 1 0 auto;
   margin-top: 112px;
 }
+@media (max-width: 479px) {
+  .main-container {
+    margin-top: 0;
+  }
+}
 
 .large-text {
   font-size: 12.5rem;
@@ -1181,6 +1186,11 @@ button.splide__arrow:disabled {
   transition: transform 0.2s;
   transition: background-color 0.4s; /* Add a smooth transition for background color changes */
 }
+@media (max-width: 479px) {
+  .nav {
+    min-height: 72px;
+  }
+}
 .nav__menu-search {
   display: flex;
 }
@@ -1259,6 +1269,11 @@ button.splide__arrow:disabled {
 @media (max-width: 1024px) {
   .nav__bar {
     padding: 1.5rem;
+  }
+}
+@media (max-width: 479px) {
+  .nav__bar {
+    padding: 1.5rem 1.5rem 0;
   }
 }
 .nav__links {

@@ -4,9 +4,9 @@
   transition: transform 0.2s;
   transition: background-color 0.4s; /* Add a smooth transition for background color changes */
 
-  // @include bp(phone) {
-  //   min-height: 8vh;
-  // }
+  @include bp(phone) {
+    min-height: 72px;
+  }
 
   &__menu-search {
     display: flex;
@@ -83,6 +83,10 @@
     z-index: 5;
     @include bp(laptop) {
       padding: 1.5rem;
+    }
+
+    @include bp(phone) {
+      padding: 1.5rem 1.5rem 0;
     }
   }
 
