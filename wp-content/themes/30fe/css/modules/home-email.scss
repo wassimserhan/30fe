@@ -62,6 +62,13 @@
   min-height: 44px;
 }
 
+.expertise-form__form > .with_frm_style select {
+  background-color: $taupe;
+  border: 1px solid $black;
+  border-radius: 0;
+  min-height: 44px;
+}
+
 .with_frm_style .frm_submit {
   padding: 1rem 0 0 !important;
 }

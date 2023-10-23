@@ -2477,6 +2477,13 @@ body.admin-bar .search-overlay--desktop {
   min-height: 44px;
 }
 
+.expertise-form__form > .with_frm_style select {
+  background-color: #f2f1ed;
+  border: 1px solid #cbbea5;
+  border-radius: 0;
+  min-height: 44px;
+}
+
 .with_frm_style .frm_submit {
   padding: 1rem 0 0 !important;
 }
