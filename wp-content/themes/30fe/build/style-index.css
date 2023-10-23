@@ -5076,6 +5076,12 @@ body.admin-bar .search-overlay--desktop {
   padding: 10px 15px;
   cursor: pointer;
 }
+@media (max-width: 479px) {
+  .careers__positions__wrapper {
+    flex-direction: column;
+    align-items: unset;
+  }
+}
 .careers__positions__wrapper:hover {
   background-color: #f2f1ed;
 }
