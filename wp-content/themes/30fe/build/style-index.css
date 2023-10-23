@@ -2478,8 +2478,8 @@ body.admin-bar .search-overlay--desktop {
 }
 
 .expertise-form__form > .with_frm_style select {
-  background-color: #cbbea5;
-  border: 1px solid #1d1c1d;
+  background-color: #f2f1ed;
+  border: 1px solid #cbbea5;
   border-radius: 0;
   min-height: 44px;
 }
