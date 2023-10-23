@@ -11,7 +11,7 @@ global $wp_query;
         <p class="pill__label">Insights</p>
       </section>
       <h1 class="insights__headline">30 Insights</h1>
-      <p>Find all past and future publications and reports by our finest writers.</p>
+      <p>Read the latest publications from our experts.</p>
       <br>
       <section class="team__search">
         <div class="insights__filter-dropdown">

@@ -160,7 +160,7 @@ get_header();
         <p class="pill__label">Blog</p>
       </section>
       <h2 class="insights__headline">Insights on <?php echo the_title() ?></h2>
-      <p>Read our latest insights from our best experts.</p>
+      <p>Read the latest publications by our experts.</p>
       <br>
 
 

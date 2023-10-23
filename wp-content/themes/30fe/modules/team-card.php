@@ -10,7 +10,7 @@
         <?php echo $image ?>" alt="<?php echo $name; ?>" title="<?php echo $name; ?>">
   </a>
 
-  <?php if(($k == 0) && (strpos($url,'expertise'))) : ?>
+  <?php if(($k == 0) && (strpos($url,'expertise')) && !(strpos($url,'digital-media-analysis'))) : ?>
 
   <section class="pill team-card__pill">
     <p class="pill__label">Practice Lead</p>

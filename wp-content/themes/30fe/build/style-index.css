@@ -3929,6 +3929,11 @@ body.admin-bar .search-overlay--desktop {
   border-top: 1px solid #1d1c1d;
   border-bottom: 1px solid #1d1c1d;
 }
+@media (max-width: 479px) {
+  .industry__category {
+    border-right: none;
+  }
+}
 .industry__category-items {
   display: flex;
   justify-content: flex-start;
@@ -3936,6 +3941,11 @@ body.admin-bar .search-overlay--desktop {
   padding: 0 64px;
   min-height: 170px;
   background-color: #1d1c1d;
+}
+@media (max-width: 479px) {
+  .industry__category-items {
+    padding: 0 1.5rem;
+  }
 }
 .industry__category-items p {
   padding-right: 64px;
@@ -4489,6 +4499,11 @@ body.admin-bar .search-overlay--desktop {
   cursor: pointer;
   padding-bottom: 0.5rem;
   font-size: 1.9rem;
+}
+@media (max-width: 479px) {
+  .contact__location__city {
+    font-size: 1.6rem;
+  }
 }
 .contact__location h2 h2:nth-of-type(0) {
   color: #08cb80;

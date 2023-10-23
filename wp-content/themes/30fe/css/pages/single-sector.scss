@@ -66,6 +66,10 @@
     border-top: 1px solid $black;
     border-bottom: 1px solid $black;
 
+    @include bp(phone) {
+      border-right: none;
+    }
+
     &-items {
       display: flex;
       justify-content: flex-start;
@@ -73,6 +77,10 @@
       padding: 0 64px;
       min-height: 170px;
       background-color: $black;
+
+      @include bp(phone) {
+        padding: 0 1.5rem;
+      }
 
       & p {
         padding-right: 64px;

@@ -98,6 +98,9 @@
       cursor: pointer;
       padding-bottom: 0.5rem;
       font-size: 1.9rem;
+      @include bp(phone) {
+        font-size: 1.6rem;
+      }
     }
 
     & h2 {
