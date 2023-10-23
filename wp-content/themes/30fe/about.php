@@ -130,7 +130,7 @@ while( have_rows('timeline') ) : the_row();
                 <p class="about__timeline__pill__text"><?php echo $year ?></p>
               </section>
               <section class="about__timeline__story">
-                <?php echo $story ?>
+                <?php echo nl2br($story) ?>
               </section>
             </section>
           </section>
