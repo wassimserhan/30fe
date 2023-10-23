@@ -3498,6 +3498,7 @@ body.admin-bar .search-overlay--desktop {
 .expertise__list-item__arrow {
   max-width: 20px;
   margin-left: auto;
+  filter: invert(100%);
 }
 .expertise__wrapper {
   display: flex;
@@ -4808,7 +4809,7 @@ body.admin-bar .search-overlay--desktop {
 .careers__arrow {
   max-width: 20px;
   margin-left: auto;
-  filter: invert(100%);
+  filter: invert(0%);
 }
 .careers__intro__headline {
   max-width: 800px;
@@ -5096,11 +5097,21 @@ body.admin-bar .search-overlay--desktop {
   color: #f2f1ed;
   flex: 1 1 0px;
 }
+.careers__positions__intro--bold {
+  font-weight: 700;
+}
 .careers__positions__arrow {
   max-width: 20px;
   transform: rotate(0);
   transition: 300ms transform;
   filter: invert(99%) sepia(1%) saturate(1109%) hue-rotate(30deg) brightness(102%) contrast(90%);
+}
+@media (max-width: 479px) {
+  .careers__positions__arrow {
+    position: absolute;
+    right: 0;
+    top: 37%;
+  }
 }
 .careers__positions:hover .careers__positions__arrow {
   transform: rotate(-40deg);

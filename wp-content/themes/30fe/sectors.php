@@ -47,7 +47,7 @@ get_header();
             <h3 class="sectors__list-item"><?php the_title() ?></h3>
 
             <img class="sectors__list-item__arrow"
-              src="<?php echo get_template_directory_uri(); ?>/images/arrow-white.svg" alt="arrow" tabindex=0>
+              src="<?php echo get_template_directory_uri(); ?>/images/white-arrow.svg" alt="arrow" tabindex=0>
 
           </article>
         </a>

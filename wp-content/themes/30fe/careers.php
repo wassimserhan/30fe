@@ -128,8 +128,8 @@ while( have_rows('benefits') ) : the_row();
           $benefits_item = get_sub_field('benefits_item');
           ?>
         <li>
-          <img class="careers__arrow" src="<?php echo get_template_directory_uri(); ?>/images/arrow.svg" width="20"
-            height="20" alt="arrow" tabindex="0">
+          <img class="careers__arrow" src="<?php echo get_template_directory_uri(); ?>/images/white-arrow.svg"
+            width="20" height="20" alt="arrow" tabindex="0">
           <p><?php echo $benefits_item; ?></p>
         </li>
         <?php
@@ -166,7 +166,7 @@ while( have_rows('positions') ) : the_row();
         <a href="<?php echo $bamboo_link['url']; ?>">
           <article class="careers__positions">
             <div class="careers__positions__wrapper">
-              <p class="careers__positions__intro">
+              <p class="careers__positions__intro careers__positions__intro--bold">
                 <?php echo $title;?>
               </p>
               <p class="careers__positions__intro">

@@ -76,14 +76,16 @@
           </article>
           <section class="accordion__body active">
             <section class="accordion__wrapper">
+              <section>
+                <h3 class="accordion__headline"
+                  style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'black-bg') echo 'color: #f2f1ed;'?>">
+                  <?php echo $headline ?></h3>
+                <p class="accordion__copy"
+                  style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'black-bg') echo 'color: #f2f1ed;'?>">
+                  <?php echo $copy; ?>
+                </p>
+              </section>
 
-              <h3 class="accordion__headline"
-                style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'black-bg') echo 'color: #f2f1ed;'?>">
-                <?php echo $headline ?></h3>
-              <p class="accordion__copy"
-                style="<?php if($colors[$k] == 'blue-bg' || $colors[$k] == 'black-bg') echo 'color: #f2f1ed;'?>">
-                <?php echo $copy; ?>
-              </p>
               <img loading="lazy" class="accordion__image" src="<?php echo $image ?>" alt="<?php echo $alt; ?>"
                 title="<?php echo $alt; ?>">
             </section>

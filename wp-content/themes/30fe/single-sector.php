@@ -125,7 +125,6 @@ get_header();
     </section>
   </section>
 
-  <?php include get_template_directory() . '/modules/email.php'; ?>
 
 
 </main>
