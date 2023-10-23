@@ -12,6 +12,8 @@ get_header();
         <section id="vancouver" class="contact__hero__maps">
           <div id="vancouver-pin" class="contact__image__pin"></div>
         </section>
+
+
         <section class="contact__locations">
           <article class="contact__location">
 
@@ -63,8 +65,8 @@ get_header();
 
     <section class="contact__information fullscreen">
       <section class="contact__form whitesmoke-bg max-padding">
-        <h3>Contact an Expert</h3>
-        <?php echo FrmFormsController::get_form_shortcode( array( 'id' => 8 ) ); ?>
+        <h3 class="email__headline">Contact an Expert</h3>
+        <?php echo FrmFormsController::get_form_shortcode( array( 'id' => 4 ) ); ?>
       </section>
       <section class="contact__details taupe-bg max-padding">
         <h3>More ways to reach us</h3>

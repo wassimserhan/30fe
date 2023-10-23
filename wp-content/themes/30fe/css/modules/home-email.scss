@@ -55,6 +55,13 @@
   min-height: 44px;
 }
 
+.contact__form > .with_frm_style select {
+  background-color: $whitesmoke;
+  border: 1px solid $taupe;
+  border-radius: 0;
+  min-height: 44px;
+}
+
 .with_frm_style .frm_submit {
   padding: 1rem 0 0 !important;
 }
