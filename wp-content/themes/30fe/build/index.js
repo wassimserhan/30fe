@@ -3906,7 +3906,7 @@ if (slider5) {
     },
     breakpoints: {
       480: {
-        width: '100%',
+        width: '98%',
         perPage: 1
       },
       1024: {
