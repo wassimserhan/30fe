@@ -6,6 +6,6 @@
     <h3 class="hiring__headline">We're hiring!</h3>
     <p class="hiring__copy">We’re hiring! Visit our Careers page to view open positions or send your resume to <a
         href="mailto:careers@30fe.com">careers@30fe.com.</a></p>
-    <a href="<?php echo site_url('/careers')?>"><button class="hiring__button">Open Positions</button></a>
+    <a href="<?php echo site_url('/careers')?>"><button class="hiring__button">OPEN POSITIONS</button></a>
   </section>
 </section>
