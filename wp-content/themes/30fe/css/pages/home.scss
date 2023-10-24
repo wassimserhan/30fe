@@ -10,6 +10,18 @@
       overflow: hidden;
       letter-spacing: -0.7rem;
       line-height: 110%;
+      @include bp(phone) {
+        display: none;
+      }
+
+      &--mobile {
+        display: none;
+        @include bp(phone) {
+          letter-spacing: 0;
+          font-size: 3.125rem;
+          display: block;
+        }
+      }
     }
   }
 

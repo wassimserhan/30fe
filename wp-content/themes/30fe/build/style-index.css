@@ -2865,6 +2865,21 @@ body.admin-bar .search-overlay--desktop {
   letter-spacing: -0.7rem;
   line-height: 110%;
 }
+@media (max-width: 479px) {
+  .home__banner__headline {
+    display: none;
+  }
+}
+.home__banner__headline--mobile {
+  display: none;
+}
+@media (max-width: 479px) {
+  .home__banner__headline--mobile {
+    letter-spacing: 0;
+    font-size: 3.125rem;
+    display: block;
+  }
+}
 .home__hero {
   position: relative;
 }

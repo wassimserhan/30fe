@@ -12,7 +12,14 @@
       <h1 id="banner-text" class="home__banner__headline"> Precision&nbsp;in <br>Investigation, <br>Clarity
         in <br>Solutions.
       </h1>
+
+      <h1 class="home__banner__headline home__banner__headline--mobile"> Precision&nbsp;in <br>Investigation,
+        <br>Clarity
+        in <br>Solutions.
+      </h1>
     </section>
+
+
 
     <section class="max-width home__hero__padding-bottom">
       <article class="home__hero__wrapper">
