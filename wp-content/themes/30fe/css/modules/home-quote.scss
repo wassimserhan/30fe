@@ -8,6 +8,7 @@
 
   &__headline {
     text-align: center;
+    color: $whitesmoke;
     @include bp(phone) {
       font-size: 32px;
       line-height: 120%; /* 38.4px */
@@ -30,6 +31,8 @@
   &__button {
     text-align: center;
     margin: 24px 24px 0 0;
+    background-color: $whitesmoke;
+    color: $black;
     @include bp(phone) {
       width: 100%;
       text-align: left;

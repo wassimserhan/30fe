@@ -7,7 +7,7 @@
 
 
 
-  <section id="home__hero" class="home__hero">
+  <section id="home__hero" class="home__hero fullscreen">
     <section class="max-width home__hero__padding-top">
       <h1 id="banner-text" class="home__banner__headline"> Precision&nbsp;in <br>Investigation, <br>Clarity
         in <br>Solutions.
@@ -30,7 +30,7 @@
         <section class="home__hero__buttons">
           <a href="<?php echo site_url('/submit-an-assignment')?>" target="_self"><button
               class="home__hero__button home__hero__button__arrow">Work with Us</button></a>
-          <a href="<?php echo site_url('/about')?>"><button class="home__hero__button home__hero__button--white">Learn
+          <a href="<?php echo site_url('/about')?>"><button class="home__hero__button">Learn
               More</button></a>
         </section>
         <p class="home__hero__text--mobile">We are a team of investigators, engineers, scientists and problem solvers.
@@ -159,14 +159,13 @@
       <section class="quote__buttons">
         <a href="<?php echo site_url('/expertise')?>" target="_self"><button class="quote__button">Browse
             Expertise</button></a>
-        <a href="<?php echo site_url('/sectors')?>"><button class="quote__button quote__button--white">Browse
+        <a href="<?php echo site_url('/sectors')?>"><button class="quote__button">Browse
             Sectors</button></a>
       </section>
     </section>
   </section>
 
-  <section id="stats" class="stats">
-
+  <section id="stats" class="stats fullscreen">
     <div class="stats__bar">
       <div id="statsBar" class="stats__background">
         <div class="stats__progress-wrap" style="opacity: 0.9, width: 0;">
@@ -205,7 +204,7 @@
 
 
 
-  <section class="mobile-stats max-padding black-bg">
+  <section class="mobile-stats max-padding">
     <section id="statsBaMobile" class="mobile-stats__wrapper">
       <section id="statsBox-1" class="mobile-stats__box orange-bg">
         <section class="mobile-stat__item">

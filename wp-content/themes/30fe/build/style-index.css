@@ -2518,6 +2518,7 @@ body.admin-bar .search-overlay--desktop {
 }
 .quote__headline {
   text-align: center;
+  color: #f2f1ed;
 }
 @media (max-width: 479px) {
   .quote__headline {
@@ -2540,6 +2541,8 @@ body.admin-bar .search-overlay--desktop {
 .quote__button {
   text-align: center;
   margin: 24px 24px 0 0;
+  background-color: #f2f1ed;
+  color: #1d1c1d;
 }
 @media (max-width: 479px) {
   .quote__button {
@@ -2704,11 +2707,11 @@ body.admin-bar .search-overlay--desktop {
 }
 .accordion__header__headline {
   text-align: center;
-  color: #f2f1ed;
+  color: #1d1c1d;
 }
 .accordion__header__subheadline {
   text-align: center;
-  color: #f2f1ed;
+  color: #1d1c1d;
   padding: 2rem 0;
 }
 .accordion--horizontal {
@@ -2864,8 +2867,6 @@ body.admin-bar .search-overlay--desktop {
 }
 .home__hero {
   position: relative;
-  background-color: #1d1c1d;
-  transition: background-color 0.4s; /* Add a smooth transition for background color changes */
 }
 .home__hero__padding-top {
   padding: 8rem 8rem 0;
@@ -2901,6 +2902,8 @@ body.admin-bar .search-overlay--desktop {
   margin: 5px 24px 0 0;
   justify-content: center;
   gap: 5px;
+  background-color: #f2f1ed;
+  color: #1d1c1d;
 }
 @media (max-width: 479px) {
   .home__hero__button {
@@ -2909,7 +2912,7 @@ body.admin-bar .search-overlay--desktop {
   }
 }
 .home__hero .home__hero__button__arrow::after {
-  filter: invert(100%);
+  filter: invert(0%);
   content: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMTAiIHZpZXdCb3g9IjAgMCAyMCAxMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAgNUgxOU0xOSA1TDE0LjA4NjIgOS41TTE5IDVMMTQuMDg2MiAwLjUiIHN0cm9rZT0iIzFEMUMxRCIvPgo8L3N2Zz4=);
 }
 .home__hero .home__hero__button__arrow:hover::after {
@@ -2938,6 +2941,7 @@ body.admin-bar .search-overlay--desktop {
 .home__hero__text {
   width: 100%;
   padding: 0 0 1rem;
+  color: #f2f1ed;
 }
 @media (max-width: 479px) {
   .home__hero__text {
@@ -2949,6 +2953,7 @@ body.admin-bar .search-overlay--desktop {
 }
 @media (max-width: 479px) {
   .home__hero__text--mobile {
+    color: #f2f1ed;
     display: block;
     padding: 2rem 0 0;
   }

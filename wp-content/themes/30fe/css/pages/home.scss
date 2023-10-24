@@ -15,8 +15,6 @@
 
   &__hero {
     position: relative;
-    background-color: #1d1c1d;
-    transition: background-color 0.4s; /* Add a smooth transition for background color changes */
 
     &__padding-top {
       padding: 8rem 8rem 0;
@@ -50,6 +48,8 @@
       margin: 5px 24px 0 0;
       justify-content: center;
       gap: 5px;
+      background-color: $whitesmoke;
+      color: $black;
       @include bp(phone) {
         width: 100%;
         margin: 1rem 0 0;
@@ -58,7 +58,8 @@
 
     .home__hero__button__arrow {
       &::after {
-        filter: invert(100%);
+        filter: invert(0%);
+
         content: url('../images/arrow.svg');
       }
 
@@ -94,6 +95,7 @@
       // max-width: 480px;
       width: 100%;
       padding: 0 0 1rem;
+      color: $whitesmoke;
       @include bp(phone) {
         display: none;
       }
@@ -101,6 +103,7 @@
       &--mobile {
         display: none;
         @include bp(phone) {
+          color: $whitesmoke;
           display: block;
           padding: 2rem 0 0;
         }

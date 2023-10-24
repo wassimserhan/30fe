@@ -45,15 +45,15 @@ if (fullscreen) {
       gsap.set(".search-overlay--desktop__icon", { filter: $logoWhite })
       gsap.set(".nav__button", { backgroundColor: $whitesmoke, color: $black })
       gsap.set(".plus-nav", { filter: $logoWhite })
-      sectionColors = [$black, $whitesmoke];
-      navColors = [$black, $whitesmoke];
-      navItems = [$whitesmoke, $black]
-      logoColor = [$logoWhite, $logoBlack];
-      searchBorder = [$whitesmoke, $black];
-      searchIcon = [$logoBlack, $logoWhite];
-      navButton = [$whitesmoke, $black];
-      navButtonColor = [$black, $whitesmoke];
-      plus = [$logoWhite, $logoBlack];
+      sectionColors = [$black, $whitesmoke, $black, $whitesmoke];
+      navColors = [$black, $whitesmoke, $black, $whitesmoke];
+      navItems = [$whitesmoke, $black, $whitesmoke, $black]
+      logoColor = [$logoWhite, $logoBlack, $logoWhite, $logoBlack];
+      searchBorder = [$whitesmoke, $black, $whitesmoke, $black];
+      searchIcon = [$logoBlack, $logoWhite, $logoBlack, $logoWhite];
+      navButton = [$whitesmoke, $black, $whitesmoke, $black];
+      navButtonColor = [$black, $whitesmoke, $black, $whitesmoke];
+      plus = [$logoWhite, $logoBlack, $logoWhite, $logoBlack];
       navScroll = true;
       break;
     case 'about.php':

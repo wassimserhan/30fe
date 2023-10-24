@@ -26,7 +26,7 @@ if (scrollText) {
 
     // Calculate the new font size based on the scroll percentage
     // You can adjust the formula to control how text size changes with scrolling
-    const newSize = 160 - (scrollPosition * 4); // Example: Increase font size as the user scrolls
+    const newSize = 160 - (scrollPosition * 2); // Example: Increase font size as the user scrolls
 
     const newSpacing = -6.7 + (scrollPosition);
 
@@ -71,105 +71,105 @@ if (scrollText) {
 }
 
 
-const scrollableContent = document.querySelector('#home__hero');
-const scrollableNavt = document.querySelector('#nav');
-const scrollableNavItems = document.querySelectorAll(".nav__items");
-const NavItems = [...scrollableNavItems];
-const scrollableButton = document.querySelector('.nav__button');
-const scrollableLogo = document.querySelector('.nav__logo');
-const searchBorder = document.querySelector(".search-overlay--desktop__wrapper");
-const searchIconDesktop = document.querySelector('.search-overlay--desktop__icon');
-const plus = document.querySelectorAll('.plus-nav');
-const scrollText2 = document.getElementById("banner-text");
+// const scrollableContent = document.querySelector('#home__hero');
+// const scrollableNavt = document.querySelector('#nav');
+// const scrollableNavItems = document.querySelectorAll(".nav__items");
+// const NavItems = [...scrollableNavItems];
+// const scrollableButton = document.querySelector('.nav__button');
+// const scrollableLogo = document.querySelector('.nav__logo');
+// const searchBorder = document.querySelector(".search-overlay--desktop__wrapper");
+// const searchIconDesktop = document.querySelector('.search-overlay--desktop__icon');
+// const plus = document.querySelectorAll('.plus-nav');
+// const scrollText2 = document.getElementById("banner-text");
 
 
-if (scrollableContent) {
-
-
-
-  window.addEventListener('scroll', () => {
+// if (scrollableContent) {
 
 
 
-    // Get the current scroll position
-    const scrollPosition = window.scrollY;
+//   window.addEventListener('scroll', () => {
 
 
 
-    // Interpolate the background color between the initial and final colors
-    const initialColor = [29, 28, 29]; // RGB values of #1d1c1d
-    const finalColor = [242, 241, 237]; // RGB values of #f2f1ed
-    const interpolatedColor = initialColor.map((channel, index) => {
-      const range = finalColor[index] - channel;
-      return Math.min((channel + (range * scrollPosition) / 100), (237));
-    });
+//     // Get the current scroll position
+//     const scrollPosition = window.scrollY;
 
 
 
-    // Interpolate the text color between the initial and final colors
-    const initialColorReverse = [242, 241, 237];
-    const finalColorReverse = [29, 28, 29];
-    const interpolatedColorReverse = initialColorReverse.map((channel, index) => {
-      const range = finalColorReverse[index] - channel;
-      return Math.round((channel + (range * scrollPosition) / 100), (29));
-    });
-
-    // Interpolate the text color between the initial and final colors
-    const initialColorText = [242, 241, 237];
-    const finalColorText = [29, 28, 29];
-    const interpolatedColorText = initialColorText.map((channel, index) => {
-      const range = finalColorText[index] - channel;
-      return Math.max((channel + (range * scrollPosition) / 100), (29));
-    });
+//     // Interpolate the background color between the initial and final colors
+//     const initialColor = [29, 28, 29]; // RGB values of #1d1c1d
+//     const finalColor = [242, 241, 237]; // RGB values of #f2f1ed
+//     const interpolatedColor = initialColor.map((channel, index) => {
+//       const range = finalColor[index] - channel;
+//       return Math.min((channel + (range * scrollPosition) / 100), (237));
+//     });
 
 
-    // Apply the new background color
-    scrollableContent.style.backgroundColor = `rgb(${interpolatedColor.join(', ')})`;
 
-    scrollText2.style.color = `rgb(${interpolatedColorText.join(', ')})`;
+//     // Interpolate the text color between the initial and final colors
+//     const initialColorReverse = [242, 241, 237];
+//     const finalColorReverse = [29, 28, 29];
+//     const interpolatedColorReverse = initialColorReverse.map((channel, index) => {
+//       const range = finalColorReverse[index] - channel;
+//       return Math.round((channel + (range * scrollPosition) / 100), (29));
+//     });
 
-    // Apply Filer to SVG
-    const filterScroll = 100 - (Math.min(scrollPosition, 100));
-    const filterScrollInverse = (Math.min(scrollPosition, 100));
+//     // Interpolate the text color between the initial and final colors
+//     const initialColorText = [242, 241, 237];
+//     const finalColorText = [29, 28, 29];
+//     const interpolatedColorText = initialColorText.map((channel, index) => {
+//       const range = finalColorText[index] - channel;
+//       return Math.max((channel + (range * scrollPosition) / 100), (29));
+//     });
 
 
-    // Function to check if an element is in the viewport
+//     // Apply the new background color
+//     scrollableContent.style.backgroundColor = `rgb(${interpolatedColor.join(', ')})`;
+
+//     scrollText2.style.color = `rgb(${interpolatedColorText.join(', ')})`;
+
+//     // Apply Filer to SVG
+//     const filterScroll = 100 - (Math.min(scrollPosition, 100));
+//     const filterScrollInverse = (Math.min(scrollPosition, 100));
 
 
-    // Get the element to check
-    const elementToCheck = document.querySelector('#accordion-scroll');
-    let hasPassed = false;
+//     // Function to check if an element is in the viewport
 
-    // Listen for the scroll event
-    if (!hasPassed && !isTopOfElementAboveViewport(elementToCheck)) {
-      scrollableNavt.style.backgroundColor = `rgb(${interpolatedColor.join(', ')})`;
-      scrollableButton.style.backgroundColor = `rgb(${interpolatedColorText.join(', ')})`
-      scrollableButton.style.color = `rgb(${interpolatedColor.join(', ')})`;
-      // scrollableNav.style.display = "block";
-      scrollableLogo.style.filter = `invert(${filterScroll}%)`;
-      searchIconDesktop.style.filter = `invert(${filterScrollInverse}%)`;
-      searchBorder.style.borderColor = `rgb(${interpolatedColorText.join(', ')})`;
 
-      [...plus].forEach(item => {
-        item.style.filter = `invert(${filterScroll}%)`;
-      })
+//     // Get the element to check
+//     const elementToCheck = document.querySelector('#accordion-scroll');
+//     let hasPassed = false;
 
-      NavItems.forEach(item => {
-        item.style.color = `rgb(${interpolatedColorReverse.join(', ')})`
-      })
+//     // Listen for the scroll event
+//     if (!hasPassed && !isTopOfElementAboveViewport(elementToCheck)) {
+//       scrollableNavt.style.backgroundColor = `rgb(${interpolatedColor.join(', ')})`;
+//       scrollableButton.style.backgroundColor = `rgb(${interpolatedColorText.join(', ')})`
+//       scrollableButton.style.color = `rgb(${interpolatedColor.join(', ')})`;
+//       // scrollableNav.style.display = "block";
+//       scrollableLogo.style.filter = `invert(${filterScroll}%)`;
+//       searchIconDesktop.style.filter = `invert(${filterScrollInverse}%)`;
+//       searchBorder.style.borderColor = `rgb(${interpolatedColorText.join(', ')})`;
 
-      console.log('Scrolled past the element.');
-      // Perform any action you want when you scroll past the element
-      hasPassed = true; // Set a flag to prevent further triggering
-    }
+//       [...plus].forEach(item => {
+//         item.style.filter = `invert(${filterScroll}%)`;
+//       })
 
-    // Function to check if the top of an element is above the viewport
-    function isTopOfElementAboveViewport(element) {
-      const rect = element.getBoundingClientRect();
-      console.log(rect)
-      return rect.top < 0;
-    }
+//       NavItems.forEach(item => {
+//         item.style.color = `rgb(${interpolatedColorReverse.join(', ')})`
+//       })
 
-  });
+//       console.log('Scrolled past the element.');
+//       // Perform any action you want when you scroll past the element
+//       hasPassed = true; // Set a flag to prevent further triggering
+//     }
 
-}
+//     // Function to check if the top of an element is above the viewport
+//     function isTopOfElementAboveViewport(element) {
+//       const rect = element.getBoundingClientRect();
+//       console.log(rect)
+//       return rect.top < 0;
+//     }
+
+//   });
+
+// }
