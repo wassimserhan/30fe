@@ -32,6 +32,10 @@
     padding: 1rem;
     border: none;
     width: 190px;
+
+    &:hover {
+      background-color: $taupe !important;
+    }
     @include bp(laptop) {
       display: none;
     }

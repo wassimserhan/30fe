@@ -13,7 +13,7 @@
         in <br>Solutions.
       </h1>
 
-      <h1 class="home__banner__headline home__banner__headline--mobile"> Precision&nbsp;in <br>Investigation,
+      <h1 class="home__banner__headline--mobile"> Precision&nbsp;in <br>Investigation,
         <br>Clarity
         in <br>Solutions.
       </h1>
@@ -37,7 +37,7 @@
         <section class="home__hero__buttons">
           <a href="<?php echo site_url('/submit-an-assignment')?>" target="_self"><button
               class="home__hero__button home__hero__button__arrow">Work with Us</button></a>
-          <a href="<?php echo site_url('/about')?>"><button class="home__hero__button">Learn
+          <a href="<?php echo site_url('/about')?>"><button class="home__hero__button home__hero__button--white">Learn
               More</button></a>
         </section>
         <p class="home__hero__text--mobile">We are a team of investigators, engineers, scientists and problem solvers.
@@ -164,9 +164,9 @@
     <section class="max-width max-padding">
       <h3 class="quote__headline"><?php echo get_field('intro') ?></h3>
       <section class="quote__buttons">
-        <a href="<?php echo site_url('/expertise')?>" target="_self"><button class="quote__button">Browse
+        <a href="<?php echo site_url('/expertise')?>" target="_self"><button class="home__hero__button">Browse
             Expertise</button></a>
-        <a href="<?php echo site_url('/sectors')?>"><button class="quote__button">Browse
+        <a href="<?php echo site_url('/sectors')?>"><button class="home__hero__button home__hero__button--white">Browse
             Sectors</button></a>
       </section>
     </section>

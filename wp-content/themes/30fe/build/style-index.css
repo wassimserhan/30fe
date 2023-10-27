@@ -1216,6 +1216,9 @@ button.splide__arrow:disabled {
   border: none;
   width: 190px;
 }
+.nav__button:hover {
+  background-color: #cbbea5 !important;
+}
 @media (max-width: 1024px) {
   .nav__button {
     display: none;
@@ -2519,6 +2522,7 @@ body.admin-bar .search-overlay--desktop {
 .quote__headline {
   text-align: center;
   color: #f2f1ed;
+  padding: 0 0 24px;
 }
 @media (max-width: 479px) {
   .quote__headline {
@@ -2919,6 +2923,7 @@ body.admin-bar .search-overlay--desktop {
   gap: 5px;
   background-color: #f2f1ed;
   color: #1d1c1d;
+  border: 1px solid #f2f1ed;
 }
 @media (max-width: 479px) {
   .home__hero__button {
@@ -2935,7 +2940,8 @@ body.admin-bar .search-overlay--desktop {
 }
 .home__hero__button--white {
   background-color: transparent;
-  color: #1d1c1d;
+  color: #f2f1ed;
+  border: 1px solid #f2f1ed;
 }
 .home__hero__wrapper {
   display: flex;

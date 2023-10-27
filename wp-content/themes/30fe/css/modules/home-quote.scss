@@ -9,6 +9,7 @@
   &__headline {
     text-align: center;
     color: $whitesmoke;
+    padding: 0 0 24px;
     @include bp(phone) {
       font-size: 32px;
       line-height: 120%; /* 38.4px */
