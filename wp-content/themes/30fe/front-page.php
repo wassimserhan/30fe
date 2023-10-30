@@ -282,7 +282,7 @@
       <h2 class="insights__headline">Latest Insights</h2>
       <section class="home__insights__section">
         <p>Read our latest publications.</p>
-        <a href="<?php echo site_url('/sectors')?>"><button class="home__insights__button">View All</button></a>
+        <a href="<?php echo site_url('/insights')?>"><button class="home__insights__button">View All</button></a>
       </section>
 
       <section class="insights__grid">
