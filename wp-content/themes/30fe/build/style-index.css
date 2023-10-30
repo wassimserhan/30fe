@@ -2993,6 +2993,32 @@ body.admin-bar .search-overlay--desktop {
     letter-spacing: -0.6px;
   }
 }
+.home__insights__section {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 2rem;
+}
+@media (max-width: 479px) {
+  .home__insights__section {
+    display: block;
+  }
+}
+.home__insights__button {
+  background-color: transparent;
+  border: 1px solid #1d1c1d;
+  color: #1d1c1d;
+}
+@media (max-width: 479px) {
+  .home__insights__button {
+    margin-top: 2rem;
+    width: 100%;
+  }
+}
+.home__insights__button:hover {
+  background-color: #1d1c1d;
+  border: 1px solid #1d1c1d;
+  color: #f2f1ed;
+}
 
 .about {
   font-family: "Inter", sans-serif;

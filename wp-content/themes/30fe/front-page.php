@@ -278,13 +278,12 @@
 
   <section class="insights">
     <section class="max-width max-padding">
-      <!-- <section class="pill">
-        <p class="pill__label">Blog</p>
-      </section> -->
+
       <h2 class="insights__headline">Latest Insights</h2>
-      <p>Read our latest publications.</p>
-
-
+      <section class="home__insights__section">
+        <p>Read our latest publications.</p>
+        <a href="<?php echo site_url('/sectors')?>"><button class="home__insights__button">View All</button></a>
+      </section>
 
       <section class="insights__grid">
 

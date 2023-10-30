@@ -136,4 +136,29 @@
       }
     }
   }
+
+  &__insights__section {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 2rem;
+    @include bp(phone) {
+      display: block;
+    }
+  }
+
+  &__insights__button {
+    background-color: transparent;
+    border: 1px solid $black;
+    color: $black;
+    @include bp(phone) {
+      margin-top: 2rem;
+      width: 100%;
+    }
+
+    &:hover {
+      background-color: $black;
+      border: 1px solid $black;
+      color: $whitesmoke;
+    }
+  }
 }
