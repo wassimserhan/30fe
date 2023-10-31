@@ -2997,6 +2997,7 @@ body.admin-bar .search-overlay--desktop {
   display: flex;
   justify-content: space-between;
   padding: 0 0 2rem;
+  align-items: center;
 }
 @media (max-width: 479px) {
   .home__insights__section {
