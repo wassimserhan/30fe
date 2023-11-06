@@ -3781,34 +3781,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _splidejs_splide_css_sea_green__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @splidejs/splide/css/sea-green */ "./node_modules/@splidejs/splide/dist/css/themes/splide-sea-green.min.css");
 /* harmony import */ var _splidejs_splide_css_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @splidejs/splide/css/core */ "./node_modules/@splidejs/splide/dist/css/splide-core.min.css");
 /* harmony import */ var _splidejs_splide__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @splidejs/splide */ "./node_modules/@splidejs/splide/dist/js/splide.esm.js");
-/* harmony import */ var _modules_navBanner__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/navBanner */ "./src/modules/navBanner.js");
-/* harmony import */ var _modules_navBanner__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_modules_navBanner__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _modules_homeScroll__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/homeScroll */ "./src/modules/homeScroll.js");
-/* harmony import */ var _modules_homeScroll__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_modules_homeScroll__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _modules_expertiseListHover__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/expertiseListHover */ "./src/modules/expertiseListHover.js");
-/* harmony import */ var _modules_expertiseListHover__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_modules_expertiseListHover__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _modules_ajaxLoadMore__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/ajaxLoadMore */ "./src/modules/ajaxLoadMore.js");
-/* harmony import */ var _modules_changeBackground__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/changeBackground */ "./src/modules/changeBackground.js");
-/* harmony import */ var _modules_changeBackground__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_modules_changeBackground__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _modules_expertise__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/expertise */ "./src/modules/expertise.js");
-/* harmony import */ var _modules_expertise__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_modules_expertise__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _modules_contact__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/contact */ "./src/modules/contact.js");
-/* harmony import */ var _modules_contact__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_modules_contact__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var _modules_teamSearch__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modules/teamSearch */ "./src/modules/teamSearch.js");
-/* harmony import */ var _modules_teamSearch__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_modules_teamSearch__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var _modules_teamImages__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./modules/teamImages */ "./src/modules/teamImages.js");
-/* harmony import */ var _modules_teamImages__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_modules_teamImages__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var _modules_blogSearch__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./modules/blogSearch */ "./src/modules/blogSearch.js");
-/* harmony import */ var _modules_homeStatsMobile__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./modules/homeStatsMobile */ "./src/modules/homeStatsMobile.js");
-/* harmony import */ var _modules_homeStatsMobile__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_modules_homeStatsMobile__WEBPACK_IMPORTED_MODULE_16__);
-/* harmony import */ var _modules_homeStats__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./modules/homeStats */ "./src/modules/homeStats.js");
-/* harmony import */ var _modules_homeStats__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_modules_homeStats__WEBPACK_IMPORTED_MODULE_17__);
-/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./modules/accordion */ "./src/modules/accordion.js");
-/* harmony import */ var _modules_navColors__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./modules/navColors */ "./src/modules/navColors.js");
-/* harmony import */ var _modules_navColors__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(_modules_navColors__WEBPACK_IMPORTED_MODULE_19__);
-/* harmony import */ var _modules_navbar__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./modules/navbar */ "./src/modules/navbar.js");
-/* harmony import */ var _modules_navbar__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(_modules_navbar__WEBPACK_IMPORTED_MODULE_20__);
-/* harmony import */ var _modules_search__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./modules/search */ "./src/modules/search.js");
+/* harmony import */ var _modules_homeScroll__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/homeScroll */ "./src/modules/homeScroll.js");
+/* harmony import */ var _modules_homeScroll__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_modules_homeScroll__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _modules_expertiseListHover__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/expertiseListHover */ "./src/modules/expertiseListHover.js");
+/* harmony import */ var _modules_expertiseListHover__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_modules_expertiseListHover__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _modules_ajaxLoadMore__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/ajaxLoadMore */ "./src/modules/ajaxLoadMore.js");
+/* harmony import */ var _modules_expertise__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/expertise */ "./src/modules/expertise.js");
+/* harmony import */ var _modules_expertise__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_modules_expertise__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _modules_contact__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/contact */ "./src/modules/contact.js");
+/* harmony import */ var _modules_contact__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_modules_contact__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _modules_teamSearch__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/teamSearch */ "./src/modules/teamSearch.js");
+/* harmony import */ var _modules_teamSearch__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_modules_teamSearch__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _modules_teamImages__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/teamImages */ "./src/modules/teamImages.js");
+/* harmony import */ var _modules_teamImages__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_modules_teamImages__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _modules_blogSearch__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modules/blogSearch */ "./src/modules/blogSearch.js");
+/* harmony import */ var _modules_homeStatsMobile__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./modules/homeStatsMobile */ "./src/modules/homeStatsMobile.js");
+/* harmony import */ var _modules_homeStatsMobile__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_modules_homeStatsMobile__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var _modules_homeStats__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./modules/homeStats */ "./src/modules/homeStats.js");
+/* harmony import */ var _modules_homeStats__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_modules_homeStats__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./modules/accordion */ "./src/modules/accordion.js");
+/* harmony import */ var _modules_navColors__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./modules/navColors */ "./src/modules/navColors.js");
+/* harmony import */ var _modules_navColors__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_modules_navColors__WEBPACK_IMPORTED_MODULE_17__);
+/* harmony import */ var _modules_navColors_2__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./modules/navColors_2 */ "./src/modules/navColors_2.js");
+/* harmony import */ var _modules_navColors_2__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(_modules_navColors_2__WEBPACK_IMPORTED_MODULE_18__);
+/* harmony import */ var _modules_navbar__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./modules/navbar */ "./src/modules/navbar.js");
+/* harmony import */ var _modules_navbar__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(_modules_navbar__WEBPACK_IMPORTED_MODULE_19__);
+/* harmony import */ var _modules_search__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./modules/search */ "./src/modules/search.js");
 
 
 //splide modules
@@ -3981,10 +3979,9 @@ if (careerSlider) {
 
 
 
-
 // classes
 
-const magicalSearch = new _modules_search__WEBPACK_IMPORTED_MODULE_21__["default"]();
+const magicalSearch = new _modules_search__WEBPACK_IMPORTED_MODULE_20__["default"]();
 
 /***/ }),
 
@@ -4157,31 +4154,6 @@ function categoryFilter() {
 
 /***/ }),
 
-/***/ "./src/modules/changeBackground.js":
-/*!*****************************************!*\
-  !*** ./src/modules/changeBackground.js ***!
-  \*****************************************/
-/***/ (() => {
-
-// var colors = ['#ff6f48', '#0175df', '#08cb80'];
-
-// const homeHero = document.getElementById("home-hero");
-// const homeNav = document.querySelector("nav");
-
-// if (homeHero) {
-
-//   var changeBackground = function () {
-
-//     const color = colors[Math.floor(Math.random() * colors.length)];
-//     homeHero.style.background = color;
-//     homeNav.style.background = color;
-//   };
-
-//   changeBackground();
-// }
-
-/***/ }),
-
 /***/ "./src/modules/contact.js":
 /*!********************************!*\
   !*** ./src/modules/contact.js ***!
@@ -4191,7 +4163,8 @@ function categoryFilter() {
 const mapLocation = document.querySelectorAll('.contact__location h3');
 var mapLocationArray = [...mapLocation];
 const cityMap = document.getElementById('vancouver');
-const cityPin = document.getElementById('vancouver-pin');
+// const cityPin = document.getElementById('vancouver-pin');
+
 mapLocationArray.forEach(mapLocation => {
   mapLocation.addEventListener('click', function () {
     // Reset the background color for all buttons
@@ -4205,24 +4178,41 @@ mapLocationArray.forEach(mapLocation => {
     if (mapLocation.classList.contains('vancouver')) {
       mapLocation.classList.remove('whitesmoke');
       mapLocation.classList.add('vancouver-color');
+      document.getElementById('vancouver').style.display = "block";
+      document.getElementById('calgary').style.display = "none";
+      document.getElementById('toronto').style.display = "none";
+      document.getElementById('ottawa').style.display = "none";
     }
     if (mapLocation.classList.contains('calgary')) {
       mapLocation.classList.remove('whitesmoke');
       mapLocation.classList.add('calgary-color');
+      document.getElementById('vancouver').style.display = "none";
+      document.getElementById('calgary').style.display = "block";
+      document.getElementById('toronto').style.display = "none";
+      document.getElementById('ottawa').style.display = "none";
     }
     if (mapLocation.classList.contains('toronto')) {
       mapLocation.classList.remove('whitesmoke');
       mapLocation.classList.add('toronto-color');
+      document.getElementById('vancouver').style.display = "none";
+      document.getElementById('calgary').style.display = "none";
+      document.getElementById('toronto').style.display = "block";
+      document.getElementById('ottawa').style.display = "none";
     }
     if (mapLocation.classList.contains('ottawa')) {
       mapLocation.classList.remove('whitesmoke');
       mapLocation.classList.add('ottawa-color');
+      document.getElementById('vancouver').style.display = "none";
+      document.getElementById('calgary').style.display = "none";
+      document.getElementById('toronto').style.display = "none";
+      document.getElementById('ottawa').style.display = "block";
     }
     let city = mapLocation.innerHTML.toLowerCase();
-    cityMap.id = city;
-    cityPin.id = city.concat('-pin');
+    // cityMap.id = city;
+    // cityPin.id = cityMap.id.concat('-pin');
   });
 });
+
 if (cityMap) {
   // Pin Animation
 
@@ -4240,7 +4230,7 @@ if (cityMap) {
     repeat: -1,
     yoyo: true
   });
-  gsap.to("#ottowa-pin", {
+  gsap.to("#ottawa-pin", {
     duration: 0.6,
     y: 20,
     ease: "circ.in",
@@ -4327,7 +4317,6 @@ expertiseItemsArray.forEach(item => {
 // // Get a reference to the HTML element whose text size you want to change
 // const heroBG = document.getElementById("home__hero");
 const scrollText = document.getElementById("banner-text");
-const scrollableNav = document.getElementById("nav");
 const minimumFontSize = 50;
 const maxLetterSpacing = 0;
 if (scrollText) {
@@ -4337,21 +4326,14 @@ if (scrollText) {
     const scrollPosition = window.scrollY;
 
     // Define the scroll threshold at which the background color change should start
-    const scrollThreshold = 50;
 
     // Calculate the new font size based on the scroll percentage
     // You can adjust the formula to control how text size changes with scrolling
-    const newSize = 160 - scrollPosition * 2; // Example: Increase font size as the user scrolls
+    const newSize = 160 - scrollPosition; // Example: Increase font size as the user scrolls
 
     const newSpacing = -6.7 + scrollPosition;
     const fontSize = Math.max(newSize, minimumFontSize);
     const newLetterSpacing = Math.min(newSpacing, maxLetterSpacing);
-
-    // Define the initial and final background colors
-    const initialColor = '#1d1c1d';
-    const finalColor = '#f2f1ed';
-    const newBackgroundColor = scrollPosition > scrollThreshold ? finalColor : initialColor;
-    const newColor = scrollPosition > scrollThreshold ? initialColor : finalColor;
 
     // Update the font size of the element
 
@@ -4359,8 +4341,6 @@ if (scrollText) {
 
     scrollText.style.fontSize = `${fontSize}px`;
     scrollText.style.letterSpacing = newLetterSpacing + 'px';
-
-    // scrollableNav.style.backgroundColor = newBackgroundColor;
   }
 
   // Add a scroll event listener to call the updateTextSizeOnScroll function
@@ -4369,97 +4349,6 @@ if (scrollText) {
   // Call the function initially to set the initial text size
   updateBackgroundOnScroll();
 }
-
-// const scrollableContent = document.querySelector('#home__hero');
-// const scrollableNavt = document.querySelector('#nav');
-// const scrollableNavItems = document.querySelectorAll(".nav__items");
-// const NavItems = [...scrollableNavItems];
-// const scrollableButton = document.querySelector('.nav__button');
-// const scrollableLogo = document.querySelector('.nav__logo');
-// const searchBorder = document.querySelector(".search-overlay--desktop__wrapper");
-// const searchIconDesktop = document.querySelector('.search-overlay--desktop__icon');
-// const plus = document.querySelectorAll('.plus-nav');
-// const scrollText2 = document.getElementById("banner-text");
-
-// if (scrollableContent) {
-
-//   window.addEventListener('scroll', () => {
-
-//     // Get the current scroll position
-//     const scrollPosition = window.scrollY;
-
-//     // Interpolate the background color between the initial and final colors
-//     const initialColor = [29, 28, 29]; // RGB values of #1d1c1d
-//     const finalColor = [242, 241, 237]; // RGB values of #f2f1ed
-//     const interpolatedColor = initialColor.map((channel, index) => {
-//       const range = finalColor[index] - channel;
-//       return Math.min((channel + (range * scrollPosition) / 100), (237));
-//     });
-
-//     // Interpolate the text color between the initial and final colors
-//     const initialColorReverse = [242, 241, 237];
-//     const finalColorReverse = [29, 28, 29];
-//     const interpolatedColorReverse = initialColorReverse.map((channel, index) => {
-//       const range = finalColorReverse[index] - channel;
-//       return Math.round((channel + (range * scrollPosition) / 100), (29));
-//     });
-
-//     // Interpolate the text color between the initial and final colors
-//     const initialColorText = [242, 241, 237];
-//     const finalColorText = [29, 28, 29];
-//     const interpolatedColorText = initialColorText.map((channel, index) => {
-//       const range = finalColorText[index] - channel;
-//       return Math.max((channel + (range * scrollPosition) / 100), (29));
-//     });
-
-//     // Apply the new background color
-//     scrollableContent.style.backgroundColor = `rgb(${interpolatedColor.join(', ')})`;
-
-//     scrollText2.style.color = `rgb(${interpolatedColorText.join(', ')})`;
-
-//     // Apply Filer to SVG
-//     const filterScroll = 100 - (Math.min(scrollPosition, 100));
-//     const filterScrollInverse = (Math.min(scrollPosition, 100));
-
-//     // Function to check if an element is in the viewport
-
-//     // Get the element to check
-//     const elementToCheck = document.querySelector('#accordion-scroll');
-//     let hasPassed = false;
-
-//     // Listen for the scroll event
-//     if (!hasPassed && !isTopOfElementAboveViewport(elementToCheck)) {
-//       scrollableNavt.style.backgroundColor = `rgb(${interpolatedColor.join(', ')})`;
-//       scrollableButton.style.backgroundColor = `rgb(${interpolatedColorText.join(', ')})`
-//       scrollableButton.style.color = `rgb(${interpolatedColor.join(', ')})`;
-//       // scrollableNav.style.display = "block";
-//       scrollableLogo.style.filter = `invert(${filterScroll}%)`;
-//       searchIconDesktop.style.filter = `invert(${filterScrollInverse}%)`;
-//       searchBorder.style.borderColor = `rgb(${interpolatedColorText.join(', ')})`;
-
-//       [...plus].forEach(item => {
-//         item.style.filter = `invert(${filterScroll}%)`;
-//       })
-
-//       NavItems.forEach(item => {
-//         item.style.color = `rgb(${interpolatedColorReverse.join(', ')})`
-//       })
-
-//       console.log('Scrolled past the element.');
-//       // Perform any action you want when you scroll past the element
-//       hasPassed = true; // Set a flag to prevent further triggering
-//     }
-
-//     // Function to check if the top of an element is above the viewport
-//     function isTopOfElementAboveViewport(element) {
-//       const rect = element.getBoundingClientRect();
-//       console.log(rect)
-//       return rect.top < 0;
-//     }
-
-//   });
-
-// }
 
 /***/ }),
 
@@ -4562,62 +4451,6 @@ window.onload = init();
 
 /***/ }),
 
-/***/ "./src/modules/navBanner.js":
-/*!**********************************!*\
-  !*** ./src/modules/navBanner.js ***!
-  \**********************************/
-/***/ (() => {
-
-
-// const bannerText = document.querySelector("#banner-text");
-// const homeHero = document.querySelector("#home__hero");
-
-// if (bannerText) {
-
-//   const $whitesmoke = '#f2f1ed';
-//   $black = '#1d1c1d';
-//   $taupe = '#cbbea5';
-//   $orange = '#ff6f48';
-//   $blue = '#0175df';
-//   $green = '#08cb80';
-//   $white = '#ffffff';
-//   $logoBlack = 'invert(0%)'
-//   $logoWhite = 'invert(100%)'
-
-//   let navData = document.querySelector('.nav');
-//   let pageTitle = navData.getAttribute('data-page');
-//   let sectionColors;
-//   let logoColor;
-//   let borderColor;
-//   let navItems;
-
-//   gsap.registerPlugin(ScrollTrigger)
-
-//   //apply sectionColors to each .fullscreen element
-//   gsap.set(".fullscreen", { backgroundColor: gsap.utils.wrap(sectionColors) })
-//   // gsap.set(".nav", { backgroundColor: gsap.utils.wrap(sectionColors) })
-
-//   // const sections = gsap.utils.toArray(".fullscreen")
-
-//   // sections.forEach(function (section, index) {
-
-//   let tl = gsap.timeline({
-//     scrollTrigger: {
-//       trigger: homeHero,
-//       start: "top",
-//       end: "bottom 400px",
-//       markers: true,
-//       toggleActions: "restart none none reverse"
-//     }
-//   })
-//     .to(".nav", .8, { backgroundColor: "white", immediateRender: false })
-
-// }
-
-// // }
-
-/***/ }),
-
 /***/ "./src/modules/navColors.js":
 /*!**********************************!*\
   !*** ./src/modules/navColors.js ***!
@@ -4625,7 +4458,7 @@ window.onload = init();
 /***/ (() => {
 
 const fullscreen = document.querySelector(".fullscreen");
-if (fullscreen) {
+if (true) {
   const $whitesmoke = '#f2f1ed';
   $black = '#1d1c1d';
   $taupe = '#cbbea5';
@@ -4653,14 +4486,12 @@ if (fullscreen) {
       gsap.set(".nav__items", {
         color: $whitesmoke
       });
-      gsap.set(".nav", {
-        backgroundColor: $black
-      });
+      // gsap.set(".nav", { backgroundColor: $black })
       gsap.set(".search-overlay--desktop__wrapper", {
         borderColor: $whitesmoke
       });
       gsap.set(".search-overlay--desktop__icon", {
-        filter: $logoWhite
+        filter: $logoBlack
       });
       gsap.set(".nav__button", {
         backgroundColor: $whitesmoke,
@@ -4669,15 +4500,15 @@ if (fullscreen) {
       gsap.set(".plus-nav", {
         filter: $logoWhite
       });
-      sectionColors = [$black, $whitesmoke, $black, $whitesmoke];
-      navColors = [$black, $whitesmoke, $black, $whitesmoke];
-      navItems = [$whitesmoke, $black, $whitesmoke, $black];
-      logoColor = [$logoWhite, $logoBlack, $logoWhite, $logoBlack];
-      searchBorder = [$whitesmoke, $black, $whitesmoke, $black];
-      searchIcon = [$logoBlack, $logoWhite, $logoBlack, $logoWhite];
-      navButton = [$whitesmoke, $black, $whitesmoke, $black];
-      navButtonColor = [$black, $whitesmoke, $black, $whitesmoke];
-      plus = [$logoWhite, $logoBlack, $logoWhite, $logoBlack];
+      sectionColors = ['#1d1c1d', '#f2f1ed', '#1d1c1d', '#f2f1ed', '#f2f1ed', '#f2f1ed'];
+      navColors = ['#1d1c1d', '#f2f1ed', '#1d1c1d', '#f2f1ed', '#f2f1ed', '#f2f1ed'];
+      navItems = [$whitesmoke, $black, $whitesmoke, $black, $black, $black];
+      logoColor = [$logoWhite, $logoBlack, $logoWhite, $logoBlack, $logoBlack, $logoBlack];
+      searchBorder = [$whitesmoke, $black, $whitesmoke, $black, $black, $black];
+      searchIcon = [$logoBlack, $logoWhite, $logoBlack, $logoWhite, $logoWhite, $logoWhite];
+      navButton = [$whitesmoke, $black, $whitesmoke, $black, $black, $black];
+      navButtonColor = [$black, $whitesmoke, $black, $whitesmoke, $whitesmoke, $whitesmoke];
+      plus = [$logoWhite, $logoBlack, $logoWhite, $logoBlack, $logoWhite];
       navScroll = true;
       break;
     case 'about.php':
@@ -4711,27 +4542,8 @@ if (fullscreen) {
       searchIcon = [$logoBlack, $logoWhite, $logoWhite, $logoBlack, $logoBlack, $logoWhite, $logoBlack];
       navButton = [$whitesmoke, $black, $black, $whitesmoke, $black, $black];
       navButtonColor = [$black, $whitesmoke, $whitesmoke, $black, $whitesmoke, $whitesmoke];
-      plus = [$logoWhite, $logoBlack];
+      plus = [$logoWhite, $logoBlack, $logoBlack, $logoWhite, $logoBlack, $logoBlack];
       navScroll = true;
-      break;
-    case 'team.php':
-      gsap.set(".nav", {
-        backgroundColor: $whitesmoke
-      });
-      gsap.set(".search-overlay--desktop__wrapper", {
-        borderColor: $black
-      });
-      gsap.set(".search-overlay--desktop__icon", {
-        filter: $logoWhite
-      });
-      gsap.set(".nav__items", {
-        color: $black
-      });
-      sectionColors = [$whitesmoke, $taupe];
-      navColors = [$whitesmoke, $taupe];
-      navItems = [$black];
-      logoColor = [$logoBlack];
-      navScroll = false;
       break;
     case 'expertise.php':
       gsap.set(".nav__logo__black", {
@@ -4835,47 +4647,6 @@ if (fullscreen) {
       plus = [$logoWhite, $logoBlack];
       navScroll = true;
       break;
-    case 'careers.php':
-      gsap.set(".nav__logo__black", {
-        filter: $logoWhite
-      });
-      gsap.set(".nav__items", {
-        color: $whitesmoke
-      });
-      gsap.set(".nav", {
-        backgroundColor: $black
-      });
-      gsap.set(".search-overlay--desktop__wrapper", {
-        borderColor: $whitesmoke
-      });
-      gsap.set(".search-overlay--desktop__icon", {
-        filter: $logoBlack
-      });
-      gsap.set(".nav__button", {
-        backgroundColor: $whitesmoke,
-        color: $black
-      });
-      gsap.set(".plus-nav", {
-        filter: $logoWhite
-      });
-      navScroll = false;
-      break;
-    case 'home.php':
-      gsap.set(".nav", {
-        backgroundColor: $whitesmoke
-      });
-      gsap.set(".search-overlay--desktop__wrapper", {
-        borderColor: $black
-      });
-      gsap.set(".search-overlay--desktop__icon", {
-        filter: $logoWhite
-      });
-      sectionColors = [$whitesmoke];
-      navColors = [$whitesmoke];
-      navItems = [$black];
-      logoColor = [$logoBlack];
-      navScroll = false;
-      break;
     case 'single-expertise.php':
       let expertisePage = document.querySelector('.industry');
       let expertiseNav = expertisePage.getAttribute('data-navColor');
@@ -4892,32 +4663,6 @@ if (fullscreen) {
       navButtonColor = [$whitesmoke];
       plus = [$logoBlack];
       navScroll = true;
-      break;
-    case 'single-sector.php':
-      gsap.set(".nav", {
-        backgroundColor: $whitesmoke
-      });
-      sectionColors = [$whitesmoke, $whitesmoke, $taupe];
-      navColors = [$whitesmoke, $whitesmoke, $taupe];
-      navItems = [$black];
-      logoColor = [$logoBlack];
-      navScroll = false;
-      break;
-    case 'single-team.php':
-      gsap.set(".nav", {
-        backgroundColor: $whitesmoke
-      });
-      gsap.set(".search-overlay--desktop__wrapper", {
-        borderColor: $black
-      });
-      gsap.set(".search-overlay--desktop__icon", {
-        filter: $logoWhite
-      });
-      sectionColors = [$whitesmoke, $taupe];
-      navColors = [$whitesmoke, $taupe];
-      navItems = [$black];
-      logoColor = [$logoBlack];
-      navScroll = false;
       break;
     case 'single.php':
       gsap.set(".nav__logo__black", {
@@ -4950,6 +4695,65 @@ if (fullscreen) {
       plus = [$logoWhite, $logoBlack];
       navScroll = true;
       break;
+    case 'team.php':
+      gsap.set(".nav", {
+        backgroundColor: $whitesmoke
+      });
+      sectionColors = [$whitesmoke, $taupe];
+      navColors = [$whitesmoke, $taupe];
+      navScroll = false;
+      break;
+    case 'careers.php':
+      gsap.set(".nav__logo__black", {
+        filter: $logoWhite
+      });
+      gsap.set(".nav__items", {
+        color: $whitesmoke
+      });
+      gsap.set(".nav", {
+        backgroundColor: $black
+      });
+      gsap.set(".search-overlay--desktop__wrapper", {
+        borderColor: $whitesmoke
+      });
+      gsap.set(".search-overlay--desktop__icon", {
+        filter: $logoBlack
+      });
+      gsap.set(".nav__button", {
+        backgroundColor: $whitesmoke,
+        color: $black
+      });
+      gsap.set(".plus-nav", {
+        filter: $logoWhite
+      });
+      sectionColors = [$black];
+      navColors = [$black];
+      navScroll = false;
+      break;
+    case 'home.php':
+      gsap.set(".nav", {
+        backgroundColor: $whitesmoke
+      });
+      sectionColors = [$whitesmoke];
+      navColors = [$whitesmoke];
+      navScroll = false;
+      break;
+    case 'single-sector.php':
+      gsap.set(".nav", {
+        backgroundColor: $whitesmoke
+      });
+      sectionColors = [$whitesmoke];
+      navColors = [$whitesmoke];
+      navScroll = false;
+      break;
+    case 'single-team.php':
+      gsap.set(".nav", {
+        backgroundColor: $whitesmoke
+      });
+      sectionColors = [$whitesmoke, $taupe];
+      navColors = [$whitesmoke, $taupe];
+      navScroll = false;
+      break;
     case 'archive.php':
       gsap.set(".nav", {
         backgroundColor: $whitesmoke
@@ -4957,126 +4761,92 @@ if (fullscreen) {
       sectionColors = [$whitesmoke];
       navColors = [$whitesmoke];
       navItems = [$black];
-      logoColor = [$logoBlack];
-      navScroll = false;
-      break;
-    case 'seminars.php':
-      gsap.set(".nav", {
-        backgroundColor: $whitesmoke
-      });
-      sectionColors = [$whitesmoke];
-      navColors = [$whitesmoke];
-      navItems = [$black];
-      logoColor = [$logoBlack];
-      navScroll = false;
-      break;
-    case 'news.php':
-      gsap.set(".nav", {
-        backgroundColor: $whitesmoke
-      });
-      sectionColors = [$whitesmoke];
-      navColors = [$whitesmoke];
-      navItems = [$black];
-      logoColor = [$logoBlack];
-      navScroll = false;
-      break;
-    case 'single-news.php':
-      gsap.set(".nav", {
-        backgroundColor: $whitesmoke
-      });
-      sectionColors = [$whitesmoke];
-      navColors = [$whitesmoke];
-      navItems = [$black];
-      logoColor = [$logoBlack];
       navScroll = false;
       break;
     case 'submit.php':
       gsap.set(".nav", {
         backgroundColor: $whitesmoke
       });
-      gsap.set(".search-overlay--desktop__wrapper", {
-        borderColor: $black
-      });
-      gsap.set(".search-overlay--desktop__icon", {
-        filter: $logoWhite
-      });
       sectionColors = [$whitesmoke];
       navColors = [$whitesmoke];
-      navItems = [$black];
-      logoColor = [$logoBlack];
       navScroll = false;
       break;
     case '404.php':
-      // gsap.set(".nav", { backgroundColor: $taupe })
-      sectionColors = [$taupe];
-      navColors = [$taupe];
-      navItems = [$black];
-      logoColor = [$logoBlack];
+      gsap.set(".nav", {
+        backgroundColor: $whitesmoke
+      });
+      sectionColors = [$whitesmoke];
+      navColors = [$whitesmoke];
       navScroll = false;
       break;
+    default:
+      console.log("hello");
   }
-
-  // const sectionColors = ["#00BFFF", "#FFA07A"]
-
   gsap.registerPlugin(ScrollTrigger);
 
   //apply sectionColors to each .fullscreen element
   gsap.set(".fullscreen", {
     backgroundColor: gsap.utils.wrap(sectionColors)
   });
-  // gsap.set(".nav", { backgroundColor: gsap.utils.wrap(sectionColors) })
-
   const sections = gsap.utils.toArray(".fullscreen");
   sections.forEach(function (section, index) {
-    let tl = gsap.timeline({
-      // duration: 1,
-      scrollTrigger: {
-        trigger: section,
-        start: "top 112px",
-        end: "bottom 112px",
-        markers: false,
-        toggleActions: "restart none none reverse"
-      }
-    });
     if (navScroll) {
-      tl.to(".nav", {
-        backgroundColor: navColors[index],
-        immediateRender: false
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: section,
+          start: "top 112px",
+          end: "bottom 112px",
+          markers: false,
+          immediateRender: false,
+          toggleActions: "restart none none reverse"
+        }
+      }).to(".nav", {
+        backgroundColor: navColors[index]
       }).to(".nav__items", {
-        color: navItems[index],
-        immediateRender: false
-      }, "<").to(".nav__logo__black", {
-        filter: logoColor[index],
-        immediateRender: false
-      }, "<");
-    }
-    if (navScroll) {
-      tl.to(".search-overlay--desktop__wrapper", {
-        borderColor: searchBorder[index],
-        immediateRender: false
-      }, "<");
-    }
-    if (navScroll) {
-      tl.to(".search-overlay--desktop__icon", {
-        filter: searchIcon[index],
-        immediateRender: false
-      }, "<");
-    }
-    if (navScroll) {
-      tl.to(".nav__button", {
+        color: navItems[index]
+      }, 0).to(".nav__logo__black", {
+        filter: logoColor[index]
+      }, 0).to(".search-overlay--desktop__wrapper", {
+        borderColor: searchBorder[index]
+      }, 0).to(".search-overlay--desktop__icon", {
+        filter: searchIcon[index]
+      }, 0).to(".nav__button", {
         backgroundColor: navButton[index],
-        color: navButtonColor[index],
-        immediateRender: false
-      }, "<");
-    }
-    if (navScroll) {
-      tl.to(".plus-nav", {
-        filter: plus[index],
-        immediateRender: false
-      }, "<");
+        color: navButtonColor[index]
+      }, 0).to(".plus-nav", {
+        filter: plus[index]
+      }, 0);
     }
   });
 }
+
+/***/ }),
+
+/***/ "./src/modules/navColors_2.js":
+/*!************************************!*\
+  !*** ./src/modules/navColors_2.js ***!
+  \************************************/
+/***/ (() => {
+
+// const sectionColors = ["dodgerblue", "salmon", "green", "purple", "maroon", "dodgerblue"]
+// const navColors = ["#00BFFF", "#FFA07A", "#90EE90", "#EE82EE", "#FF6347", "#00BFFF"]
+
+// //apply sectionColors to each .fullscreen element
+// gsap.set(".fullscreen", { backgroundColor: gsap.utils.wrap(sectionColors) })
+
+// const sections = gsap.utils.toArray(".fullscreen")
+
+// sections.forEach(function (section, index) {
+//   console.log(section, navColors[index])
+//   ScrollTrigger.create({
+//     trigger: section,
+//     start: "top 112px",
+//     end: "bottom 112px",
+//     animation: gsap.to(".nav", { backgroundColor: navColors[index], immediateRender: false }),
+//     toggleActions: "restart none none reverse"
+
+//   })
+// })
 
 /***/ }),
 
@@ -5151,21 +4921,24 @@ accordionsAbout.forEach(accordion => {
 //Show Nav on Scroll
 
 // Enable hidden nav bar
-{
-  const nav = document.querySelector(".nav");
-  const header = document.querySelector(".header");
-  let lastScrollY = window.scrollY;
-  window.addEventListener("scroll", () => {
-    if (lastScrollY < window.scrollY && lastScrollY > 800) {
-      nav.classList.add("nav--hidden");
-      header.style.zIndex = "-1";
-    } else {
-      nav.classList.remove("nav--hidden");
-      header.style.zIndex = "10";
-    }
-    lastScrollY = window.scrollY;
-  });
-}
+// {
+//   const nav = document.querySelector(".nav");
+//   const header = document.querySelector(".header");
+//   let lastScrollY = window.scrollY;
+
+//   window.addEventListener("scroll", () => {
+
+//     if (lastScrollY < window.scrollY && lastScrollY > 800) {
+//       nav.classList.add("nav--hidden");
+//       header.style.zIndex = "-1";
+//     } else {
+//       nav.classList.remove("nav--hidden");
+//       header.style.zIndex = "10";
+//     }
+
+//     lastScrollY = window.scrollY;
+//   });
+// }
 
 //Desktop Dropdowns
 const navExpertise = document.querySelector('.nav-expertise');

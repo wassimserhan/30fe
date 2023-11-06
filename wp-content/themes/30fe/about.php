@@ -17,33 +17,23 @@ get_header();
         <img class="about__hero__video" src="<?php echo get_template_directory_uri(); ?>/images/about.gif"
           alt="About 30FE">
         <h1 class="about__hero__headline">We are 30</h1>
-
-
-
         <h3 class="about__hero__copy">With over <span class="orange">60 experts</span> in <span
             class="green">14&nbsp;practice
             areas</span>, we&nbsp;offer
           evidence-based solutions to&nbsp;<span class="blue">clients worldwide</span>.
         </h3>
 
-
       </section>
-
-
-
-
-
-
-
     </section>
   </section>
 
   <!-- Mission -->
-  <?php
+
+  <section class="about__mission fullscreen full-height">
+    <?php
 if( have_rows('mission') ):
 while( have_rows('mission') ) : the_row(); 
 ?>
-  <section class="about__mission fullscreen full-height">
     <section class="max-width max-padding">
       <section class="pill about__mission__pill">
         <p class="pill__label">mission</p>
@@ -51,18 +41,20 @@ while( have_rows('mission') ) : the_row();
       <h1 class="about__mission__headline"><?php echo get_sub_field('mission_headline'); ?> </h1>
       <h4 class="about__mission__copy"><?php echo get_sub_field('mission_copy'); ?> </h4>
     </section>
+    <?php endwhile; endif; ?>
   </section>
-  <?php endwhile; endif; ?>
+
 
 
 
   <!-- 360 Investigations -->
 
-  <?php
+
+  <section class="about__investigations fullscreen full-height">
+    <?php
 if( have_rows('360_services') ):
 while( have_rows('360_services') ) : the_row(); 
 ?>
-  <section class="about__investigations fullscreen full-height">
     <section class="max-width max-padding">
       <section class="about__investigations__wrapper">
         <article>
@@ -95,19 +87,21 @@ while( have_rows('360_services') ) : the_row();
         </ul>
       </section>
     </section>
+    <?php endwhile; endif; ?>
   </section>
-  <?php endwhile; endif; ?>
 
 
 
 
 
-  <?php
+
+
+  <section class="about__timeline fullscreen">
+
+    <?php
 if( have_rows('timeline') ):
 while( have_rows('timeline') ) : the_row(); 
 ?>
-
-  <section class="about__timeline fullscreen">
 
     <hr class="about__timeline__line">
     <h3 class="about__timeline__headline">Our Story
@@ -144,18 +138,20 @@ while( have_rows('timeline') ) : the_row();
 
       </div>
     </section>
+    <?php endwhile; endif; ?>
   </section>
 
-  <?php endwhile; endif; ?>
+
 
 
 
   <!-- Hero-->
-  <?php
-if( have_rows('what_is_30') ):
-while( have_rows('what_is_30') ) : the_row(); 
-?>
+
   <section class="about__thirty fullscreen">
+    <?php
+      if( have_rows('what_is_30') ):
+      while( have_rows('what_is_30') ) : the_row(); 
+      ?>
     <section class="max-width">
       <section class="about__whatis__card">
         <figure class="about__whatis__image">
@@ -169,13 +165,21 @@ while( have_rows('what_is_30') ) : the_row();
         </article>
       </section>
     </section>
+    <?php endwhile; endif; ?>
   </section>
-  <?php endwhile; endif; ?>
+
   <!-- Hiring -->
-  <?php include get_template_directory() . '/modules/hiring.php'; ?>
-
-
-
+  <section class="hiring fullscreen">
+    <section class="max-width max-padding">
+      <section class="pill">
+        <p class="pill__label">careers</p>
+      </section>
+      <h3 class="hiring__headline">We're hiring!</h3>
+      <p class="hiring__copy">We’re hiring! Visit our Careers page to view open positions or send your resume to <a
+          href="mailto:careers@30fe.com">careers@30fe.com.</a></p>
+      <a href="<?php echo site_url('/careers')?>"><button class="hiring__button">OPEN POSITIONS</button></a>
+    </section>
+  </section>
 </main>
 
 <?php 

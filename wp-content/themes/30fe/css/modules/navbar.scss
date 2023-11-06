@@ -2,7 +2,7 @@
   background-color: $black;
   min-height: 112px;
   transition: transform 0.2s;
-  transition: background-color 0.4s; /* Add a smooth transition for background color changes */
+  // transition: background-color 0.4s; /* Add a smooth transition for background color changes */
 
   @include bp(phone) {
     min-height: 72px;

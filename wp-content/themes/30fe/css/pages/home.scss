@@ -1,3 +1,17 @@
+#hero--desktop {
+  display: block;
+  @include bp(tablet) {
+    display: none;
+  }
+}
+
+#hero--mobile {
+  display: none;
+  @include bp(tablet) {
+    display: block;
+  }
+}
+
 .home {
   font-family: 'Inter', sans-serif;
 
@@ -10,13 +24,13 @@
       overflow: hidden;
       letter-spacing: -0.7rem;
       line-height: 110%;
-      @include bp(phone) {
+      @include bp(tablet) {
         display: none;
       }
 
       &--mobile {
         display: none;
-        @include bp(phone) {
+        @include bp(tablet) {
           letter-spacing: 0;
           font-size: 3.125rem;
           display: block;
@@ -29,10 +43,14 @@
   &__hero {
     position: relative;
 
+    &__image {
+      padding-bottom: 2rem;
+    }
+
     &__padding-top {
-      padding: 8rem 8rem 0;
+      padding: 8rem 8rem;
       @include bp(laptop) {
-        padding: 8rem 0 0 1.5rem;
+        padding: 8rem 1.5rem 0 1.5rem;
       }
     }
 
@@ -47,6 +65,7 @@
       display: flex;
       justify-content: flex-start;
       width: 60%;
+      margin-bottom: 2rem;
 
       @include bp(tablet) {
         flex-direction: column;
@@ -64,7 +83,7 @@
       background-color: $whitesmoke;
       color: $black;
       border: 1px solid $whitesmoke;
-      @include bp(phone) {
+      @include bp(tablet) {
         width: 100%;
         margin: 1rem 0 0;
       }
@@ -93,9 +112,9 @@
       display: flex;
       justify-content: flex-start;
       flex-direction: row-reverse;
-      gap: 0;
-      padding: 3rem 0 0 0;
-      @include bp(phone) {
+      gap: 2rem;
+      // padding: 3rem 0 0 0;
+      @include bp(tablet) {
         padding: 2rem 0 0;
         display: block;
       }
@@ -110,16 +129,16 @@
       width: 100%;
       padding: 0 0 1rem;
       color: $whitesmoke;
-      @include bp(phone) {
+      @include bp(tablet) {
         display: none;
       }
 
       &--mobile {
         display: none;
-        @include bp(phone) {
+        @include bp(tablet) {
           color: $whitesmoke;
           display: block;
-          padding: 2rem 0 0;
+          // padding: 2rem 0 0;
         }
       }
     }
@@ -130,7 +149,7 @@
       line-height: 120%;
       letter-spacing: 0px;
       margin: 0;
-      @include bp(phone) {
+      @include bp(tablet) {
         font-size: 1.25rem;
         line-height: 140%;
         letter-spacing: -0.6px;
@@ -143,7 +162,7 @@
     justify-content: space-between;
     padding: 0 0 2rem;
     align-items: center;
-    @include bp(phone) {
+    @include bp(tablet) {
       display: block;
     }
   }
@@ -152,7 +171,7 @@
     background-color: transparent;
     border: 1px solid $black;
     color: $black;
-    @include bp(phone) {
+    @include bp(tablet) {
       margin-top: 2rem;
       width: 100%;
     }
@@ -162,5 +181,41 @@
       border: 1px solid $black;
       color: $whitesmoke;
     }
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 2em;
+  justify-content: flex-start;
+  height: auto;
+}
+
+.aside-1 {
+  position: sticky !important;
+  top: 150px !important;
+  align-self: flex-start;
+  height: 622px;
+
+  @include bp(largescreen) {
+    height: 700px;
+  }
+
+  // @include bp(laptop) {
+  //   height: initial;
+  // }
+
+  @include bp(tablet) {
+    position: static !important;
+    top: 0 !important;
+  }
+}
+
+.aside-2 {
+  height: 622px;
+  top: 0;
+  @include bp(laptop) {
+    height: initial;
   }
 }

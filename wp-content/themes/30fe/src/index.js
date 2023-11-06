@@ -191,11 +191,9 @@ if (careerSlider) {
 
 
 // modules
-import './modules/navBanner';
 import './modules/homeScroll';
 import './modules/expertiseListHover';
 import './modules/ajaxLoadMore';
-import './modules/changeBackground';
 import './modules/expertise';
 import './modules/contact';
 import './modules/teamSearch';
@@ -205,6 +203,7 @@ import './modules/homeStatsMobile';
 import './modules/homeStats';
 import './modules/accordion';
 import './modules/navColors';
+import './modules/navColors_2';
 import './modules/navbar';
 import Search from './modules/search';
 

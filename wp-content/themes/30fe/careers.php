@@ -7,7 +7,7 @@ get_header();
 
 <main class="main-container">
 
-  <section class="careers__intro black-bg">
+  <section class="careers__intro fullscreen">
     <section class="max-width max-padding">
       <h1 class="careers__intro__headline">At 30, we share a fascination for how things work.
         We love the mystery. The&nbsp;theory. The mechanics. The science. The rigour.
@@ -24,7 +24,7 @@ get_header();
   <!-- Hero -->
 
 
-  <section class="careers__hero black-bg">
+  <section class="careers__hero fullscreen">
     <section class="max-width careers__hero__padding ">
       <section class="careers__hero__block">
         <h1 class="careers__hero__headline">&nbsp;</h1>
@@ -58,7 +58,7 @@ get_header();
 if( have_rows('vision') ):
 while( have_rows('vision') ) : the_row(); 
 ?>
-  <section class="careers__vision black-bg">
+  <section class="careers__vision fullscreen">
     <section class="max-width max-padding">
       <h2 class="careers__headline careers__headline--orange"><?php echo get_sub_field('vision_headline') ;?></h2>
       <p class="careers__copy"><?php echo get_sub_field('vision_copy') ;?></p>
@@ -71,7 +71,7 @@ while( have_rows('vision') ) : the_row();
 if( have_rows('values') ):
 while( have_rows('values') ) : the_row(); 
 ?>
-  <section class="careers__vision black-bg">
+  <section class="careers__vision fullscreen">
     <section class="max-width careers__vision__padding">
       <h2 class="careers__headline careers__headline--blue"><?php echo get_sub_field('values_headline') ;?></h2>
       <section id="careers-slider" class="splide splide-careers" aria-labelledby="carousel-heading">
@@ -105,7 +105,7 @@ while( have_rows('values') ) : the_row();
 if( have_rows('culture') ):
 while( have_rows('culture') ) : the_row(); 
 ?>
-  <section class="careers__vision black-bg">
+  <section class="careers__vision fullscreen">
     <section class="max-width max-padding">
       <h2 class="careers__headline careers__headline--green"><?php echo get_sub_field('culture_headline') ;?></h2>
       <p class="careers__copy"><?php echo get_sub_field('culture_copy') ;?></p>
@@ -118,7 +118,7 @@ while( have_rows('culture') ) : the_row();
 if( have_rows('benefits') ):
 while( have_rows('benefits') ) : the_row(); 
 ?>
-  <section class="careers__vision black-bg">
+  <section class="careers__vision fullscreen">
     <section class="max-width max-padding">
       <h2 class="careers__headline careers__headline--taupe "><?php echo get_sub_field('benefits_headline') ;?></h2>
       <ul class="careers__list">
@@ -146,7 +146,7 @@ while( have_rows('benefits') ) : the_row();
 if( have_rows('positions') ):
 while( have_rows('positions') ) : the_row(); 
 ?>
-  <section id="positions" class="careers__vision black-bg fullscreen">
+  <section id="positions" class="careers__vision fullscreen">
     <section class="max-width max-padding">
       <h2 class="careers__headline careers__headline--white"><?php echo get_sub_field('positions_headline') ;?></h2>
 

@@ -1,23 +1,15 @@
 .contact {
   font-family: 'Inter', sans-serif;
 
-  // &__hero {
-  //   padding: 0 8rem;
-  // }
+  &__hero {
+  }
 
   &__hero__maps {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 70vh;
+    height: 600px;
     position: relative;
-    @include bp(tablet) {
-      height: 80vw;
-    }
-
-    @include bp(phone) {
-      height: 100vw;
-    }
   }
 
   &__image {
@@ -27,31 +19,6 @@
 
     &__pin {
       display: none;
-      &--blue {
-        max-width: 35px;
-        position: absolute;
-        bottom: 260px;
-        right: 0;
-        left: 584px;
-        @include bp(tablet) {
-          bottom: 0;
-          right: 0;
-          left: 0;
-        }
-      }
-
-      &--taupe {
-        max-width: 35px;
-        position: absolute;
-        bottom: 260px;
-        right: 0;
-        left: 584px;
-        @include bp(tablet) {
-          bottom: 0;
-          right: 0;
-          left: 0;
-        }
-      }
     }
 
     &--active {
@@ -67,7 +34,7 @@
     // display: flex;
     // gap: 32px;
     background-color: $black;
-    padding: 2rem 8rem;
+    padding: 2rem 0;
     // justify-content: space-evenly;
     // position: absolute;
     bottom: 0;
@@ -114,6 +81,10 @@
       font-weight: 400;
       line-height: 150%; /* 18px */
       color: $whitesmoke;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 
@@ -180,51 +151,24 @@
 }
 
 // Maps
-#toronto {
-  background-image: url('/images/maps/toronto.svg');
-  background-position: 25% 77%;
-}
 
 #vancouver {
-  background-image: url('/images/maps/vancouver.svg');
-}
-
-#ottawa {
-  background-image: url('/images/maps/ottawa.svg');
-  background-position: (bottom);
+  display: block;
 }
 
 #calgary {
-  background-image: url('/images/maps/calgary.svg');
-  background-position: (top);
+  display: none;
+}
+
+#toronto {
+  display: none;
+}
+
+#ottawa {
+  display: none;
 }
 
 //Pins
-
-#toronto-pin {
-  display: block;
-  max-width: 35px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 45vw;
-  top: 8vw;
-  background-image: url('/images/maps/orange-pin.svg');
-  background-repeat: no-repeat;
-  @include bp(laptop) {
-    left: 44vw;
-    top: 13vw;
-  }
-
-  @include bp(tablet) {
-    left: 53vw;
-    top: 46vw;
-  }
-  @include bp(phone) {
-    left: 59vw;
-    top: 53vw;
-  }
-}
 
 #vancouver-pin {
   display: block;
@@ -232,24 +176,46 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  left: 39vw;
-  top: 20vw;
+  left: 41%;
+  top: 45%;
   background-image: url('/images/maps/green-pin.svg');
   background-repeat: no-repeat;
-
-  @include bp(largescreen) {
-    left: 41vw;
-    top: 22vw;
+  @include bp(phone) {
+    left: 47%;
+    top: 42%;
   }
+}
 
-  @include bp(tablet) {
-    left: 55vw;
-    top: 27vw;
-  }
+#calgary-pin {
+  display: block;
+  max-width: 35px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 49%;
+  top: 47%;
+  background-image: url('/images/maps/taupe-pin.svg');
+  background-repeat: no-repeat;
 
   @include bp(phone) {
-    left: 67vw;
-    top: 31vw;
+    left: 54%;
+    top: 50%;
+  }
+}
+
+#toronto-pin {
+  display: block;
+  max-width: 35px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 52%;
+  top: 36%;
+  background-image: url('/images/maps/orange-pin.svg');
+  background-repeat: no-repeat;
+  @include bp(phone) {
+    left: 68%;
+    top: 32%;
   }
 }
 
@@ -259,29 +225,13 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  left: 39vw;
-  top: 10vw;
+  left: 45%;
+  top: 50%;
   background-image: url('/images/maps/blue-pin.svg');
   background-repeat: no-repeat;
-}
-
-#calgary-pin {
-  display: block;
-  max-width: 35px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 41vw;
-  top: 24vw;
-  background-image: url('/images/maps/taupe-pin.svg');
-  background-repeat: no-repeat;
-  @include bp(tablet) {
-    left: 35vw;
-    top: 31vw;
-  }
   @include bp(phone) {
-    left: 27vw;
-    top: 39vw;
+    left: 49%;
+    top: 48%;
   }
 }
 
@@ -315,4 +265,12 @@
 
 .ottawa:hover {
   color: $blue;
+}
+
+.map-container {
+  position: relative;
+}
+.map-image {
+  display: block;
+  width: 100%;
 }

@@ -1,4 +1,4 @@
-<section class="hiring fullscreen taupe-bg">
+<section class="hiring fullscreen">
   <section class="max-width max-padding">
     <section class="pill">
       <p class="pill__label">careers</p>

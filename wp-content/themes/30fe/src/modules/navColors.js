@@ -1,10 +1,12 @@
 
+
+
 const fullscreen = document.querySelector(".fullscreen");
 
 
 
-if (fullscreen) {
 
+if (true) {
 
   const $whitesmoke = '#f2f1ed';
   $black = '#1d1c1d';
@@ -32,28 +34,24 @@ if (fullscreen) {
   let plus;
 
 
-
-
-
-
   switch (pageTitle) {
     case 'front-page.php':
       gsap.set(".nav__logo__black", { filter: $logoWhite })
       gsap.set(".nav__items", { color: $whitesmoke })
-      gsap.set(".nav", { backgroundColor: $black })
+      // gsap.set(".nav", { backgroundColor: $black })
       gsap.set(".search-overlay--desktop__wrapper", { borderColor: $whitesmoke })
-      gsap.set(".search-overlay--desktop__icon", { filter: $logoWhite })
+      gsap.set(".search-overlay--desktop__icon", { filter: $logoBlack })
       gsap.set(".nav__button", { backgroundColor: $whitesmoke, color: $black })
-      gsap.set(".plus-nav", { filter: $logoWhite })
-      sectionColors = [$black, $whitesmoke, $black, $whitesmoke];
-      navColors = [$black, $whitesmoke, $black, $whitesmoke];
-      navItems = [$whitesmoke, $black, $whitesmoke, $black]
-      logoColor = [$logoWhite, $logoBlack, $logoWhite, $logoBlack];
-      searchBorder = [$whitesmoke, $black, $whitesmoke, $black];
-      searchIcon = [$logoBlack, $logoWhite, $logoBlack, $logoWhite];
-      navButton = [$whitesmoke, $black, $whitesmoke, $black];
-      navButtonColor = [$black, $whitesmoke, $black, $whitesmoke];
-      plus = [$logoWhite, $logoBlack, $logoWhite, $logoBlack];
+      gsap.set(".plus-nav", { filter: $logoWhite });
+      sectionColors = ['#1d1c1d', '#f2f1ed', '#1d1c1d', '#f2f1ed', '#f2f1ed', '#f2f1ed'];
+      navColors = ['#1d1c1d', '#f2f1ed', '#1d1c1d', '#f2f1ed', '#f2f1ed', '#f2f1ed'];
+      navItems = [$whitesmoke, $black, $whitesmoke, $black, $black, $black]
+      logoColor = [$logoWhite, $logoBlack, $logoWhite, $logoBlack, $logoBlack, $logoBlack];
+      searchBorder = [$whitesmoke, $black, $whitesmoke, $black, $black, $black];
+      searchIcon = [$logoBlack, $logoWhite, $logoBlack, $logoWhite, $logoWhite, $logoWhite];
+      navButton = [$whitesmoke, $black, $whitesmoke, $black, $black, $black];
+      navButtonColor = [$black, $whitesmoke, $black, $whitesmoke, $whitesmoke, $whitesmoke];
+      plus = [$logoWhite, $logoBlack, $logoWhite, $logoBlack, $logoWhite];
       navScroll = true;
       break;
     case 'about.php':
@@ -64,8 +62,6 @@ if (fullscreen) {
       gsap.set(".search-overlay--desktop__icon", { filter: $logoBlack })
       gsap.set(".nav__button", { backgroundColor: $whitesmoke, color: $black })
       gsap.set(".plus-nav", { filter: $logoWhite })
-
-
       sectionColors = [$black, $whitesmoke, $whitesmoke, $black, $whitesmoke, $taupe];
       navColors = [$black, $whitesmoke, $whitesmoke, $black, $whitesmoke, $taupe];
       navItems = [$whitesmoke, $black, $black, $whitesmoke, $black, $black]
@@ -74,20 +70,10 @@ if (fullscreen) {
       searchIcon = [$logoBlack, $logoWhite, $logoWhite, $logoBlack, $logoBlack, $logoWhite, $logoBlack];
       navButton = [$whitesmoke, $black, $black, $whitesmoke, $black, $black];
       navButtonColor = [$black, $whitesmoke, $whitesmoke, $black, $whitesmoke, $whitesmoke];
-      plus = [$logoWhite, $logoBlack];
+      plus = [$logoWhite, $logoBlack, $logoBlack, $logoWhite, $logoBlack, $logoBlack];
       navScroll = true;
       break;
-    case 'team.php':
-      gsap.set(".nav", { backgroundColor: $whitesmoke })
-      gsap.set(".search-overlay--desktop__wrapper", { borderColor: $black })
-      gsap.set(".search-overlay--desktop__icon", { filter: $logoWhite })
-      gsap.set(".nav__items", { color: $black })
-      sectionColors = [$whitesmoke, $taupe];
-      navColors = [$whitesmoke, $taupe];
-      navItems = [$black]
-      logoColor = [$logoBlack];
-      navScroll = false;
-      break;
+
     case 'expertise.php':
       gsap.set(".nav__logo__black", { filter: $logoWhite })
       gsap.set(".nav__items", { color: $whitesmoke })
@@ -106,8 +92,8 @@ if (fullscreen) {
       navButtonColor = [$whitesmoke, $whitesmoke];
       plus = [$logoWhite, $logoBlack];
       navScroll = true;
-
       break;
+
     case 'sectors.php':
       gsap.set(".nav__logo__black", { filter: $logoWhite })
       gsap.set(".nav__items", { color: $whitesmoke })
@@ -116,7 +102,6 @@ if (fullscreen) {
       gsap.set(".search-overlay--desktop__icon", { filter: $logoBlack })
       gsap.set(".nav__button", { backgroundColor: $whitesmoke, color: $black })
       gsap.set(".plus-nav", { filter: $logoWhite })
-
       sectionColors = [$black, $taupe];
       navColors = [$black, $taupe];
       navItems = [$whitesmoke, $black]
@@ -128,6 +113,7 @@ if (fullscreen) {
       plus = [$logoWhite, $logoBlack];
       navScroll = true;
       break;
+
     case 'contact.php':
       gsap.set(".nav__logo__black", { filter: $logoWhite })
       gsap.set(".nav__items", { color: $whitesmoke })
@@ -136,8 +122,6 @@ if (fullscreen) {
       gsap.set(".search-overlay--desktop__icon", { filter: $logoBlack })
       gsap.set(".nav__button", { backgroundColor: $whitesmoke, color: $black })
       gsap.set(".plus-nav", { filter: $logoWhite });
-
-
       sectionColors = [$black, $taupe];
       navColors = [$black, $taupe];
       navItems = [$whitesmoke, $black]
@@ -149,31 +133,11 @@ if (fullscreen) {
       plus = [$logoWhite, $logoBlack];
       navScroll = true;
       break;
-    case 'careers.php':
-      gsap.set(".nav__logo__black", { filter: $logoWhite })
-      gsap.set(".nav__items", { color: $whitesmoke })
-      gsap.set(".nav", { backgroundColor: $black })
-      gsap.set(".search-overlay--desktop__wrapper", { borderColor: $whitesmoke })
-      gsap.set(".search-overlay--desktop__icon", { filter: $logoBlack })
-      gsap.set(".nav__button", { backgroundColor: $whitesmoke, color: $black })
-      gsap.set(".plus-nav", { filter: $logoWhite });
-      navScroll = false
-      break;
-    case 'home.php':
-      gsap.set(".nav", { backgroundColor: $whitesmoke })
-      gsap.set(".search-overlay--desktop__wrapper", { borderColor: $black })
-      gsap.set(".search-overlay--desktop__icon", { filter: $logoWhite })
-      sectionColors = [$whitesmoke];
-      navColors = [$whitesmoke];
-      navItems = [$black];
-      logoColor = [$logoBlack];
-      navScroll = false;
-      break;
-    case 'single-expertise.php':
 
+
+    case 'single-expertise.php':
       let expertisePage = document.querySelector('.industry');
       let expertiseNav = expertisePage.getAttribute('data-navColor');
-
       gsap.set(".nav", { backgroundColor: expertiseNav });
       sectionColors = [$whitesmoke];
       navColors = [$whitesmoke];
@@ -186,24 +150,7 @@ if (fullscreen) {
       plus = [$logoBlack];
       navScroll = true;
       break;
-    case 'single-sector.php':
-      gsap.set(".nav", { backgroundColor: $whitesmoke })
-      sectionColors = [$whitesmoke, $whitesmoke, $taupe];
-      navColors = [$whitesmoke, $whitesmoke, $taupe];
-      navItems = [$black];
-      logoColor = [$logoBlack];
-      navScroll = false;
-      break;
-    case 'single-team.php':
-      gsap.set(".nav", { backgroundColor: $whitesmoke })
-      gsap.set(".search-overlay--desktop__wrapper", { borderColor: $black })
-      gsap.set(".search-overlay--desktop__icon", { filter: $logoWhite })
-      sectionColors = [$whitesmoke, $taupe];
-      navColors = [$whitesmoke, $taupe];
-      navItems = [$black];
-      logoColor = [$logoBlack];
-      navScroll = false;
-      break;
+
     case 'single.php':
       gsap.set(".nav__logo__black", { filter: $logoWhite })
       gsap.set(".nav__items", { color: $whitesmoke })
@@ -223,120 +170,113 @@ if (fullscreen) {
       navScroll = true;
       break;
 
+    case 'team.php':
+      gsap.set(".nav", { backgroundColor: $whitesmoke })
+      sectionColors = [$whitesmoke, $taupe];
+      navColors = [$whitesmoke, $taupe];
+      navScroll = false;
+      break;
+
+    case 'careers.php':
+      gsap.set(".nav__logo__black", { filter: $logoWhite })
+      gsap.set(".nav__items", { color: $whitesmoke })
+      gsap.set(".nav", { backgroundColor: $black })
+      gsap.set(".search-overlay--desktop__wrapper", { borderColor: $whitesmoke })
+      gsap.set(".search-overlay--desktop__icon", { filter: $logoBlack })
+      gsap.set(".nav__button", { backgroundColor: $whitesmoke, color: $black })
+      gsap.set(".plus-nav", { filter: $logoWhite });
+      sectionColors = [$black];
+      navColors = [$black];
+      navScroll = false
+      break;
+
+    case 'home.php':
+      gsap.set(".nav", { backgroundColor: $whitesmoke })
+      sectionColors = [$whitesmoke];
+      navColors = [$whitesmoke];
+      navScroll = false;
+      break;
+
+    case 'single-sector.php':
+      gsap.set(".nav", { backgroundColor: $whitesmoke })
+      sectionColors = [$whitesmoke];
+      navColors = [$whitesmoke];
+      navScroll = false;
+      break;
+    case 'single-team.php':
+      gsap.set(".nav", { backgroundColor: $whitesmoke })
+      sectionColors = [$whitesmoke, $taupe];
+      navColors = [$whitesmoke, $taupe];
+      navScroll = false;
+      break;
     case 'archive.php':
       gsap.set(".nav", { backgroundColor: $whitesmoke })
       sectionColors = [$whitesmoke];
       navColors = [$whitesmoke];
       navItems = [$black];
-
-      logoColor = [$logoBlack];
-      navScroll = false;
-      break;
-    case 'seminars.php':
-      gsap.set(".nav", { backgroundColor: $whitesmoke })
-      sectionColors = [$whitesmoke];
-      navColors = [$whitesmoke];
-      navItems = [$black];
-
-      logoColor = [$logoBlack];
-      navScroll = false;
-      break;
-    case 'news.php':
-      gsap.set(".nav", { backgroundColor: $whitesmoke })
-      sectionColors = [$whitesmoke];
-      navColors = [$whitesmoke];
-      navItems = [$black];
-
-      logoColor = [$logoBlack];
-      navScroll = false;
-      break;
-    case 'single-news.php':
-      gsap.set(".nav", { backgroundColor: $whitesmoke })
-      sectionColors = [$whitesmoke];
-      navColors = [$whitesmoke];
-      navItems = [$black];
-
-      logoColor = [$logoBlack];
       navScroll = false;
       break;
     case 'submit.php':
       gsap.set(".nav", { backgroundColor: $whitesmoke })
-      gsap.set(".search-overlay--desktop__wrapper", { borderColor: $black })
-      gsap.set(".search-overlay--desktop__icon", { filter: $logoWhite })
       sectionColors = [$whitesmoke];
       navColors = [$whitesmoke];
-      navItems = [$black];
-      logoColor = [$logoBlack];
       navScroll = false;
       break;
     case '404.php':
-      // gsap.set(".nav", { backgroundColor: $taupe })
-      sectionColors = [$taupe];
-      navColors = [$taupe];
-      navItems = [$black];
-      logoColor = [$logoBlack];
+      gsap.set(".nav", { backgroundColor: $whitesmoke })
+      sectionColors = [$whitesmoke];
+      navColors = [$whitesmoke];
       navScroll = false;
       break;
+    default:
+      console.log("hello");
+
   }
-
-
-  // const sectionColors = ["#00BFFF", "#FFA07A"]
 
   gsap.registerPlugin(ScrollTrigger)
 
   //apply sectionColors to each .fullscreen element
   gsap.set(".fullscreen", { backgroundColor: gsap.utils.wrap(sectionColors) })
-  // gsap.set(".nav", { backgroundColor: gsap.utils.wrap(sectionColors) })
-
 
   const sections = gsap.utils.toArray(".fullscreen")
 
-
   sections.forEach(function (section, index) {
 
-
-
-    let tl = gsap.timeline({
-      // duration: 1,
-      scrollTrigger: {
-        trigger: section,
-        start: "top 112px",
-        end: "bottom 112px",
-        markers: false,
-        toggleActions: "restart none none reverse"
-      }
-    })
     if (navScroll) {
-      tl.to(".nav", { backgroundColor: navColors[index], immediateRender: false })
-        .to(".nav__items", { color: navItems[index], immediateRender: false }, "<")
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: section,
+          start: "top 112px",
+          end: "bottom 112px",
+          markers: false,
+          immediateRender: false,
+          toggleActions: "restart none none reverse",
+        }
+      })
+        .to(".nav", { backgroundColor: navColors[index] })
+        .to(".nav__items", { color: navItems[index] }, 0)
         .to(".nav__logo__black", {
-          filter: logoColor[index], immediateRender: false
-        }, "<")
+          filter: logoColor[index]
+        }, 0)
+        .to(".search-overlay--desktop__wrapper", {
+          borderColor: searchBorder[index]
+        }, 0)
+        .to(".search-overlay--desktop__icon", {
+          filter: searchIcon[index]
+        }, 0)
+        .to(".nav__button", {
+          backgroundColor: navButton[index], color: navButtonColor[index]
+        }, 0)
+        .to(".plus-nav", {
+          filter: plus[index]
+        }, 0);
     }
-
-    if (navScroll) {
-      tl.to(".search-overlay--desktop__wrapper", {
-        borderColor: searchBorder[index], immediateRender: false
-      }, "<")
-    }
-    if (navScroll) {
-      tl.to(".search-overlay--desktop__icon", {
-        filter: searchIcon[index], immediateRender: false
-      }, "<")
-    }
-    if (navScroll) {
-      tl.to(".nav__button", {
-        backgroundColor: navButton[index], color: navButtonColor[index], immediateRender: false
-      }, "<")
-    }
-    if (navScroll) {
-      tl.to(".plus-nav", {
-        filter: plus[index], immediateRender: false
-      }, "<")
-    }
-
-
   })
 
+
 }
+
+
+
+
 

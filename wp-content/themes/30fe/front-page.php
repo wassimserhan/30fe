@@ -3,53 +3,94 @@
 <main class="main-container">
 
 
+  <section class="home__hero fullscreen">
+    <section id="hero--desktop">
 
+      <section class="max-width home__hero__padding-top">
 
+        <section class="wrapper">
+          <aside class="aside aside-1">
+            <h1 id="banner-text" class="home__banner__headline"> Precision&nbsp;in <br>Investigation, <br>Clarity
+              in <br>Solutions.
+            </h1>
 
+            <h1 class="home__banner__headline--mobile"> Precision&nbsp;in <br>Investigation,
+              <br>Clarity
+              in <br>Solutions.
+            </h1>
 
-  <section id="home__hero" class="home__hero fullscreen">
-    <section class="max-width home__hero__padding-top">
-      <h1 id="banner-text" class="home__banner__headline"> Precision&nbsp;in <br>Investigation, <br>Clarity
-        in <br>Solutions.
-      </h1>
+          </aside>
+          <aside class="aside aside-2">
+            <article class="home__hero__wrapper">
+              <section class="home__hero__container">
+                <p class="home__hero__text">We are a team of investigators, engineers, scientists, and problem solvers.
+                  We
+                  bring clarity to complex scientific problems to help our clients make decisions with confidence. All
+                  our
+                  work is backed by uncompromising investigative forensic reporting.
+                  <br><br>
+                  <strong>We are 30.</strong>
+                </p>
+                <section class="home__hero__buttons">
+                  <a href="<?php echo site_url('/submit-an-assignment')?>" target="_self"><button
+                      class="home__hero__button home__hero__button__arrow">Work with Us</button></a>
+                  <a href="<?php echo site_url('/about')?>"><button
+                      class="home__hero__button home__hero__button--white">Learn
+                      More</button></a>
+                </section>
+                <img class="home__hero__image" src="<?php echo get_template_directory_uri(); ?>/images/banner.gif"
+                  alt="">
+              </section>
+              <section class="home__hero__buttons">
+                &nbsp;
+              </section>
+            </article>
+          </aside>
+        </section>
+      </section>
 
-      <h1 class="home__banner__headline--mobile"> Precision&nbsp;in <br>Investigation,
-        <br>Clarity
-        in <br>Solutions.
-      </h1>
     </section>
 
 
 
-    <section class="max-width home__hero__padding-bottom">
-      <article class="home__hero__wrapper">
-        <section class="home__hero__container">
-          <p class="home__hero__text">We are a team of investigators, engineers, scientists, and problem solvers. We
-            bring clarity to complex scientific problems to help our clients make decisions with confidence. All our
-            work is backed by uncompromising investigative forensic reporting.
+    <section id="hero--mobile">
+
+      <!-- mobile -->
+
+      <section class="max-width home__hero__padding-top">
+        <h1 class="home__banner__headline--mobile"> Precision&nbsp;in <br>Investigation,
+          <br>Clarity
+          in <br>Solutions.
+        </h1>
+      </section>
+
+      <section class="max-width home__hero__padding-bottom">
+
+        <article class="home__hero__wrapper">
+          <section class="home__hero__container">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/banner.gif" alt="">
+          </section>
+          <section class="home__hero__buttons">
+            <a href="<?php echo site_url('/submit-an-assignment')?>" target="_self"><button
+                class="home__hero__button home__hero__button__arrow">Work with Us</button></a>
+            <a href="<?php echo site_url('/about')?>"><button class="home__hero__button home__hero__button--white">Learn
+                More</button></a>
+          </section>
+
+          <p class="home__hero__text--mobile">We are a team of investigators, engineers, scientists and problem solvers.
+            We
+            bring
+            clarity to complex scientific problems to help our clients make decisions with confidence, all backed by
+            uncompromising investigative forensic reporting.
             <br><br>
             <strong>We are 30.</strong>
           </p>
-          <img src="<?php echo get_template_directory_uri(); ?>/images/banner.gif" alt="">
+        </article>
+      </section>
 
-        </section>
 
-        <section class="home__hero__buttons">
-          <a href="<?php echo site_url('/submit-an-assignment')?>" target="_self"><button
-              class="home__hero__button home__hero__button__arrow">Work with Us</button></a>
-          <a href="<?php echo site_url('/about')?>"><button class="home__hero__button home__hero__button--white">Learn
-              More</button></a>
-        </section>
-        <p class="home__hero__text--mobile">We are a team of investigators, engineers, scientists and problem solvers.
-          We
-          bring
-          clarity to complex scientific problems to help our clients make decisions with confidence, all backed by
-          uncompromising investigative forensic reporting.
-          <br><br>
-          <strong>We are 30.</strong>
-        </p>
-      </article>
     </section>
+
   </section>
 
   <section id="accordion-scroll" class="fullscreen">
@@ -112,15 +153,15 @@
       <section id="accordion-mobile">
 
         <?php $k=0;
-        if( have_rows('accordion_items') ): 
-      while( have_rows('accordion_items') ) : the_row();
-      $headline = get_sub_field('headline');
-      $copy = get_sub_field('copy');
-      $img = get_sub_field('image');
-      $image = $img['url'];
-      $alt = $img['alt'];
-      $colors = [ 'whitesmoke-bg', 'blue-bg','green-bg', 'orange-bg', 'taupe-bg','black-bg' ];
-    ?>
+              if( have_rows('accordion_items') ): 
+            while( have_rows('accordion_items') ) : the_row();
+            $headline = get_sub_field('headline');
+            $copy = get_sub_field('copy');
+            $img = get_sub_field('image');
+            $image = $img['url'];
+            $alt = $img['alt'];
+            $colors = [ 'whitesmoke-bg', 'blue-bg','green-bg', 'orange-bg', 'taupe-bg','black-bg' ];
+          ?>
 
 
         <div
@@ -143,15 +184,15 @@
         </div>
 
         <?php
-      endwhile; ?>
+          endwhile; ?>
         <?php endif;
-            ?>
+                ?>
 
       </section>
     </section>
 
   </section>
-  </section>
+
 
 
 
@@ -241,7 +282,7 @@
   </section>
 
 
-  <section class="testimonials">
+  <section class="testimonials fullscreen">
     <section class="max-width max-padding">
       <h2 class="testimonials__headline">Testimonials</h2>
       <section id="slider1" class="splide splide-testimonials" aria-labelledby="carousel-heading">
@@ -276,7 +317,7 @@
 
 
 
-  <section class="insights">
+  <section class="insights fullscreen">
     <section class="max-width max-padding">
 
       <h2 class="insights__headline">Latest Insights</h2>
@@ -305,9 +346,6 @@
 
     </section>
   </section>
-
-
-
 
 </main>
 <?php get_footer(); ?>

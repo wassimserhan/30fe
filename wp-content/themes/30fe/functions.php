@@ -19,9 +19,9 @@ function theme_files() {
      wp_enqueue_script( 'jquery', 'https://code.jquery.com/jquery-3.5.1.slim.min.js', array(), null, 1);
      wp_script_add_data( 'jquery', array( 'integrity', 'crossorigin' ) , array( 'sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=', 'anonymous' ) );
 
-    wp_enqueue_script( 'gsap', '//cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js');
+    wp_enqueue_script( 'gsap', '//cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js');
 
-    wp_enqueue_script( 'gsap-scroll', '//cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js');
+    wp_enqueue_script( 'gsap-scroll', '//cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/ScrollTrigger.min.js');
     
    
     

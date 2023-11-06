@@ -54,7 +54,7 @@ button {
 .main-container {
   width: 100%;
   flex: 1 0 auto;
-  margin-top: 112px;
+  margin-top: 110px;
 
   @include bp(phone) {
     margin-top: 0;
@@ -213,9 +213,15 @@ img {
 
 .max-padding {
   padding: 8rem;
-
   @include bp(laptop) {
     padding: 8rem 1.5rem;
+  }
+
+  &--top {
+    padding: 0 8rem 0;
+    @include bp(laptop) {
+      padding: 0 1.5rem 0;
+    }
   }
 }
 
@@ -247,4 +253,11 @@ hr {
   border: 0;
   border-top: 1px solid $taupe;
   margin: 40px auto;
+}
+
+.mobile-hide {
+  display: none;
+  @include bp(phone) {
+    display: block;
+  }
 }
