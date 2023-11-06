@@ -4798,7 +4798,8 @@ if (true) {
           end: "bottom 112px",
           markers: false,
           immediateRender: false,
-          toggleActions: "restart none none reverse"
+          toggleActions: "restart none none reverse",
+          preventOverlaps: true
         }
       }).to(".nav", {
         backgroundColor: navColors[index]

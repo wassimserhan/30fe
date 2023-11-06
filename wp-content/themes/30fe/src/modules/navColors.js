@@ -251,6 +251,7 @@ if (true) {
           markers: false,
           immediateRender: false,
           toggleActions: "restart none none reverse",
+          preventOverlaps: true
         }
       })
         .to(".nav", { backgroundColor: navColors[index] })
