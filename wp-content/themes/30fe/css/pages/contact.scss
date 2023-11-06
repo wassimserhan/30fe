@@ -180,7 +180,7 @@
   top: 45%;
   background-image: url('/images/maps/green-pin.svg');
   background-repeat: no-repeat;
-  @include bp(phone) {
+  @include bp(tablet) {
     left: 47%;
     top: 42%;
   }
@@ -197,7 +197,7 @@
   background-image: url('/images/maps/taupe-pin.svg');
   background-repeat: no-repeat;
 
-  @include bp(phone) {
+  @include bp(tablet) {
     left: 54%;
     top: 50%;
   }
@@ -213,7 +213,7 @@
   top: 36%;
   background-image: url('/images/maps/orange-pin.svg');
   background-repeat: no-repeat;
-  @include bp(phone) {
+  @include bp(tablet) {
     left: 68%;
     top: 32%;
   }
@@ -229,7 +229,7 @@
   top: 50%;
   background-image: url('/images/maps/blue-pin.svg');
   background-repeat: no-repeat;
-  @include bp(phone) {
+  @include bp(tablet) {
     left: 49%;
     top: 48%;
   }

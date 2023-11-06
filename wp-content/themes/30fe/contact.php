@@ -20,7 +20,7 @@ get_header();
 
 
             <picture id="vancouver" class="map-image">
-              <source media="(max-width:465px)"
+              <source media="(max-width:820px)"
                 srcset="<?php echo get_template_directory_uri(); ?>/images/maps/Vancouver_Mobile.svg">
               <img src="<?php echo get_template_directory_uri(); ?>/images/maps/Vancouver_Desktop.svg"
                 alt="Map of Vancouver">
@@ -28,7 +28,7 @@ get_header();
             </picture>
 
             <picture id="calgary" class="map-image">
-              <source media="(max-width:465px)"
+              <source media="(max-width:820px)"
                 srcset="<?php echo get_template_directory_uri(); ?>/images/maps/Calgary_Mobile.svg">
               <img src="<?php echo get_template_directory_uri(); ?>/images/maps/Calgary_Desktop.svg"
                 alt="Map of Calgary">
@@ -36,7 +36,7 @@ get_header();
             </picture>
 
             <picture id="toronto" class="map-image">
-              <source media="(max-width:465px)"
+              <source media="(max-width:820px)"
                 srcset="<?php echo get_template_directory_uri(); ?>/images/maps/Toronto_Mobile.svg">
               <img src="<?php echo get_template_directory_uri(); ?>/images/maps/Toronto_Desktop.svg"
                 alt="Map of Toronto">
@@ -45,7 +45,7 @@ get_header();
 
 
             <picture id="ottawa" class="map-image">
-              <source media="(max-width:465px)"
+              <source media="(max-width:820px)"
                 srcset="<?php echo get_template_directory_uri(); ?>/images/maps/Ottawa_Mobile.svg">
               <img src="<?php echo get_template_directory_uri(); ?>/images/maps/Ottawa_Desktop.svg" alt="Map of Ottawa">
               <div id="ottawa-pin" class="contact__image__pin"></div>
