@@ -43,9 +43,7 @@
             <p><?php echo $location ?></p>
             <p><?php echo $phone ?></p>
             <p><a href="mailto:<?php echo $email ;?>"><?php echo $email ?></a></p>
-            <?php if($cv) : ?>
-            <a href="<?php echo $cv ?>"><button class="member__details__button">Download CV</button></a>
-            <?php endif ?>
+
 
           </article>
           <h2 class="member__headline"><?php echo $name ?></h2>
@@ -59,6 +57,9 @@
         <hr class="member__line">
         <article class="member__details__bio">
           <p><?php echo $bio ?></p>
+          <?php if($cv) : ?>
+          <a href="<?php echo $cv ?>"><button class="member__details__button">Download CV</button></a>
+          <?php endif ?>
         </article>
         <hr class="member__line">
 

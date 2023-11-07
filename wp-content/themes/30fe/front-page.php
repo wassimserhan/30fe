@@ -24,16 +24,15 @@
             <article class="home__hero__wrapper">
               <section class="home__hero__container">
                 <p class="home__hero__text">We are a team of investigators, engineers, scientists, and problem solvers.
-                  We
-                  bring clarity to complex scientific problems to help our clients make decisions with confidence. All
-                  our
-                  work is backed by uncompromising investigative forensic reporting.
+                  We&nbsp;bring clarity to complex scientific problems to help our clients make decisions with
+                  confidence. All
+                  ourwork is backed by uncompromising investigative forensic reporting.
                   <br><br>
                   <strong>We are 30.</strong>
                 </p>
                 <section class="home__hero__buttons">
                   <a href="<?php echo site_url('/submit-an-assignment')?>" target="_self"><button
-                      class="home__hero__button home__hero__button__arrow">Work with Us</button></a>
+                      class="home__hero__button">Work with Us</button></a>
                   <a href="<?php echo site_url('/about')?>"><button
                       class="home__hero__button home__hero__button--white">Learn
                       More</button></a>
@@ -72,7 +71,7 @@
           </section>
           <section class="home__hero__buttons">
             <a href="<?php echo site_url('/submit-an-assignment')?>" target="_self"><button
-                class="home__hero__button home__hero__button__arrow">Work with Us</button></a>
+                class="home__hero__button">Work with Us</button></a>
             <a href="<?php echo site_url('/about')?>"><button class="home__hero__button home__hero__button--white">Learn
                 More</button></a>
           </section>
