@@ -34,11 +34,6 @@ button {
   padding: 1rem 1.5rem;
   text-transform: uppercase;
   line-height: 150%;
-
-  &:hover {
-    background-color: #f2f1ec;
-    color: $black;
-  }
 }
 
 *:focus {

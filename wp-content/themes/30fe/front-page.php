@@ -318,12 +318,13 @@
 
   <section class="insights fullscreen">
     <section class="max-width max-padding">
-
-      <h2 class="insights__headline">Latest Insights</h2>
       <section class="home__insights__section">
-        <p>Read our latest publications.</p>
+        <h2 class="insights__headline">Latest Insights</h2>
         <a href="<?php echo site_url('/insights')?>"><button class="home__insights__button">View All</button></a>
       </section>
+
+      <p>Read our latest publications.</p>
+
 
       <section class="insights__grid">
 

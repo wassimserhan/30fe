@@ -136,33 +136,13 @@ window.addEventListener("scroll", function () {
 
 
 
-// I'm using "click" but it works with any event
-// document.addEventListener('', event => {
-//   const isClickInside = plusExpertise.contains(event.target)
 
-//   if (!isClickInside) {
-//     expertiseDropdown.classList.remove('nav__dropdown-grid--active');
-//     plusExpertise.classList.remove('plus-nav--active');
-//   }
-// })
 
 expertiseDropdown.addEventListener('mouseleave', function () {
   expertiseDropdown.classList.remove('nav__dropdown-grid--active');
   plusExpertise.classList.remove('plus-nav--active');
 });
 
-
-
-
-
-// document.addEventListener('', event => {
-//   const isClickInside = plusSectors.contains(event.target)
-
-//   if (!isClickInside) {
-//     sectorsDropdown.classList.remove('nav__dropdown-grid--active');
-//     plusSectors.classList.remove('plus-nav--active');
-//   }
-// });
 
 sectorsDropdown.addEventListener('mouseleave', function () {
   sectorsDropdown.classList.remove('nav__dropdown-grid--active');

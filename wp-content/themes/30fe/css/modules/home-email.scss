@@ -71,3 +71,7 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
   padding: 1rem 0 !important;
 }
+
+.contact__form > .with_frm_style .frm_primary_label {
+  color: $whitesmoke !important;
+}
