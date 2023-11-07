@@ -22,7 +22,7 @@
       color: $whitesmoke;
       font-size: 5rem;
       overflow: hidden;
-      letter-spacing: -0.7rem;
+      letter-spacing: 0;
       line-height: 110%;
       @include bp(tablet) {
         display: none;

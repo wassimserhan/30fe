@@ -2900,7 +2900,7 @@ body.admin-bar .search-overlay--desktop {
   color: #f2f1ed;
   font-size: 5rem;
   overflow: hidden;
-  letter-spacing: -0.7rem;
+  letter-spacing: 0;
   line-height: 110%;
 }
 @media (max-width: 820px) {

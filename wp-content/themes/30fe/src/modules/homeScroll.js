@@ -46,7 +46,7 @@ if (scrollText) {
     // heroBG.style.backgroundColor = newBackgroundColor;
 
     scrollText.style.fontSize = `${fontSize}px`;
-    scrollText.style.letterSpacing = newLetterSpacing + 'px';
+    // scrollText.style.letterSpacing = newLetterSpacing + 'px';
 
 
 

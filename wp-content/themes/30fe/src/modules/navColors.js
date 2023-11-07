@@ -51,7 +51,7 @@ if (true) {
       searchIcon = [$logoBlack, $logoWhite, $logoBlack, $logoWhite, $logoWhite, $logoWhite];
       navButton = [$whitesmoke, $black, $whitesmoke, $black, $black, $black];
       navButtonColor = [$black, $whitesmoke, $black, $whitesmoke, $whitesmoke, $whitesmoke];
-      plus = [$logoWhite, $logoBlack, $logoWhite, $logoBlack, $logoWhite];
+      plus = [$logoWhite, $logoBlack, $logoWhite, $logoBlack, $logoBlack, $logoBlack];
       navScroll = true;
       break;
     case 'about.php':

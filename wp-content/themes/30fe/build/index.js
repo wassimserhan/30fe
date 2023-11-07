@@ -4340,7 +4340,7 @@ if (scrollText) {
     // heroBG.style.backgroundColor = newBackgroundColor;
 
     scrollText.style.fontSize = `${fontSize}px`;
-    scrollText.style.letterSpacing = newLetterSpacing + 'px';
+    // scrollText.style.letterSpacing = newLetterSpacing + 'px';
   }
 
   // Add a scroll event listener to call the updateTextSizeOnScroll function
@@ -4508,7 +4508,7 @@ if (true) {
       searchIcon = [$logoBlack, $logoWhite, $logoBlack, $logoWhite, $logoWhite, $logoWhite];
       navButton = [$whitesmoke, $black, $whitesmoke, $black, $black, $black];
       navButtonColor = [$black, $whitesmoke, $black, $whitesmoke, $whitesmoke, $whitesmoke];
-      plus = [$logoWhite, $logoBlack, $logoWhite, $logoBlack, $logoWhite];
+      plus = [$logoWhite, $logoBlack, $logoWhite, $logoBlack, $logoBlack, $logoBlack];
       navScroll = true;
       break;
     case 'about.php':
