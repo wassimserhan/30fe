@@ -48,6 +48,10 @@
   }
 }
 
+.contact-form > .with_frm_style .frm_primary_label {
+  color: $whitesmoke !important;
+}
+
 .email__form > .with_frm_style select {
   background-color: $taupe;
   border: 1px solid $black;
@@ -70,10 +74,6 @@
   display: grid !important;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
   padding: 1rem 0 !important;
-}
-
-.contact__form > .with_frm_style .frm_primary_label {
-  color: $whitesmoke !important;
 }
 
 .frm_style_formidable-style.with_frm_style .form-field {

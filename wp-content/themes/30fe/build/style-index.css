@@ -2382,6 +2382,10 @@ body.admin-bar .search-overlay--desktop {
   color: #1d1c1d;
 }
 
+.contact-form > .with_frm_style .frm_primary_label {
+  color: #f2f1ed !important;
+}
+
 .email__form > .with_frm_style select {
   background-color: #cbbea5;
   border: 1px solid #1d1c1d;
@@ -2404,10 +2408,6 @@ body.admin-bar .search-overlay--desktop {
   display: grid !important;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
   padding: 1rem 0 !important;
-}
-
-.contact__form > .with_frm_style .frm_primary_label {
-  color: #f2f1ed !important;
 }
 
 .frm_style_formidable-style.with_frm_style .form-field {

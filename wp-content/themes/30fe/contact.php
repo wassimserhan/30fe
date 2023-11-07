@@ -107,7 +107,9 @@ get_header();
       <section class="contact__form">
         <section class="max-padding">
           <h3 class="email__headline">Contact an Expert</h3>
-          <?php echo FrmFormsController::get_form_shortcode( array( 'id' => 8 ) ); ?>
+          <section class="contact-form">
+            <?php echo FrmFormsController::get_form_shortcode( array( 'id' => 1 ) ); ?>
+          </section>
         </section>
       </section>
       <section class="contact__details max-padding">
