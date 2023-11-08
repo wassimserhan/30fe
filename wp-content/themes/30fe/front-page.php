@@ -25,8 +25,7 @@
               <section class="home__hero__container">
                 <p class="home__hero__text">We are a team of investigators, engineers, scientists, and problem solvers.
                   We&nbsp;bring clarity to complex scientific problems to help our clients make decisions with
-                  confidence. All
-                  ourwork is backed by uncompromising investigative forensic reporting.
+                  confidence. All our work is backed by uncompromising investigative forensic reporting.
                   <br><br>
                   <strong>We are 30.</strong>
                 </p>
@@ -77,9 +76,8 @@
           </section>
 
           <p class="home__hero__text--mobile">We are a team of investigators, engineers, scientists and problem solvers.
-            We
-            bring
-            clarity to complex scientific problems to help our clients make decisions with confidence, all backed by
+            We bring clarity to complex scientific problems to help our clients make decisions with confidence, all
+            backed by
             uncompromising investigative forensic reporting.
             <br><br>
             <strong>We are 30.</strong>
@@ -240,7 +238,7 @@
         <div class="stats__progress-wrap" style="opacity: 0.9, width: 0;">
           <div class="stats__progress black-bg">
             <div id="stats-4" class="stats__overlay-percent">20+</div>
-            <div id="label-4" class="stats__label stats__label-dark taupe-bg">Court Certified Experts</div>
+            <div id="label-4" class="stats__label stats__label-dark taupe-bg">Court Qualified Experts</div>
           </div>
         </div>
       </div>
@@ -274,7 +272,7 @@
       <section id="statsBox-4" class="mobile-stats__box taupe-bg">
         <section class="mobile-stats__item">
           <h2>20+</h2>
-          <p>Court Certified Experts</p>
+          <p>Court Qualified Experts</p>
         </section>
       </section>
     </section>
