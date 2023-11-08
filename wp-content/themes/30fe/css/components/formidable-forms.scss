@@ -53,7 +53,7 @@
 .frm_opt_container {
   display: grid !important;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
-  padding: 1rem 0 !important;
+  padding: 0 0 1rem !important;
 }
 
 .frm_style_formidable-style.with_frm_style .form-field {
