@@ -81,17 +81,9 @@
   }
 }
 
-// .frm_style_formidable-style.with_frm_style .frm_submit button {
-//   font-size: 0.8em;
-//   background-color: $black;
-//   border: 1px solid $black;
-//   color: $whitesmoke;
-//   padding: 16px 32px;
-//   text-transform: uppercase;
-//   margin: 16px 0;
-//   width: 100%;
-//   border-radius: 0;
-// }
+.frm_style_formidable-style.with_frm_style .frm_submit button {
+  box-shadow: none !important;
+}
 
 .with_frm_style .frm_required {
   color: $orange;
@@ -103,4 +95,16 @@
   font-weight: 400;
   line-height: 150%;
   text-transform: uppercase;
+}
+
+#field_8ds5v2_label {
+  color: #f2f1ed !important;
+}
+
+#field_to2fv2_label {
+  color: #f2f1ed !important;
+}
+
+#field_vcy9a2_label {
+  color: #f2f1ed !important;
 }
