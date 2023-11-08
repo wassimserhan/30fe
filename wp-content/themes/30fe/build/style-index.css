@@ -1189,8 +1189,74 @@ button.splide__arrow:disabled {
   padding: 0.2rem !important;
 }
 
+.frm_style_formidable-style-2 > .with_frm_style .frm_primary_label {
+  color: #f2f1ed !important;
+}
+
+.email__form > .with_frm_style select {
+  background-color: #cbbea5;
+  border: 1px solid #1d1c1d;
+  border-radius: 0;
+  min-height: 44px;
+}
+
+.with_frm_style select {
+  background-color: #f2f1ed;
+  border: 1px solid #cbbea5;
+  border-radius: 0;
+  min-height: 44px;
+}
+
+.with_frm_style .frm_submit {
+  padding: 1rem 0 0 !important;
+}
+
+.frm_opt_container {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+  padding: 1rem 0 !important;
+}
+
+.frm_style_formidable-style.with_frm_style .form-field {
+  margin: 0;
+}
+
+.with_frm_style input[type=text],
+.with_frm_style input[type=email],
+.with_frm_style input[type=tel],
+.with_frm_style textarea {
+  padding: 12px;
+  background-color: transparent;
+  border: 1px solid #cbbea5;
+  border-radius: 0;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  height: initial;
+}
+.with_frm_style input[type=text] ::-moz-placeholder, .with_frm_style input[type=email] ::-moz-placeholder, .with_frm_style input[type=tel] ::-moz-placeholder, .with_frm_style textarea ::-moz-placeholder {
+  color: #1d1c1d;
+}
+.with_frm_style input[type=text] ::placeholder,
+.with_frm_style input[type=email] ::placeholder,
+.with_frm_style input[type=tel] ::placeholder,
+.with_frm_style textarea ::placeholder {
+  color: #1d1c1d;
+}
+
+.with_frm_style .frm_required {
+  color: #ff6f48;
+}
+
 .with_frm_style .frm_primary_label {
-  color: #1d1c1d !important;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  text-transform: uppercase;
 }
 
 .nav {
@@ -2354,114 +2420,6 @@ body.admin-bar .search-overlay--desktop {
   .email__form {
     width: 100%;
   }
-}
-
-.email__form > .with_frm_style input[type=text],
-.email__form > .with_frm_style input[type=email],
-.email__form > .with_frm_style input[type=tel],
-.email__form > .with_frm_style textarea {
-  padding: 12px;
-  background-color: transparent;
-  border: 1px solid #1d1c1d;
-  border-radius: 0;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%;
-  text-transform: uppercase;
-  margin-bottom: 16px;
-  height: initial;
-}
-.email__form > .with_frm_style input[type=text] ::-moz-placeholder, .email__form > .with_frm_style input[type=email] ::-moz-placeholder, .email__form > .with_frm_style input[type=tel] ::-moz-placeholder, .email__form > .with_frm_style textarea ::-moz-placeholder {
-  color: #1d1c1d;
-}
-.email__form > .with_frm_style input[type=text] ::placeholder,
-.email__form > .with_frm_style input[type=email] ::placeholder,
-.email__form > .with_frm_style input[type=tel] ::placeholder,
-.email__form > .with_frm_style textarea ::placeholder {
-  color: #1d1c1d;
-}
-
-.contact-form > .with_frm_style .frm_primary_label {
-  color: #f2f1ed !important;
-}
-
-.email__form > .with_frm_style select {
-  background-color: #cbbea5;
-  border: 1px solid #1d1c1d;
-  border-radius: 0;
-  min-height: 44px;
-}
-
-.with_frm_style select {
-  background-color: #f2f1ed;
-  border: 1px solid #cbbea5;
-  border-radius: 0;
-  min-height: 44px;
-}
-
-.with_frm_style .frm_submit {
-  padding: 1rem 0 0 !important;
-}
-
-.frm_opt_container {
-  display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
-  padding: 1rem 0 !important;
-}
-
-.frm_style_formidable-style.with_frm_style .form-field {
-  margin: 0;
-}
-
-.with_frm_style input[type=text],
-.with_frm_style input[type=email],
-.with_frm_style input[type=tel],
-.with_frm_style textarea {
-  padding: 12px;
-  background-color: transparent;
-  border: 1px solid #cbbea5;
-  border-radius: 0;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%;
-  text-transform: uppercase;
-  margin-bottom: 16px;
-  height: initial;
-}
-.with_frm_style input[type=text] ::-moz-placeholder, .with_frm_style input[type=email] ::-moz-placeholder, .with_frm_style input[type=tel] ::-moz-placeholder, .with_frm_style textarea ::-moz-placeholder {
-  color: #1d1c1d;
-}
-.with_frm_style input[type=text] ::placeholder,
-.with_frm_style input[type=email] ::placeholder,
-.with_frm_style input[type=tel] ::placeholder,
-.with_frm_style textarea ::placeholder {
-  color: #1d1c1d;
-}
-
-.frm_style_formidable-style.with_frm_style .frm_submit button {
-  font-size: 0.8em;
-  background-color: #1d1c1d;
-  border: 1px solid #1d1c1d;
-  color: #f2f1ed;
-  padding: 16px 32px;
-  text-transform: uppercase;
-  margin: 16px 0;
-  width: 100%;
-  border-radius: 0;
-}
-
-.with_frm_style .frm_required {
-  color: #ff6f48;
-}
-
-.with_frm_style .frm_primary_label {
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%;
-  text-transform: uppercase;
 }
 
 .quote {
