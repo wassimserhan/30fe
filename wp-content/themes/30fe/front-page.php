@@ -321,7 +321,7 @@
         <a href="<?php echo site_url('/insights')?>"><button class="home__insights__button">View All</button></a>
       </section>
 
-      <p>Read our latest publications.</p>
+      <p style="padding: 0 0 2rem;">Read our latest publications.</p>
 
 
       <section class="insights__grid">
