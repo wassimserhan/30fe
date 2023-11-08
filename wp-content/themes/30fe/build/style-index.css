@@ -1247,6 +1247,10 @@ button.splide__arrow:disabled {
   color: #1d1c1d;
 }
 
+.frm_style_formidable-style.with_frm_style .frm_submit button {
+  box-shadow: none !important;
+}
+
 .with_frm_style .frm_required {
   color: #ff6f48;
 }
@@ -1257,6 +1261,18 @@ button.splide__arrow:disabled {
   font-weight: 400;
   line-height: 150%;
   text-transform: uppercase;
+}
+
+#field_8ds5v2_label {
+  color: #f2f1ed !important;
+}
+
+#field_to2fv2_label {
+  color: #f2f1ed !important;
+}
+
+#field_vcy9a2_label {
+  color: #f2f1ed !important;
 }
 
 .nav {
