@@ -1201,7 +1201,7 @@ button.splide__arrow:disabled {
 }
 
 .with_frm_style select {
-  background-color: #f2f1ed;
+  background-color: transparent;
   border: 1px solid #cbbea5;
   border-radius: 0;
   min-height: 44px;
@@ -1277,6 +1277,10 @@ button.splide__arrow:disabled {
 
 #field_n0c7f2_label {
   color: #f2f1ed !important;
+}
+
+#field_1zpr {
+  color: #f2f1ed;
 }
 
 .nav {
@@ -4469,6 +4473,7 @@ body.admin-bar .search-overlay--desktop {
   padding: 2rem 0 1rem;
 }
 .contact__details__press p {
+  font-size: 16px;
   color: #f2f1ed;
 }
 .contact__details__press a {
@@ -4476,11 +4481,11 @@ body.admin-bar .search-overlay--desktop {
   color: #f2f1ed;
 }
 .contact__detail li {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 140%; /* 28px */
   letter-spacing: -0.6px;
-  padding-bottom: 32px;
+  padding-bottom: 17px;
 }
 .contact__detail li i {
   padding: 0 32px 0;

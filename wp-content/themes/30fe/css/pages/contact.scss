@@ -131,6 +131,7 @@
     }
 
     &__press p {
+      font-size: 16px;
       color: $whitesmoke;
     }
 
@@ -142,11 +143,11 @@
 
   &__detail {
     & li {
-      font-size: 20px;
+      font-size: 16px;
       font-weight: 500;
       line-height: 140%; /* 28px */
       letter-spacing: -0.6px;
-      padding-bottom: 32px;
+      padding-bottom: 17px;
 
       & i {
         padding: 0 32px 0;

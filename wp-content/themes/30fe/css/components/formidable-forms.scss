@@ -40,7 +40,7 @@
 }
 
 .with_frm_style select {
-  background-color: $whitesmoke;
+  background-color: transparent;
   border: 1px solid $taupe;
   border-radius: 0;
   min-height: 44px;
@@ -112,4 +112,8 @@
 
 #field_n0c7f2_label {
   color: #f2f1ed !important;
+}
+
+#field_1zpr {
+  color: $whitesmoke;
 }
