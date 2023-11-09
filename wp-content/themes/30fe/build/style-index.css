@@ -1280,7 +1280,7 @@ button.splide__arrow:disabled {
 }
 
 #field_1zpr {
-  color: #f2f1ed;
+  color: #f2f1ed !important;
 }
 
 .nav {
