@@ -175,9 +175,8 @@ while( have_rows('positions') ) : the_row();
               <p class="careers__positions__intro">
                 <?php echo $type;?>
               </p>
-              <img class="careers__positions__arrow"
-                src="https://wassims.sg-host.com/wp-content/themes/30fe/images/arrow.svg" alt="arrow" width="20"
-                height="20" tabindex="0">
+              <img class="careers__positions__arrow" src="<?php echo get_template_directory_uri(); ?>/images/arrow.svg"
+                alt="arrow" width="20" height="20" tabindex="0">
             </div>
           </article>
         </a>

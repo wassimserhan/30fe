@@ -45,9 +45,8 @@ global $template;
       <a href="<?php echo site_url('/submit')?>"><button class="nav__button">Submit an Assignment</button></a>
       <section class="nav__search search-trigger js-search-trigger">
 
-        <img class="search-overlay__icon"
-          src="https://wassims.sg-host.com/wp-content/themes/30fe/images/search-icon.svg" width="15" height="15"
-          alt="search icon">
+        <img class="search-overlay__icon" src="<?php echo get_template_directory_uri(); ?>/images/search-icon.svg"
+          width="15" height="15" alt="search icon">
       </section>
     </section>
   </section>
