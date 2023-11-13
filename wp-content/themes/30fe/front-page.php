@@ -318,10 +318,13 @@
     <section class="max-width max-padding">
       <section class="home__insights__section">
         <h2 class="insights__headline">Latest Insights</h2>
-        <a href="<?php echo site_url('/insights')?>"><button class="home__insights__button">View All</button></a>
-      </section>
+        <p class="insights__copy--mobile">Read our latest publications.</p>
 
-      <p style="padding: 0 0 2rem;">Read our latest publications.</p>
+        <a href="<?php echo site_url('/insights')?>"><button class="home__insights__button">View All</button></a>
+
+      </section>
+      <p class="insights__copy">Read our latest publications.</p>
+
 
 
       <section class="insights__grid">
