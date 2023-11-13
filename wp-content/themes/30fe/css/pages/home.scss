@@ -181,7 +181,7 @@
     border: 1px solid $black;
     color: $black;
     @include bp(tablet) {
-      margin-top: 2rem;
+      margin: 2rem 0;
       width: 100%;
     }
 
