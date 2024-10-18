@@ -67,8 +67,8 @@ get_header();
               <h3 class="contact__location__city calgary">Calgary</h3>
               <a href="https://www.google.com/maps/place/700+2+St+SW,+Calgary,+AB+T2P+2W3/@51.0463194,-114.0695824,17z/data=!3m1!4b1!4m5!3m4!1s0x53716ffcfa05cc9b:0x521d670e6bbed796!8m2!3d51.046316!4d-114.0673937"
                 target="_blank">
-                <p>30 Forensic Engineering<br>c/o WeWorkFloor <br>19700 2nd Street SW<br>
-                  Calgary, AB T2P 2W2<br>Office (403) 208-4545</p>
+                <p>700 2nd Street SW<br>19th Floor<br>
+                  Calgary<br> AB T2P 2W2<br>Office (403) 208-4545</p>
               </a>
             </article>
             <article class="contact__location">

@@ -15,32 +15,32 @@
 
 <footer class="footer black-bg">
 
-  <div class="ticker-wrap">
-    <div class="ticker">
-      <span class="scroll-collection-1">
-        <span class="scroll">We are Engineers &ndash; Scientists &ndash; Experts &ndash; Truth Seekers &ndash;
-          Detectives &ndash; Problem Solvers &ndash; Reporters &ndash;</span>
-        <span class="scroll">We are Engineers &ndash; Scientists &ndash; Experts &ndash; Truth Seekers &ndash;
-          Detectives &ndash; Problem Solvers &ndash; Reporters &ndash;</span>
-        <span class="scroll">We are Engineers &ndash; Scientists &ndash; Experts &ndash; Truth Seekers &ndash;
-          Detectives &ndash; Problem Solvers &ndash; Reporters &ndash;</span>
-        <span class="scroll">We are Engineers &ndash; Scientists &ndash; Experts &ndash; Truth Seekers &ndash;
-          Detectives &ndash; Problem Solvers &ndash; Reporters &ndash;</span>
-      </span>
-      <span class="scroll-collection-2">
-        <span class="scroll">We are Engineers &ndash; Scientists &ndash; Experts &ndash; Truth Seekers &ndash;
-          Detectives &ndash; Problem Solvers &ndash; Reporters &ndash;</span>
-        <span class="scroll">We are Engineers &ndash; Scientists &ndash; Experts &ndash; Truth Seekers &ndash;
-          Detectives &ndash; Problem Solvers &ndash; Reporters &ndash;</span>
-        <span class="scroll">We are Engineers &ndash; Scientists &ndash; Experts &ndash; Truth Seekers &ndash;
-          Detectives &ndash; Problem Solvers &ndash; Reporters &ndash;</span>
-        <span class="scroll">We are Engineers &ndash; Scientists &ndash; Experts &ndash; Truth Seekers &ndash;
-          Detectives &ndash; Problem Solvers &ndash; Reporters &ndash;</span>
-      </span>
-    </div>
-    <div>
+    <div class="ticker-wrap">
+        <div class="ticker">
+            <span class="scroll-collection-1">
+                <span class="scroll">We are Engineers &ndash; Scientists &ndash; Experts &ndash; Truth Seekers &ndash;
+                    Detectives &ndash; Problem Solvers &ndash; Reporters &ndash;</span>
+                <span class="scroll">We are Engineers &ndash; Scientists &ndash; Experts &ndash; Truth Seekers &ndash;
+                    Detectives &ndash; Problem Solvers &ndash; Reporters &ndash;</span>
+                <span class="scroll">We are Engineers &ndash; Scientists &ndash; Experts &ndash; Truth Seekers &ndash;
+                    Detectives &ndash; Problem Solvers &ndash; Reporters &ndash;</span>
+                <span class="scroll">We are Engineers &ndash; Scientists &ndash; Experts &ndash; Truth Seekers &ndash;
+                    Detectives &ndash; Problem Solvers &ndash; Reporters &ndash;</span>
+            </span>
+            <span class="scroll-collection-2">
+                <span class="scroll">We are Engineers &ndash; Scientists &ndash; Experts &ndash; Truth Seekers &ndash;
+                    Detectives &ndash; Problem Solvers &ndash; Reporters &ndash;</span>
+                <span class="scroll">We are Engineers &ndash; Scientists &ndash; Experts &ndash; Truth Seekers &ndash;
+                    Detectives &ndash; Problem Solvers &ndash; Reporters &ndash;</span>
+                <span class="scroll">We are Engineers &ndash; Scientists &ndash; Experts &ndash; Truth Seekers &ndash;
+                    Detectives &ndash; Problem Solvers &ndash; Reporters &ndash;</span>
+                <span class="scroll">We are Engineers &ndash; Scientists &ndash; Experts &ndash; Truth Seekers &ndash;
+                    Detectives &ndash; Problem Solvers &ndash; Reporters &ndash;</span>
+            </span>
+        </div>
+        <div>
 
-      <!-- <section class="scroll-section">
+            <!-- <section class="scroll-section">
     <article class="scroll-text scroll-container">
       <p class="scroll">We are Engineers &ndash; Scientists &ndash; Experts &ndash; Truth Seekers &ndash;
         Detectives &ndash; Problem Solvers &ndash; Reporters</p>
@@ -49,22 +49,23 @@
 
 
 
-      <section class="max-width footer__padding">
+            <section class="max-width footer__padding">
 
-        <div class="footer__legal">
-          <p class="footer__copyright">&copy;
-            <span id="copyright">
-              <script>
-              document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
-              </script>
-            </span>
-            &nbsp; 30 Forensic engineering.&nbsp; All Rights Reserved.
-          </p>
+                <div class="footer__legal">
+                    <p class="footer__copyright">&copy;
+                        <span id="copyright">
+                            <script>
+                            document.getElementById('copyright').appendChild(document.createTextNode(new Date()
+                                .getFullYear()))
+                            </script>
+                        </span>
+                        &nbsp; 30 Forensic engineering.&nbsp; All Rights Reserved.
+                    </p>
 
-        </div>
+                </div>
 
 
-      </section>
+            </section>
 
 </footer>
 

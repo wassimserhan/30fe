@@ -4,7 +4,7 @@
 get_header();
 ?>
 
-
+<!-- mobile-->
 
 
 <?php while (have_posts()) {
@@ -13,28 +13,22 @@ get_header();
 } ?>
 
 <main class="main-container">
-  <section class="expertise black-bg">
-    <section class="max-width max-padding full-height">
-      <section class="pill pill-white">
-        <p class="pill__label pill__label-white">Expertise</p>
-      </section>
-      <section class="expertise__intro">
-        <figure class="expertise__figure">
-          <img loading="lazy" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo $alt; ?>"
-            title="<?php echo $title; ?>">
-        </figure>
-        <p class="expertise__copy"><?php the_content() ?></p>
-      </section>
-    </section>
+    <section class="expertise-mobile black-bg">
+        <section class="max-width max-padding full-height">
+            <section class="expertise-mobile__intro">
+                <h2 class="expertise__title">Expertise</h2>
+                <p class="expertise-mobile__copy"><?php the_content() ?></p>
+            </section>
+        </section>
 
 
 
 
 
-    <section class="expertise__list fullscreen">
-      <section class="max-width max-padding">
+        <section class="expertise-mobile__list fullscreen">
+            <section class="max-width max-padding">
 
-        <?php 
+                <?php 
           $customQuery = new WP_Query(array(
           'posts_per_page' => -1,
           'post_type'=> 'Expertise'
@@ -45,31 +39,76 @@ get_header();
           $color = get_field('category_color');
 
         ?>
-        <a href="<?php echo the_permalink() ?>">
-          <article data-color="<?php echo esc_html($color['value']); ?>" class="expertise__list-section">
+                <a href="<?php echo the_permalink() ?>">
+                    <article data-color="<?php echo esc_html($color['value']); ?>"
+                        class="expertise-mobile__list-section">
 
-            <!-- <img src="<?php echo get_template_directory_uri(); ?>/images/image.jpg" alt="image" /> -->
-
-
-
-            <h3 class="expertise__list-item"><?php the_title() ?></h3>
+                        <!-- <img src="<?php echo get_template_directory_uri(); ?>/images/image.jpg" alt="image" /> -->
 
 
-            <img class="expertise__list-item__arrow"
-              src="<?php echo get_template_directory_uri(); ?>/images/white-arrow.svg" width="20" height="20"
-              alt="arrow" tabindex=0>
 
-          </article>
-        </a>
-        <?php endwhile ?>
+                        <h3 class="expertise-mobile__list-item"><?php the_title() ?></h3>
 
-        <?php wp_reset_postdata() ?>
 
-      </section>
+                        <img class="expertise-mobile__list-item__arrow"
+                            src="<?php echo get_template_directory_uri(); ?>/images/white-arrow.svg" width="20"
+                            height="20" alt="arrow" tabindex=0>
+
+                    </article>
+                </a>
+                <?php endwhile ?>
+
+                <?php wp_reset_postdata() ?>
+
+            </section>
+        </section>
+
+        <?php include get_template_directory() . '/modules/email.php'; ?>
     </section>
 
-    <?php include get_template_directory() . '/modules/email.php'; ?>
-  </section>
+
+
+
+
+
+    <!-- //desktop -->
+
+    <?php while (have_posts()) {
+  the_post();
+} ?>
+    <section class="expertise">
+        <section class="max-width max-padding">
+            <section class="vertical-section">
+                <section class="left-column">
+                    <section>
+                        <h2 class="expertise__title">Expertise</h2>
+                        <p class="expertise__copy"><?php the_content() ?></p>
+                    </section>
+                </section>
+                <section class="expertise__list fullscreen right-column">
+                    <?php 
+                        $customQuery = new WP_Query(array(
+                        'posts_per_page' => -1,
+                        'post_type'=> 'Expertise'
+                        ));
+
+                            while ($customQuery->have_posts()): $customQuery->the_post();
+                            $color = get_field('category_color');
+                            ?>
+                    <a href="<?php echo the_permalink() ?>">
+                        <article data-color="<?php echo esc_html($color['value']); ?>"
+                            class="expertise__list-section expertise-hover">
+                            <h3 class="expertise__list-item"><?php the_title() ?></h3>
+                        </article>
+                    </a>
+                    <?php endwhile ?>
+                    <?php wp_reset_postdata() ?>
+                </section>
+            </section>
+        </section>
+        <?php include get_template_directory() . '/modules/email.php'; ?>
+    </section>
+
 </main>
 
 

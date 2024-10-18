@@ -13,7 +13,7 @@ function theme_files() {
     $css_version_number = get_field( 'css_version_number', get_option( 'page_on_front' ) );
 
     wp_enqueue_script( 'theme-js', get_template_directory_uri() . '/build/index.js', array(), $css_version_number, 1);
-    wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+    // wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
   
 
      wp_enqueue_script( 'jquery', 'https://code.jquery.com/jquery-3.5.1.slim.min.js', array(), null, 1);
@@ -22,8 +22,8 @@ function theme_files() {
     wp_enqueue_script( 'gsap', '//cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js');
 
     wp_enqueue_script( 'gsap-scroll', '//cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/ScrollTrigger.min.js');
-    
-   
+
+
     
     wp_enqueue_style( 'theme-styles', get_template_directory_uri() . '/build/style-index.css', array(), $css_version_number );
     wp_enqueue_style('theme_extra_styles', get_theme_file_uri('/build/index.css'));
@@ -420,8 +420,8 @@ function bks_replace_admin_menu_icons_css() {
     ?>
 <style>
 .dashicons-admin-post:before {
-  font-family: "dashicons";
-  content: "\f497" !important;
+    font-family: "dashicons";
+    content: "\f497" !important;
 }
 </style>
 <?php

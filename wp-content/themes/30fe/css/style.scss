@@ -13,6 +13,7 @@
 //----------------------------------*/
 @import 'variables/breakpoints';
 @import 'variables/colors';
+@import 'variables/font';
 
 //----------------------------------*\
 // COMPONENTS
@@ -35,6 +36,7 @@
 @import 'modules/hiring';
 @import 'modules/sector-form';
 @import 'modules/timeline';
+// @import 'modules/new-timeline';
 @import 'modules/expertise-form';
 @import 'modules/home-stats';
 @import 'modules/home-email';

@@ -202,15 +202,36 @@ import './modules/blogSearch';
 import './modules/homeStatsMobile';
 import './modules/homeStats';
 import './modules/accordion';
+import './modules/horizontal-timeline';
 import './modules/navColors';
 import './modules/navColors_2';
 import './modules/navbar';
+
+
+
+
 import Search from './modules/search';
+import Accordion from './modules/mobileAccordion';
 
 
 // classes
 
 const magicalSearch = new Search()
+if (document.querySelector('.accordion-container')) {
+  const mobileAccordion = new Accordion('.accordion-container', {
+    openOnInit: [0],
+    collapse: false
+  })
+}
+
+
+
+
+
+
+
+
+
 
 
 

@@ -3800,13 +3800,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_homeStats__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./modules/homeStats */ "./src/modules/homeStats.js");
 /* harmony import */ var _modules_homeStats__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_modules_homeStats__WEBPACK_IMPORTED_MODULE_15__);
 /* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./modules/accordion */ "./src/modules/accordion.js");
-/* harmony import */ var _modules_navColors__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./modules/navColors */ "./src/modules/navColors.js");
-/* harmony import */ var _modules_navColors__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_modules_navColors__WEBPACK_IMPORTED_MODULE_17__);
-/* harmony import */ var _modules_navColors_2__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./modules/navColors_2 */ "./src/modules/navColors_2.js");
-/* harmony import */ var _modules_navColors_2__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(_modules_navColors_2__WEBPACK_IMPORTED_MODULE_18__);
-/* harmony import */ var _modules_navbar__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./modules/navbar */ "./src/modules/navbar.js");
-/* harmony import */ var _modules_navbar__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(_modules_navbar__WEBPACK_IMPORTED_MODULE_19__);
-/* harmony import */ var _modules_search__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./modules/search */ "./src/modules/search.js");
+/* harmony import */ var _modules_horizontal_timeline__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./modules/horizontal-timeline */ "./src/modules/horizontal-timeline.js");
+/* harmony import */ var _modules_horizontal_timeline__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_modules_horizontal_timeline__WEBPACK_IMPORTED_MODULE_17__);
+/* harmony import */ var _modules_navColors__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./modules/navColors */ "./src/modules/navColors.js");
+/* harmony import */ var _modules_navColors__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(_modules_navColors__WEBPACK_IMPORTED_MODULE_18__);
+/* harmony import */ var _modules_navColors_2__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./modules/navColors_2 */ "./src/modules/navColors_2.js");
+/* harmony import */ var _modules_navColors_2__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(_modules_navColors_2__WEBPACK_IMPORTED_MODULE_19__);
+/* harmony import */ var _modules_navbar__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./modules/navbar */ "./src/modules/navbar.js");
+/* harmony import */ var _modules_navbar__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(_modules_navbar__WEBPACK_IMPORTED_MODULE_20__);
+/* harmony import */ var _modules_search__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./modules/search */ "./src/modules/search.js");
+/* harmony import */ var _modules_mobileAccordion__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./modules/mobileAccordion */ "./src/modules/mobileAccordion.js");
+/* harmony import */ var _modules_mobileAccordion__WEBPACK_IMPORTED_MODULE_22___default = /*#__PURE__*/__webpack_require__.n(_modules_mobileAccordion__WEBPACK_IMPORTED_MODULE_22__);
 
 
 //splide modules
@@ -3979,9 +3983,17 @@ if (careerSlider) {
 
 
 
+
+
 // classes
 
-const magicalSearch = new _modules_search__WEBPACK_IMPORTED_MODULE_20__["default"]();
+const magicalSearch = new _modules_search__WEBPACK_IMPORTED_MODULE_21__["default"]();
+if (document.querySelector('.accordion-container')) {
+  const mobileAccordion = new (_modules_mobileAccordion__WEBPACK_IMPORTED_MODULE_22___default())('.accordion-container', {
+    openOnInit: [0],
+    collapse: false
+  });
+}
 
 /***/ }),
 
@@ -4279,6 +4291,27 @@ accordionsFaq.forEach(accordion => {
   };
 });
 
+//Scroll items
+if (document.querySelector('.left-column')) {
+  document.addEventListener('DOMContentLoaded', function () {
+    const leftColumn = document.querySelector('.left-column');
+    const rightColumn = document.querySelector('.right-column');
+    rightColumn.addEventListener('scroll', function () {
+      const scrollPosition = rightColumn.scrollTop;
+      const maxScrollRight = rightColumn.scrollHeight - rightColumn.clientHeight;
+      const maxScrollLeft = leftColumn.scrollHeight - leftColumn.clientHeight;
+      if (scrollPosition < maxScrollRight) {
+        leftColumn.classList.add('sticky');
+        leftColumn.style.top = '0px';
+      } else {
+        leftColumn.classList.remove('sticky');
+        const remainingScroll = scrollPosition - maxScrollRight;
+        leftColumn.style.top = `${Math.min(remainingScroll, maxScrollLeft)}px`;
+      }
+    });
+  });
+}
+
 /***/ }),
 
 /***/ "./src/modules/expertiseListHover.js":
@@ -4287,22 +4320,28 @@ accordionsFaq.forEach(accordion => {
   \*******************************************/
 /***/ (() => {
 
-const expertiseItems = document.querySelectorAll(".expertise__list-section");
+const expertiseItems = document.querySelectorAll(".expertise-hover");
 const expertiseItemsArray = [...expertiseItems];
-let color = {
-  orange: '#ff6f48',
-  blue: '#0175df',
-  green: '#08cb80'
-};
 expertiseItemsArray.forEach(item => {
   item.addEventListener('mouseover', function () {
-    console.log(`"${item.dataset.color}"`);
-    item.style.color = item.dataset.color;
+    item.style.backgroundColor = item.dataset.color;
   });
 });
 expertiseItemsArray.forEach(item => {
   item.addEventListener('mouseout', function () {
-    item.style.color = "#1d1c1d";
+    item.style.backgroundColor = "transparent";
+  });
+});
+const sectorItems = document.querySelectorAll(".sectors-hover");
+const sectorItemsArray = [...sectorItems];
+sectorItemsArray.forEach(item => {
+  item.addEventListener('mouseover', function () {
+    item.style.backgroundColor = $taupe;
+  });
+});
+sectorItemsArray.forEach(item => {
+  item.addEventListener('mouseout', function () {
+    item.style.backgroundColor = "transparent";
   });
 });
 
@@ -4451,6 +4490,897 @@ window.onload = init();
 
 /***/ }),
 
+/***/ "./src/modules/horizontal-timeline.js":
+/*!********************************************!*\
+  !*** ./src/modules/horizontal-timeline.js ***!
+  \********************************************/
+/***/ (() => {
+
+(function () {
+  // Swipe Content Plugin - by CodyHouse.co
+  // https://codyhouse.co/ds/components/info/swipe-content
+  var SwipeContent = function (element) {
+    this.element = element;
+    this.delta = [false, false];
+    this.dragging = false;
+    this.intervalId = false;
+    initSwipeContent(this);
+  };
+  function initSwipeContent(content) {
+    content.element.addEventListener('mousedown', handleEvent.bind(content));
+    content.element.addEventListener('touchstart', handleEvent.bind(content));
+  }
+  ;
+  function initDragging(content) {
+    //add event listeners
+    content.element.addEventListener('mousemove', handleEvent.bind(content));
+    content.element.addEventListener('touchmove', handleEvent.bind(content));
+    content.element.addEventListener('mouseup', handleEvent.bind(content));
+    content.element.addEventListener('mouseleave', handleEvent.bind(content));
+    content.element.addEventListener('touchend', handleEvent.bind(content));
+  }
+  ;
+  function cancelDragging(content) {
+    //remove event listeners
+    if (content.intervalId) {
+      !window.requestAnimationFrame ? clearInterval(content.intervalId) : window.cancelAnimationFrame(content.intervalId);
+      content.intervalId = false;
+    }
+    content.element.removeEventListener('mousemove', handleEvent.bind(content));
+    content.element.removeEventListener('touchmove', handleEvent.bind(content));
+    content.element.removeEventListener('mouseup', handleEvent.bind(content));
+    content.element.removeEventListener('mouseleave', handleEvent.bind(content));
+    content.element.removeEventListener('touchend', handleEvent.bind(content));
+  }
+  ;
+  function handleEvent(event) {
+    switch (event.type) {
+      case 'mousedown':
+      case 'touchstart':
+        startDrag(this, event);
+        break;
+      case 'mousemove':
+      case 'touchmove':
+        drag(this, event);
+        break;
+      case 'mouseup':
+      case 'mouseleave':
+      case 'touchend':
+        endDrag(this, event);
+        break;
+    }
+  }
+  ;
+  function startDrag(content, event) {
+    content.dragging = true;
+    // listen to drag movements
+    initDragging(content);
+    content.delta = [parseInt(unify(event).clientX), parseInt(unify(event).clientY)];
+    // emit drag start event
+    emitSwipeEvents(content, 'dragStart', content.delta);
+  }
+  ;
+  function endDrag(content, event) {
+    cancelDragging(content);
+    // credits: https://css-tricks.com/simple-swipe-with-vanilla-javascript/
+    var dx = parseInt(unify(event).clientX),
+      dy = parseInt(unify(event).clientY);
+
+    // check if there was a left/right swipe
+    if (content.delta && (content.delta[0] || content.delta[0] === 0)) {
+      var s = Math.sign(dx - content.delta[0]);
+      if (Math.abs(dx - content.delta[0]) > 30) {
+        s < 0 ? emitSwipeEvents(content, 'swipeLeft', [dx, dy]) : emitSwipeEvents(content, 'swipeRight', [dx, dy]);
+      }
+      content.delta[0] = false;
+    }
+    // check if there was a top/bottom swipe
+    if (content.delta && (content.delta[1] || content.delta[1] === 0)) {
+      var y = Math.sign(dy - content.delta[1]);
+      if (Math.abs(dy - content.delta[1]) > 30) {
+        y < 0 ? emitSwipeEvents(content, 'swipeUp', [dx, dy]) : emitSwipeEvents(content, 'swipeDown', [dx, dy]);
+      }
+      content.delta[1] = false;
+    }
+    // emit drag end event
+    emitSwipeEvents(content, 'dragEnd', [dx, dy]);
+    content.dragging = false;
+  }
+  ;
+  function drag(content, event) {
+    if (!content.dragging) return;
+    // emit dragging event with coordinates
+    !window.requestAnimationFrame ? content.intervalId = setTimeout(function () {
+      emitDrag.bind(content, event);
+    }, 250) : content.intervalId = window.requestAnimationFrame(emitDrag.bind(content, event));
+  }
+  ;
+  function emitDrag(event) {
+    emitSwipeEvents(this, 'dragging', [parseInt(unify(event).clientX), parseInt(unify(event).clientY)]);
+  }
+  ;
+  function unify(event) {
+    // unify mouse and touch events
+    return event.changedTouches ? event.changedTouches[0] : event;
+  }
+  ;
+  function emitSwipeEvents(content, eventName, detail) {
+    // emit event with coordinates
+    var event = new CustomEvent(eventName, {
+      detail: {
+        x: detail[0],
+        y: detail[1]
+      }
+    });
+    content.element.dispatchEvent(event);
+  }
+  ;
+  window.SwipeContent = SwipeContent;
+
+  //initialize the SwipeContent objects
+  var swipe = document.getElementsByClassName('js-swipe-content');
+  if (swipe.length > 0) {
+    for (var i = 0; i < swipe.length; i++) {
+      (function (i) {
+        new SwipeContent(swipe[i]);
+      })(i);
+    }
+  }
+})();
+
+// Utility function
+function Util() {}
+;
+
+/*
+  class manipulation functions
+*/
+Util.hasClass = function (el, className) {
+  if (el.classList) return el.classList.contains(className);else return !!el.className.match(new RegExp('(\\s|^)' + className + '(\\s|$)'));
+};
+Util.addClass = function (el, className) {
+  var classList = className.split(' ');
+  if (el.classList) el.classList.add(classList[0]);else if (!Util.hasClass(el, classList[0])) el.className += " " + classList[0];
+  if (classList.length > 1) Util.addClass(el, classList.slice(1).join(' '));
+};
+Util.removeClass = function (el, className) {
+  var classList = className.split(' ');
+  if (el.classList) el.classList.remove(classList[0]);else if (Util.hasClass(el, classList[0])) {
+    var reg = new RegExp('(\\s|^)' + classList[0] + '(\\s|$)');
+    el.className = el.className.replace(reg, ' ');
+  }
+  if (classList.length > 1) Util.removeClass(el, classList.slice(1).join(' '));
+};
+Util.toggleClass = function (el, className, bool) {
+  if (bool) Util.addClass(el, className);else Util.removeClass(el, className);
+};
+Util.setAttributes = function (el, attrs) {
+  for (var key in attrs) {
+    el.setAttribute(key, attrs[key]);
+  }
+};
+
+/*
+  DOM manipulation
+*/
+Util.getChildrenByClassName = function (el, className) {
+  var children = el.children,
+    childrenByClass = [];
+  for (var i = 0; i < el.children.length; i++) {
+    if (Util.hasClass(el.children[i], className)) childrenByClass.push(el.children[i]);
+  }
+  return childrenByClass;
+};
+
+/*
+  Animate height of an element
+*/
+Util.setHeight = function (start, to, element, duration, cb) {
+  var change = to - start,
+    currentTime = null;
+  var animateHeight = function (timestamp) {
+    if (!currentTime) currentTime = timestamp;
+    var progress = timestamp - currentTime;
+    var val = parseInt(progress / duration * change + start);
+    element.setAttribute("style", "height:" + val + "px;");
+    if (progress < duration) {
+      window.requestAnimationFrame(animateHeight);
+    } else {
+      cb();
+    }
+  };
+
+  //set the height of the element before starting animation -> fix bug on Safari
+  element.setAttribute("style", "height:" + start + "px;");
+  window.requestAnimationFrame(animateHeight);
+};
+
+/*
+  Smooth Scroll
+*/
+
+Util.scrollTo = function (final, duration, cb) {
+  var start = window.scrollY || document.documentElement.scrollTop,
+    currentTime = null;
+  var animateScroll = function (timestamp) {
+    if (!currentTime) currentTime = timestamp;
+    var progress = timestamp - currentTime;
+    if (progress > duration) progress = duration;
+    var val = Math.easeInOutQuad(progress, start, final - start, duration);
+    window.scrollTo(0, val);
+    if (progress < duration) {
+      window.requestAnimationFrame(animateScroll);
+    } else {
+      cb && cb();
+    }
+  };
+  window.requestAnimationFrame(animateScroll);
+};
+
+/*
+  Focus utility classes
+*/
+
+//Move focus to an element
+Util.moveFocus = function (element) {
+  if (!element) element = document.getElementsByTagName("body")[0];
+  element.focus();
+  if (document.activeElement !== element) {
+    element.setAttribute('tabindex', '-1');
+    element.focus();
+  }
+};
+
+/*
+  Misc
+*/
+
+Util.getIndexInArray = function (array, el) {
+  return Array.prototype.indexOf.call(array, el);
+};
+Util.cssSupports = function (property, value) {
+  if ('CSS' in window) {
+    return CSS.supports(property, value);
+  } else {
+    var jsProperty = property.replace(/-([a-z])/g, function (g) {
+      return g[1].toUpperCase();
+    });
+    return jsProperty in document.body.style;
+  }
+};
+
+/*
+  Polyfills
+*/
+//Closest() method
+if (!Element.prototype.matches) {
+  Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
+}
+if (!Element.prototype.closest) {
+  Element.prototype.closest = function (s) {
+    var el = this;
+    if (!document.documentElement.contains(el)) return null;
+    do {
+      if (el.matches(s)) return el;
+      el = el.parentElement || el.parentNode;
+    } while (el !== null && el.nodeType === 1);
+    return null;
+  };
+}
+
+//Custom Event() constructor
+if (typeof window.CustomEvent !== "function") {
+  function CustomEvent(event, params) {
+    params = params || {
+      bubbles: false,
+      cancelable: false,
+      detail: undefined
+    };
+    var evt = document.createEvent('CustomEvent');
+    evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);
+    return evt;
+  }
+  CustomEvent.prototype = window.Event.prototype;
+  window.CustomEvent = CustomEvent;
+}
+
+/*
+  Animation curves
+*/
+Math.easeInOutQuad = function (t, b, c, d) {
+  t /= d / 2;
+  if (t < 1) return c / 2 * t * t + b;
+  t--;
+  return -c / 2 * (t * (t - 2) - 1) + b;
+};
+
+/* Main js */
+/* -----------------*/
+(function () {
+  // Horizontal Timeline - by CodyHouse.co
+  var HorizontalTimeline = function (element) {
+    this.element = element;
+    this.datesContainer = this.element.getElementsByClassName('h--timeline-dates')[0];
+    this.line = this.datesContainer.getElementsByClassName('h--timeline-line')[0]; // grey line in the top timeline section
+    this.fillingLine = this.datesContainer.getElementsByClassName('h--timeline-filling-line')[0]; // green filling line in the top timeline section
+    this.date = this.line.getElementsByClassName('h--timeline-date');
+    this.selectedDate = this.line.getElementsByClassName('h--timeline-date--selected')[0];
+    this.dateValues = parseDate(this);
+    this.minLapse = calcMinLapse(this);
+    this.navigation = this.element.getElementsByClassName('h--timeline-navigation');
+    this.contentWrapper = this.element.getElementsByClassName('h--timeline-events')[0];
+    this.content = this.contentWrapper.getElementsByClassName('h--timeline-event');
+    this.eventsMinDistance = 80; // min distance between two consecutive events (in px)
+    this.eventsMaxDistance = 160; // max distance between two consecutive events (in px)
+    this.translate = 0; // this will be used to store the translate value of this.line
+    this.lineLength = 0; //total length of this.line
+
+    // store index of selected and previous selected dates
+    this.oldDateIndex = Util.getIndexInArray(this.date, this.selectedDate);
+    this.newDateIndex = this.oldDateIndex;
+    initTimeline(this);
+    initEvents(this);
+  };
+  function initTimeline(timeline) {
+    // set dates left position
+    var left = 0;
+    for (var i = 0; i < timeline.dateValues.length; i++) {
+      var j = i == 0 ? 0 : i - 1;
+      var distance = daydiff(timeline.dateValues[j], timeline.dateValues[i]),
+        distanceNorm = (Math.round(distance / timeline.minLapse) + 2) * timeline.eventsMinDistance,
+        containerWidth = timeline.datesContainer.offsetWidth,
+        distanceCorrecture = 0;
+      if (distanceNorm < timeline.eventsMinDistance) {
+        distanceNorm = timeline.eventsMaxDistance;
+      } else if (distanceNorm > timeline.eventsMaxDistance) {
+        distanceNorm = timeline.eventsMinDistance;
+      }
+      left = left + distanceNorm;
+      timeline.date[i].setAttribute('style', 'left:' + left + 'px');
+    }
+
+    // set line/filling line dimensions
+    timeline.line.style.width = left + timeline.eventsMinDistance + distanceCorrecture + 'px';
+    timeline.lineLength = left + timeline.eventsMinDistance + distanceCorrecture;
+
+    // add 100px more to line/filling line if container bigger then timeline lineLength
+    if (containerWidth > timeline.lineLength) {
+      timeline.line.style.width = left + timeline.eventsMinDistance + distanceCorrecture + 'px';
+      timeline.lineLength = timeline.lineLength + distanceCorrecture;
+    }
+
+    // reveal timeline
+    Util.addClass(timeline.element, 'h--timeline--loaded');
+    selectNewDate(timeline, timeline.selectedDate);
+    resetTimelinePosition(timeline, 'next');
+  }
+  ;
+  function initEvents(timeline) {
+    var self = timeline;
+    // deaktivate the buttons
+    deaktivateNavigationButtons(self);
+
+    // click on arrow navigation
+    self.navigation[0].addEventListener('click', function (event) {
+      event.preventDefault();
+      translateTimeline(self, 'prev');
+      deaktivateNavigationButtons(self);
+    });
+    self.navigation[1].addEventListener('click', function (event) {
+      event.preventDefault();
+      translateTimeline(self, 'next');
+      deaktivateNavigationButtons(self);
+    });
+
+    //swipe on timeline
+    new SwipeContent(self.datesContainer);
+    self.datesContainer.addEventListener('swipeLeft', function (event) {
+      translateTimeline(self, 'next');
+    });
+    self.datesContainer.addEventListener('swipeRight', function (event) {
+      translateTimeline(self, 'prev');
+    });
+
+    //select a new event
+    for (var i = 0; i < self.date.length; i++) {
+      (function (i) {
+        self.date[i].addEventListener('click', function (event) {
+          event.preventDefault();
+          selectNewDate(self, event.target);
+        });
+        self.content[i].addEventListener('animationend', function (event) {
+          if (i == self.newDateIndex && self.newDateIndex != self.oldDateIndex) resetAnimation(self);
+        });
+      })(i);
+    }
+  }
+  ;
+  function updateFilling(timeline) {
+    // update fillingLine scale value
+    var dateStyle = window.getComputedStyle(timeline.selectedDate, null),
+      left = dateStyle.getPropertyValue("left"),
+      width = dateStyle.getPropertyValue("width");
+    left = Number(left.replace('px', '')) + Number(width.replace('px', '')) / 2;
+    timeline.fillingLine.style.transform = 'scaleX(' + left / timeline.lineLength + ')';
+  }
+  ;
+  function translateTimeline(timeline, direction) {
+    // translate timeline (and date elements)
+    var containerWidth = timeline.datesContainer.offsetWidth;
+    if (direction) {
+      timeline.translate = direction == 'next' ? timeline.translate - containerWidth + timeline.eventsMinDistance : timeline.translate + containerWidth - timeline.eventsMinDistance;
+    }
+    if (0 - timeline.translate > timeline.lineLength - containerWidth) timeline.translate = containerWidth - timeline.lineLength;
+    if (timeline.translate > 0) timeline.translate = 0;
+    timeline.line.style.transform = 'translateX(' + timeline.translate + 'px)';
+    // update the navigation items status (toggle inactive class)
+    timeline.translate == 0 ? Util.addClass(timeline.navigation[0], 'h--timeline-navigation--inactive') : Util.removeClass(timeline.navigation[0], 'h--timeline-navigation--inactive');
+    timeline.translate == containerWidth - timeline.lineLength ? Util.addClass(timeline.navigation[1], 'h--timeline-navigation--inactive') : Util.removeClass(timeline.navigation[1], 'h--timeline-navigation--inactive');
+  }
+  ;
+  function deaktivateNavigationButtons(timeline) {
+    var containerWidth = timeline.datesContainer.offsetWidth;
+    // deaktivate next button if container bigger then timeline lineLength
+    if (containerWidth >= timeline.lineLength) {
+      Util.addClass(timeline.navigation[0], 'h--timeline-navigation--inactive');
+      Util.addClass(timeline.navigation[1], 'h--timeline-navigation--inactive');
+    }
+  }
+  ;
+  function selectNewDate(timeline, target) {
+    // ned date has been selected -> update timeline
+    timeline.newDateIndex = Util.getIndexInArray(timeline.date, target);
+    timeline.oldDateIndex = Util.getIndexInArray(timeline.date, timeline.selectedDate);
+    Util.removeClass(timeline.selectedDate, 'h--timeline-date--selected');
+    Util.addClass(timeline.date[timeline.newDateIndex], 'h--timeline-date--selected');
+    timeline.selectedDate = timeline.date[timeline.newDateIndex];
+    updateOlderEvents(timeline);
+    updateVisibleContent(timeline);
+    updateFilling(timeline);
+  }
+  ;
+  function updateOlderEvents(timeline) {
+    // update older events style
+    for (var i = 0; i < timeline.date.length; i++) {
+      i < timeline.newDateIndex ? Util.addClass(timeline.date[i], 'h--timeline-date--older-event') : Util.removeClass(timeline.date[i], 'h--timeline-date--older-event');
+    }
+  }
+  ;
+  function updateVisibleContent(timeline) {
+    // show content of new selected date
+    if (timeline.newDateIndex > timeline.oldDateIndex) {
+      var classEntering = 'h--timeline-event--selected h--timeline-event--enter-right',
+        classLeaving = 'h--timeline-event--leave-left';
+    } else if (timeline.newDateIndex < timeline.oldDateIndex) {
+      var classEntering = 'h--timeline-event--selected h--timeline-event--enter-left',
+        classLeaving = 'h--timeline-event--leave-right';
+    } else {
+      var classEntering = 'h--timeline-event--selected',
+        classLeaving = '';
+    }
+    Util.addClass(timeline.content[timeline.newDateIndex], classEntering);
+    if (timeline.newDateIndex != timeline.oldDateIndex) {
+      Util.removeClass(timeline.content[timeline.oldDateIndex], 'h--timeline-event--selected');
+      Util.addClass(timeline.content[timeline.oldDateIndex], classLeaving);
+      //timeline.contentWrapper.style.height = timeline.content[timeline.newDateIndex].offsetHeight + 'px';
+    }
+  }
+
+  ;
+  function resetAnimation(timeline) {
+    // reset content classes when entering animation is over
+    //timeline.contentWrapper.style.height = null;
+    Util.removeClass(timeline.content[timeline.newDateIndex], 'h--timeline-event--enter-right h--timeline-event--enter-left');
+    Util.removeClass(timeline.content[timeline.oldDateIndex], 'h--timeline-event--leave-right h--timeline-event--leave-left');
+  }
+  ;
+  function keyNavigateTimeline(timeline, direction) {
+    // navigate the timeline using the keyboard
+    var newIndex = direction == 'next' ? timeline.newDateIndex + 1 : timeline.newDateIndex - 1;
+    if (newIndex < 0 || newIndex >= timeline.date.length) return;
+    selectNewDate(timeline, timeline.date[newIndex]);
+    resetTimelinePosition(timeline, direction);
+  }
+  ;
+  function resetTimelinePosition(timeline, direction) {
+    //translate timeline according to new selected event position
+    var eventStyle = window.getComputedStyle(timeline.selectedDate, null),
+      eventLeft = Number(eventStyle.getPropertyValue('left').replace('px', '')),
+      timelineWidth = timeline.datesContainer.offsetWidth;
+    if (direction == 'next' && eventLeft >= timelineWidth - timeline.translate || direction == 'prev' && eventLeft <= -timeline.translate) {
+      timeline.translate = timelineWidth / 2 - eventLeft;
+      translateTimeline(timeline, false);
+    }
+  }
+  ;
+  function parseDate(timeline) {
+    // get timestamp value for each date
+    var dateArrays = [];
+    for (var i = 0; i < timeline.date.length; i++) {
+      var singleDate = timeline.date[i].getAttribute('data-date'),
+        dateComp = singleDate.split('T');
+      if (dateComp.length > 1) {
+        //both DD/MM/YEAR and time are provided
+        var dayComp = dateComp[0].split('/'),
+          timeComp = dateComp[1].split(':');
+      } else if (dateComp[0].indexOf(':') >= 0) {
+        //only time is provide
+        var dayComp = ["2000", "0", "0"],
+          timeComp = dateComp[0].split(':');
+      } else {
+        //only DD/MM/YEAR
+        var dayComp = dateComp[0].split('/'),
+          timeComp = ["0", "0"];
+      }
+      var newDate = new Date(dayComp[2], dayComp[1] - 1, dayComp[0], timeComp[0], timeComp[1]);
+      dateArrays.push(newDate);
+    }
+    return dateArrays;
+  }
+  ;
+  function calcMinLapse(timeline) {
+    // determine the minimum distance among events
+    var dateDistances = [];
+    for (var i = 1; i < timeline.dateValues.length; i++) {
+      var distance = daydiff(timeline.dateValues[i - 1], timeline.dateValues[i]);
+      if (distance > 0) dateDistances.push(distance);
+    }
+    return dateDistances.length > 0 ? Math.min.apply(null, dateDistances) : 86400000;
+  }
+  ;
+  function daydiff(first, second) {
+    // time distance between events
+    return Math.round(second - first);
+  }
+  ;
+  window.HorizontalTimeline = HorizontalTimeline;
+  var horizontalTimeline = document.getElementsByClassName('js-h--timeline'),
+    horizontalTimelineTimelineArray = [];
+  if (horizontalTimeline.length > 0) {
+    for (var i = 0; i < horizontalTimeline.length; i++) {
+      horizontalTimelineTimelineArray.push(new HorizontalTimeline(horizontalTimeline[i]));
+    }
+    // navigate the timeline when inside the viewport using the keyboard
+    document.addEventListener('keydown', function (event) {
+      if (event.keyCode && event.keyCode == 39 || event.key && event.key.toLowerCase() == 'arrowright') {
+        updateHorizontalTimeline('next'); // move to next event
+      } else if (event.keyCode && event.keyCode == 37 || event.key && event.key.toLowerCase() == 'arrowleft') {
+        updateHorizontalTimeline('prev'); // move to prev event
+      }
+    });
+  }
+
+  ;
+  function updateHorizontalTimeline(direction) {
+    for (var i = 0; i < horizontalTimelineTimelineArray.length; i++) {
+      if (elementInViewport(horizontalTimeline[i])) keyNavigateTimeline(horizontalTimelineTimelineArray[i], direction);
+    }
+  }
+  ;
+
+  /*
+    How to tell if a DOM element is visible in the current viewport?
+    http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+  */
+  function elementInViewport(el) {
+    var top = el.offsetTop;
+    var left = el.offsetLeft;
+    var width = el.offsetWidth;
+    var height = el.offsetHeight;
+    while (el.offsetParent) {
+      el = el.offsetParent;
+      top += el.offsetTop;
+      left += el.offsetLeft;
+    }
+    return top < window.pageYOffset + window.innerHeight && left < window.pageXOffset + window.innerWidth && top + height > window.pageYOffset && left + width > window.pageXOffset;
+  }
+})();
+
+/***/ }),
+
+/***/ "./src/modules/mobileAccordion.js":
+/*!****************************************!*\
+  !*** ./src/modules/mobileAccordion.js ***!
+  \****************************************/
+/***/ ((module) => {
+
+/**
+ * Accordion v3.3.4
+ * Lightweight and accessible accordion module created in pure Javascript
+ * https://github.com/michu2k/Accordion
+ *
+ * Copyright (c) Michał Strumpf
+ * Published under MIT License
+ * 
+ * 
+ */
+
+!function (e) {
+  var t = 0,
+    n = function e(n, s) {
+      var i = this,
+        r = this,
+        o = !1;
+      if (Array.isArray(n)) return !!n.length && n.map(function (t) {
+        return new e(t, s);
+      });
+      var a = {
+        init: function () {
+          this.options = Object.assign({
+            duration: 600,
+            ariaEnabled: !0,
+            collapse: !0,
+            showMultiple: !1,
+            onlyChildNodes: !0,
+            openOnInit: [],
+            elementClass: "ac",
+            triggerClass: "ac-trigger",
+            panelClass: "ac-panel",
+            activeClass: "is-active",
+            beforeOpen: function () {},
+            onOpen: function () {},
+            beforeClose: function () {},
+            onClose: function () {}
+          }, s);
+          var e = "string" == typeof n;
+          this.container = e ? document.querySelector(n) : n, this.createDefinitions(), r.attachEvents();
+        },
+        createDefinitions: function () {
+          var e = this,
+            n = this.options,
+            s = n.elementClass,
+            i = n.openOnInit,
+            r = n.onlyChildNodes ? this.container.childNodes : this.container.querySelectorAll(u(s));
+          this.elements = Array.from(r).filter(function (e) {
+            return e.classList && e.classList.contains(s);
+          }), this.firstElement = this.elements[0], this.lastElement = this.elements[this.elements.length - 1], this.elements.filter(function (e) {
+            return !e.classList.contains("js-enabled");
+          }).forEach(function (n) {
+            n.classList.add("js-enabled"), e.generateIDs(n), e.setARIA(n), e.setTransition(n);
+            var s = e.elements.indexOf(n);
+            t++, i.includes(s) ? e.showElement(n, !1) : e.closeElement(n, !1);
+          });
+        },
+        setTransition: function (e) {
+          var t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+            n = this.options,
+            s = n.duration,
+            i = n.panelClass,
+            r = e.querySelector(u(i)),
+            o = l("transitionDuration");
+          r.style[o] = t ? null : "".concat(s, "ms");
+        },
+        generateIDs: function (e) {
+          var n = this.options,
+            s = n.triggerClass,
+            i = n.panelClass,
+            r = e.querySelector(u(s)),
+            o = e.querySelector(u(i));
+          e.setAttribute("id", e.id || "ac-".concat(t)), r.setAttribute("id", r.id || "ac-trigger-".concat(t)), o.setAttribute("id", o.id || "ac-panel-".concat(t));
+        },
+        removeIDs: function (e) {
+          var t = this.options,
+            n = t.triggerClass,
+            s = t.panelClass,
+            i = e.querySelector(u(n)),
+            r = e.querySelector(u(s));
+          e.id.startsWith("ac-") && e.removeAttribute("id"), i.id.startsWith("ac-") && i.removeAttribute("id"), r.id.startsWith("ac-") && r.removeAttribute("id");
+        },
+        setARIA: function (e) {
+          var t = this.options,
+            n = t.ariaEnabled,
+            s = t.triggerClass,
+            i = t.panelClass;
+          if (n) {
+            var r = e.querySelector(u(s)),
+              o = e.querySelector(u(i));
+            r.setAttribute("role", "button"), r.setAttribute("aria-controls", o.id), r.setAttribute("aria-disabled", !1), r.setAttribute("aria-expanded", !1), o.setAttribute("role", "region"), o.setAttribute("aria-labelledby", r.id);
+          }
+        },
+        updateARIA: function (e, t) {
+          var n = t.ariaExpanded,
+            s = t.ariaDisabled,
+            i = this.options,
+            r = i.ariaEnabled,
+            o = i.triggerClass;
+          if (r) {
+            var a = e.querySelector(u(o));
+            a.setAttribute("aria-expanded", n), a.setAttribute("aria-disabled", s);
+          }
+        },
+        removeARIA: function (e) {
+          var t = this.options,
+            n = t.ariaEnabled,
+            s = t.triggerClass,
+            i = t.panelClass;
+          if (n) {
+            var r = e.querySelector(u(s)),
+              o = e.querySelector(u(i));
+            r.removeAttribute("role"), r.removeAttribute("aria-controls"), r.removeAttribute("aria-disabled"), r.removeAttribute("aria-expanded"), o.removeAttribute("role"), o.removeAttribute("aria-labelledby");
+          }
+        },
+        focus: function (e, t) {
+          e.preventDefault();
+          var n = this.options.triggerClass;
+          t.querySelector(u(n)).focus();
+        },
+        focusFirstElement: function (e) {
+          this.focus(e, this.firstElement), this.currFocusedIdx = 0;
+        },
+        focusLastElement: function (e) {
+          this.focus(e, this.lastElement), this.currFocusedIdx = this.elements.length - 1;
+        },
+        focusNextElement: function (e) {
+          var t = this.currFocusedIdx + 1;
+          if (t > this.elements.length - 1) return this.focusFirstElement(e);
+          this.focus(e, this.elements[t]), this.currFocusedIdx = t;
+        },
+        focusPrevElement: function (e) {
+          var t = this.currFocusedIdx - 1;
+          if (t < 0) return this.focusLastElement(e);
+          this.focus(e, this.elements[t]), this.currFocusedIdx = t;
+        },
+        showElement: function (e) {
+          var t = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+            n = this.options,
+            s = n.panelClass,
+            i = n.activeClass,
+            r = n.collapse,
+            o = n.beforeOpen;
+          t && o(e);
+          var a = e.querySelector(u(s)),
+            l = a.scrollHeight;
+          e.classList.add(i), requestAnimationFrame(function () {
+            requestAnimationFrame(function () {
+              a.style.height = t ? "".concat(l, "px") : "auto";
+            });
+          }), this.updateARIA(e, {
+            ariaExpanded: !0,
+            ariaDisabled: !r
+          });
+        },
+        closeElement: function (e) {
+          var t = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+            n = this.options,
+            s = n.panelClass,
+            i = n.activeClass,
+            r = n.beforeClose,
+            o = e.querySelector(u(s)),
+            a = o.scrollHeight;
+          e.classList.remove(i), t ? (r(e), requestAnimationFrame(function () {
+            o.style.height = "".concat(a, "px"), requestAnimationFrame(function () {
+              o.style.height = 0;
+            });
+          })) : o.style.height = 0, this.updateARIA(e, {
+            ariaExpanded: !1,
+            ariaDisabled: !1
+          });
+        },
+        toggleElement: function (e) {
+          var t = this.options,
+            n = t.activeClass,
+            s = t.collapse,
+            i = e.classList.contains(n);
+          if (!i || s) return i ? this.closeElement(e) : this.showElement(e);
+        },
+        closeElements: function () {
+          var e = this,
+            t = this.options,
+            n = t.activeClass;
+          t.showMultiple || this.elements.forEach(function (t, s) {
+            t.classList.contains(n) && s !== e.currFocusedIdx && e.closeElement(t);
+          });
+        },
+        handleClick: function (e) {
+          var t = this,
+            n = e.currentTarget;
+          this.elements.forEach(function (s, i) {
+            s.contains(n) && "A" !== e.target.nodeName && (t.currFocusedIdx = i, t.closeElements(), t.focus(e, s), t.toggleElement(s));
+          });
+        },
+        handleKeydown: function (e) {
+          switch (e.key) {
+            case "ArrowUp":
+              return this.focusPrevElement(e);
+            case "ArrowDown":
+              return this.focusNextElement(e);
+            case "Home":
+              return this.focusFirstElement(e);
+            case "End":
+              return this.focusLastElement(e);
+            default:
+              return null;
+          }
+        },
+        handleFocus: function (e) {
+          var t = e.currentTarget,
+            n = this.elements.find(function (e) {
+              return e.contains(t);
+            });
+          this.currFocusedIdx = this.elements.indexOf(n);
+        },
+        handleTransitionEnd: function (e) {
+          if (e.stopPropagation(), "height" === e.propertyName) {
+            var t = this.options,
+              n = t.onOpen,
+              s = t.onClose,
+              i = e.currentTarget,
+              r = parseInt(i.style.height),
+              o = this.elements.find(function (e) {
+                return e.contains(i);
+              });
+            r > 0 ? (i.style.height = "auto", n(o)) : s(o);
+          }
+        }
+      };
+      this.attachEvents = function () {
+        if (!o) {
+          var e = a.options,
+            t = e.triggerClass,
+            n = e.panelClass;
+          a.handleClick = a.handleClick.bind(a), a.handleKeydown = a.handleKeydown.bind(a), a.handleFocus = a.handleFocus.bind(a), a.handleTransitionEnd = a.handleTransitionEnd.bind(a), a.elements.forEach(function (e) {
+            var s = e.querySelector(u(t)),
+              i = e.querySelector(u(n));
+            s.addEventListener("click", a.handleClick), s.addEventListener("keydown", a.handleKeydown), s.addEventListener("focus", a.handleFocus), i.addEventListener("webkitTransitionEnd", a.handleTransitionEnd), i.addEventListener("transitionend", a.handleTransitionEnd);
+          }), o = !0;
+        }
+      }, this.detachEvents = function () {
+        if (o) {
+          var e = a.options,
+            t = e.triggerClass,
+            n = e.panelClass;
+          a.elements.forEach(function (e) {
+            var s = e.querySelector(u(t)),
+              i = e.querySelector(u(n));
+            s.removeEventListener("click", a.handleClick), s.removeEventListener("keydown", a.handleKeydown), s.removeEventListener("focus", a.handleFocus), i.removeEventListener("webkitTransitionEnd", a.handleTransitionEnd), i.removeEventListener("transitionend", a.handleTransitionEnd);
+          }), o = !1;
+        }
+      }, this.toggle = function (e) {
+        var t = a.elements[e];
+        t && a.toggleElement(t);
+      }, this.open = function (e) {
+        var t = a.elements[e];
+        t && a.showElement(t);
+      }, this.openAll = function () {
+        var e = a.options,
+          t = e.activeClass,
+          n = e.onOpen;
+        a.elements.forEach(function (e) {
+          e.classList.contains(t) || (a.showElement(e, !1), n(e));
+        });
+      }, this.close = function (e) {
+        var t = a.elements[e];
+        t && a.closeElement(t);
+      }, this.closeAll = function () {
+        var e = a.options,
+          t = e.activeClass,
+          n = e.onClose;
+        a.elements.forEach(function (e) {
+          e.classList.contains(t) && (a.closeElement(e, !1), n(e));
+        });
+      }, this.destroy = function () {
+        i.detachEvents(), i.openAll(), a.elements.forEach(function (e) {
+          a.removeIDs(e), a.removeARIA(e), a.setTransition(e, !0);
+        }), o = !0;
+      }, this.update = function () {
+        a.createDefinitions(), i.detachEvents(), i.attachEvents();
+      };
+      var l = function (e) {
+          return "string" == typeof document.documentElement.style[e] ? e : (e = c(e), e = "webkit".concat(e));
+        },
+        c = function (e) {
+          return e.charAt(0).toUpperCase() + e.slice(1);
+        },
+        u = function (e) {
+          return ".".concat(CSS.escape(e));
+        };
+      a.init();
+    };
+   true && void 0 !== module.exports ? module.exports = n : e.Accordion = n;
+}(window);
+
+/***/ }),
+
 /***/ "./src/modules/navColors.js":
 /*!**********************************!*\
   !*** ./src/modules/navColors.js ***!
@@ -4534,15 +5464,15 @@ if (true) {
       gsap.set(".plus-nav", {
         filter: $logoWhite
       });
-      sectionColors = [$black, $whitesmoke, $whitesmoke, $black, $whitesmoke, $taupe];
-      navColors = [$black, $whitesmoke, $whitesmoke, $black, $whitesmoke, $taupe];
-      navItems = [$whitesmoke, $black, $black, $whitesmoke, $black, $black];
-      logoColor = [$logoWhite, $logoBlack, $logoBlack, $logoWhite, $logoBlack, $logoBlack];
-      searchBorder = [$whitesmoke, $black, $black, $whitesmoke, $black, $black];
-      searchIcon = [$logoBlack, $logoWhite, $logoWhite, $logoBlack, $logoBlack, $logoWhite, $logoBlack];
-      navButton = [$whitesmoke, $black, $black, $whitesmoke, $black, $black];
-      navButtonColor = [$black, $whitesmoke, $whitesmoke, $black, $whitesmoke, $whitesmoke];
-      plus = [$logoWhite, $logoBlack, $logoBlack, $logoWhite, $logoBlack, $logoBlack];
+      sectionColors = [$black, $whitesmoke, $whitesmoke, $whitesmoke, $whitesmoke, $taupe];
+      navColors = [$black, $whitesmoke, $whitesmoke, $whitesmoke, $whitesmoke, $taupe];
+      navItems = [$whitesmoke, $black, $black, $black, $black, $black];
+      logoColor = [$logoWhite, $logoBlack, $logoBlack, $logoBlack, $logoBlack, $logoBlack];
+      searchBorder = [$whitesmoke, $black, $black, $black, $black, $black];
+      searchIcon = [$logoBlack, $logoWhite, $logoWhite, $logoBlack, $logoWhite, $logoWhite, $logoBlack];
+      navButton = [$whitesmoke, $black, $black, $black, $black, $black];
+      navButtonColor = [$black, $whitesmoke, $whitesmoke, $whitesmoke, $whitesmoke, $whitesmoke];
+      plus = [$logoWhite, $logoBlack, $logoBlack, $logoBlack, $logoBlack, $logoBlack];
       navScroll = true;
       break;
     case 'expertise.php':
@@ -4602,14 +5532,14 @@ if (true) {
       gsap.set(".plus-nav", {
         filter: $logoWhite
       });
-      sectionColors = [$black, $taupe];
-      navColors = [$black, $taupe];
-      navItems = [$whitesmoke, $black];
-      logoColor = [$logoWhite, $logoBlack];
-      searchBorder = [$whitesmoke, $black];
-      searchIcon = [$logoBlack, $logoWhite];
-      navButton = [$whitesmoke, $black];
-      navButtonColor = [$black, $whitesmoke];
+      sectionColors = [$whitesmoke, $taupe];
+      navColors = [$whitesmoke, $taupe];
+      navItems = [$black, $black];
+      logoColor = [$logoBlack, $logoBlack];
+      searchBorder = [$black, $black];
+      searchIcon = [$logoWhite, $logoWhite];
+      navButton = [$black, $black];
+      navButtonColor = [$whitesmoke, $whitesmoke];
       plus = [$logoWhite, $logoBlack];
       navScroll = true;
       break;

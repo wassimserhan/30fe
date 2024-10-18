@@ -62,15 +62,15 @@ if (true) {
       gsap.set(".search-overlay--desktop__icon", { filter: $logoBlack })
       gsap.set(".nav__button", { backgroundColor: $whitesmoke, color: $black })
       gsap.set(".plus-nav", { filter: $logoWhite })
-      sectionColors = [$black, $whitesmoke, $whitesmoke, $black, $whitesmoke, $taupe];
-      navColors = [$black, $whitesmoke, $whitesmoke, $black, $whitesmoke, $taupe];
-      navItems = [$whitesmoke, $black, $black, $whitesmoke, $black, $black]
-      logoColor = [$logoWhite, $logoBlack, $logoBlack, $logoWhite, $logoBlack, $logoBlack];
-      searchBorder = [$whitesmoke, $black, $black, $whitesmoke, $black, $black];
-      searchIcon = [$logoBlack, $logoWhite, $logoWhite, $logoBlack, $logoBlack, $logoWhite, $logoBlack];
-      navButton = [$whitesmoke, $black, $black, $whitesmoke, $black, $black];
-      navButtonColor = [$black, $whitesmoke, $whitesmoke, $black, $whitesmoke, $whitesmoke];
-      plus = [$logoWhite, $logoBlack, $logoBlack, $logoWhite, $logoBlack, $logoBlack];
+      sectionColors = [$black, $whitesmoke, $whitesmoke, $whitesmoke, $whitesmoke, $taupe];
+      navColors = [$black, $whitesmoke, $whitesmoke, $whitesmoke, $whitesmoke, $taupe];
+      navItems = [$whitesmoke, $black, $black, $black, $black, $black]
+      logoColor = [$logoWhite, $logoBlack, $logoBlack, $logoBlack, $logoBlack, $logoBlack];
+      searchBorder = [$whitesmoke, $black, $black, $black, $black, $black];
+      searchIcon = [$logoBlack, $logoWhite, $logoWhite, $logoBlack, $logoWhite, $logoWhite, $logoBlack];
+      navButton = [$whitesmoke, $black, $black, $black, $black, $black];
+      navButtonColor = [$black, $whitesmoke, $whitesmoke, $whitesmoke, $whitesmoke, $whitesmoke];
+      plus = [$logoWhite, $logoBlack, $logoBlack, $logoBlack, $logoBlack, $logoBlack];
       navScroll = true;
       break;
 
@@ -102,14 +102,14 @@ if (true) {
       gsap.set(".search-overlay--desktop__icon", { filter: $logoBlack })
       gsap.set(".nav__button", { backgroundColor: $whitesmoke, color: $black })
       gsap.set(".plus-nav", { filter: $logoWhite })
-      sectionColors = [$black, $taupe];
-      navColors = [$black, $taupe];
-      navItems = [$whitesmoke, $black]
-      logoColor = [$logoWhite, $logoBlack];
-      searchBorder = [$whitesmoke, $black];
-      searchIcon = [$logoBlack, $logoWhite];
-      navButton = [$whitesmoke, $black];
-      navButtonColor = [$black, $whitesmoke];
+      sectionColors = [$whitesmoke, $taupe];
+      navColors = [$whitesmoke, $taupe];
+      navItems = [$black, $black]
+      logoColor = [$logoBlack, $logoBlack];
+      searchBorder = [$black, $black];
+      searchIcon = [$logoWhite, $logoWhite];
+      navButton = [$black, $black];
+      navButtonColor = [$whitesmoke, $whitesmoke];
       plus = [$logoWhite, $logoBlack];
       navScroll = true;
       break;

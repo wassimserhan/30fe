@@ -1,27 +1,30 @@
-const expertiseItems = document.querySelectorAll(".expertise__list-section")
+const expertiseItems = document.querySelectorAll(".expertise-hover")
 const expertiseItemsArray = [...expertiseItems];
 
-
-let color = {
-  orange: '#ff6f48',
-  blue: '#0175df',
-  green: '#08cb80'
-}
-
-
 expertiseItemsArray.forEach(item => {
-
-
   item.addEventListener('mouseover', function () {
-
-    console.log(`"${item.dataset.color}"`)
-
-    item.style.color = item.dataset.color;
+    item.style.backgroundColor = item.dataset.color;
   })
 })
 
 expertiseItemsArray.forEach(item => {
   item.addEventListener('mouseout', function () {
-    item.style.color = "#1d1c1d";
+    item.style.backgroundColor = "transparent";
+  })
+})
+
+
+const sectorItems = document.querySelectorAll(".sectors-hover")
+const sectorItemsArray = [...sectorItems];
+
+sectorItemsArray.forEach(item => {
+  item.addEventListener('mouseover', function () {
+    item.style.backgroundColor = $taupe;
+  })
+})
+
+sectorItemsArray.forEach(item => {
+  item.addEventListener('mouseout', function () {
+    item.style.backgroundColor = "transparent";
   })
 })

@@ -1,5 +1,203 @@
 .expertise {
-  font-family: 'Inter', sans-serif;
+  display: block;
+  font-family: "Inter", sans-serif;
+
+  @include bp(phone) {
+    display: none;
+  }
+
+  a {
+    color: $black;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 160%;
+    letter-spacing: -0.25px;
+    color: $black;
+    margin: 0;
+    @include bp(phone) {
+      font-size: 48px;
+      letter-spacing: -2.4px;
+      color: $whitesmoke;
+    }
+  }
+
+  &__copy + p {
+    padding-top: 12px;
+    color: $black;
+  }
+
+  &__figure {
+    & img {
+      max-width: 640px;
+    }
+  }
+
+  &__list {
+    background-color: $whitesmoke;
+
+    &-section {
+      display: flex;
+      justify-content: space-between;
+      place-items: center;
+
+      & h3 {
+        display: inline-block;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: translateX(10px); /* Adjust the value as needed */
+        }
+      }
+    }
+  }
+
+  &__list-item {
+    color: inherit;
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: -0.05rem;
+    padding: 12px 5px;
+
+    @include bp(phone) {
+      font-size: 20px;
+      letter-spacing: -0.6px;
+      padding: 24px 0;
+    }
+
+    &__arrow {
+      max-width: 20px;
+      margin-left: auto;
+      filter: invert(100%);
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__headline {
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 3rem */
+    letter-spacing: -0.15rem;
+    padding-bottom: 24px;
+  }
+
+  &__splide {
+    max-width: 790px;
+  }
+
+  &__form {
+    max-width: 350px;
+
+    &__copy {
+      font-size: 1.25rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 140%;
+      letter-spacing: -0.6px;
+    }
+
+    &__required {
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 150%;
+      text-transform: uppercase;
+      color: $orange;
+      padding: 32px 0 16px;
+    }
+
+    & form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    & input {
+      padding: 12px;
+      background-color: transparent;
+      border: 1px solid $taupe;
+      border-radius: 0;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      text-transform: uppercase;
+      &::placeholder {
+        color: $black;
+        &::after {
+          content: " *";
+          color: red;
+        }
+      }
+
+      &[type="submit"] {
+        font-size: 0.8em;
+        background-color: $black;
+        border: 1px solid $black;
+        color: $whitesmoke;
+        padding: 16px 32px;
+        text-transform: uppercase;
+        margin: 16px 0;
+      }
+    }
+
+    // & label {
+    //   visibility: hidden;
+    // }
+  }
+
+  &__card {
+    border: 1px solid $taupe;
+    padding: 64px;
+    max-width: 356px;
+    height: max-content;
+
+    &__image {
+      margin: auto;
+      width: 228px;
+      height: 226px;
+    }
+
+    &__name {
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 120%;
+      letter-spacing: -1.6px;
+    }
+
+    &__title {
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      text-transform: uppercase;
+      padding: 8px 0 16px;
+    }
+
+    &__email {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+    }
+  }
+}
+
+.expertise-mobile {
+  display: none;
+  font-family: "Inter", sans-serif;
+
+  @include bp(phone) {
+    display: block;
+  }
 
   a {
     color: $black;
@@ -21,11 +219,6 @@
 
   &__copy + p {
     padding-top: 20px;
-    // font-size: 20px;
-    // font-style: normal;
-    // font-weight: 500;
-    // line-height: 140%; /* 28px */
-    // letter-spacing: -0.6px;
     color: $whitesmoke;
   }
 
@@ -37,16 +230,21 @@
 
   &__list {
     background-color: $whitesmoke;
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
 
     &-section {
       display: flex;
       justify-content: space-between;
       place-items: center;
-      // max-width: 1020px;
       border-bottom: 1px solid $black;
+
+      & h3 {
+        display: inline-block;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: translateX(10px); /* Adjust the value as needed */
+        }
+      }
     }
   }
 
@@ -124,12 +322,12 @@
       &::placeholder {
         color: $black;
         &::after {
-          content: ' *';
+          content: " *";
           color: red;
         }
       }
 
-      &[type='submit'] {
+      &[type="submit"] {
         font-size: 0.8em;
         background-color: $black;
         border: 1px solid $black;
@@ -183,66 +381,30 @@
   }
 }
 
-// .frm_style_formidable-style.with_frm_style .form-field {
-//   margin: 0;
-// }
-
-// .with_frm_style input[type='text'],
-// .with_frm_style input[type='email'],
-// .with_frm_style input[type='tel'],
-// .with_frm_style textarea {
-//   padding: 12px;
-//   background-color: transparent;
-//   border: 1px solid $taupe;
-//   border-radius: 0;
-//   font-size: 12px;
-//   font-style: normal;
-//   font-weight: 400;
-//   line-height: 150%;
-//   text-transform: uppercase;
-//   margin-bottom: 16px;
-//   height: initial;
-
-//   ::placeholder {
-//     color: $black;
-//   }
-// }
-
-// .frm_style_formidable-style.with_frm_style .frm_submit button {
-//   font-size: 0.8em;
-//   background-color: $black;
-//   border: 1px solid $black;
-//   color: $whitesmoke;
-//   padding: 16px 32px;
-//   text-transform: uppercase;
-//   margin: 16px 0;
-//   width: 100%;
-//   border-radius: 0;
-// }
-
-// .with_frm_style .frm_required {
-//   color: $orange;
-// }
-
-// .with_frm_style .frm_primary_label {
-//   font-size: 12px;
-//   font-style: normal;
-//   font-weight: 400;
-//   line-height: 150%;
-//   text-transform: uppercase;
-// }
-
-// .hover_img {
-//   height: 100px;
-//   width: 100px;
-//   margin: 100px;
-//   background: red;
-// }
-.hover_img img {
-  height: 200px;
-  width: 200px;
-  display: none;
+.vertical-section {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
 }
-.hover_img:hover img {
-  display: block;
+
+.left-column,
+.right-column {
+  width: 50%;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.left-column {
+  position: relative;
+  padding-right: 64px;
+}
+
+.left-column.sticky {
+  position: sticky;
+  top: 0;
+}
+
+.right-column {
+  overflow-y: scroll;
+  height: 100vh;
 }
