@@ -75,23 +75,10 @@ if (true) {
       break;
 
     case 'expertise.php':
-      gsap.set(".nav__logo__black", { filter: $logoWhite })
-      gsap.set(".nav__items", { color: $whitesmoke })
-      gsap.set(".nav", { backgroundColor: $black })
-      gsap.set(".search-overlay--desktop__wrapper", { borderColor: $whitesmoke })
-      gsap.set(".search-overlay--desktop__icon", { filter: $logoBlack })
-      gsap.set(".nav__button", { backgroundColor: $whitesmoke, color: $black })
-      gsap.set(".plus-nav", { filter: $logoWhite })
+      gsap.set(".nav", { backgroundColor: $whitesmoke })
       sectionColors = [$whitesmoke, $taupe];
       navColors = [$whitesmoke, $taupe];
-      navItems = [$black, $black]
-      logoColor = [$logoBlack, $logoBlack];
-      searchBorder = [$black, $black];
-      searchIcon = [$logoWhite, $logoWhite];
-      navButton = [$black, $black];
-      navButtonColor = [$whitesmoke, $whitesmoke];
-      plus = [$logoWhite, $logoBlack];
-      navScroll = true;
+      navScroll = false;
       break;
 
     case 'sectors.php':
@@ -197,6 +184,13 @@ if (true) {
       navScroll = false;
       break;
 
+    case 'single-news.php':
+      gsap.set(".nav", { backgroundColor: $whitesmoke })
+      sectionColors = [$whitesmoke];
+      navColors = [$whitesmoke];
+      navScroll = false;
+      break;
+
     case 'single-sector.php':
       gsap.set(".nav", { backgroundColor: $whitesmoke })
       sectionColors = [$whitesmoke];
@@ -223,6 +217,36 @@ if (true) {
       navScroll = false;
       break;
     case '404.php':
+      gsap.set(".nav", { backgroundColor: $whitesmoke })
+      sectionColors = [$whitesmoke];
+      navColors = [$whitesmoke];
+      navScroll = false;
+      break;
+    case 'news.php':
+      gsap.set(".nav__logo__black", { filter: $logoWhite })
+      gsap.set(".nav__items", { color: $whitesmoke })
+      gsap.set(".nav", { backgroundColor: $black })
+      gsap.set(".search-overlay--desktop__wrapper", { borderColor: $whitesmoke })
+      gsap.set(".search-overlay--desktop__icon", { filter: $logoBlack })
+      gsap.set(".nav__button", { backgroundColor: $whitesmoke, color: $black })
+      gsap.set(".plus-nav", { filter: $logoWhite });
+      sectionColors = [$black];
+      navColors = [$black];
+      navScroll = false
+      break;
+    case 'taxonomy-news_category.php':
+      gsap.set(".nav__logo__black", { filter: $logoWhite })
+      gsap.set(".nav__items", { color: $whitesmoke })
+      gsap.set(".nav", { backgroundColor: $black })
+      gsap.set(".search-overlay--desktop__wrapper", { borderColor: $whitesmoke })
+      gsap.set(".search-overlay--desktop__icon", { filter: $logoBlack })
+      gsap.set(".nav__button", { backgroundColor: $whitesmoke, color: $black })
+      gsap.set(".plus-nav", { filter: $logoWhite });
+      sectionColors = [$black];
+      navColors = [$black];
+      navScroll = false
+      break;
+    case 'events.php':
       gsap.set(".nav", { backgroundColor: $whitesmoke })
       sectionColors = [$whitesmoke];
       navColors = [$whitesmoke];

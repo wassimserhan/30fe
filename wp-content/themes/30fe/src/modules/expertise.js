@@ -29,25 +29,4 @@ accordionsFaq.forEach(accordion => {
 
 
 
-//Scroll items
-if (document.querySelector('.left-column')) {
-  document.addEventListener('DOMContentLoaded', function () {
-    const leftColumn = document.querySelector('.left-column');
-    const rightColumn = document.querySelector('.right-column');
 
-    rightColumn.addEventListener('scroll', function () {
-      const scrollPosition = rightColumn.scrollTop;
-      const maxScrollRight = rightColumn.scrollHeight - rightColumn.clientHeight;
-      const maxScrollLeft = leftColumn.scrollHeight - leftColumn.clientHeight;
-
-      if (scrollPosition < maxScrollRight) {
-        leftColumn.classList.add('sticky');
-        leftColumn.style.top = '0px';
-      } else {
-        leftColumn.classList.remove('sticky');
-        const remainingScroll = scrollPosition - maxScrollRight;
-        leftColumn.style.top = `${Math.min(remainingScroll, maxScrollLeft)}px`;
-      }
-    });
-  });
-}

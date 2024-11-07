@@ -166,7 +166,7 @@ get_header();
 
     <!-- Form -->
     <section class="expertise-form fullscreen">
-        <section class="max-width max-padding">
+        <section class="max-width max-padding expertise-form--no-padding">
             <section class="expertise-form__wrapper">
                 <section class="expertise-form__form">
                     <h3 class="sector-form__headline">Contact an Expert</h3>

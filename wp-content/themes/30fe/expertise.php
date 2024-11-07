@@ -76,8 +76,8 @@ get_header();
     <?php while (have_posts()) {
   the_post();
 } ?>
-    <section class="expertise">
-        <section class="max-width max-padding">
+    <section class="expertise fullscreen">
+        <section class="max-width expertise__padding">
             <section class="vertical-section">
                 <section class="left-column">
                     <section>
@@ -85,7 +85,7 @@ get_header();
                         <p class="expertise__copy"><?php the_content() ?></p>
                     </section>
                 </section>
-                <section class="expertise__list fullscreen right-column">
+                <section class="expertise__list right-column">
                     <?php 
                         $customQuery = new WP_Query(array(
                         'posts_per_page' => -1,

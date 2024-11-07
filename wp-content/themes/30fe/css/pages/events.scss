@@ -1,0 +1,84 @@
+.events {
+
+  &__intro {
+    background-color: $taupe;
+  }
+  &__card {
+    position: relative;
+    display: flex;
+    background-color: $black;
+    justify-content: space-evenly;
+    align-items: stretch;
+    padding: 0 0 0 8rem;
+    @include bp(laptop) {
+      flex-direction: column;
+    }
+  }
+
+  &__image {
+    margin: 0;
+    width: 50%;
+    position: relative;
+
+    @include bp(laptop) {
+      width: 100%;
+      text-align: center;
+    }
+
+    & img {
+      width: 100%;
+      max-width: 600px;
+      margin: auto;
+    }
+  }
+
+  &__detail {
+    width: 50%;
+    margin: 0 auto;
+    flex: 1;
+    @include bp(laptop) {
+      width: 100%;
+      padding: 60px 1.5rem;
+    }
+
+    &__image {
+      width: 700px;
+      max-width: 100%;
+    }
+  }
+
+  &__detail--left {
+    padding: 64px 0;
+    margin: 0;
+  }
+
+  &__detail--right {
+    padding: 0 16px;
+    margin: 0;
+  }
+
+  &__headline {
+    font-size: 4rem;
+    padding-bottom: 20px;
+    color: $whitesmoke;
+
+    &--right {
+      color: $black;
+    }
+  }
+
+  &__title {
+    padding: 32px 0;
+  }
+
+  &__copy {
+    color: $whitesmoke;
+    // font-size: 20px;
+    // font-weight: 500;
+    // line-height: 140%; /* 28px */
+    // letter-spacing: -0.6px;
+    &--right {
+      color: $black;
+    }
+  }
+}

@@ -9,7 +9,7 @@ body {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 1rem;
   display: flex;
   flex-direction: column;
@@ -22,7 +22,7 @@ body {
 
 button {
   display: block;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   text-decoration: none;
   font-size: 0.75rem;
   border: none;
@@ -218,6 +218,13 @@ img {
       padding: 0 1.5rem 0;
     }
   }
+
+  &--side {
+    padding: 0 8rem;
+    @include bp(laptop) {
+      padding: 0 1.5rem;
+    }
+  }
 }
 
 .center-text {
@@ -233,7 +240,7 @@ img {
 }
 
 //Hide broken image placeholder while lazyloading
-img[src=''],
+img[src=""],
 img:not([src]) {
   visibility: hidden;
 }

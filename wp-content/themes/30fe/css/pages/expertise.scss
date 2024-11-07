@@ -10,6 +10,10 @@
     color: $black;
   }
 
+  &__padding {
+    padding: 3rem 8rem;
+  }
+
   &__title {
     font-size: 1.5rem;
     font-style: normal;
@@ -383,28 +387,20 @@
 
 .vertical-section {
   display: flex;
-  height: 100vh;
-  overflow: hidden;
+  align-items: flex-start;
 }
 
-.left-column,
-.right-column {
-  width: 50%;
-  box-sizing: border-box;
-  overflow-y: auto;
-}
 
 .left-column {
-  position: relative;
+  width: 50%;
   padding-right: 64px;
-}
-
-.left-column.sticky {
   position: sticky;
-  top: 0;
+  top: 150px;
 }
 
 .right-column {
-  overflow-y: scroll;
-  height: 100vh;
+   width: 50%;
+   position: relative;
+
 }
+

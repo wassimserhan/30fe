@@ -186,6 +186,29 @@ if (careerSlider) {
   }).mount();
 }
 
+const slider6 = document.getElementById('slider6');
+
+if (slider6) {
+  new Splide('#slider6', {
+    type: 'loop',
+    perPage: 2,
+    arrows: false,
+    pagination: false,
+    keyboard: true,
+    autoplay: true,
+    rewind: true,
+    breakpoints: {
+      486: {
+        width: '100%',
+        perPage: 1,
+        arrows: true,
+
+      }
+    },
+
+  }).mount();
+}
+
 
 
 
@@ -206,6 +229,7 @@ import './modules/horizontal-timeline';
 import './modules/navColors';
 import './modules/navColors_2';
 import './modules/navbar';
+import './modules/careers';
 
 
 

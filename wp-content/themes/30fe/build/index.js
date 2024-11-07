@@ -3808,9 +3808,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_navColors_2__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(_modules_navColors_2__WEBPACK_IMPORTED_MODULE_19__);
 /* harmony import */ var _modules_navbar__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./modules/navbar */ "./src/modules/navbar.js");
 /* harmony import */ var _modules_navbar__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(_modules_navbar__WEBPACK_IMPORTED_MODULE_20__);
-/* harmony import */ var _modules_search__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./modules/search */ "./src/modules/search.js");
-/* harmony import */ var _modules_mobileAccordion__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./modules/mobileAccordion */ "./src/modules/mobileAccordion.js");
-/* harmony import */ var _modules_mobileAccordion__WEBPACK_IMPORTED_MODULE_22___default = /*#__PURE__*/__webpack_require__.n(_modules_mobileAccordion__WEBPACK_IMPORTED_MODULE_22__);
+/* harmony import */ var _modules_careers__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./modules/careers */ "./src/modules/careers.js");
+/* harmony import */ var _modules_careers__WEBPACK_IMPORTED_MODULE_21___default = /*#__PURE__*/__webpack_require__.n(_modules_careers__WEBPACK_IMPORTED_MODULE_21__);
+/* harmony import */ var _modules_search__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./modules/search */ "./src/modules/search.js");
+/* harmony import */ var _modules_mobileAccordion__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./modules/mobileAccordion */ "./src/modules/mobileAccordion.js");
+/* harmony import */ var _modules_mobileAccordion__WEBPACK_IMPORTED_MODULE_23___default = /*#__PURE__*/__webpack_require__.n(_modules_mobileAccordion__WEBPACK_IMPORTED_MODULE_23__);
 
 
 //splide modules
@@ -3965,6 +3967,25 @@ if (careerSlider) {
     // autoplay: true
   }).mount();
 }
+const slider6 = document.getElementById('slider6');
+if (slider6) {
+  new _splidejs_splide__WEBPACK_IMPORTED_MODULE_5__["default"]('#slider6', {
+    type: 'loop',
+    perPage: 2,
+    arrows: false,
+    pagination: false,
+    keyboard: true,
+    autoplay: true,
+    rewind: true,
+    breakpoints: {
+      486: {
+        width: '100%',
+        perPage: 1,
+        arrows: true
+      }
+    }
+  }).mount();
+}
 
 // modules
 
@@ -3985,11 +4006,12 @@ if (careerSlider) {
 
 
 
+
 // classes
 
-const magicalSearch = new _modules_search__WEBPACK_IMPORTED_MODULE_21__["default"]();
+const magicalSearch = new _modules_search__WEBPACK_IMPORTED_MODULE_22__["default"]();
 if (document.querySelector('.accordion-container')) {
-  const mobileAccordion = new (_modules_mobileAccordion__WEBPACK_IMPORTED_MODULE_22___default())('.accordion-container', {
+  const mobileAccordion = new (_modules_mobileAccordion__WEBPACK_IMPORTED_MODULE_23___default())('.accordion-container', {
     openOnInit: [0],
     collapse: false
   });
@@ -4086,6 +4108,38 @@ function ajaxLoadMore() {
 }
 ;
 ajaxLoadMore();
+function ajaxLoadMoreNews() {
+  const button = document.querySelector('.news__load');
+  if (typeof button != 'undefined' && button != null) {
+    button.addEventListener('click', e => {
+      e.preventDefault();
+      let current_page = document.querySelector('.news__grid').dataset.page;
+      let max_pages = document.querySelector('.news__grid').dataset.max;
+      let params = new URLSearchParams();
+      params.append('action', 'load_more_posts');
+      params.append('current_page', current_page);
+      params.append('max_pages', max_pages);
+      axios__WEBPACK_IMPORTED_MODULE_0__["default"].post('/wp-admin/admin-ajax.php', params).then(res => {
+        let posts_list = document.querySelector('.news__grid');
+        posts_list.innerHTML += res.data.data;
+
+        // let getUrl = window.location;
+        // let baseUrl = getUrl.protocol + "//" + getUrl.host + "/";
+
+        // window.history.pushState('', '', baseUrl + 'news/' + 'page/' + (parseInt(document.querySelector('.news__grid').dataset.page) + 1));
+
+        // console.log(parseInt(document.querySelector('.news__grid').dataset.page));
+
+        document.querySelector('.news__grid').dataset.page++;
+        if (document.querySelector('.news__grid').dataset.page == document.querySelector('.news__grid').dataset.max) {
+          button.parentNode.removeChild(button);
+        }
+      });
+    });
+  }
+}
+;
+ajaxLoadMoreNews();
 
 /***/ }),
 
@@ -4163,6 +4217,28 @@ function categoryFilter() {
     });
   });
 }
+
+/***/ }),
+
+/***/ "./src/modules/careers.js":
+/*!********************************!*\
+  !*** ./src/modules/careers.js ***!
+  \********************************/
+/***/ (() => {
+
+window.addEventListener('scroll', function () {
+  const listItems = document.querySelectorAll('#myList li');
+  listItems.forEach((li, index) => {
+    const liTop = li.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+    console.log(liTop);
+    if (liTop > 250) {
+      li.classList.add('scrolled');
+    } else {
+      li.classList.remove('scrolled');
+    }
+  });
+});
 
 /***/ }),
 
@@ -4290,27 +4366,6 @@ accordionsFaq.forEach(accordion => {
     }
   };
 });
-
-//Scroll items
-if (document.querySelector('.left-column')) {
-  document.addEventListener('DOMContentLoaded', function () {
-    const leftColumn = document.querySelector('.left-column');
-    const rightColumn = document.querySelector('.right-column');
-    rightColumn.addEventListener('scroll', function () {
-      const scrollPosition = rightColumn.scrollTop;
-      const maxScrollRight = rightColumn.scrollHeight - rightColumn.clientHeight;
-      const maxScrollLeft = leftColumn.scrollHeight - leftColumn.clientHeight;
-      if (scrollPosition < maxScrollRight) {
-        leftColumn.classList.add('sticky');
-        leftColumn.style.top = '0px';
-      } else {
-        leftColumn.classList.remove('sticky');
-        const remainingScroll = scrollPosition - maxScrollRight;
-        leftColumn.style.top = `${Math.min(remainingScroll, maxScrollLeft)}px`;
-      }
-    });
-  });
-}
 
 /***/ }),
 
@@ -5476,38 +5531,12 @@ if (true) {
       navScroll = true;
       break;
     case 'expertise.php':
-      gsap.set(".nav__logo__black", {
-        filter: $logoWhite
-      });
-      gsap.set(".nav__items", {
-        color: $whitesmoke
-      });
       gsap.set(".nav", {
-        backgroundColor: $black
-      });
-      gsap.set(".search-overlay--desktop__wrapper", {
-        borderColor: $whitesmoke
-      });
-      gsap.set(".search-overlay--desktop__icon", {
-        filter: $logoBlack
-      });
-      gsap.set(".nav__button", {
-        backgroundColor: $whitesmoke,
-        color: $black
-      });
-      gsap.set(".plus-nav", {
-        filter: $logoWhite
+        backgroundColor: $whitesmoke
       });
       sectionColors = [$whitesmoke, $taupe];
       navColors = [$whitesmoke, $taupe];
-      navItems = [$black, $black];
-      logoColor = [$logoBlack, $logoBlack];
-      searchBorder = [$black, $black];
-      searchIcon = [$logoWhite, $logoWhite];
-      navButton = [$black, $black];
-      navButtonColor = [$whitesmoke, $whitesmoke];
-      plus = [$logoWhite, $logoBlack];
-      navScroll = true;
+      navScroll = false;
       break;
     case 'sectors.php':
       gsap.set(".nav__logo__black", {
@@ -5668,6 +5697,14 @@ if (true) {
       navColors = [$whitesmoke];
       navScroll = false;
       break;
+    case 'single-news.php':
+      gsap.set(".nav", {
+        backgroundColor: $whitesmoke
+      });
+      sectionColors = [$whitesmoke];
+      navColors = [$whitesmoke];
+      navScroll = false;
+      break;
     case 'single-sector.php':
       gsap.set(".nav", {
         backgroundColor: $whitesmoke
@@ -5702,6 +5739,68 @@ if (true) {
       navScroll = false;
       break;
     case '404.php':
+      gsap.set(".nav", {
+        backgroundColor: $whitesmoke
+      });
+      sectionColors = [$whitesmoke];
+      navColors = [$whitesmoke];
+      navScroll = false;
+      break;
+    case 'news.php':
+      gsap.set(".nav__logo__black", {
+        filter: $logoWhite
+      });
+      gsap.set(".nav__items", {
+        color: $whitesmoke
+      });
+      gsap.set(".nav", {
+        backgroundColor: $black
+      });
+      gsap.set(".search-overlay--desktop__wrapper", {
+        borderColor: $whitesmoke
+      });
+      gsap.set(".search-overlay--desktop__icon", {
+        filter: $logoBlack
+      });
+      gsap.set(".nav__button", {
+        backgroundColor: $whitesmoke,
+        color: $black
+      });
+      gsap.set(".plus-nav", {
+        filter: $logoWhite
+      });
+      sectionColors = [$black];
+      navColors = [$black];
+      navScroll = false;
+      break;
+    case 'taxonomy-news_category.php':
+      gsap.set(".nav__logo__black", {
+        filter: $logoWhite
+      });
+      gsap.set(".nav__items", {
+        color: $whitesmoke
+      });
+      gsap.set(".nav", {
+        backgroundColor: $black
+      });
+      gsap.set(".search-overlay--desktop__wrapper", {
+        borderColor: $whitesmoke
+      });
+      gsap.set(".search-overlay--desktop__icon", {
+        filter: $logoBlack
+      });
+      gsap.set(".nav__button", {
+        backgroundColor: $whitesmoke,
+        color: $black
+      });
+      gsap.set(".plus-nav", {
+        filter: $logoWhite
+      });
+      sectionColors = [$black];
+      navColors = [$black];
+      navScroll = false;
+      break;
+    case 'events.php':
       gsap.set(".nav", {
         backgroundColor: $whitesmoke
       });

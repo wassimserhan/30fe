@@ -2,7 +2,6 @@
 .splide-form {
   width: 100%;
   max-width: 375px;
-  width: 100%;
   overflow: hidden;
   background-color: $taupe;
   padding-right: 0;
@@ -112,6 +111,11 @@
   }
 }
 
+.splide-careers-banners {
+  // padding: 0 !important;
+  background-color: $black;
+}
+
 .splide-careers {
   position: relative !important;
   padding: 0 !important;
@@ -188,7 +192,7 @@
 }
 
 .splide__arrow:before {
-  content: ' ';
+  content: " ";
   position: absolute;
   top: 19px;
   right: -2px;
@@ -199,7 +203,10 @@
   border-radius: 50%;
   // background: #000;
   border: 1px solid $black;
-  transition: opacity 0.2s, top 0.2s, right 0.2s;
+  transition:
+    opacity 0.2s,
+    top 0.2s,
+    right 0.2s;
 }
 
 .splide__pagination__page.is-active {

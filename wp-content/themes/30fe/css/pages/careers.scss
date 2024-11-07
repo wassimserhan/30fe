@@ -1,5 +1,5 @@
 .careers {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 
   &__arrow {
     max-width: 20px;
@@ -8,203 +8,42 @@
   }
 
   &__intro {
-    &__headline {
-      max-width: 800px;
+    &__wrapper {
+      max-width: 600px;
       width: 100%;
+      margin: auto;
+      padding: 0 4rem 4rem;
+    }
+    &__headline {
       font-size: 24px;
       font-style: normal;
       font-weight: 700;
       line-height: 120%; /* 28.8px */
       letter-spacing: -0.2px;
       color: $whitesmoke;
-      padding-bottom: 40px;
     }
 
     &__button {
       background-color: $whitesmoke;
       padding: 12px 24px;
-      // text-transform: capitalize;
+      width: 100%;
       color: $black;
+      margin: 48px 0 0;
     }
   }
 
-  &__hero {
-    &__padding {
-      padding: 8rem;
-      @include bp(tablet) {
-        padding: 4rem 1.5rem 7rem;
-      }
-    }
-
-    &__block {
-      position: relative;
-    }
-    &__headline {
-      color: $whitesmoke;
-      text-align: center;
-      font-size: 128px;
-      font-weight: 700;
-      line-height: 100%; /* 128px */
-      letter-spacing: -6.4px;
-      z-index: 5;
-      position: relative;
-      @include bp(tablet) {
-        font-size: 3.75rem;
-        line-height: 120%;
-        letter-spacing: -0.12rem;
-      }
-    }
-
-    &__box {
-      width: 100px;
-      height: 100px;
-      position: absolute;
-      @include bp(tablet) {
-        display: none;
-      }
-
-      &--orange {
-        top: -90%;
-        left: 9%;
-        z-index: 2;
-        @include bp(laptop) {
-          left: 1%;
-        }
-      }
-
-      &--taupe {
-        top: 150%;
-        right: 10%;
-        z-index: 2;
-        @include bp(laptop) {
-          right: 4%;
-        }
-      }
-
-      &--blue {
-        top: 73%;
-        right: 30%;
-        z-index: 1;
-        width: 75px;
-        height: 75px;
-        @include bp(laptop) {
-          display: none;
-        }
-      }
-
-      &--green {
-        top: -50%;
-        right: 40%;
-        z-index: 1;
-        @include bp(laptop) {
-          top: -60%;
-        }
-      }
-    }
-
-    &__images {
-      position: absolute;
-      @include bp(tablet) {
-        width: 200px !important;
-      }
-
-      @include bp(phone) {
-        width: 75px !important;
-      }
-
-      &--one {
-        top: -120%;
-        right: 22%;
-        width: 240px;
-        z-index: 2;
-
-        @include bp(laptop) {
-          top: -130%;
-          right: 10%;
-        }
-
-        @include bp(tablet) {
-          top: -149%;
-          right: 8%;
-        }
-
-        @include bp(phone) {
-          top: -149%;
-          right: 8%;
-          width: 170px !important;
-        }
-      }
-
-      &--two {
-        top: 83%;
-        right: 50%;
-        width: 275px;
-        @include bp(laptop) {
-          right: 43%;
-        }
-
-        @include bp(tablet) {
-          right: 50%;
-          top: 195%;
-        }
-
-        @include bp(phone) {
-          right: 50%;
-          top: 195%;
-          width: 150px !important;
-        }
-      }
-
-      &--three {
-        width: 175px;
-        top: 61%;
-        right: 0%;
-        z-index: 1;
-
-        @include bp(laptop) {
-          right: -17%;
-        }
-
-        @include bp(tablet) {
-          right: 0%;
-        }
-        @include bp(phone) {
-          right: 0%;
-          width: 125px !important;
-        }
-      }
-
-      &--four {
-        width: 175px;
-        top: -40%;
-        left: 0%;
-        z-index: 1;
-        @include bp(laptop) {
-          left: -18%;
-        }
-
-        @include bp(tablet) {
-          left: 0%;
-          width: 115px !important;
-        }
-        @include bp(phone) {
-          left: 0%;
-          width: 115px !important;
-        }
-      }
-    }
+  &__banners {
+    width: 500px;
+    height: 300px;
   }
 
   &__headline {
-    font-size: 64px;
+    font-size: 2.45em;
     font-weight: 700;
-    line-height: 100%; /* 72px */
-    letter-spacing: -3.6px;
+    line-height: 120%; /* 72px */
+    letter-spacing: 0rem;
     padding-bottom: 32px;
-
-    &--orange {
-      color: $orange;
-    }
+    color: $whitesmoke;
 
     &--blue {
       color: $blue;
@@ -232,18 +71,235 @@
   }
 
   &__list {
-    color: $whitesmoke;
     list-style: none;
-    margin-left: 15px;
+    text-align: center;
 
     & li {
       padding-bottom: 10px;
     }
 
     & p {
-      color: $whitesmoke;
-      display: inline;
+      color: rgba(242, 241, 237, 0.2);
+      font-size: 5rem;
+      font-weight: 700;
+      line-height: 120%;
+      letter-spacing: 0;
+      @include bp(phone) {
+        font-size: 1.75rem;
+      }
     }
+  }
+
+  &__culture {
+    &__card {
+      position: relative;
+      display: flex;
+      color: $black;
+      flex-direction: row-reverse;
+      justify-content: space-evenly;
+      @include bp(laptop) {
+        flex-direction: column;
+        flex-direction: column-reverse;
+      }
+    }
+
+    &__image {
+      margin: 0;
+      width: 50%;
+      position: relative;
+
+      @include bp(laptop) {
+        width: 100%;
+        text-align: center;
+      }
+
+      & img {
+        width: 100%;
+        max-width: 600px;
+        margin: auto;
+      }
+    }
+
+    &__detail {
+      align-self: center;
+      width: 50%;
+      margin: 0 auto;
+      padding: 60px;
+      @include bp(laptop) {
+        width: 100%;
+        padding: 60px 1.5rem;
+      }
+    }
+
+    &__detail--left {
+      margin: 0;
+    }
+
+    &__headline {
+      font-size: 2.45em;
+      font-weight: 700;
+      line-height: 120%; /* 72px */
+      letter-spacing: 0rem;
+      padding-bottom: 32px;
+      color: $whitesmoke;
+    }
+
+    &__copy {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 140%; /* 28px */
+      letter-spacing: -0.6px;
+      color: $whitesmoke;
+    }
+  }
+}
+
+.careers__vision--desktop {
+   @include bp(phone) {
+    display: none;
+  }
+}
+
+.careers__vision--mobile {
+    display: none;
+   @include bp(phone) {
+    display: block;
+  }
+}
+
+.careers__vision__padding {
+  padding: 8rem 0 8rem 8rem;
+  @include bp(laptop) {
+    padding: 8rem 1.5rem;
+  }
+}
+
+.career-values__container {
+  position: relative;
+  height: 100vh;
+}
+
+.careers-values__card {
+  position: absolute;
+  border: 1px solid #f2f1ed;
+  border-radius: 0% !important;
+  background-color: #1d1c1d;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 0 10px 0 0 !important;
+  padding: 32px;
+  min-height: 290px;
+  width: 320px !important;
+}
+
+#value-1 {
+  top: 0;
+  z-index: 5;
+
+  &:hover {
+    z-index: 8 !important;
+    background-color: $blue;
+  }
+
+  &:hover > .careers__slide__card__number {
+    color: $whitesmoke;
+  }
+}
+
+#value-2 {
+  top: 200px;
+  left: 100px;
+  z-index: 6;
+
+  &:hover {
+    z-index: 8 !important;
+    background-color: $orange;
+  }
+
+  &:hover > .careers__slide__card__number {
+    color: $whitesmoke;
+  }
+
+  & > .careers__slide__card__number {
+    color: $orange;
+  }
+}
+
+#value-3 {
+  top: 100px;
+  left: 350px;
+  z-index: 7;
+
+  &:hover {
+    z-index: 8 !important;
+  }
+}
+
+#value-4 {
+  top: 375px;
+  left: 300px;
+  z-index: 7;
+
+  &:hover {
+    z-index: 8 !important;
+    background-color: $taupe;
+  }
+
+  &:hover > .careers__slide__card__number {
+    color: $whitesmoke;
+  }
+
+  & > .careers__slide__card__number {
+    color: $taupe;
+  }
+}
+
+#value-5 {
+  top: 150px;
+  left: 550px;
+  z-index: 5;
+
+  &:hover {
+    z-index: 8 !important;
+    background-color: $taupe;
+  }
+
+  &:hover > .careers__slide__card__number {
+    color: $whitesmoke;
+  }
+
+  & > .careers__slide__card__number {
+    color: $taupe;
+  }
+}
+
+#value-6 {
+  top: 0px;
+  left: 600px;
+  z-index: 5;
+
+  &:hover {
+    z-index: 0;
+  }
+}
+
+#value-7 {
+  top: 450px;
+  left: 500px;
+  z-index: 8;
+
+  &:hover {
+    z-index: 8 !important;
+    background-color: $green;
+  }
+
+  &:hover > .careers__slide__card__number {
+    color: $whitesmoke;
+  }
+
+  & > .careers__slide__card__number {
+    color: $green;
   }
 }
 
@@ -355,9 +411,19 @@
   }
 }
 
-.careers__vision__padding {
-  padding: 8rem 0 8rem 8rem;
-  @include bp(laptop) {
-    padding: 8rem 1.5rem;
-  }
+
+
+// Benefits Scroll
+
+li {
+  color: $whitesmoke;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0;
+  transition: color 0.3s ease;
+}
+
+li.scrolled {
+  color: rgba(242, 241, 237, 0.2);
 }

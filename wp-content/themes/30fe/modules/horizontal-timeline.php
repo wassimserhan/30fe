@@ -14,10 +14,10 @@ while( have_rows('timeline') ) : the_row();
                       <li class="h--timeline-event h--timeline-event--selected text-component">
                           <div class="event-wrapper">
                               <div class="h--timeline-event-content container">
-                                  <h2 class="h--timeline-event-title">Horizontal Timeline</h2>
+                                  <h2 class="h--timeline-event-title">Timeline</h2>
 
                                   <p class="h--timeline-event-description">
-                                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                      Established in Toronto, Ontario, Canada.
                                   </p>
                                   <p class="h--timeline-event-date">2002</p>
                               </div>
@@ -49,7 +49,7 @@ while( have_rows('timeline') ) : the_row();
                                   </p>
                                   <p class="h--timeline-event-date"><?php echo $year ?></p>
                               </div>
-                              <figure class="about__whatis__image">
+                              <figure class="h__timeline__image">
                                   <img loading="lazy" src="<?php echo $image ?>" alt="<?php echo $alt; ?>"
                                       title="<?php echo $alt; ?>">
                               </figure>
@@ -69,7 +69,7 @@ while( have_rows('timeline') ) : the_row();
                       <div class="h--timeline-line">
                           <ol>
                               <li><a href="#0" data-date="16/01/2001"
-                                      class="h--timeline-date h--timeline-date--selected">2001</a>
+                                      class="h--timeline-date h--timeline-date--selected">2002</a>
                               </li>
                               <?php 
                                 if( have_rows('milestone') ): 

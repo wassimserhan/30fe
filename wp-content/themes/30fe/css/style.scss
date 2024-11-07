@@ -1,65 +1,66 @@
 //----------------------------------*\
 // NORMALIZE
 //----------------------------------*/
-@import 'vendor/normalize.scss';
+@import "vendor/normalize.scss";
 
 //----------------------------------*\
 // MIXINS
 //----------------------------------*/
-@import 'variables/mixins';
+@import "variables/mixins";
 
 //----------------------------------*\
 // GLOBALS
 //----------------------------------*/
-@import 'variables/breakpoints';
-@import 'variables/colors';
-@import 'variables/font';
+@import "variables/breakpoints";
+@import "variables/colors";
+@import "variables/font";
 
 //----------------------------------*\
 // COMPONENTS
 //----------------------------------*/
-@import 'components/common';
-@import 'components/animation';
-@import 'components/pill';
-@import 'components/splide';
-@import 'components/team-card';
-@import 'components/accordion-arrow';
-@import 'components/scroll-text-animation';
-@import 'components/formidable-forms';
+@import "components/common";
+@import "components/animation";
+@import "components/pill";
+@import "components/splide";
+@import "components/team-card";
+@import "components/accordion-arrow";
+@import "components/scroll-text-animation";
+@import "components/formidable-forms";
 
 //----------------------------------*\
 // MODULES
 //----------------------------------*/
-@import 'modules/navbar';
-@import 'modules/search';
-@import 'modules/search-desktop';
-@import 'modules/hiring';
-@import 'modules/sector-form';
-@import 'modules/timeline';
+@import "modules/navbar";
+@import "modules/search";
+@import "modules/search-desktop";
+@import "modules/hiring";
+@import "modules/sector-form";
+@import "modules/timeline";
 // @import 'modules/new-timeline';
-@import 'modules/expertise-form';
-@import 'modules/home-stats';
-@import 'modules/home-email';
-@import 'modules/home-quote';
-@import 'modules/home-testimonials';
-@import 'modules/home-expertise';
-@import 'modules/home-accordion';
+@import "modules/expertise-form";
+@import "modules/home-stats";
+@import "modules/home-email";
+@import "modules/home-quote";
+@import "modules/home-testimonials";
+@import "modules/home-expertise";
+@import "modules/home-accordion";
 
 //----------------------------------*\
 // PAGES
 //----------------------------------*/
-@import 'pages/home';
-@import 'pages/about';
-@import 'pages/team';
-@import 'pages/single-team';
-@import 'pages/expertise';
-@import 'pages/sectors';
-@import 'pages/single-sector';
-@import 'pages/blog';
-@import 'pages/insights';
-@import 'pages/single-blog';
-@import 'pages/contact';
-@import 'pages/footer';
-@import 'pages/404';
-@import 'pages/careers';
-@import 'pages/seminars';
+@import "pages/home";
+@import "pages/about";
+@import "pages/team";
+@import "pages/single-team";
+@import "pages/expertise";
+@import "pages/sectors";
+@import "pages/single-sector";
+@import "pages/blog";
+@import "pages/insights";
+@import "pages/news";
+@import "pages/single-blog";
+@import "pages/contact";
+@import "pages/footer";
+@import "pages/404";
+@import "pages/careers";
+@import "pages/events";

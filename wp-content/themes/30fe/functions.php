@@ -145,6 +145,11 @@ function remove_bloat() {
     }
     add_action( 'wp_before_admin_bar_render', 'my_admin_bar_render' );
 
+
+
+
+ 
+
     /**
     @ Remove Default Post Type & Comments from side menu
     */
@@ -157,6 +162,10 @@ function remove_bloat() {
     //     add_action( 'admin_menu', 'remove_default_post_type' );
 
     /**
+    
+
+
+    
     @ Custom Post Types
     */
 function theme_post_type_industry() {
@@ -343,7 +352,7 @@ function theme_post_type_expertise() {
         "rewrite" => array( "slug" => "news", "with_front" => true ),
         "query_var" => true,
         "supports" => array( "title", "thumbnail", "editor" ),
-        'taxonomies'          => array( 'category' ),
+        'taxonomies' => array('news_category'),
     );
 
     register_post_type( "news", $args );
@@ -353,6 +362,48 @@ function theme_post_type_expertise() {
 
 
     add_action( 'init', 'theme_post_type_news' );
+
+
+
+      function theme_post_type_events() {
+    $labels = array(
+        "name" => __( "Events", "" ),
+        "singular_name" => __( "Events", "" ),
+        'add_new' => _x('Add Events', 'event item'), 
+        'add_new_item' => __('Add New Event'), 
+        'edit_item' => __('Edit Events'), 
+        'new_item' => __('New Events'),
+    );
+
+    $args = array(
+        "labels" => $labels,
+        "description" => "",
+        "public" => true,
+        "publicly_queryable" => true,
+        "show_ui" => true,
+        "show_in_rest" => true,
+        "rest_base" => "",
+        "has_archive" => false,
+        "menu_icon" => 'dashicons-format-gallery',
+        "show_in_menu" => true,
+        "show_in_nav_menus" => true,
+        "exclude_from_search" => false,
+        "capability_type" => "post",
+        "map_meta_cap" => true,
+        "hierarchical" => false,
+        "rewrite" => array( "slug" => "events", "with_front" => true ),
+        "query_var" => true,
+        "supports" => array( "title", "thumbnail", "editor" ),
+        'taxonomies'          => array( 'category' ),
+    );
+
+    register_post_type( "events", $args );
+
+
+}
+
+
+    add_action( 'init', 'theme_post_type_events' );
 
     
 
@@ -428,6 +479,39 @@ function bks_replace_admin_menu_icons_css() {
 }
 
 add_action( 'admin_head', 'bks_replace_admin_menu_icons_css' );
+
+
+
+
+//Register Categories
+
+function register_custom_taxonomy() {
+    $labels = array(
+        'name'              => _x('Categories', 'taxonomy general name'),
+        'singular_name'     => _x('Category', 'taxonomy singular name'),
+        'search_items'      => __('Search Categories'),
+        'all_items'         => __('All Categories'),
+        'parent_item'       => __('Parent Category'),
+        'parent_item_colon' => __('Parent Category:'),
+        'edit_item'         => __('Edit Category'),
+        'update_item'       => __('Update Category'),
+        'add_new_item'      => __('Add New Category'),
+        'new_item_name'     => __('New Category Name'),
+        'menu_name'         => __('Categories'),
+    );
+
+    $args = array(
+        'hierarchical'      => true, // Makes it behave like categories
+        'labels'            => $labels,
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+        'rewrite'           => array('slug' => 'news-category'),
+    );
+
+    register_taxonomy('news_category', array('news'), $args);
+}
+add_action('init', 'register_custom_taxonomy');
 
 
 
