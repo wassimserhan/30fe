@@ -564,22 +564,22 @@ add_action('manage_industry_posts_custom_column','show_order_column');
 
 
 //Add Roles Category in Team Custom Post Type
-// function tr_create_my_taxonomy() {
+function tr_create_my_taxonomy() {
 
-//     register_taxonomy(
-//         'team-category',
-//         'team',
-//         array(
-//             'label' => __( 'Roles' ),
-//             'rewrite' => array( 'slug' => 'team-category' ),
-//             'hierarchical' => true,
-//             'show_admin_column' => true,
-//             'show_in_rest'=> true,
-//         )
+    register_taxonomy(
+        'team-category',
+        'team',
+        array(
+            'label' => __( 'Roles' ),
+            'rewrite' => array( 'slug' => 'team-category' ),
+            'hierarchical' => true,
+            'show_admin_column' => true,
+            'show_in_rest'=> true,
+        )
         
-//     );
-// }
-// add_action( 'init', 'tr_create_my_taxonomy' );
+    );
+}
+add_action( 'init', 'tr_create_my_taxonomy' );
 
 // function allow_cors() {
 //     // Allow from any origin
