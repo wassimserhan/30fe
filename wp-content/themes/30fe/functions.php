@@ -23,7 +23,7 @@ function theme_files() {
    
   
 
-     wp_enqueue_script( 'jquery', 'https://code.jquery.com/jquery-3.5.1.slim.min.js', array(), null, 1);
+    wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.5.1.min.js', array(), null, true);
      wp_script_add_data( 'jquery', array( 'integrity', 'crossorigin' ) , array( 'sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=', 'anonymous' ) );
 
     wp_enqueue_script( 'gsap', '//cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js');
@@ -37,10 +37,10 @@ function theme_files() {
     wp_enqueue_style( 'theme-styles', get_template_directory_uri() . '/build/style-index.css', array(), $css_version_number );
     wp_enqueue_style('theme_extra_styles', get_theme_file_uri('/build/index.css'));
 
-    wp_localize_script('theme-js', 'siteData', array(
-        'root_url'=> get_site_url(),
-        ''
-    ));
+   wp_localize_script('theme-js', 'siteData', array(
+    'root_url' => get_site_url(),
+    'nonce' => wp_create_nonce('wp_rest'),
+));
     
 }
 add_action( 'wp_enqueue_scripts', 'theme_files' );
@@ -581,26 +581,16 @@ function tr_create_my_taxonomy() {
 }
 add_action( 'init', 'tr_create_my_taxonomy' );
 
-// function allow_cors() {
-//     // Allow from any origin
-//     if (isset($_SERVER['HTTP_ORIGIN'])) {
-//         header("Access-Control-Allow-Origin: {$_SERVER['HTTP_ORIGIN']}");
-//         header('Access-Control-Allow-Credentials: true');
-//         header('Access-Control-Allow-Methods: POST, GET, OPTIONS');
-//         header('Access-Control-Allow-Headers: Origin, Content-Type, Accept, Authorization, X-Requested-With');
-//     }
-
-//     // Handle OPTIONS requests
-//     if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
-//         if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_METHOD'])) {
-//             header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
-//         }
-//         if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS'])) {
-//             header("Access-Control-Allow-Headers: {$_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']}");
-//         }
-//         exit(0);
-//     }
-// }
-// add_action('init', 'allow_cors');
+function my_customize_rest_cors() {
+    remove_filter('rest_pre_serve_request', 'rest_send_cors_headers');
+    add_filter('rest_pre_serve_request', function ($value) {
+        header('Access-Control-Allow-Origin: *');
+        header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
+        header('Access-Control-Allow-Credentials: true');
+        header('Access-Control-Expose-Headers: Link', false);
+        return $value;
+    });
+}
+add_action('rest_api_init', 'my_customize_rest_cors', 15);
 
  ?>
