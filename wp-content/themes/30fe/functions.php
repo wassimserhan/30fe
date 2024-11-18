@@ -492,36 +492,36 @@ add_action( 'admin_head', 'bks_replace_admin_menu_icons_css' );
 
 
 
-//Register Categories
+//Register News Categories
 
-function register_custom_taxonomy() {
-    $labels = array(
-        'name'              => _x('Categories', 'taxonomy general name'),
-        'singular_name'     => _x('Category', 'taxonomy singular name'),
-        'search_items'      => __('Search Categories'),
-        'all_items'         => __('All Categories'),
-        'parent_item'       => __('Parent Category'),
-        'parent_item_colon' => __('Parent Category:'),
-        'edit_item'         => __('Edit Category'),
-        'update_item'       => __('Update Category'),
-        'add_new_item'      => __('Add New Category'),
-        'new_item_name'     => __('New Category Name'),
-        'menu_name'         => __('Categories'),
-    );
+// function register_custom_taxonomy() {
+//     $labels = array(
+//         'name'              => _x('Categories', 'taxonomy general name'),
+//         'singular_name'     => _x('Category', 'taxonomy singular name'),
+//         'search_items'      => __('Search Categories'),
+//         'all_items'         => __('All Categories'),
+//         'parent_item'       => __('Parent Category'),
+//         'parent_item_colon' => __('Parent Category:'),
+//         'edit_item'         => __('Edit Category'),
+//         'update_item'       => __('Update Category'),
+//         'add_new_item'      => __('Add New Category'),
+//         'new_item_name'     => __('New Category Name'),
+//         'menu_name'         => __('Categories'),
+//     );
 
-    $args = array(
-        'hierarchical'      => true, // Makes it behave like categories
-        'labels'            => $labels,
-        'show_ui'           => true,
-        'show_admin_column' => true,
-         'show_in_rest'     => true,
-        'query_var'         => true,
-        'rewrite'           => array('slug' => 'news-category'),
-    );
+//     $args = array(
+//         'hierarchical'      => true, // Makes it behave like categories
+//         'labels'            => $labels,
+//         'show_ui'           => true,
+//         'show_admin_column' => true,
+//          'show_in_rest'     => true,
+//         'query_var'         => true,
+//         'rewrite'           => array('slug' => 'news-category'),
+//     );
 
-    register_taxonomy('news_category', array('news'), $args);
-}
-add_action('init', 'register_custom_taxonomy');
+//     register_taxonomy('news_category', array('news'), $args);
+// }
+// add_action('init', 'register_custom_taxonomy');
 
 
 
