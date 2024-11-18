@@ -18,8 +18,8 @@ function theme_files() {
 
 
      
+    wp_enqueue_script('theme-js', get_template_directory_uri() . '/build/index.js', array('jquery'), $css_version_number, true);
 
-    wp_enqueue_script( 'theme-js', get_template_directory_uri() . '/build/index.js', array(), $css_version_number, 1);
    
   
 
