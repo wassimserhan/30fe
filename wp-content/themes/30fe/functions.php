@@ -332,45 +332,45 @@ function theme_post_type_expertise() {
     add_action( 'init', 'theme_post_type_careers' );
 
 
-//      function theme_post_type_news() {
-//     $labels = array(
-//         "name" => __( "News", "" ),
-//         "singular_name" => __( "News", "" ),
-//         'add_new' => _x('Add New', 'news item'), 
-//         'add_new_item' => __('Add New News'), 
-//         'edit_item' => __('Edit News'), 
-//         'new_item' => __('New News'),
-//     );
+     function theme_post_type_news() {
+    $labels = array(
+        "name" => __( "News", "" ),
+        "singular_name" => __( "News", "" ),
+        'add_new' => _x('Add New', 'news item'), 
+        'add_new_item' => __('Add New News'), 
+        'edit_item' => __('Edit News'), 
+        'new_item' => __('New News'),
+    );
 
-//     $args = array(
-//         "labels" => $labels,
-//         "description" => "",
-//         "public" => true,
-//         "publicly_queryable" => true,
-//         "show_ui" => true,
-//         "show_in_rest" => true,
-//         "rest_base" => "news",
-//         "has_archive" => false,
-//         "menu_icon" => 'dashicons-bell',
-//         "show_in_menu" => true,
-//         "show_in_nav_menus" => true,
-//         "exclude_from_search" => false,
-//         "capability_type" => "post",
-//         "map_meta_cap" => true,
-//         "hierarchical" => false,
-//         "rewrite" => array( "slug" => "news", "with_front" => true ),
-//         "query_var" => true,
-//         "supports" => array( "title", "thumbnail", "editor" ),
-//         'taxonomies' => array('news_category'),
-//     );
+    $args = array(
+        "labels" => $labels,
+        "description" => "",
+        "public" => true,
+        "publicly_queryable" => true,
+        "show_ui" => true,
+        "show_in_rest" => true,
+        "rest_base" => "news",
+        "has_archive" => false,
+        "menu_icon" => 'dashicons-bell',
+        "show_in_menu" => true,
+        "show_in_nav_menus" => true,
+        "exclude_from_search" => false,
+        "capability_type" => "post",
+        "map_meta_cap" => true,
+        "hierarchical" => false,
+        "rewrite" => array( "slug" => "news", "with_front" => true ),
+        "query_var" => true,
+        "supports" => array( "title", "thumbnail", "editor" ),
+        'taxonomies' => array('news_category'),
+    );
 
-//     register_post_type( "news", $args );
-
-
-// }
+    register_post_type( "news", $args );
 
 
-    // add_action( 'init', 'theme_post_type_news' );
+}
+
+
+    add_action( 'init', 'theme_post_type_news' );
 
 
 
@@ -492,36 +492,36 @@ add_action( 'admin_head', 'bks_replace_admin_menu_icons_css' );
 
 
 
-//Register News Categories
+//Register Categories
 
-// function register_custom_taxonomy() {
-//     $labels = array(
-//         'name'              => _x('Categories', 'taxonomy general name'),
-//         'singular_name'     => _x('Category', 'taxonomy singular name'),
-//         'search_items'      => __('Search Categories'),
-//         'all_items'         => __('All Categories'),
-//         'parent_item'       => __('Parent Category'),
-//         'parent_item_colon' => __('Parent Category:'),
-//         'edit_item'         => __('Edit Category'),
-//         'update_item'       => __('Update Category'),
-//         'add_new_item'      => __('Add New Category'),
-//         'new_item_name'     => __('New Category Name'),
-//         'menu_name'         => __('Categories'),
-//     );
+function register_custom_taxonomy() {
+    $labels = array(
+        'name'              => _x('Categories', 'taxonomy general name'),
+        'singular_name'     => _x('Category', 'taxonomy singular name'),
+        'search_items'      => __('Search Categories'),
+        'all_items'         => __('All Categories'),
+        'parent_item'       => __('Parent Category'),
+        'parent_item_colon' => __('Parent Category:'),
+        'edit_item'         => __('Edit Category'),
+        'update_item'       => __('Update Category'),
+        'add_new_item'      => __('Add New Category'),
+        'new_item_name'     => __('New Category Name'),
+        'menu_name'         => __('Categories'),
+    );
 
-//     $args = array(
-//         'hierarchical'      => true, // Makes it behave like categories
-//         'labels'            => $labels,
-//         'show_ui'           => true,
-//         'show_admin_column' => true,
-//          'show_in_rest'     => true,
-//         'query_var'         => true,
-//         'rewrite'           => array('slug' => 'news-category'),
-//     );
+    $args = array(
+        'hierarchical'      => true, // Makes it behave like categories
+        'labels'            => $labels,
+        'show_ui'           => true,
+        'show_admin_column' => true,
+         'show_in_rest'     => true,
+        'query_var'         => true,
+        'rewrite'           => array('slug' => 'news-category'),
+    );
 
-//     register_taxonomy('news_category', array('news'), $args);
-// }
-// add_action('init', 'register_custom_taxonomy');
+    register_taxonomy('news_category', array('news'), $args);
+}
+add_action('init', 'register_custom_taxonomy');
 
 
 
@@ -564,43 +564,43 @@ add_action('manage_industry_posts_custom_column','show_order_column');
 
 
 //Add Roles Category in Team Custom Post Type
-function tr_create_my_taxonomy() {
+// function tr_create_my_taxonomy() {
 
-    register_taxonomy(
-        'team-category',
-        'team',
-        array(
-            'label' => __( 'Roles' ),
-            'rewrite' => array( 'slug' => 'team-category' ),
-            'hierarchical' => true,
-            'show_admin_column' => true,
-            'show_in_rest'=> true,
-        )
+//     register_taxonomy(
+//         'team-category',
+//         'team',
+//         array(
+//             'label' => __( 'Roles' ),
+//             'rewrite' => array( 'slug' => 'team-category' ),
+//             'hierarchical' => true,
+//             'show_admin_column' => true,
+//             'show_in_rest'=> true,
+//         )
         
-    );
-}
-add_action( 'init', 'tr_create_my_taxonomy' );
+//     );
+// }
+// add_action( 'init', 'tr_create_my_taxonomy' );
 
-function allow_cors() {
-    // Allow from any origin
-    if (isset($_SERVER['HTTP_ORIGIN'])) {
-        header("Access-Control-Allow-Origin: {$_SERVER['HTTP_ORIGIN']}");
-        header('Access-Control-Allow-Credentials: true');
-        header('Access-Control-Allow-Methods: POST, GET, OPTIONS');
-        header('Access-Control-Allow-Headers: Origin, Content-Type, Accept, Authorization, X-Requested-With');
-    }
+// function allow_cors() {
+//     // Allow from any origin
+//     if (isset($_SERVER['HTTP_ORIGIN'])) {
+//         header("Access-Control-Allow-Origin: {$_SERVER['HTTP_ORIGIN']}");
+//         header('Access-Control-Allow-Credentials: true');
+//         header('Access-Control-Allow-Methods: POST, GET, OPTIONS');
+//         header('Access-Control-Allow-Headers: Origin, Content-Type, Accept, Authorization, X-Requested-With');
+//     }
 
-    // Handle OPTIONS requests
-    if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
-        if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_METHOD'])) {
-            header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
-        }
-        if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS'])) {
-            header("Access-Control-Allow-Headers: {$_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']}");
-        }
-        exit(0);
-    }
-}
-add_action('init', 'allow_cors');
+//     // Handle OPTIONS requests
+//     if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
+//         if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_METHOD'])) {
+//             header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
+//         }
+//         if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS'])) {
+//             header("Access-Control-Allow-Headers: {$_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']}");
+//         }
+//         exit(0);
+//     }
+// }
+// add_action('init', 'allow_cors');
 
  ?>
