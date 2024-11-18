@@ -3971,12 +3971,13 @@ const slider6 = document.getElementById('slider6');
 if (slider6) {
   new _splidejs_splide__WEBPACK_IMPORTED_MODULE_5__["default"]('#slider6', {
     type: 'loop',
-    perPage: 2,
+    perPage: 1,
     arrows: false,
     pagination: false,
     keyboard: true,
     autoplay: true,
     rewind: true,
+    padding: '5rem',
     breakpoints: {
       486: {
         width: '100%',
@@ -4076,70 +4077,39 @@ items.forEach((e, i) => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/lib/axios.js");
 
-function ajaxLoadMore() {
-  const button = document.querySelector('.insights__load');
-  if (typeof button != 'undefined' && button != null) {
-    button.addEventListener('click', e => {
-      e.preventDefault();
-      let current_page = document.querySelector('.insights__grid').dataset.page;
-      let max_pages = document.querySelector('.insights__grid').dataset.max;
-      let params = new URLSearchParams();
-      params.append('action', 'load_more_posts');
-      params.append('current_page', current_page);
-      params.append('max_pages', max_pages);
-      axios__WEBPACK_IMPORTED_MODULE_0__["default"].post('/wp-admin/admin-ajax.php', params).then(res => {
-        let posts_list = document.querySelector('.insights__grid');
-        posts_list.innerHTML += res.data.data;
-
-        // let getUrl = window.location;
-        // let baseUrl = getUrl.protocol + "//" + getUrl.host + "/";
-
-        // window.history.pushState('', '', baseUrl + 'insights/' + 'page/' + (parseInt(document.querySelector('.insights__grid').dataset.page) + 1));
-
-        // console.log(parseInt(document.querySelector('.insights__grid').dataset.page));
-
-        document.querySelector('.insights__grid').dataset.page++;
-        if (document.querySelector('.insights__grid').dataset.page == document.querySelector('.insights__grid').dataset.max) {
-          button.parentNode.removeChild(button);
-        }
-      });
-    });
+document.addEventListener('DOMContentLoaded', function () {
+  const loadMoreBtn = document.getElementById('load-more');
+  const postsContainer = document.getElementById('ajax-posts');
+  if (!loadMoreBtn || !postsContainer) {
+    console.error('Load more button or posts container not found.');
+    return;
   }
-}
-;
-ajaxLoadMore();
-function ajaxLoadMoreNews() {
-  const button = document.querySelector('.news__load');
-  if (typeof button != 'undefined' && button != null) {
-    button.addEventListener('click', e => {
-      e.preventDefault();
-      let current_page = document.querySelector('.news__grid').dataset.page;
-      let max_pages = document.querySelector('.news__grid').dataset.max;
-      let params = new URLSearchParams();
-      params.append('action', 'load_more_posts');
-      params.append('current_page', current_page);
-      params.append('max_pages', max_pages);
-      axios__WEBPACK_IMPORTED_MODULE_0__["default"].post('/wp-admin/admin-ajax.php', params).then(res => {
-        let posts_list = document.querySelector('.news__grid');
-        posts_list.innerHTML += res.data.data;
+  let currentPage = parseInt(loadMoreBtn.getAttribute('data-page')) || 1;
+  const postType = loadMoreBtn.getAttribute('data-post-type');
+  const ajaxUrl = loadMoreBtn.getAttribute('data-url');
+  loadMoreBtn.addEventListener('click', function () {
+    currentPage++; // Increment the page number
 
-        // let getUrl = window.location;
-        // let baseUrl = getUrl.protocol + "//" + getUrl.host + "/";
+    // Prepare data using FormData
+    const formData = new FormData();
+    formData.append('action', 'load_more_posts');
+    formData.append('current_page', currentPage);
+    formData.append('post_type', postType);
 
-        // window.history.pushState('', '', baseUrl + 'news/' + 'page/' + (parseInt(document.querySelector('.news__grid').dataset.page) + 1));
-
-        // console.log(parseInt(document.querySelector('.news__grid').dataset.page));
-
-        document.querySelector('.news__grid').dataset.page++;
-        if (document.querySelector('.news__grid').dataset.page == document.querySelector('.news__grid').dataset.max) {
-          button.parentNode.removeChild(button);
-        }
-      });
+    // Send POST request with FormData
+    axios__WEBPACK_IMPORTED_MODULE_0__["default"].post(ajaxUrl, formData).then(response => {
+      if (response.data.success) {
+        postsContainer.insertAdjacentHTML('beforeend', response.data.data);
+        loadMoreBtn.setAttribute('data-page', currentPage);
+      } else {
+        loadMoreBtn.style.display = 'none'; // Hide button if no more posts
+        console.log(response.data.data); // Log error message
+      }
+    }).catch(error => {
+      console.error('Error:', error);
     });
-  }
-}
-;
-ajaxLoadMoreNews();
+  });
+});
 
 /***/ }),
 
@@ -4691,7 +4661,7 @@ function Util() {}
   class manipulation functions
 */
 Util.hasClass = function (el, className) {
-  if (el.classList) return el.classList.contains(className);else return !!el.className.match(new RegExp('(\\s|^)' + className + '(\\s|$)'));
+  if (el.classList) return el.classList.contains(className);else return !!el.className.match(new RegExp('(\\s|^)' + className + '(\\s|jQuery)'));
 };
 Util.addClass = function (el, className) {
   var classList = className.split(' ');
@@ -4701,7 +4671,7 @@ Util.addClass = function (el, className) {
 Util.removeClass = function (el, className) {
   var classList = className.split(' ');
   if (el.classList) el.classList.remove(classList[0]);else if (Util.hasClass(el, classList[0])) {
-    var reg = new RegExp('(\\s|^)' + classList[0] + '(\\s|$)');
+    var reg = new RegExp('(\\s|^)' + classList[0] + '(\\s|jQuery)');
     el.className = el.className.replace(reg, ' ');
   }
   if (classList.length > 1) Util.removeClass(el, classList.slice(1).join(' '));
@@ -5130,6 +5100,43 @@ Math.easeInOutQuad = function (t, b, c, d) {
     return top < window.pageYOffset + window.innerHeight && left < window.pageXOffset + window.innerWidth && top + height > window.pageYOffset && left + width > window.pageXOffset;
   }
 })();
+jQuery(document).ready(function () {
+  var mySwiper = new Swiper(".swiper", {
+    autoHeight: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: true
+    },
+    speed: 500,
+    direction: "horizontal",
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      type: "progressbar"
+    },
+    loop: false,
+    effect: "slide",
+    spaceBetween: 30,
+    on: {
+      init: function () {
+        jQuery(".swiper-pagination-custom .swiper-pagination-switch").removeClass("active");
+        jQuery(".swiper-pagination-custom .swiper-pagination-switch").eq(0).addClass("active");
+      },
+      slideChangeTransitionStart: function () {
+        jQuery(".swiper-pagination-custom .swiper-pagination-switch").removeClass("active");
+        jQuery(".swiper-pagination-custom .swiper-pagination-switch").eq(mySwiper.realIndex).addClass("active");
+      }
+    }
+  });
+  jQuery(".swiper-pagination-custom .swiper-pagination-switch").click(function () {
+    mySwiper.slideTo(jQuery(this).index());
+    jQuery(".swiper-pagination-custom .swiper-pagination-switch").removeClass("active");
+    jQuery(this).addClass("active");
+  });
+});
 
 /***/ }),
 

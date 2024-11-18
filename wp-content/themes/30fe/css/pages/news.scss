@@ -66,6 +66,7 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1rem;
     padding-top: 64px;
+    justify-items: center;
     // display: flex;
     // justify-content: flex-start;
     // flex-wrap: wrap;
@@ -100,6 +101,7 @@
 
       &__category {
         // background-color: $blue;
+        border-radius: 100px;
         &__text {
           font-size: 0.75rem;
           line-height: 160%;

@@ -27,7 +27,7 @@ get_header();
     <!-- Hero -->
 
 
-    <!-- Add Career Slider -->
+    <!-- Career Slider -->
 
     <section id="slider6" class="splide splide-careers-banners" aria-labelledby="carousel-heading">
         <section class="max-width max-padding--side">
@@ -178,7 +178,7 @@ while( have_rows('benefits') ) : the_row();
           while( have_rows('benefits_items') ) : the_row();
           $benefits_item = get_sub_field('benefits_item');
           ?>
-                <li>
+                <li class="benefit-items">
                     <?php echo $benefits_item; ?>
                 </li>
                 <?php
@@ -236,6 +236,58 @@ while( have_rows('positions') ) : the_row();
         </section>
     </section>
     <?php endwhile; endif; ?>
+
+    <!-- disclaimer -->
+    <section style="background-color: #1d1c1d">
+        <section class="max-width max-padding">
+            <p class="careers__copy" style="line-height: 110%; font-weight: 700">To Our Employees & Applicants:</br>
+
+                <span style="font-size: 16px; font-weight: 400">
+                    Welcome to 30 Forensic Engineering! We are committed to fostering a positive, inclusive workplace
+                    that values each employee’s growth, happiness, and well-being. As part of this commitment, we
+                    provide an accessible recruitment and employment experience free from discrimination on any
+                    prohibited grounds, including gender identity, race, ethnic origin, age, physical or mental
+                    disability, sexual orientation, and any other category protected by law.
+                    </br> </br>
+                    We aim to support all employees and job applicants equally by providing necessary accommodations for
+                    individuals with disabilities, in alignment with provincial and federal laws. We encourage
+                    applicants and employees to communicate any accommodation needs, as we are dedicated to ensuring a
+                    supportive environment that allows everyone to thrive professionally and personally.
+                    </br> </br>
+                    In keeping with our values, we welcome applicants and employees to engage in an interactive process
+                    to identify reasonable accommodations. If you require support or assistance in performing essential
+                    job functions, please reach out to your manager, our HR department, or any member of our management
+                    team.</span>
+            </p>
+            </br> </br>
+            <p class="careers__copy" style="line-height: 110%; font-weight: 700">Our Recruitment Process:</br>
+
+                <span style="font-size: 16px; font-weight: 400">
+                    Aligned with our vision to foster a workplace built on diverse knowledge, perspectives, and an
+                    inclusive culture, our recruitment process is designed to offer a positive and equitable experience
+                    for all candidates. Most candidates complete the process in three meetings, though occasionally an
+                    additional conversation may be required:
+                    </br> </br>
+                    <ul style="list-style: circle; margin-left: 50px;">
+                        <li class="careers__copy">Recruiter Phone Interview – An introductory conversation with our
+                            Talent Team.</li>
+                        <li class="careers__copy">Hiring Manager Interview(s) – A discussion with the hiring manager,
+                            which may include one or
+                            two interviews to explore the role and team dynamics in more depth.</li>
+                        <li class="careers__copy">Recruiter Phone Interview – An introductory conversation with our
+                            Talent Team.</li>
+                    </ul>
+                    <p style="font-size: 16px; font-weight: 400; color: #f2f1ed">If you require accommodation at any
+                        stage of the
+                        process, please let us
+                        know. We are dedicated to
+                        making adjustments that enable you to present your skills and talents fully.</p>
+                </span>
+            </p>
+        </section>
+    </section>
+    <!-- disclaimer -->
+
 </main>
 
 <?php 

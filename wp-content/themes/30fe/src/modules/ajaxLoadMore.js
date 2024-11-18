@@ -1,99 +1,43 @@
 import axios from 'axios';
 
 
-function ajaxLoadMore() {
+document.addEventListener('DOMContentLoaded', function () {
+  const loadMoreBtn = document.getElementById('load-more');
+  const postsContainer = document.getElementById('ajax-posts');
 
-  const button = document.querySelector('.insights__load');
-
-  if (typeof (button) != 'undefined' && button != null) {
-
-    button.addEventListener('click', (e) => {
-      e.preventDefault();
-
-      let current_page = document.querySelector('.insights__grid').dataset.page;
-      let max_pages = document.querySelector('.insights__grid').dataset.max;
-
-      let params = new URLSearchParams();
-      params.append('action', 'load_more_posts');
-      params.append('current_page', current_page);
-      params.append('max_pages', max_pages);
-
-      axios.post('/wp-admin/admin-ajax.php', params)
-        .then(res => {
-
-          let posts_list = document.querySelector('.insights__grid');
-
-          posts_list.innerHTML += res.data.data;
-
-          // let getUrl = window.location;
-          // let baseUrl = getUrl.protocol + "//" + getUrl.host + "/";
-
-          // window.history.pushState('', '', baseUrl + 'insights/' + 'page/' + (parseInt(document.querySelector('.insights__grid').dataset.page) + 1));
-
-          // console.log(parseInt(document.querySelector('.insights__grid').dataset.page));
-
-          document.querySelector('.insights__grid').dataset.page++;
-
-          if (document.querySelector('.insights__grid').dataset.page == document.querySelector('.insights__grid').dataset.max) {
-            button.parentNode.removeChild(button);
-          }
-
-        })
-
-    });
-
+  if (!loadMoreBtn || !postsContainer) {
+    console.error('Load more button or posts container not found.');
+    return;
   }
 
-};
+  let currentPage = parseInt(loadMoreBtn.getAttribute('data-page')) || 1;
+  const postType = loadMoreBtn.getAttribute('data-post-type');
+  const ajaxUrl = loadMoreBtn.getAttribute('data-url');
 
-ajaxLoadMore()
+  loadMoreBtn.addEventListener('click', function () {
+    currentPage++; // Increment the page number
 
+    // Prepare data using FormData
+    const formData = new FormData();
+    formData.append('action', 'load_more_posts');
+    formData.append('current_page', currentPage);
+    formData.append('post_type', postType);
 
+    // Send POST request with FormData
+    axios.post(ajaxUrl, formData)
+      .then(response => {
+        if (response.data.success) {
+          postsContainer.insertAdjacentHTML('beforeend', response.data.data);
+          loadMoreBtn.setAttribute('data-page', currentPage);
+        } else {
+          loadMoreBtn.style.display = 'none'; // Hide button if no more posts
+          console.log(response.data.data); // Log error message
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  });
+});
 
-function ajaxLoadMoreNews() {
-
-  const button = document.querySelector('.news__load');
-
-  if (typeof (button) != 'undefined' && button != null) {
-
-    button.addEventListener('click', (e) => {
-      e.preventDefault();
-
-      let current_page = document.querySelector('.news__grid').dataset.page;
-      let max_pages = document.querySelector('.news__grid').dataset.max;
-
-      let params = new URLSearchParams();
-      params.append('action', 'load_more_posts');
-      params.append('current_page', current_page);
-      params.append('max_pages', max_pages);
-
-      axios.post('/wp-admin/admin-ajax.php', params)
-        .then(res => {
-
-          let posts_list = document.querySelector('.news__grid');
-
-          posts_list.innerHTML += res.data.data;
-
-          // let getUrl = window.location;
-          // let baseUrl = getUrl.protocol + "//" + getUrl.host + "/";
-
-          // window.history.pushState('', '', baseUrl + 'news/' + 'page/' + (parseInt(document.querySelector('.news__grid').dataset.page) + 1));
-
-          // console.log(parseInt(document.querySelector('.news__grid').dataset.page));
-
-          document.querySelector('.news__grid').dataset.page++;
-
-          if (document.querySelector('.news__grid').dataset.page == document.querySelector('.news__grid').dataset.max) {
-            button.parentNode.removeChild(button);
-          }
-
-        })
-
-    });
-
-  }
-
-};
-
-ajaxLoadMoreNews()
 

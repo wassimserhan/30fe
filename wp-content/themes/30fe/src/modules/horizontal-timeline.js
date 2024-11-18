@@ -136,7 +136,7 @@ function Util() { };
 */
 Util.hasClass = function (el, className) {
   if (el.classList) return el.classList.contains(className);
-  else return !!el.className.match(new RegExp('(\\s|^)' + className + '(\\s|$)'));
+  else return !!el.className.match(new RegExp('(\\s|^)' + className + '(\\s|jQuery)'));
 };
 
 Util.addClass = function (el, className) {
@@ -150,7 +150,7 @@ Util.removeClass = function (el, className) {
   var classList = className.split(' ');
   if (el.classList) el.classList.remove(classList[0]);
   else if (Util.hasClass(el, classList[0])) {
-    var reg = new RegExp('(\\s|^)' + classList[0] + '(\\s|$)');
+    var reg = new RegExp('(\\s|^)' + classList[0] + '(\\s|jQuery)');
     el.className = el.className.replace(reg, ' ');
   }
   if (classList.length > 1) Util.removeClass(el, classList.slice(1).join(' '));
@@ -590,3 +590,42 @@ Math.easeInOutQuad = function (t, b, c, d) {
 
 
 
+
+
+jQuery(document).ready(function () {
+  var mySwiper = new Swiper(".swiper", {
+    autoHeight: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: true
+    },
+    speed: 500,
+    direction: "horizontal",
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      type: "progressbar"
+    },
+    loop: false,
+    effect: "slide",
+    spaceBetween: 30,
+    on: {
+      init: function () {
+        jQuery(".swiper-pagination-custom .swiper-pagination-switch").removeClass("active");
+        jQuery(".swiper-pagination-custom .swiper-pagination-switch").eq(0).addClass("active");
+      },
+      slideChangeTransitionStart: function () {
+        jQuery(".swiper-pagination-custom .swiper-pagination-switch").removeClass("active");
+        jQuery(".swiper-pagination-custom .swiper-pagination-switch").eq(mySwiper.realIndex).addClass("active");
+      }
+    }
+  });
+  jQuery(".swiper-pagination-custom .swiper-pagination-switch").click(function () {
+    mySwiper.slideTo(jQuery(this).index());
+    jQuery(".swiper-pagination-custom .swiper-pagination-switch").removeClass("active");
+    jQuery(this).addClass("active");
+  });
+});

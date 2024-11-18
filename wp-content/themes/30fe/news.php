@@ -12,9 +12,9 @@ get_header();
     <section class="news whitesmoke-bg fullscreen">
         <section class="max-width max-padding">
             <h1 class="news__headline">News</h1>
-            <h2 class="news__subheadline">Keep up with the latest updates about  30 Forensic Engineering</h2>
+            <h2 class="news__subheadline">Keep up with the latest updates about 30 Forensic Engineering</h2>
 
-            <section id="news" class="news__grid"
+            <section id="ajax-posts" class="news__grid insights__grid"
                 data-page="<?= get_query_var('paged') ? get_query_var('paged') : 1; ?>"
                 data-max="<?= $wp_query->max_num_pages; ?>">
                 <?php 
@@ -32,7 +32,8 @@ get_header();
                 <?php endwhile ?>
                 <?php wp_reset_postdata() ?>
             </section>
-            <button class="news__load">Load More</button>
+            <button id="load-more" class="news__load" data-page="1" data-post-type="news"
+                data-url="<?php echo admin_url('admin-ajax.php'); ?>">Load More</button>
         </section>
     </section>
 </main>

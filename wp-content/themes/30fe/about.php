@@ -92,8 +92,7 @@ while( have_rows('360_services') ) : the_row();
 
 
 
-
-    <?php include get_template_directory() . '/modules/horizontal-timeline.php'; ?>
+    <?php include get_template_directory() . '/modules/swiper-timeline.php'; ?>
 
 
     <!-- Hero-->
@@ -127,10 +126,38 @@ while( have_rows('360_services') ) : the_row();
             </section>
             <h3 class="hiring__headline">We're hiring!</h3>
             <p class="hiring__copy">We’re hiring! Visit our Careers page to view open positions or send your resume to
-                <a href="mailto:careers@30fe.com">careers@30fe.com.</a></p>
+                <a href="mailto:careers@30fe.com">careers@30fe.com.</a>
+            </p>
             <a href="<?php echo site_url('/careers')?>"><button class="hiring__button">OPEN POSITIONS</button></a>
         </section>
     </section>
+
+    <!-- disclaimer -->
+    <section style="background-color: #cbbea5;">
+        <section class="max-width max-padding">
+            <p class="careers__copy" style="line-height: 110%; font-weight: 700;color:#1d1c1d">Accessibility Commitment
+                to Our Clients:</br>
+
+                <span style="font-size: 16px; font-weight: 400; color:#1d1c1d">
+                    At 30 Forensic Engineering, we are committed to providing accessible services to all our clients
+                    across various sectors. We recognize that every client’s needs are unique, and we strive to deliver
+                    clear, actionable insights in a manner that is accessible to all. Whether we are engaging with
+                    insurers, legal firms, industry partners, or clients from other sectors, our goal is to ensure our
+                    findings are comprehensible and actionable, empowering clients to make informed decisions.
+                    <br><br>
+                    Our commitment to accessibility includes providing or arranging for accessible formats and
+                    communication supports tailored to meet the diverse needs of our clients. We are dedicated to
+                    ensuring that all communications, reports, and deliverables are available in a way that supports
+                    accessibility requirements and promotes effective engagement with our expertise.
+                    <br><br>
+                    If you require any specific accommodations or have accessibility needs to better engage with our
+                    team or reports, please do not hesitate to contact us. We are committed to ensuring all clients can
+                    access, understand, and benefit from our services.
+                </span>
+            </p>
+        </section>
+    </section>
+    <!-- disclaimer -->
 </main>
 
 <?php 

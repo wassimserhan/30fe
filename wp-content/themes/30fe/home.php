@@ -30,7 +30,7 @@ global $wp_query;
             </section>
 
 
-            <section id="insights" class="insights__grid"
+            <section id="ajax-posts" class="insights__grid"
                 data-page="<?= get_query_var('paged') ? get_query_var('paged') : 1; ?>"
                 data-max="<?= $wp_query->max_num_pages; ?>">
                 <?php 
@@ -40,7 +40,8 @@ global $wp_query;
                 <?php include get_template_directory() . '/modules/insights-card.php'; ?>
                 <?php endwhile ?>
             </section>
-            <button class="insights__load">Load More</button>
+            <button id="load-more" class="insights__load" data-page="1" data-post-type="post"
+                data-url="<?php echo admin_url('admin-ajax.php'); ?>">Load More</button>
         </section>
     </section>
 </main>

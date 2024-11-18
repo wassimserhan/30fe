@@ -5,18 +5,7 @@ get_header();
 ?>
 <main class="main-container">
     <section class="events fullscreen">
-        <section class="events">
-            <section class="events__intro">
-                <section class="max-width max-padding">
-                    <article>
-                        <h2 class="email__headline">Events</h2>
-                        <p class="email__copy">Enter your work email to receive these updates directly in your inbox.
-                        </p>
-                    </article>
-                </section>
-            </section>
 
-        </section>
         <?php
             $today = date('Ymd');
              $events = new WP_Query(array(
@@ -24,7 +13,7 @@ get_header();
             'post_type'=> 'events',
             'order'          => 'ASC', // Show upcoming posts first (optional)
              'orderby'        => 'meta_value',
-             'meta_key'       => 'event_date', // Replace with your ACF date picker field name
+             'meta_key'       => 'event_date', 
                 'meta_type'      => 'DATE',
                 'meta_query'     => array(
                 array(
@@ -33,36 +22,63 @@ get_header();
             'compare' => '>=',
             'type'    => 'DATE'
         ),
-    ),
+     ),
              ));
-          while ($events->have_posts()): $events->the_post(); 
+
+       if ( $events->have_posts() ) : ?>
+        <?php  while ($events->have_posts()): $events->the_post(); 
           
          $color = get_field('event_color');
-          
-          ?>
-        <section style="background-color: <?php echo esc_html($color['value']); ?>">
-            <section class="max-width max-padding--side">
+        $event_date = get_field('event_date'); ?>
+
+
+
+        <section class="events__card max-width" style="background-color: <?php echo esc_html($color['value']); ?>">
+            <article class="events__detail">
+                <img class="events__detail__image" loading="lazy" src="<?php echo get_the_post_thumbnail_url(); ?>"
+                    alt="<?php echo $alt; ?>" title="<?php echo $title; ?>">
+            </article>
+            <article class="events__detail events__detail--right"
+                style="background-color: <?php echo esc_html($color['value']); ?>">
+                <article class="events__label">
+                    <aside class="events__label__category" style="border: 1px solid <?php echo $label_color ;?>">
+                        <p class="events__label__category__text">
+                            UPCOMING
+                        </p>
+                    </aside>
+                </article>
                 <h3 class="events__title"><?php echo get_the_title() ;?></h3>
-            </section>
+                <p class="events__date"><?php echo $event_date ;?>
+                </p>
+                <h3 class="events__headline events__headline--right"><?php echo get_the_content() ;?></h3>
+            </article>
         </section>
-
-        <section style="background-color: <?php echo esc_html($color['value']); ?>">
-
-            <section class="events__card max-width" style="background-color: <?php echo esc_html($color['value']); ?>">
-                <article class="events__detail">
-                    <img class="events__detail__image" loading="lazy" src="<?php echo get_the_post_thumbnail_url(); ?>"
-                        alt="<?php echo $alt; ?>" title="<?php echo $title; ?>">
-                </article>
-                <article class="events__detail events__detail--right"
-                    style="background-color: <?php echo esc_html($color['value']); ?>">
-                    <h3 class="events__headline events__headline--right"><?php echo get_the_content() ;?></h3>
-
-                </article>
-            </section>
-        </section>
-
         <?php endwhile ?>
+        <?php else : ?>
+        <!-- Custom message when no posts are found -->
+        <section class="events__intro">
+            <section class=" max-width max-padding">
+                <h2 class="events__title">No Upcoming Events. Please check back later.</h2>
+                <?php endif; ?>
+            </section>
+        </section>
         <?php wp_reset_postdata() ?>
+
+        <section class="events">
+            <section class="events__intro">
+                <section class="max-width max-padding">
+                    <article>
+                        <h2 class="email__headline">Event Updates</h2>
+                        <p class="email__copy">Enter your work email to receive these updates directly in your inbox.
+                        </p>
+                    </article>
+                </section>
+            </section>
+        </section>
+
+        <!-- Past Events -->
+
+        <?php include get_template_directory() . '/modules/past-events.php'; ?>
 
     </section>
 </main>

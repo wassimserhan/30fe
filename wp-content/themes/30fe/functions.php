@@ -12,8 +12,15 @@ require get_theme_file_path('/includes/insights-search.php');
 function theme_files() {
     $css_version_number = get_field( 'css_version_number', get_option( 'page_on_front' ) );
 
+     wp_enqueue_style('swiper-css', '//unpkg.com/swiper/swiper-bundle.min.css');
+
+    wp_enqueue_style('bootstrap', '//cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css');
+
+
+     
+
     wp_enqueue_script( 'theme-js', get_template_directory_uri() . '/build/index.js', array(), $css_version_number, 1);
-    // wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+   
   
 
      wp_enqueue_script( 'jquery', 'https://code.jquery.com/jquery-3.5.1.slim.min.js', array(), null, 1);
@@ -22,6 +29,8 @@ function theme_files() {
     wp_enqueue_script( 'gsap', '//cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js');
 
     wp_enqueue_script( 'gsap-scroll', '//cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/ScrollTrigger.min.js');
+
+    wp_enqueue_script( 'swiper', '//cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js');
 
 
     
@@ -571,6 +580,26 @@ function tr_create_my_taxonomy() {
 }
 add_action( 'init', 'tr_create_my_taxonomy' );
 
+function allow_cors() {
+    // Allow from any origin
+    if (isset($_SERVER['HTTP_ORIGIN'])) {
+        header("Access-Control-Allow-Origin: {$_SERVER['HTTP_ORIGIN']}");
+        header('Access-Control-Allow-Credentials: true');
+        header('Access-Control-Allow-Methods: POST, GET, OPTIONS');
+        header('Access-Control-Allow-Headers: Origin, Content-Type, Accept, Authorization, X-Requested-With');
+    }
 
+    // Handle OPTIONS requests
+    if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
+        if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_METHOD'])) {
+            header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
+        }
+        if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS'])) {
+            header("Access-Control-Allow-Headers: {$_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']}");
+        }
+        exit(0);
+    }
+}
+add_action('init', 'allow_cors');
 
  ?>
