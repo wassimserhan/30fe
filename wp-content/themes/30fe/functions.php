@@ -14,7 +14,7 @@ function theme_files() {
 
      wp_enqueue_style('swiper-css', '//unpkg.com/swiper/swiper-bundle.min.css');
 
-    wp_enqueue_style('bootstrap', '//cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css');
+    // wp_enqueue_style('bootstrap', '//cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css');
 
 
      
@@ -349,7 +349,7 @@ function theme_post_type_expertise() {
         "publicly_queryable" => true,
         "show_ui" => true,
         "show_in_rest" => true,
-        "rest_base" => "",
+        "rest_base" => "news",
         "has_archive" => false,
         "menu_icon" => 'dashicons-bell',
         "show_in_menu" => true,
@@ -514,6 +514,7 @@ function register_custom_taxonomy() {
         'labels'            => $labels,
         'show_ui'           => true,
         'show_admin_column' => true,
+         'show_in_rest'     => true,
         'query_var'         => true,
         'rewrite'           => array('slug' => 'news-category'),
     );
