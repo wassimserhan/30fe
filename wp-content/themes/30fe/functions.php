@@ -332,119 +332,119 @@ function theme_post_type_expertise() {
     add_action( 'init', 'theme_post_type_careers' );
 
 
-//      function theme_post_type_news() {
-//     $labels = array(
-//         "name" => __( "News", "" ),
-//         "singular_name" => __( "News", "" ),
-//         'add_new' => _x('Add New', 'news item'), 
-//         'add_new_item' => __('Add New News'), 
-//         'edit_item' => __('Edit News'), 
-//         'new_item' => __('New News'),
-//     );
+     function theme_post_type_news() {
+    $labels = array(
+        "name" => __( "News", "" ),
+        "singular_name" => __( "News", "" ),
+        'add_new' => _x('Add New', 'news item'), 
+        'add_new_item' => __('Add New News'), 
+        'edit_item' => __('Edit News'), 
+        'new_item' => __('New News'),
+    );
 
-//     $args = array(
-//         "labels" => $labels,
-//         "description" => "",
-//         "public" => true,
-//         "publicly_queryable" => true,
-//         "show_ui" => true,
-//         "show_in_rest" => true,
-//         "rest_base" => "news",
-//         "has_archive" => false,
-//         "menu_icon" => 'dashicons-bell',
-//         "show_in_menu" => true,
-//         "show_in_nav_menus" => true,
-//         "exclude_from_search" => false,
-//         "capability_type" => "post",
-//         "map_meta_cap" => true,
-//         "hierarchical" => false,
-//         "rewrite" => array( "slug" => "news", "with_front" => true ),
-//         "query_var" => true,
-//         "supports" => array( "title", "thumbnail", "editor" ),
-//         'taxonomies' => array('news_category'),
-//     );
+    $args = array(
+        "labels" => $labels,
+        "description" => "",
+        "public" => true,
+        "publicly_queryable" => true,
+        "show_ui" => true,
+        "show_in_rest" => true,
+        "rest_base" => "news",
+        "has_archive" => false,
+        "menu_icon" => 'dashicons-bell',
+        "show_in_menu" => true,
+        "show_in_nav_menus" => true,
+        "exclude_from_search" => false,
+        "capability_type" => "post",
+        "map_meta_cap" => true,
+        "hierarchical" => false,
+        "rewrite" => array( "slug" => "news", "with_front" => true ),
+        "query_var" => true,
+        "supports" => array( "title", "thumbnail", "editor" ),
+        'taxonomies' => array('news_category'),
+    );
 
-//     register_post_type( "news", $args );
-
-
-// }
+    register_post_type( "news", $args );
 
 
-//     add_action( 'init', 'theme_post_type_news' );
+}
+
+
+    add_action( 'init', 'theme_post_type_news' );
 
 
 
-//       function theme_post_type_events() {
-//     $labels = array(
-//         "name" => __( "Events", "" ),
-//         "singular_name" => __( "Events", "" ),
-//         'add_new' => _x('Add Events', 'event item'), 
-//         'add_new_item' => __('Add New Event'), 
-//         'edit_item' => __('Edit Events'), 
-//         'new_item' => __('New Events'),
-//     );
+      function theme_post_type_events() {
+    $labels = array(
+        "name" => __( "Events", "" ),
+        "singular_name" => __( "Events", "" ),
+        'add_new' => _x('Add Events', 'event item'), 
+        'add_new_item' => __('Add New Event'), 
+        'edit_item' => __('Edit Events'), 
+        'new_item' => __('New Events'),
+    );
 
-//     $args = array(
-//         "labels" => $labels,
-//         "description" => "",
-//         "public" => true,
-//         "publicly_queryable" => true,
-//         "show_ui" => true,
-//         "show_in_rest" => true,
-//         "rest_base" => "",
-//         "has_archive" => false,
-//         "menu_icon" => 'dashicons-format-gallery',
-//         "show_in_menu" => true,
-//         "show_in_nav_menus" => true,
-//         "exclude_from_search" => false,
-//         "capability_type" => "post",
-//         "map_meta_cap" => true,
-//         "hierarchical" => false,
-//         "rewrite" => array( "slug" => "events", "with_front" => true ),
-//         "query_var" => true,
-//         "supports" => array( "title", "thumbnail", "editor" ),
-//         'taxonomies'          => array( 'category' ),
-//     );
+    $args = array(
+        "labels" => $labels,
+        "description" => "",
+        "public" => true,
+        "publicly_queryable" => true,
+        "show_ui" => true,
+        "show_in_rest" => true,
+        "rest_base" => "",
+        "has_archive" => false,
+        "menu_icon" => 'dashicons-format-gallery',
+        "show_in_menu" => true,
+        "show_in_nav_menus" => true,
+        "exclude_from_search" => false,
+        "capability_type" => "post",
+        "map_meta_cap" => true,
+        "hierarchical" => false,
+        "rewrite" => array( "slug" => "events", "with_front" => true ),
+        "query_var" => true,
+        "supports" => array( "title", "thumbnail", "editor" ),
+        'taxonomies'          => array( 'category' ),
+    );
 
-//     register_post_type( "events", $args );
-
-
-// }
+    register_post_type( "events", $args );
 
 
-//     add_action( 'init', 'theme_post_type_events' );
+}
+
+
+    add_action( 'init', 'theme_post_type_events' );
 
     
 //Register Categories
 
-// function register_custom_taxonomy() {
-//     $labels = array(
-//         'name'              => _x('Categories', 'taxonomy general name'),
-//         'singular_name'     => _x('Category', 'taxonomy singular name'),
-//         'search_items'      => __('Search Categories'),
-//         'all_items'         => __('All Categories'),
-//         'parent_item'       => __('Parent Category'),
-//         'parent_item_colon' => __('Parent Category:'),
-//         'edit_item'         => __('Edit Category'),
-//         'update_item'       => __('Update Category'),
-//         'add_new_item'      => __('Add New Category'),
-//         'new_item_name'     => __('New Category Name'),
-//         'menu_name'         => __('Categories'),
-//     );
+function register_custom_taxonomy() {
+    $labels = array(
+        'name'              => _x('Categories', 'taxonomy general name'),
+        'singular_name'     => _x('Category', 'taxonomy singular name'),
+        'search_items'      => __('Search Categories'),
+        'all_items'         => __('All Categories'),
+        'parent_item'       => __('Parent Category'),
+        'parent_item_colon' => __('Parent Category:'),
+        'edit_item'         => __('Edit Category'),
+        'update_item'       => __('Update Category'),
+        'add_new_item'      => __('Add New Category'),
+        'new_item_name'     => __('New Category Name'),
+        'menu_name'         => __('Categories'),
+    );
 
-//     $args = array(
-//         'hierarchical'      => true, // Makes it behave like categories
-//         'labels'            => $labels,
-//         'show_ui'           => true,
-//         'show_admin_column' => true,
-//         'show_in_rest'     => true,
-//         'query_var'         => true,
-//         'rewrite'           => array('slug' => 'news-category', 'with_front' => true),
-//     );
+    $args = array(
+        'hierarchical'      => true, // Makes it behave like categories
+        'labels'            => $labels,
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'show_in_rest'     => true,
+        'query_var'         => true,
+        'rewrite'           => array('slug' => 'news-category', 'with_front' => true),
+    );
 
-//     register_taxonomy('news_category', array('news'), $args);
-// }
-// add_action('init', 'register_custom_taxonomy');
+    register_taxonomy('news_category', array('news'), $args);
+}
+add_action('init', 'register_custom_taxonomy');
 
     
 
