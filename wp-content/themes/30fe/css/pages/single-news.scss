@@ -1,0 +1,60 @@
+.news-post {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+
+    @include bp(tablet) {
+      display: block;
+    }
+  }
+
+  &__left {
+    width: 60%;
+    @include bp(tablet) {
+      width: 100%;
+    }
+  }
+
+  &__pill {
+    margin: initial;
+  }
+  &__headline {
+    color: $whitesmoke;
+    padding: 20px 0;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: -4%;
+    margin: 0;
+  }
+
+  &__copy ~ p {
+    color: $whitesmoke;
+    a {
+      color: $whitesmoke;
+      text-decoration: underline;
+    }
+  }
+  &__card {
+    border: 1px solid #1d1c1d;
+    padding: 32px;
+    margin: 32px auto;
+    max-width: 300px;
+    background-color: $whitesmoke;
+
+    @include bp(tablet) {
+      max-width: 100%;
+      margin: 32px 0;
+    }
+  }
+  &__label__category__text {
+    font-size: 0.75rem;
+    line-height: 160%;
+    margin: 0;
+    padding: 2px 8px;
+
+    & a {
+      color: $whitesmoke;
+    }
+  }
+}

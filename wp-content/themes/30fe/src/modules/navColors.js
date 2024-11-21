@@ -185,10 +185,16 @@ if (true) {
       break;
 
     case 'single-news.php':
-      gsap.set(".nav", { backgroundColor: $whitesmoke })
-      sectionColors = [$whitesmoke];
-      navColors = [$whitesmoke];
-      navScroll = false;
+      gsap.set(".nav__logo__black", { filter: $logoWhite })
+      gsap.set(".nav__items", { color: $whitesmoke })
+      gsap.set(".nav", { backgroundColor: $black })
+      gsap.set(".search-overlay--desktop__wrapper", { borderColor: $whitesmoke })
+      gsap.set(".search-overlay--desktop__icon", { filter: $logoBlack })
+      gsap.set(".nav__button", { backgroundColor: $whitesmoke, color: $black })
+      gsap.set(".plus-nav", { filter: $logoWhite });
+      sectionColors = [$black];
+      navColors = [$black];
+      navScroll = false
       break;
 
     case 'single-sector.php':
@@ -247,6 +253,13 @@ if (true) {
       navScroll = false
       break;
     case 'events.php':
+      gsap.set(".nav", { backgroundColor: $whitesmoke })
+      sectionColors = [$whitesmoke];
+      navColors = [$whitesmoke];
+      navScroll = false;
+      break;
+
+    case 'education.php':
       gsap.set(".nav", { backgroundColor: $whitesmoke })
       sectionColors = [$whitesmoke];
       navColors = [$whitesmoke];

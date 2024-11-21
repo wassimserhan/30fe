@@ -53,6 +53,7 @@
              <?php endwhile ?>
              <?php wp_reset_postdata() ?>
          </section>
-         <button class="news__load">Load More</button>
+         <button id="load-more" class="news__load" data-page="1" data-post-type="events"
+             data-url="<?php echo admin_url('admin-ajax.php'); ?>">Load More</button>
      </section>
  </section>

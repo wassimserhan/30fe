@@ -77,8 +77,8 @@ get_header();
   the_post();
 } ?>
     <section class="expertise fullscreen">
-        <section class="max-width max-padding">
-            <section class="vertical-section" style="display: flex; overflow: hidden;">
+        <section class="max-width expertise__padding">
+            <section class="vertical-section">
                 <section class="left-column">
                     <section>
                         <h2 class="expertise__title">Sectors</h2>
@@ -86,24 +86,24 @@ get_header();
                     </section>
                 </section>
                 <section class="expertise__list right-column">
-                    <section class="large-child">
-                        <?php 
-          $customQuery = new WP_Query(array(
-          'posts_per_page' => -1,
-          'post_type'=> 'Industry'
-        ));
 
-        while ($customQuery->have_posts()): $customQuery->the_post();
+                    <?php 
+                            $customQuery = new WP_Query(array(
+                            'posts_per_page' => -1,
+                            'post_type'=> 'Industry'
+                            ));
+
+                            while ($customQuery->have_posts()): $customQuery->the_post();
       
-        ?>
-                        <a href="<?php echo the_permalink() ?>">
-                            <article class="expertise__list-section sectors-hover">
-                                <h3 class="expertise__list-item"><?php the_title() ?></h3>
-                            </article>
-                        </a>
-                        <?php endwhile ?>
-                        <?php wp_reset_postdata() ?>
-                    </section>
+                                ?>
+                    <a href="<?php echo the_permalink() ?>">
+                        <article class="expertise__list-section sectors-hover">
+                            <h3 class="expertise__list-item"><?php the_title() ?></h3>
+                        </article>
+                    </a>
+                    <?php endwhile ?>
+                    <?php wp_reset_postdata() ?>
+
                 </section>
             </section>
         </section>

@@ -29,8 +29,8 @@ get_header();
 
     <!-- Career Slider -->
 
-    <section id="slider6" class="splide splide-careers-banners" aria-labelledby="carousel-heading">
-        <section class="max-width max-padding--side">
+    <section id="slider6" class="splide splide-careers splide-careers-banners" aria-labelledby="carousel-heading">
+        <section class="max-padding max-padding--no-side">
             <div class="splide__track">
                 <ul class="splide__list">
                     <?php 
@@ -56,7 +56,7 @@ get_header();
 
     <!-- Headline -->
     <section class="quote fullscreen" style="min-height:0">
-        <section class="max-width max-padding--side">
+        <section class="max-width max-padding">
             <h3 class="quote__headline" style="padding: 0;">When talented and determined minds join forces, they achieve
                 the impossible. At 30 Forensic Engineering, this isn’t just a belief—it’s our way of life. And we’re
                 searching for

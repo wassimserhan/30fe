@@ -3971,13 +3971,13 @@ const slider6 = document.getElementById('slider6');
 if (slider6) {
   new _splidejs_splide__WEBPACK_IMPORTED_MODULE_5__["default"]('#slider6', {
     type: 'loop',
-    perPage: 1,
+    perPage: 2,
     arrows: false,
     pagination: false,
     keyboard: true,
     autoplay: true,
     rewind: true,
-    padding: '5rem',
+    // padding: '5rem',
     breakpoints: {
       486: {
         width: '100%',
@@ -5705,11 +5705,30 @@ if (true) {
       navScroll = false;
       break;
     case 'single-news.php':
-      gsap.set(".nav", {
-        backgroundColor: $whitesmoke
+      gsap.set(".nav__logo__black", {
+        filter: $logoWhite
       });
-      sectionColors = [$whitesmoke];
-      navColors = [$whitesmoke];
+      gsap.set(".nav__items", {
+        color: $whitesmoke
+      });
+      gsap.set(".nav", {
+        backgroundColor: $black
+      });
+      gsap.set(".search-overlay--desktop__wrapper", {
+        borderColor: $whitesmoke
+      });
+      gsap.set(".search-overlay--desktop__icon", {
+        filter: $logoBlack
+      });
+      gsap.set(".nav__button", {
+        backgroundColor: $whitesmoke,
+        color: $black
+      });
+      gsap.set(".plus-nav", {
+        filter: $logoWhite
+      });
+      sectionColors = [$black];
+      navColors = [$black];
       navScroll = false;
       break;
     case 'single-sector.php':
@@ -5808,6 +5827,14 @@ if (true) {
       navScroll = false;
       break;
     case 'events.php':
+      gsap.set(".nav", {
+        backgroundColor: $whitesmoke
+      });
+      sectionColors = [$whitesmoke];
+      navColors = [$whitesmoke];
+      navScroll = false;
+      break;
+    case 'education.php':
       gsap.set(".nav", {
         backgroundColor: $whitesmoke
       });

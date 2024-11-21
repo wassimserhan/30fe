@@ -191,13 +191,13 @@ const slider6 = document.getElementById('slider6');
 if (slider6) {
   new Splide('#slider6', {
     type: 'loop',
-    perPage: 1,
+    perPage: 2,
     arrows: false,
     pagination: false,
     keyboard: true,
     autoplay: true,
     rewind: true,
-    padding: '5rem',
+    // padding: '5rem',
     breakpoints: {
       486: {
         width: '100%',

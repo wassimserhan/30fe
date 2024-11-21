@@ -32,26 +32,28 @@ get_header();
         $event_date = get_field('event_date'); ?>
 
 
-
-        <section class="events__card max-width" style="background-color: <?php echo esc_html($color['value']); ?>">
-            <article class="events__detail">
-                <img class="events__detail__image" loading="lazy" src="<?php echo get_the_post_thumbnail_url(); ?>"
-                    alt="<?php echo $alt; ?>" title="<?php echo $title; ?>">
-            </article>
-            <article class="events__detail events__detail--right"
+        <section style="background-color: <?php echo esc_html($color['value']); ?>">
+            <section class="events__card max-width max-padding max-padding--side"
                 style="background-color: <?php echo esc_html($color['value']); ?>">
-                <article class="events__label">
-                    <aside class="events__label__category" style="border: 1px solid <?php echo $label_color ;?>">
-                        <p class="events__label__category__text">
-                            UPCOMING
-                        </p>
-                    </aside>
+                <article class="events__detail">
+                    <img class="events__detail__image" loading="lazy" src="<?php echo get_the_post_thumbnail_url(); ?>"
+                        alt="<?php echo $alt; ?>" title="<?php echo $title; ?>">
                 </article>
-                <h3 class="events__title"><?php echo get_the_title() ;?></h3>
-                <p class="events__date"><?php echo $event_date ;?>
-                </p>
-                <h3 class="events__headline events__headline--right"><?php echo get_the_content() ;?></h3>
-            </article>
+                <article class="events__detail events__detail--right"
+                    style="background-color: <?php echo esc_html($color['value']); ?>">
+                    <article class="events__label">
+                        <aside class="events__label__category" style="border: 1px solid <?php echo $label_color ;?>">
+                            <p class="events__label__category__text">
+                                UPCOMING
+                            </p>
+                        </aside>
+                    </article>
+                    <h3 class="events__title"><?php echo get_the_title() ;?></h3>
+                    <p class="events__date"><?php echo $event_date ;?>
+                    </p>
+                    <h3 class="events__headline events__headline--right"><?php echo get_the_content() ;?></h3>
+                </article>
+            </section>
         </section>
         <?php endwhile ?>
         <?php else : ?>

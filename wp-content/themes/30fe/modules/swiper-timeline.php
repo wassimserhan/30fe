@@ -24,9 +24,9 @@
                             <div class="swiper-event-content">
 
                                 <p class="h--timeline-event-description">
-                                    Established in Toronto, Ontario, Canada.
+                                    <?php echo $story ;?>
                                 </p>
-                                <p class="swiper-date ">2002</p>
+                                <p class="swiper-date "><?php echo $year ;?></p>
                             </div>
                             <figure class="h__timeline__image">
                                 <img loading="lazy"
