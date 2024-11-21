@@ -358,13 +358,10 @@
 }
 
 .nav__dropdown-grid {
-  // grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  // gap: 20px;
   column-fill: balance;
   columns: 4;
   margin: 1rem 8rem;
   display: none;
-  // border-top: 1px solid $taupe;
   border-bottom: 1px solid $black;
   @include bp(laptop) {
     display: none;

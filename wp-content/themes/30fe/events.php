@@ -52,7 +52,7 @@ get_header();
                     <p class="events__date"><?php echo $event_date ;?>
                     </p>
                     <p class="events__headline events__headline--right">
-                        <?php echo wp_trim_words( get_the_content(), 30, '...' ); ?></p>
+                        <?php echo wp_trim_words( get_the_content(), 20, '...' ); ?></p>
                     <a href="<?php the_permalink() ?>" aria-label="Read more">
                         <button class="events__button">Learn More</button>
                     </a>

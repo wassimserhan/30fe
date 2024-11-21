@@ -96,55 +96,56 @@ accordionsAbout.forEach(accordion => {
   });
 }
 
-//Desktop Dropdowns
+// Desktop Dropdowns
 const navExpertise = document.querySelector('.nav-expertise');
 const plusExpertise = document.querySelector('.plus-expertise');
 const expertiseDropdown = document.querySelector('.nav__dropdown-grid--expertise');
-
-navExpertise.addEventListener("mouseover", function () {
-  expertiseDropdown.classList.toggle('nav__dropdown-grid--active');
-  plusExpertise.classList.toggle('plus-nav--active');
-  sectorsDropdown.classList.remove('nav__dropdown-grid--active');
-  plusSectors.classList.remove('plus-nav--active');
-})
-
 
 const navSectors = document.querySelector('.nav-sectors');
 const plusSectors = document.querySelector('.plus-sectors');
 const sectorsDropdown = document.querySelector('.nav__dropdown-grid--sectors');
 
-navSectors.addEventListener("mouseover", function () {
-  sectorsDropdown.classList.toggle('nav__dropdown-grid--active');
-  plusSectors.classList.toggle('plus-nav--active');
-  expertiseDropdown.classList.remove('nav__dropdown-grid--active');
-  plusExpertise.classList.remove('plus-nav--active');
-})
-
-window.addEventListener('resize', function (event) {
+// Helper function to close all dropdowns
+const closeAllDropdowns = () => {
   expertiseDropdown.classList.remove('nav__dropdown-grid--active');
   plusExpertise.classList.remove('plus-nav--active');
   sectorsDropdown.classList.remove('nav__dropdown-grid--active');
   plusSectors.classList.remove('plus-nav--active');
-}, true);
+};
 
-window.addEventListener("scroll", function () {
-  expertiseDropdown.classList.remove('nav__dropdown-grid--active');
-  plusExpertise.classList.remove('plus-nav--active');
-  sectorsDropdown.classList.remove('nav-expertise__grid--active');
-  plusSectors.classList.remove('plus-nav--active');
-}, true);
+// Open Expertise Dropdown
+navExpertise.addEventListener('mouseover', () => {
+  closeAllDropdowns();
+  expertiseDropdown.classList.add('nav__dropdown-grid--active');
+  plusExpertise.classList.add('plus-nav--active');
+});
 
+// Open Sectors Dropdown
+navSectors.addEventListener('mouseover', () => {
+  closeAllDropdowns();
+  sectorsDropdown.classList.add('nav__dropdown-grid--active');
+  plusSectors.classList.add('plus-nav--active');
+});
 
+// Close dropdowns on resize
+window.addEventListener('resize', () => {
+  closeAllDropdowns();
+});
 
+// Close dropdowns on scroll
+window.addEventListener('scroll', () => {
+  closeAllDropdowns();
+});
 
-
-expertiseDropdown.addEventListener('mouseleave', function () {
+// Close Expertise Dropdown on mouseleave
+expertiseDropdown.addEventListener('mouseleave', () => {
   expertiseDropdown.classList.remove('nav__dropdown-grid--active');
   plusExpertise.classList.remove('plus-nav--active');
 });
 
-
-sectorsDropdown.addEventListener('mouseleave', function () {
+// Close Sectors Dropdown on mouseleave
+sectorsDropdown.addEventListener('mouseleave', () => {
   sectorsDropdown.classList.remove('nav__dropdown-grid--active');
   plusSectors.classList.remove('plus-nav--active');
 });
+

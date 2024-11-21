@@ -1234,7 +1234,7 @@ button.splide__arrow:disabled {
 
 .frm_opt_container {
   display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+  grid-template-columns: repeat(auto-fit, minmax(258px, 1fr)) !important;
   padding: 0 0 1rem !important;
 }
 
@@ -6253,9 +6253,8 @@ body.admin-bar .search-overlay--desktop {
   margin: auto;
 }
 .events__detail {
-  width: 50%;
+  width: 60%;
   margin: 0 auto;
-  flex: 1;
 }
 @media (max-width: 1024px) {
   .events__detail {
@@ -6271,6 +6270,7 @@ body.admin-bar .search-overlay--desktop {
   margin: 0;
 }
 .events__detail--right {
+  width: 40%;
   padding: 0 16px;
   margin: 0;
 }
@@ -6286,7 +6286,7 @@ body.admin-bar .search-overlay--desktop {
 .events__label {
   display: flex;
   justify-content: flex-start;
-  padding: 40px 0 16px;
+  padding: 20px 0 16px;
   place-items: center;
 }
 .events__label__category {

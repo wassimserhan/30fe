@@ -52,7 +52,7 @@
 
 .frm_opt_container {
   display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+  grid-template-columns: repeat(auto-fit, minmax(258px, 1fr)) !important;
   padding: 0 0 1rem !important;
 }
 
@@ -60,9 +60,9 @@
   margin: 0;
 }
 
-.with_frm_style input[type='text'],
-.with_frm_style input[type='email'],
-.with_frm_style input[type='tel'],
+.with_frm_style input[type="text"],
+.with_frm_style input[type="email"],
+.with_frm_style input[type="tel"],
 .with_frm_style textarea {
   padding: 12px;
   background-color: transparent;
