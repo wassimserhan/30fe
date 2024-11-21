@@ -59,13 +59,7 @@
   }
 
   &__headline {
-    font-size: 4rem;
     padding-bottom: 20px;
-    color: $whitesmoke;
-
-    &--right {
-      color: $black;
-    }
   }
 
   &__label {
@@ -106,5 +100,13 @@
     &--right {
       color: $black;
     }
+  }
+
+  &__button {
+    background-color: transparent;
+    color: $black;
+    border: 1px solid $black;
+    width: 100%;
+    margin: 0 0 20px;
   }
 }

@@ -51,7 +51,11 @@ get_header();
                     <h3 class="events__title"><?php echo get_the_title() ;?></h3>
                     <p class="events__date"><?php echo $event_date ;?>
                     </p>
-                    <h3 class="events__headline events__headline--right"><?php echo get_the_content() ;?></h3>
+                    <p class="events__headline events__headline--right">
+                        <?php echo wp_trim_words( get_the_content(), 30, '...' ); ?></p>
+                    <a href="<?php the_permalink() ?>" aria-label="Read more">
+                        <button class="events__button">Learn More</button>
+                    </a>
                 </article>
             </section>
         </section>

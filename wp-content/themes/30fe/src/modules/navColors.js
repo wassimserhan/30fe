@@ -259,6 +259,13 @@ if (true) {
       navScroll = false;
       break;
 
+    case 'single-events.php':
+      gsap.set(".nav", { backgroundColor: $whitesmoke })
+      sectionColors = [$whitesmoke];
+      navColors = [$whitesmoke];
+      navScroll = false;
+      break;
+
     case 'education.php':
       gsap.set(".nav", { backgroundColor: $whitesmoke })
       sectionColors = [$whitesmoke];
