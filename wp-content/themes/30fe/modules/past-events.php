@@ -17,7 +17,7 @@
                 array(
             'key'     => 'event_date', // ACF date name
             'value'   => $today,
-            'compare' => '<=',
+            'compare' => '<',
             'type'    => 'DATE'
         ),
     ),
