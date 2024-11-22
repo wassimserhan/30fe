@@ -4103,7 +4103,7 @@ document.addEventListener('DOMContentLoaded', function () {
         loadMoreBtn.setAttribute('data-page', currentPage);
       } else {
         loadMoreBtn.style.display = 'none'; // Hide button if no more posts
-        console.log(response.data.data); // Log error message
+        console.log(response.data.data); // Log error msg
       }
     }).catch(error => {
       console.error('Error:', error);

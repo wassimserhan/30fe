@@ -36,7 +36,6 @@ global $wp_query;
                 <?php 
         
           while (have_posts()):the_post(); ?>
-
                 <?php include get_template_directory() . '/modules/insights-card.php'; ?>
                 <?php endwhile ?>
             </section>

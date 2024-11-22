@@ -61,7 +61,7 @@ get_header();
         </section>
         <?php endwhile ?>
         <?php else : ?>
-        <!-- Custom message when no posts are found -->
+        <!-- Custom message when no posts are found-->
         <section class="events__intro">
             <section class=" max-width max-padding">
                 <h2 class="events__title">No Upcoming Events. Please check back later.</h2>

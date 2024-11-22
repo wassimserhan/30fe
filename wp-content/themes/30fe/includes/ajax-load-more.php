@@ -13,7 +13,7 @@ function load_more_posts() {
         'paged'          => $next_page
     ];
 
-    // Create a new WP_Query
+    // Create new WP_Query
     $query = new WP_Query($query_args);
 
     if ($query->have_posts()) {

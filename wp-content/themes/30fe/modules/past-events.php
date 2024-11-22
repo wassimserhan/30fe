@@ -15,7 +15,7 @@
                 'meta_type'      => 'DATE',
                 'meta_query'     => array(
                 array(
-            'key'     => 'event_date', // ACF date field name
+            'key'     => 'event_date', // ACF date name
             'value'   => $today,
             'compare' => '<=',
             'type'    => 'DATE'

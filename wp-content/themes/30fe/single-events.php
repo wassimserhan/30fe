@@ -16,7 +16,7 @@
                           <p class="event-post__copy"> <?php echo the_content();?></p>
                       </article>
 
-                      <!-- Related Expert -->
+                      <!-- Related Expert-->
                       <?php if(get_field ( 'expert' ) ) : ?>
                       <section class="">
                           <?php 
