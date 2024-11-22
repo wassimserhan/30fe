@@ -10,7 +10,6 @@ get_header();
             <h2 class="news__subheadline">Keep up with the latest updates about 30 Forensic Engineering</h2>
 
             <section id="news" class="news__grid">
-
                 <?php if (have_posts()) : ?>
                 <?php while (have_posts()) : the_post(); ?>
                 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
