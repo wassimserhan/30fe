@@ -41,7 +41,7 @@
                              alt="<?php echo $alt; ?>" title="<?php echo $title; ?>">
 
                      </a>
-                     <p class="news__card__label__date"><?php echo get_the_date( 'F j, Y' ); ?></p>
+                     <p class="news__card__label__date"><?php echo $event_date; ?></p>
                      <p class="news__card__copy">
                          <?php echo wp_trim_words(get_the_content(), 10, '...' ); ?>
                      </p>
