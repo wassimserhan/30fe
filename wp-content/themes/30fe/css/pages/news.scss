@@ -72,12 +72,10 @@
   &__card {
     max-width: 341px;
     background-color: $whitesmoke;
-    // width: 100%;
+
     padding: 15px;
-    // flex-grow: 1;
 
     &__image {
-      // width: 300px;
       height: 235px;
       object-fit: cover;
       padding: 16px 0;
