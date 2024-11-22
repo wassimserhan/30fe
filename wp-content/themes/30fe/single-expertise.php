@@ -170,8 +170,6 @@ get_header();
             <section class="expertise-form__wrapper">
                 <section class="expertise-form__form">
                     <h3 class="sector-form__headline">Contact an Expert</h3>
-                    <!-- <p class="expertise-form__form__copy">Fill up this form and someone from our team will be in touch with you
-            shortly.</p> -->
                     <p class="expertise-form__form__required">*REQUIRED</p>
                     <!-- form inserted here -->
                     <?php echo FrmFormsController::get_form_shortcode( array( 'id' => 8 ) ); ?>
