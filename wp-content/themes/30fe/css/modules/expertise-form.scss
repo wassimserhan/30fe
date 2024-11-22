@@ -1,12 +1,12 @@
 .expertise-form {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   background-color: #f2f1ed;
 
-    &--no-padding {
-       @include bp(phone) {
-        padding: 0;
-  }
+  &--no-padding {
+    @include bp(phone) {
+      padding: 0;
     }
+  }
 
   a {
     color: $black;
@@ -84,10 +84,6 @@
     line-height: 120%; /* 38.4px */
     letter-spacing: -1.6px;
     padding-bottom: 24px;
-
-    // &-splide {
-    //   white-space: nowrap;
-    // }
   }
 
   &__form {
@@ -129,12 +125,12 @@
       &::placeholder {
         color: $black;
         &::after {
-          content: ' *';
+          content: " *";
           color: red;
         }
       }
 
-      &[type='submit'] {
+      &[type="submit"] {
         font-size: 0.8em;
         background-color: $black;
         border: 1px solid $black;
