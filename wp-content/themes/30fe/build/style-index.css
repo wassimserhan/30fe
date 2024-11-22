@@ -1992,6 +1992,14 @@ body.admin-bar .search-overlay--desktop {
     align-items: center;
   }
 }
+.sector-form__padding {
+  padding: 8rem;
+}
+@media (max-width: 1024px) {
+  .sector-form__padding {
+    padding: 2rem 1.5rem;
+  }
+}
 .sector-form__headline {
   font-size: 48px;
   font-style: normal;

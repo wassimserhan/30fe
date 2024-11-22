@@ -1,5 +1,5 @@
 .sector-form {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   // padding: 128px;
   background-color: $whitesmoke;
 
@@ -11,6 +11,13 @@
     @include bp(tablet) {
       flex-direction: column;
       align-items: center;
+    }
+  }
+
+  &__padding {
+    padding: 8rem;
+    @include bp(laptop) {
+      padding: 2rem 1.5rem;
     }
   }
 
@@ -62,12 +69,12 @@
       &::placeholder {
         color: $black;
         &::after {
-          content: ' *';
+          content: " *";
           color: red;
         }
       }
 
-      &[type='submit'] {
+      &[type="submit"] {
         font-size: 0.8em;
         background-color: $black;
         border: 1px solid $black;
