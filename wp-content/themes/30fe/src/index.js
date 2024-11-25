@@ -228,7 +228,6 @@ import './modules/homeStats';
 import './modules/accordion';
 import './modules/horizontal-timeline';
 import './modules/navColors';
-import './modules/navColors_2';
 import './modules/navbar';
 import './modules/careers';
 

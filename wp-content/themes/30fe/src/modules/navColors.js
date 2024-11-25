@@ -260,9 +260,12 @@ if (true) {
       break;
 
     case 'single-events.php':
-      gsap.set(".nav", { backgroundColor: $whitesmoke })
-      sectionColors = [$whitesmoke];
-      navColors = [$whitesmoke];
+      const eventColorId = document.getElementById('event-color');
+      const eventColor = eventColorId.getAttribute("data-color");
+      console.log("hello")
+      gsap.set(".nav", { backgroundColor: eventColor })
+      sectionColors = [eventColor];
+      navColors = [eventColor];
       navScroll = false;
       break;
 

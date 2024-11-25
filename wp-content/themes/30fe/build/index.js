@@ -3804,15 +3804,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_horizontal_timeline__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_modules_horizontal_timeline__WEBPACK_IMPORTED_MODULE_17__);
 /* harmony import */ var _modules_navColors__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./modules/navColors */ "./src/modules/navColors.js");
 /* harmony import */ var _modules_navColors__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(_modules_navColors__WEBPACK_IMPORTED_MODULE_18__);
-/* harmony import */ var _modules_navColors_2__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./modules/navColors_2 */ "./src/modules/navColors_2.js");
-/* harmony import */ var _modules_navColors_2__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(_modules_navColors_2__WEBPACK_IMPORTED_MODULE_19__);
-/* harmony import */ var _modules_navbar__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./modules/navbar */ "./src/modules/navbar.js");
-/* harmony import */ var _modules_navbar__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(_modules_navbar__WEBPACK_IMPORTED_MODULE_20__);
-/* harmony import */ var _modules_careers__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./modules/careers */ "./src/modules/careers.js");
-/* harmony import */ var _modules_careers__WEBPACK_IMPORTED_MODULE_21___default = /*#__PURE__*/__webpack_require__.n(_modules_careers__WEBPACK_IMPORTED_MODULE_21__);
-/* harmony import */ var _modules_search__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./modules/search */ "./src/modules/search.js");
-/* harmony import */ var _modules_mobileAccordion__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./modules/mobileAccordion */ "./src/modules/mobileAccordion.js");
-/* harmony import */ var _modules_mobileAccordion__WEBPACK_IMPORTED_MODULE_23___default = /*#__PURE__*/__webpack_require__.n(_modules_mobileAccordion__WEBPACK_IMPORTED_MODULE_23__);
+/* harmony import */ var _modules_navbar__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./modules/navbar */ "./src/modules/navbar.js");
+/* harmony import */ var _modules_navbar__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(_modules_navbar__WEBPACK_IMPORTED_MODULE_19__);
+/* harmony import */ var _modules_careers__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./modules/careers */ "./src/modules/careers.js");
+/* harmony import */ var _modules_careers__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(_modules_careers__WEBPACK_IMPORTED_MODULE_20__);
+/* harmony import */ var _modules_search__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./modules/search */ "./src/modules/search.js");
+/* harmony import */ var _modules_mobileAccordion__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./modules/mobileAccordion */ "./src/modules/mobileAccordion.js");
+/* harmony import */ var _modules_mobileAccordion__WEBPACK_IMPORTED_MODULE_22___default = /*#__PURE__*/__webpack_require__.n(_modules_mobileAccordion__WEBPACK_IMPORTED_MODULE_22__);
 
 
 //splide modules
@@ -4007,12 +4005,11 @@ if (slider6) {
 
 
 
-
 // classes
 
-const magicalSearch = new _modules_search__WEBPACK_IMPORTED_MODULE_22__["default"]();
+const magicalSearch = new _modules_search__WEBPACK_IMPORTED_MODULE_21__["default"]();
 if (document.querySelector('.accordion-container')) {
-  const mobileAccordion = new (_modules_mobileAccordion__WEBPACK_IMPORTED_MODULE_23___default())('.accordion-container', {
+  const mobileAccordion = new (_modules_mobileAccordion__WEBPACK_IMPORTED_MODULE_22___default())('.accordion-container', {
     openOnInit: [0],
     collapse: false
   });
@@ -5835,11 +5832,14 @@ if (true) {
       navScroll = false;
       break;
     case 'single-events.php':
+      const eventColorId = document.getElementById('event-color');
+      const eventColor = eventColorId.getAttribute("data-color");
+      console.log("hello");
       gsap.set(".nav", {
-        backgroundColor: $whitesmoke
+        backgroundColor: eventColor
       });
-      sectionColors = [$whitesmoke];
-      navColors = [$whitesmoke];
+      sectionColors = [eventColor];
+      navColors = [eventColor];
       navScroll = false;
       break;
     case 'education.php':
@@ -5891,34 +5891,6 @@ if (true) {
     }
   });
 }
-
-/***/ }),
-
-/***/ "./src/modules/navColors_2.js":
-/*!************************************!*\
-  !*** ./src/modules/navColors_2.js ***!
-  \************************************/
-/***/ (() => {
-
-// const sectionColors = ["dodgerblue", "salmon", "green", "purple", "maroon", "dodgerblue"]
-// const navColors = ["#00BFFF", "#FFA07A", "#90EE90", "#EE82EE", "#FF6347", "#00BFFF"]
-
-// //apply sectionColors to each .fullscreen element
-// gsap.set(".fullscreen", { backgroundColor: gsap.utils.wrap(sectionColors) })
-
-// const sections = gsap.utils.toArray(".fullscreen")
-
-// sections.forEach(function (section, index) {
-//   console.log(section, navColors[index])
-//   ScrollTrigger.create({
-//     trigger: section,
-//     start: "top 112px",
-//     end: "bottom 112px",
-//     animation: gsap.to(".nav", { backgroundColor: navColors[index], immediateRender: false }),
-//     toggleActions: "restart none none reverse"
-
-//   })
-// })
 
 /***/ }),
 

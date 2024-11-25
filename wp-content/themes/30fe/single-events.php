@@ -1,6 +1,8 @@
   <?php 
 
   get_header(); 
+
+    $color = get_field('event_color');
   
    ?>
 
@@ -9,7 +11,8 @@
           <section class="max-width max-padding">
               <section class="event-post">
                   <div class="event-post__container">
-                      <article class="event-post__left">
+                      <article id="event-color" class="event-post__left"
+                          data-color="<?php echo esc_html($color['value']); ?>">
 
                           <h2 class="event-post__headline"><?php the_title() ?></h2>
 
