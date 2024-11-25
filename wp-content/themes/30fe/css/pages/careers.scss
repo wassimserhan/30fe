@@ -153,14 +153,14 @@
 }
 
 .careers__vision--desktop {
-  @include bp(phone) {
+  @include bp(custom_laptop) {
     display: none;
   }
 }
 
 .careers__vision--mobile {
   display: none;
-  @include bp(phone) {
+  @include bp(custom_laptop) {
     display: block;
   }
 }
@@ -174,7 +174,8 @@
 
 .career-values__container {
   position: relative;
-  height: 100vh;
+  padding-top: 56.25%; /* Aspect ratio (16:9) = (9/16)*100 */
+  height: 0;
 }
 
 .careers-values__card {
@@ -231,6 +232,15 @@
 
   &:hover {
     z-index: 8 !important;
+    background-color: $green;
+  }
+
+  &:hover > .careers__slide__card__number {
+    color: $whitesmoke;
+  }
+
+  & > .careers__slide__card__number {
+    color: $green;
   }
 }
 
@@ -254,8 +264,8 @@
 }
 
 #value-5 {
-  top: 150px;
-  left: 550px;
+  top: 250px;
+  left: 700px;
   z-index: 5;
 
   &:hover {
@@ -274,11 +284,16 @@
 
 #value-6 {
   top: 0px;
-  left: 600px;
+  left: 750px;
   z-index: 5;
 
   &:hover {
-    z-index: 0;
+    z-index: 8 !important;
+    background-color: $blue;
+  }
+
+  &:hover > .careers__slide__card__number {
+    color: $whitesmoke;
   }
 }
 
