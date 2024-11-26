@@ -201,8 +201,7 @@ if (slider6) {
     breakpoints: {
       486: {
         width: '100%',
-        perPage: 1,
-        arrows: true,
+        perPage: 1
 
       }
     },

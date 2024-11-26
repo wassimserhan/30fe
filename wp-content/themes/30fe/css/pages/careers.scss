@@ -33,6 +33,9 @@
 
   &__banners {
     width: calc(92.3333% - 0.466667rem);
+    @include bp(phone) {
+      width: 100%;
+    }
   }
 
   &__headline {
@@ -43,24 +46,12 @@
     padding-bottom: 32px;
     color: $whitesmoke;
 
-    &--blue {
-      color: $blue;
+    &--center {
+      text-align: center;
+    }
+
+    &--no-padding {
       padding-bottom: 0;
-      // @include bp(tablet) {
-      //   padding-bottom: 5rem;
-      // }
-    }
-
-    &--taupe {
-      color: $taupe;
-    }
-
-    &--green {
-      color: $green;
-    }
-
-    &--white {
-      color: $whitesmoke;
     }
   }
 

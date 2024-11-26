@@ -822,10 +822,6 @@ hr {
   margin: auto !important;
 }
 
-.splide-careers {
-  padding: 0 !important;
-}
-
 .splide-careers-banners {
   background-color: #1d1c1d;
 }
@@ -5876,6 +5872,11 @@ body.admin-bar .search-overlay--desktop {
 .careers__banners {
   width: calc(92.3333% - 0.466667rem);
 }
+@media (max-width: 479px) {
+  .careers__banners {
+    width: 100%;
+  }
+}
 .careers__headline {
   font-size: 2.45em;
   font-weight: 700;
@@ -5884,18 +5885,11 @@ body.admin-bar .search-overlay--desktop {
   padding-bottom: 32px;
   color: #f2f1ed;
 }
-.careers__headline--blue {
-  color: #0175df;
+.careers__headline--center {
+  text-align: center;
+}
+.careers__headline--no-padding {
   padding-bottom: 0;
-}
-.careers__headline--taupe {
-  color: #cbbea5;
-}
-.careers__headline--green {
-  color: #08cb80;
-}
-.careers__headline--white {
-  color: #f2f1ed;
 }
 .careers__copy {
   color: #f2f1ed;

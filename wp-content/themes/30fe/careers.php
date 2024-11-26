@@ -73,7 +73,7 @@ while( have_rows('vision') ) : the_row();
     <section class="careers__vision fullscreen">
         <section class="max-width max-padding">
             <section class="careers__intro__wrapper">
-                <h2 class="careers__headline careers__headline--orange"><?php echo get_sub_field('vision_headline') ;?>
+                <h2 class="careers__headline"><?php echo get_sub_field('vision_headline') ;?>
                 </h2>
                 <p class="careers__copy"><?php echo get_sub_field('vision_copy') ;?></p>
             </section>
@@ -90,7 +90,7 @@ while( have_rows('values') ) : the_row();
 ?>
     <section class="careers__vision careers__vision--desktop fullscreen">
         <section class="max-width careers__vision__padding">
-            <h2 class="careers__headline careers__headline--blue"><?php echo get_sub_field('values_headline') ;?></h2>
+            <h2 class="careers__headline careers__headline--center"><?php echo get_sub_field('values_headline') ;?></h2>
             <!-- Desktop Module -->
             <section class="career-values__container">
                 <?php 
@@ -116,7 +116,8 @@ while( have_rows('values') ) : the_row();
 ?>
     <section class="careers__vision careers__vision--mobile fullscreen">
         <section class="max-width careers__vision__padding">
-            <h2 class="careers__headline careers__headline--blue"><?php echo get_sub_field('values_headline') ;?></h2>
+            <h2 class="careers__headline careers__headline--no-padding"><?php echo get_sub_field('values_headline') ;?>
+            </h2>
             <section style="" id="careers-slider" class="splide splide-careers" aria-labelledby="carousel-heading">
                 <section class="splide__track">
                     <section class="splide__list">

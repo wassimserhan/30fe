@@ -262,7 +262,7 @@ if (true) {
     case 'single-events.php':
       const eventColorId = document.getElementById('event-color');
       const eventColor = eventColorId.getAttribute("data-color");
-      console.log("hello")
+      console.log(eventColor)
       gsap.set(".nav", { backgroundColor: eventColor })
       sectionColors = [eventColor];
       navColors = [eventColor];

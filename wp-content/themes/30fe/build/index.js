@@ -3979,8 +3979,7 @@ if (slider6) {
     breakpoints: {
       486: {
         width: '100%',
-        perPage: 1,
-        arrows: true
+        perPage: 1
       }
     }
   }).mount();
@@ -5834,7 +5833,7 @@ if (true) {
     case 'single-events.php':
       const eventColorId = document.getElementById('event-color');
       const eventColor = eventColorId.getAttribute("data-color");
-      console.log("hello");
+      console.log(eventColor);
       gsap.set(".nav", {
         backgroundColor: eventColor
       });
