@@ -38,40 +38,28 @@
                     Detectives &ndash; Problem Solvers &ndash; Reporters &ndash;</span>
             </span>
         </div>
-        <div>
-
-            <!-- <section class="scroll-section">
-    <article class="scroll-text scroll-container">
-      <p class="scroll">We are Engineers &ndash; Scientists &ndash; Experts &ndash; Truth Seekers &ndash;
-        Detectives &ndash; Problem Solvers &ndash; Reporters</p>
-    </article>
-  </section> -->
-
-
-
-            <section class="max-width footer__padding">
-
-                <div class="footer__legal">
-                    <p class="footer__copyright">&copy;
-                        <span id="copyright">
-                            <script>
-                            document.getElementById('copyright').appendChild(document.createTextNode(new Date()
-                                .getFullYear()))
-                            </script>
-                        </span>
-                        &nbsp; 30 Forensic engineering.&nbsp; All Rights Reserved.
-                    </p>
-
-                </div>
-
-
-            </section>
-
+        <section class="max-width footer__padding">
+            <div class="footer__legal">
+                <p class="footer__copyright">
+                    &copy; <span id="copyright"></span> 30 Forensic Engineering.&nbsp; All Rights Reserved.
+                </p>
+            </div>
+        </section>
 </footer>
 
 
 
 <?php wp_footer(); ?>
+
+<script>
+// Dynamically update the copyright year
+document.addEventListener('DOMContentLoaded', function() {
+    const copyrightSpan = document.getElementById('copyright');
+    if (copyrightSpan) {
+        copyrightSpan.textContent = new Date().getFullYear();
+    }
+});
+</script>
 
 
 

@@ -55,6 +55,47 @@
                   </div>
               </section>
           </section>
+          <!-- Gallery -->
+          <section style="background-color: black">
+              <section class="max-width max-padding">
+                  <div class="lightgallery">
+                      <a href="<?php echo get_template_directory_uri(); ?>/images/Image.jpg"
+                          data-src="<?php echo get_template_directory_uri(); ?>/images/Image.jpg">
+                          <img src="<?php echo get_template_directory_uri(); ?>/images/Image.jpg" alt="Thumbnail">
+                      </a>
+                      <a href="<?php echo get_template_directory_uri(); ?>/images/Image.jpg"
+                          data-src="<?php echo get_template_directory_uri(); ?>/images/Image.jpg">
+                          <img src="<?php echo get_template_directory_uri(); ?>/images/Image.jpg" alt="Thumbnail">
+                      </a>
+                      <a href="<?php echo get_template_directory_uri(); ?>/images/Image.jpg"
+                          data-src="<?php echo get_template_directory_uri(); ?>/images/Image.jpg">
+                          <img src="<?php echo get_template_directory_uri(); ?>/images/Image.jpg" alt="Thumbnail">
+                      </a>
+                      <a href="<?php echo get_template_directory_uri(); ?>/images/Image.jpg"
+                          data-src="<?php echo get_template_directory_uri(); ?>/images/Image.jpg">
+                          <img src="<?php echo get_template_directory_uri(); ?>/images/Image.jpg" alt="Thumbnail">
+                      </a>
+                      <a href="<?php echo get_template_directory_uri(); ?>/images/Image.jpg"
+                          data-src="<?php echo get_template_directory_uri(); ?>/images/Image.jpg">
+                          <img src="<?php echo get_template_directory_uri(); ?>/images/Image.jpg" alt="Thumbnail">
+                      </a>
+                      <a href="<?php echo get_template_directory_uri(); ?>/images/Image.jpg"
+                          data-src="<?php echo get_template_directory_uri(); ?>/images/Image.jpg">
+                          <img src="<?php echo get_template_directory_uri(); ?>/images/Image.jpg" alt="Thumbnail">
+                      </a>
+                      <a href="<?php echo get_template_directory_uri(); ?>/images/Image.jpg"
+                          data-src="<?php echo get_template_directory_uri(); ?>/images/Image.jpg">
+                          <img src="<?php echo get_template_directory_uri(); ?>/images/Image.jpg" alt="Thumbnail">
+                      </a>
+                      <a href="<?php echo get_template_directory_uri(); ?>/images/Image.jpg"
+                          data-src="<?php echo get_template_directory_uri(); ?>/images/Image.jpg">
+                          <img src="<?php echo get_template_directory_uri(); ?>/images/Image.jpg" alt="Thumbnail">
+                      </a>
+
+                  </div>
+
+              </section>
+          </section>
       </section>
   </main>
 

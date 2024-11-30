@@ -237,6 +237,7 @@ import Search from './modules/search';
 import Accordion from './modules/mobileAccordion';
 
 
+
 // classes
 
 const magicalSearch = new Search()

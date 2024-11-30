@@ -55,3 +55,29 @@
     }
   }
 }
+
+.lightgallery {
+  display: grid; /* Use grid layout for better control */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Auto-adjust columns */
+  gap: 10px; /* Add spacing between items */
+  justify-content: center; /* Center items within the container */
+}
+
+.lightgallery a {
+  display: block; /* Ensure each <a> acts like a block container */
+  text-decoration: none; /* Remove underline for links */
+}
+
+.lightgallery img {
+  max-width: 100%; /* Set a maximum width for each thumbnail */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s ease; /* Add a hover effect */
+}
+
+// .lightgallery img:hover {
+//   transform: scale(1.1); /* Slight zoom on hover */
+//   border-color: #0073aa; /* Optional: Change border color on hover */
+// }

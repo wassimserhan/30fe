@@ -21,6 +21,7 @@
     "@wordpress/scripts": "*",
     "axios": "^1.5.0",
     "browser-sync": "^2.27.10",
+    "lightgallery": "^2.8.1",
     "normalize.css": "^8.0.1",
     "npm-run-all": "^4.1.5"
   }

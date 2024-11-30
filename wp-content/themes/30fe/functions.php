@@ -46,6 +46,67 @@ function theme_files() {
 add_action( 'wp_enqueue_scripts', 'theme_files' );
 
 
+// Enqueue LightGallery and plugins
+function enqueue_lightgallery_assets() {
+    // Enqueue LightGallery core CSS
+    wp_enqueue_style(
+        'lightgallery-css',
+        'https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css',
+        array(),
+        '2.7.1'
+    );
+
+    // Enqueue LightGallery core JS
+    wp_enqueue_script(
+        'lightgallery-js',
+        'https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.min.js',
+        array('jquery'), // Optional: replace 'jquery' if not needed
+        '2.7.1',
+        true
+    );
+
+    // Enqueue LightGallery plugins (e.g., zoom and thumbnail)
+    wp_enqueue_script(
+        'lg-zoom-js',
+        'https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js',
+        array('lightgallery-js'),
+        '2.7.1',
+        true
+    );
+
+    wp_enqueue_script(
+        'lg-thumbnail-js',
+        'https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js',
+        array('lightgallery-js'),
+        '2.7.1',
+        true
+    );
+}
+add_action('wp_enqueue_scripts', 'enqueue_lightgallery_assets');
+
+
+// Initialize LightGallery
+function initialize_lightgallery_script() {
+    ?>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const galleryElements = document.querySelectorAll('.lightgallery');
+    galleryElements.forEach(function(el) {
+        lightGallery(el, {
+            plugins: [lgThumbnail, lgZoom], // Ensure these match the plugins you're using
+            speed: 500,
+        });
+    });
+});
+</script>
+<?php
+}
+add_action('wp_footer', 'initialize_lightgallery_script', 20);
+
+
+
+
+
 function theme_features() {
   add_theme_support('title-tag');
   show_admin_bar( false );
