@@ -1,3 +1,10 @@
+<?php 
+
+$subtitle = get_field ('subtitle');
+
+?>
+
+
 <article class="insights__card">
     <a href="<?php the_permalink() ?>" aria-label="Read more">
 

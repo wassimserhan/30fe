@@ -3808,9 +3808,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_navbar__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(_modules_navbar__WEBPACK_IMPORTED_MODULE_19__);
 /* harmony import */ var _modules_careers__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./modules/careers */ "./src/modules/careers.js");
 /* harmony import */ var _modules_careers__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(_modules_careers__WEBPACK_IMPORTED_MODULE_20__);
-/* harmony import */ var _modules_search__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./modules/search */ "./src/modules/search.js");
-/* harmony import */ var _modules_mobileAccordion__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./modules/mobileAccordion */ "./src/modules/mobileAccordion.js");
-/* harmony import */ var _modules_mobileAccordion__WEBPACK_IMPORTED_MODULE_22___default = /*#__PURE__*/__webpack_require__.n(_modules_mobileAccordion__WEBPACK_IMPORTED_MODULE_22__);
+/* harmony import */ var _modules_lightgallery__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./modules/lightgallery */ "./src/modules/lightgallery.js");
+/* harmony import */ var _modules_lightgallery__WEBPACK_IMPORTED_MODULE_21___default = /*#__PURE__*/__webpack_require__.n(_modules_lightgallery__WEBPACK_IMPORTED_MODULE_21__);
+/* harmony import */ var _modules_search__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./modules/search */ "./src/modules/search.js");
+/* harmony import */ var _modules_mobileAccordion__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./modules/mobileAccordion */ "./src/modules/mobileAccordion.js");
+/* harmony import */ var _modules_mobileAccordion__WEBPACK_IMPORTED_MODULE_23___default = /*#__PURE__*/__webpack_require__.n(_modules_mobileAccordion__WEBPACK_IMPORTED_MODULE_23__);
 
 
 //splide modules
@@ -4004,11 +4006,12 @@ if (slider6) {
 
 
 
+
 // classes
 
-const magicalSearch = new _modules_search__WEBPACK_IMPORTED_MODULE_21__["default"]();
+const magicalSearch = new _modules_search__WEBPACK_IMPORTED_MODULE_22__["default"]();
 if (document.querySelector('.accordion-container')) {
-  const mobileAccordion = new (_modules_mobileAccordion__WEBPACK_IMPORTED_MODULE_22___default())('.accordion-container', {
+  const mobileAccordion = new (_modules_mobileAccordion__WEBPACK_IMPORTED_MODULE_23___default())('.accordion-container', {
     openOnInit: [0],
     collapse: false
   });
@@ -5133,6 +5136,112 @@ jQuery(document).ready(function () {
     jQuery(this).addClass("active");
   });
 });
+
+/***/ }),
+
+/***/ "./src/modules/lightgallery.js":
+/*!*************************************!*\
+  !*** ./src/modules/lightgallery.js ***!
+  \*************************************/
+/***/ (() => {
+
+// Select the LightGallery container and the Load All button
+const galleryContainer = document.querySelector('.lightgallery');
+const loadAllBtn = document.getElementById('loadAllBtn');
+
+// Function to initialize LightGallery with the first 3 images
+const initializeGallery = () => {
+  const allLinks = Array.from(galleryContainer.querySelectorAll('a'));
+  const initialLinks = allLinks.slice(0, 3);
+
+  // Hide all images except the first 3
+  allLinks.forEach((link, index) => {
+    if (index >= 3) {
+      link.style.display = 'none';
+    }
+  });
+
+  // Initialize LightGallery
+  const galleryInstance = lightGallery(galleryContainer, {
+    dynamic: true,
+    dynamicEl: initialLinks.map(link => ({
+      src: link.getAttribute('href'),
+      thumb: link.querySelector('img').getAttribute('src')
+    })),
+    loop: false // Prevent looping
+  });
+
+  // Custom behavior to explicitly prevent looping
+  galleryContainer.addEventListener('lgBeforeNextSlide', event => {
+    const {
+      index
+    } = event.detail;
+    const totalSlides = galleryInstance.getItems().length;
+
+    // Prevent navigation beyond the last slide
+    if (index >= totalSlides - 1) {
+      event.preventDefault();
+    }
+  });
+
+  // Dynamically load more slides when reaching the last slide
+  galleryContainer.addEventListener('lgAfterSlide', event => {
+    const {
+      index
+    } = event.detail;
+    const totalSlides = galleryInstance.getItems().length;
+    if (index === totalSlides - 1 && totalSlides < allLinks.length) {
+      const nextBatch = allLinks.slice(totalSlides, totalSlides + 3); // Load next 3 images
+
+      nextBatch.forEach(link => {
+        link.style.display = ''; // Reveal hidden link
+        galleryInstance.addSlide({
+          src: link.getAttribute('href'),
+          thumb: link.querySelector('img').getAttribute('src')
+        });
+      });
+    }
+  });
+};
+
+// Event listener for the Load All button
+loadAllBtn.addEventListener('click', () => {
+  const allLinks = Array.from(galleryContainer.querySelectorAll('a'));
+
+  // Show all hidden images
+  allLinks.forEach(link => {
+    link.style.display = ''; // Reveal all links
+  });
+
+  // Destroy the current LightGallery instance and reinitialize with all images
+  const dynamicEl = allLinks.map(link => ({
+    src: link.getAttribute('href'),
+    thumb: link.querySelector('img').getAttribute('src')
+  }));
+  lightGallery(galleryContainer).destroy();
+  const galleryInstance = lightGallery(galleryContainer, {
+    dynamic: true,
+    dynamicEl,
+    loop: false // Ensure looping is disabled
+  });
+
+  // Prevent navigation beyond the last slide in the fully loaded gallery
+  galleryContainer.addEventListener('lgBeforeNextSlide', event => {
+    const {
+      index
+    } = event.detail;
+    const totalSlides = galleryInstance.getItems().length;
+    if (index >= totalSlides - 1) {
+      event.preventDefault();
+    }
+  });
+
+  // Hide the Load All button after all images are loaded
+  loadAllBtn.style.display = 'none';
+});
+
+// Initialize LightGallery with the first 3 images
+initializeGallery();
 
 /***/ }),
 

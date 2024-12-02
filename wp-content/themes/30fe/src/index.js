@@ -229,6 +229,7 @@ import './modules/horizontal-timeline';
 import './modules/navColors';
 import './modules/navbar';
 import './modules/careers';
+import './modules/lightgallery';
 
 
 

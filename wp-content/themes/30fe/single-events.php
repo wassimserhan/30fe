@@ -93,7 +93,8 @@
                       </a>
 
                   </div>
-
+                  <!-- Load All Button -->
+                  <button id="loadAllBtn">Load All</button>
               </section>
           </section>
       </section>

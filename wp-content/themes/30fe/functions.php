@@ -512,18 +512,24 @@ add_action('init', 'register_custom_taxonomy');
     /*  Reading time  */
 
 function display_read_time() {
-    $content = get_post_field( 'post_content', $post->ID );
-    $count_words = str_word_count( strip_tags( $content ) );
-	
+    // Get the current post content
+    $content = get_post_field('post_content', get_the_ID());
+    
+    // Count the words
+    $count_words = str_word_count(strip_tags($content));
+    
+    // Calculate read time
     $read_time = ceil($count_words / 250);
     
-	 if ($read_time == 1) { $suffix = '<span class="rt-suffix"> min read</span>';  }
-	 else { $suffix = '<span class="rt-suffix"> min read</span>';  }
-	
+    // Set suffix
+    $suffix = '<span class="rt-suffix"> min read</span>';
+    
+    // Construct output
     $read_time_output = $read_time . $suffix;
-
+    
     return $read_time_output;
 }
+
 
 // Function to change "posts" to "insights" in the admin side menu
 function change_post_menu_label() {
@@ -553,16 +559,12 @@ function change_post_object_label() {
 }
 add_action( 'init', 'change_post_object_label' );
 
-function myprefix_unregister_tags() {
-    unregister_taxonomy_for_object_type('post_tag', 'post');
-}
-add_action('init', 'myprefix_unregister_tags');
-
-add_action( 'init', 'gp_register_taxonomy_for_object_type' );
-
 function gp_register_taxonomy_for_object_type() {
-    register_taxonomy_for_object_type( 'post_tag', 'team' );
-};
+    if (taxonomy_exists('post_tag')) {
+        register_taxonomy_for_object_type('post_tag', 'team');
+    }
+}
+add_action('init', 'gp_register_taxonomy_for_object_type');
 
 
 
