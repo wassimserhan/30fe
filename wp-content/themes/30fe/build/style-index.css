@@ -5422,6 +5422,7 @@ body.admin-bar .search-overlay--desktop {
 .event-post__container {
   display: flex;
   justify-content: space-between;
+  gap: 64px;
 }
 @media (max-width: 820px) {
   .event-post__container {
@@ -5489,6 +5490,21 @@ body.admin-bar .search-overlay--desktop {
   max-width: 100%; /* Set a maximum width for each thumbnail */
   height: auto; /* Maintain aspect ratio */
   transition: transform 0.3s ease; /* Add a hover effect */
+}
+
+.event-rsvp {
+  background-color: #f2f1ed;
+}
+.event-rsvp__form {
+  padding: 32px;
+}
+
+.gallery {
+  background-color: #1d1c1d;
+}
+.gallery__title {
+  color: #f2f1ed;
+  padding: 20px 0;
 }
 
 .contact {
@@ -6184,6 +6200,7 @@ body.admin-bar .search-overlay--desktop {
   letter-spacing: -0.6px;
   color: #f2f1ed;
   flex: 1 1 0px;
+  padding: 0 2px;
 }
 .careers__positions__intro--bold {
   font-weight: 700;

@@ -35,10 +35,11 @@ get_header();
                 <ul class="splide__list">
                     <?php 
               if( have_rows('banner_images') ): 
-              while( have_rows('banner_images') ) : the_row();
+              while( have_rows('banner_images') ) : the_row(); ?>
+                    <?php 
               $img = get_sub_field('image');
-              $image = $img['url'];
-              $alt = $img['alt'];
+              $image = esc_url($img['url']);
+                $alt = esc_attr($img['alt']);
               ?>
                     <li class="splide__slide">
                         <img loading="lazy" class="careers__banners" src="<?php echo $image ?>"

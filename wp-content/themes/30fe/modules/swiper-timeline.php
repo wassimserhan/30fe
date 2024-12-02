@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container fullscreen">
     <section class="max-padding max-width">
         <?php
                         if( have_rows('timeline') ):
@@ -9,8 +9,6 @@
             <div class="swiper swiper-container swiper-container--timeline">
                 <div class="swiper-wrapper">
                     <!-- Slides -->
-
-
                     <?php 
                         if( have_rows('milestone') ): 
                         while( have_rows('milestone') ) : the_row();

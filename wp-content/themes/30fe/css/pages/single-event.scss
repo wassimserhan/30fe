@@ -2,6 +2,7 @@
   &__container {
     display: flex;
     justify-content: space-between;
+    gap: 64px;
 
     @include bp(tablet) {
       display: block;
@@ -81,3 +82,20 @@
 //   transform: scale(1.1); /* Slight zoom on hover */
 //   border-color: #0073aa; /* Optional: Change border color on hover */
 // }
+
+.event-rsvp {
+  background-color: $whitesmoke;
+
+  &__form {
+    padding: 32px;
+  }
+}
+
+.gallery {
+  background-color: $black;
+
+  &__title {
+    color: $whitesmoke;
+    padding: 20px 0;
+  }
+}
