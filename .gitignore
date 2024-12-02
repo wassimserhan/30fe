@@ -13,13 +13,6 @@ wp-content/mu-plugins/
 wp-content/wp-cache-config.php
 wp-content/plugins/hello.php
 
-# Ignore the plugins directory (custom plugins or installed ones)
-wp-content/plugins/
-
-# Ignore the ai1wm-backups directory (for backup files)
-wp-content/ai1wm-backups/
-
-
 /.htaccess
 /license.txt
 /readme.html
