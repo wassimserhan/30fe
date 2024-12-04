@@ -30,7 +30,7 @@
                           <?php endif; ?>
 
                           <section class="event-rsvp__form">
-                              <h2>RSVP now!</h2>
+                              <h2>RSVP now</h2>
                               <p>Let us know you’re coming and we’ll save you a seat.</p>
                               <p class="expertise-form__form__required">*REQUIRED</p>
                               <!-- form inserted here -->

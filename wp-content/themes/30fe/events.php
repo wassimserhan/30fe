@@ -44,7 +44,7 @@ get_header();
                     <article class="events__label">
                         <aside class="events__label__category" style="border: 1px solid <?php echo $label_color ;?>">
                             <p class="events__label__category__text">
-                                UPCOMING EVENTS
+                                UPCOMING
                             </p>
                         </aside>
                     </article>

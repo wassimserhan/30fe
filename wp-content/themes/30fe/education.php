@@ -15,7 +15,7 @@ get_header();
                             our courses are accredited by the Law Society of Ontario and the Law Society of BC. Seminars
                             can be combined or customized as requested. To schedule a complimentary session for any of
                             the topics listed below, or to book a custom seminar, please reach out to our Vancouver,
-                            Toronto or LA contact...
+                            Toronto or LA contact.
                         </p>
                     </article>
                 </section>
