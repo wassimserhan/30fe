@@ -9,13 +9,15 @@
 
     & p {
     color: $whitesmoke;
-    a {
+  }
+
+   & a {
       color: $whitesmoke;
       text-decoration: underline;
     }
-  }
 
   }
+  
   &__left {
     width: 60%;
     @include bp(tablet) {

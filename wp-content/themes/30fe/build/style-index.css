@@ -5372,7 +5372,7 @@ body.admin-bar .search-overlay--desktop {
 .news-post__container p {
   color: #f2f1ed;
 }
-.news-post__container p a {
+.news-post__container a {
   color: #f2f1ed;
   text-decoration: underline;
 }
