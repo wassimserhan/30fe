@@ -7,6 +7,15 @@ require get_theme_file_path('/includes/insights-search.php');
 
 // register REST here
 
+function enqueue_custom_script() {
+    wp_enqueue_script('custom-ajax-script', get_template_directory_uri() . '/path-to-your-script.js', array('jquery'), null, true);
+    wp_localize_script('custom-ajax-script', 'wpAjax', array(
+        'ajaxUrl' => admin_url('admin-ajax.php'),
+    ));
+}
+add_action('wp_enqueue_scripts', 'enqueue_custom_script');
+
+
 
 
 function theme_files() {

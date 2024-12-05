@@ -53,48 +53,66 @@ dropdownInsights.forEach(dropdown => {
 });
 
 
+// Function to initialize category filtering
 function categoryFilter() {
+  // Dynamically determine the AJAX URL
+  const ajaxUrl = wpAjax ? wpAjax.ajaxUrl : `${window.location.origin}/wp-admin/admin-ajax.php`;
 
-  categoryInsights.forEach(function (item) {
+  // Get all category elements
+  const categoryInsights = document.querySelectorAll("ul > li");
 
+  if (categoryInsights.length === 0) {
+    console.warn('No category elements found.');
+    return;
+  }
+
+  // Add event listeners to each category item
+  categoryInsights.forEach(item => {
     item.addEventListener('click', (e) => {
+      // Safely get the value attribute
+      const category = e.target.getAttribute('value');
 
-      let category = e.target.attributes.value.nodeValue;
-      const button = document.querySelector('.insights__load');
+      if (!category) {
+        console.error('Category value not found on the clicked element.');
+        return;
+      }
 
-
-
-
-
-
-      let params = new URLSearchParams();
+      // Prepare the request parameters
+      const params = new URLSearchParams();
       params.append('action', 'insights_search');
       params.append('category', category);
 
-      axios.post('/wp-admin/admin-ajax.php', params)
+      // Get the button element to manipulate later
+      const button = document.querySelector('.insights__load');
+
+      // Send the POST request
+      axios.post(ajaxUrl, params)
         .then(res => {
-
-          let posts_list = document.querySelector('.insights__grid');
-
-          posts_list.innerHTML = res.data.data;
-
-
-          // let getUrl = window.location;
-          // let baseUrl = getUrl.protocol + "//" + getUrl.host + "/";
-
-          // window.history.pushState('', '', baseUrl + '30fe/' + 'insights/' + category);
-
-          if (button) {
-            button.parentNode.removeChild(button);
+          // Update the insights grid with the response
+          const postsList = document.querySelector('.insights__grid');
+          if (postsList) {
+            postsList.innerHTML = res.data.data;
+          } else {
+            console.error('Insights grid element not found.');
           }
 
+          // Remove the button if it exists
+          if (button && button.parentNode) {
+            button.parentNode.removeChild(button);
+          } else {
+            console.warn('Button element not found or has no parent node.');
+          }
 
         })
-    }
-
-    )
-  })
+        .catch(err => {
+          console.error('AJAX request failed:', err);
+        });
+    });
+  });
 }
+
+// Initialize the category filter
+categoryFilter();
 
 
 
