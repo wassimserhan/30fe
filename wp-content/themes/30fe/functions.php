@@ -175,6 +175,8 @@ function wsj_link_id( $location, $link_text ) {
 function remove_bloat() {
     remove_action( 'wp_head', 'rest_output_link_wp_head' );
     remove_action( 'wp_head', 'wp_shortlink_wp_head' );
+
+    
     // all actions related to emojis
     remove_action( 'admin_print_styles', 'print_emoji_styles' );
     remove_action( 'wp_head', 'print_emoji_detection_script', 7 );

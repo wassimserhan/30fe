@@ -5417,6 +5417,7 @@ body.admin-bar .search-overlay--desktop {
 }
 .news-post__label__category__text a {
   color: #f2f1ed;
+  text-decoration: none;
 }
 
 .event-post__container {

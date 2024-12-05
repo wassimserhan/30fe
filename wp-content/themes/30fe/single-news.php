@@ -12,11 +12,9 @@
                   <div class="news-post__container">
                       <article class="news-post__left">
                           <article class="news__card__label">
-                              <a href="<?php the_permalink() ?>" aria-label="Read more">
-                                  <?php require get_theme_file_path('/includes/blog-colors.php');?>
-                                  <aside class="news__card__label__category"
-                                      style="border: 1px solid <?php echo $label_color ;?>">
-                                      <p class="news-post__label__category__text">
+                              <a href="<?php the_permalink() ?>">
+                                  <aside class="news__card__label__category" style="border: 1px solid #cbbea5;">
+                                      <p class=" news-post__label__category__text">
                                           <?php echo get_the_term_list(get_the_ID(), 'news_category', '', ', ', ''); ?>
                                       </p>
                                   </aside>
