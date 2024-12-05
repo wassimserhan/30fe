@@ -74,7 +74,7 @@
           $phone = get_field('phone', $item);
           $email = get_field('email', $item); ?>
 
-          <section class="blog-card">
+          <section class="blog-card" style="min-height: initial">
               <a href="<?php the_permalink($item); ?>">
                   <img class="lazyload blog-card__image" src="<?php echo get_the_post_thumbnail_url($item); ?>" src="
                   <?php echo $image ?>" alt="<?php echo $name; ?>" title="<?php echo $name; ?>">

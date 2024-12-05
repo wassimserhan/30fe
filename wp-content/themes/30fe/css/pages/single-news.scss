@@ -6,6 +6,15 @@
     @include bp(tablet) {
       display: block;
     }
+
+    & p {
+    color: $whitesmoke;
+    a {
+      color: $whitesmoke;
+      text-decoration: underline;
+    }
+  }
+
   }
   &__left {
     width: 60%;
@@ -27,13 +36,7 @@
     margin: 0;
   }
 
-  &__copy ~ p {
-    color: $whitesmoke;
-    a {
-      color: $whitesmoke;
-      text-decoration: underline;
-    }
-  }
+  
   &__card {
     border: 1px solid #1d1c1d;
     padding: 32px;

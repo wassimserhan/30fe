@@ -5369,6 +5369,13 @@ body.admin-bar .search-overlay--desktop {
     display: block;
   }
 }
+.news-post__container p {
+  color: #f2f1ed;
+}
+.news-post__container p a {
+  color: #f2f1ed;
+  text-decoration: underline;
+}
 .news-post__left {
   width: 60%;
 }
@@ -5388,13 +5395,6 @@ body.admin-bar .search-overlay--desktop {
   line-height: 120%;
   letter-spacing: -4%;
   margin: 0;
-}
-.news-post__copy ~ p {
-  color: #f2f1ed;
-}
-.news-post__copy ~ p a {
-  color: #f2f1ed;
-  text-decoration: underline;
 }
 .news-post__card {
   border: 1px solid #1d1c1d;
