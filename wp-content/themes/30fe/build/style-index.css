@@ -6339,6 +6339,7 @@ body.admin-bar .search-overlay--desktop {
 }
 @media (max-width: 1024px) {
   .events__detail--right {
+    width: 100%;
     margin-top: 50px;
     padding: 0;
   }
