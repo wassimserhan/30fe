@@ -212,8 +212,18 @@ img {
     padding: 8rem 1.5rem;
   }
 
+  &--no-top {
+    padding: 0 8rem 8rem 8rem;
+    @include bp(laptop) {
+      padding: 0 1.5rem 2rem 1.5rem;
+    }
+  }
+
   &--no-side {
     padding: 8rem 0;
+    @include bp(laptop) {
+      padding: 2rem 1.5rem;
+    }
   }
 
   &--side {

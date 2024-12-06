@@ -16,12 +16,15 @@ get_header();
                             can be combined or customized as requested. To schedule a complimentary session for any of
                             the topics listed below, or to book a custom seminar, please reach out to our Vancouver,
                             Toronto or LA contact.
-                        </p>
+                        </p> <a href="<?php the_permalink() ?>" aria-label="Read more">
+                            <button class="education__button">Hire Us</button>
+                        </a>
                     </article>
+
                 </section>
             </section>
         </section>
-        <div class="accordion-container education__accordion-container max-width max-padding">
+        <div class="accordion-container education__accordion-container max-width max-padding max-padding--no-top">
             <?php
           if( have_rows('column_list') ): 
           while( have_rows('column_list') ) : the_row();

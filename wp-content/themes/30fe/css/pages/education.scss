@@ -10,4 +10,11 @@
   &__category-bullets {
     padding: 32px;
   }
+
+  &__button {
+     @include bp(laptop) {
+    width: 100%;
+  }
+   
+  }
 }

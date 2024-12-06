@@ -624,8 +624,21 @@ img {
     padding: 8rem 1.5rem;
   }
 }
+.max-padding--no-top {
+  padding: 0 8rem 8rem 8rem;
+}
+@media (max-width: 1024px) {
+  .max-padding--no-top {
+    padding: 0 1.5rem 2rem 1.5rem;
+  }
+}
 .max-padding--no-side {
   padding: 8rem 0;
+}
+@media (max-width: 1024px) {
+  .max-padding--no-side {
+    padding: 2rem 1.5rem;
+  }
 }
 .max-padding--side {
   padding: 0 8rem;
@@ -6378,6 +6391,11 @@ body.admin-bar .search-overlay--desktop {
 }
 .education__category-bullets {
   padding: 32px;
+}
+@media (max-width: 1024px) {
+  .education__button {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style-index.css.map*/

@@ -41,7 +41,7 @@
                               <a href="<?php the_permalink($item); ?>">
                                   <img class="lazyload blog-card__image"
                                       src="<?php echo get_the_post_thumbnail_url($item); ?>" src="
-                  <?php echo $image ?>" alt="<?php echo $name; ?>" title="<?php echo $name; ?>">
+                        <?php echo $image ?>" alt="<?php echo $name; ?>" title="<?php echo $name; ?>">
                               </a>
 
                               <div class="blog-card__name">
@@ -57,7 +57,6 @@
                           <?php endforeach; ?>
                           <?php endif ;?>
                           <?php endif ;?>
-
                   </div>
               </section>
           </section>

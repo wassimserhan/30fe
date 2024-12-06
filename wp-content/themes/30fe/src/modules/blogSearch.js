@@ -102,7 +102,6 @@ function categoryFilter() {
           } else {
             console.warn('Button element not found or has no parent node.');
           }
-
         })
         .catch(err => {
           console.error('AJAX request failed:', err);

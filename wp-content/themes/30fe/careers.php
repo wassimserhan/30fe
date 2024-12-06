@@ -90,8 +90,9 @@ if( have_rows('values') ):
 while( have_rows('values') ) : the_row(); 
 ?>
     <section class="careers__vision careers__vision--desktop fullscreen">
+        <h2 class="careers__headline careers__headline--center"><?php echo get_sub_field('values_headline') ;?></h2>
+
         <section class="max-width careers__vision__padding">
-            <h2 class="careers__headline careers__headline--center"><?php echo get_sub_field('values_headline') ;?></h2>
             <!-- Desktop Module -->
             <section class="career-values__container">
                 <?php 
@@ -279,6 +280,7 @@ while( have_rows('positions') ) : the_row();
                         <li class="careers__copy">Recruiter Phone Interview – An introductory conversation with our
                             Talent Team.</li>
                     </ul>
+                    <br>
                     <p style="font-size: 16px; font-weight: 400; color: #f2f1ed">If you require accommodation at any
                         stage of the
                         process, please let us
