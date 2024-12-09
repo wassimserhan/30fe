@@ -149,6 +149,34 @@ if (slider5) {
   }).mount();
 }
 
+
+
+
+const careerIntro = document.getElementById('careerIntro');
+
+if (careerIntro) {
+  new Splide('#careerIntro', {
+    type: 'loop',
+    perPage: 2,
+    arrows: false,
+    pagination: false,
+    keyboard: true,
+    autoplay: true,
+    rewind: true,
+    // padding: '5rem',
+    breakpoints: {
+      486: {
+        width: '100%',
+        perPage: 1
+
+      }
+    },
+
+  }).mount();
+}
+
+
+
 const careerSlider = document.getElementById('careers-slider');
 
 if (careerSlider) {
@@ -186,28 +214,7 @@ if (careerSlider) {
   }).mount();
 }
 
-const slider6 = document.getElementById('slider6');
 
-if (slider6) {
-  new Splide('#slider6', {
-    type: 'loop',
-    perPage: 2,
-    arrows: false,
-    pagination: false,
-    keyboard: true,
-    autoplay: true,
-    rewind: true,
-    // padding: '5rem',
-    breakpoints: {
-      486: {
-        width: '100%',
-        perPage: 1
-
-      }
-    },
-
-  }).mount();
-}
 
 
 

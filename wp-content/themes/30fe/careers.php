@@ -28,37 +28,42 @@ get_header();
 
 
     <!-- Career Slider -->
-
-    <section id="slider6" class="splide splide-careers splide-careers-banners" aria-labelledby="carousel-heading">
-        <section class="max-padding max-padding--no-side">
-            <div class="splide__track">
-                <ul class="splide__list">
-                    <?php 
+    <section class="black-bg">
+        <section class="max-width">
+            <section id="careerIntro" class="splide splide-careers-intro splide-careers-banners"
+                aria-labelledby="carousel-heading">
+                <section class="max-padding max-padding--no-side">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <?php 
               if( have_rows('banner_images') ): 
               while( have_rows('banner_images') ) : the_row(); ?>
-                    <?php 
+                            <?php 
               $img = get_sub_field('image');
               $image = esc_url($img['url']);
                 $alt = esc_attr($img['alt']);
               ?>
-                    <li class="splide__slide">
-                        <img loading="lazy" class="careers__banners" src="<?php echo $image ?>"
-                            alt="<?php echo $alt; ?>" title="<?php echo $alt; ?>">
+                            <li class="splide__slide">
+                                <img loading="lazy" class="careers__banners" src="<?php echo $image ?>"
+                                    alt="<?php echo $alt; ?>" title="<?php echo $alt; ?>">
 
-                    </li>
-                    <?php
+                            </li>
+                            <?php
           endwhile; ?>
-                    <?php endif;
+                            <?php endif;
             ?>
-                </ul>
-            </div>
+                        </ul>
+                    </div>
+                </section>
+            </section>
         </section>
     </section>
 
     <!-- Headline -->
     <section class="quote fullscreen" style="min-height:0">
         <section class="max-width max-padding">
-            <h3 class="quote__headline" style="padding: 0;">When talented and determined minds join forces, they achieve
+            <h3 class="quote__headline" style="padding: 0;">When talented and determined minds join forces, they
+                achieve
                 the impossible. At 30 Forensic Engineering, this isn’t just a belief—it’s our way of life. And we’re
                 searching for
                 individuals like you who share the same drive.</h3>
@@ -118,7 +123,8 @@ while( have_rows('values') ) : the_row();
 ?>
     <section class="careers__vision careers__vision--mobile fullscreen">
         <section class="max-width careers__vision__padding">
-            <h2 class="careers__headline careers__headline--no-padding"><?php echo get_sub_field('values_headline') ;?>
+            <h2 class="careers__headline careers__headline--no-padding">
+                <?php echo get_sub_field('values_headline') ;?>
             </h2>
             <section style="" id="careers-slider" class="splide splide-careers" aria-labelledby="carousel-heading">
                 <section class="splide__track">
@@ -200,7 +206,8 @@ while( have_rows('positions') ) : the_row();
 ?>
     <section id="positions" class="careers__vision fullscreen">
         <section class="max-width max-padding">
-            <h2 class="careers__headline careers__headline--white"><?php echo get_sub_field('positions_headline') ;?>
+            <h2 class="careers__headline careers__headline--white">
+                <?php echo get_sub_field('positions_headline') ;?>
             </h2>
 
 
@@ -246,20 +253,26 @@ while( have_rows('positions') ) : the_row();
             <p class="careers__copy" style="line-height: 110%; font-weight: 700">To Our Employees & Applicants:</br>
 
                 <span style="font-size: 16px; font-weight: 400">
-                    Welcome to 30 Forensic Engineering! We are committed to fostering a positive, inclusive workplace
+                    Welcome to 30 Forensic Engineering! We are committed to fostering a positive, inclusive
+                    workplace
                     that values each employee’s growth, happiness, and well-being. As part of this commitment, we
                     provide an accessible recruitment and employment experience free from discrimination on any
                     prohibited grounds, including gender identity, race, ethnic origin, age, physical or mental
                     disability, sexual orientation, and any other category protected by law.
                     </br> </br>
-                    We aim to support all employees and job applicants equally by providing necessary accommodations for
+                    We aim to support all employees and job applicants equally by providing necessary accommodations
+                    for
                     individuals with disabilities, in alignment with provincial and federal laws. We encourage
-                    applicants and employees to communicate any accommodation needs, as we are dedicated to ensuring a
+                    applicants and employees to communicate any accommodation needs, as we are dedicated to ensuring
+                    a
                     supportive environment that allows everyone to thrive professionally and personally.
                     </br> </br>
-                    In keeping with our values, we welcome applicants and employees to engage in an interactive process
-                    to identify reasonable accommodations. If you require support or assistance in performing essential
-                    job functions, please reach out to your manager, our HR department, or any member of our management
+                    In keeping with our values, we welcome applicants and employees to engage in an interactive
+                    process
+                    to identify reasonable accommodations. If you require support or assistance in performing
+                    essential
+                    job functions, please reach out to your manager, our HR department, or any member of our
+                    management
                     team.</span>
             </p>
             </br> </br>
@@ -267,14 +280,17 @@ while( have_rows('positions') ) : the_row();
 
                 <span style="font-size: 16px; font-weight: 400">
                     Aligned with our vision to foster a workplace built on diverse knowledge, perspectives, and an
-                    inclusive culture, our recruitment process is designed to offer a positive and equitable experience
-                    for all candidates. Most candidates complete the process in three meetings, though occasionally an
+                    inclusive culture, our recruitment process is designed to offer a positive and equitable
+                    experience
+                    for all candidates. Most candidates complete the process in three meetings, though occasionally
+                    an
                     additional conversation may be required:
                     </br> </br>
                     <ul style="list-style: circle; margin-left: 50px;">
                         <li class="careers__copy">Recruiter Phone Interview – An introductory conversation with our
                             Talent Team.</li>
-                        <li class="careers__copy">Hiring Manager Interview(s) – A discussion with the hiring manager,
+                        <li class="careers__copy">Hiring Manager Interview(s) – A discussion with the hiring
+                            manager,
                             which may include one or
                             two interviews to explore the role and team dynamics in more depth.</li>
                         <li class="careers__copy">Recruiter Phone Interview – An introductory conversation with our

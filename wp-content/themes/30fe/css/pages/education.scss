@@ -12,7 +12,7 @@
   }
 
   &__button {
-     @include bp(laptop) {
+     @include bp(phone) {
     width: 100%;
   }
    

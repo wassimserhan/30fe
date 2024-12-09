@@ -839,6 +839,10 @@ hr {
   background-color: #1d1c1d;
 }
 
+.splide-careers-intro {
+  padding: 0 !important;
+}
+
 .splide-careers {
   position: relative !important;
   padding: 0 !important;
@@ -6382,7 +6386,7 @@ body.admin-bar .search-overlay--desktop {
 .education__category-bullets {
   padding: 32px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 479px) {
   .education__button {
     width: 100%;
   }

@@ -3935,6 +3935,25 @@ if (slider5) {
     arrowPath: 'M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z'
   }).mount();
 }
+const careerIntro = document.getElementById('careerIntro');
+if (careerIntro) {
+  new _splidejs_splide__WEBPACK_IMPORTED_MODULE_5__["default"]('#careerIntro', {
+    type: 'loop',
+    perPage: 2,
+    arrows: false,
+    pagination: false,
+    keyboard: true,
+    autoplay: true,
+    rewind: true,
+    // padding: '5rem',
+    breakpoints: {
+      486: {
+        width: '100%',
+        perPage: 1
+      }
+    }
+  }).mount();
+}
 const careerSlider = document.getElementById('careers-slider');
 if (careerSlider) {
   new _splidejs_splide__WEBPACK_IMPORTED_MODULE_5__["default"]('#careers-slider', {
@@ -3965,25 +3984,6 @@ if (careerSlider) {
     arrowPath: 'M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z'
 
     // autoplay: true
-  }).mount();
-}
-const slider6 = document.getElementById('slider6');
-if (slider6) {
-  new _splidejs_splide__WEBPACK_IMPORTED_MODULE_5__["default"]('#slider6', {
-    type: 'loop',
-    perPage: 2,
-    arrows: false,
-    pagination: false,
-    keyboard: true,
-    autoplay: true,
-    rewind: true,
-    // padding: '5rem',
-    breakpoints: {
-      486: {
-        width: '100%',
-        perPage: 1
-      }
-    }
   }).mount();
 }
 

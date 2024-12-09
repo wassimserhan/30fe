@@ -70,7 +70,7 @@ get_header();
         </section>
         <?php wp_reset_postdata() ?>
 
-        <section class="events">
+        <!-- <section class="events">
             <section class="events__intro">
                 <section class="max-width max-padding">
                     <article>
@@ -80,7 +80,7 @@ get_header();
                     </article>
                 </section>
             </section>
-        </section>
+        </section> -->
 
         <!-- Past Events -->
 
