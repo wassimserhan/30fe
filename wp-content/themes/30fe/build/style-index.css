@@ -2904,6 +2904,14 @@ body.admin-bar .search-overlay--desktop {
 .email {
   font-family: "Inter", sans-serif;
 }
+.email__wrapper {
+  width: 50%;
+}
+@media (max-width: 479px) {
+  .email__wrapper {
+    width: 100%;
+  }
+}
 .email__headline {
   margin: 0;
 }
