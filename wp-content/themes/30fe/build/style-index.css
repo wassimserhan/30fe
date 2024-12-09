@@ -1253,7 +1253,7 @@ button.splide__arrow:disabled {
 .with_frm_style textarea {
   padding: 12px;
   background-color: transparent;
-  border: 1px solid #cbbea5;
+  border: 1px solid #1d1c1d;
   border-radius: 0;
   font-size: 12px;
   font-style: normal;
@@ -1273,6 +1273,12 @@ button.splide__arrow:disabled {
   color: #1d1c1d;
 }
 
+.contact .with_frm_style input[type=text],
+.contact .with_frm_style input[type=email],
+.contact .with_frm_style textarea {
+  border: 1px solid #cbbea5;
+}
+
 .frm_style_formidable-style.with_frm_style .frm_submit button {
   box-shadow: none !important;
 }
@@ -1289,7 +1295,7 @@ button.splide__arrow:disabled {
   text-transform: uppercase;
 }
 
-#field_8ds5v2_label {
+.contact .frm_primary_label {
   color: #f2f1ed !important;
 }
 

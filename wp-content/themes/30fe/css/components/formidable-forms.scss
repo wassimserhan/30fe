@@ -66,7 +66,7 @@
 .with_frm_style textarea {
   padding: 12px;
   background-color: transparent;
-  border: 1px solid $taupe;
+  border: 1px solid $black;
   border-radius: 0;
   font-size: 12px;
   font-style: normal;
@@ -79,6 +79,12 @@
   ::placeholder {
     color: $black;
   }
+}
+
+.contact .with_frm_style input[type="text"],
+.contact .with_frm_style input[type="email"],
+.contact .with_frm_style textarea {
+    border: 1px solid $taupe;
 }
 
 .frm_style_formidable-style.with_frm_style .frm_submit button {
@@ -98,7 +104,7 @@
 }
 
 //for contact page styling//
-#field_8ds5v2_label {
+.contact .frm_primary_label {
   color: #f2f1ed !important;
 }
 
