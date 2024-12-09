@@ -31,14 +31,11 @@ get_header();
             $educationItems = get_sub_field('list_item'); ?>
 
             <div class="ac">
-                <div class="ac-header mobile-accordion__items">
-                    <p class="mobile-accordion__number">
+                <div class="ac-header mobile-accordion__items mobile-accordion__items--education">
+                    <p class="mobile-accordion__number education__number">
                         <?php echo '0' . get_row_index() ?></p>
-                    <button type="button" class="ac-trigger"><?php echo $educationItems ?></button>
+                    <button type="button" class="ac-trigger education__items"><?php echo $educationItems ?></button>
                 </div>
-
-
-
                 <div class="ac-panel">
                     <section class="industry__category-bullets education__category-bullets">
                         <?php

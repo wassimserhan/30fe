@@ -4684,7 +4684,7 @@ body.admin-bar .search-overlay--desktop {
 
 .ac .ac-header {
   margin: 0;
-  padding: 0;
+  padding: 20px;
 }
 
 .ac .ac-trigger {
@@ -6386,6 +6386,27 @@ body.admin-bar .search-overlay--desktop {
   .education__button {
     width: 100%;
   }
+}
+.education__items {
+  font-size: 2rem !important;
+}
+@media (max-width: 1024px) {
+  .education__items {
+    font-size: 1rem !important;
+  }
+}
+.education__number {
+  font-size: 2rem !important;
+  color: #cbbea5 !important;
+}
+@media (max-width: 1024px) {
+  .education__number {
+    font-size: 1rem !important;
+  }
+}
+
+.mobile-accordion__items--education {
+  flex-direction: row;
 }
 
 /*# sourceMappingURL=style-index.css.map*/

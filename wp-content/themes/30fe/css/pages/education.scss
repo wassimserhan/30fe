@@ -17,4 +17,24 @@
   }
    
   }
+
+  &__items {
+    font-size: 2rem !important;
+       @include bp(laptop) {
+     font-size: 1rem !important;
+  }
+  }
+
+  &__number {
+    font-size: 2rem !important;
+    color: $taupe !important;
+         @include bp(laptop) {
+     font-size: 1rem !important;
+  }
+  }
 }
+
+.mobile-accordion__items--education {
+flex-direction: row;
+}
+
