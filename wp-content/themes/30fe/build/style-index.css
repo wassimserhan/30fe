@@ -1273,12 +1273,6 @@ button.splide__arrow:disabled {
   color: #1d1c1d;
 }
 
-.contact .with_frm_style input[type=text],
-.contact .with_frm_style input[type=email],
-.contact .with_frm_style textarea {
-  border: 1px solid #cbbea5;
-}
-
 .frm_style_formidable-style.with_frm_style .frm_submit button {
   box-shadow: none !important;
 }
@@ -1317,6 +1311,51 @@ button.splide__arrow:disabled {
 
 #field_n0c7f2 {
   background-color: #1d1c1d !important;
+}
+
+.contact .with_frm_style input[type=text],
+.contact .with_frm_style input[type=email],
+.contact .with_frm_style textarea {
+  border: 1px solid #cbbea5;
+}
+
+.contact .frm_button_submit {
+  background-color: #1d1c1d !important;
+  width: 100% !important;
+  border-color: #cbbea5 !important;
+  border-radius: 0 !important;
+}
+
+.contact .frm_submit button:hover {
+  background: #f2f1ed !important;
+  border-color: #1d1c1d !important;
+  color: #1d1c1d !important;
+}
+
+.expertise .frm_button_submit {
+  background-color: #1d1c1d !important;
+  width: 100% !important;
+  border-color: #cbbea5 !important;
+  border-radius: 0 !important;
+}
+
+.expertise .frm_submit button:hover {
+  background: #f2f1ed !important;
+  border-color: #1d1c1d !important;
+  color: #1d1c1d !important;
+}
+
+.event-post .frm_button_submit {
+  background-color: #1d1c1d !important;
+  width: 100% !important;
+  border-color: #cbbea5 !important;
+  border-radius: 0 !important;
+}
+
+.event-post .frm_submit button:hover {
+  background: #f2f1ed !important;
+  border-color: #1d1c1d !important;
+  color: #1d1c1d !important;
 }
 
 .nav {

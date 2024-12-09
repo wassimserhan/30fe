@@ -81,12 +81,6 @@
   }
 }
 
-.contact .with_frm_style input[type="text"],
-.contact .with_frm_style input[type="email"],
-.contact .with_frm_style textarea {
-    border: 1px solid $taupe;
-}
-
 .frm_style_formidable-style.with_frm_style .frm_submit button {
   box-shadow: none !important;
 }
@@ -126,4 +120,56 @@
 
 #field_n0c7f2 {
   background-color: $black !important;
+}
+
+
+// Contact Form Styling
+
+.contact .with_frm_style input[type="text"],
+.contact .with_frm_style input[type="email"],
+.contact .with_frm_style textarea {
+    border: 1px solid $taupe;
+}
+
+.contact .frm_button_submit {
+  background-color: $black !important;
+  width: 100% !important;
+  border-color: $taupe !important;
+  border-radius: 0 !important;
+}
+
+.contact .frm_submit button:hover {
+    background: $whitesmoke !important;
+    border-color: $black !important;
+    color: $black !important;
+}
+
+// Expertise Styling
+
+.expertise .frm_button_submit {
+  background-color: $black !important;
+  width: 100% !important;
+  border-color: $taupe !important;
+  border-radius: 0 !important;
+}
+
+.expertise .frm_submit button:hover {
+    background: $whitesmoke !important;
+    border-color: $black !important;
+    color: $black !important;
+}
+
+// Event styling
+
+.event-post .frm_button_submit {
+  background-color: $black !important;
+  width: 100% !important;
+  border-color: $taupe !important;
+  border-radius: 0 !important;
+}
+
+.event-post .frm_submit button:hover {
+    background: $whitesmoke !important;
+    border-color: $black !important;
+    color: $black !important;
 }
