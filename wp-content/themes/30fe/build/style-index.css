@@ -5571,6 +5571,31 @@ body.admin-bar .search-overlay--desktop {
   padding: 20px 0;
 }
 
+.lg-backdrop {
+  background-color: #1d1c1d !important;
+}
+
+.lg-thumb-outer {
+  background-color: #1d1c1d !important;
+}
+
+.lg-prev {
+  background-color: #1d1c1d !important;
+}
+
+.lg-next {
+  background-color: #1d1c1d !important;
+}
+
+.lg-outer .lg-thumb-item {
+  border-radius: 0 !important;
+  border: 2px solid #f2f1ed !important;
+}
+
+.lg-outer .lg-thumb-item.active, .lg-outer .lg-thumb-item:hover {
+  border-color: #cbbea5 !important;
+}
+
 .contact {
   font-family: "Inter", sans-serif;
 }

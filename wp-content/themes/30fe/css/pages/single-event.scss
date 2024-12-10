@@ -100,3 +100,28 @@
     padding: 20px 0;
   }
 }
+
+.lg-backdrop  {
+  background-color: $black !important;
+}
+
+.lg-thumb-outer {
+  background-color: $black !important;
+}
+
+.lg-prev {
+    background-color: $black !important;
+}
+
+.lg-next {
+    background-color: $black !important;
+}
+
+.lg-outer .lg-thumb-item {
+  border-radius: 0 !important;
+  border: 2px solid $whitesmoke !important;
+} 
+
+.lg-outer .lg-thumb-item.active, .lg-outer .lg-thumb-item:hover {
+    border-color: $taupe !important;
+}
