@@ -28,9 +28,9 @@ $subtitle = get_field ('subtitle');
         <h4 class="insights__card__title">
             <?php echo wp_trim_words( get_the_title(), 6, '...' ); ?>
         </h4>
-        <p class="insights__card__copy">
+        <!-- <p class="insights__card__copy">
             <?php echo trim($subtitle) ?>
-        </p>
+        </p> -->
         <p class="insights__card__label__date"><?php echo get_the_date( 'F j, Y' ); ?></p>
     </a>
 
