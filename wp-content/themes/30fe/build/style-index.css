@@ -1358,6 +1358,19 @@ button.splide__arrow:disabled {
   color: #1d1c1d !important;
 }
 
+#submit-assign .frm_button_submit {
+  background-color: #1d1c1d !important;
+  width: 100% !important;
+  border-color: #cbbea5 !important;
+  border-radius: 0 !important;
+}
+
+#submit-assign .frm_submit button:hover {
+  background: #f2f1ed !important;
+  border-color: #1d1c1d !important;
+  color: #1d1c1d !important;
+}
+
 .nav {
   background-color: #1d1c1d;
   min-height: 112px;

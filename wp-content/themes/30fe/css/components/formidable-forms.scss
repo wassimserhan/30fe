@@ -173,3 +173,18 @@
     border-color: $black !important;
     color: $black !important;
 }
+
+// Submit an assignment
+
+#submit-assign .frm_button_submit {
+  background-color: $black !important;
+  width: 100% !important;
+  border-color: $taupe !important;
+  border-radius: 0 !important;
+}
+
+#submit-assign .frm_submit button:hover {
+    background: $whitesmoke !important;
+    border-color: $black !important;
+    color: $black !important;
+}
