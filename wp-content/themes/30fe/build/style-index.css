@@ -1360,7 +1360,7 @@ button.splide__arrow:disabled {
 
 #submit-assign .frm_button_submit {
   background-color: #1d1c1d !important;
-  width: 100% !important;
+  width: 50% !important;
   border-color: #cbbea5 !important;
   border-radius: 0 !important;
 }
