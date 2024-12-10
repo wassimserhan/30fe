@@ -5557,6 +5557,7 @@ body.admin-bar .search-overlay--desktop {
 
 .event-rsvp {
   background-color: #f2f1ed;
+  border: solid 1px #1d1c1d;
 }
 .event-rsvp__form {
   padding: 32px;
