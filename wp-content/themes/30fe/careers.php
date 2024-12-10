@@ -155,7 +155,7 @@ while( have_rows('values') ) : the_row();
           if( have_rows('culture') ):
           while( have_rows('culture') ) : the_row(); 
           ?>
-        <section class="max-width">
+        <section class="max-width max-padding">
             <section class="careers__culture__card">
                 <figure class="careers__culture__image">
                     <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/what-is-30.gif"

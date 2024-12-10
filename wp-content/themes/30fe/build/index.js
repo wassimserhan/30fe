@@ -3945,6 +3945,7 @@ if (careerIntro) {
     keyboard: true,
     autoplay: true,
     rewind: true,
+    gap: '20px',
     // padding: '5rem',
     breakpoints: {
       486: {

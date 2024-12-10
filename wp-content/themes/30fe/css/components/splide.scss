@@ -128,13 +128,13 @@
 
   &__arrow {
   position: absolute !important;
-  top: -50px !important; /* Adjust as needed */
+  bottom: 0px !important; /* Adjust as needed */
   left: 0 !important;
-  transform: translateY(0) !important;
+  transform: translateY(531%) !important;
   }
 
   &__arrow--next {
-      left: 60px !important; /* Adjust as needed */
+      left: 40px !important; /* Adjust as needed */
   }
 
   &__arrow--prev {
