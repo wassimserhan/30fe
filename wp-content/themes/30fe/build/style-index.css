@@ -5590,10 +5590,12 @@ body.admin-bar .search-overlay--desktop {
 .lg-outer .lg-thumb-item {
   border-radius: 0 !important;
   border: 2px solid #f2f1ed !important;
+  opacity: 70%;
 }
 
 .lg-outer .lg-thumb-item.active, .lg-outer .lg-thumb-item:hover {
   border-color: #cbbea5 !important;
+  opacity: 100%;
 }
 
 .contact {
