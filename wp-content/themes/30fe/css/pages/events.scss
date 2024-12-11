@@ -39,7 +39,8 @@
     }
 
     &__image {
-      // width: 700px;
+      object-fit: cover;
+      height: 100%;
       max-width: 100%;
     }
   }
