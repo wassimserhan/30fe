@@ -6419,10 +6419,10 @@ body.admin-bar .search-overlay--desktop {
   }
 }
 .events__detail__image {
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 100%;
   max-width: 100%;
+}
+.events__detail__image--full-height {
+  height: 100%;
 }
 .events__detail--left {
   padding: 64px 0;

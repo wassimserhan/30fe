@@ -35,8 +35,9 @@ get_header();
         <section style="background-color: <?php echo esc_html($color['value']); ?>">
             <section class="events__card" style="background-color: <?php echo esc_html($color['value']); ?>">
                 <article class="events__detail">
-                    <img class="events__detail__image" loading="lazy" src="<?php echo get_the_post_thumbnail_url(); ?>"
-                        alt="<?php echo $alt; ?>" title="<?php echo $title; ?>">
+                    <img class="events__detail__image events__detail__image--full-height" loading="lazy"
+                        src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo $alt; ?>"
+                        title="<?php echo $title; ?>">
                 </article>
                 <article class="events__detail events__detail--right"
                     style="background-color: <?php echo esc_html($color['value']); ?>">

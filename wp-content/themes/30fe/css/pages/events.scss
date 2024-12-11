@@ -39,10 +39,14 @@
     }
 
     &__image {
-      object-fit: cover;
-      height: 100%;
       max-width: 100%;
+
+      &--full-height  {
+    height: 100%
     }
+    }
+    
+
   }
 
   &__detail--left {
