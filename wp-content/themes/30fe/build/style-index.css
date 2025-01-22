@@ -435,6 +435,22 @@ button {
   line-height: 150%;
 }
 
+.button {
+  display: block;
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+  font-size: 0.75rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  background-color: #1d1c1d;
+  border: 1px solid #1d1c1d;
+  color: #f2f1ed;
+  padding: 1rem 1.5rem;
+  text-transform: uppercase;
+  line-height: 150%;
+}
+
 *:focus {
   outline: none;
 }
@@ -1256,7 +1272,6 @@ button.splide__arrow:disabled {
 .with_frm_style input[type=tel],
 .with_frm_style textarea {
   padding: 12px;
-  background-color: transparent;
   border: 1px solid #1d1c1d;
   border-radius: 0;
   font-size: 12px;
@@ -1373,6 +1388,10 @@ button.splide__arrow:disabled {
   background: #f2f1ed !important;
   border-color: #1d1c1d !important;
   color: #1d1c1d !important;
+}
+
+.frm_verify {
+  display: none !important;
 }
 
 .nav {

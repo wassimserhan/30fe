@@ -43,6 +43,14 @@
                 <p class="footer__copyright">
                     &copy; <span id="copyright"></span> 30 Forensic Engineering.&nbsp; All Rights Reserved.
                 </p>
+                <p class="footer__copyright">
+                    30FE arranges for accessible feedback, accessible formats, and communication supports, on request.
+                </p>
+                <p class="footer__copyright">
+                    <a style="color: inherit; text-decoration: underline !important"
+                        href="http://30fe.com/wp-content/uploads/2024/12/30FE-Multi-year-Plan-and-Accessibility-Policies-December-2024.pdf">Accessibility</a>
+                </p>
+
             </div>
         </section>
 </footer>

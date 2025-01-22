@@ -36,6 +36,22 @@ button {
   line-height: 150%;
 }
 
+.button {
+  display: block;
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+  font-size: 0.75rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  background-color: $black;
+  border: 1px solid $black;
+  color: $whitesmoke;
+  padding: 1rem 1.5rem;
+  text-transform: uppercase;
+  line-height: 150%;
+}
+
 *:focus {
   outline: none;
 }

@@ -126,7 +126,8 @@ while( have_rows('values') ) : the_row();
             <h2 class="careers__headline careers__headline--no-padding">
                 <?php echo get_sub_field('values_headline') ;?>
             </h2>
-            <section style="" id="careers-slider" class="splide splide-careers" aria-labelledby="carousel-heading">
+            <section style="" id="careers-slider" class="splide splide-careers" aria-labelledby="carousel-heading"
+                aria-roledescription="carousel" role="region">
                 <section class="splide__track">
                     <section class="splide__list">
                         <?php 
@@ -293,8 +294,6 @@ while( have_rows('positions') ) : the_row();
                             manager,
                             which may include one or
                             two interviews to explore the role and team dynamics in more depth.</li>
-                        <li class="careers__copy">Recruiter Phone Interview – An introductory conversation with our
-                            Talent Team.</li>
                     </ul>
                     <br>
                     <p style="font-size: 16px; font-weight: 400; color: #f2f1ed">If you require accommodation at any
