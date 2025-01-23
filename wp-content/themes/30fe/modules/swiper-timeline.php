@@ -22,7 +22,7 @@
                             <div class="swiper-event-content">
 
                                 <p class="h--timeline-event-description">
-                                    <?php echo $story ;?>
+                                    <?php echo nl2br($story) ;?>
                                 </p>
                                 <p class="swiper-date "><?php echo $year ;?></p>
                             </div>
