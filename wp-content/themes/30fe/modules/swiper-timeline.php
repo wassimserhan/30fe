@@ -27,9 +27,7 @@
                                 <p class="swiper-date "><?php echo $year ;?></p>
                             </div>
                             <figure class="h__timeline__image">
-                                <img loading="lazy"
-                                    src="<?php echo get_template_directory_uri(); ?>/images/what-is-30.gif"
-                                    alt="what is 30?" title="lock">
+                                <img loading="lazy" src="<?php echo $image; ?>" alt="" title="">
                             </figure>
                         </div>
                     </div>
