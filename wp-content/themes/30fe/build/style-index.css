@@ -5375,6 +5375,10 @@ body.admin-bar .search-overlay--desktop {
   list-style: auto;
   margin: 0 0 1.5em 3em;
 }
+.single-blog__single-post > ul {
+  list-style: auto;
+  margin: 0 0 1.5em 3em;
+}
 .single-blog__single-post img {
   max-width: 100%;
   padding: 20px 0;
@@ -5457,6 +5461,9 @@ body.admin-bar .search-overlay--desktop {
   margin-bottom: 1.5em;
 }
 
+.news-post {
+  color: #f2f1ed;
+}
 .news-post__container {
   display: flex;
   justify-content: space-between;
@@ -5468,6 +5475,11 @@ body.admin-bar .search-overlay--desktop {
 }
 .news-post__container p {
   color: #f2f1ed;
+  padding: 10px 0;
+}
+.news-post__container ul {
+  list-style: disc;
+  margin: 0 0 1.5em 3em;
 }
 .news-post__container a {
   color: #f2f1ed;

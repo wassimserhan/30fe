@@ -8,7 +8,7 @@
   <main class="main-container">
       <section class="fullscreen">
           <section class="max-width max-padding">
-              <section class="news-post">
+              <section class="news-post single-post">
                   <div class="news-post__container">
                       <article class="news-post__left">
                           <article class="news__card__label">
