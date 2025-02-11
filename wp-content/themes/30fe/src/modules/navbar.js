@@ -84,22 +84,34 @@ const closeAllDropdowns = () => {
 };
 
 // Add event listeners to dropdown triggers
+let closeTimeout;
+
+
 navItems.forEach(({ trigger, dropdown, icon }) => {
   const triggerElement = document.querySelector(trigger);
   const dropdownElement = document.querySelector(dropdown);
   const iconElement = document.querySelector(icon);
 
-  triggerElement.addEventListener('mouseover', () => {
+  triggerElement.addEventListener('click', (event) => {
+    event.preventDefault(); // Prevent page refresh if it's an <a> tag
+
+    const isActive = dropdownElement.classList.contains('nav__dropdown-grid--active');
     closeAllDropdowns();
-    dropdownElement.classList.add('nav__dropdown-grid--active');
-    iconElement.classList.add('plus-nav--active');
+
+    if (!isActive) {
+      dropdownElement.classList.add('nav__dropdown-grid--active');
+      iconElement.classList.add('plus-nav--active');
+    }
   });
 
-  dropdownElement.addEventListener('mouseleave', () => {
-    dropdownElement.classList.remove('nav__dropdown-grid--active');
-    iconElement.classList.remove('plus-nav--active');
+  document.addEventListener('click', (event) => {
+    if (!triggerElement.contains(event.target) && !dropdownElement.contains(event.target)) {
+      dropdownElement.classList.remove('nav__dropdown-grid--active');
+      iconElement.classList.remove('plus-nav--active');
+    }
   });
 });
+
 
 // Close dropdowns on resize or scroll
 ['resize', 'scroll'].forEach(event =>

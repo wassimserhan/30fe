@@ -1486,7 +1486,7 @@ button.splide__arrow:disabled {
 }
 @media (max-width: 479px) {
   .nav__bar {
-    padding: 1.5rem 1.5rem 0;
+    padding: 1.5rem 1.5rem;
   }
 }
 .nav__links {
@@ -1746,7 +1746,7 @@ button.splide__arrow:disabled {
 
 .nav-expertise__items {
   text-transform: capitalize;
-  padding: 0.5rem 0;
+  padding: 1rem 0;
 }
 
 .search-icon {
@@ -4771,7 +4771,6 @@ body.admin-bar .search-overlay--desktop {
 
 .ac {
   border-top: 1px solid #eee;
-  background-color: #fff;
   box-sizing: border-box;
 }
 
@@ -5600,14 +5599,6 @@ body.admin-bar .search-overlay--desktop {
   max-width: 100%; /* Set a maximum width for each thumbnail */
   height: auto; /* Maintain aspect ratio */
   transition: transform 0.3s ease; /* Add a hover effect */
-}
-
-.event-rsvp {
-  background-color: #f2f1ed;
-  border: solid 1px #1d1c1d;
-}
-.event-rsvp__form {
-  padding: 32px;
 }
 
 .gallery {
@@ -6518,7 +6509,7 @@ body.admin-bar .search-overlay--desktop {
   align-content: center;
 }
 .education__category-bullets {
-  padding: 32px;
+  padding: 32px 0;
 }
 @media (max-width: 479px) {
   .education__button {
@@ -6527,6 +6518,7 @@ body.admin-bar .search-overlay--desktop {
 }
 .education__items {
   font-size: 2rem !important;
+  text-transform: capitalize;
 }
 @media (max-width: 1024px) {
   .education__items {

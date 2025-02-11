@@ -8,7 +8,7 @@
   }
 
   &__category-bullets {
-    padding: 32px;
+    padding: 32px 0;
   }
 
   &__button {
@@ -20,6 +20,7 @@
 
   &__items {
     font-size: 2rem !important;
+    text-transform: capitalize;
        @include bp(laptop) {
      font-size: 1rem !important;
   }

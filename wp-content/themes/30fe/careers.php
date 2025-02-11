@@ -17,7 +17,7 @@ get_header();
                     <br><br>
                     We’re always looking for more people like us to join us in our mission. Are you in?
                 </h1>
-                <a href="#positions"><button class="careers__intro__button">Open Positions</button></a>
+                <a href="#positions"><button class="careers__intro__button">Explore Opportunities</button></a>
             </section>
 
         </section>

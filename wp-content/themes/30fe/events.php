@@ -60,27 +60,10 @@ get_header();
             </section>
         </section>
         <?php endwhile ?>
-        <?php else : ?>
-        <!-- Custom message when no posts are found-->
-        <section class="events__intro">
-            <section class=" max-width max-padding">
-                <h2 class="events__title">No Upcoming Events. Please check back later.</h2>
-                <?php endif; ?>
-            </section>
-        </section>
+        <?php endif; ?>
         <?php wp_reset_postdata() ?>
 
-        <!-- <section class="events">
-            <section class="events__intro">
-                <section class="max-width max-padding">
-                    <article>
-                        <h2 class="email__headline">Event Updates</h2>
-                        <p class="email__copy">Enter your work email to receive these updates directly in your inbox.
-                        </p>
-                    </article>
-                </section>
-            </section>
-        </section> -->
+
 
         <!-- Past Events -->
 

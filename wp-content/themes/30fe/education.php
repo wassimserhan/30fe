@@ -17,26 +17,26 @@ get_header();
                             the topics listed below, or to book a custom seminar, please reach out to our Vancouver,
                             Toronto or LA contact.
                         </p> <a href="<?php the_permalink() ?>" aria-label="Read more">
-                            <button class="education__button">Hire Us</button>
+                            <button class="education__button">Request a Course</button>
                         </a>
                     </article>
 
                 </section>
             </section>
         </section>
-        <div class="accordion-container education__accordion-container max-width max-padding max-padding--no-top">
+        <div class="accordion-container education__accordion-container max-width">
             <?php
           if( have_rows('column_list') ): 
           while( have_rows('column_list') ) : the_row();
             $educationItems = get_sub_field('list_item'); ?>
 
             <div class="ac">
-                <div class="ac-header mobile-accordion__items mobile-accordion__items--education">
+                <div class="ac-header mobile-accordion__items mobile-accordion__items--education max-padding--side">
                     <p class="mobile-accordion__number education__number">
                         <?php echo '0' . get_row_index() ?></p>
                     <button type="button" class="ac-trigger education__items"><?php echo $educationItems ?></button>
                 </div>
-                <div class="ac-panel">
+                <div class="ac-panel max-padding--side education__bullets">
                     <section class="industry__category-bullets education__category-bullets">
                         <?php
                 if( have_rows('items') ): 

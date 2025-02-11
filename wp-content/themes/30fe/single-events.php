@@ -28,17 +28,6 @@
                               alt="<?php echo esc_attr(get_the_title()); ?>"
                               title="<?php echo esc_attr(get_the_title()); ?>">
                           <?php endif; ?>
-
-                          <section class="event-rsvp__form">
-                              <h2>RSVP now</h2>
-                              <p>Let us know you’re coming and we’ll save you a seat.</p>
-                              <p class="expertise-form__form__required">*REQUIRED</p>
-                              <!-- form inserted here -->
-                              <?php echo get_field('form_code') ; ?>
-                              <!-- form inserted here -->
-                          </section>
-
-
                       </section>
 
 
