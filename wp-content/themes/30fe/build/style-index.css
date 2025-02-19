@@ -1564,10 +1564,8 @@ button.splide__arrow:disabled {
   background-color: rgba(29, 28, 29, 0.2);
   color: #1d1c1d;
   padding: 0.5rem 1rem;
-  min-width: 180px;
-}
-.nav__items__button:not(:last-child) {
   margin-bottom: 0.5rem;
+  min-width: 180px;
 }
 .nav__items--mobile {
   color: #1d1c1d;
