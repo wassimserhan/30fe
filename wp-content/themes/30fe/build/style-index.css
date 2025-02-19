@@ -1567,6 +1567,9 @@ button.splide__arrow:disabled {
   margin-bottom: 0.5rem;
   min-width: 180px;
 }
+.nav__items__button:last-child {
+  margin-bottom: 0;
+}
 .nav__items--mobile {
   color: #1d1c1d;
   font-family: "Inter", sans-serif;

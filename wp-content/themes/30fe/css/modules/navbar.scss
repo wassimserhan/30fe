@@ -175,6 +175,10 @@
       padding: 0.5rem 1rem; 
       margin-bottom: .5rem;
       min-width: 180px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 

@@ -104,12 +104,12 @@ global $template;
                 <section class="max-width">
                     <ul class="nav__dropdown-grid nav__dropdown-grid--latest"
                         style="position: absolute; left: 0; margin: 0; columns: inherit;">
-                        <li><a class="nav__items nav__items__button" href="<?php echo site_url('/insights')?>"
-                                target="_self">INSIGHTS</a></li>
-                        <li><a class="nav__items nav__items__button" href="<?php echo site_url('/news')?>"
-                                target="_self">News</a></li>
-                        <li><a class="nav__items nav__items__button" href="<?php echo site_url('/events')?>"
-                                target="_self">Events</a></li>
+                        <a class="nav__items nav__items__button" href="<?php echo site_url('/insights')?>"
+                            target="_self">INSIGHTS</a>
+                        <a class="nav__items nav__items__button" href="<?php echo site_url('/news')?>"
+                            target="_self">News</a>
+                        <a class="nav__items nav__items__button" href="<?php echo site_url('/events')?>"
+                            target="_self">Events</a>
                     </ul>
                 </section>
             </li>
