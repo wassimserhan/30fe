@@ -73,7 +73,6 @@ const navItems = [
   { trigger: '.nav-sectors', dropdown: '.nav__dropdown-grid--sectors', icon: '.plus-sectors' },
   { trigger: '.nav-people', dropdown: '.nav__dropdown-grid--people', icon: '.plus-people' },
   { trigger: '.nav-latest', dropdown: '.nav__dropdown-grid--latest', icon: '.plus-latest' }
-
 ];
 
 const closeAllDropdowns = () => {
@@ -83,17 +82,15 @@ const closeAllDropdowns = () => {
   });
 };
 
-// Add event listeners to dropdown triggers
-let closeTimeout;
-
-
 navItems.forEach(({ trigger, dropdown, icon }) => {
   const triggerElement = document.querySelector(trigger);
   const dropdownElement = document.querySelector(dropdown);
   const iconElement = document.querySelector(icon);
 
-  triggerElement.addEventListener('click', (event) => {
-    event.preventDefault(); // Prevent page refresh if it's an <a> tag
+  // Attach event listener only to the icon so the link remains clickable.
+  iconElement.addEventListener('click', (event) => {
+    event.preventDefault(); // Prevents default behavior on icon click only.
+    event.stopPropagation(); // Stop the event from bubbling up.
 
     const isActive = dropdownElement.classList.contains('nav__dropdown-grid--active');
     closeAllDropdowns();
@@ -104,6 +101,7 @@ navItems.forEach(({ trigger, dropdown, icon }) => {
     }
   });
 
+  // Close dropdowns if the user clicks outside the trigger and dropdown
   document.addEventListener('click', (event) => {
     if (!triggerElement.contains(event.target) && !dropdownElement.contains(event.target)) {
       dropdownElement.classList.remove('nav__dropdown-grid--active');

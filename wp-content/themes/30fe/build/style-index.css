@@ -1542,7 +1542,7 @@ button.splide__arrow:disabled {
 .nav__items {
   color: #1d1c1d;
   font-family: "Inter", sans-serif;
-  font-size: 12px;
+  font-size: 11px;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
@@ -1557,11 +1557,17 @@ button.splide__arrow:disabled {
     line-height: 140%; /* 28px */
     letter-spacing: -0.6px;
     color: #1d1c1d;
-    text-align: left;
+    text-align: le ft;
   }
 }
-.nav__items:hover {
-  text-decoration: underline;
+.nav__items__button {
+  background-color: rgba(29, 28, 29, 0.2);
+  color: #1d1c1d;
+  padding: 0.5rem 1rem;
+  min-width: 180px;
+}
+.nav__items__button:not(:last-child) {
+  margin-bottom: 0.5rem;
 }
 .nav__items--mobile {
   color: #1d1c1d;
@@ -1721,9 +1727,13 @@ button.splide__arrow:disabled {
        column-fill: balance;
   -moz-columns: 4;
        columns: 4;
+  gap: 7px;
   margin: 1rem 8rem;
   display: none;
-  border-bottom: 1px solid #1d1c1d;
+  padding: 1rem 1rem;
+  margin: 0;
+  top: 40px;
+  border: 1px solid #1d1c1d;
 }
 @media (max-width: 1024px) {
   .nav__dropdown-grid {

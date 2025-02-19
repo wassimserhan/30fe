@@ -61,21 +61,29 @@ global $template;
             <li class="" role="menuitem">
                 <a id="" class="nav__items" data-name="#" href="<?php echo site_url('/about')?>">About</a>
             </li>
-            <!-- <li class="" role="menuitem">
-                <a id="" class="nav__items" data-name="#" href="<?php echo site_url('/team')?>">Team</a>
-            </li> -->
-            <li class="nav-people" role="menuitem">
-                <a id="" class="nav__items" data-name=" #" href="<?php echo site_url('/')?>">People</a>
+            <li class="nav-people" role="menuitem" style="position: relative">
+                <p class="nav__items">People</p>
                 <img class="plus-nav plus-people" src="<?php echo get_template_directory_uri(); ?>/images/nav-arrow.svg"
                     alt="<?php echo get_bloginfo( 'name' ); ?> logo" title="<?php echo get_bloginfo( 'name' ); ?>"
                     width="100%">
+                <section class="max-width">
+                    <ul class="nav__dropdown-grid nav__dropdown-grid--people"
+                        style="position: absolute; left: 0; margin: 0; columns: inherit;">
+                        <a class="nav__items nav__items__button" href="<?php echo site_url('/team')?>"
+                            target="_self">Team</a>
+                        <a class="nav__items nav__items__button" href="<?php echo site_url('/careers')?>"
+                            target="_self">Careers</a>
+                    </ul>
+                </section>
             </li>
-            <li class="nav-expertise" role="menuitem">
-                <a id="" class="nav__items" data-name=" #" href="<?php echo site_url('/expertise')?>">Expertise</a>
+
+            <li class="nav-expertise" role="menuitem" style="position: relative">
+                <a class="nav__items" data-name="#" href="<?php echo site_url('/expertise')?>">Expertise</a>
                 <img class="plus-nav plus-expertise"
                     src="<?php echo get_template_directory_uri(); ?>/images/nav-arrow.svg"
                     alt="<?php echo get_bloginfo( 'name' ); ?> logo" title="<?php echo get_bloginfo( 'name' ); ?>"
                     width="100%">
+
             </li>
             <li class="nav-sectors" role="menuitem">
                 <a id="" class="nav__items" data-name="#" href="<?php echo site_url('/sectors')?>">Sectors</a>
@@ -87,11 +95,23 @@ global $template;
             <li class="" role="menuitem">
                 <a id="" class="nav__items" data-name="#" href="<?php echo site_url('/education')?>">Education</a>
             </li>
-            <li class="nav-latest" role="menuitem">
-                <a id="" class="nav__items" data-name=" #" href="<?php echo site_url('/')?>">Latest</a>
+            <li class="nav-latest" role="menuitem" style="position: relative">
+                <!-- The text link will navigate normally -->
+                <p class="nav__items">Latest</p>
+                <!-- The icon triggers the dropdown toggle -->
                 <img class="plus-nav plus-latest" src="<?php echo get_template_directory_uri(); ?>/images/nav-arrow.svg"
-                    alt="<?php echo get_bloginfo( 'name' ); ?> logo" title="<?php echo get_bloginfo( 'name' ); ?>"
-                    width="100%">
+                    alt="Toggle dropdown" width="100%">
+                <section class="max-width">
+                    <ul class="nav__dropdown-grid nav__dropdown-grid--latest"
+                        style="position: absolute; left: 0; margin: 0; columns: inherit;">
+                        <li><a class="nav__items nav__items__button" href="<?php echo site_url('/insights')?>"
+                                target="_self">INSIGHTS</a></li>
+                        <li><a class="nav__items nav__items__button" href="<?php echo site_url('/news')?>"
+                                target="_self">News</a></li>
+                        <li><a class="nav__items nav__items__button" href="<?php echo site_url('/events')?>"
+                                target="_self">Events</a></li>
+                    </ul>
+                </section>
             </li>
             <li class="" role="menuitem">
                 <a id="" class="nav__items" data-name="#" href="<?php echo site_url('/contact')?>">Contact</a>
@@ -101,27 +121,26 @@ global $template;
     </section>
 
     <!-- Accordion Container -->
-    <section class="nav-expertise__container max-width">
+
+    <section class="max-width" style="padding: 0 8rem">
         <ul class="nav__dropdown-grid nav__dropdown-grid--expertise">
             <?php 
-          $customQuery = new WP_Query(array(
-          'posts_per_page' => -1,
-          'orderby' => 'title',
-            'order'   => 'ASC',
-          'post_type'=> 'Expertise'
-        ));
+                        $customQuery = new WP_Query(array(
+                        'posts_per_page' => -1,
+                        'orderby' => 'title',
+                            'order'   => 'ASC',
+                        'post_type'=> 'Expertise'
+                        ));
 
-        while ($customQuery->have_posts()): $customQuery->the_post();
-        ?>
-            <a class="nav__items nav-expertise__items" href="<?php echo the_permalink() ?>"
+                            while ($customQuery->have_posts()): $customQuery->the_post();
+                            ?>
+            <a class="nav__items nav__items__button" href="<?php echo the_permalink() ?>"
                 target="_self"><?php the_title() ?></a>
             <?php endwhile ?>
-
             <?php wp_reset_postdata() ?>
         </ul>
     </section>
-
-    <section class="max-width">
+    <section class="max-width" style="padding: 0 8rem">
         <ul class="nav__dropdown-grid nav__dropdown-grid--sectors">
             <?php 
           $customQuery = new WP_Query(array(
@@ -133,7 +152,7 @@ global $template;
 
         while ($customQuery->have_posts()): $customQuery->the_post();
         ?>
-            <a class="nav__items nav-expertise__items" href="<?php echo the_permalink() ?>"
+            <a class="nav__items nav__items__button" href="<?php echo the_permalink() ?>"
                 target="_self"><?php the_title() ?></a>
             <?php endwhile ?>
 
@@ -141,23 +160,8 @@ global $template;
 
         </ul>
     </section>
-    <section class="max-width">
-        <ul class="nav__dropdown-grid nav__dropdown-grid--people">
-            <a class="nav__items nav-expertise__items" href="<?php echo site_url('/team')?>" target="_self">Team</a>
-            <a class="nav__items nav-expertise__items" href="<?php echo site_url('/careers')?>"
-                target="_self">Careers</a>
 
-        </ul>
-    </section>
-    <section class="max-width">
-        <ul class="nav__dropdown-grid nav__dropdown-grid--latest">
-            <a class="nav__items nav-expertise__items" href="<?php echo site_url('/insights')?>"
-                target="_self">Insights</a>
-            <a class="nav__items nav-expertise__items" href="<?php echo site_url('/news')?>" target="_self">News</a>
-            <a class="nav__items nav-expertise__items" href="<?php echo site_url('/events')?>" target="_self">Events</a>
 
-        </ul>
-    </section>
 
 
 

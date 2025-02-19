@@ -17,9 +17,8 @@ if (true) {
   $logoBlack = 'invert(0%)';
   $logoWhite = 'invert(100%)';
 
-
-
-
+  $whitesmokeOpacity = "rgba(242, 241, 237, 0.1)";
+  $blackOpacity = "rgba(29, 28, 29, 0.1)";
 
   let navData = document.querySelector('.nav');
   let pageTitle = navData.getAttribute('data-page');
@@ -45,7 +44,12 @@ if (true) {
       gsap.set(".plus-nav", { filter: $logoWhite });
       sectionColors = ['#1d1c1d', '#f2f1ed', '#1d1c1d', '#f2f1ed', '#f2f1ed', '#f2f1ed'];
       navColors = ['#1d1c1d', '#f2f1ed', '#1d1c1d', '#f2f1ed', '#f2f1ed', '#f2f1ed'];
-      navItems = [$whitesmoke, $black, $whitesmoke, $black, $black, $black]
+      navItems = [$whitesmoke, $black, $whitesmoke, $black, $black, $black];
+      navItemsButton = [$whitesmokeOpacity, $blackOpacity, $blackOpacity, $blackOpacity, $blackOpacity, $blackOpacity];
+      navBorder = [$whitesmoke, $black, $whitesmoke, $black, $black, $black];
+      navDropdown = [$black, $whitesmoke, $whitesmoke, $whitesmoke, $whitesmoke, $whitesmoke];
+      navItemsButton = [$whitesmokeOpacity, $blackOpacity, $whitesmokeOpacity, $blackOpacity, $blackOpacity, $blackOpacity];
+      navDropdown = [$black, $whitesmoke, $black, $whitesmoke, $whitesmoke, $whitesmoke];
       logoColor = [$logoWhite, $logoBlack, $logoWhite, $logoBlack, $logoBlack, $logoBlack];
       searchBorder = [$whitesmoke, $black, $whitesmoke, $black, $black, $black];
       searchIcon = [$logoBlack, $logoWhite, $logoBlack, $logoWhite, $logoWhite, $logoWhite];
@@ -64,7 +68,10 @@ if (true) {
       gsap.set(".plus-nav", { filter: $logoWhite })
       sectionColors = [$black, $whitesmoke, $whitesmoke, $whitesmoke, $whitesmoke, $taupe];
       navColors = [$black, $whitesmoke, $whitesmoke, $whitesmoke, $whitesmoke, $taupe];
-      navItems = [$whitesmoke, $black, $black, $black, $black, $black]
+      navItems = [$whitesmoke, $black, $black, $black, $black, $black];
+      navItemsButton = [$whitesmokeOpacity, $blackOpacity, $blackOpacity, $blackOpacity, $blackOpacity, $blackOpacity];
+      navBorder = [$whitesmoke, $black, $black, $black, $black, $black];
+      navDropdown = [$black, $whitesmoke, $whitesmoke, $whitesmoke, $whitesmoke, $whitesmoke];
       logoColor = [$logoWhite, $logoBlack, $logoBlack, $logoBlack, $logoBlack, $logoBlack];
       searchBorder = [$whitesmoke, $black, $black, $black, $black, $black];
       searchIcon = [$logoBlack, $logoWhite, $logoWhite, $logoBlack, $logoWhite, $logoWhite, $logoBlack];
@@ -75,29 +82,46 @@ if (true) {
       break;
 
     case 'expertise.php':
+      gsap.set(".nav__logo__black", { filter: $logoBlack })
+      gsap.set(".nav__items", { color: $black })
       gsap.set(".nav", { backgroundColor: $whitesmoke })
+      gsap.set(".search-overlay--desktop__wrapper", { borderColor: $whitesmoke })
+      gsap.set(".search-overlay--desktop__icon", { filter: $logoWhite })
+      gsap.set(".nav__button", { backgroundColor: $whitesmoke, color: $black })
       sectionColors = [$whitesmoke, $taupe];
       navColors = [$whitesmoke, $taupe];
-      navScroll = false;
+      navItems = [$black, $black,];
+      navItemsButton = [$blackOpacity, $blackOpacity];
+      navBorder = [$whitesmoke, $black, $black];
+      navDropdown = [$whitesmoke, $taupe];
+      logoColor = [$logoBlack, $logoBlack];
+      searchBorder = [$black, $black];
+      searchIcon = [$logoBlack, $logoWhite];
+      navButton = [$black, $black];
+      navButtonColor = [$whitesmoke, $whitesmoke];
+      plus = [$logoBlack, $logoBlack];
+      navScroll = true;
       break;
 
     case 'sectors.php':
-      gsap.set(".nav__logo__black", { filter: $logoWhite })
-      gsap.set(".nav__items", { color: $whitesmoke })
-      gsap.set(".nav", { backgroundColor: $black })
+      gsap.set(".nav__logo__black", { filter: $logoBlack })
+      gsap.set(".nav__items", { color: $black })
+      gsap.set(".nav", { backgroundColor: $whitesmoke })
       gsap.set(".search-overlay--desktop__wrapper", { borderColor: $whitesmoke })
-      gsap.set(".search-overlay--desktop__icon", { filter: $logoBlack })
+      gsap.set(".search-overlay--desktop__icon", { filter: $logoWhite })
       gsap.set(".nav__button", { backgroundColor: $whitesmoke, color: $black })
-      gsap.set(".plus-nav", { filter: $logoWhite })
       sectionColors = [$whitesmoke, $taupe];
       navColors = [$whitesmoke, $taupe];
-      navItems = [$black, $black]
+      navItems = [$black, $black,];
+      navItemsButton = [$blackOpacity, $blackOpacity];
+      navBorder = [$whitesmoke, $black, $black];
+      navDropdown = [$whitesmoke, $taupe];
       logoColor = [$logoBlack, $logoBlack];
       searchBorder = [$black, $black];
-      searchIcon = [$logoWhite, $logoWhite];
+      searchIcon = [$logoBlack, $logoWhite];
       navButton = [$black, $black];
       navButtonColor = [$whitesmoke, $whitesmoke];
-      plus = [$logoWhite, $logoBlack];
+      plus = [$logoBlack, $logoBlack];
       navScroll = true;
       break;
 
@@ -105,20 +129,15 @@ if (true) {
       gsap.set(".nav__logo__black", { filter: $logoWhite })
       gsap.set(".nav__items", { color: $whitesmoke })
       gsap.set(".nav", { backgroundColor: $black })
+      gsap.set(".nav__dropdown-grid", { backgroundColor: $black, borderColor: $whitesmoke })
+      gsap.set(".nav__items__button", { backgroundColor: $whitesmokeOpacity })
       gsap.set(".search-overlay--desktop__wrapper", { borderColor: $whitesmoke })
       gsap.set(".search-overlay--desktop__icon", { filter: $logoBlack })
       gsap.set(".nav__button", { backgroundColor: $whitesmoke, color: $black })
       gsap.set(".plus-nav", { filter: $logoWhite });
-      sectionColors = [$black, $taupe];
-      navColors = [$black, $taupe];
-      navItems = [$whitesmoke, $black]
-      logoColor = [$logoWhite, $logoBlack];
-      searchBorder = [$whitesmoke, $black];
-      searchIcon = [$logoBlack, $logoWhite];
-      navButton = [$whitesmoke, $black];
-      navButtonColor = [$black, $whitesmoke];
-      plus = [$logoWhite, $logoBlack];
-      navScroll = true;
+      sectionColors = [$black];
+      navColors = [$black];
+      navScroll = false
       break;
 
 
@@ -129,6 +148,9 @@ if (true) {
       sectionColors = [$whitesmoke];
       navColors = [$whitesmoke];
       navItems = [$black];
+      navItemsButton = [$blackOpacity, $blackOpacity];
+      navBorder = [$black, $black];
+      navDropdown = [$whitesmoke, $whitesmoke];
       logoColor = [$logoBlack];
       searchBorder = [$black];
       searchIcon = [$logoWhite];
@@ -143,17 +165,21 @@ if (true) {
       gsap.set(".nav__items", { color: $whitesmoke })
       gsap.set(".nav", { backgroundColor: $black })
       gsap.set(".search-overlay--desktop__wrapper", { borderColor: $whitesmoke })
-      gsap.set(".search-overlay--desktop__icon", { filter: $logoWhite })
+      gsap.set(".search-overlay--desktop__icon", { filter: $logoBlack })
       gsap.set(".nav__button", { backgroundColor: $whitesmoke, color: $black })
-      sectionColors = [$black, $whitesmoke];
-      navColors = [$black, $whitesmoke];
-      navItems = [$whitesmoke, $black,]
-      logoColor = [$logoWhite, $logoBlack];
-      searchBorder = [$whitesmoke, $black];
-      searchIcon = [$logoBlack, $logoWhite];
-      navButton = [$whitesmoke, $black];
-      navButtonColor = [$black, $whitesmoke];
-      plus = [$logoWhite, $logoBlack];
+      gsap.set(".plus-nav", { filter: $logoWhite })
+      sectionColors = [$black, $whitesmoke, $taupe];
+      navColors = [$black, $whitesmoke, $taupe];
+      navItems = [$whitesmoke, $black, $black];
+      navItemsButton = [$whitesmokeOpacity, $blackOpacity, $blackOpacity];
+      navBorder = [$whitesmoke, $black, $black];
+      navDropdown = [$black, $whitesmoke, $whitesmoke];
+      logoColor = [$logoWhite, $logoBlack, $logoBlack];
+      searchBorder = [$whitesmoke, $black, $black];
+      searchIcon = [$logoBlack, $logoWhite, $logoBlack];
+      navButton = [$whitesmoke, $black, $black];
+      navButtonColor = [$black, $whitesmoke, $whitesmoke];
+      plus = [$logoWhite, $logoBlack, $logoBlack];
       navScroll = true;
       break;
 
@@ -168,6 +194,8 @@ if (true) {
       gsap.set(".nav__logo__black", { filter: $logoWhite })
       gsap.set(".nav__items", { color: $whitesmoke })
       gsap.set(".nav", { backgroundColor: $black })
+      gsap.set(".nav__dropdown-grid", { backgroundColor: $black, borderColor: $whitesmoke })
+      gsap.set(".nav__items__button", { backgroundColor: $whitesmokeOpacity })
       gsap.set(".search-overlay--desktop__wrapper", { borderColor: $whitesmoke })
       gsap.set(".search-overlay--desktop__icon", { filter: $logoBlack })
       gsap.set(".nav__button", { backgroundColor: $whitesmoke, color: $black })
@@ -178,10 +206,25 @@ if (true) {
       break;
 
     case 'home.php':
+      gsap.set(".nav__logo__black", { filter: $logoBlack })
+      gsap.set(".nav__items", { color: $black })
       gsap.set(".nav", { backgroundColor: $whitesmoke })
+      gsap.set(".search-overlay--desktop__wrapper", { borderColor: $whitesmoke })
+      gsap.set(".search-overlay--desktop__icon", { filter: $logoWhite })
+      gsap.set(".nav__button", { backgroundColor: $whitesmoke, color: $black })
       sectionColors = [$whitesmoke];
       navColors = [$whitesmoke];
-      navScroll = false;
+      navItems = [$black];
+      navItemsButton = [$blackOpacity];
+      navBorder = [$black];
+      navDropdown = [$whitesmoke];
+      logoColor = [$logoBlack];
+      searchBorder = [$black];
+      searchIcon = [$logoBlack];
+      navButton = [$black];
+      navButtonColor = [$whitesmoke];
+      plus = [$logoBlack];
+      navScroll = true;
       break;
 
     case 'single-news.php':
@@ -232,6 +275,8 @@ if (true) {
       gsap.set(".nav__logo__black", { filter: $logoWhite })
       gsap.set(".nav__items", { color: $whitesmoke })
       gsap.set(".nav", { backgroundColor: $black })
+      gsap.set(".nav__dropdown-grid", { backgroundColor: $black, borderColor: $whitesmoke })
+      gsap.set(".nav__items__button", { backgroundColor: $whitesmokeOpacity })
       gsap.set(".search-overlay--desktop__wrapper", { borderColor: $whitesmoke })
       gsap.set(".search-overlay--desktop__icon", { filter: $logoBlack })
       gsap.set(".nav__button", { backgroundColor: $whitesmoke, color: $black })
@@ -253,17 +298,26 @@ if (true) {
       navScroll = false
       break;
     case 'events.php':
-      gsap.set(".nav", { backgroundColor: $whitesmoke })
-      sectionColors = [$whitesmoke];
-      navColors = [$whitesmoke];
-      navScroll = false;
+      gsap.set(".nav__logo__black", { filter: $logoWhite })
+      gsap.set(".nav__items", { color: $whitesmoke })
+      gsap.set(".nav", { backgroundColor: $black })
+      gsap.set(".nav__dropdown-grid", { backgroundColor: $black, borderColor: $whitesmoke })
+      gsap.set(".nav__items__button", { backgroundColor: $whitesmokeOpacity })
+      gsap.set(".search-overlay--desktop__wrapper", { borderColor: $whitesmoke })
+      gsap.set(".search-overlay--desktop__icon", { filter: $logoBlack })
+      gsap.set(".nav__button", { backgroundColor: $whitesmoke, color: $black })
+      gsap.set(".plus-nav", { filter: $logoWhite });
+      sectionColors = [$black];
+      navColors = [$black];
+      navScroll = false
       break;
 
     case 'single-events.php':
       const eventColorId = document.getElementById('event-color');
-      const eventColor = eventColorId.getAttribute("data-color");
-      console.log(eventColor)
+      const eventColor = eventColorId.getAttribute('data-color');
       gsap.set(".nav", { backgroundColor: eventColor })
+      gsap.set(".nav__dropdown-grid", { backgroundColor: eventColor, borderColor: $black })
+      gsap.set(".nav__items__button", { backgroundColor: $blackOpacity })
       sectionColors = [eventColor];
       navColors = [eventColor];
       navScroll = false;
@@ -314,6 +368,12 @@ if (true) {
         }, 0)
         .to(".nav__button", {
           backgroundColor: navButton[index], color: navButtonColor[index]
+        }, 0)
+        .to(".nav__items__button", {
+          backgroundColor: navItemsButton[index]
+        }, 0)
+        .to(".nav__dropdown-grid", {
+          backgroundColor: navDropdown[index], borderColor: navBorder[index]
         }, 0)
         .to(".plus-nav", {
           filter: plus[index]

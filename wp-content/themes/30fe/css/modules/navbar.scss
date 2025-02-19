@@ -2,7 +2,6 @@
   background-color: $black;
   min-height: 112px;
   transition: transform 0.2s;
-  // transition: background-color 0.4s; /* Add a smooth transition for background color changes */
 
   @include bp(phone) {
     min-height: 72px;
@@ -153,7 +152,7 @@
   &__items {
     color: $black;
     font-family: "Inter", sans-serif;
-    font-size: 12px;
+    font-size: 11px;
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
@@ -167,11 +166,19 @@
       line-height: 140%; /* 28px */
       letter-spacing: -0.6px;
       color: $black;
-      text-align: left;
+      text-align: le  ft;
     }
 
-    &:hover {
-      text-decoration: underline;
+    &__button {
+      background-color: rgba(29, 28, 29, .2); 
+      color: $black; 
+      padding: 0.5rem 1rem; 
+
+      min-width: 180px;
+
+      &:not(:last-child) {
+      margin-bottom: .5rem;
+      }
     }
   }
 
@@ -354,15 +361,16 @@
   box-shadow: none;
 }
 
-.nav-expertise__container {
-}
-
 .nav__dropdown-grid {
   column-fill: balance;
   columns: 4;
+  gap: 7px;
   margin: 1rem 8rem;
   display: none;
-  border-bottom: 1px solid $black;
+  padding: 1rem 1rem;
+  margin: 0;
+  top: 40px;
+  border: 1px solid $black;
   @include bp(laptop) {
     display: none;
   }
@@ -371,6 +379,8 @@
     display: block;
   }
 }
+
+
 
 .nav-expertise__links {
   font-size: 13px;
