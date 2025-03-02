@@ -6550,4 +6550,36 @@ body.admin-bar .search-overlay--desktop {
   flex-direction: row;
 }
 
+.education .ac-panel {
+  border-right: 1px solid #1d1c1d;
+  border-left: 1px solid #1d1c1d;
+}
+
+.education .ac:last-child {
+  border-bottom: 1px solid #1d1c1d;
+}
+
+.education .ac:last-child {
+  margin-bottom: 8rem;
+}
+
+.education a {
+  text-decoration: underline;
+  color: #1d1c1d;
+}
+
+.education ul {
+  list-style: disc;
+}
+
+.education li {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.72px;
+  color: #1d1c1d;
+  padding: 10px 0;
+  margin-left: 30px;
+}
+
 /*# sourceMappingURL=style-index.css.map*/
