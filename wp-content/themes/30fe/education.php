@@ -31,7 +31,7 @@ get_header();
             <div class="ac">
                 <div class="ac-header mobile-accordion__items mobile-accordion__items--education max-padding--side">
                     <p class="mobile-accordion__number education__number">
-                        <?php echo '0' . get_row_index() ?></p>
+                        <?php echo str_pad(get_row_index(), 2, '0', STR_PAD_LEFT); ?></p>
                     <button type="button" class="ac-trigger education__items"><?php echo $educationItems ?></button>
                 </div>
                 <div class="ac-panel max-padding--side education__bullets">
