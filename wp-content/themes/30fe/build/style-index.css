@@ -2710,7 +2710,7 @@ body.admin-bar .search-overlay--desktop {
   flex-direction: column;
   position: relative;
   width: 50%;
-  height: 456px;
+  height: 635px;
 }
 @media (max-width: 479px) {
   .swiper-event-content {
