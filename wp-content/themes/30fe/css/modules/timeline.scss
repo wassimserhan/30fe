@@ -381,8 +381,8 @@
 
 .h__timeline__image {
   margin: 0;
-  width: 50%;
   position: relative;
+  width: 50%;
 
   @include bp(laptop) {
     width: 100%;
@@ -391,7 +391,6 @@
 
   & img {
     width: 100%;
-    max-width: 400px;
     margin: auto;
   }
 }

@@ -35,7 +35,7 @@ $secondary-color: #888;
       background-color: transparent;
       height: 4px;
       border-bottom: 1px solid $secondary-color;
-      width: 75%;
+      width: 100%;
       &-fill {
         background-color: $primary-color;
         height: 3px;
@@ -73,7 +73,7 @@ $secondary-color: #888;
       line-height: 1.66;
       bottom: 0;
       z-index: 11;
-      width: 75%;
+      width: 100%;
       display: flex;
       .swiper-pagination-switch {
         position: relative;
@@ -138,6 +138,7 @@ $secondary-color: #888;
 .event-wrapper {
   display: flex;
   gap: 20px;
+  justify-content: space-between;
 
   @include bp(phone) {
     display: block;

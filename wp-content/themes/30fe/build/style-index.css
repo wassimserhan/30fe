@@ -2544,8 +2544,8 @@ body.admin-bar .search-overlay--desktop {
 
 .h__timeline__image {
   margin: 0;
-  width: 50%;
   position: relative;
+  width: 50%;
 }
 @media (max-width: 1024px) {
   .h__timeline__image {
@@ -2555,7 +2555,6 @@ body.admin-bar .search-overlay--desktop {
 }
 .h__timeline__image img {
   width: 100%;
-  max-width: 400px;
   margin: auto;
 }
 
@@ -2586,7 +2585,7 @@ body.admin-bar .search-overlay--desktop {
   background-color: transparent;
   height: 4px;
   border-bottom: 1px solid #888;
-  width: 75%;
+  width: 100%;
 }
 .swiper-container-wrapper--timeline .swiper-pagination-progressbar-fill {
   background-color: #cbbea5;
@@ -2625,7 +2624,7 @@ body.admin-bar .search-overlay--desktop {
   line-height: 1.66;
   bottom: 0;
   z-index: 11;
-  width: 75%;
+  width: 100%;
   display: flex;
 }
 .swiper-container-wrapper--timeline .swiper-pagination-custom .swiper-pagination-switch {
@@ -2686,6 +2685,7 @@ body.admin-bar .search-overlay--desktop {
 .event-wrapper {
   display: flex;
   gap: 20px;
+  justify-content: space-between;
 }
 @media (max-width: 479px) {
   .event-wrapper {
