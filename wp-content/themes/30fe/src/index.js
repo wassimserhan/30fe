@@ -250,12 +250,40 @@ import Accordion from './modules/mobileAccordion';
 // classes
 
 const magicalSearch = new Search()
-if (document.querySelector('.accordion-container')) {
-  const mobileAccordion = new Accordion('.accordion-container', {
-    openOnInit: [0],
-    collapse: false
-  })
-}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const accordionContainer = document.querySelector('.accordion-container');
+
+  if (accordionContainer && typeof Accordion !== 'undefined') {
+    const mobileAccordion = new Accordion('.accordion-container', {
+      openOnInit: [0], // Opens the first accordion by default
+      collapse: true,  // Allows clicking an open panel to close
+      onOpen: (currentElement) => {
+        // Locate the corresponding .ac-header for the opened panel
+        const header = currentElement
+          .closest('.ac')  // Find the parent .ac of the opened panel
+          ?.querySelector('.ac-header.mobile-accordion__items.mobile-accordion__items--education.max-padding--side');
+
+        if (header) {
+          // Get the exact position of the header
+          const headerRect = header.getBoundingClientRect();
+          const absoluteHeaderTop = window.scrollY + headerRect.top;
+
+          // Scroll smoothly with a custom offset (adjust -100px as needed)
+          window.scrollTo({
+            top: absoluteHeaderTop - 100, // Modify -100px to ensure correct positioning
+            behavior: "smooth"
+          });
+        }
+      }
+    });
+
+    // Make the accordion instance accessible globally if needed
+    window.mobileAccordion = mobileAccordion;
+  }
+});
+
+
 
 
 

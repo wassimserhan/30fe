@@ -4011,12 +4011,37 @@ if (careerSlider) {
 // classes
 
 const magicalSearch = new _modules_search__WEBPACK_IMPORTED_MODULE_22__["default"]();
-if (document.querySelector('.accordion-container')) {
-  const mobileAccordion = new (_modules_mobileAccordion__WEBPACK_IMPORTED_MODULE_23___default())('.accordion-container', {
-    openOnInit: [0],
-    collapse: false
-  });
-}
+document.addEventListener("DOMContentLoaded", function () {
+  const accordionContainer = document.querySelector('.accordion-container');
+  if (accordionContainer && typeof (_modules_mobileAccordion__WEBPACK_IMPORTED_MODULE_23___default()) !== 'undefined') {
+    const mobileAccordion = new (_modules_mobileAccordion__WEBPACK_IMPORTED_MODULE_23___default())('.accordion-container', {
+      openOnInit: [0],
+      // Opens the first accordion by default
+      collapse: true,
+      // Allows clicking an open panel to close
+      onOpen: currentElement => {
+        // Locate the corresponding .ac-header for the opened panel
+        const header = currentElement.closest('.ac') // Find the parent .ac of the opened panel
+        ?.querySelector('.ac-header.mobile-accordion__items.mobile-accordion__items--education.max-padding--side');
+        if (header) {
+          // Get the exact position of the header
+          const headerRect = header.getBoundingClientRect();
+          const absoluteHeaderTop = window.scrollY + headerRect.top;
+
+          // Scroll smoothly with a custom offset (adjust -100px as needed)
+          window.scrollTo({
+            top: absoluteHeaderTop - 100,
+            // Modify -100px to ensure correct positioning
+            behavior: "smooth"
+          });
+        }
+      }
+    });
+
+    // Make the accordion instance accessible globally if needed
+    window.mobileAccordion = mobileAccordion;
+  }
+});
 
 /***/ }),
 

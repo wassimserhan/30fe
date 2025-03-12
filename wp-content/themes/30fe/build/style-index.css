@@ -6539,6 +6539,7 @@ body.admin-bar .search-overlay--desktop {
 .education__number {
   font-size: 2rem !important;
   color: #cbbea5 !important;
+  margin: 0 !important;
 }
 @media (max-width: 1024px) {
   .education__number {
