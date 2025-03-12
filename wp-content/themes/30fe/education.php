@@ -34,7 +34,7 @@ get_header();
                         <?php echo str_pad(get_row_index(), 2, '0', STR_PAD_LEFT); ?></p>
                     <button type="button" class="ac-trigger education__items"><?php echo $educationItems ?></button>
                 </div>
-                <div class="ac-panel max-padding--side education__bullets">
+                <div class="ac-panel education--side">
                     <section class="industry__category-bullets education__category-bullets">
                         <?php echo get_sub_field('copy') ?>
                     </section>

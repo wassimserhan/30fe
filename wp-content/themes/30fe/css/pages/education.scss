@@ -2,6 +2,13 @@
   &__accordion-container {
     display: block;
   }
+  
+  &--side {
+    padding: 0 8rem;
+    @include bp(laptop) {
+      padding: 0 1.5rem;
+    }
+  }
 
   &__arrow {
     align-content: center;

@@ -6516,6 +6516,14 @@ body.admin-bar .search-overlay--desktop {
 .education__accordion-container {
   display: block;
 }
+.education--side {
+  padding: 0 8rem;
+}
+@media (max-width: 1024px) {
+  .education--side {
+    padding: 0 1.5rem;
+  }
+}
 .education__arrow {
   align-content: center;
 }
