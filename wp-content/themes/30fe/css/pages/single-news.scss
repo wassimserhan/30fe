@@ -10,18 +10,24 @@
 
     & p {
     color: $whitesmoke;
-    padding: 10px 0;
+    margin-bottom: 10px;
   }
 
    & ul {
     list-style: disc;
      margin: 0 0 1.5em 3em;
+     color: $whitesmoke
   }
 
 
    & a {
       color: $whitesmoke;
       text-decoration: underline;
+    }
+
+    & img {
+          margin-bottom: 10px;
+
     }
 
   }
@@ -62,8 +68,8 @@
   &__label__category__text {
     font-size: 0.75rem;
     line-height: 160%;
-    margin: 0;
-    padding: 2px 8px;
+    margin: 0 !important;
+    padding: 2px 8px !important;
 
     & a {
       color: $whitesmoke;
@@ -72,3 +78,8 @@
   }
 
 }
+
+
+
+
+

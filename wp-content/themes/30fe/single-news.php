@@ -10,18 +10,16 @@
           <section class="max-width max-padding">
               <div class="news-post__container">
                   <article class="news-post__left">
-                      <article class="news__card__label">
-                          <a href="<?php the_permalink() ?>">
-                              <aside class="news__card__label__category" style="border: 1px solid #cbbea5;">
-                                  <p class=" news-post__label__category__text">
-                                      <?php echo get_the_term_list(get_the_ID(), 'news_category', '', ', ', ''); ?>
-                                  </p>
-                              </aside>
-                          </a>
-                      </article>
+
+                      <div class="news__card__label">
+                          <aside class="news__card__label__category" style="border: 1px solid #cbbea5;">
+                              <p class=" news-post__label__category__text">
+                                  <?php echo get_the_term_list(get_the_ID(), 'news_category', '', ', ', ''); ?>
+                              </p>
+                          </aside>
+                      </div>
 
                       <h2 class="news-post__headline"><?php the_title() ?></h2>
-
                       <p class="news-post__copy"> <?php echo the_content();?></p>
                   </article>
 
@@ -51,7 +49,7 @@
                               <?php echo $title ;?>
                           </div>
                           <div class="blog-card__email">
-                              e: <a href="mailto:<?php echo $email ;?>"><?php echo $email ;?></a>
+                              e: <a style="color: #1d1c1d" href="mailto:<?php echo $email ;?>"><?php echo $email ;?></a>
                           </div>
                       </section>
                       <?php endforeach; ?>

@@ -259,6 +259,8 @@ document.addEventListener("DOMContentLoaded", function () {
       openOnInit: [0], // Opens the first accordion by default
       collapse: true,  // Allows clicking an open panel to close
       onOpen: (currentElement) => {
+        toggleArrow(currentElement, true);
+
         // Locate the corresponding .ac-header for the opened panel
         const header = currentElement
           .closest('.ac')  // Find the parent .ac of the opened panel
@@ -275,6 +277,31 @@ document.addEventListener("DOMContentLoaded", function () {
             behavior: "smooth"
           });
         }
+      },
+      onClose: (currentElement) => {
+        toggleArrow(currentElement, false);
+      }
+
+    });
+
+    function toggleArrow(element, isOpen) {
+      const header = element.closest('.ac')?.querySelector('.ac-header');
+      const arrow = header?.querySelector('.expertise__list-item__arrow');
+
+      if (arrow) {
+        arrow.classList.toggle('expertise__list-item__rotate-arrow', isOpen);
+      }
+    }
+
+    // Ensure all arrows start down except the first open accordion
+    document.querySelectorAll('.ac').forEach((accordion, index) => {
+      const arrow = accordion.querySelector('.expertise__list-item__arrow');
+      if (arrow) {
+        if (index === 0) {
+          arrow.classList.add('expertise__list-item__rotate-arrow'); // First accordion's arrow points up
+        } else {
+          arrow.classList.remove('expertise__list-item__rotate-arrow'); // Others remain down
+        }
       }
     });
 
@@ -282,6 +309,8 @@ document.addEventListener("DOMContentLoaded", function () {
     window.mobileAccordion = mobileAccordion;
   }
 });
+
+
 
 
 

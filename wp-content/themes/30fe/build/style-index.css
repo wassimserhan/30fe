@@ -4174,7 +4174,11 @@ body.admin-bar .search-overlay--desktop {
 .expertise__list-item__arrow {
   max-width: 20px;
   margin-left: auto;
-  filter: invert(100%);
+  transition: transform 0.15s ease-in-out;
+  transform: rotate(90deg); /* Ensure it starts pointing down */
+}
+.expertise__list-item__rotate-arrow {
+  transform: rotate(270deg);
 }
 .expertise__wrapper {
   display: flex;
@@ -5485,15 +5489,19 @@ body.admin-bar .search-overlay--desktop {
 }
 .news-post__container p {
   color: #f2f1ed;
-  padding: 10px 0;
+  margin-bottom: 10px;
 }
 .news-post__container ul {
   list-style: disc;
   margin: 0 0 1.5em 3em;
+  color: #f2f1ed;
 }
 .news-post__container a {
   color: #f2f1ed;
   text-decoration: underline;
+}
+.news-post__container img {
+  margin-bottom: 10px;
 }
 .news-post__left {
   width: 60%;
@@ -5531,8 +5539,8 @@ body.admin-bar .search-overlay--desktop {
 .news-post__label__category__text {
   font-size: 0.75rem;
   line-height: 160%;
-  margin: 0;
-  padding: 2px 8px;
+  margin: 0 !important;
+  padding: 2px 8px !important;
 }
 .news-post__label__category__text a {
   color: #f2f1ed;
@@ -5568,9 +5576,6 @@ body.admin-bar .search-overlay--desktop {
   letter-spacing: -4%;
   margin: 0;
 }
-.event-post__copy ~ p a {
-  text-decoration: underline;
-}
 .event-post__card {
   border: 1px solid #1d1c1d;
   padding: 32px;
@@ -5583,15 +5588,6 @@ body.admin-bar .search-overlay--desktop {
     max-width: 100%;
     margin: 32px 0;
   }
-}
-.event-post__label__category__text {
-  font-size: 0.75rem;
-  line-height: 160%;
-  margin: 0;
-  padding: 2px 8px;
-}
-.event-post__label__category__text a {
-  color: #f2f1ed;
 }
 
 .lightgallery {
@@ -5645,6 +5641,33 @@ body.admin-bar .search-overlay--desktop {
 .lg-outer .lg-thumb-item.active, .lg-outer .lg-thumb-item:hover {
   border-color: #cbbea5 !important;
   opacity: 100%;
+}
+
+.event-post a {
+  text-decoration: underline;
+  color: #1d1c1d;
+}
+
+.event-post ul {
+  list-style: disc;
+}
+
+.event-post li {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.72px;
+  color: #1d1c1d;
+  padding: 10px 0;
+  margin-left: 30px;
+}
+
+.event-post p {
+  margin-bottom: 10px;
+}
+
+.event-post img {
+  margin-bottom: 10px;
 }
 
 .contact {

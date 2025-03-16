@@ -23,16 +23,20 @@ get_header();
                 </section>
             </section>
         </section>
-        <div class="accordion-container education__accordion-container max-width">
+        <div class="accordion-container education__accordion-container max-padding--side max-width">
             <?php
           if( have_rows('column_list') ): 
           while( have_rows('column_list') ) : the_row();
             $educationItems = get_sub_field('list_item'); ?>
             <div class="ac">
                 <div class="ac-header mobile-accordion__items mobile-accordion__items--education max-padding--side">
-                    <p class="mobile-accordion__number education__number">
+                    <p style="margin:0" class="mobile-accordion__number industry__category-item">
                         <?php echo str_pad(get_row_index(), 2, '0', STR_PAD_LEFT); ?></p>
-                    <button type="button" class="ac-trigger education__items"><?php echo $educationItems ?></button>
+                    <button type="button"
+                        class="ac-trigger industry__category-item"><?php echo $educationItems ?></button>
+                    <img class="expertise__list-item__arrow"
+                        src="https://30fe.com/wp-content/themes/30fe/images/white-arrow.svg" width="20" height="20"
+                        alt="arrow" tabindex="0">
                 </div>
                 <div class="ac-panel education--side">
                     <section class="industry__category-bullets education__category-bullets">

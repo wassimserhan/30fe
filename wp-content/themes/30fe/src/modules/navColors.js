@@ -231,6 +231,8 @@ if (true) {
       gsap.set(".nav__logo__black", { filter: $logoWhite })
       gsap.set(".nav__items", { color: $whitesmoke })
       gsap.set(".nav", { backgroundColor: $black })
+      gsap.set(".nav__dropdown-grid", { backgroundColor: $black, borderColor: $whitesmoke })
+      gsap.set(".nav__items__button", { backgroundColor: $whitesmokeOpacity })
       gsap.set(".search-overlay--desktop__wrapper", { borderColor: $whitesmoke })
       gsap.set(".search-overlay--desktop__icon", { filter: $logoBlack })
       gsap.set(".nav__button", { backgroundColor: $whitesmoke, color: $black })
@@ -325,8 +327,8 @@ if (true) {
 
     case 'education.php':
       gsap.set(".nav", { backgroundColor: $whitesmoke })
-      sectionColors = [$whitesmoke];
-      navColors = [$whitesmoke];
+      sectionColors = [$whitesmoke, $taupe];
+      navColors = [$whitesmoke, $taupe];
       navScroll = false;
       break;
     default:

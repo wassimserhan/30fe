@@ -4020,6 +4020,8 @@ document.addEventListener("DOMContentLoaded", function () {
       collapse: true,
       // Allows clicking an open panel to close
       onOpen: currentElement => {
+        toggleArrow(currentElement, true);
+
         // Locate the corresponding .ac-header for the opened panel
         const header = currentElement.closest('.ac') // Find the parent .ac of the opened panel
         ?.querySelector('.ac-header.mobile-accordion__items.mobile-accordion__items--education.max-padding--side');
@@ -4034,6 +4036,28 @@ document.addEventListener("DOMContentLoaded", function () {
             // Modify -100px to ensure correct positioning
             behavior: "smooth"
           });
+        }
+      },
+      onClose: currentElement => {
+        toggleArrow(currentElement, false);
+      }
+    });
+    function toggleArrow(element, isOpen) {
+      const header = element.closest('.ac')?.querySelector('.ac-header');
+      const arrow = header?.querySelector('.expertise__list-item__arrow');
+      if (arrow) {
+        arrow.classList.toggle('expertise__list-item__rotate-arrow', isOpen);
+      }
+    }
+
+    // Ensure all arrows start down except the first open accordion
+    document.querySelectorAll('.ac').forEach((accordion, index) => {
+      const arrow = accordion.querySelector('.expertise__list-item__arrow');
+      if (arrow) {
+        if (index === 0) {
+          arrow.classList.add('expertise__list-item__rotate-arrow'); // First accordion's arrow points up
+        } else {
+          arrow.classList.remove('expertise__list-item__rotate-arrow'); // Others remain down
         }
       }
     });
@@ -5958,6 +5982,13 @@ if (true) {
       gsap.set(".nav", {
         backgroundColor: $black
       });
+      gsap.set(".nav__dropdown-grid", {
+        backgroundColor: $black,
+        borderColor: $whitesmoke
+      });
+      gsap.set(".nav__items__button", {
+        backgroundColor: $whitesmokeOpacity
+      });
       gsap.set(".search-overlay--desktop__wrapper", {
         borderColor: $whitesmoke
       });
@@ -6132,8 +6163,8 @@ if (true) {
       gsap.set(".nav", {
         backgroundColor: $whitesmoke
       });
-      sectionColors = [$whitesmoke];
-      navColors = [$whitesmoke];
+      sectionColors = [$whitesmoke, $taupe];
+      navColors = [$whitesmoke, $taupe];
       navScroll = false;
       break;
     default:

@@ -28,11 +28,7 @@
     margin: 0;
   }
 
-  &__copy ~ p {
-    a {
-      text-decoration: underline;
-    }
-  }
+ 
   &__card {
     border: 1px solid #1d1c1d;
     padding: 32px;
@@ -45,16 +41,7 @@
       margin: 32px 0;
     }
   }
-  &__label__category__text {
-    font-size: 0.75rem;
-    line-height: 160%;
-    margin: 0;
-    padding: 2px 8px;
 
-    & a {
-      color: $whitesmoke;
-    }
-  }
 }
 
 .lightgallery {
@@ -119,5 +106,33 @@
 .lg-outer .lg-thumb-item.active, .lg-outer .lg-thumb-item:hover {
     border-color: $taupe !important;
       opacity: 100%;
+}
+
+
+.event-post a {
+  text-decoration: underline;
+  color: $black;
+}
+
+.event-post ul{
+  list-style: disc;
+}
+
+.event-post li {
+  font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -0.72px;
+    color: #1d1c1d;
+    padding: 10px 0;
+    margin-left: 30px;
+}
+
+.event-post p {
+  margin-bottom: 10px;
+}
+
+.event-post img {
+  margin-bottom: 10px;
 }
 

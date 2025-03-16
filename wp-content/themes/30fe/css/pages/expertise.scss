@@ -75,7 +75,13 @@
     &__arrow {
       max-width: 20px;
       margin-left: auto;
-      filter: invert(100%);
+      transition: transform 0.15s ease-in-out;
+      transform: rotate(90deg); /* Ensure it starts pointing down */
+
+    }
+
+    &__rotate-arrow {
+      transform: rotate(270deg);
     }
   }
 
