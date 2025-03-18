@@ -6441,9 +6441,9 @@ class Search {
       this.resultsDiv.html(`
         <div class="row">
           <div class="one-third">
-          <section class="pill search-overlay__pill pill-white">
-        <p class="pill__label pill__label-white">Team</p>
-      </section>
+            <section class="pill search-overlay__pill pill-white">
+              <p class="pill__label pill__label-white">Team</p>
+            </section>
            
             ${results.team.length ? '<section class="search__results">' : `<p class="search__result__none"> No results match that search. <a href="${siteData.root_url}/team">View Team</a></p>`}
               ${results.team.map(item => `
@@ -6458,10 +6458,11 @@ class Search {
                 </a>`).join('')}
               ${results.team.length ? '</section>' : ''}  
           </div>
-           <div class="one-third">
+
+          <div class="one-third">
                <section class="pill search-overlay__pill pill-white">
-        <p class="pill__label pill__label-white">Expertise</p>
-      </section>
+                <p class="pill__label pill__label-white">Expertise</p>
+              </section>
               ${results.expertise.length ? '<section class="search__results">' : `<p class="search__result__none"> No results match that search. <a href="${siteData.root_url}/expertise">View Expertise</a></p>`}
               ${results.expertise.map(item => `
                 <a class="search__result__link" href="${item.permalink}">
@@ -6476,8 +6477,8 @@ class Search {
               ${results.expertise.length ? '</section>' : ''}  
 
                <section class="pill search-overlay__pill pill-white">
-        <p class="pill__label pill__label-white">Sectors</p>
-      </section>
+                <p class="pill__label pill__label-white">Sectors</p>
+              </section>
               ${results.industry.length ? '<section class="search__results">' : `<p class="search__result__none"> No results match that search. <a href="${siteData.root_url}/sectors">View Sectors</a></p>`}
               ${results.industry.map(item => `
                 <a class="search__result__link" href="${item.permalink}">
@@ -6491,10 +6492,11 @@ class Search {
                 </a>`).join('')}
               ${results.industry.length ? '</section>' : ''}  
           </div>
+
            <div class="one-third">
               <section class="pill search-overlay__pill pill-white">
-        <p class="pill__label pill__label-white">Insights</p>
-      </section>
+                <p class="pill__label pill__label-white">Insights</p>
+              </section>
               ${results.post.length ? '<section class="search__results">' : `<p class="search__result__none"> No results match that search. <a href="${siteData.root_url}/insights">View Insights</a></p>`}
               ${results.post.map(item => `
                 <a class="search__result__link" href="${item.permalink}">
@@ -6507,6 +6509,24 @@ class Search {
                 </a>`).join('')}
               ${results.post.length ? '</section>' : ''}  
           </div>
+
+          <div class="one-third">
+              <section class="pill search-overlay__pill pill-white">
+                <p class="pill__label pill__label-white">News</p>
+              </section>
+              ${results.news.length ? '<section class="search__results">' : `<p class="search__result__none"> No results match that search. <a href="${siteData.root_url}/news">View News</a></p>`}
+              ${results.news.map(item => `
+                <a class="search__result__link" href="${item.permalink}">
+                  <section class="search__result">
+                    <img src="${item.image}">
+                    <section class="search__result__detail">
+                      <p class="search__result__title">${item.title.split(" ").slice(0, 4).join(" ")}</p>
+                    </section>
+                 </section>
+                </a>`).join('')}
+              ${results.news.length ? '</section>' : ''}  
+          </div>
+
         </div>
             
       `);

@@ -12,7 +12,7 @@
 
  function searchResults($data) {
   $mainQuery = new WP_Query(array(
-    'post_type' => array('team', 'expertise', 'industry', 'post'),
+    'post_type' => array('team', 'expertise', 'industry', 'news', 'post'),
     's' =>sanitize_text_field($data['term']),
   ));
 
@@ -20,6 +20,7 @@
     'team' => array(),
     'expertise' => array(),
     'industry' => array(),
+    'news' => array(),
     'post' => array()
   );
 
@@ -44,6 +45,15 @@
     }
      if(get_post_type() === 'industry') {
     array_push($results['industry'], array(
+      'title' => get_the_title(),
+      'permalink' => get_the_permalink(),
+     'image' =>get_the_post_thumbnail_url(0, 'square'),
+      'id' => get_the_ID()
+    ));
+    }
+
+     if(get_post_type() === 'news') {
+    array_push($results['news'], array(
       'title' => get_the_title(),
       'permalink' => get_the_permalink(),
      'image' =>get_the_post_thumbnail_url(0, 'square'),
