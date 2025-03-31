@@ -34,49 +34,25 @@
                   </div>
               </section>
           </section>
+          <?php $images = get_field('event_image'); ?>
+          <?php if ($images): ?>
           <!-- Gallery -->
           <section class="gallery">
               <section class="max-width max-padding">
-                  <p class="gallery__title">Gallery from <?php the_title() ?><?php ?></p>
+                  <p class="gallery__title">Gallery from <?php the_title(); ?></p>
                   <div class="lightgallery">
-                      <a href="<?php echo get_template_directory_uri(); ?>/images/Image.jpg"
-                          data-src="<?php echo get_template_directory_uri(); ?>/images/Image.jpg">
-                          <img src="<?php echo get_template_directory_uri(); ?>/images/Image.jpg" alt="Thumbnail">
+                      <?php foreach ($images as $image): ?>
+                      <a href="<?php echo esc_url($image['url']); ?>" data-src="<?php echo esc_url($image['url']); ?>">
+                          <img src="<?php echo esc_url($image['sizes']['thumbnail']); ?>"
+                              alt="<?php echo esc_attr($image['alt']); ?>">
                       </a>
-                      <a href="<?php echo get_template_directory_uri(); ?>/images/Image.jpg"
-                          data-src="<?php echo get_template_directory_uri(); ?>/images/Image.jpg">
-                          <img src="<?php echo get_template_directory_uri(); ?>/images/Image.jpg" alt="Thumbnail">
-                      </a>
-                      <a href="<?php echo get_template_directory_uri(); ?>/images/Image.jpg"
-                          data-src="<?php echo get_template_directory_uri(); ?>/images/Image.jpg">
-                          <img src="<?php echo get_template_directory_uri(); ?>/images/Image.jpg" alt="Thumbnail">
-                      </a>
-                      <a href="<?php echo get_template_directory_uri(); ?>/images/Image.jpg"
-                          data-src="<?php echo get_template_directory_uri(); ?>/images/Image.jpg">
-                          <img src="<?php echo get_template_directory_uri(); ?>/images/Image.jpg" alt="Thumbnail">
-                      </a>
-                      <a href="<?php echo get_template_directory_uri(); ?>/images/Image.jpg"
-                          data-src="<?php echo get_template_directory_uri(); ?>/images/Image.jpg">
-                          <img src="<?php echo get_template_directory_uri(); ?>/images/Image.jpg" alt="Thumbnail">
-                      </a>
-                      <a href="<?php echo get_template_directory_uri(); ?>/images/Image.jpg"
-                          data-src="<?php echo get_template_directory_uri(); ?>/images/Image.jpg">
-                          <img src="<?php echo get_template_directory_uri(); ?>/images/Image.jpg" alt="Thumbnail">
-                      </a>
-                      <a href="<?php echo get_template_directory_uri(); ?>/images/Image.jpg"
-                          data-src="<?php echo get_template_directory_uri(); ?>/images/Image.jpg">
-                          <img src="<?php echo get_template_directory_uri(); ?>/images/Image.jpg" alt="Thumbnail">
-                      </a>
-                      <a href="<?php echo get_template_directory_uri(); ?>/images/Image.jpg"
-                          data-src="<?php echo get_template_directory_uri(); ?>/images/Image.jpg">
-                          <img src="<?php echo get_template_directory_uri(); ?>/images/Image.jpg" alt="Thumbnail">
-                      </a>
-
+                      <?php endforeach; ?>
                   </div>
                   <!-- Load All Button -->
                   <button class="news__load" id="loadAllBtn">Load All</button>
               </section>
           </section>
+          <?php endif; ?>
       </section>
   </main>
 
