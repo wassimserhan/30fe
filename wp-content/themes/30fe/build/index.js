@@ -4113,6 +4113,17 @@ items.forEach((e, i) => {
     currentItem = i;
   });
 });
+document.addEventListener('DOMContentLoaded', function () {
+  const arrows = document.querySelectorAll('.expertise__list-item__arrow');
+  arrows.forEach(arrow => {
+    arrow.addEventListener('click', function (e) {
+      e.preventDefault();
+      const header = this.closest('.ac-header');
+      const trigger = header.querySelector('.ac-trigger');
+      if (trigger) trigger.click();
+    });
+  });
+});
 
 /***/ }),
 
@@ -5233,83 +5244,77 @@ const loadAllBtn = document.getElementById('loadAllBtn');
 
 // Only proceed if the gallery container and load button exist
 if (galleryContainer && loadAllBtn) {
-  // Function to initialize LightGallery with the first 3 images
   const initializeGallery = () => {
     const allLinks = Array.from(galleryContainer.querySelectorAll('a'));
     const initialLinks = allLinks.slice(0, 3);
-
-    // Hide all images except the first 3
     allLinks.forEach((link, index) => {
       if (index >= 3) {
         link.style.display = 'none';
       }
     });
-
-    // Initialize LightGallery
     const galleryInstance = lightGallery(galleryContainer, {
       dynamic: true,
       dynamicEl: initialLinks.map(link => ({
         src: link.getAttribute('href'),
-        thumb: link.querySelector('img').getAttribute('src')
+        thumb: link.getAttribute('data-thumb') || link.querySelector('img')?.getAttribute('src')
       })),
-      loop: false // Prevent looping
-    });
+      plugins: [lgZoom, lgThumbnail, lgShare],
+      share: true,
+      sharePlugin: {
+        facebook: true,
+        twitter: true,
+        pinterest: true,
+        download: false // or true if you want the download button
+      },
 
-    // Custom behavior to explicitly prevent looping
+      loop: false
+    });
     galleryContainer.addEventListener('lgBeforeNextSlide', event => {
       const {
         index
       } = event.detail;
       const totalSlides = galleryInstance.getItems().length;
-
-      // Prevent navigation beyond the last slide
       if (index >= totalSlides - 1) {
         event.preventDefault();
       }
     });
-
-    // Dynamically load more slides when reaching the last slide
     galleryContainer.addEventListener('lgAfterSlide', event => {
       const {
         index
       } = event.detail;
       const totalSlides = galleryInstance.getItems().length;
       if (index === totalSlides - 1 && totalSlides < allLinks.length) {
-        const nextBatch = allLinks.slice(totalSlides, totalSlides + 3); // Load next 3 images
-
+        const nextBatch = allLinks.slice(totalSlides, totalSlides + 3);
         nextBatch.forEach(link => {
-          link.style.display = ''; // Reveal hidden link
+          link.style.display = '';
           galleryInstance.addSlide({
             src: link.getAttribute('href'),
-            thumb: link.querySelector('img').getAttribute('src')
+            thumb: link.querySelector('img')?.getAttribute('src')
           });
         });
       }
     });
   };
-
-  // Event listener for the Load All button
   loadAllBtn.addEventListener('click', () => {
     const allLinks = Array.from(galleryContainer.querySelectorAll('a'));
-
-    // Show all hidden images
-    allLinks.forEach(link => {
-      link.style.display = ''; // Reveal all links
-    });
-
-    // Destroy the current LightGallery instance and reinitialize with all images
-    const dynamicEl = allLinks.map(link => ({
-      src: link.getAttribute('href'),
-      thumb: link.querySelector('img').getAttribute('src')
-    }));
+    allLinks.forEach(link => link.style.display = '');
     lightGallery(galleryContainer).destroy();
     const galleryInstance = lightGallery(galleryContainer, {
       dynamic: true,
-      dynamicEl,
-      loop: false // Ensure looping is disabled
+      dynamicEl: allLinks.map(link => ({
+        src: link.getAttribute('href'),
+        thumb: link.getAttribute('data-thumb') || link.querySelector('img')?.getAttribute('src')
+      })),
+      plugins: [lgZoom, lgThumbnail, lgShare],
+      share: true,
+      sharePlugin: {
+        facebook: true,
+        twitter: true,
+        pinterest: true,
+        download: false
+      },
+      loop: false
     });
-
-    // Prevent navigation beyond the last slide in the fully loaded gallery
     galleryContainer.addEventListener('lgBeforeNextSlide', event => {
       const {
         index
@@ -5319,12 +5324,8 @@ if (galleryContainer && loadAllBtn) {
         event.preventDefault();
       }
     });
-
-    // Hide the Load All button after all images are loaded
     loadAllBtn.style.display = 'none';
   });
-
-  // Initialize LightGallery with the first 3 images
   initializeGallery();
 }
 

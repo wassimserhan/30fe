@@ -48,3 +48,17 @@ items.forEach((e, i) => {
   });
 });
 
+
+document.addEventListener('DOMContentLoaded', function () {
+  const arrows = document.querySelectorAll('.expertise__list-item__arrow');
+
+  arrows.forEach(arrow => {
+    arrow.addEventListener('click', function (e) {
+      e.preventDefault();
+      const header = this.closest('.ac-header');
+      const trigger = header.querySelector('.ac-trigger');
+      if (trigger) trigger.click();
+    });
+  });
+});
+

@@ -90,6 +90,14 @@ function enqueue_lightgallery_assets() {
         '2.7.1',
         true
     );
+
+    wp_enqueue_script(
+        'lg-share-js',
+        'https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/share/lg-share.min.js',
+        array('lightgallery-js'),
+        '2.7.1',
+        true
+    );
 }
 add_action('wp_enqueue_scripts', 'enqueue_lightgallery_assets');
 
@@ -102,7 +110,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const galleryElements = document.querySelectorAll('.lightgallery');
     galleryElements.forEach(function(el) {
         lightGallery(el, {
-            plugins: [lgThumbnail, lgZoom], // Ensure these match the plugins you're using
+            plugins: [lgThumbnail, lgZoom,
+                lgShare
+            ], // Ensure these match the plugins you're using
             speed: 500,
         });
     });
@@ -121,7 +131,8 @@ function theme_features() {
   show_admin_bar( false );
   add_theme_support( 'post-thumbnails' );
   add_filter('acf/settings/remove_wp_meta_box', '__return_false');
-  add_image_size( 'square', 100, 100, true );
+  add_image_size( 'square', 100, 100, true ); 
+ add_image_size( 'lightgallery-thumb', 400, 400, true ); // for LightGallery strip
 
 
 }

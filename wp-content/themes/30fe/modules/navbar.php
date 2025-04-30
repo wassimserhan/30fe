@@ -184,7 +184,7 @@ global $template;
                     <a class="nav__items--mobile nav__items--mobile--accordion nav-links"
                         href="<?php echo site_url('/team')?>" target="_self">Team</a>
                     <a class="nav__items--mobile nav__items--mobile--accordion nav-links"
-                        href="<?php echo site_url('/team')?>" target="_self">Careers</a>
+                        href="<?php echo site_url('/careers')?>" target="_self">Careers</a>
 
 
 

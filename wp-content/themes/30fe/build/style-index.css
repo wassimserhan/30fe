@@ -4176,6 +4176,7 @@ body.admin-bar .search-overlay--desktop {
   margin-left: auto;
   transition: transform 0.15s ease-in-out;
   transform: rotate(90deg); /* Ensure it starts pointing down */
+  cursor: pointer;
 }
 .expertise__list-item__rotate-arrow {
   transform: rotate(270deg);
@@ -5520,7 +5521,7 @@ body.admin-bar .search-overlay--desktop {
   font-size: 2.5rem;
   font-weight: 600;
   line-height: 120%;
-  letter-spacing: -4%;
+  letter-spacing: -0.2rem;
   margin: 0;
 }
 .news-post__card {
@@ -5573,7 +5574,7 @@ body.admin-bar .search-overlay--desktop {
   font-size: 2.5rem;
   font-weight: 600;
   line-height: 120%;
-  letter-spacing: -4%;
+  letter-spacing: -0.2rem;
   margin: 0;
 }
 .event-post__card {

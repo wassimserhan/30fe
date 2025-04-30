@@ -242,6 +242,7 @@ import './modules/lightgallery';
 
 
 
+
 import Search from './modules/search';
 import Accordion from './modules/mobileAccordion';
 
@@ -250,6 +251,8 @@ import Accordion from './modules/mobileAccordion';
 // classes
 
 const magicalSearch = new Search()
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
   const accordionContainer = document.querySelector('.accordion-container');

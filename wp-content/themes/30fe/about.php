@@ -10,6 +10,15 @@ get_header();
 
     <!-- Hero -->
 
+    <?php 
+
+    $intro = get_field('intro');
+
+    if ($intro) {
+        $experts = $intro['experts'];
+        $practice_areas = $intro['practice_areas'];
+    }?>
+
     <section class="about__hero fullscreen full-height about__hero__transparent">
         <section class="max-width max-padding about__hero__padding">
 
@@ -17,8 +26,8 @@ get_header();
                 <img class="about__hero__video" src="<?php echo get_template_directory_uri(); ?>/images/about.gif"
                     alt="About 30FE">
                 <h1 class="about__hero__headline">We are 30</h1>
-                <h3 class="about__hero__copy">With over <span class="orange">60 experts</span> in <span
-                        class="green">14&nbsp;practice
+                <h3 class="about__hero__copy">With over <span class="orange"><?php echo $experts ?> experts</span> in
+                    <span class="green"><?php echo $practice_areas ?>&nbsp;practice
                         areas</span>, we&nbsp;offer
                     evidence-based solutions to&nbsp;<span class="blue">clients worldwide</span>.
                 </h3>

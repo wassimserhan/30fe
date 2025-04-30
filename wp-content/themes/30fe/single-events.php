@@ -42,8 +42,9 @@
                   <p class="gallery__title">Gallery from <?php the_title(); ?></p>
                   <div class="lightgallery">
                       <?php foreach ($images as $image): ?>
-                      <a href="<?php echo esc_url($image['url']); ?>" data-src="<?php echo esc_url($image['url']); ?>">
-                          <img src="<?php echo esc_url($image['sizes']['thumbnail']); ?>"
+                      <a href="<?php echo esc_url($image['url']); ?>" data-src="<?php echo esc_url($image['url']); ?>"
+                          data-thumb="<?php echo esc_url($image['sizes']['lightgallery-thumb']); ?>">
+                          <img src="<?php echo esc_url($image['sizes']['lightgallery-thumb']); ?>"
                               alt="<?php echo esc_attr($image['alt']); ?>">
                       </a>
                       <?php endforeach; ?>
