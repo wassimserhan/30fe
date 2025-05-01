@@ -15,9 +15,12 @@ get_header();
                             professionals in the insurance and legal sectors. With a robust offering of over 40 courses,
                             we provide flexible learning formats, including webinars, in-person sessions, and customized
                             content to meet your team's unique needs. Please explore our curriculum below:
-                        </p> <a href="<?php the_permalink() ?>" aria-label="Read more">
+                        </p>
+
+                        <a href="<?php echo site_url('/contact/#contact-form'); ?>" aria-label="Read more">
                             <button class="education__button">Request a Course</button>
                         </a>
+
                     </article>
 
                 </section>

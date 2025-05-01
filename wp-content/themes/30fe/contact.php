@@ -107,7 +107,7 @@ get_header();
 
 
         <section class="contact__information max-width">
-            <section class="contact__form">
+            <section id="contact-form" class="contact__form">
                 <section class="max-padding">
                     <h3 class="email__headline"><?php echo get_field('headline') ?></h3>
 
