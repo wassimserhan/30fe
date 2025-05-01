@@ -50,7 +50,7 @@
             <?php wp_reset_postdata(); ?>
         </section>
 
-        <?php if ($total_posts > 9): ?>
+        <?php if ($total_posts > 12): ?>
         <button id="load-more" class="news__load" data-page="1" data-post-type="events"
             data-url="<?php echo admin_url('admin-ajax.php'); ?>">Load More</button>
         <?php endif; ?>
