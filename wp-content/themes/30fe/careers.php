@@ -28,6 +28,8 @@ get_header();
 
 
     <!-- Career Slider -->
+    <?php 
+              if( have_rows('banner_images') ): ?>
     <section class="black-bg">
         <section class="max-width">
             <section id="careerIntro" class="splide splide-careers-intro splide-careers-banners"
@@ -36,7 +38,7 @@ get_header();
                     <div class="splide__track">
                         <ul class="splide__list">
                             <?php 
-              if( have_rows('banner_images') ): 
+           
               while( have_rows('banner_images') ) : the_row(); ?>
                             <?php 
               $img = get_sub_field('image');
@@ -50,15 +52,15 @@ get_header();
                             </li>
                             <?php
           endwhile; ?>
-                            <?php endif;
-            ?>
+
                         </ul>
                     </div>
                 </section>
             </section>
         </section>
     </section>
-
+    <?php endif;
+            ?>
     <!-- Headline -->
     <section class="quote fullscreen" style="min-height:0">
         <section class="max-width max-padding">
