@@ -50,6 +50,11 @@
                     <a style="color: inherit; text-decoration: underline !important"
                         href="http://30fe.com/wp-content/uploads/2024/12/30FE-Multi-year-Plan-and-Accessibility-Policies-December-2024.pdf">Accessibility</a>
                 </p>
+                <p class="footer__copyright"><a style="color: #f2f1ed; text-decoration: underline !important"
+                        href="https://www.studiowildwild.com/" target="_blank" rel="noopener noreferrer">
+                        Design and Development by Wild Wild
+                    </a></p>
+
 
             </div>
         </section>
