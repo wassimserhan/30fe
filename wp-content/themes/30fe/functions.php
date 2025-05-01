@@ -8,7 +8,9 @@ require get_theme_file_path('/includes/insights-search.php');
 // register REST here
 
 function enqueue_custom_script() {
-    wp_enqueue_script('custom-ajax-script', get_template_directory_uri() . '/path-to-your-script.js', array('jquery'), null, true);
+    wp_register_script('custom-ajax-script', '', [], null, true); // registers an empty handle
+    wp_enqueue_script('custom-ajax-script');
+
     wp_localize_script('custom-ajax-script', 'wpAjax', array(
         'ajaxUrl' => admin_url('admin-ajax.php'),
     ));
