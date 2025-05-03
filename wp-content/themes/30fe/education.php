@@ -15,12 +15,10 @@ get_header();
                             professionals in the insurance and legal sectors. With a robust offering of over 40 courses,
                             we provide flexible learning formats, including webinars, in-person sessions, and customized
                             content to meet your team's unique needs. Please explore our curriculum below:
-                        </p>
-
-                        <a href="<?php echo site_url('/contact/#contact-form'); ?>" aria-label="Read more">
+                        </p> <a href="<?php echo get_permalink(get_page_by_path('contact')); ?>#contact-form"
+                            aria-label="Read more">
                             <button class="education__button">Request a Course</button>
                         </a>
-
                     </article>
 
                 </section>
@@ -30,16 +28,34 @@ get_header();
             <?php
           if( have_rows('column_list') ): 
           while( have_rows('column_list') ) : the_row();
-            $educationItems = get_sub_field('list_item'); ?>
+                $arrow_color = 'black'; // fallback
+$education_item = get_sub_field('education_item');
+
+if ($education_item && is_object($education_item)) {
+    $color = get_field('category_color', $education_item->ID);
+
+    if (is_array($color)) {
+        $arrow_color = isset($color['value']) ? $color['value'] : 'black';
+    } elseif (is_string($color)) {
+        $arrow_color = $color;
+    }
+}
+                
+                ?>
             <div class="ac">
                 <div class="ac-header mobile-accordion__items mobile-accordion__items--education max-padding--side">
                     <p style="margin:0" class="mobile-accordion__number industry__category-item">
                         <?php echo str_pad(get_row_index(), 2, '0', STR_PAD_LEFT); ?></p>
+
                     <button type="button"
-                        class="ac-trigger industry__category-item"><?php echo $educationItems ?></button>
-                    <img class="expertise__list-item__arrow"
-                        src="https://30fe.com/wp-content/themes/30fe/images/white-arrow.svg" width="20" height="20"
-                        alt="arrow" tabindex="0">
+                        class="ac-trigger industry__category-item"><?php echo get_the_title($education_item) ?></button>
+                    <!-- Inline SVG with dynamic fill color -->
+                    <svg class="expertise__list-item__arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        viewBox="0 0 24 24" fill="<?php echo esc_attr($arrow_color); ?>">
+                        <path d="M8 5l8 7-8 7" fill="<?php echo esc_attr($arrow_color); ?>" />
+                    </svg>
+
+
                 </div>
                 <div class="ac-panel education--side">
                     <section class="industry__category-bullets education__category-bullets">

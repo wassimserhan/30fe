@@ -259,7 +259,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (accordionContainer && typeof Accordion !== 'undefined') {
     const mobileAccordion = new Accordion('.accordion-container', {
-      openOnInit: [0], // Opens the first accordion by default
+      openOnInit: [], // Opens the first accordion by default
       collapse: true,  // Allows clicking an open panel to close
       onOpen: (currentElement) => {
         toggleArrow(currentElement, true);

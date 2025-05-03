@@ -8,10 +8,6 @@ $(".accordion__item").on("mouseover", function () {
 });
 
 
-
-
-
-
 //Mobile Accordion
 
 const items = gsap.utils.toArray(".tab");

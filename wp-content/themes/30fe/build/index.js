@@ -4015,7 +4015,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const accordionContainer = document.querySelector('.accordion-container');
   if (accordionContainer && typeof (_modules_mobileAccordion__WEBPACK_IMPORTED_MODULE_23___default()) !== 'undefined') {
     const mobileAccordion = new (_modules_mobileAccordion__WEBPACK_IMPORTED_MODULE_23___default())('.accordion-container', {
-      openOnInit: [0],
+      openOnInit: [],
       // Opens the first accordion by default
       collapse: true,
       // Allows clicking an open panel to close
@@ -5258,15 +5258,15 @@ if (galleryContainer && loadAllBtn) {
         src: link.getAttribute('href'),
         thumb: link.getAttribute('data-thumb') || link.querySelector('img')?.getAttribute('src')
       })),
-      plugins: [lgZoom, lgThumbnail, lgShare],
+      plugins: [lgThumbnail, lgShare],
       share: true,
       sharePlugin: {
-        facebook: true,
+        facebook: false,
         twitter: true,
-        pinterest: true,
-        download: false // or true if you want the download button
+        pinterest: false,
+        linkedin: true,
+        download: false
       },
-
       loop: false
     });
     galleryContainer.addEventListener('lgBeforeNextSlide', event => {
@@ -5305,12 +5305,13 @@ if (galleryContainer && loadAllBtn) {
         src: link.getAttribute('href'),
         thumb: link.getAttribute('data-thumb') || link.querySelector('img')?.getAttribute('src')
       })),
-      plugins: [lgZoom, lgThumbnail, lgShare],
+      plugins: [lgThumbnail, lgShare],
       share: true,
       sharePlugin: {
-        facebook: true,
+        facebook: false,
         twitter: true,
-        pinterest: true,
+        pinterest: false,
+        linkedin: true,
         download: false
       },
       loop: false
@@ -5325,6 +5326,14 @@ if (galleryContainer && loadAllBtn) {
       }
     });
     loadAllBtn.style.display = 'none';
+  });
+
+  // Hide the download button manually if it's still showing
+  galleryContainer.addEventListener('lgAfterOpen', () => {
+    const downloadButton = document.querySelector('.lg-download');
+    if (downloadButton) {
+      downloadButton.style.display = 'none';
+    }
   });
   initializeGallery();
 }

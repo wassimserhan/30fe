@@ -6,7 +6,6 @@ get_header();
 ?>
 
 <main class="main-container">
-
     <section class="careers__intro fullscreen">
         <section class="max-width max-padding">
             <section class="careers__intro__wrapper">
@@ -61,16 +60,7 @@ get_header();
     </section>
     <?php endif;
             ?>
-    <!-- Headline -->
-    <section class="quote fullscreen" style="min-height:0">
-        <section class="max-width max-padding">
-            <h3 class="quote__headline" style="padding: 0;">When talented and determined minds join forces, they
-                achieve
-                the impossible. At 30 Forensic Engineering, this isn’t just a belief—it’s our way of life. And we’re
-                searching for
-                individuals like you who share the same drive.</h3>
-        </section>
-    </section>
+
 
 
     <!-- Vision -->

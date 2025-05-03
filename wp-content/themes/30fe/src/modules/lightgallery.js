@@ -1,6 +1,3 @@
-
-
-
 // Select the LightGallery container and the Load All button
 const galleryContainer = document.querySelector('.lightgallery');
 const loadAllBtn = document.getElementById('loadAllBtn');
@@ -23,13 +20,14 @@ if (galleryContainer && loadAllBtn) {
                 src: link.getAttribute('href'),
                 thumb: link.getAttribute('data-thumb') || link.querySelector('img')?.getAttribute('src')
             })),
-            plugins: [lgZoom, lgThumbnail, lgShare],
+            plugins: [lgThumbnail, lgShare],
             share: true,
             sharePlugin: {
-                facebook: true,
+                facebook: false,
                 twitter: true,
-                pinterest: true,
-                download: false, // or true if you want the download button
+                pinterest: false,
+                linkedin: true,
+                download: false,
             },
             loop: false,
         });
@@ -70,12 +68,13 @@ if (galleryContainer && loadAllBtn) {
                 src: link.getAttribute('href'),
                 thumb: link.getAttribute('data-thumb') || link.querySelector('img')?.getAttribute('src'),
             })),
-            plugins: [lgZoom, lgThumbnail, lgShare],
+            plugins: [lgThumbnail, lgShare],
             share: true,
             sharePlugin: {
-                facebook: true,
+                facebook: false,
                 twitter: true,
-                pinterest: true,
+                pinterest: false,
+                linkedin: true,
                 download: false,
             },
             loop: false,
@@ -90,6 +89,14 @@ if (galleryContainer && loadAllBtn) {
         });
 
         loadAllBtn.style.display = 'none';
+    });
+
+    // Hide the download button manually if it's still showing
+    galleryContainer.addEventListener('lgAfterOpen', () => {
+        const downloadButton = document.querySelector('.lg-download');
+        if (downloadButton) {
+            downloadButton.style.display = 'none';
+        }
     });
 
     initializeGallery();
