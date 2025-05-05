@@ -4175,6 +4175,7 @@ body.admin-bar .search-overlay--desktop {
   max-width: 20px;
   margin-left: auto;
   transition: transform 0.15s ease-in-out;
+  transform-origin: 55% 70%; /* Add this */
   transform: rotate(90deg); /* Ensure it starts pointing down */
   cursor: pointer;
 }
