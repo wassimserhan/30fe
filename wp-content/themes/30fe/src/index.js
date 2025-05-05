@@ -296,17 +296,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
 
-    // Ensure all arrows start down except the first open accordion
-    document.querySelectorAll('.ac').forEach((accordion, index) => {
-      const arrow = accordion.querySelector('.expertise__list-item__arrow');
-      if (arrow) {
-        if (index === 0) {
-          arrow.classList.add('expertise__list-item__rotate-arrow'); // First accordion's arrow points up
-        } else {
-          arrow.classList.remove('expertise__list-item__rotate-arrow'); // Others remain down
-        }
-      }
-    });
+
 
     // Make the accordion instance accessible globally if needed
     window.mobileAccordion = mobileAccordion;
