@@ -50,10 +50,15 @@ if ($education_item && is_object($education_item)) {
                     <button type="button"
                         class="ac-trigger industry__category-item"><?php echo get_the_title($education_item) ?></button>
                     <!-- Inline SVG with dynamic fill color -->
-                    <svg class="expertise__list-item__arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                        viewBox="0 0 24 24" fill="<?php echo esc_attr($arrow_color); ?>">
-                        <path d="M8 5l8 7-8 7" fill="<?php echo esc_attr($arrow_color); ?>" />
+
+
+                    <svg class="expertise__list-item__arrow" width="21" height="27" viewBox="0 0 21 27"
+                        fill="<?php echo esc_attr($arrow_color); ?>" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M11.9489 26.9545L9.97159 24.9943L15.1619 19.804H3V16.9233H15.1619L9.97159 11.7415L11.9489 9.77273L20.5398 18.3636L11.9489 26.9545Z"
+                            fill="<?php echo esc_attr($arrow_color); ?>" />
                     </svg>
+
 
 
                 </div>
