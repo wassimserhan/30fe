@@ -149,20 +149,16 @@ while( have_rows('values') ) : the_row();
           while( have_rows('culture') ) : the_row(); 
           ?>
         <section class="max-width max-padding">
-            <section class="careers__culture__card">
-                <figure class="careers__culture__image">
-                    <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/what-is-30.gif"
-                        alt="what is 30?" title="lock">
-                </figure>
-                <article class="careers__culture__detail careers__culture__detail--left" style="">
-                    <h2 class="careers__culture__headline"><?php echo get_sub_field('culture_headline') ;?></h2>
-                    <p class="careers__culture__copy"><?php echo get_sub_field('culture_copy') ;?>
-                    </p>
-                </article>
+            <section class="careers__intro__wrapper">
+                <h2 class="careers__headline"><?php echo get_sub_field('culture_headline') ;?>
+                </h2>
+                <p class="careers__copy"><?php echo get_sub_field('culture_copy') ;?></p>
             </section>
         </section>
         <?php endwhile; endif; ?>
     </section>
+
+
 
 
 
