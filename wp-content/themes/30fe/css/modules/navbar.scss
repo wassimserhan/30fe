@@ -159,6 +159,7 @@
     text-transform: uppercase;
     position: relative;
     display: block;
+    cursor: pointer;
 
     @include bp(phone) {
       font-size: 20px;

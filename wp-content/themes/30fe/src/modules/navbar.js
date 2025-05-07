@@ -87,18 +87,24 @@ navItems.forEach(({ trigger, dropdown, icon }) => {
   const dropdownElement = document.querySelector(dropdown);
   const iconElement = document.querySelector(icon);
 
-  // Attach event listener only to the icon so the link remains clickable.
-  iconElement.addEventListener('click', (event) => {
-    event.preventDefault(); // Prevents default behavior on icon click only.
-    event.stopPropagation(); // Stop the event from bubbling up.
+  // Attach event listener to both the icon and the text trigger
+  [triggerElement, iconElement].forEach(el => {
+    el.addEventListener('click', (event) => {
+      // Only prevent default if click wasn't on an <a>
+      if (!event.target.closest('a')) {
+        event.preventDefault();
+      }
 
-    const isActive = dropdownElement.classList.contains('nav__dropdown-grid--active');
-    closeAllDropdowns();
+      event.stopPropagation();
 
-    if (!isActive) {
-      dropdownElement.classList.add('nav__dropdown-grid--active');
-      iconElement.classList.add('plus-nav--active');
-    }
+      const isActive = dropdownElement.classList.contains('nav__dropdown-grid--active');
+      closeAllDropdowns();
+
+      if (!isActive) {
+        dropdownElement.classList.add('nav__dropdown-grid--active');
+        iconElement.classList.add('plus-nav--active');
+      }
+    });
   });
 
   // Close dropdowns if the user clicks outside the trigger and dropdown
