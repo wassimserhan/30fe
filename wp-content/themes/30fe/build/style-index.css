@@ -5117,6 +5117,7 @@ body.admin-bar .search-overlay--desktop {
   padding: 15px;
 }
 .news__card__image {
+  max-width: 500px;
   padding: 16px 0;
 }
 @media (max-width: 820px) {

@@ -76,8 +76,7 @@
     padding: 15px;
 
     &__image {
-      // height: 235px;
-      // object-fit: cover;
+      max-width: 500px;
       padding: 16px 0;
       @include bp(tablet) {
         height: auto;
