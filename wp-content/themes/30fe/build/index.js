@@ -5231,6 +5231,7 @@ if (galleryContainer && loadAllBtn) {
         thumb: link.getAttribute('data-thumb') || link.querySelector('img')?.getAttribute('src')
       })),
       plugins: [lgThumbnail, lgShare],
+      licenseKey: 'C28A2881-C351-48AC-B099-52FA8B15FB4A',
       share: true,
       sharePlugin: {
         facebook: false,
@@ -5278,6 +5279,7 @@ if (galleryContainer && loadAllBtn) {
         thumb: link.getAttribute('data-thumb') || link.querySelector('img')?.getAttribute('src')
       })),
       plugins: [lgThumbnail, lgShare],
+      licenseKey: 'C28A2881-C351-48AC-B099-52FA8B15FB4A',
       share: true,
       sharePlugin: {
         facebook: false,

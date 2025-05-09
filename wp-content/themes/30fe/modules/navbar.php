@@ -68,7 +68,7 @@ global $template;
                     width="100%">
                 <section class="max-width">
                     <ul class="nav__dropdown-grid nav__dropdown-grid--people"
-                        style="position: absolute; left: 0; margin: 0; columns: inherit;">
+                        style="position: absolute; left: 0; top: 32px; margin: 0; columns: inherit;">
                         <a class="nav__items nav__items__button" href="<?php echo site_url('/team')?>"
                             target="_self">Team</a>
                         <a class="nav__items nav__items__button" href="<?php echo site_url('/careers')?>"
@@ -103,7 +103,7 @@ global $template;
                     alt="Toggle dropdown" width="100%">
                 <section class="max-width">
                     <ul class="nav__dropdown-grid nav__dropdown-grid--latest"
-                        style="position: absolute; left: 0; margin: 0; columns: inherit;">
+                        style="position: absolute; left: 0; top: 32px; margin: 0; columns: inherit;">
                         <a class="nav__items nav__items__button" href="<?php echo site_url('/insights')?>"
                             target="_self">INSIGHTS</a>
                         <a class="nav__items nav__items__button" href="<?php echo site_url('/news')?>"
