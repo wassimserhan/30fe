@@ -6361,13 +6361,22 @@ navItems.forEach(({
   const dropdownElement = document.querySelector(dropdown);
   const iconElement = document.querySelector(icon);
 
-  // Attach event listener to both the icon and the text trigger
-  [triggerElement, iconElement].forEach(el => {
-    el.addEventListener('click', event => {
-      // Only prevent default if click wasn't on an <a>
-      if (!event.target.closest('a')) {
-        event.preventDefault();
-      }
+  // Handle click on icon (always toggle dropdown)
+  iconElement.addEventListener('click', event => {
+    event.preventDefault();
+    event.stopPropagation();
+    const isActive = dropdownElement.classList.contains('nav__dropdown-grid--active');
+    closeAllDropdowns();
+    if (!isActive) {
+      dropdownElement.classList.add('nav__dropdown-grid--active');
+      iconElement.classList.add('plus-nav--active');
+    }
+  });
+
+  // Only allow <p> triggers to toggle dropdown on click
+  if (triggerElement.querySelector('p')) {
+    triggerElement.querySelector('p').addEventListener('click', event => {
+      event.preventDefault();
       event.stopPropagation();
       const isActive = dropdownElement.classList.contains('nav__dropdown-grid--active');
       closeAllDropdowns();
@@ -6376,15 +6385,7 @@ navItems.forEach(({
         iconElement.classList.add('plus-nav--active');
       }
     });
-  });
-
-  // Close dropdowns if the user clicks outside the trigger and dropdown
-  document.addEventListener('click', event => {
-    if (!triggerElement.contains(event.target) && !dropdownElement.contains(event.target)) {
-      dropdownElement.classList.remove('nav__dropdown-grid--active');
-      iconElement.classList.remove('plus-nav--active');
-    }
-  });
+  }
 });
 
 // Close dropdowns on resize or scroll
