@@ -1,6 +1,8 @@
 <?php 
    global $wp;
    $url = home_url( $wp->request );
+
+   if (!isset($card_index)) $card_index = -1;
 ?>
 
 
@@ -11,13 +13,15 @@
     </a>
 
     <?php 
-    $k=0;
-  if(($k == 0) && (strpos($url,'expertise')) && !(strpos($url,'digital-media-analysis'))) : ?>
-
+if (
+    $card_index === 0 &&
+    strpos($url, 'expertise') !== false &&
+    strpos($url, 'digital-media-analysis') === false
+): ?>
     <section class="pill team-card__pill">
         <p class="pill__label">Practice Lead</p>
     </section>
-    <?php endif ?>
+    <?php endif; ?>
 
     <div class="team-card__name">
         <?php echo $name ;?>

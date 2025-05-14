@@ -185,18 +185,18 @@ get_header();
                             <ul class="splide__list">
                                 <?php 
                   $team_members = get_field ( 'expert' ); 
-                  foreach ($team_members as $item):   
-                    $k;  
+                  $card_index = 0;
+                  foreach ($team_members as $item):
                     $name = get_the_title($item);
                     $title = get_field('title', $item);
                     $phone = get_field('phone', $item);
                     $email = get_field('email', $item); ?>
 
                                 <li class="splide__slide">
-
-                                    <?php include get_template_directory() . '/modules/team-card.php'; ?>
+                                    <?php 
+                                    include get_template_directory() . '/modules/team-card.php'; ?>
                                 </li>
-                                <?php $k++;?>
+                                <?php $card_index++;?>
                                 <?php endforeach ?>
                             </ul>
                         </div>
