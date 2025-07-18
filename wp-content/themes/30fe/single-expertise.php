@@ -23,6 +23,13 @@ get_header();
             <section class="industry__intro">
                 <h2 class="industry__title industry__title"><?php the_title() ?></h2>
                 <p class="industry__copy industry__copy"><?php echo get_field('intro') ;?></p>
+                <?php
+$file = get_field('download'); // returns file URL (if ACF return format is set to "File URL")
+if ($file): ?>
+                <a href="<?php echo esc_url($file); ?>" target="_blank" rel="noopener" aria-label="Download PDF">
+                    <button style="margin-top: 20px" class="education__button">Download PDF</button>
+                </a>
+                <?php endif; ?>
             </section>
         </section>
         <figure class="industry__figure">
