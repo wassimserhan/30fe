@@ -5668,7 +5668,7 @@ body.admin-bar .search-overlay--desktop {
 
 .event__detail__image {
   float: right;
-  margin: 0 1.5rem 1.5rem 0;
+  margin: 0 0 1.5rem 1.5rem;
   max-width: 600px;
   height: auto;
   display: block;

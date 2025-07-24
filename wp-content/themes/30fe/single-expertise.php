@@ -27,7 +27,8 @@ get_header();
 $file = get_field('download'); // returns file URL (if ACF return format is set to "File URL")
 if ($file): ?>
                 <a href="<?php echo esc_url($file); ?>" target="_blank" rel="noopener" aria-label="Download PDF">
-                    <button style="margin-top: 20px" class="education__button">Download PDF</button>
+                    <button style="margin-top: 20px"
+                        class="education__button"><?php echo get_field('download_text'); ?></button>
                 </a>
                 <?php endif; ?>
             </section>
