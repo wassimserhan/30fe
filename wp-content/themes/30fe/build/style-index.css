@@ -5566,6 +5566,9 @@ body.admin-bar .search-overlay--desktop {
   letter-spacing: 0;
   margin: 0;
 }
+.event-post__headline--white {
+  color: #f2f1ed;
+}
 .event-post__card {
   border: 1px solid #1d1c1d;
   padding: 32px;

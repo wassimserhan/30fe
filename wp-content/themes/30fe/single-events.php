@@ -8,9 +8,6 @@
         <section class="max-width max-padding">
             <section class="event-post">
                 <div class="event-post__container">
-
-
-
                     <article id="event-color" class="event-post__left"
                         data-color="<?php echo esc_html($color['value']); ?>">
                         <h2 class="event-post__headline"><?php the_title(); ?></h2>
@@ -24,6 +21,11 @@
 
 
                         <p class="event-post__copy"><?php echo the_content(); ?></p>
+                        <a href="#gallery" aria-label="View Event Gallery">
+                            <button style="margin-top: 20px" class="education__button">
+                                View Event Gallery
+                            </button>
+                        </a>
                     </article>
 
                 </div>
@@ -33,9 +35,9 @@
         <?php $images = get_field('event_image'); ?>
         <?php if ($images): ?>
         <!-- Gallery -->
-        <section class="gallery">
+        <section id="gallery" class="gallery">
             <section class="max-width max-padding">
-                <p class="gallery__title">Gallery from <?php the_title(); ?></p>
+                <h2 class="event-post__headline event-post__headline--white">Gallery: <?php the_title(); ?></h2>
                 <div class="lightgallery">
                     <?php foreach ($images as $image): ?>
                     <a href="<?php echo esc_url($image['url']); ?>" data-src="<?php echo esc_url($image['url']); ?>"
