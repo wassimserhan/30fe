@@ -5741,6 +5741,13 @@ if (true) {
         backgroundColor: $whitesmoke,
         color: $black
       });
+      gsap.set(".nav__dropdown-grid", {
+        backgroundColor: $whitesmoke,
+        borderColor: $black
+      });
+      gsap.set(".nav__items__button", {
+        backgroundColor: $blackOpacity
+      });
       sectionColors = [$whitesmoke, $taupe];
       navColors = [$whitesmoke, $taupe];
       navItems = [$black, $black];
@@ -5774,6 +5781,13 @@ if (true) {
       gsap.set(".nav__button", {
         backgroundColor: $whitesmoke,
         color: $black
+      });
+      gsap.set(".nav__dropdown-grid", {
+        backgroundColor: $whitesmoke,
+        borderColor: $black
+      });
+      gsap.set(".nav__items__button", {
+        backgroundColor: $blackOpacity
       });
       sectionColors = [$whitesmoke, $taupe];
       navColors = [$whitesmoke, $taupe];
@@ -5825,16 +5839,23 @@ if (true) {
       break;
     case 'single-expertise.php':
       let expertisePage = document.querySelector('.industry');
-      let expertiseNav = expertisePage.getAttribute('data-navColor');
-      gsap.set(".nav", {
+      let expertiseNav = expertisePage.dataset.navColor;
+      gsap.set('.nav', {
         backgroundColor: expertiseNav
       });
-      sectionColors = [$whitesmoke];
-      navColors = [$whitesmoke];
+      gsap.set(".nav__dropdown-grid", {
+        backgroundColor: expertiseNav,
+        borderColor: $black
+      });
+      gsap.set(".nav__items__button", {
+        backgroundColor: $blackOpacity
+      });
+      sectionColors = [expertiseNav];
+      navColors = [expertiseNav];
       navItems = [$black];
-      navItemsButton = [$blackOpacity, $blackOpacity];
+      navItemsButton = [$blackOpacity];
       navBorder = [$black, $black];
-      navDropdown = [$whitesmoke, $whitesmoke];
+      navDropdown = [expertiseNav];
       logoColor = [$logoBlack];
       searchBorder = [$black];
       searchIcon = [$logoWhite];
@@ -6019,6 +6040,13 @@ if (true) {
     case 'single-sector.php':
       gsap.set(".nav", {
         backgroundColor: $whitesmoke
+      });
+      gsap.set(".nav__dropdown-grid", {
+        backgroundColor: $whitesmoke,
+        borderColor: $black
+      });
+      gsap.set(".nav__items__button", {
+        backgroundColor: $blackOpacity
       });
       sectionColors = [$whitesmoke];
       navColors = [$whitesmoke];

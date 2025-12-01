@@ -11,7 +11,7 @@ $speaker_names = [];
 if ($team_members) {
     foreach ($team_members as $member) {
         $speaker_names[] = get_the_title($member);
-    }
+    }   
 }
 
 // Split date into "Month Day" and "Year"

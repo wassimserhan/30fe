@@ -12,7 +12,7 @@ get_header();
 <?php $color = get_field('category_color');?>
 
 <main class="main-container">
-    <section data-navColor="<?php echo esc_html($color['value']); ?>"
+    <section data-nav-color="<?php echo esc_html($color['value']); ?>"
         class="industry <?php echo esc_html($color['label'])."-bg"; ?>">
         <section class="max-width max-padding">
             <a href="<?php echo site_url('/expertise')?>">
