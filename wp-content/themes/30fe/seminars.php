@@ -118,34 +118,38 @@ get_header();
         <hr class="seminars-divider">
 
         <!-- Past Seminars -->
-        <section class="max-width max-padding">
-            <h2 class="seminars__headline">Past Seminars</h2>
+        <?php
+        // We already set $today above; if not, add:
+        // $today = date( 'Ymd' );
 
-            <section id="ajax-posts" class="seminars__grid"
-                data-page="<?php echo esc_attr( get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1 ); ?>"
-                data-max="<?php echo esc_attr( $wp_query->max_num_pages ); ?>">
+        $past = new WP_Query( [
+            'posts_per_page' => 12,
+            'post_type'      => 'seminars',
+            'order'          => 'ASC',
+            'orderby'        => 'meta_value',
+            'meta_key'       => 'seminar_date',
+            'meta_type'      => 'DATE',
+            'meta_query'     => [
+                [
+                    'key'     => 'seminar_date',
+                    'value'   => $today,
+                    'compare' => '<',
+                    'type'    => 'DATE',
+                ],
+            ],
+        ] );
 
-                <?php
-                $past = new WP_Query( [
-                    'posts_per_page' => 12,
-                    'post_type'      => 'seminars',
-                    'order'          => 'ASC',
-                    'orderby'        => 'meta_value',
-                    'meta_key'       => 'seminar_date',
-                    'meta_type'      => 'DATE',
-                    'meta_query'     => [
-                        [
-                            'key'     => 'seminar_date',
-                            'value'   => $today,
-                            'compare' => '<',
-                            'type'    => 'DATE',
-                        ],
-                    ],
-                ] );
+        $total_past = $past->found_posts;
 
-                $total_past = $past->found_posts;
+        if ( $past->have_posts() ) : ?>
+            <section class="max-width max-padding">
+                <h2 class="seminars__headline">Past Seminars</h2>
 
-                if ( $past->have_posts() ) :
+                <section id="ajax-posts" class="seminars__grid"
+                    data-page="<?php echo esc_attr( get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1 ); ?>"
+                    data-max="<?php echo esc_attr( $wp_query->max_num_pages ); ?>">
+
+                    <?php
                     while ( $past->have_posts() ) :
                         $past->the_post();
 
@@ -153,25 +157,24 @@ get_header();
 
                     endwhile;
                     wp_reset_postdata();
-                else :
                     ?>
-                    <p>No past seminars found.</p>
+                </section>
+
+                <?php if ( $total_past > 12 ) : ?>
+                    <button
+                        id="load-more"
+                        class="seminars__load"
+                        data-page="1"
+                        data-post-type="seminars"
+                        data-url="<?php echo esc_url( admin_url( 'admin-ajax.php' ) ); ?>">
+                        Load More
+                    </button>
                 <?php endif; ?>
 
             </section>
-
-            <?php if ( $total_past > 12 ) : ?>
-                <button
-                    id="load-more"
-                    class="seminars__load"
-                    data-page="1"
-                    data-post-type="seminars"
-                    data-url="<?php echo esc_url( admin_url( 'admin-ajax.php' ) ); ?>">
-                    Load More
-                </button>
-            <?php endif; ?>
-
-        </section>
+        <?php
+        endif;
+        ?>
 
     </section>
 </main>
