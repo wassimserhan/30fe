@@ -1,0 +1,194 @@
+.seminar-post {
+  &__container {
+    display: block; 
+  }
+
+  &__wrapper {
+    display: flex; 
+    gap: 50px;
+
+    @include bp(tablet) {
+      display: block;
+    }
+  }
+
+  &__slide-wrapper {
+    @include bp(tablet) {
+      padding: 50px 0 0 0;
+    }
+  }
+
+  &__slide-card {
+    @include bp(tablet) {
+      margin: auto;
+    }
+  }
+
+  &__date {
+    color: #1d1c1d;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+  }
+
+  &__left {
+    width: 100%;
+  }
+
+  &__pill {
+    margin: initial;
+  }
+
+  &__headline {
+    padding: 20px 0;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 0;
+    margin: 0;
+
+    &--white {
+      color: $whitesmoke;
+    }
+  }
+
+  &__button {
+    text-transform: uppercase;
+    margin: 32px 0;
+  }
+
+ 
+  &__card {
+    border: 1px solid #1d1c1d;
+    padding: 32px;
+    margin: 32px auto;
+    max-width: 300px;
+    background-color: $whitesmoke;
+
+    @include bp(tablet) {
+      max-width: 100%;
+      margin: 32px 0;
+    }
+  }
+
+
+}
+
+.lightgallery {
+  display: grid; /* Use grid layout for better control */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Auto-adjust columns */
+  gap: 10px; /* Add spacing between items */
+  justify-content: center; /* Center items within the container */
+}
+
+.lightgallery a {
+  display: block; /* Ensure each <a> acts like a block container */
+  text-decoration: none; /* Remove underline for links */
+}
+
+.lightgallery img {
+  max-width: 100%; /* Set a maximum width for each thumbnail */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s ease; /* Add a hover effect */
+}
+
+// .lightgallery img:hover {
+//   transform: scale(1.1); /* Slight zoom on hover */
+//   border-color: #0073aa; /* Optional: Change border color on hover */
+// }
+
+
+
+.gallery {
+  background-color: $black;
+
+  &__title {
+    color: $whitesmoke;
+    padding: 20px 0;
+  }
+}
+
+.lg-backdrop  {
+  background-color: $black !important;
+}
+
+.lg-thumb-outer {
+  background-color: $black !important;
+}
+
+.lg-prev {
+    background-color: $black !important;
+}
+
+.lg-next {
+    background-color: $black !important;
+}
+
+.lg-outer .lg-thumb-item {
+  border-radius: 0 !important;
+  border: 2px solid $whitesmoke !important;
+  opacity: 70%;
+} 
+
+.lg-outer .lg-thumb-item.active, .lg-outer .lg-thumb-item:hover {
+    border-color: $taupe !important;
+      opacity: 100%;
+}
+
+
+.event-post a {
+  text-decoration: underline;
+  color: $black;
+}
+
+.event-post ul{
+  list-style: disc;
+}
+
+.event-post li {
+  font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -0.72px;
+    color: #1d1c1d;
+    padding: 10px 0;
+    margin-left: 30px;
+}
+
+.event-post p {
+  margin-bottom: 10px;
+}
+
+.event-post img {
+  margin-bottom: 10px;
+}
+
+.event-post__copy img {
+  display: block;
+  margin: 1.5rem auto;
+  float: none;
+}
+
+.event__detail__image {
+  float: right;
+  margin: 0 0 1.5rem 1.5rem;
+  max-width: 600px;
+  height: auto;
+  display: block;
+
+  @include bp(tablet) {
+    float: none;
+    margin: 0 auto 1.5rem;
+    display: block;
+    max-width: 100%;
+  }
+}
+
+.event-post__copy {
+  overflow: hidden;
+}
+

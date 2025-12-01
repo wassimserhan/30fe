@@ -340,6 +340,43 @@ if (true) {
       navScroll = false;
       break;
 
+      case 'seminars.php':
+      gsap.set(".nav__logo__black", { filter: $logoWhite })
+      gsap.set(".nav__items", { color: $whitesmoke })
+      gsap.set(".nav", { backgroundColor: $black })
+      gsap.set(".nav__dropdown-grid", { backgroundColor: $black, borderColor: $whitesmoke })
+      gsap.set(".nav__items__button", { backgroundColor: $whitesmokeOpacity })
+      gsap.set(".search-overlay--desktop__wrapper", { borderColor: $whitesmoke })
+      gsap.set(".search-overlay--desktop__icon", { filter: $logoBlack })
+      gsap.set(".nav__button", { backgroundColor: $whitesmoke, color: $black })
+      gsap.set(".plus-nav", { filter: $logoWhite });
+      sectionColors = [$black];
+      navColors = [$black];
+      navScroll = false
+      break;
+
+    case 'single-seminars.php':
+      gsap.set(".nav__logo__black", { filter: $logoBlack })
+      gsap.set(".nav__items", { color: $black })
+      gsap.set(".nav", { backgroundColor: $whitesmoke })
+      gsap.set(".search-overlay--desktop__wrapper", { borderColor: $whitesmoke })
+      gsap.set(".search-overlay--desktop__icon", { filter: $logoWhite })
+      gsap.set(".nav__button", { backgroundColor: $whitesmoke, color: $black })
+      sectionColors = [$whitesmoke];
+      navColors = [$whitesmoke];
+      navItems = [$black];
+      navItemsButton = [$blackOpacity];
+      navBorder = [$black];
+      navDropdown = [$whitesmoke];
+      logoColor = [$logoBlack];
+      searchBorder = [$black];
+      searchIcon = [$logoBlack];
+      navButton = [$black];
+      navButtonColor = [$whitesmoke];
+      plus = [$logoBlack];
+      navScroll = true;
+      break;
+
     case 'education.php':
       gsap.set(".nav__logo__black", { filter: $logoBlack })
       gsap.set(".nav__items", { color: $black })

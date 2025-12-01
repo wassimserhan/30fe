@@ -72,7 +72,9 @@ const navItems = [
   { trigger: '.nav-expertise', dropdown: '.nav__dropdown-grid--expertise', icon: '.plus-expertise' },
   { trigger: '.nav-sectors', dropdown: '.nav__dropdown-grid--sectors', icon: '.plus-sectors' },
   { trigger: '.nav-people', dropdown: '.nav__dropdown-grid--people', icon: '.plus-people' },
-  { trigger: '.nav-latest', dropdown: '.nav__dropdown-grid--latest', icon: '.plus-latest' }
+  { trigger: '.nav-latest', dropdown: '.nav__dropdown-grid--latest', icon: '.plus-latest' },
+    { trigger: '.nav-education', dropdown: '.nav__dropdown-grid--education', icon: '.plus-education' }
+
 ];
 
 const closeAllDropdowns = () => {

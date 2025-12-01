@@ -5,9 +5,46 @@ global $template;
 
 
 ?>
+<?php
+// Try to get the Seminars page by its slug
+$seminars_page = get_page_by_path( 'seminars' );
 
+// Fallback to /seminars/ if for some reason get_page_by_path fails
+$seminars_url = $seminars_page
+    ? get_permalink( $seminars_page->ID )
+    : site_url( '/seminars/' );
+?>
 
 <nav id="nav" data-page="<?php echo basename($template);?>" class="nav">
+<?php
+// If using Options Page instead, do:
+// $banner_setting = get_field( 'display_seminar_series_banner', 'option' );
+
+$home_id        = get_option( 'page_on_front' );
+$banner_setting = get_field( 'display_seminar_series_banner', $home_id );
+
+// Checkbox returns an array like ['yes'] when checked.
+$show_globally = is_array( $banner_setting ) && in_array( 'yes', $banner_setting, true );
+
+// Final rule:
+// - If checked -> show everywhere
+// - If unchecked -> show only on home page
+if ( $show_globally || is_front_page() ) :
+    ?>
+    <div class="announcement">
+        <div class="announcement__inner">
+            <p class="announcement__text">
+                The 2026 Seminar Series Begins —
+                <a class="announcement__link" href="<?php echo esc_url( $seminars_url ); ?>">
+                    Register Here
+                </a>
+            </p>
+        </div>
+    </div>
+<?php
+endif;
+?>
+    
     <section class="nav__bar">
         <a href="<?php echo get_home_url(); ?>">
             <img class="nav__logo nav__logo__black"
@@ -92,9 +129,33 @@ global $template;
                     alt="<?php echo get_bloginfo( 'name' ); ?> logo" title="<?php echo get_bloginfo( 'name' ); ?>"
                     width="100%">
             </li>
-            <li class="" role="menuitem">
-                <a id="" class="nav__items" data-name="#" href="<?php echo site_url('/education')?>">Education</a>
-            </li>
+          
+
+
+
+                <li class="nav-education" role="menuitem" style="position: relative">
+                    <!-- The text link will navigate normally -->
+                    <p class="nav__items">Education</p>
+                    <!-- The icon triggers the dropdown toggle -->
+                    <img class="plus-nav plus-education" src="<?php echo get_template_directory_uri(); ?>/images/nav-arrow.svg"
+                    alt="Toggle dropdown" width="100%">
+                    <section class="max-width">
+                        <ul class="nav__dropdown-grid nav__dropdown-grid--education"
+                        style="position: absolute; left: 0; top: 32px; margin: 0; columns: inherit;">
+                        <a class="nav__items nav__items__button" href="<?php echo site_url('/education')?>"
+                        target="_self">Continuing Education</a>
+                        <a class="nav__items nav__items__button" href="<?php echo site_url('/seminars')?>"
+                        target="_self">Seminar Series</a>
+                        </ul>
+                    </section>
+                </li>
+
+
+
+
+
+
+
             <li class="nav-latest" role="menuitem" style="position: relative">
                 <!-- The text link will navigate normally -->
                 <p class="nav__items">Latest</p>
@@ -244,8 +305,27 @@ global $template;
                 </section>
             </article>
 
-            <a class="nav__items--mobile nav-links" href="<?php echo site_url('/education')?>"
-                target="_self">Education</a>
+    
+
+
+
+
+
+                <article class="accordion-about">
+                <div class="accordion-about__wrapper">
+                    <p class="nav__items--mobile nav-links">Education</p>
+                    <img class="plus-nav plus-nav--mobile"
+                        src="<?php echo get_template_directory_uri(); ?>/images/nav-arrow.svg"
+                        alt="<?php echo get_bloginfo( 'name' ); ?> logo" title="<?php echo get_bloginfo( 'name' ); ?>"
+                        width="100%">
+                </div>
+                <section class="accordion-about__content">
+                    <a class="nav__items--mobile nav__items--mobile--accordion nav-links"
+                        href="<?php echo site_url('/education')?>" target="_self">Continuing Education</a>
+                    <a class="nav__items--mobile nav__items--mobile--accordion nav-links"
+                        href="<?php echo site_url('/seminars')?>" target="_self">Seminar Series</a>
+                </section>
+            </article>
 
             <article class="accordion-about">
                 <div class="accordion-about__wrapper">

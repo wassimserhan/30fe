@@ -452,16 +452,16 @@ function theme_post_type_expertise() {
 
 
       function theme_post_type_events() {
-    $labels = array(
+        $labels = array(
         "name" => __( "Events", "" ),
         "singular_name" => __( "Events", "" ),
         'add_new' => _x('Add Events', 'event item'), 
         'add_new_item' => __('Add New Event'), 
         'edit_item' => __('Edit Events'), 
         'new_item' => __('New Events'),
-    );
+        );
 
-    $args = array(
+        $args = array(
         "labels" => $labels,
         "description" => "",
         "public" => true,
@@ -481,15 +481,53 @@ function theme_post_type_expertise() {
         "query_var" => true,
         "supports" => array( "title", "thumbnail", "editor" ),
         'taxonomies'          => array( 'category' ),
-    );
+        );
 
     register_post_type( "events", $args );
 
 
 }
-
-
     add_action( 'init', 'theme_post_type_events' );
+
+
+
+     function theme_post_type_seminars() {
+        $labels = array(
+        "name" => __( "Seminars", "" ),
+        "singular_name" => __( "Seminars", "" ),
+        'add_new' => _x('Add Seminars', 'seminar item'), 
+        'add_new_item' => __('Add New Seminar'), 
+        'edit_item' => __('Edit Seminars'), 
+        'new_item' => __('New Seminars'),
+        );
+
+        $args = array(
+        "labels" => $labels,
+        "description" => "",
+        "public" => true,
+        "publicly_queryable" => true,
+        "show_ui" => true,
+        "show_in_rest" => true,
+        "rest_base" => "",
+        "has_archive" => false,
+        "menu_icon" => 'dashicons-calendar-alt',
+        "show_in_menu" => true,
+        "show_in_nav_menus" => true,
+        "exclude_from_search" => false,
+        "capability_type" => "post",
+        "map_meta_cap" => true,
+        "hierarchical" => false,
+        "rewrite" => array( "slug" => "seminars", "with_front" => true ),
+        "query_var" => true,
+        "supports" => array( "title", "thumbnail", "editor" ),
+        'taxonomies'          => array( 'category' ),
+        );
+
+    register_post_type( "seminars", $args );
+}
+
+
+    add_action( 'init', 'theme_post_type_seminars' );
 
     
 //Register Categories
