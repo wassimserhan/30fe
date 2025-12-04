@@ -54,13 +54,14 @@
     text-transform: uppercase;
     color: $black;
     border: none;
-    padding: 20px 15px;
-    font-size: 1.5rem;    
+    padding: 10px 15px;
+    font-size: 0.95rem;    
     width: 100%;
     margin-left: 0;
     text-align: left;
     margin-top: auto;        // pushes it to the bottom
     align-self: flex-start; 
+    font-weight: 600;
   }
 
   &__max-width {
@@ -164,6 +165,7 @@
       font-style: normal;
       font-weight: 600;
       line-height: 100%;
+      letter-spacing: -1.6px;
     }
 
     &__title {
