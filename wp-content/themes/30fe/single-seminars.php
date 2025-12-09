@@ -66,7 +66,7 @@
                                 if ($register_link) :
                                     $url    = $register_link['url'];
                                     $title  = $register_link['title'] ?: 'Register Here';
-                                    $target = $register_link['target'] ?: '_self';
+                                    $target = $register_link['target'] ?: '_blank';
                                 ?>
                                     <a href="<?php echo esc_url($url); ?>"
                                     target="<?php echo esc_attr($target); ?>"
