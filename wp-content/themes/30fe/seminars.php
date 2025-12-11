@@ -20,7 +20,7 @@ get_header();
                 <?php
                 $today    = date( 'Ymd' );
                 $upcoming = new WP_Query( [
-                    'posts_per_page' => 10,
+                    'posts_per_page' => 15,
                     'post_type'      => 'seminars',
                     'order'          => 'ASC',
                     'orderby'        => 'meta_value',
