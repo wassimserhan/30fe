@@ -34,10 +34,8 @@ if ( $show_globally || is_front_page() ) :
     <div class="announcement">
         <div class="announcement__inner">
             <p class="announcement__text">
-                The 2026 Seminar Series Begins —
                 <a class="announcement__link" href="<?php echo esc_url( $seminars_url ); ?>">
-                    Register Here
-                </a>
+                    Register Here</a> for our 2026 Seminar Series
             </p>
         </div>
     </div>
