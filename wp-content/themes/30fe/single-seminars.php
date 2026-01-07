@@ -31,21 +31,26 @@
                                 // Default to empty
                                 $seminar_time_est = '';
                                 $seminar_time_pst = '';
+                                $seminar_tz_est   = '';
+                                $seminar_tz_pst   = '';
 
                                 if ( $seminar_date_raw && $seminar_time_raw ) {
-                                // Build a full datetime string from ACF values
-                                $datetime_raw = $seminar_date_raw . ' ' . $seminar_time_raw;
+                                    $datetime_raw = $seminar_date_raw . ' ' . $seminar_time_raw;
 
-                                // Assume seminar time is stored in Eastern time
-                                $tz_est = new DateTimeZone( 'America/New_York' );
-                                $tz_pst = new DateTimeZone( 'America/Los_Angeles' );
+                                    // Stored as Eastern time
+                                    $tz_est = new DateTimeZone('America/New_York');
+                                    $tz_pst = new DateTimeZone('America/Los_Angeles');
 
-                                $dt_est = new DateTime( $datetime_raw, $tz_est );
-                                $dt_pst = clone $dt_est;
-                                $dt_pst->setTimezone( $tz_pst );
+                                    $dt_est = new DateTime($datetime_raw, $tz_est);
+                                    $dt_pst = clone $dt_est;
+                                    $dt_pst->setTimezone($tz_pst);
 
-                                $seminar_time_est = $dt_est->format( 'g:i a' );
-                                $seminar_time_pst = $dt_pst->format( 'g:i a' );
+                                    $seminar_time_est = $dt_est->format('g:i a');
+                                    $seminar_time_pst = $dt_pst->format('g:i a');
+
+                                    // These switch automatically (EST<->EDT, PST<->PDT) based on the date
+                                    $seminar_tz_est = $dt_est->format('T');
+                                    $seminar_tz_pst = $dt_pst->format('T');
                                 }
                             ?>
 
@@ -54,11 +59,11 @@
                             </p>
 
                             <?php if ( $seminar_time_est && $seminar_time_pst ) : ?>
-                                <p class="seminar-post__date">
-                                Time: <?php echo esc_html( $seminar_time_est ); ?> EST /
-                            <?php echo esc_html( $seminar_time_pst ); ?> PST
-                                </p>
-                            <?php endif; ?>
+  <p class="seminar-post__date">
+    Time: <?php echo esc_html($seminar_time_est); ?> <?php echo esc_html($seminar_tz_est); ?> /
+    <?php echo esc_html($seminar_time_pst); ?> <?php echo esc_html($seminar_tz_pst); ?>
+  </p>
+<?php endif; ?>
                         
                             <?php
                                 $register_link = get_field('register_here');
