@@ -5421,11 +5421,11 @@ body.admin-bar .search-overlay--desktop {
   margin: 40px 0 0;
 }
 .single-blog__single-post > ol {
-  list-style: auto;
+  list-style: decimal;
   margin: 0 0 1.5em 3em;
 }
 .single-blog__single-post > ul {
-  list-style: auto;
+  list-style: disc;
   margin: 0 0 1.5em 3em;
 }
 .single-blog__single-post img {

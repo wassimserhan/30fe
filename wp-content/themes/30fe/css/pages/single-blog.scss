@@ -111,13 +111,13 @@
 
   &__single-post {
     & > ol {
-      list-style: auto;
-      margin: 0 0 1.5em 3em;
+      list-style: decimal;
+    margin: 0 0 1.5em 3em;
     }
 
     & > ul {
-      list-style: auto;
-      margin: 0 0 1.5em 3em;
+      list-style: disc;
+    margin: 0 0 1.5em 3em;
     }
 
     & img {
