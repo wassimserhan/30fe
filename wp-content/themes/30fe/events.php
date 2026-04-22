@@ -11,8 +11,8 @@ get_header();
              $events = new WP_Query(array(
             'posts_per_page' => 10,
             'post_type'=> 'events',
-            'order'          => 'ASC', // Show upcoming posts first (optional)
-             'orderby'        => 'meta_value',
+                'order'          => 'DESC',
+                 'orderby'        => 'meta_value',
              'meta_key'       => 'event_date', 
                 'meta_type'      => 'DATE',
                 'meta_query'     => array(

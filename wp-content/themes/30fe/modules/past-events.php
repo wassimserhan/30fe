@@ -9,7 +9,7 @@
             $events = new WP_Query(array(
                 'posts_per_page' => 9,
                 'post_type'      => 'events',
-                'order'          => 'ASC', // Show upcoming posts first (optional)
+                'order'          => 'DESC',
                 'orderby'        => 'meta_value',
                 'meta_key'       => 'event_date', // Replace with your ACF date picker field name
                 'meta_type'      => 'DATE',
