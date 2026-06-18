@@ -57,7 +57,7 @@ while( have_rows('mission') ) : the_row();
 
 
     <!-- 360 Investigations -->
-
+<!-- 
 
     <section class="about__investigations fullscreen full-height">
         <?php
@@ -82,7 +82,7 @@ while( have_rows('360_services') ) : the_row();
           $list_headline = get_sub_field('list_headline');
           $list_copy = get_sub_field('list_copy');
           $colors = [ 'taupe', 'blue','green', 'orange' ];
-          ?>
+          ?> 
                     <li class="about__investigations__bullet about__investigations__bullet--<?php echo $colors[$k]; ?>">
                         <h3><?php echo $list_headline; ?></h3>
                         <p><?php echo $list_copy; ?></p>
@@ -97,7 +97,7 @@ while( have_rows('360_services') ) : the_row();
             </section>
         </section>
         <?php endwhile; endif; ?>
-    </section>
+    </section> -->
 
     <!-- Timeline -->
 
