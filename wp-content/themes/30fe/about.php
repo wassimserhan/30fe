@@ -60,25 +60,28 @@ while( have_rows('mission') ) : the_row();
       if( have_rows('what_is_30') ):
       while( have_rows('what_is_30') ) : the_row(); 
       ?>
-        <section class="max-width">
+        <section class="max-width max-padding">
             <section class="about__whatis__card">
+                    <figure class="about__whatis__image">
+                    <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/what-is-30.gif"
+                        alt="what is 30?" title="lock">
+                </figure>
                 <article class="about__whatis__detail about__whatis__detail--left" style="">
                     <h3 class="about__whatis__headline"><?php echo get_sub_field('what_headline'); ?></h3>
                     <p class="about__whatis__copy"><?php echo get_sub_field('what_copy'); ?>
                     </p>
                 </article>
-                <figure class="about__whatis__image">
-                    <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/what-is-30.gif"
-                        alt="what is 30?" title="lock">
-                </figure>
+            
             </section>
         </section>
         <?php endwhile; endif; ?>
     </section>
 
-
+  
 
     <!-- Timeline -->
+
+      
 
     <?php include get_template_directory() . '/modules/swiper-timeline.php'; ?>
 

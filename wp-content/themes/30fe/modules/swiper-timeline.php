@@ -1,5 +1,5 @@
 <div class="container fullscreen">
-    <section class="max-padding max-width">
+    <section class="max-width" style="padding: 8rem 8rem 0;">
         <?php
                         if( have_rows('timeline') ):
                         while( have_rows('timeline') ) : the_row(); 
