@@ -53,57 +53,6 @@ while( have_rows('mission') ) : the_row();
         <?php endwhile; endif; ?>
     </section>
 
-
-
-
-    <!-- 360 Investigations -->
-<!-- 
-
-    <section class="about__investigations fullscreen full-height">
-        <?php
-if( have_rows('360_services') ):
-while( have_rows('360_services') ) : the_row(); 
-?>
-        <section class="max-width max-padding">
-            <section class="about__investigations__wrapper">
-                <article>
-                    <section class="pill">
-                        <p class="pill__label">360&deg; Services</p>
-                    </section>
-
-                    <h3 class="about__investigations__headline"><?php echo get_sub_field('services_headline'); ?></h3>
-                    <p class="about__investigations__copy"><?php echo get_sub_field('services_copy'); ?></p>
-                </article>
-                <ul class="about__investigations__bullets">
-                    <?php 
-           $k=0;
-          if( have_rows('services') ): 
-          while( have_rows('services') ) : the_row();
-          $list_headline = get_sub_field('list_headline');
-          $list_copy = get_sub_field('list_copy');
-          $colors = [ 'taupe', 'blue','green', 'orange' ];
-          ?> 
-                    <li class="about__investigations__bullet about__investigations__bullet--<?php echo $colors[$k]; ?>">
-                        <h3><?php echo $list_headline; ?></h3>
-                        <p><?php echo $list_copy; ?></p>
-                    </li>
-                    <?php $k++ ?>
-                    <?php
-          endwhile; ?>
-                    <?php endif;
-            ?>
-
-                </ul>
-            </section>
-        </section>
-        <?php endwhile; endif; ?>
-    </section> -->
-
-    <!-- Timeline -->
-
-    <?php include get_template_directory() . '/modules/swiper-timeline.php'; ?>
-
-
     <!-- Hero-->
 
     <section class="about__thirty fullscreen">
@@ -126,6 +75,15 @@ while( have_rows('360_services') ) : the_row();
         </section>
         <?php endwhile; endif; ?>
     </section>
+
+
+
+    <!-- Timeline -->
+
+    <?php include get_template_directory() . '/modules/swiper-timeline.php'; ?>
+
+
+    
 
     <!-- Hiring -->
     <section class="hiring fullscreen">
