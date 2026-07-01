@@ -9,7 +9,7 @@ get_header();
         <?php
             $today = date('Ymd');
              $events = new WP_Query(array(
-            'posts_per_page' => 10,
+            'posts_per_page' => 9,
             'post_type'=> 'events',
                 'order'          => 'DESC',
                  'orderby'        => 'meta_value',

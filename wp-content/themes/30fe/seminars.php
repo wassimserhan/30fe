@@ -20,7 +20,7 @@ get_header();
                 <?php
                 $today    = date( 'Ymd' );
                 $upcoming = new WP_Query( [
-                    'posts_per_page' => 15,
+                    'posts_per_page' => 9,
                     'post_type'      => 'seminars',
                     'order'          => 'ASC',
                     'orderby'        => 'meta_value',
@@ -123,7 +123,7 @@ get_header();
         // $today = date( 'Ymd' );
 
         $past = new WP_Query( [
-            'posts_per_page' => 12,
+            'posts_per_page' => 9,
             'post_type'      => 'seminars',
             'order'          => 'ASC',
             'orderby'        => 'meta_value',

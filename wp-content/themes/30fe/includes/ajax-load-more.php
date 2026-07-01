@@ -7,7 +7,7 @@ function load_more_posts() {
 
     $query_args = [
         'post_type'      => $post_type,
-        'posts_per_page' => 12,
+        'posts_per_page' => 9,
         'paged'          => $next_page,
         'post_status'    => 'publish',
     ];
