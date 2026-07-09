@@ -5,7 +5,7 @@
                         if( have_rows('timeline') ):
                         while( have_rows('timeline') ) : the_row(); 
                         ?>
-            <h3 class="about__whatis__headline">The Evolution of 30FE</h3>
+            <h3 class="about__whatis__headline">The Evolution of 30</h3>
         <div class="swiper-container-wrapper swiper-container-wrapper--timeline">
             <!-- Swiper -->
             <div class="swiper swiper-container swiper-container--timeline">
