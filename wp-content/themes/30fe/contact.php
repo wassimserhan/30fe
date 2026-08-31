@@ -87,8 +87,8 @@ get_header();
                             <h3 id="ottawa-color" class="contact__location__city ottawa">Ottawa</h3>
                             <a href="https://www.google.com/maps/place/280+Albert+St,+Ottawa,+ON+K1P+5G8/@45.4192483,-75.7038062,17z/data=!3m1!4b1!4m5!3m4!1s0x4cce05532ae00d19:0xd5ce26367f8c0b5a!8m2!3d45.4192446!4d-75.7016175"
                                 target="_blank">
-                                <p>280 Albert Street<br> Suite 206<br>
-                                    Ottawa, ON K1P 5G8<br>Office (613) 903-6900
+                                <p>220 Laurier Avenue West<br> Suite 930<br>
+                                    Ottawa, ON K1P 5Z9<br>Office (613) 903-6900
                                 </p>
                             </a>
                         </article>
