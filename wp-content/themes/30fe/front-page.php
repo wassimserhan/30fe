@@ -100,9 +100,8 @@
     <section id="accordion-scroll" class="fullscreen">
         <section class="max-width max-padding">
             <section class="accordion__header">
-                <h2 class="accordion__header__headline">Explore the 30 Approach</h2>
-                <p class="accordion__header__subheadline">A comprehensive and systematic methodology that underpins our
-                    forensic&nbsp;investigation&nbsp;services.</p>
+                <h2 class="accordion__header__headline"><?php echo get_field('accordion_headline'); ?></h2>
+                <p class="accordion__header__subheadline"><?php echo nl2br(esc_html(get_field('accordion_subheading'))); ?></p>
             </section>
 
             <div id="accordion" class="accordion accordion--horizontal ">
