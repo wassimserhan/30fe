@@ -85,7 +85,7 @@ get_header();
                         <article class="contact__location">
 
                             <h3 id="ottawa-color" class="contact__location__city ottawa">Ottawa</h3>
-                            <a href="https://www.google.com/maps/place/280+Albert+St,+Ottawa,+ON+K1P+5G8/@45.4192483,-75.7038062,17z/data=!3m1!4b1!4m5!3m4!1s0x4cce05532ae00d19:0xd5ce26367f8c0b5a!8m2!3d45.4192446!4d-75.7016175"
+                            <a href="https://www.google.com/maps/place/220+Laurier+Ave+W,+Ottawa,+ON+K1P+5Z9,+Canada/@45.4196628,-75.6986373,17z/data=!3m1!4b1!4m6!3m5!1s0x4cce05ab22f4c3a5:0x886b25a993acb3ed!8m2!3d45.4196628!4d-75.696057!16s%2Fg%2F11lr3q1_vf?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D"
                                 target="_blank">
                                 <p>220 Laurier Avenue West<br> Suite 930<br>
                                     Ottawa, ON K1P 5Z9<br>Office (613) 903-6900
